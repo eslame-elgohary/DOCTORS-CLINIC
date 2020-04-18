@@ -1,0 +1,5 @@
+﻿Public Class LASTCOMEFRM
+    Private Sub LASTCOMEFRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FILL_DGV(DataGridView2, "Select *From ADD_MONY_DT_DOCTOR, ADD_MONY_DOCTOR Where ADD_MONY_DT_DOCTOR.ADD_CODE = ADD_MONY_DOCTOR.ADD_CODE And ADD_PA_CODE ='" & ADD_MONY_DOCTOR.PA_CODE.Text & "' AND ADD_DOCTOR_CODE ='" & ADD_MONY_DOCTOR.CODE_DOCTOR.Text & "' ORDER BY ADD_MONY_DOCTOR.ADD_CODE")
+    End Sub
+End Class

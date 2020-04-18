@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ROSHTA_ELAG_DATA" targetNamespace="http://tempuri.org/ROSHTA_ELAG_DATA.xsd" xmlns:mstns="http://tempuri.org/ROSHTA_ELAG_DATA.xsd" xmlns="http://tempuri.org/ROSHTA_ELAG_DATA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="sqlconn1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconn1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DOCTOR_CLINIC.My.MySettings.GlobalReference.Default.sqlconn1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ROSHTA_ELAG_DATASETTableAdapter" GeneratorDataComponentClassName="ROSHTA_ELAG_DATASETTableAdapter" Name="ROSHTA_ELAG_DATASET" UserDataComponentName="ROSHTA_ELAG_DATASETTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        R_DOCTOR.R_CODE, R_DOCTOR.R_DATE, R_DOCTOR.R_CODE_DOC, DOCTORS.DO_NAME, DOCTORS.DO_TKHSOS, R_DOCTOR.R_CODE_PA, PATIENT.PA_NAME, 
+                         PATIENT.PA_AGE, PATIENT.PA_TYPE, R_DOCTOR.R_HRARA, R_DOCTOR.R_D, R_DOCTOR.R_KG, R_DOCTOR.R_INFO, R_DOCTOR.USER_ADD, 
+                         R_DOCTOR_DT.R_DT_CODE, R_DOCTOR_DT.R_DT_PHARM, R_DOCTOR_DT.R_DT_NO3, R_DOCTOR_DT.R_DT_CODE2, R_DOCTOR_DT.R_DT_GOR3A
+FROM            R_DOCTOR_DT INNER JOIN
+                         R_DOCTOR ON R_DOCTOR_DT.R_CODE = R_DOCTOR.R_CODE INNER JOIN
+                         DOCTORS ON R_DOCTOR.R_CODE_DOC = DOCTORS.DO_CODE INNER JOIN
+                         PATIENT ON R_DOCTOR.R_CODE_PA = PATIENT.PA_CODE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="R_CODE" DataSetColumn="R_CODE" />
+              <Mapping SourceColumn="R_DATE" DataSetColumn="R_DATE" />
+              <Mapping SourceColumn="R_CODE_DOC" DataSetColumn="R_CODE_DOC" />
+              <Mapping SourceColumn="DO_NAME" DataSetColumn="DO_NAME" />
+              <Mapping SourceColumn="DO_TKHSOS" DataSetColumn="DO_TKHSOS" />
+              <Mapping SourceColumn="R_CODE_PA" DataSetColumn="R_CODE_PA" />
+              <Mapping SourceColumn="PA_NAME" DataSetColumn="PA_NAME" />
+              <Mapping SourceColumn="PA_AGE" DataSetColumn="PA_AGE" />
+              <Mapping SourceColumn="PA_TYPE" DataSetColumn="PA_TYPE" />
+              <Mapping SourceColumn="R_HRARA" DataSetColumn="R_HRARA" />
+              <Mapping SourceColumn="R_D" DataSetColumn="R_D" />
+              <Mapping SourceColumn="R_KG" DataSetColumn="R_KG" />
+              <Mapping SourceColumn="R_INFO" DataSetColumn="R_INFO" />
+              <Mapping SourceColumn="USER_ADD" DataSetColumn="USER_ADD" />
+              <Mapping SourceColumn="R_DT_CODE" DataSetColumn="R_DT_CODE" />
+              <Mapping SourceColumn="R_DT_PHARM" DataSetColumn="R_DT_PHARM" />
+              <Mapping SourceColumn="R_DT_NO3" DataSetColumn="R_DT_NO3" />
+              <Mapping SourceColumn="R_DT_CODE2" DataSetColumn="R_DT_CODE2" />
+              <Mapping SourceColumn="R_DT_GOR3A" DataSetColumn="R_DT_GOR3A" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ROSHTA_ELAG_DATA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ROSHTA_ELAG_DATA" msprop:Generator_UserDSName="ROSHTA_ELAG_DATA">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ROSHTA_ELAG_DATASET" msprop:Generator_TableClassName="ROSHTA_ELAG_DATASETDataTable" msprop:Generator_TableVarName="tableROSHTA_ELAG_DATASET" msprop:Generator_TablePropName="ROSHTA_ELAG_DATASET" msprop:Generator_RowDeletingName="ROSHTA_ELAG_DATASETRowDeleting" msprop:Generator_RowChangingName="ROSHTA_ELAG_DATASETRowChanging" msprop:Generator_RowEvHandlerName="ROSHTA_ELAG_DATASETRowChangeEventHandler" msprop:Generator_RowDeletedName="ROSHTA_ELAG_DATASETRowDeleted" msprop:Generator_UserTableName="ROSHTA_ELAG_DATASET" msprop:Generator_RowChangedName="ROSHTA_ELAG_DATASETRowChanged" msprop:Generator_RowEvArgName="ROSHTA_ELAG_DATASETRowChangeEvent" msprop:Generator_RowClassName="ROSHTA_ELAG_DATASETRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="R_CODE" msprop:Generator_ColumnVarNameInTable="columnR_CODE" msprop:Generator_ColumnPropNameInRow="R_CODE" msprop:Generator_ColumnPropNameInTable="R_CODEColumn" msprop:Generator_UserColumnName="R_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_DATE" msprop:Generator_ColumnVarNameInTable="columnR_DATE" msprop:Generator_ColumnPropNameInRow="R_DATE" msprop:Generator_ColumnPropNameInTable="R_DATEColumn" msprop:Generator_UserColumnName="R_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_CODE_DOC" msprop:Generator_ColumnVarNameInTable="columnR_CODE_DOC" msprop:Generator_ColumnPropNameInRow="R_CODE_DOC" msprop:Generator_ColumnPropNameInTable="R_CODE_DOCColumn" msprop:Generator_UserColumnName="R_CODE_DOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_NAME" msprop:Generator_ColumnVarNameInTable="columnDO_NAME" msprop:Generator_ColumnPropNameInRow="DO_NAME" msprop:Generator_ColumnPropNameInTable="DO_NAMEColumn" msprop:Generator_UserColumnName="DO_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_TKHSOS" msprop:Generator_ColumnVarNameInTable="columnDO_TKHSOS" msprop:Generator_ColumnPropNameInRow="DO_TKHSOS" msprop:Generator_ColumnPropNameInTable="DO_TKHSOSColumn" msprop:Generator_UserColumnName="DO_TKHSOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_CODE_PA" msprop:Generator_ColumnVarNameInTable="columnR_CODE_PA" msprop:Generator_ColumnPropNameInRow="R_CODE_PA" msprop:Generator_ColumnPropNameInTable="R_CODE_PAColumn" msprop:Generator_UserColumnName="R_CODE_PA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PA_NAME" msprop:Generator_ColumnVarNameInTable="columnPA_NAME" msprop:Generator_ColumnPropNameInRow="PA_NAME" msprop:Generator_ColumnPropNameInTable="PA_NAMEColumn" msprop:Generator_UserColumnName="PA_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PA_AGE" msprop:Generator_ColumnVarNameInTable="columnPA_AGE" msprop:Generator_ColumnPropNameInRow="PA_AGE" msprop:Generator_ColumnPropNameInTable="PA_AGEColumn" msprop:Generator_UserColumnName="PA_AGE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PA_TYPE" msprop:Generator_ColumnVarNameInTable="columnPA_TYPE" msprop:Generator_ColumnPropNameInRow="PA_TYPE" msprop:Generator_ColumnPropNameInTable="PA_TYPEColumn" msprop:Generator_UserColumnName="PA_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_HRARA" msprop:Generator_ColumnVarNameInTable="columnR_HRARA" msprop:Generator_ColumnPropNameInRow="R_HRARA" msprop:Generator_ColumnPropNameInTable="R_HRARAColumn" msprop:Generator_UserColumnName="R_HRARA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_D" msprop:Generator_ColumnVarNameInTable="columnR_D" msprop:Generator_ColumnPropNameInRow="R_D" msprop:Generator_ColumnPropNameInTable="R_DColumn" msprop:Generator_UserColumnName="R_D" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_KG" msprop:Generator_ColumnVarNameInTable="columnR_KG" msprop:Generator_ColumnPropNameInRow="R_KG" msprop:Generator_ColumnPropNameInTable="R_KGColumn" msprop:Generator_UserColumnName="R_KG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_INFO" msprop:Generator_ColumnVarNameInTable="columnR_INFO" msprop:Generator_ColumnPropNameInRow="R_INFO" msprop:Generator_ColumnPropNameInTable="R_INFOColumn" msprop:Generator_UserColumnName="R_INFO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_ADD" msprop:Generator_ColumnVarNameInTable="columnUSER_ADD" msprop:Generator_ColumnPropNameInRow="USER_ADD" msprop:Generator_ColumnPropNameInTable="USER_ADDColumn" msprop:Generator_UserColumnName="USER_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_DT_CODE" msprop:Generator_ColumnVarNameInTable="columnR_DT_CODE" msprop:Generator_ColumnPropNameInRow="R_DT_CODE" msprop:Generator_ColumnPropNameInTable="R_DT_CODEColumn" msprop:Generator_UserColumnName="R_DT_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_DT_PHARM" msprop:Generator_ColumnVarNameInTable="columnR_DT_PHARM" msprop:Generator_ColumnPropNameInRow="R_DT_PHARM" msprop:Generator_ColumnPropNameInTable="R_DT_PHARMColumn" msprop:Generator_UserColumnName="R_DT_PHARM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_DT_NO3" msprop:Generator_ColumnVarNameInTable="columnR_DT_NO3" msprop:Generator_ColumnPropNameInRow="R_DT_NO3" msprop:Generator_ColumnPropNameInTable="R_DT_NO3Column" msprop:Generator_UserColumnName="R_DT_NO3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_DT_CODE2" msprop:Generator_ColumnVarNameInTable="columnR_DT_CODE2" msprop:Generator_ColumnPropNameInRow="R_DT_CODE2" msprop:Generator_ColumnPropNameInTable="R_DT_CODE2Column" msprop:Generator_UserColumnName="R_DT_CODE2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="R_DT_GOR3A" msprop:Generator_ColumnVarNameInTable="columnR_DT_GOR3A" msprop:Generator_ColumnPropNameInRow="R_DT_GOR3A" msprop:Generator_ColumnPropNameInTable="R_DT_GOR3AColumn" msprop:Generator_UserColumnName="R_DT_GOR3A" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DOCTORS" targetNamespace="http://tempuri.org/DOCTORS.xsd" xmlns:mstns="http://tempuri.org/DOCTORS.xsd" xmlns="http://tempuri.org/DOCTORS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="sqlconn1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconn1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DOCTOR_CLINIC.My.MySettings.GlobalReference.Default.sqlconn1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DOCTORS_DATableAdapter" GeneratorDataComponentClassName="DOCTORS_DATableAdapter" Name="DOCTORS_DA" UserDataComponentName="DOCTORS_DATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        DOCTORS.DO_CODE, DOCTORS.DO_NAME, DOCTORS.DO_TKHSOS, DOCTORS.DO_TEL, DOCTORS.DO_TEL2, DOCTORS.USER_ADD, DOCTORSDT.DOT_M, 
+                         DOCTORSDT.DOT_NAME, DOCTORSDT.DOT_PA, DOCTORSDT.DOT_T3AKOD, DOCTORSDT.DOT_DOCTORS
+FROM            DOCTORS INNER JOIN
+                         DOCTORSDT ON DOCTORS.DO_CODE = DOCTORSDT.DO_CODE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DO_CODE" DataSetColumn="DO_CODE" />
+              <Mapping SourceColumn="DO_NAME" DataSetColumn="DO_NAME" />
+              <Mapping SourceColumn="DO_TKHSOS" DataSetColumn="DO_TKHSOS" />
+              <Mapping SourceColumn="DO_TEL" DataSetColumn="DO_TEL" />
+              <Mapping SourceColumn="DO_TEL2" DataSetColumn="DO_TEL2" />
+              <Mapping SourceColumn="USER_ADD" DataSetColumn="USER_ADD" />
+              <Mapping SourceColumn="DOT_M" DataSetColumn="DOT_M" />
+              <Mapping SourceColumn="DOT_NAME" DataSetColumn="DOT_NAME" />
+              <Mapping SourceColumn="DOT_PA" DataSetColumn="DOT_PA" />
+              <Mapping SourceColumn="DOT_T3AKOD" DataSetColumn="DOT_T3AKOD" />
+              <Mapping SourceColumn="DOT_DOCTORS" DataSetColumn="DOT_DOCTORS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DOCTORS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DOCTORS" msprop:Generator_UserDSName="DOCTORS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DOCTORS_DA" msprop:Generator_TableClassName="DOCTORS_DADataTable" msprop:Generator_TableVarName="tableDOCTORS_DA" msprop:Generator_RowChangedName="DOCTORS_DARowChanged" msprop:Generator_TablePropName="DOCTORS_DA" msprop:Generator_RowDeletingName="DOCTORS_DARowDeleting" msprop:Generator_RowChangingName="DOCTORS_DARowChanging" msprop:Generator_RowEvHandlerName="DOCTORS_DARowChangeEventHandler" msprop:Generator_RowDeletedName="DOCTORS_DARowDeleted" msprop:Generator_RowClassName="DOCTORS_DARow" msprop:Generator_UserTableName="DOCTORS_DA" msprop:Generator_RowEvArgName="DOCTORS_DARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DO_CODE" msprop:Generator_ColumnVarNameInTable="columnDO_CODE" msprop:Generator_ColumnPropNameInRow="DO_CODE" msprop:Generator_ColumnPropNameInTable="DO_CODEColumn" msprop:Generator_UserColumnName="DO_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_NAME" msprop:Generator_ColumnVarNameInTable="columnDO_NAME" msprop:Generator_ColumnPropNameInRow="DO_NAME" msprop:Generator_ColumnPropNameInTable="DO_NAMEColumn" msprop:Generator_UserColumnName="DO_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_TKHSOS" msprop:Generator_ColumnVarNameInTable="columnDO_TKHSOS" msprop:Generator_ColumnPropNameInRow="DO_TKHSOS" msprop:Generator_ColumnPropNameInTable="DO_TKHSOSColumn" msprop:Generator_UserColumnName="DO_TKHSOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_TEL" msprop:Generator_ColumnVarNameInTable="columnDO_TEL" msprop:Generator_ColumnPropNameInRow="DO_TEL" msprop:Generator_ColumnPropNameInTable="DO_TELColumn" msprop:Generator_UserColumnName="DO_TEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_TEL2" msprop:Generator_ColumnVarNameInTable="columnDO_TEL2" msprop:Generator_ColumnPropNameInRow="DO_TEL2" msprop:Generator_ColumnPropNameInTable="DO_TEL2Column" msprop:Generator_UserColumnName="DO_TEL2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USER_ADD" msprop:Generator_ColumnVarNameInTable="columnUSER_ADD" msprop:Generator_ColumnPropNameInRow="USER_ADD" msprop:Generator_ColumnPropNameInTable="USER_ADDColumn" msprop:Generator_UserColumnName="USER_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_M" msprop:Generator_ColumnVarNameInTable="columnDOT_M" msprop:Generator_ColumnPropNameInRow="DOT_M" msprop:Generator_ColumnPropNameInTable="DOT_MColumn" msprop:Generator_UserColumnName="DOT_M" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_NAME" msprop:Generator_ColumnVarNameInTable="columnDOT_NAME" msprop:Generator_ColumnPropNameInRow="DOT_NAME" msprop:Generator_ColumnPropNameInTable="DOT_NAMEColumn" msprop:Generator_UserColumnName="DOT_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_PA" msprop:Generator_ColumnVarNameInTable="columnDOT_PA" msprop:Generator_ColumnPropNameInRow="DOT_PA" msprop:Generator_ColumnPropNameInTable="DOT_PAColumn" msprop:Generator_UserColumnName="DOT_PA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_T3AKOD" msprop:Generator_ColumnVarNameInTable="columnDOT_T3AKOD" msprop:Generator_ColumnPropNameInRow="DOT_T3AKOD" msprop:Generator_ColumnPropNameInTable="DOT_T3AKODColumn" msprop:Generator_UserColumnName="DOT_T3AKOD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_DOCTORS" msprop:Generator_ColumnVarNameInTable="columnDOT_DOCTORS" msprop:Generator_ColumnPropNameInRow="DOT_DOCTORS" msprop:Generator_ColumnPropNameInTable="DOT_DOCTORSColumn" msprop:Generator_UserColumnName="DOT_DOCTORS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

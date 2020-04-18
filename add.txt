@@ -1,0 +1,9 @@
+git init  >> add in progect
+git remote add origin https://github.com/eslame-elgohary/DOCTORS-CLINIC   >> add linke
+git config --global user.name "" >> add name
+git config --global user.email "" >> add email
+ 
+
+git add .   >> add
+git commit -m "" >> add name chang
+git push origin master >> start transfair 
