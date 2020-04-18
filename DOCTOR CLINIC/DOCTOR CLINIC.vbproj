@@ -576,6 +576,12 @@
     <Compile Include="المعمل\ADDTHLELMAMLPAFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="المعمل\SEARCHPRICETHLELFRM.Designer.vb">
+      <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -883,6 +889,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="المعمل\ADDTHLELMAMLPAFRM.resx">
       <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المعمل\SEARCHPRICETHLELFRM.resx">
+      <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
       <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>

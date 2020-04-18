@@ -57,16 +57,19 @@
     End Sub
     Sub CALC()
         '==== انشاء العملية الحسابية =======
-        Dim TOTAL_ As Double
+        Dim TOTAL_, BAKY_ As Double
 
         For I = 0 To DataGridView1.Rows.Count - 1
-            TOTAL_ = Val(TOTAL_) + Val(DataGridView1.Rows(I).Cells(6).Value)
+            TOTAL_ = Val(TOTAL_) + Val(DataGridView1.Rows(I).Cells(5).Value)
         Next
         TOTAL.Text = Val(TOTAL_)
         SAFY.Text = Val(TOTAL.Text) - Val(DISCOUNT.Text)
 
-        If Val(TOTAL.Text) > 0 Then
-            SAFY_AR.Text = ARABIC.ConvertToArabic(SAFY.Text)
+        BAKY_ = Val(SAFY.Text) - Val(TXT_MONY.Text)
+        TXT_BAKY.Text = Val(BAKY_)
+
+        If Val(TXT_MONY.Text) > 0 Then
+            SAFY_AR.Text = " دفع " & ARABIC.ConvertToArabic(TXT_MONY.Text) & "  ومتبقي  " & ARABIC.ConvertToArabic(TXT_BAKY.Text)
         Else
             SAFY_AR.Text = ""
         End If
@@ -145,9 +148,9 @@
                     PA_NAME.Select()
                     Exit Sub
                 End If
-                If TOTAL.Text < 1 Then
-                    MessageBox.Show("برجاء ادخال التحاليل المطلوبة ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    TH_NAME.Select()
+                If TXT_MONY.Text = "" Then
+                    MessageBox.Show("برجاء ادخال المبلغ المستلم من المريض  ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    TXT_MONY.Select()
                     Exit Sub
                 End If
 
@@ -160,6 +163,7 @@
                 Else
                     Dim DR = DT.NewRow
                     DR!ADD_CODE = TXT_CODE.Text
+                    DR!ADD_CODE2 = TXT_CODE2.Text
                     DR!ADD_DATE = TXT_DATE.Text
                     DR!ADD_TYPE = "المعامل"
                     DR!CODE_KHAZINA = KHAZINA_CODE.Text
@@ -520,7 +524,7 @@
     Sub FILL_PATIENT()
         PA_NAME.Items.Clear()
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION_V WHERE STAT='TRUE' ", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             PA_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
@@ -535,7 +539,30 @@
             TXT_AGE.Text = DT.Rows(I).Item("PA_AGE")
             TXT_PA_TYPE.Text = DT.Rows(I).Item("PA_TYPE")
         Next
-        FILL_MAML()
+        DataGridView1.Rows.Clear()
+        '===============================================================
+        Dim DT1 As New DataTable
+        Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION WHERE PA_CODE ='" & PA_CODE.Text & "'", SqlConn)
+        DA1.Fill(DT1)
+        For I = 0 To DT1.Rows.Count - 1
+            TXT_CODE2.Text = DT1.Rows(I).Item("ADD_CODE")
+            MAML_CODE.Text = DT1.Rows(I).Item("MAML_CODE")
+        Next
+        '=======================================================================
+        Dim DS As New DataSet
+        DA1 = New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION_DT WHERE ADD_THLEL = '" & TXT_CODE2.Text & "'", SqlConn)
+        DS = New DataSet
+        DA1.Fill(DS)
+        DT1 = DS.Tables(0)
+        For I = 0 To DT1.Rows.Count - 1
+            DataGridView1.Rows.Add()
+            DataGridView1.Rows(I).Cells(1).Value = DT1.Rows(I).Item("MID")
+            DataGridView1.Rows(I).Cells(2).Value = DT1.Rows(I).Item("CODE_MAML")
+            DataGridView1.Rows(I).Cells(3).Value = DT1.Rows(I).Item("CODE_THLEL")
+            DataGridView1.Rows(I).Cells(4).Value = DT1.Rows(I).Item("NAME_THLEL")
+            DataGridView1.Rows(I).Cells(5).Value = DT1.Rows(I).Item("PRICE_THLEL")
+            DataGridView1.Rows(I).Cells(6).Value = DT1.Rows(I).Item("PRICE_LABTO")
+        Next
     End Sub
     Sub FILL_MAML()
         DataGridView1.Rows.Clear()

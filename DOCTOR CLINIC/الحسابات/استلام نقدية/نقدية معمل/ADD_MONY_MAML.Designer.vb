@@ -68,14 +68,6 @@ Partial Class ADD_MONY_MAML
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TH_NAME = New System.Windows.Forms.ComboBox()
         Me.TH_CODE = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column0 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -88,11 +80,24 @@ Partial Class ADD_MONY_MAML
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIM_CALC = New System.Windows.Forms.Timer(Me.components)
+        Me.TXT_CODE2 = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column0 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TXT_MONY = New System.Windows.Forms.TextBox()
+        Me.TXT_BAKY = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GRBTN
@@ -210,6 +215,7 @@ Partial Class ADD_MONY_MAML
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_CODE2)
         Me.GroupBox1.Controls.Add(Me.MAML_CODE)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.MAML_NAME)
@@ -257,6 +263,7 @@ Partial Class ADD_MONY_MAML
         '
         'MAML_NAME
         '
+        Me.MAML_NAME.Enabled = False
         Me.MAML_NAME.FormattingEnabled = True
         Me.MAML_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
         Me.MAML_NAME.Location = New System.Drawing.Point(506, 98)
@@ -416,9 +423,14 @@ Partial Class ADD_MONY_MAML
         Me.Label6.Size = New System.Drawing.Size(48, 50)
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "+"
+        Me.Label6.Visible = False
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TXT_BAKY)
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.TXT_MONY)
         Me.GroupBox2.Controls.Add(Me.TXT_M)
         Me.GroupBox2.Controls.Add(Me.SAFY_AR)
         Me.GroupBox2.Controls.Add(Me.SAFY)
@@ -465,16 +477,16 @@ Partial Class ADD_MONY_MAML
         '
         Me.SAFY.BackColor = System.Drawing.Color.White
         Me.SAFY.Enabled = False
-        Me.SAFY.Location = New System.Drawing.Point(185, 206)
+        Me.SAFY.Location = New System.Drawing.Point(334, 206)
         Me.SAFY.Name = "SAFY"
-        Me.SAFY.Size = New System.Drawing.Size(133, 29)
+        Me.SAFY.Size = New System.Drawing.Size(99, 29)
         Me.SAFY.TabIndex = 46
         Me.SAFY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(323, 209)
+        Me.Label19.Location = New System.Drawing.Point(438, 209)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(68, 21)
         Me.Label19.TabIndex = 48
@@ -483,7 +495,7 @@ Partial Class ADD_MONY_MAML
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(541, 209)
+        Me.Label18.Location = New System.Drawing.Point(591, 209)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(61, 21)
         Me.Label18.TabIndex = 47
@@ -492,16 +504,16 @@ Partial Class ADD_MONY_MAML
         'DISCOUNT
         '
         Me.DISCOUNT.BackColor = System.Drawing.Color.White
-        Me.DISCOUNT.Location = New System.Drawing.Point(410, 206)
+        Me.DISCOUNT.Location = New System.Drawing.Point(512, 206)
         Me.DISCOUNT.Name = "DISCOUNT"
-        Me.DISCOUNT.Size = New System.Drawing.Size(126, 29)
+        Me.DISCOUNT.Size = New System.Drawing.Size(74, 29)
         Me.DISCOUNT.TabIndex = 45
         Me.DISCOUNT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(740, 209)
+        Me.Label17.Location = New System.Drawing.Point(756, 209)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(71, 21)
         Me.Label17.TabIndex = 43
@@ -511,9 +523,9 @@ Partial Class ADD_MONY_MAML
         '
         Me.TOTAL.BackColor = System.Drawing.Color.White
         Me.TOTAL.Enabled = False
-        Me.TOTAL.Location = New System.Drawing.Point(609, 206)
+        Me.TOTAL.Location = New System.Drawing.Point(656, 206)
         Me.TOTAL.Name = "TOTAL"
-        Me.TOTAL.Size = New System.Drawing.Size(125, 29)
+        Me.TOTAL.Size = New System.Drawing.Size(94, 29)
         Me.TOTAL.TabIndex = 44
         Me.TOTAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -526,6 +538,7 @@ Partial Class ADD_MONY_MAML
         Me.ACTIVE_MAML.Name = "ACTIVE_MAML"
         Me.ACTIVE_MAML.Size = New System.Drawing.Size(42, 44)
         Me.ACTIVE_MAML.TabIndex = 39
+        Me.ACTIVE_MAML.Visible = False
         '
         'TH_PRICE
         '
@@ -536,6 +549,7 @@ Partial Class ADD_MONY_MAML
         Me.TH_PRICE.Size = New System.Drawing.Size(127, 29)
         Me.TH_PRICE.TabIndex = 38
         Me.TH_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TH_PRICE.Visible = False
         '
         'Label10
         '
@@ -545,6 +559,7 @@ Partial Class ADD_MONY_MAML
         Me.Label10.Size = New System.Drawing.Size(96, 21)
         Me.Label10.TabIndex = 37
         Me.Label10.Text = "قيمة التحليل :"
+        Me.Label10.Visible = False
         '
         'Label9
         '
@@ -554,6 +569,7 @@ Partial Class ADD_MONY_MAML
         Me.Label9.Size = New System.Drawing.Size(92, 21)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "أسم التحليل :"
+        Me.Label9.Visible = False
         '
         'TH_NAME
         '
@@ -563,6 +579,7 @@ Partial Class ADD_MONY_MAML
         Me.TH_NAME.Name = "TH_NAME"
         Me.TH_NAME.Size = New System.Drawing.Size(224, 29)
         Me.TH_NAME.TabIndex = 35
+        Me.TH_NAME.Visible = False
         '
         'TH_CODE
         '
@@ -574,67 +591,6 @@ Partial Class ADD_MONY_MAML
         Me.TH_CODE.TabIndex = 34
         Me.TH_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.TH_CODE.Visible = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column0, Me.Column6, Me.Column2, Me.Column1, Me.Column3, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 66)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(821, 134)
-        Me.DataGridView1.TabIndex = 33
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "كود الأيصال"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Visible = False
-        '
-        'Column0
-        '
-        Me.Column0.FillWeight = 20.0!
-        Me.Column0.HeaderText = "م"
-        Me.Column0.Name = "Column0"
-        Me.Column0.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "كود المعمل"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.FillWeight = 60.0!
-        Me.Column2.HeaderText = "أسم المعمل"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "كود التحليل"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "أسم التحليل"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.FillWeight = 50.0!
-        Me.Column4.HeaderText = "السعر"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
         '
         'TIMEREDIT
         '
@@ -706,6 +662,117 @@ Partial Class ADD_MONY_MAML
         '
         'TIM_CALC
         '
+        Me.TIM_CALC.Enabled = True
+        '
+        'TXT_CODE2
+        '
+        Me.TXT_CODE2.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE2.Enabled = False
+        Me.TXT_CODE2.Location = New System.Drawing.Point(773, 24)
+        Me.TXT_CODE2.Name = "TXT_CODE2"
+        Me.TXT_CODE2.Size = New System.Drawing.Size(47, 29)
+        Me.TXT_CODE2.TabIndex = 68
+        Me.TXT_CODE2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_CODE2.Visible = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column0, Me.Column6, Me.Column1, Me.Column3, Me.Column4, Me.Column2})
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 16)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(821, 184)
+        Me.DataGridView1.TabIndex = 33
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "كود الأيصال"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        '
+        'Column0
+        '
+        Me.Column0.FillWeight = 20.0!
+        Me.Column0.HeaderText = "م"
+        Me.Column0.Name = "Column0"
+        Me.Column0.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "كود المعمل"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "كود التحليل"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "أسم التحليل"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 50.0!
+        Me.Column4.HeaderText = "السعر"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.FillWeight = 60.0!
+        Me.Column2.HeaderText = "أسم المعمل"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Visible = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(260, 209)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(69, 21)
+        Me.Label7.TabIndex = 61
+        Me.Label7.Text = "المدفوع :"
+        '
+        'TXT_MONY
+        '
+        Me.TXT_MONY.BackColor = System.Drawing.Color.White
+        Me.TXT_MONY.Location = New System.Drawing.Point(170, 206)
+        Me.TXT_MONY.Name = "TXT_MONY"
+        Me.TXT_MONY.Size = New System.Drawing.Size(85, 29)
+        Me.TXT_MONY.TabIndex = 60
+        Me.TXT_MONY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_BAKY
+        '
+        Me.TXT_BAKY.BackColor = System.Drawing.Color.White
+        Me.TXT_BAKY.Enabled = False
+        Me.TXT_BAKY.Location = New System.Drawing.Point(6, 206)
+        Me.TXT_BAKY.Name = "TXT_BAKY"
+        Me.TXT_BAKY.Size = New System.Drawing.Size(90, 29)
+        Me.TXT_BAKY.TabIndex = 62
+        Me.TXT_BAKY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(100, 209)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(67, 21)
+        Me.Label11.TabIndex = 63
+        Me.Label11.Text = "المتبقي :"
         '
         'ADD_MONY_MAML
         '
@@ -732,9 +799,9 @@ Partial Class ADD_MONY_MAML
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -769,7 +836,6 @@ Partial Class ADD_MONY_MAML
     Friend WithEvents MAML_NAME As ComboBox
     Friend WithEvents MAML_CODE As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ACTIVE_MAML As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TH_PRICE As TextBox
     Friend WithEvents Label10 As Label
@@ -796,12 +862,18 @@ Partial Class ADD_MONY_MAML
     Friend WithEvents TIME_EDIT As ToolStripStatusLabel
     Friend WithEvents Label6 As Label
     Friend WithEvents TXT_M As TextBox
+    Friend WithEvents TIM_CALC As Timer
+    Friend WithEvents TXT_CODE2 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column0 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents TIM_CALC As Timer
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_BAKY As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TXT_MONY As TextBox
 End Class

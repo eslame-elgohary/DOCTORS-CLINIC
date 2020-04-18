@@ -1,6 +1,7 @@
 ﻿Public Class ADDTHLELMAMLPAFRM
     Dim ARABIC As New ClassConvertNO
     Sub SHOW_DETA(CODE_)
+        DataGridView1.Rows.Clear()
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION WHERE ADD_CODE = '" & CODE_ & "'", SqlConn)
         DA.Fill(DT)
@@ -15,17 +16,20 @@
             USER_ADD.Text = DR!USER_ADD
             DATE_ADD.Text = DR!DATE_ADD
             TIME_ADD.Text = DR!TIME_ADD
-            Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION_DT WHERE ADD_THLEL = '" & CODE_ & "'", SqlConn)
-            DA1.Fill(DT)
             '========================== detels =================
-            For I = 0 To DataGridView1.Rows.Count - 1
-                Dim DR1 = DT.Rows(0)
-                DataGridView1.Rows(I).Cells(1).Value = DR1!MID
-                DataGridView1.Rows(I).Cells(2).Value = DR1!CODE_MAML
-                DataGridView1.Rows(I).Cells(3).Value = DR1!CODE_THLEL
-                DataGridView1.Rows(I).Cells(4).Value = DR1!NAME_THLEL
-                DataGridView1.Rows(I).Cells(5).Value = DR1!PRICE_THLEL
-                DataGridView1.Rows(I).Cells(6).Value = DR1!PRICE_LABTO
+            Dim DS As New DataSet
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION_DT WHERE ADD_THLEL = '" & CODE_ & "'", SqlConn)
+            DS = New DataSet
+            DA.Fill(DS)
+            DT = DS.Tables(0)
+            For I = 0 To DT.Rows.Count - 1
+                DataGridView1.Rows.Add()
+                DataGridView1.Rows(I).Cells(1).Value = DT.Rows(I).Item("MID")
+                DataGridView1.Rows(I).Cells(2).Value = DT.Rows(I).Item("CODE_MAML")
+                DataGridView1.Rows(I).Cells(3).Value = DT.Rows(I).Item("CODE_THLEL")
+                DataGridView1.Rows(I).Cells(4).Value = DT.Rows(I).Item("NAME_THLEL")
+                DataGridView1.Rows(I).Cells(5).Value = DT.Rows(I).Item("PRICE_THLEL")
+                DataGridView1.Rows(I).Cells(6).Value = DT.Rows(I).Item("PRICE_LABTO")
             Next
 
             DELETBTN.Enabled = True
@@ -60,7 +64,7 @@
         Dim TOTAL_ As Double
 
         For I = 0 To DataGridView1.Rows.Count - 1
-            TOTAL_ = Val(TOTAL_) + Val(DataGridView1.Rows(I).Cells(6).Value)
+            TOTAL_ = Val(TOTAL_) + Val(DataGridView1.Rows(I).Cells(5).Value)
         Next
         TOTAL.Text = Val(TOTAL_)
         SAFY.Text = Val(TOTAL.Text) - Val(DISCOUNT.Text)
@@ -295,7 +299,7 @@
     End Sub
 
     Private Sub SEARCHBTN_Click(sender As Object, e As EventArgs) Handles SEARCHBTN.Click
-
+        SEARCHPRICETHLELFRM.ShowDialog()
     End Sub
 
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click
@@ -378,7 +382,7 @@
 
     Private Sub TH_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TH_NAME.SelectedIndexChanged
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PRICETHLEL WHERE STAT='TRUE' AND THLIL_NAME ='" & TH_NAME.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PRICETHLEL WHERE STAT='TRUE' AND THLIL_NAME ='" & TH_NAME.Text & "' and MAML_CODE='" & MAML_CODE.Text & "'", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             TH_CODE.Text = DT.Rows(I).Item("THLIL_CODE")
