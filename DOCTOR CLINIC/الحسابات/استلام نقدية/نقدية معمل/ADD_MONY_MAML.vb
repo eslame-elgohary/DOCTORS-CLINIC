@@ -117,18 +117,16 @@
         EDITBTN.Enabled = False
         DELETBTN.Enabled = False
         SAVEBTN.Enabled = True
-        TIMERADD.Enabled = True
-        TIMEREDIT.Enabled = False
         TXT_M.Text = "1"
         FILL_KHAZINA_CODE()
         PA_NAME.Select()
-
+        FILL_PATIENT()
         CALC()
     End Sub
 
     Private Sub ADD_MONY_MAML_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NEWBTN_Click(sender, e)
-        FILL_PATIENT()
+
     End Sub
 
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
@@ -611,21 +609,6 @@
         Next
         TH_NAME.Select()
     End Sub
-    Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(7).Value = "حذف"
-            Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-        Next
-    End Sub
-    Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-        For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(7, DataGridView1.CurrentRow.Index).Selected = True Then
-                DataGridView1.Rows.Remove(ROW)
-            End If
-        Next
-        CALC()
-    End Sub
-
     Private Sub MAML_CODE_TextChanged(sender As Object, e As EventArgs) Handles MAML_CODE.TextChanged
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MAML WHERE MAML_CODE='" & MAML_CODE.Text & "'", SqlConn)
@@ -644,5 +627,9 @@
             TXT_AGE.Text = DT.Rows(I).Item("PA_AGE")
             TXT_PA_TYPE.Text = DT.Rows(I).Item("PA_TYPE")
         Next
+    End Sub
+
+    Private Sub TIM_CALC_Tick(sender As Object, e As EventArgs) Handles TIM_CALC.Tick
+        CALC()
     End Sub
 End Class

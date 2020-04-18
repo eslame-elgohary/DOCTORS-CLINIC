@@ -139,6 +139,13 @@
 
                 UP.Checked = DR!UP
 
+                Q20.Checked = DR!Q20
+                Q21.Checked = DR!Q21
+                Q22.Checked = DR!Q22
+                Q23.Checked = DR!Q23
+                Q24.Checked = DR!Q24
+
+
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
             Else
@@ -287,6 +294,12 @@
                 DR!R4 = R4.Checked
 
                 DR!UP = UP.Checked
+
+                DR!Q20 = Q20.Checked
+                DR!Q21 = Q21.Checked
+                DR!Q22 = Q22.Checked
+                DR!Q23 = Q23.Checked
+                DR!Q24 = Q24.Checked
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)

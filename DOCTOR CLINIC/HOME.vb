@@ -358,4 +358,12 @@
 
         End Try
     End Sub
+
+    Private Sub BT_ADDTHLEL_PATION_Click(sender As Object, e As EventArgs) Handles BT_ADDTHLEL_PATION.Click
+        Try
+            ROLES("Q20", ADDTHLELMAMLPAFRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class

@@ -570,6 +570,12 @@
     <Compile Include="المستخدمين\USERSLAHFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="المعمل\ADDTHLELMAMLPAFRM.Designer.vb">
+      <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المعمل\ADDTHLELMAMLPAFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -874,6 +880,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="المستخدمين\USERSLAHFRM.resx">
       <DependentUpon>USERSLAHFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المعمل\ADDTHLELMAMLPAFRM.resx">
+      <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
       <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>
