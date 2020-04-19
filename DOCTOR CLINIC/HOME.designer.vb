@@ -24,7 +24,26 @@ Partial Class HOME
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HOME))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.T_TIME = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.T_DATE = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.T_USERS = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.CODE_USERBT = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.MACHINBTN = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.MASEGETXT = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FffffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PERSONALHISTORYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PFOLOWUPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.التكويداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_PATIONT = New System.Windows.Forms.ToolStripMenuItem()
         Me.العملاءالموردينToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,7 +68,7 @@ Partial Class HOME
         Me.BT_SALE_FATO = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_RESALE_FATO = New System.Windows.Forms.ToolStripMenuItem()
         Me.المعملToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.أدخالتحاليلمريضToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_ADD_THLELFORPATION = New System.Windows.Forms.ToolStripMenuItem()
         Me.الحساباتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_ADDMONY = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_ADDMONY_DOCTOR = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,6 +77,7 @@ Partial Class HOME
         Me.BT_MASROF_DT = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_CONVERT_KHAZINA = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_TSWIA = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_PA_DOF3A = New System.Windows.Forms.ToolStripMenuItem()
         Me.التقاريرToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_PATENT_REP = New System.Windows.Forms.ToolStripMenuItem()
         Me.تقريرالحساباتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,17 +94,7 @@ Partial Class HOME
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTNBACKUP = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_EXIT = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.T_TIME = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.T_DATE = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.T_USERS = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.CODE_USERBT = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.MACHINBTN = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.STB_SALSE = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.STB_RESALSE = New System.Windows.Forms.ToolStripButton()
@@ -102,27 +112,178 @@ Partial Class HOME
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.MASEGETXT = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BTN_PA_DOF3A = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.StatusStrip1.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'StatusStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.T_TIME, Me.ToolStripStatusLabel3, Me.T_DATE, Me.ToolStripStatusLabel5, Me.T_USERS, Me.CODE_USERBT, Me.ToolStripStatusLabel4, Me.MACHINBTN})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 700)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1350, 30)
+        Me.StatusStrip1.SizingGrip = False
+        Me.StatusStrip1.TabIndex = 3
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(75, 25)
+        Me.ToolStripStatusLabel1.Text = "الوقت : "
+        '
+        'T_TIME
+        '
+        Me.T_TIME.ForeColor = System.Drawing.Color.Navy
+        Me.T_TIME.Name = "T_TIME"
+        Me.T_TIME.Size = New System.Drawing.Size(206, 25)
+        Me.T_TIME.Text = "ToolStripStatusLabel2"
+        '
+        'ToolStripStatusLabel3
+        '
+        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(76, 25)
+        Me.ToolStripStatusLabel3.Text = "التاريخ : "
+        '
+        'T_DATE
+        '
+        Me.T_DATE.ForeColor = System.Drawing.Color.Green
+        Me.T_DATE.Name = "T_DATE"
+        Me.T_DATE.Size = New System.Drawing.Size(206, 25)
+        Me.T_DATE.Text = "ToolStripStatusLabel4"
+        '
+        'ToolStripStatusLabel5
+        '
+        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(140, 25)
+        Me.ToolStripStatusLabel5.Text = "أسم المستخدم : "
+        '
+        'T_USERS
+        '
+        Me.T_USERS.ForeColor = System.Drawing.Color.Maroon
+        Me.T_USERS.Name = "T_USERS"
+        Me.T_USERS.Size = New System.Drawing.Size(206, 25)
+        Me.T_USERS.Text = "ToolStripStatusLabel6"
+        '
+        'CODE_USERBT
+        '
+        Me.CODE_USERBT.ActiveLinkColor = System.Drawing.Color.Red
+        Me.CODE_USERBT.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.CODE_USERBT.Name = "CODE_USERBT"
+        Me.CODE_USERBT.Size = New System.Drawing.Size(206, 25)
+        Me.CODE_USERBT.Text = "ToolStripStatusLabel2"
+        '
+        'ToolStripStatusLabel4
+        '
+        Me.ToolStripStatusLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(206, 25)
+        Me.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4"
+        '
+        'MACHINBTN
+        '
+        Me.MACHINBTN.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.MACHINBTN.Name = "MACHINBTN"
+        Me.MACHINBTN.Size = New System.Drawing.Size(20, 25)
+        Me.MACHINBTN.Text = "0"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.Location = New System.Drawing.Point(410, 583)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(515, 45)
+        Me.Label3.TabIndex = 69
+        Me.Label3.Text = "Karma Software Company "
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label9.Location = New System.Drawing.Point(507, 269)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(349, 45)
+        Me.Label9.TabIndex = 68
+        Me.Label9.Text = "DOCTORS CLINIC"
+        '
+        'MASEGETXT
+        '
+        Me.MASEGETXT.BackColor = System.Drawing.Color.Transparent
+        Me.MASEGETXT.Location = New System.Drawing.Point(507, 107)
+        Me.MASEGETXT.Name = "MASEGETXT"
+        Me.MASEGETXT.Size = New System.Drawing.Size(350, 162)
+        Me.MASEGETXT.TabIndex = 70
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.Doctors_Pic
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 81)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1350, 616)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.MenuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 24)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.MenuStrip2.Size = New System.Drawing.Size(1350, 25)
+        Me.MenuStrip2.TabIndex = 71
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FffffToolStripMenuItem, Me.PERSONALHISTORYToolStripMenuItem, Me.PFOLOWUPToolStripMenuItem})
+        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.White
+        Me.ToolStripMenuItem2.ImageTransparentColor = System.Drawing.SystemColors.HotTrack
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(117, 21)
+        Me.ToolStripMenuItem2.Text = "WOMEN CLINIC"
+        '
+        'FffffToolStripMenuItem
+        '
+        Me.FffffToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.FffffToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.FffffToolStripMenuItem.Name = "FffffToolStripMenuItem"
+        Me.FffffToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.FffffToolStripMenuItem.Text = "WOMEN CLINIC COMPLAINT"
+        '
+        'PERSONALHISTORYToolStripMenuItem
+        '
+        Me.PERSONALHISTORYToolStripMenuItem.Name = "PERSONALHISTORYToolStripMenuItem"
+        Me.PERSONALHISTORYToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.PERSONALHISTORYToolStripMenuItem.Text = "PERSONAL HISTORY"
+        '
+        'PFOLOWUPToolStripMenuItem
+        '
+        Me.PFOLOWUPToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.PFOLOWUPToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.PFOLOWUPToolStripMenuItem.Name = "PFOLOWUPToolStripMenuItem"
+        Me.PFOLOWUPToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.PFOLOWUPToolStripMenuItem.Text = "P FOLLOW UP CARD"
         '
         'التكويداتToolStripMenuItem
         '
@@ -272,16 +433,16 @@ Partial Class HOME
         '
         'المعملToolStripMenuItem
         '
-        Me.المعملToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.أدخالتحاليلمريضToolStripMenuItem})
+        Me.المعملToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_ADD_THLELFORPATION})
         Me.المعملToolStripMenuItem.Name = "المعملToolStripMenuItem"
         Me.المعملToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.المعملToolStripMenuItem.Text = "المعمل"
         '
-        'أدخالتحاليلمريضToolStripMenuItem
+        'BTN_ADD_THLELFORPATION
         '
-        Me.أدخالتحاليلمريضToolStripMenuItem.Name = "أدخالتحاليلمريضToolStripMenuItem"
-        Me.أدخالتحاليلمريضToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
-        Me.أدخالتحاليلمريضToolStripMenuItem.Text = "أدخال تحاليل مريض"
+        Me.BTN_ADD_THLELFORPATION.Name = "BTN_ADD_THLELFORPATION"
+        Me.BTN_ADD_THLELFORPATION.Size = New System.Drawing.Size(170, 22)
+        Me.BTN_ADD_THLELFORPATION.Text = "أدخال تحاليل مريض"
         '
         'الحساباتToolStripMenuItem
         '
@@ -333,6 +494,12 @@ Partial Class HOME
         Me.BT_TSWIA.Name = "BT_TSWIA"
         Me.BT_TSWIA.Size = New System.Drawing.Size(169, 22)
         Me.BT_TSWIA.Text = "تسوية حساب خزينة"
+        '
+        'BTN_PA_DOF3A
+        '
+        Me.BTN_PA_DOF3A.Name = "BTN_PA_DOF3A"
+        Me.BTN_PA_DOF3A.Size = New System.Drawing.Size(169, 22)
+        Me.BTN_PA_DOF3A.Text = "دفعة من مريض"
         '
         'التقاريرToolStripMenuItem
         '
@@ -436,90 +603,15 @@ Partial Class HOME
         Me.BT_EXIT.Size = New System.Drawing.Size(51, 20)
         Me.BT_EXIT.Text = "الخروج"
         '
-        'StatusStrip1
+        'MenuStrip1
         '
-        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.T_TIME, Me.ToolStripStatusLabel3, Me.T_DATE, Me.ToolStripStatusLabel5, Me.T_USERS, Me.CODE_USERBT, Me.ToolStripStatusLabel4, Me.MACHINBTN})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 700)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1350, 30)
-        Me.StatusStrip1.SizingGrip = False
-        Me.StatusStrip1.TabIndex = 3
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(75, 25)
-        Me.ToolStripStatusLabel1.Text = "الوقت : "
-        '
-        'T_TIME
-        '
-        Me.T_TIME.ForeColor = System.Drawing.Color.Navy
-        Me.T_TIME.Name = "T_TIME"
-        Me.T_TIME.Size = New System.Drawing.Size(206, 25)
-        Me.T_TIME.Text = "ToolStripStatusLabel2"
-        '
-        'ToolStripStatusLabel3
-        '
-        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(76, 25)
-        Me.ToolStripStatusLabel3.Text = "التاريخ : "
-        '
-        'T_DATE
-        '
-        Me.T_DATE.ForeColor = System.Drawing.Color.Green
-        Me.T_DATE.Name = "T_DATE"
-        Me.T_DATE.Size = New System.Drawing.Size(206, 25)
-        Me.T_DATE.Text = "ToolStripStatusLabel4"
-        '
-        'ToolStripStatusLabel5
-        '
-        Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(140, 25)
-        Me.ToolStripStatusLabel5.Text = "أسم المستخدم : "
-        '
-        'T_USERS
-        '
-        Me.T_USERS.ForeColor = System.Drawing.Color.Maroon
-        Me.T_USERS.Name = "T_USERS"
-        Me.T_USERS.Size = New System.Drawing.Size(206, 25)
-        Me.T_USERS.Text = "ToolStripStatusLabel6"
-        '
-        'CODE_USERBT
-        '
-        Me.CODE_USERBT.ActiveLinkColor = System.Drawing.Color.Red
-        Me.CODE_USERBT.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CODE_USERBT.Name = "CODE_USERBT"
-        Me.CODE_USERBT.Size = New System.Drawing.Size(206, 25)
-        Me.CODE_USERBT.Text = "ToolStripStatusLabel2"
-        '
-        'ToolStripStatusLabel4
-        '
-        Me.ToolStripStatusLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(206, 25)
-        Me.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4"
-        '
-        'MACHINBTN
-        '
-        Me.MACHINBTN.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.MACHINBTN.Name = "MACHINBTN"
-        Me.MACHINBTN.Size = New System.Drawing.Size(20, 25)
-        Me.MACHINBTN.Text = "0"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.BackColor = System.Drawing.Color.LightBlue
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.BT_SMS, Me.ToolStripSeparator5, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1350, 55)
-        Me.ToolStrip1.TabIndex = 4
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'STB_SALSE
         '
@@ -644,59 +736,17 @@ Partial Class HOME
         Me.BT_JOGOUT.Size = New System.Drawing.Size(50, 52)
         Me.BT_JOGOUT.Text = "تغيير المستخدم"
         '
-        'Timer1
+        'ToolStrip1
         '
-        Me.Timer1.Enabled = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(410, 583)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(515, 45)
-        Me.Label3.TabIndex = 69
-        Me.Label3.Text = "Karma Software Company "
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label9.Location = New System.Drawing.Point(507, 251)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(349, 45)
-        Me.Label9.TabIndex = 68
-        Me.Label9.Text = "DOCTORS CLINIC"
-        '
-        'MASEGETXT
-        '
-        Me.MASEGETXT.BackColor = System.Drawing.Color.Transparent
-        Me.MASEGETXT.Location = New System.Drawing.Point(506, 89)
-        Me.MASEGETXT.Name = "MASEGETXT"
-        Me.MASEGETXT.Size = New System.Drawing.Size(350, 162)
-        Me.MASEGETXT.TabIndex = 70
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.Doctors_Pic
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 71)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1350, 626)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
-        '
-        'BTN_PA_DOF3A
-        '
-        Me.BTN_PA_DOF3A.Name = "BTN_PA_DOF3A"
-        Me.BTN_PA_DOF3A.Size = New System.Drawing.Size(169, 22)
-        Me.BTN_PA_DOF3A.Text = "دفعة من مريض"
+        Me.ToolStrip1.AutoSize = False
+        Me.ToolStrip1.BackColor = System.Drawing.Color.LightBlue
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.BT_SMS, Me.ToolStripSeparator5, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 49)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1350, 55)
+        Me.ToolStrip1.TabIndex = 4
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
         'HOME
         '
@@ -709,6 +759,7 @@ Partial Class HOME
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -722,100 +773,106 @@ Partial Class HOME
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "الشاشة الرئيسية"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents التكويداتToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_PATIONT As ToolStripMenuItem
-    Friend WithEvents العملاءالموردينToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_DOCTORS As ToolStripMenuItem
-    Friend WithEvents المخازنToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_PHARM As ToolStripMenuItem
-    Friend WithEvents المبيعاتToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents التقاريرToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_EXIT As ToolStripMenuItem
-    Friend WithEvents BT_GOR3A As ToolStripMenuItem
-    Friend WithEvents BT_USERSA As ToolStripMenuItem
-    Friend WithEvents BT_SALE_FATO As ToolStripMenuItem
-    Friend WithEvents BT_RESALE_FATO As ToolStripMenuItem
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents T_TIME As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
     Friend WithEvents T_DATE As ToolStripStatusLabel
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents STB_SALSE As ToolStripButton
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents STB_RESALSE As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripStatusLabel5 As ToolStripStatusLabel
     Friend WithEvents T_USERS As ToolStripStatusLabel
-    Friend WithEvents STB_EXIT As ToolStripButton
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents الأصنافToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_THALEL As ToolStripMenuItem
-    Friend WithEvents BT_PRICE_THALIL As ToolStripMenuItem
-    Friend WithEvents الاعداداتToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents REGBTN As ToolStripMenuItem
-    Friend WithEvents زيارةToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_T3AKODAT As ToolStripMenuItem
-    Friend WithEvents MASSEGADMIN_BTN As ToolStripMenuItem
     Friend WithEvents MACHINBTN As ToolStripStatusLabel
     Friend WithEvents CODE_USERBT As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
-    Friend WithEvents TKHASOSBTN As ToolStripMenuItem
-    Friend WithEvents BT_MAML As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents BTN_ZIARAFRM As ToolStripMenuItem
-    Friend WithEvents BT_PATENT_REP As ToolStripMenuItem
+    Friend WithEvents MASEGETXT As Label
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents التكويداتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_PATIONT As ToolStripMenuItem
+    Friend WithEvents العملاءالموردينToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_DOCTORS As ToolStripMenuItem
+    Friend WithEvents TKHASOSBTN As ToolStripMenuItem
+    Friend WithEvents المخازنToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_PHARM As ToolStripMenuItem
+    Friend WithEvents BT_GOR3A As ToolStripMenuItem
+    Friend WithEvents الأصنافToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_MAML As ToolStripMenuItem
+    Friend WithEvents BT_THALEL As ToolStripMenuItem
+    Friend WithEvents BT_PRICE_THALIL As ToolStripMenuItem
+    Friend WithEvents BT_USERSA As ToolStripMenuItem
     Friend WithEvents BT_USERS As ToolStripMenuItem
     Friend WithEvents BT_USERS_DT As ToolStripMenuItem
     Friend WithEvents BT_KHAZINA As ToolStripMenuItem
-    Friend WithEvents الحساباتToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_ADDMONY As ToolStripMenuItem
-    Friend WithEvents أذنصرفنقديةToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BT_CONVERT_KHAZINA As ToolStripMenuItem
-    Friend WithEvents BT_TSWIA As ToolStripMenuItem
     Friend WithEvents الأيراداتالمصروفاتToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BT_MASROUF As ToolStripMenuItem
+    Friend WithEvents زيارةToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BTN_ZIARAFRM As ToolStripMenuItem
+    Friend WithEvents المبيعاتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_SALE_FATO As ToolStripMenuItem
+    Friend WithEvents BT_RESALE_FATO As ToolStripMenuItem
+    Friend WithEvents المعملToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BTN_ADD_THLELFORPATION As ToolStripMenuItem
+    Friend WithEvents الحساباتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_ADDMONY As ToolStripMenuItem
     Friend WithEvents BT_ADDMONY_DOCTOR As ToolStripMenuItem
     Friend WithEvents BT_ADDMONY_MAML As ToolStripMenuItem
+    Friend WithEvents أذنصرفنقديةToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BT_MASROF_DT As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents BT_JOGOUT As ToolStripButton
-    Friend WithEvents BTL_CONVERTKHAZINA As ToolStripButton
-    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents BTNBACKUP As ToolStripMenuItem
+    Friend WithEvents BT_CONVERT_KHAZINA As ToolStripMenuItem
+    Friend WithEvents BT_TSWIA As ToolStripMenuItem
+    Friend WithEvents BTN_PA_DOF3A As ToolStripMenuItem
+    Friend WithEvents التقاريرToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_PATENT_REP As ToolStripMenuItem
     Friend WithEvents تقريرالحساباتToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BTN_REP_KHAZINA As ToolStripMenuItem
+    Friend WithEvents تقريرتفصيليللمصروفاتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BT_HESAP_DOC_FRM As ToolStripMenuItem
+    Friend WithEvents LABTOLABToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BTN_PA_HESAPFRM As ToolStripMenuItem
+    Friend WithEvents الاعداداتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents REGBTN As ToolStripMenuItem
+    Friend WithEvents BT_T3AKODAT As ToolStripMenuItem
     Friend WithEvents HELPBTN As ToolStripMenuItem
-    Friend WithEvents تقريرتفصيليللمصروفاتToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents BT_HESAP_DOC_FRM As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LABTOLABToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MASEGETXT As Label
-    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents BT_SMS As ToolStripButton
+    Friend WithEvents MASSEGADMIN_BTN As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents BTNBACKUP As ToolStripMenuItem
+    Friend WithEvents BT_EXIT As ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents STB_SALSE As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents STB_RESALSE As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents BT_ADDTHLEL_PATION As ToolStripButton
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ToolStripButton2 As ToolStripButton
-    Friend WithEvents BTN_ADD_MONY_DOCT As ToolStripButton
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
+    Friend WithEvents BTN_ADD_MONY_DOCT As ToolStripButton
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
-    Friend WithEvents المعملToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents أدخالتحاليلمريضToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BTN_PA_HESAPFRM As ToolStripMenuItem
-    Friend WithEvents BTN_PA_DOF3A As ToolStripMenuItem
+    Friend WithEvents BTL_CONVERTKHAZINA As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents BT_SMS As ToolStripButton
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents STB_EXIT As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents BT_JOGOUT As ToolStripButton
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents FffffToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PERSONALHISTORYToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PFOLOWUPToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -132,7 +132,8 @@
                 Q3.Checked = DR!Q3
                 Q4.Checked = DR!Q4
 
-                R.Checked = DR!R1
+                R.Checked = DR!R
+                R1.Checked = DR!R1
                 R2.Checked = DR!R2
                 R3.Checked = DR!R3
                 R4.Checked = DR!R4
@@ -145,6 +146,21 @@
                 Q23.Checked = DR!Q23
                 Q24.Checked = DR!Q24
 
+                N100.Checked = DR!N100
+                N101.Checked = DR!N101
+                N102.Checked = DR!N102
+                N103.Checked = DR!N103
+
+                M100.Checked = DR!M100
+                M101.Checked = DR!M101
+                M102.Checked = DR!M102
+                M103.Checked = DR!M103
+
+                S100.Checked = DR!S100
+                S101.Checked = DR!S101
+                S102.Checked = DR!S102
+                S103.Checked = DR!S103
+                S104.Checked = DR!S104
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
@@ -300,6 +316,22 @@
                 DR!Q22 = Q22.Checked
                 DR!Q23 = Q23.Checked
                 DR!Q24 = Q24.Checked
+
+                DR!N100 = N100.Checked
+                DR!N101 = N101.Checked
+                DR!N102 = N102.Checked
+                DR!N103 = N103.Checked
+
+                DR!M100 = M100.Checked
+                DR!M101 = M101.Checked
+                DR!M102 = M102.Checked
+                DR!M103 = M103.Checked
+
+                DR!S100 = S100.Checked
+                DR!S101 = S101.Checked
+                DR!S102 = S102.Checked
+                DR!S103 = S103.Checked
+                DR!S104 = S104.Checked
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
@@ -641,6 +673,85 @@
             R2.Enabled = True
             R3.Enabled = True
             R4.Enabled = True
+
+        End If
+    End Sub
+
+    Private Sub Q20_CheckedChanged(sender As Object, e As EventArgs) Handles Q20.CheckedChanged
+        If Q20.Checked = False Then
+            Q21.Checked = False
+            Q22.Checked = False
+            Q23.Checked = False
+            Q24.Checked = False
+
+            Q21.Enabled = False
+            Q22.Enabled = False
+            Q23.Enabled = False
+            Q24.Enabled = False
+
+        Else
+            Q21.Enabled = True
+            Q22.Enabled = True
+            Q23.Enabled = True
+            Q24.Enabled = True
+
+        End If
+    End Sub
+
+    Private Sub N100_CheckedChanged(sender As Object, e As EventArgs) Handles N100.CheckedChanged
+        If N100.Checked = False Then
+            N101.Checked = False
+            N102.Checked = False
+            N103.Checked = False
+
+            N101.Enabled = False
+            N102.Enabled = False
+            N103.Enabled = False
+
+
+        Else
+            N101.Enabled = True
+            N102.Enabled = True
+            N103.Enabled = True
+
+        End If
+    End Sub
+
+    Private Sub M100_CheckedChanged(sender As Object, e As EventArgs) Handles M100.CheckedChanged
+        If M100.Checked = False Then
+            M101.Checked = False
+            M102.Checked = False
+            M103.Checked = False
+
+            M101.Enabled = False
+            M102.Enabled = False
+            M103.Enabled = False
+
+        Else
+            M101.Enabled = True
+            M102.Enabled = True
+            M103.Enabled = True
+
+        End If
+    End Sub
+
+    Private Sub S100_CheckedChanged(sender As Object, e As EventArgs) Handles S100.CheckedChanged
+        If S100.Checked = False Then
+            S101.Checked = False
+            S102.Checked = False
+            S103.Checked = False
+            S104.Checked = False
+
+            S101.Enabled = False
+            S102.Enabled = False
+            S103.Enabled = False
+            S104.Enabled = False
+
+        Else
+            S101.Enabled = True
+            S102.Enabled = True
+            S103.Enabled = True
+            S104.Enabled = True
 
         End If
     End Sub

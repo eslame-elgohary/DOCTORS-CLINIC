@@ -36,7 +36,7 @@ Public Class BACKUPFRM
         'cmbdatabase.Text = "D:\BACKUP"
         'SaveFileDialog1.ShowDialog()
         Dim s As String
-        s = "Z:\backup\KARMA-SOFT-DOCTORS-CLINIC-" & DateTime.Now.ToShortDateString.Replace("/", "-") & "-" & DateTime.Now.ToLongTimeString.Replace(":", "-") & ".BAK"
+        s = "Z:\KARMA-SOFT-DOCTORS-CLINIC-" & DateTime.Now.ToShortDateString.Replace("/", "-") & "-" & DateTime.Now.ToLongTimeString.Replace(":", "-") & ".BAK"
         Timer2.Enabled = True
         query("backup database " & cmbdatabase.Text & " to disk='" & s & "'")
     End Sub

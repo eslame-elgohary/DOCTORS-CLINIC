@@ -12,6 +12,7 @@
         FILL_DOCTORS()
     End Sub
     Sub FILL_DOCTORS()
+        TXT_DOC_NAME.Items.Clear()
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE STAT = 'TRUE'", SqlConn)
         DA.Fill(DT)

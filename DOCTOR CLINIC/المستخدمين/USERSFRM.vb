@@ -181,6 +181,29 @@
 
                     DR!UP = False
 
+                    DR2!Q20 = False
+                    DR2!Q21 = False
+                    DR2!Q22 = False
+                    DR2!Q23 = False
+                    DR2!Q24 = False
+
+                    DR!S100!R = False
+                    DR!S101 = False
+                    DR2!S102 = False
+                    DR2!S103 = False
+                    DR2!S104 = False
+
+                    DR2!M100 = False
+                    DR2!M101 = False
+                    DR2!M102 = False
+                    DR2!M103 = False
+
+                    DR2!N100 = False
+                    DR2!N101 = False
+                    DR2!N102 = False
+                    DR2!N103 = False
+
+
                     DT2.Rows.Add(DR2)
                     Dim SAVE1 As New SqlClient.SqlCommandBuilder(DS)
                     DS.Update(DT2)

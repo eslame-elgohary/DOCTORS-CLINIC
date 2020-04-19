@@ -44,6 +44,13 @@
         End If
     End Sub
     Private Sub STB_EXIT_Click(sender As Object, e As EventArgs) Handles STB_EXIT.Click
+        If MessageBox.Show("هل ترغب فى عمل نسخة أحتياطية للبرنامج ؟", "رسالة تنبيه", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            Try
+                ROLES("UP", BACKUPFRM)
+            Catch EX As Exception
+            End Try
+        End If
+
         Me.Close()
     End Sub
 
@@ -386,4 +393,14 @@
 
         End Try
     End Sub
+
+    Private Sub BTN_ADD_THLELFORPATION_Click(sender As Object, e As EventArgs) Handles BTN_ADD_THLELFORPATION.Click
+        Try
+            ROLES("Q20", ADDTHLELMAMLPAFRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+
 End Class

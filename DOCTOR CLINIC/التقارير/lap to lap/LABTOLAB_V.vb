@@ -17,6 +17,7 @@
         FILL_PATION()
     End Sub
     Sub FILL_MAML()
+        TXT_MAML_NAME.Items.Clear()
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MAML WHERE STAT = 'TRUE'", SqlConn)
         DA.Fill(DT)
@@ -26,6 +27,7 @@
 
     End Sub
     Sub FILL_PATION()
+        TXT_PA_NAME.Items.Clear()
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT = 'TRUE' ", SqlConn)
         DA.Fill(DT)

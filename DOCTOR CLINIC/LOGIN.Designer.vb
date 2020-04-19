@@ -47,6 +47,9 @@ Partial Class LOGIN
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -287,15 +290,54 @@ Partial Class LOGIN
         Me.ProgressBar1.TabIndex = 87
         Me.ProgressBar1.Visible = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label8.Location = New System.Drawing.Point(166, 425)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(213, 23)
+        Me.Label8.TabIndex = 88
+        Me.Label8.Text = "الدقة المثالية للشاشة "
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label11.Location = New System.Drawing.Point(377, 425)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(130, 23)
+        Me.Label11.TabIndex = 90
+        Me.Label11.Text = "768      1366"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.DarkViolet
+        Me.Label10.Location = New System.Drawing.Point(427, 425)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(21, 23)
+        Me.Label10.TabIndex = 91
+        Me.Label10.Text = "x"
+        '
         'LOGIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(820, 457)
+        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.NAMEPROLAB)
-        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ENTERBUTTON)
@@ -354,4 +396,7 @@ Partial Class LOGIN
     Private WithEvents ENTERBUTTON As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Timer2 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
 End Class
