@@ -319,7 +319,7 @@
     End Sub
 
     Private Sub STB_RESALSE_Click(sender As Object, e As EventArgs) Handles STB_RESALSE.Click
-        HAGEZ_PATEINT.ShowDialog()
+        HAGEZFRM.ShowDialog()
     End Sub
 
     Private Sub BTNBACKUP_Click(sender As Object, e As EventArgs) Handles BTNBACKUP.Click
@@ -402,5 +402,19 @@
         End Try
     End Sub
 
+    Private Sub FffffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FffffToolStripMenuItem.Click
+        Try
+            ROLES("N100", womencliniccomplinfrm)
+        Catch EX As Exception
 
+        End Try
+    End Sub
+
+    Private Sub PERSONALHISTORYToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PERSONALHISTORYToolStripMenuItem.Click
+        Try
+            ROLES("M100", PERSONAL_HISTORY_FRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class

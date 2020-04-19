@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="DOCTOR CLINIC.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="DOCTOR CLINIC.exe" version="1.0.0.24" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="67520_doctor.ico" asmv2:publisher="KARMA SOFT" asmv2:product="DOCTOR CLINIC" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -596,14 +596,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DOCTOR CLINIC.exe" size="12422656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DOCTOR CLINIC.exe" size="12474880">
       <assemblyIdentity name="DOCTOR CLINIC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tSUaBh+Ytklas9rFSkA3z8y/ZoAgiKrjmpM1ByTtYpg=</dsig:DigestValue>
+        <dsig:DigestValue>TyUIEravp5pxp+xBJXnbjRFEVK/sfzeJm/r2+YiWLzQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -664,13 +664,13 @@
       <dsig:DigestValue>HjTi33LqsMFtWpn9gbNL9P5ZpBQQe3c6aRofeZnj+AM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DOCTOR CLINIC.exe.config" size="1446">
+  <file name="DOCTOR CLINIC.exe.config" size="1431">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MtCm5xVtOkTIFnMBMquCFbD8BdSI+HI8PNjZYMhakew=</dsig:DigestValue>
+      <dsig:DigestValue>Ga1naPxzPyUPnDRKPOCe+FXhtDJT93aUxQ+EV/Jx+pE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

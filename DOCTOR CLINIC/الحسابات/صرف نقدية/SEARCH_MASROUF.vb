@@ -1,6 +1,6 @@
 ﻿Public Class SEARCH_MASROUF
     Private Sub SEARCH_MASROUF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FILL_DGV(DataGridView1, "SELECT * FROM OUT_MASROUF WHERE OUT_STAT = 'TRUE' ORDER BY OUT_CODE")
+        FILL_DGV(DataGridView1, "SELECT * FROM OUT_MASROUF WHERE OUT_STAT = 'TRUE' ORDER BY ID DESC")
         SELECTORDER.SelectedIndex = 0
         TextBox1.Select()
     End Sub

@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationRevision>24</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -249,6 +249,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RASED_PATION_CRS.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحجز\HAGEZFRM.Designer.vb">
+      <DependentUpon>HAGEZFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز\HAGEZFRM.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="الحجز\HAGEZ_CRS.vb">
       <AutoGen>True</AutoGen>
@@ -709,6 +715,18 @@
     <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.Designer.vb">
+      <DependentUpon>PERSONAL_HISTORY_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\شكوى النساء\womencliniccomplinfrm.Designer.vb">
+      <DependentUpon>womencliniccomplinfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\شكوى النساء\womencliniccomplinfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BACKUPFRM.resx">
@@ -772,6 +790,9 @@
     <EmbeddedResource Include="التقارير\كشف حساب مريض\RASED_PATION_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RASED_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز\HAGEZFRM.resx">
+      <DependentUpon>HAGEZFRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="الحجز\HAGEZ_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -984,6 +1005,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\صرف نقدية\SEARCH_MASROUF.resx">
       <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.resx">
+      <DependentUpon>PERSONAL_HISTORY_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\شكوى النساء\womencliniccomplinfrm.resx">
+      <DependentUpon>womencliniccomplinfrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -222,18 +222,8 @@
         If DataGridView1(3, DataGridView1.CurrentRow.Index).Selected = True Then
             SHOW_DETA(DataGridView1.CurrentRow.Cells(0).Value)
         End If
-        ''==== اظهار اسم الوحدة في شاشة الاصناف ==========
-        'If DataGridView1(2, DataGridView1.CurrentRow.Index).Selected = True Then
-        '    ITEMS.TXT_UNIT.Text = DataGridView1.CurrentRow.Cells(0).Value
-        '    Me.Close()
-        'End If
-
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        'For I As Integer = 0 To DataGridView1.Rows.Count - 1
-        '    DataGridView1.Rows(I).Cells(2).Value = "إدراج"
-        '    Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-        'Next
         For I As Integer = 0 To DataGridView1.Rows.Count - 1
             DataGridView1.Rows(I).Cells(3).Value = "عرض"
             Dim ROW As DataGridViewRow = DataGridView1.Rows(I)

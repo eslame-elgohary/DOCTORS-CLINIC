@@ -303,11 +303,12 @@
                     PA_NAME.Select()
                     Exit Sub
                 End If
-                If TOTAL.Text < 1 Then
-                    MessageBox.Show("برجاء ادخال الخدمة المطلوبة ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    TXT_ACTION.Select()
-                    Exit Sub
-                End If
+
+                'If TOTAL.Text < 1 Then
+                '    MessageBox.Show("برجاء ادخال الخدمة المطلوبة ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                '    TXT_ACTION.Select()
+                '    Exit Sub
+                'End If
 
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable
@@ -401,11 +402,11 @@
                     PA_NAME.Select()
                     Exit Sub
                 End If
-                If TOTAL.Text < 1 Then
-                    MessageBox.Show("برجاء ادخال الخدمة المطلوبة ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    TXT_ACTION.Select()
-                    Exit Sub
-                End If
+                'If TOTAL.Text < 1 Then
+                '    MessageBox.Show("برجاء ادخال الخدمة المطلوبة ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                '    TXT_ACTION.Select()
+                '    Exit Sub
+                'End If
 
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable

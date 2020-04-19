@@ -34,31 +34,32 @@
         For I = 0 To GroupBox1.Controls.Count - 1
             If TypeOf GroupBox1.Controls(I) Is ComboBox Then GroupBox1.Controls(I).Text = ""
         Next
-
+        TXT_DATE.Text = Date.Today
         BTN_EDIT.Enabled = False
         BTN_SAVE.Enabled = True
         TIMERADD.Enabled = True
+        CODE_TIMER.Enabled = True
         TIMEREDIT.Enabled = False
         TXT_NAME_PA.Select()
 
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE  DO_NAME='" & TXT_DOCTOR.Text & "'", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_DOCTOR_CODE.Text = DT.Rows(I).Item("DO_CODE")
-        Next
+        'Dim DT As New DataTable
+        'Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE  DO_NAME='" & TXT_DOCTOR.Text & "'", SqlConn)
+        'DA.Fill(DT)
+        'For I = 0 To DT.Rows.Count - 1
+        '    TXT_DOCTOR_CODE.Text = DT.Rows(I).Item("DO_CODE")
+        'Next
 
-        FILL_DGV(DataGridView1, "SELECT * FROM HAGEZ_DOCTOR,DOCTORS,PATIENT WHERE CODE_PA_H = PA_CODE AND CODE_DOC_H = DO_CODE AND CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY CODE_H ")
-        '""""""""""""""" الترقيم التلقائي """"""""""""""
-        Dim DT00 As New DataTable
-        Dim DA00 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY CODE_H ", SqlConn)
-        DA00.Fill(DT00)
-        If DT00.Rows.Count <> 0 Then
-            Dim I0 = DT00.Rows.Count - 1
-            TXT_CODE.Text = Val(DT00.Rows(I0).Item("CODE_H")) + 1
-        Else
-            TXT_CODE.Text = "1"
-        End If
+        'FILL_DGV(DataGridView1, "SELECT * FROM HAGEZ_DOCTOR,DOCTORS,PATIENT WHERE CODE_PA_H = PA_CODE AND CODE_DOC_H = DO_CODE AND CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY CODE_H ")
+        ''""""""""""""""" الترقيم التلقائي """"""""""""""
+        'Dim DT00 As New DataTable
+        'Dim DA00 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY CODE_H ", SqlConn)
+        'DA00.Fill(DT00)
+        'If DT00.Rows.Count <> 0 Then
+        '    Dim I0 = DT00.Rows.Count - 1
+        '    TXT_CODE.Text = Val(DT00.Rows(I0).Item("CODE_H")) + 1
+        'Else
+        '    TXT_CODE.Text = "1"
+        'End If
 
         '""""""""""""""""""""""""""""""
 
@@ -269,7 +270,8 @@
         For I = 0 To DT.Rows.Count - 1
             TXT_CODE_PA.Text = DT.Rows(I).Item("PA_CODE")
             TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
-            TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
+            TXT_CODE2.Text = DT.Rows(I).Item("PA_TEL2")
+
         Next
     End Sub
 
