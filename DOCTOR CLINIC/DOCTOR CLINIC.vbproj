@@ -238,6 +238,18 @@
     <Compile Include="التقارير\حساب الأطباء\HESAP_DOCTORSFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="التقارير\كشف حساب مريض\PA_HESAP_FRM.Designer.vb">
+      <DependentUpon>PA_HESAP_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\كشف حساب مريض\PA_HESAP_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\كشف حساب مريض\RASED_PATION_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RASED_PATION_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="الحجز\HAGEZ_CRS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -483,6 +495,24 @@
       <DependentUpon>PATIENT_REP.vb</DependentUpon>
     </Compile>
     <Compile Include="التقارير\تقرير المرضي\PATIENT_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\DOF3A_PATION_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOF3A_PATION_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\DOF3A_PATION_FRM.Designer.vb">
+      <DependentUpon>DOF3A_PATION_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\DOF3A_PATION_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="الخزينة\KHAZINAFRM.Designer.vb">
@@ -736,6 +766,13 @@
     <EmbeddedResource Include="التقارير\حساب الأطباء\HESAP_DOCTORSFRM.resx">
       <DependentUpon>HESAP_DOCTORSFRM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\كشف حساب مريض\PA_HESAP_FRM.resx">
+      <DependentUpon>PA_HESAP_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\كشف حساب مريض\RASED_PATION_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RASED_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="الحجز\HAGEZ_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HAGEZ_CRS.vb</LastGenOutput>
@@ -848,6 +885,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\تقرير المرضي\PATIENT_REP.resx">
       <DependentUpon>PATIENT_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\دفعة من مريض\DOF3A_PATION_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DOF3A_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\دفعة من مريض\DOF3A_PATION_FRM.resx">
+      <DependentUpon>DOF3A_PATION_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.resx">
+      <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="الخزينة\KHAZINAFRM.resx">
       <DependentUpon>KHAZINAFRM.vb</DependentUpon>

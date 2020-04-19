@@ -71,7 +71,7 @@
     End Sub
     Private Sub ADD_MONY_DOCTOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NEWBTN_Click(sender, e)
-        FILL_PATIENT()
+
     End Sub
     Private Sub TIMERADD_Tick(sender As Object, e As EventArgs) Handles TIMERADD.Tick
         USER_ADD.Text = HOME.T_USERS.Text
@@ -122,7 +122,7 @@
         TXT_M.Text = "1"
         FILL_KHAZINA_CODE()
         PA_NAME.Select()
-
+        FILL_PATIENT()
         CALC()
         FILL_KHAZINA()
     End Sub

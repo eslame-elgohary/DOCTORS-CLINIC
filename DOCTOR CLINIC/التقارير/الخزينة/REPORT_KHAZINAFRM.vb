@@ -6,6 +6,10 @@
         KHAZINA_NAME.Enabled = False
         KHAZINA_NAME.Text = ""
         KHAZINA_CODE.Text = ""
+        CH_GRU.Checked = False
+        GRU.Enabled = False
+        GRU.Text = ""
+        GRU_CODE.Text = ""
         DATE_START.Text = Date.Today
         DATE_END.Text = Date.Today
 

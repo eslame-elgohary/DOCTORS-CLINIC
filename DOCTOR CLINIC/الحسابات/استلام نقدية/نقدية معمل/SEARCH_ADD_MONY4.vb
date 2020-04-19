@@ -1,6 +1,6 @@
 ﻿Public Class SEARCH_ADD_MONY4
     Private Sub SEARCH_ADD_MONY4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FILL_DGV(DataGridView1, "SELECT * FROM ADD_MONY_MAML,PATIENT WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE'")
+        FILL_DGV(DataGridView1, "SELECT * FROM ADD_MONY_MAML,PATIENT WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE' AND ADD_CODE2 > '0' ")
         K1.SelectedIndex = 1
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
@@ -21,7 +21,7 @@
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter
             DT.Clear()
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT,ADD_MONY_MAML WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE' AND ADD_CODE LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT,ADD_MONY_MAML WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE' AND ADD_CODE2 > '0' AND ADD_CODE LIKE '%" & TextBox1.Text & "%'", SqlConn)
             DA.Fill(DT)
             DataGridView1.DataSource = DT.DefaultView
         End If
@@ -29,7 +29,7 @@
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter
             DT.Clear()
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT,ADD_MONY_MAML WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE' AND PA_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT,ADD_MONY_MAML WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE' AND ADD_CODE2 > '0' AND PA_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
             DA.Fill(DT)
             DataGridView1.DataSource = DT.DefaultView
         End If

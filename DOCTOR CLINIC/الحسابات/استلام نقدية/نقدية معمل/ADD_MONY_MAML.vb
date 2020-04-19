@@ -1,7 +1,6 @@
 ﻿Public Class ADD_MONY_MAML
     Dim ARABIC As New ClassConvertNO
     Sub SHOW_DETA(CODE_)
-        DataGridView1.Rows.Clear()
         '=========== ربط رأس الفاتورة =============
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_MAML WHERE ADD_CODE ='" & CODE_ & "'", SqlConn)
@@ -25,7 +24,7 @@
             TIME_ADD.Text = DR!ADD_TIME_ADD
 
 
-
+            DataGridView1.Rows.Clear()
             Dim DS As New DataSet
             '=========== ربط تفاصيل الفاتورة =============
             DA = New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_MAML WHERE ADD_CODE = '" & CODE_ & "'", SqlConn)
@@ -33,16 +32,25 @@
             DA.Fill(DS)
             DT = DS.Tables(0)
             For I = 0 To DT.Rows.Count - 1
+
                 DataGridView1.Rows.Add()
-                DataGridView1.Rows(I).Cells(2).Value = DT.Rows(I).Item("CODE_MAML")
-                DataGridView1.Rows(I).Cells(3).Value = DT.Rows(I).Item("NAME_MAML")
-                DataGridView1.Rows(I).Cells(4).Value = DT.Rows(I).Item("CODE_THLEL")
-                DataGridView1.Rows(I).Cells(5).Value = DT.Rows(I).Item("NAME_THLEL")
-                DataGridView1.Rows(I).Cells(6).Value = DT.Rows(I).Item("PRICE_THLEL")
                 DataGridView1.Rows(I).Cells(1).Value = DT.Rows(I).Item("MID")
-
-
+                DataGridView1.Rows(I).Cells(2).Value = DT.Rows(I).Item("CODE_MAML")
+                DataGridView1.Rows(I).Cells(3).Value = DT.Rows(I).Item("CODE_THLEL")
+                DataGridView1.Rows(I).Cells(4).Value = DT.Rows(I).Item("NAME_THLEL")
+                DataGridView1.Rows(I).Cells(5).Value = DT.Rows(I).Item("PRICE_THLEL")
             Next
+            Dim DS1 As New DataSet
+            '=============================================
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+            DA.Fill(DS1)
+            DT = DS1.Tables(0)
+            For I = 0 To DT.Rows.Count - 1
+                TXT_MONY.Text = DT.Rows(I).Item("ADD_MAML")
+                TXT_BAKY.Text = DT.Rows(I).Item("BAKY_MAML")
+            Next
+
+
             For I = 0 To DataGridView1.Rows.Count - 1
                 TXT_M.Text = Val(DataGridView1.Rows(I).Cells(1).Value) + 1
             Next
@@ -52,7 +60,6 @@
             SAVEBTN.Enabled = False
             TIMEREDIT.Enabled = True
             TIMERADD.Enabled = False
-            CALC()
         End If
     End Sub
     Sub CALC()
@@ -170,7 +177,11 @@
                     DR!ADD_PA_CODE = PA_CODE.Text
                     DR!ADD_MAML_CODE = MAML_CODE.Text
                     DR!ADD_TOTAL = TOTAL.Text
-                    DR!ADD_DIS = DISCOUNT.Text
+                    If DISCOUNT.Text = "" Then
+                        DR!ADD_DIS = "0"
+                    Else
+                        DR!ADD_DIS = DISCOUNT.Text
+                    End If
                     DR!ADD_SAFY = SAFY.Text
                     DR!ADD_SAFY_AR = SAFY_AR.Text
                     DR!ADD_STAT = True
@@ -192,19 +203,17 @@
                     Dim DR1 = DT.NewRow
                     DR1!ADD_CODE = TXT_CODE.Text
                     DR1!ADD_DATE = TXT_DATE.Text
+                    DR1!NAME_MAML = MAML_NAME.Text
                     DR1!MID = DataGridView1.Rows(I).Cells(1).Value
                     DR1!CODE_MAML = DataGridView1.Rows(I).Cells(2).Value
-                    DR1!NAME_MAML = DataGridView1.Rows(I).Cells(3).Value
-                    DR1!CODE_THLEL = DataGridView1.Rows(I).Cells(4).Value
-                    DR1!NAME_THLEL = DataGridView1.Rows(I).Cells(5).Value
-                    DR1!PRICE_THLEL = DataGridView1.Rows(I).Cells(6).Value
-
+                    DR1!CODE_THLEL = DataGridView1.Rows(I).Cells(3).Value
+                    DR1!NAME_THLEL = DataGridView1.Rows(I).Cells(4).Value
+                    DR1!PRICE_THLEL = DataGridView1.Rows(I).Cells(5).Value
                     DR1!STAT_DT = True
                     DT.Rows.Add(DR1)
                     Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
                     DA1.Update(DT)
                 Next
-                '==========================================================================
                 '============================== أضافة تفاصيل للخزينة ========================
                 Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
                 DA2.Fill(DT)
@@ -214,13 +223,28 @@
                 DR2!CODE_DT = TXT_CODE.Text
                 DR2!CODE_DT2 = "2"
                 DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " المعمل "
-                DR2!KHAZINA_IN = SAFY.Text
+                DR2!KHAZINA_IN = TXT_MONY.Text
                 DR2!KHAZINA_OUT = "0"
                 DR2!STAT_KHAZINA = True
                 DT.Rows.Add(DR2)
                 Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
                 DA2.Update(DT)
-
+                '==========================================================================
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+                DA3.Fill(DT)
+                Dim DR3 = DT.NewRow
+                DR3!ADD_CODE = TXT_CODE.Text
+                DR3!ADD_CODE2 = TXT_CODE2.Text
+                DR3!ADD_DATE = TXT_DATE.Text
+                DR3!PA_CODE = PA_CODE.Text
+                DR3!ACTION_NAME = "تحاليل طبية بالأيصال رقم  " & TXT_CODE.Text
+                DR3!SAFY_MAML = SAFY.Text
+                DR3!ADD_MAML = TXT_MONY.Text
+                DR3!BAKY_MAML = TXT_BAKY.Text
+                DR3!STAT = True
+                DT.Rows.Add(DR3)
+                Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                DA3.Update(DT)
                 '==========================================================================
                 PRINTBTN_Click(sender, e)
                 MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -264,23 +288,24 @@
                 Else
                     Dim DR = DT.Rows(0)
                     DR!ADD_CODE = TXT_CODE.Text
+                    DR!ADD_CODE2 = TXT_CODE2.Text
                     DR!ADD_DATE = TXT_DATE.Text
                     DR!ADD_TYPE = "المعامل"
                     DR!CODE_KHAZINA = KHAZINA_CODE.Text
                     DR!ADD_PA_CODE = PA_CODE.Text
                     DR!ADD_MAML_CODE = MAML_CODE.Text
                     DR!ADD_TOTAL = TOTAL.Text
-                    DR!ADD_DIS = DISCOUNT.Text
+                    If DISCOUNT.Text = "" Then
+                        DR!ADD_DIS = "0"
+                    Else
+                        DR!ADD_DIS = DISCOUNT.Text
+                    End If
                     DR!ADD_SAFY = SAFY.Text
                     DR!ADD_SAFY_AR = SAFY_AR.Text
                     DR!ADD_STAT = True
-                    DR!ADD_USER_ADD = USER_ADD.Text
-                    DR!ADD_DATE_ADD = DATE_ADD.Text
-                    DR!ADD_TIME_ADD = TIME_ADD.Text
-                    DR!ADD_USER_EDIT = "0"
-                    DR!ADD_DATE_EDIT = "0"
-                    DR!ADD_TIME_EDIT = "0"
-
+                    DR!ADD_USER_EDIT = USER_EDIT.Text
+                    DR!ADD_DATE_EDIT = DATE_EDIT.Text
+                    DR!ADD_TIME_EDIT = TIME_EDIT.Text
                     Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                     DA.Update(DT)
                 End If
@@ -297,13 +322,12 @@
                     Dim DR1 = DT.NewRow
                     DR1!ADD_CODE = TXT_CODE.Text
                     DR1!ADD_DATE = TXT_DATE.Text
+                    DR1!NAME_MAML = MAML_NAME.Text
                     DR1!MID = DataGridView1.Rows(I).Cells(1).Value
                     DR1!CODE_MAML = DataGridView1.Rows(I).Cells(2).Value
-                    DR1!NAME_MAML = DataGridView1.Rows(I).Cells(3).Value
-                    DR1!CODE_THLEL = DataGridView1.Rows(I).Cells(4).Value
-                    DR1!NAME_THLEL = DataGridView1.Rows(I).Cells(5).Value
-                    DR1!PRICE_THLEL = DataGridView1.Rows(I).Cells(6).Value
-
+                    DR1!CODE_THLEL = DataGridView1.Rows(I).Cells(3).Value
+                    DR1!NAME_THLEL = DataGridView1.Rows(I).Cells(4).Value
+                    DR1!PRICE_THLEL = DataGridView1.Rows(I).Cells(5).Value
                     DR1!STAT_DT = True
                     DT.Rows.Add(DR1)
                     Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
@@ -325,16 +349,36 @@
                 DR2!CODE_DT = TXT_CODE.Text
                 DR2!CODE_DT2 = "2"
                 DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " المعمل "
-                DR2!KHAZINA_IN = SAFY.Text
+                DR2!KHAZINA_IN = TXT_MONY.Text
                 DR2!KHAZINA_OUT = "0"
                 DR2!STAT_KHAZINA = True
                 DT.Rows.Add(DR2)
                 Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
                 DA2.Update(DT)
-
+                '==========================================================================
+                Dim CMD_DEL3 As New SqlClient.SqlCommand
+                CMD_DEL3.Connection = SqlConn
+                CMD_DEL3.CommandText = "DELETE FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '" & TXT_CODE2.Text & "' "
+                CMD_DEL3.ExecuteNonQuery()
+                '=====================================================================================
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+                DA3.Fill(DT)
+                Dim DR3 = DT.NewRow
+                DR3!ADD_CODE = TXT_CODE.Text
+                DR3!ADD_CODE2 = TXT_CODE2.Text
+                DR3!ADD_DATE = TXT_DATE.Text
+                DR3!PA_CODE = PA_CODE.Text
+                DR3!ACTION_NAME = "تحاليل طبية بالأيصال رقم  " & TXT_CODE.Text
+                DR3!SAFY_MAML = SAFY.Text
+                DR3!ADD_MAML = TXT_MONY.Text
+                DR3!BAKY_MAML = TXT_BAKY.Text
+                DR3!STAT = True
+                DT.Rows.Add(DR3)
+                Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                DA3.Update(DT)
                 '==========================================================================
                 PRINTBTN_Click(sender, e)
-                MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("تمت عملية تعديل بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
                 CALC()
             Else
@@ -389,7 +433,17 @@
                 DR2!STAT_KHAZINA = False
                 Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
                 DA2.Update(DT2)
-                '==========================================================================
+                '=============================================  حذف من حساب المريض =============================
+                Dim DT3 As New DataTable
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '" & TXT_CODE2.Text & "' ", SqlConn)
+                DA3.Fill(DT3)
+                Dim DR3 = DT3.Rows(0)
+
+                DR3!STAT = False
+
+                Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                DA3.Update(DT3)
+
                 MessageBox.Show("تمت عملية حذف بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
                 CALC()
@@ -438,12 +492,13 @@
                     .Columns.Add("ADD_USER_ADD")
                 End With
                 For I As Integer = 0 To DataGridView1.Rows.Count - 1
-                    If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
-                        DT.Rows.Add(TXT_CODE.Text, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, MAML_NAME.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(5).Value, DataGridView1.Rows(I).Cells(6).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text)
-                    End If
+                    DT.Rows.Add(TXT_CODE.Text, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, MAML_NAME.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(4).Value, DataGridView1.Rows(I).Cells(5).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text)
                 Next
+
                 Dim REP As New ADD_MONY_MAML_REP
                 REP.SetDataSource(DT)
+                REP.SetParameterValue(0, TXT_MONY.Text)
+                REP.SetParameterValue(1, TXT_BAKY.Text)
                 Dim FRM As New ADD_MONY_MAML_CRS
                 FRM.CrystalReportViewer1.ReportSource = REP
                 FRM.ShowDialog()

@@ -65,6 +65,7 @@ Partial Class HOME
         Me.تقريرتفصيليللمصروفاتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_HESAP_DOC_FRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.LABTOLABToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_PA_HESAPFRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.الاعداداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REGBTN = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_T3AKODAT = New System.Windows.Forms.ToolStripMenuItem()
@@ -106,6 +107,7 @@ Partial Class HOME
         Me.Label9 = New System.Windows.Forms.Label()
         Me.MASEGETXT = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BTN_PA_DOF3A = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -283,7 +285,7 @@ Partial Class HOME
         '
         'الحساباتToolStripMenuItem
         '
-        Me.الحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY, Me.أذنصرفنقديةToolStripMenuItem, Me.BT_CONVERT_KHAZINA, Me.BT_TSWIA})
+        Me.الحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY, Me.أذنصرفنقديةToolStripMenuItem, Me.BT_CONVERT_KHAZINA, Me.BT_TSWIA, Me.BTN_PA_DOF3A})
         Me.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem"
         Me.الحساباتToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.الحساباتToolStripMenuItem.Text = "الحسابات"
@@ -334,7 +336,7 @@ Partial Class HOME
         '
         'التقاريرToolStripMenuItem
         '
-        Me.التقاريرToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_PATENT_REP, Me.تقريرالحساباتToolStripMenuItem, Me.BT_HESAP_DOC_FRM, Me.LABTOLABToolStripMenuItem})
+        Me.التقاريرToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_PATENT_REP, Me.تقريرالحساباتToolStripMenuItem, Me.BT_HESAP_DOC_FRM, Me.LABTOLABToolStripMenuItem, Me.BTN_PA_HESAPFRM})
         Me.التقاريرToolStripMenuItem.Name = "التقاريرToolStripMenuItem"
         Me.التقاريرToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.التقاريرToolStripMenuItem.Text = "التقارير"
@@ -342,14 +344,14 @@ Partial Class HOME
         'BT_PATENT_REP
         '
         Me.BT_PATENT_REP.Name = "BT_PATENT_REP"
-        Me.BT_PATENT_REP.Size = New System.Drawing.Size(147, 22)
+        Me.BT_PATENT_REP.Size = New System.Drawing.Size(172, 22)
         Me.BT_PATENT_REP.Text = "تقارير المرضي"
         '
         'تقريرالحساباتToolStripMenuItem
         '
         Me.تقريرالحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_REP_KHAZINA, Me.تقريرتفصيليللمصروفاتToolStripMenuItem})
         Me.تقريرالحساباتToolStripMenuItem.Name = "تقريرالحساباتToolStripMenuItem"
-        Me.تقريرالحساباتToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.تقريرالحساباتToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.تقريرالحساباتToolStripMenuItem.Text = "تقرير الحسابات"
         '
         'BTN_REP_KHAZINA
@@ -367,14 +369,20 @@ Partial Class HOME
         'BT_HESAP_DOC_FRM
         '
         Me.BT_HESAP_DOC_FRM.Name = "BT_HESAP_DOC_FRM"
-        Me.BT_HESAP_DOC_FRM.Size = New System.Drawing.Size(147, 22)
+        Me.BT_HESAP_DOC_FRM.Size = New System.Drawing.Size(172, 22)
         Me.BT_HESAP_DOC_FRM.Text = "حساب الأطباء"
         '
         'LABTOLABToolStripMenuItem
         '
         Me.LABTOLABToolStripMenuItem.Name = "LABTOLABToolStripMenuItem"
-        Me.LABTOLABToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.LABTOLABToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.LABTOLABToolStripMenuItem.Text = "LAB TO LAB"
+        '
+        'BTN_PA_HESAPFRM
+        '
+        Me.BTN_PA_HESAPFRM.Name = "BTN_PA_HESAPFRM"
+        Me.BTN_PA_HESAPFRM.Size = New System.Drawing.Size(172, 22)
+        Me.BTN_PA_HESAPFRM.Text = "كشف حساب مريض"
         '
         'الاعداداتToolStripMenuItem
         '
@@ -684,6 +692,12 @@ Partial Class HOME
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'BTN_PA_DOF3A
+        '
+        Me.BTN_PA_DOF3A.Name = "BTN_PA_DOF3A"
+        Me.BTN_PA_DOF3A.Size = New System.Drawing.Size(169, 22)
+        Me.BTN_PA_DOF3A.Text = "دفعة من مريض"
+        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -802,4 +816,6 @@ Partial Class HOME
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents المعملToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents أدخالتحاليلمريضToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BTN_PA_HESAPFRM As ToolStripMenuItem
+    Friend WithEvents BTN_PA_DOF3A As ToolStripMenuItem
 End Class

@@ -366,4 +366,24 @@
 
         End Try
     End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Try
+            ROLES("Q", ADD_MONY_MAML)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BTN_PA_HESAPFRM_Click(sender As Object, e As EventArgs) Handles BTN_PA_HESAPFRM.Click
+        PA_HESAP_FRM.ShowDialog()
+    End Sub
+
+    Private Sub BTN_PA_DOF3A_Click(sender As Object, e As EventArgs) Handles BTN_PA_DOF3A.Click
+        Try
+            ROLES("Q", DOF3A_PATION_FRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class
