@@ -23,10 +23,9 @@ Partial Class FOLOUP
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FOLOUP))
-        Me.GRBTN = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TXT_PA_NAME = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -42,14 +41,89 @@ Partial Class FOLOUP
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.BTN_BABY = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_OBSTETRIC = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_FETAL = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_4D = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_3RD = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_2ND = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_1ST = New DevExpress.XtraEditors.SimpleButton()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.st1_tsh = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.st1_urine = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.st1_hbac = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.st1_rbs = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.st1_pc = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.st1_cmv = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.st1_plt = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.st1_toxo = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.st1_hb = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ND2_TOTAL = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ND2_urine = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.ND2_HOUR = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.ND2_pc = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.ND2_TSH = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ND2_plt = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.ND2_LONIZED = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.ND2_hb = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.RD3_CREAT = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.RD3_urine = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.RD3_SGPT = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.RD3_rbs = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.RD3_pc = New System.Windows.Forms.TextBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.RD3_TSH = New System.Windows.Forms.TextBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.RD3_plt = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.RD3_HOUR = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.RD3_hb = New System.Windows.Forms.TextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.GRBTN = New System.Windows.Forms.GroupBox()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.PRINTBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.UNDOBTN = New DevExpress.XtraEditors.SimpleButton()
@@ -58,80 +132,6 @@ Partial Class FOLOUP
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.SimpleButton8 = New DevExpress.XtraEditors.SimpleButton()
-        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
-        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -141,25 +141,8 @@ Partial Class FOLOUP
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
+        Me.GRBTN.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'GRBTN
-        '
-        Me.GRBTN.Controls.Add(Me.EXITBTN)
-        Me.GRBTN.Controls.Add(Me.PRINTBTN)
-        Me.GRBTN.Controls.Add(Me.UNDOBTN)
-        Me.GRBTN.Controls.Add(Me.SEARCHBTN)
-        Me.GRBTN.Controls.Add(Me.DELETBTN)
-        Me.GRBTN.Controls.Add(Me.EDITBTN)
-        Me.GRBTN.Controls.Add(Me.SAVEBTN)
-        Me.GRBTN.Controls.Add(Me.NEWBTN)
-        Me.GRBTN.Location = New System.Drawing.Point(25, 558)
-        Me.GRBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.GRBTN.Name = "GRBTN"
-        Me.GRBTN.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.GRBTN.Size = New System.Drawing.Size(1298, 61)
-        Me.GRBTN.TabIndex = 32
-        Me.GRBTN.TabStop = False
         '
         'TextBox1
         '
@@ -183,16 +166,16 @@ Partial Class FOLOUP
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "Code :"
         '
-        'ComboBox1
+        'TXT_PA_NAME
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.Aqua
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(173, 16)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ComboBox1.Size = New System.Drawing.Size(186, 24)
-        Me.ComboBox1.TabIndex = 35
+        Me.TXT_PA_NAME.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_PA_NAME.FormattingEnabled = True
+        Me.TXT_PA_NAME.Location = New System.Drawing.Point(173, 16)
+        Me.TXT_PA_NAME.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_PA_NAME.Name = "TXT_PA_NAME"
+        Me.TXT_PA_NAME.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_PA_NAME.Size = New System.Drawing.Size(186, 24)
+        Me.TXT_PA_NAME.TabIndex = 35
         '
         'Label2
         '
@@ -353,14 +336,15 @@ Partial Class FOLOUP
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_PA_CODE)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton7)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton6)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton5)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton4)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton3)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton2)
-        Me.GroupBox1.Controls.Add(Me.SimpleButton1)
+        Me.GroupBox1.Controls.Add(Me.BTN_BABY)
+        Me.GroupBox1.Controls.Add(Me.BTN_OBSTETRIC)
+        Me.GroupBox1.Controls.Add(Me.BTN_FETAL)
+        Me.GroupBox1.Controls.Add(Me.BTN_4D)
+        Me.GroupBox1.Controls.Add(Me.BTN_3RD)
+        Me.GroupBox1.Controls.Add(Me.BTN_2ND)
+        Me.GroupBox1.Controls.Add(Me.BTN_1ST)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
@@ -368,7 +352,7 @@ Partial Class FOLOUP
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.TXT_PA_NAME)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
@@ -386,205 +370,15 @@ Partial Class FOLOUP
         Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         '
-        'Label10
+        'TXT_PA_CODE
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.Teal
-        Me.Label10.Location = New System.Drawing.Point(861, 26)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label10.Size = New System.Drawing.Size(142, 16)
-        Me.Label10.TabIndex = 51
-        Me.Label10.Text = "Enter Invetigations :"
-        '
-        'SimpleButton4
-        '
-        Me.SimpleButton4.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton4.Appearance.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.SimpleButton4.Appearance.Options.UseFont = True
-        Me.SimpleButton4.Appearance.Options.UseForeColor = True
-        Me.SimpleButton4.Location = New System.Drawing.Point(1008, 57)
-        Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(38, 34)
-        Me.SimpleButton4.TabIndex = 55
-        Me.SimpleButton4.Text = "4D"
-        '
-        'SimpleButton5
-        '
-        Me.SimpleButton5.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton5.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
-        Me.SimpleButton5.Appearance.Options.UseFont = True
-        Me.SimpleButton5.Appearance.Options.UseForeColor = True
-        Me.SimpleButton5.Location = New System.Drawing.Point(855, 57)
-        Me.SimpleButton5.Name = "SimpleButton5"
-        Me.SimpleButton5.Size = New System.Drawing.Size(141, 34)
-        Me.SimpleButton5.TabIndex = 56
-        Me.SimpleButton5.Text = "Fetal Doppler"
-        '
-        'SimpleButton6
-        '
-        Me.SimpleButton6.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton6.Appearance.ForeColor = System.Drawing.Color.OrangeRed
-        Me.SimpleButton6.Appearance.Options.UseFont = True
-        Me.SimpleButton6.Appearance.Options.UseForeColor = True
-        Me.SimpleButton6.Location = New System.Drawing.Point(1059, 55)
-        Me.SimpleButton6.Name = "SimpleButton6"
-        Me.SimpleButton6.Size = New System.Drawing.Size(149, 34)
-        Me.SimpleButton6.TabIndex = 57
-        Me.SimpleButton6.Text = "Obstetric History"
-        '
-        'SimpleButton7
-        '
-        Me.SimpleButton7.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton7.Appearance.ForeColor = System.Drawing.Color.OrangeRed
-        Me.SimpleButton7.Appearance.Options.UseFont = True
-        Me.SimpleButton7.Appearance.Options.UseForeColor = True
-        Me.SimpleButton7.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_baby_64
-        Me.SimpleButton7.Location = New System.Drawing.Point(1227, 16)
-        Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(74, 70)
-        Me.SimpleButton7.TabIndex = 58
-        Me.SimpleButton7.Text = "Obstetric History"
-        '
-        'SimpleButton3
-        '
-        Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton3.Appearance.Options.UseFont = True
-        Me.SimpleButton3.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_3_32
-        Me.SimpleButton3.Location = New System.Drawing.Point(1105, 14)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(38, 34)
-        Me.SimpleButton3.TabIndex = 54
-        Me.SimpleButton3.Text = "1st"
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton2.Appearance.Options.UseFont = True
-        Me.SimpleButton2.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_2_32
-        Me.SimpleButton2.Location = New System.Drawing.Point(1057, 14)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(38, 34)
-        Me.SimpleButton2.TabIndex = 53
-        Me.SimpleButton2.Text = "1st"
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton1.Appearance.Options.UseFont = True
-        Me.SimpleButton1.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_level_1_32
-        Me.SimpleButton1.Location = New System.Drawing.Point(1008, 14)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(38, 34)
-        Me.SimpleButton1.TabIndex = 52
-        Me.SimpleButton1.Text = "1st"
-        '
-        'EXITBTN
-        '
-        Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EXITBTN.Appearance.Options.UseFont = True
-        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EXITBTN.Location = New System.Drawing.Point(101, 17)
-        Me.EXITBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.EXITBTN.Name = "EXITBTN"
-        Me.EXITBTN.Size = New System.Drawing.Size(125, 37)
-        Me.EXITBTN.TabIndex = 7
-        Me.EXITBTN.Text = "Exit"
-        '
-        'PRINTBTN
-        '
-        Me.PRINTBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PRINTBTN.Appearance.Options.UseFont = True
-        Me.PRINTBTN.ImageOptions.Image = CType(resources.GetObject("PRINTBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.PRINTBTN.Location = New System.Drawing.Point(257, 17)
-        Me.PRINTBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.PRINTBTN.Name = "PRINTBTN"
-        Me.PRINTBTN.Size = New System.Drawing.Size(198, 37)
-        Me.PRINTBTN.TabIndex = 6
-        Me.PRINTBTN.Text = "Print Prescription"
-        '
-        'UNDOBTN
-        '
-        Me.UNDOBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UNDOBTN.Appearance.ForeColor = System.Drawing.Color.Purple
-        Me.UNDOBTN.Appearance.Options.UseFont = True
-        Me.UNDOBTN.Appearance.Options.UseForeColor = True
-        Me.UNDOBTN.ImageOptions.Image = CType(resources.GetObject("UNDOBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.UNDOBTN.Location = New System.Drawing.Point(473, 17)
-        Me.UNDOBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.UNDOBTN.Name = "UNDOBTN"
-        Me.UNDOBTN.Size = New System.Drawing.Size(172, 37)
-        Me.UNDOBTN.TabIndex = 5
-        Me.UNDOBTN.Text = "Print Folow up"
-        '
-        'SEARCHBTN
-        '
-        Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SEARCHBTN.Appearance.Options.UseFont = True
-        Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SEARCHBTN.Location = New System.Drawing.Point(669, 17)
-        Me.SEARCHBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.SEARCHBTN.Name = "SEARCHBTN"
-        Me.SEARCHBTN.Size = New System.Drawing.Size(111, 37)
-        Me.SEARCHBTN.TabIndex = 4
-        Me.SEARCHBTN.Text = "Search"
-        '
-        'DELETBTN
-        '
-        Me.DELETBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DELETBTN.Appearance.ForeColor = System.Drawing.Color.Red
-        Me.DELETBTN.Appearance.Options.UseFont = True
-        Me.DELETBTN.Appearance.Options.UseForeColor = True
-        Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.DELETBTN.Location = New System.Drawing.Point(807, 18)
-        Me.DELETBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.DELETBTN.Name = "DELETBTN"
-        Me.DELETBTN.Size = New System.Drawing.Size(99, 37)
-        Me.DELETBTN.TabIndex = 3
-        Me.DELETBTN.Text = "Delet"
-        '
-        'EDITBTN
-        '
-        Me.EDITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EDITBTN.Appearance.ForeColor = System.Drawing.Color.SteelBlue
-        Me.EDITBTN.Appearance.Options.UseFont = True
-        Me.EDITBTN.Appearance.Options.UseForeColor = True
-        Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EDITBTN.Location = New System.Drawing.Point(932, 18)
-        Me.EDITBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.EDITBTN.Name = "EDITBTN"
-        Me.EDITBTN.Size = New System.Drawing.Size(96, 37)
-        Me.EDITBTN.TabIndex = 2
-        Me.EDITBTN.Text = "Edit"
-        '
-        'SAVEBTN
-        '
-        Me.SAVEBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SAVEBTN.Appearance.ForeColor = System.Drawing.Color.DarkRed
-        Me.SAVEBTN.Appearance.Options.UseFont = True
-        Me.SAVEBTN.Appearance.Options.UseForeColor = True
-        Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SAVEBTN.Location = New System.Drawing.Point(1051, 17)
-        Me.SAVEBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.SAVEBTN.Name = "SAVEBTN"
-        Me.SAVEBTN.Size = New System.Drawing.Size(105, 37)
-        Me.SAVEBTN.TabIndex = 0
-        Me.SAVEBTN.Text = "Save"
-        '
-        'NEWBTN
-        '
-        Me.NEWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NEWBTN.Appearance.ForeColor = System.Drawing.Color.LimeGreen
-        Me.NEWBTN.Appearance.Options.UseFont = True
-        Me.NEWBTN.Appearance.Options.UseForeColor = True
-        Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.NEWBTN.Location = New System.Drawing.Point(1178, 17)
-        Me.NEWBTN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.NEWBTN.Name = "NEWBTN"
-        Me.NEWBTN.Size = New System.Drawing.Size(94, 37)
-        Me.NEWBTN.TabIndex = 1
-        Me.NEWBTN.Text = "New"
+        Me.TXT_PA_CODE.BackColor = System.Drawing.Color.White
+        Me.TXT_PA_CODE.Enabled = False
+        Me.TXT_PA_CODE.Location = New System.Drawing.Point(145, 22)
+        Me.TXT_PA_CODE.Name = "TXT_PA_CODE"
+        Me.TXT_PA_CODE.Size = New System.Drawing.Size(42, 23)
+        Me.TXT_PA_CODE.TabIndex = 61
+        Me.TXT_PA_CODE.Visible = False
         '
         'Label11
         '
@@ -598,25 +392,132 @@ Partial Class FOLOUP
         Me.Label11.TabIndex = 59
         Me.Label11.Text = "RH:"
         '
+        'BTN_BABY
+        '
+        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_BABY.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.BTN_BABY.Appearance.Options.UseFont = True
+        Me.BTN_BABY.Appearance.Options.UseForeColor = True
+        Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_baby_64
+        Me.BTN_BABY.Location = New System.Drawing.Point(1227, 16)
+        Me.BTN_BABY.Name = "BTN_BABY"
+        Me.BTN_BABY.Size = New System.Drawing.Size(74, 70)
+        Me.BTN_BABY.TabIndex = 58
+        Me.BTN_BABY.Text = "BABY IS COME"
+        '
+        'BTN_OBSTETRIC
+        '
+        Me.BTN_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_OBSTETRIC.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.BTN_OBSTETRIC.Appearance.Options.UseFont = True
+        Me.BTN_OBSTETRIC.Appearance.Options.UseForeColor = True
+        Me.BTN_OBSTETRIC.Location = New System.Drawing.Point(1059, 55)
+        Me.BTN_OBSTETRIC.Name = "BTN_OBSTETRIC"
+        Me.BTN_OBSTETRIC.Size = New System.Drawing.Size(149, 34)
+        Me.BTN_OBSTETRIC.TabIndex = 57
+        Me.BTN_OBSTETRIC.Text = "Obstetric History"
+        '
+        'BTN_FETAL
+        '
+        Me.BTN_FETAL.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_FETAL.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
+        Me.BTN_FETAL.Appearance.Options.UseFont = True
+        Me.BTN_FETAL.Appearance.Options.UseForeColor = True
+        Me.BTN_FETAL.Location = New System.Drawing.Point(855, 57)
+        Me.BTN_FETAL.Name = "BTN_FETAL"
+        Me.BTN_FETAL.Size = New System.Drawing.Size(141, 34)
+        Me.BTN_FETAL.TabIndex = 56
+        Me.BTN_FETAL.Text = "Fetal Doppler"
+        '
+        'BTN_4D
+        '
+        Me.BTN_4D.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_4D.Appearance.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.BTN_4D.Appearance.Options.UseFont = True
+        Me.BTN_4D.Appearance.Options.UseForeColor = True
+        Me.BTN_4D.Location = New System.Drawing.Point(1008, 57)
+        Me.BTN_4D.Name = "BTN_4D"
+        Me.BTN_4D.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_4D.TabIndex = 55
+        Me.BTN_4D.Text = "4D"
+        '
+        'BTN_3RD
+        '
+        Me.BTN_3RD.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_3RD.Appearance.Options.UseFont = True
+        Me.BTN_3RD.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_3_32
+        Me.BTN_3RD.Location = New System.Drawing.Point(1105, 14)
+        Me.BTN_3RD.Name = "BTN_3RD"
+        Me.BTN_3RD.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_3RD.TabIndex = 54
+        Me.BTN_3RD.Text = "1st"
+        '
+        'BTN_2ND
+        '
+        Me.BTN_2ND.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_2ND.Appearance.Options.UseFont = True
+        Me.BTN_2ND.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_2_32
+        Me.BTN_2ND.Location = New System.Drawing.Point(1057, 14)
+        Me.BTN_2ND.Name = "BTN_2ND"
+        Me.BTN_2ND.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_2ND.TabIndex = 53
+        Me.BTN_2ND.Text = "1st"
+        '
+        'BTN_1ST
+        '
+        Me.BTN_1ST.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_1ST.Appearance.Options.UseFont = True
+        Me.BTN_1ST.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_level_1_32
+        Me.BTN_1ST.Location = New System.Drawing.Point(1008, 14)
+        Me.BTN_1ST.Name = "BTN_1ST"
+        Me.BTN_1ST.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_1ST.TabIndex = 52
+        Me.BTN_1ST.Text = "1st"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Teal
+        Me.Label10.Location = New System.Drawing.Point(861, 26)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label10.Size = New System.Drawing.Size(142, 16)
+        Me.Label10.TabIndex = 51
+        Me.Label10.Text = "Enter Invetigations :"
+        '
+        'Label3
+        '
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label3.Location = New System.Drawing.Point(358, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label3.Size = New System.Drawing.Size(25, 24)
+        Me.Label3.TabIndex = 60
+        Me.Label3.Text = "+"
+        '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox14)
+        Me.GroupBox2.Controls.Add(Me.st1_tsh)
         Me.GroupBox2.Controls.Add(Me.Label20)
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
+        Me.GroupBox2.Controls.Add(Me.st1_urine)
         Me.GroupBox2.Controls.Add(Me.Label18)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
+        Me.GroupBox2.Controls.Add(Me.st1_hbac)
         Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
+        Me.GroupBox2.Controls.Add(Me.st1_rbs)
         Me.GroupBox2.Controls.Add(Me.Label16)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
+        Me.GroupBox2.Controls.Add(Me.st1_pc)
         Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.st1_cmv)
         Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
+        Me.GroupBox2.Controls.Add(Me.st1_plt)
         Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
+        Me.GroupBox2.Controls.Add(Me.st1_toxo)
         Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.st1_hb)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Navy
         Me.GroupBox2.Location = New System.Drawing.Point(12, 99)
@@ -626,38 +527,178 @@ Partial Class FOLOUP
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "1st trimester"
         '
-        'TextBox6
+        'st1_tsh
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.White
-        Me.TextBox6.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox6.Location = New System.Drawing.Point(55, 19)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox6.TabIndex = 60
+        Me.st1_tsh.BackColor = System.Drawing.Color.White
+        Me.st1_tsh.ForeColor = System.Drawing.Color.Navy
+        Me.st1_tsh.Location = New System.Drawing.Point(53, 143)
+        Me.st1_tsh.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_tsh.Name = "st1_tsh"
+        Me.st1_tsh.ReadOnly = True
+        Me.st1_tsh.Size = New System.Drawing.Size(73, 23)
+        Me.st1_tsh.TabIndex = 76
         '
-        'Label12
+        'Label20
         '
-        Me.Label12.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label12.Location = New System.Drawing.Point(5, 22)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label12.Size = New System.Drawing.Size(46, 23)
-        Me.Label12.TabIndex = 61
-        Me.Label12.Text = "Hb% :"
+        Me.Label20.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label20.Location = New System.Drawing.Point(5, 142)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label20.Size = New System.Drawing.Size(44, 20)
+        Me.Label20.TabIndex = 77
+        Me.Label20.Text = "TsH :"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox7
+        'st1_urine
         '
-        Me.TextBox7.BackColor = System.Drawing.Color.White
-        Me.TextBox7.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox7.Location = New System.Drawing.Point(207, 19)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox7.TabIndex = 62
+        Me.st1_urine.BackColor = System.Drawing.Color.White
+        Me.st1_urine.ForeColor = System.Drawing.Color.Navy
+        Me.st1_urine.Location = New System.Drawing.Point(207, 111)
+        Me.st1_urine.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_urine.Name = "st1_urine"
+        Me.st1_urine.ReadOnly = True
+        Me.st1_urine.Size = New System.Drawing.Size(73, 23)
+        Me.st1_urine.TabIndex = 74
+        '
+        'Label18
+        '
+        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label18.Location = New System.Drawing.Point(134, 111)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label18.Size = New System.Drawing.Size(73, 23)
+        Me.Label18.TabIndex = 75
+        Me.Label18.Text = "Urine :"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'st1_hbac
+        '
+        Me.st1_hbac.BackColor = System.Drawing.Color.White
+        Me.st1_hbac.ForeColor = System.Drawing.Color.Navy
+        Me.st1_hbac.Location = New System.Drawing.Point(53, 111)
+        Me.st1_hbac.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_hbac.Name = "st1_hbac"
+        Me.st1_hbac.ReadOnly = True
+        Me.st1_hbac.Size = New System.Drawing.Size(73, 23)
+        Me.st1_hbac.TabIndex = 72
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label19.Location = New System.Drawing.Point(5, 110)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label19.Size = New System.Drawing.Size(46, 23)
+        Me.Label19.TabIndex = 73
+        Me.Label19.Text = "Hbac1:"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'st1_rbs
+        '
+        Me.st1_rbs.BackColor = System.Drawing.Color.White
+        Me.st1_rbs.ForeColor = System.Drawing.Color.Navy
+        Me.st1_rbs.Location = New System.Drawing.Point(207, 79)
+        Me.st1_rbs.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_rbs.Name = "st1_rbs"
+        Me.st1_rbs.ReadOnly = True
+        Me.st1_rbs.Size = New System.Drawing.Size(73, 23)
+        Me.st1_rbs.TabIndex = 70
+        '
+        'Label16
+        '
+        Me.Label16.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label16.Location = New System.Drawing.Point(134, 79)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label16.Size = New System.Drawing.Size(73, 23)
+        Me.Label16.TabIndex = 71
+        Me.Label16.Text = "RBS :"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'st1_pc
+        '
+        Me.st1_pc.BackColor = System.Drawing.Color.White
+        Me.st1_pc.ForeColor = System.Drawing.Color.Navy
+        Me.st1_pc.Location = New System.Drawing.Point(53, 79)
+        Me.st1_pc.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_pc.Name = "st1_pc"
+        Me.st1_pc.ReadOnly = True
+        Me.st1_pc.Size = New System.Drawing.Size(73, 23)
+        Me.st1_pc.TabIndex = 68
+        '
+        'Label17
+        '
+        Me.Label17.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label17.Location = New System.Drawing.Point(5, 78)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label17.Size = New System.Drawing.Size(46, 23)
+        Me.Label17.TabIndex = 69
+        Me.Label17.Text = "PC :"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'st1_cmv
+        '
+        Me.st1_cmv.BackColor = System.Drawing.Color.White
+        Me.st1_cmv.ForeColor = System.Drawing.Color.Navy
+        Me.st1_cmv.Location = New System.Drawing.Point(207, 50)
+        Me.st1_cmv.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_cmv.Name = "st1_cmv"
+        Me.st1_cmv.ReadOnly = True
+        Me.st1_cmv.Size = New System.Drawing.Size(73, 23)
+        Me.st1_cmv.TabIndex = 66
+        '
+        'Label14
+        '
+        Me.Label14.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label14.Location = New System.Drawing.Point(134, 50)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label14.Size = New System.Drawing.Size(73, 23)
+        Me.Label14.TabIndex = 67
+        Me.Label14.Text = "CMV.IgM :"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'st1_plt
+        '
+        Me.st1_plt.BackColor = System.Drawing.Color.White
+        Me.st1_plt.ForeColor = System.Drawing.Color.Navy
+        Me.st1_plt.Location = New System.Drawing.Point(53, 50)
+        Me.st1_plt.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_plt.Name = "st1_plt"
+        Me.st1_plt.ReadOnly = True
+        Me.st1_plt.Size = New System.Drawing.Size(73, 23)
+        Me.st1_plt.TabIndex = 64
+        '
+        'Label15
+        '
+        Me.Label15.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label15.Location = New System.Drawing.Point(5, 49)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label15.Size = New System.Drawing.Size(46, 23)
+        Me.Label15.TabIndex = 65
+        Me.Label15.Text = "PLT :"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'st1_toxo
+        '
+        Me.st1_toxo.BackColor = System.Drawing.Color.White
+        Me.st1_toxo.ForeColor = System.Drawing.Color.Navy
+        Me.st1_toxo.Location = New System.Drawing.Point(207, 23)
+        Me.st1_toxo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_toxo.Name = "st1_toxo"
+        Me.st1_toxo.ReadOnly = True
+        Me.st1_toxo.Size = New System.Drawing.Size(73, 23)
+        Me.st1_toxo.TabIndex = 62
         '
         'Label13
         '
@@ -669,383 +710,77 @@ Partial Class FOLOUP
         Me.Label13.Size = New System.Drawing.Size(73, 23)
         Me.Label13.TabIndex = 63
         Me.Label13.Text = "Toxo.lgM :"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox8
+        'st1_hb
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.White
-        Me.TextBox8.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox8.Location = New System.Drawing.Point(207, 46)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox8.TabIndex = 66
+        Me.st1_hb.BackColor = System.Drawing.Color.White
+        Me.st1_hb.ForeColor = System.Drawing.Color.Navy
+        Me.st1_hb.Location = New System.Drawing.Point(53, 23)
+        Me.st1_hb.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.st1_hb.Name = "st1_hb"
+        Me.st1_hb.ReadOnly = True
+        Me.st1_hb.Size = New System.Drawing.Size(73, 23)
+        Me.st1_hb.TabIndex = 60
         '
-        'Label14
+        'Label12
         '
-        Me.Label14.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label14.Location = New System.Drawing.Point(134, 50)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label14.Size = New System.Drawing.Size(73, 23)
-        Me.Label14.TabIndex = 67
-        Me.Label14.Text = "Toxo.lgM :"
-        '
-        'TextBox9
-        '
-        Me.TextBox9.BackColor = System.Drawing.Color.White
-        Me.TextBox9.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox9.Location = New System.Drawing.Point(55, 46)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox9.TabIndex = 64
-        '
-        'Label15
-        '
-        Me.Label15.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label15.Location = New System.Drawing.Point(5, 49)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label15.Size = New System.Drawing.Size(46, 23)
-        Me.Label15.TabIndex = 65
-        Me.Label15.Text = "Hb% :"
-        '
-        'TextBox10
-        '
-        Me.TextBox10.BackColor = System.Drawing.Color.White
-        Me.TextBox10.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox10.Location = New System.Drawing.Point(207, 75)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox10.TabIndex = 70
-        '
-        'Label16
-        '
-        Me.Label16.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label16.Location = New System.Drawing.Point(134, 79)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label16.Size = New System.Drawing.Size(73, 23)
-        Me.Label16.TabIndex = 71
-        Me.Label16.Text = "Toxo.lgM :"
-        '
-        'TextBox11
-        '
-        Me.TextBox11.BackColor = System.Drawing.Color.White
-        Me.TextBox11.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox11.Location = New System.Drawing.Point(55, 75)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox11.TabIndex = 68
-        '
-        'Label17
-        '
-        Me.Label17.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label17.Location = New System.Drawing.Point(5, 78)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label17.Size = New System.Drawing.Size(46, 23)
-        Me.Label17.TabIndex = 69
-        Me.Label17.Text = "Hb% :"
-        '
-        'TextBox12
-        '
-        Me.TextBox12.BackColor = System.Drawing.Color.White
-        Me.TextBox12.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox12.Location = New System.Drawing.Point(207, 107)
-        Me.TextBox12.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.ReadOnly = True
-        Me.TextBox12.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox12.TabIndex = 74
-        '
-        'Label18
-        '
-        Me.Label18.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label18.Location = New System.Drawing.Point(134, 111)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label18.Size = New System.Drawing.Size(73, 23)
-        Me.Label18.TabIndex = 75
-        Me.Label18.Text = "Toxo.lgM :"
-        '
-        'TextBox13
-        '
-        Me.TextBox13.BackColor = System.Drawing.Color.White
-        Me.TextBox13.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox13.Location = New System.Drawing.Point(55, 107)
-        Me.TextBox13.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox13.TabIndex = 72
-        '
-        'Label19
-        '
-        Me.Label19.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label19.Location = New System.Drawing.Point(5, 110)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label19.Size = New System.Drawing.Size(46, 23)
-        Me.Label19.TabIndex = 73
-        Me.Label19.Text = "Hb% :"
-        '
-        'TextBox14
-        '
-        Me.TextBox14.BackColor = System.Drawing.Color.White
-        Me.TextBox14.ForeColor = System.Drawing.Color.Navy
-        Me.TextBox14.Location = New System.Drawing.Point(55, 139)
-        Me.TextBox14.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.ReadOnly = True
-        Me.TextBox14.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox14.TabIndex = 76
-        '
-        'Label20
-        '
-        Me.Label20.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label20.Location = New System.Drawing.Point(5, 142)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label20.Size = New System.Drawing.Size(44, 20)
-        Me.Label20.TabIndex = 77
-        Me.Label20.Text = "Hb% :"
+        Me.Label12.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label12.Location = New System.Drawing.Point(5, 22)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label12.Size = New System.Drawing.Size(44, 23)
+        Me.Label12.TabIndex = 61
+        Me.Label12.Text = "Hb%:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.TextBox16)
-        Me.GroupBox3.Controls.Add(Me.Label22)
-        Me.GroupBox3.Controls.Add(Me.TextBox17)
-        Me.GroupBox3.Controls.Add(Me.Label23)
-        Me.GroupBox3.Controls.Add(Me.TextBox18)
-        Me.GroupBox3.Controls.Add(Me.Label24)
-        Me.GroupBox3.Controls.Add(Me.TextBox19)
-        Me.GroupBox3.Controls.Add(Me.Label25)
-        Me.GroupBox3.Controls.Add(Me.TextBox20)
-        Me.GroupBox3.Controls.Add(Me.Label26)
-        Me.GroupBox3.Controls.Add(Me.TextBox21)
-        Me.GroupBox3.Controls.Add(Me.Label27)
-        Me.GroupBox3.Controls.Add(Me.TextBox22)
-        Me.GroupBox3.Controls.Add(Me.Label28)
-        Me.GroupBox3.Controls.Add(Me.TextBox23)
+        Me.GroupBox3.Controls.Add(Me.ND2_TOTAL)
+        Me.GroupBox3.Controls.Add(Me.ND2_urine)
         Me.GroupBox3.Controls.Add(Me.Label29)
-        Me.GroupBox3.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.GroupBox3.Controls.Add(Me.ND2_TSH)
+        Me.GroupBox3.Controls.Add(Me.Label22)
+        Me.GroupBox3.Controls.Add(Me.ND2_LONIZED)
+        Me.GroupBox3.Controls.Add(Me.Label27)
+        Me.GroupBox3.Controls.Add(Me.Label23)
+        Me.GroupBox3.Controls.Add(Me.Label25)
+        Me.GroupBox3.Controls.Add(Me.Label24)
+        Me.GroupBox3.Controls.Add(Me.Label26)
+        Me.GroupBox3.Controls.Add(Me.ND2_HOUR)
+        Me.GroupBox3.Controls.Add(Me.ND2_hb)
+        Me.GroupBox3.Controls.Add(Me.Label28)
+        Me.GroupBox3.Controls.Add(Me.ND2_pc)
+        Me.GroupBox3.Controls.Add(Me.ND2_plt)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.Maroon
         Me.GroupBox3.Location = New System.Drawing.Point(311, 99)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(286, 180)
+        Me.GroupBox3.Size = New System.Drawing.Size(296, 180)
         Me.GroupBox3.TabIndex = 78
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "2nd trimester"
         '
-        'TextBox16
-        '
-        Me.TextBox16.BackColor = System.Drawing.Color.White
-        Me.TextBox16.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox16.Location = New System.Drawing.Point(207, 131)
-        Me.TextBox16.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.ReadOnly = True
-        Me.TextBox16.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox16.TabIndex = 74
-        '
-        'Label22
-        '
-        Me.Label22.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label22.Location = New System.Drawing.Point(134, 135)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label22.Size = New System.Drawing.Size(73, 23)
-        Me.Label22.TabIndex = 75
-        Me.Label22.Text = "Toxo.lgM :"
-        '
-        'TextBox17
-        '
-        Me.TextBox17.BackColor = System.Drawing.Color.White
-        Me.TextBox17.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox17.Location = New System.Drawing.Point(55, 131)
-        Me.TextBox17.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox17.TabIndex = 72
-        '
-        'Label23
-        '
-        Me.Label23.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label23.Location = New System.Drawing.Point(5, 134)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label23.Size = New System.Drawing.Size(47, 23)
-        Me.Label23.TabIndex = 73
-        Me.Label23.Text = "Hb% :"
-        '
-        'TextBox18
-        '
-        Me.TextBox18.BackColor = System.Drawing.Color.White
-        Me.TextBox18.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox18.Location = New System.Drawing.Point(207, 92)
-        Me.TextBox18.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox18.TabIndex = 70
-        '
-        'Label24
-        '
-        Me.Label24.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label24.Location = New System.Drawing.Point(134, 96)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label24.Size = New System.Drawing.Size(73, 23)
-        Me.Label24.TabIndex = 71
-        Me.Label24.Text = "Toxo.lgM :"
-        '
-        'TextBox19
-        '
-        Me.TextBox19.BackColor = System.Drawing.Color.White
-        Me.TextBox19.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox19.Location = New System.Drawing.Point(55, 92)
-        Me.TextBox19.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.ReadOnly = True
-        Me.TextBox19.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox19.TabIndex = 68
-        '
-        'Label25
-        '
-        Me.Label25.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label25.Location = New System.Drawing.Point(5, 95)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label25.Size = New System.Drawing.Size(47, 23)
-        Me.Label25.TabIndex = 69
-        Me.Label25.Text = "Hb% :"
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BackColor = System.Drawing.Color.White
-        Me.TextBox20.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox20.Location = New System.Drawing.Point(207, 55)
-        Me.TextBox20.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.ReadOnly = True
-        Me.TextBox20.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox20.TabIndex = 66
-        '
-        'Label26
-        '
-        Me.Label26.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label26.Location = New System.Drawing.Point(134, 59)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label26.Name = "Label26"
-        Me.Label26.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label26.Size = New System.Drawing.Size(73, 23)
-        Me.Label26.TabIndex = 67
-        Me.Label26.Text = "Toxo.lgM :"
-        '
-        'TextBox21
-        '
-        Me.TextBox21.BackColor = System.Drawing.Color.White
-        Me.TextBox21.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox21.Location = New System.Drawing.Point(55, 55)
-        Me.TextBox21.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.ReadOnly = True
-        Me.TextBox21.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox21.TabIndex = 64
-        '
-        'Label27
-        '
-        Me.Label27.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label27.Location = New System.Drawing.Point(5, 58)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label27.Size = New System.Drawing.Size(47, 23)
-        Me.Label27.TabIndex = 65
-        Me.Label27.Text = "Hb% :"
-        '
-        'TextBox22
-        '
-        Me.TextBox22.BackColor = System.Drawing.Color.White
-        Me.TextBox22.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox22.Location = New System.Drawing.Point(207, 19)
-        Me.TextBox22.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.ReadOnly = True
-        Me.TextBox22.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox22.TabIndex = 62
-        '
-        'Label28
-        '
-        Me.Label28.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label28.Location = New System.Drawing.Point(134, 23)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label28.Size = New System.Drawing.Size(73, 23)
-        Me.Label28.TabIndex = 63
-        Me.Label28.Text = "Toxo.lgM :"
-        '
-        'TextBox23
-        '
-        Me.TextBox23.BackColor = System.Drawing.Color.White
-        Me.TextBox23.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TextBox23.Location = New System.Drawing.Point(55, 19)
-        Me.TextBox23.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.ReadOnly = True
-        Me.TextBox23.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox23.TabIndex = 60
-        '
-        'Label29
-        '
-        Me.Label29.ForeColor = System.Drawing.Color.OliveDrab
-        Me.Label29.Location = New System.Drawing.Point(5, 22)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label29.Size = New System.Drawing.Size(47, 23)
-        Me.Label29.TabIndex = 61
-        Me.Label29.Text = "Hb% :"
-        '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.TextBox15)
-        Me.GroupBox4.Controls.Add(Me.Label21)
-        Me.GroupBox4.Controls.Add(Me.TextBox24)
-        Me.GroupBox4.Controls.Add(Me.Label30)
-        Me.GroupBox4.Controls.Add(Me.TextBox25)
-        Me.GroupBox4.Controls.Add(Me.Label31)
-        Me.GroupBox4.Controls.Add(Me.TextBox26)
+        Me.GroupBox4.Controls.Add(Me.RD3_urine)
+        Me.GroupBox4.Controls.Add(Me.RD3_CREAT)
+        Me.GroupBox4.Controls.Add(Me.RD3_rbs)
         Me.GroupBox4.Controls.Add(Me.Label32)
-        Me.GroupBox4.Controls.Add(Me.TextBox27)
-        Me.GroupBox4.Controls.Add(Me.Label33)
-        Me.GroupBox4.Controls.Add(Me.TextBox28)
-        Me.GroupBox4.Controls.Add(Me.Label34)
-        Me.GroupBox4.Controls.Add(Me.TextBox29)
-        Me.GroupBox4.Controls.Add(Me.Label35)
-        Me.GroupBox4.Controls.Add(Me.TextBox30)
+        Me.GroupBox4.Controls.Add(Me.RD3_TSH)
+        Me.GroupBox4.Controls.Add(Me.Label44)
+        Me.GroupBox4.Controls.Add(Me.RD3_HOUR)
+        Me.GroupBox4.Controls.Add(Me.Label30)
         Me.GroupBox4.Controls.Add(Me.Label36)
-        Me.GroupBox4.Controls.Add(Me.TextBox31)
-        Me.GroupBox4.Controls.Add(Me.Label37)
+        Me.GroupBox4.Controls.Add(Me.Label42)
+        Me.GroupBox4.Controls.Add(Me.RD3_SGPT)
+        Me.GroupBox4.Controls.Add(Me.Label41)
+        Me.GroupBox4.Controls.Add(Me.Label40)
+        Me.GroupBox4.Controls.Add(Me.Label34)
+        Me.GroupBox4.Controls.Add(Me.Label43)
+        Me.GroupBox4.Controls.Add(Me.RD3_hb)
+        Me.GroupBox4.Controls.Add(Me.RD3_pc)
+        Me.GroupBox4.Controls.Add(Me.RD3_plt)
         Me.GroupBox4.ForeColor = System.Drawing.SystemColors.InfoText
         Me.GroupBox4.Location = New System.Drawing.Point(613, 99)
         Me.GroupBox4.Name = "GroupBox4"
@@ -1053,204 +788,6 @@ Partial Class FOLOUP
         Me.GroupBox4.TabIndex = 79
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "3rd trimester"
-        '
-        'TextBox15
-        '
-        Me.TextBox15.BackColor = System.Drawing.Color.White
-        Me.TextBox15.ForeColor = System.Drawing.Color.Black
-        Me.TextBox15.Location = New System.Drawing.Point(55, 139)
-        Me.TextBox15.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox15.TabIndex = 76
-        '
-        'Label21
-        '
-        Me.Label21.ForeColor = System.Drawing.Color.DimGray
-        Me.Label21.Location = New System.Drawing.Point(5, 142)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label21.Size = New System.Drawing.Size(44, 20)
-        Me.Label21.TabIndex = 77
-        Me.Label21.Text = "Hb% :"
-        '
-        'TextBox24
-        '
-        Me.TextBox24.BackColor = System.Drawing.Color.White
-        Me.TextBox24.ForeColor = System.Drawing.Color.Black
-        Me.TextBox24.Location = New System.Drawing.Point(207, 107)
-        Me.TextBox24.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.ReadOnly = True
-        Me.TextBox24.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox24.TabIndex = 74
-        '
-        'Label30
-        '
-        Me.Label30.ForeColor = System.Drawing.Color.DimGray
-        Me.Label30.Location = New System.Drawing.Point(134, 111)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label30.Size = New System.Drawing.Size(73, 23)
-        Me.Label30.TabIndex = 75
-        Me.Label30.Text = "Toxo.lgM :"
-        '
-        'TextBox25
-        '
-        Me.TextBox25.BackColor = System.Drawing.Color.White
-        Me.TextBox25.ForeColor = System.Drawing.Color.Black
-        Me.TextBox25.Location = New System.Drawing.Point(55, 107)
-        Me.TextBox25.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.ReadOnly = True
-        Me.TextBox25.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox25.TabIndex = 72
-        '
-        'Label31
-        '
-        Me.Label31.ForeColor = System.Drawing.Color.DimGray
-        Me.Label31.Location = New System.Drawing.Point(5, 110)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label31.Size = New System.Drawing.Size(46, 23)
-        Me.Label31.TabIndex = 73
-        Me.Label31.Text = "Hb% :"
-        '
-        'TextBox26
-        '
-        Me.TextBox26.BackColor = System.Drawing.Color.White
-        Me.TextBox26.ForeColor = System.Drawing.Color.Black
-        Me.TextBox26.Location = New System.Drawing.Point(207, 75)
-        Me.TextBox26.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.ReadOnly = True
-        Me.TextBox26.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox26.TabIndex = 70
-        '
-        'Label32
-        '
-        Me.Label32.ForeColor = System.Drawing.Color.DimGray
-        Me.Label32.Location = New System.Drawing.Point(134, 79)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label32.Size = New System.Drawing.Size(73, 23)
-        Me.Label32.TabIndex = 71
-        Me.Label32.Text = "Toxo.lgM :"
-        '
-        'TextBox27
-        '
-        Me.TextBox27.BackColor = System.Drawing.Color.White
-        Me.TextBox27.ForeColor = System.Drawing.Color.Black
-        Me.TextBox27.Location = New System.Drawing.Point(55, 75)
-        Me.TextBox27.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.ReadOnly = True
-        Me.TextBox27.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox27.TabIndex = 68
-        '
-        'Label33
-        '
-        Me.Label33.ForeColor = System.Drawing.Color.DimGray
-        Me.Label33.Location = New System.Drawing.Point(5, 78)
-        Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label33.Name = "Label33"
-        Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label33.Size = New System.Drawing.Size(46, 23)
-        Me.Label33.TabIndex = 69
-        Me.Label33.Text = "Hb% :"
-        '
-        'TextBox28
-        '
-        Me.TextBox28.BackColor = System.Drawing.Color.White
-        Me.TextBox28.ForeColor = System.Drawing.Color.Black
-        Me.TextBox28.Location = New System.Drawing.Point(207, 46)
-        Me.TextBox28.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.ReadOnly = True
-        Me.TextBox28.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox28.TabIndex = 66
-        '
-        'Label34
-        '
-        Me.Label34.ForeColor = System.Drawing.Color.DimGray
-        Me.Label34.Location = New System.Drawing.Point(134, 50)
-        Me.Label34.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label34.Name = "Label34"
-        Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label34.Size = New System.Drawing.Size(73, 23)
-        Me.Label34.TabIndex = 67
-        Me.Label34.Text = "Toxo.lgM :"
-        '
-        'TextBox29
-        '
-        Me.TextBox29.BackColor = System.Drawing.Color.White
-        Me.TextBox29.ForeColor = System.Drawing.Color.Black
-        Me.TextBox29.Location = New System.Drawing.Point(55, 46)
-        Me.TextBox29.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.ReadOnly = True
-        Me.TextBox29.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox29.TabIndex = 64
-        '
-        'Label35
-        '
-        Me.Label35.ForeColor = System.Drawing.Color.DimGray
-        Me.Label35.Location = New System.Drawing.Point(5, 49)
-        Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label35.Name = "Label35"
-        Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label35.Size = New System.Drawing.Size(46, 23)
-        Me.Label35.TabIndex = 65
-        Me.Label35.Text = "Hb% :"
-        '
-        'TextBox30
-        '
-        Me.TextBox30.BackColor = System.Drawing.Color.White
-        Me.TextBox30.ForeColor = System.Drawing.Color.Black
-        Me.TextBox30.Location = New System.Drawing.Point(207, 19)
-        Me.TextBox30.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.ReadOnly = True
-        Me.TextBox30.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox30.TabIndex = 62
-        '
-        'Label36
-        '
-        Me.Label36.ForeColor = System.Drawing.Color.DimGray
-        Me.Label36.Location = New System.Drawing.Point(134, 23)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label36.Size = New System.Drawing.Size(73, 23)
-        Me.Label36.TabIndex = 63
-        Me.Label36.Text = "Toxo.lgM :"
-        '
-        'TextBox31
-        '
-        Me.TextBox31.BackColor = System.Drawing.Color.White
-        Me.TextBox31.ForeColor = System.Drawing.Color.Black
-        Me.TextBox31.Location = New System.Drawing.Point(55, 19)
-        Me.TextBox31.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox31.Name = "TextBox31"
-        Me.TextBox31.ReadOnly = True
-        Me.TextBox31.Size = New System.Drawing.Size(73, 23)
-        Me.TextBox31.TabIndex = 60
-        '
-        'Label37
-        '
-        Me.Label37.ForeColor = System.Drawing.Color.DimGray
-        Me.Label37.Location = New System.Drawing.Point(5, 22)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label37.Size = New System.Drawing.Size(46, 23)
-        Me.Label37.TabIndex = 61
-        Me.Label37.Text = "Hb% :"
         '
         'GroupBox5
         '
@@ -1337,6 +874,14 @@ Partial Class FOLOUP
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Complaiont"
         '
+        'SimpleButton8
+        '
+        Me.SimpleButton8.ImageOptions.Image = CType(resources.GetObject("SimpleButton8.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton8.Location = New System.Drawing.Point(339, 10)
+        Me.SimpleButton8.Name = "SimpleButton8"
+        Me.SimpleButton8.Size = New System.Drawing.Size(38, 37)
+        Me.SimpleButton8.TabIndex = 84
+        '
         'ComboBox2
         '
         Me.ComboBox2.BackColor = System.Drawing.Color.Aqua
@@ -1361,27 +906,6 @@ Partial Class FOLOUP
         Me.Label38.TabIndex = 38
         Me.Label38.Text = "+"
         '
-        'Label3
-        '
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label3.Location = New System.Drawing.Point(358, 15)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label3.Size = New System.Drawing.Size(25, 24)
-        Me.Label3.TabIndex = 60
-        Me.Label3.Text = "+"
-        '
-        'SimpleButton8
-        '
-        Me.SimpleButton8.ImageOptions.Image = CType(resources.GetObject("SimpleButton8.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton8.Location = New System.Drawing.Point(339, 10)
-        Me.SimpleButton8.Name = "SimpleButton8"
-        Me.SimpleButton8.Size = New System.Drawing.Size(38, 37)
-        Me.SimpleButton8.TabIndex = 84
-        '
         'GroupBox9
         '
         Me.GroupBox9.Controls.Add(Me.ComboBox4)
@@ -1396,6 +920,39 @@ Partial Class FOLOUP
         Me.GroupBox9.TabIndex = 84
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Drugs"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.BackColor = System.Drawing.Color.Aqua
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(491, 16)
+        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ComboBox4.Size = New System.Drawing.Size(278, 24)
+        Me.ComboBox4.TabIndex = 87
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.ForeColor = System.Drawing.Color.Teal
+        Me.Label39.Location = New System.Drawing.Point(441, 21)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label39.Name = "Label39"
+        Me.Label39.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label39.Size = New System.Drawing.Size(49, 16)
+        Me.Label39.TabIndex = 86
+        Me.Label39.Text = "Dose :"
+        '
+        'TextBox35
+        '
+        Me.TextBox35.BackColor = System.Drawing.Color.White
+        Me.TextBox35.Enabled = False
+        Me.TextBox35.Location = New System.Drawing.Point(298, 18)
+        Me.TextBox35.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox35.Name = "TextBox35"
+        Me.TextBox35.Size = New System.Drawing.Size(122, 23)
+        Me.TextBox35.TabIndex = 85
         '
         'SimpleButton9
         '
@@ -1416,44 +973,533 @@ Partial Class FOLOUP
         Me.ComboBox3.Size = New System.Drawing.Size(278, 24)
         Me.ComboBox3.TabIndex = 36
         '
-        'TextBox35
+        'ND2_TOTAL
         '
-        Me.TextBox35.BackColor = System.Drawing.Color.White
-        Me.TextBox35.Enabled = False
-        Me.TextBox35.Location = New System.Drawing.Point(298, 18)
-        Me.TextBox35.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox35.Name = "TextBox35"
-        Me.TextBox35.Size = New System.Drawing.Size(122, 23)
-        Me.TextBox35.TabIndex = 85
+        Me.ND2_TOTAL.BackColor = System.Drawing.Color.White
+        Me.ND2_TOTAL.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_TOTAL.Location = New System.Drawing.Point(216, 21)
+        Me.ND2_TOTAL.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_TOTAL.Name = "ND2_TOTAL"
+        Me.ND2_TOTAL.ReadOnly = True
+        Me.ND2_TOTAL.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_TOTAL.TabIndex = 110
         '
-        'Label39
+        'Label22
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.ForeColor = System.Drawing.Color.Teal
-        Me.Label39.Location = New System.Drawing.Point(441, 21)
-        Me.Label39.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label39.Name = "Label39"
-        Me.Label39.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label39.Size = New System.Drawing.Size(49, 16)
-        Me.Label39.TabIndex = 86
-        Me.Label39.Text = "Dose :"
+        Me.Label22.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Olive
+        Me.Label22.Location = New System.Drawing.Point(148, 20)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label22.Size = New System.Drawing.Size(67, 20)
+        Me.Label22.TabIndex = 111
+        Me.Label22.Text = "TOTAL :"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'ComboBox4
+        'ND2_urine
         '
-        Me.ComboBox4.BackColor = System.Drawing.Color.Aqua
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(491, 16)
-        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ComboBox4.Size = New System.Drawing.Size(278, 24)
-        Me.ComboBox4.TabIndex = 87
+        Me.ND2_urine.BackColor = System.Drawing.Color.White
+        Me.ND2_urine.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_urine.Location = New System.Drawing.Point(216, 123)
+        Me.ND2_urine.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_urine.Name = "ND2_urine"
+        Me.ND2_urine.ReadOnly = True
+        Me.ND2_urine.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_urine.TabIndex = 108
+        '
+        'Label23
+        '
+        Me.Label23.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.Olive
+        Me.Label23.Location = New System.Drawing.Point(146, 123)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label23.Size = New System.Drawing.Size(70, 23)
+        Me.Label23.TabIndex = 109
+        Me.Label23.Text = "Urine :"
+        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ND2_HOUR
+        '
+        Me.ND2_HOUR.BackColor = System.Drawing.Color.White
+        Me.ND2_HOUR.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_HOUR.Location = New System.Drawing.Point(68, 126)
+        Me.ND2_HOUR.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_HOUR.Name = "ND2_HOUR"
+        Me.ND2_HOUR.ReadOnly = True
+        Me.ND2_HOUR.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_HOUR.TabIndex = 106
+        '
+        'Label24
+        '
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label24.ForeColor = System.Drawing.Color.Olive
+        Me.Label24.Location = New System.Drawing.Point(5, 125)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label24.Size = New System.Drawing.Size(62, 23)
+        Me.Label24.TabIndex = 107
+        Me.Label24.Text = "HOUR :"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ND2_pc
+        '
+        Me.ND2_pc.BackColor = System.Drawing.Color.White
+        Me.ND2_pc.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_pc.Location = New System.Drawing.Point(68, 90)
+        Me.ND2_pc.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_pc.Name = "ND2_pc"
+        Me.ND2_pc.ReadOnly = True
+        Me.ND2_pc.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_pc.TabIndex = 104
+        '
+        'Label25
+        '
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label25.ForeColor = System.Drawing.Color.Olive
+        Me.Label25.Location = New System.Drawing.Point(5, 89)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label25.Size = New System.Drawing.Size(62, 23)
+        Me.Label25.TabIndex = 105
+        Me.Label25.Text = "PC :"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ND2_TSH
+        '
+        Me.ND2_TSH.BackColor = System.Drawing.Color.White
+        Me.ND2_TSH.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_TSH.Location = New System.Drawing.Point(216, 88)
+        Me.ND2_TSH.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_TSH.Name = "ND2_TSH"
+        Me.ND2_TSH.ReadOnly = True
+        Me.ND2_TSH.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_TSH.TabIndex = 102
+        '
+        'Label26
+        '
+        Me.Label26.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Olive
+        Me.Label26.Location = New System.Drawing.Point(146, 88)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label26.Size = New System.Drawing.Size(70, 23)
+        Me.Label26.TabIndex = 103
+        Me.Label26.Text = "TSH :"
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ND2_plt
+        '
+        Me.ND2_plt.BackColor = System.Drawing.Color.White
+        Me.ND2_plt.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_plt.Location = New System.Drawing.Point(68, 55)
+        Me.ND2_plt.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_plt.Name = "ND2_plt"
+        Me.ND2_plt.ReadOnly = True
+        Me.ND2_plt.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_plt.TabIndex = 100
+        '
+        'Label27
+        '
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label27.ForeColor = System.Drawing.Color.Olive
+        Me.Label27.Location = New System.Drawing.Point(5, 54)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label27.Size = New System.Drawing.Size(62, 23)
+        Me.Label27.TabIndex = 101
+        Me.Label27.Text = "PLT :"
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ND2_LONIZED
+        '
+        Me.ND2_LONIZED.BackColor = System.Drawing.Color.White
+        Me.ND2_LONIZED.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_LONIZED.Location = New System.Drawing.Point(216, 55)
+        Me.ND2_LONIZED.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_LONIZED.Name = "ND2_LONIZED"
+        Me.ND2_LONIZED.ReadOnly = True
+        Me.ND2_LONIZED.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_LONIZED.TabIndex = 98
+        '
+        'Label28
+        '
+        Me.Label28.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.Olive
+        Me.Label28.Location = New System.Drawing.Point(146, 55)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label28.Size = New System.Drawing.Size(70, 23)
+        Me.Label28.TabIndex = 99
+        Me.Label28.Text = "LONIZED :"
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ND2_hb
+        '
+        Me.ND2_hb.BackColor = System.Drawing.Color.White
+        Me.ND2_hb.ForeColor = System.Drawing.Color.Maroon
+        Me.ND2_hb.Location = New System.Drawing.Point(68, 24)
+        Me.ND2_hb.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ND2_hb.Name = "ND2_hb"
+        Me.ND2_hb.ReadOnly = True
+        Me.ND2_hb.Size = New System.Drawing.Size(73, 23)
+        Me.ND2_hb.TabIndex = 96
+        '
+        'Label29
+        '
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label29.ForeColor = System.Drawing.Color.Olive
+        Me.Label29.Location = New System.Drawing.Point(5, 23)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label29.Size = New System.Drawing.Size(60, 23)
+        Me.Label29.TabIndex = 97
+        Me.Label29.Text = "Hb%:"
+        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_CREAT
+        '
+        Me.RD3_CREAT.BackColor = System.Drawing.Color.White
+        Me.RD3_CREAT.ForeColor = System.Drawing.Color.Black
+        Me.RD3_CREAT.Location = New System.Drawing.Point(73, 143)
+        Me.RD3_CREAT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_CREAT.Name = "RD3_CREAT"
+        Me.RD3_CREAT.ReadOnly = True
+        Me.RD3_CREAT.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_CREAT.TabIndex = 112
+        '
+        'Label30
+        '
+        Me.Label30.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label30.ForeColor = System.Drawing.Color.DimGray
+        Me.Label30.Location = New System.Drawing.Point(7, 142)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label30.Size = New System.Drawing.Size(63, 20)
+        Me.Label30.TabIndex = 113
+        Me.Label30.Text = "Creat :"
+        Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_urine
+        '
+        Me.RD3_urine.BackColor = System.Drawing.Color.White
+        Me.RD3_urine.ForeColor = System.Drawing.Color.Black
+        Me.RD3_urine.Location = New System.Drawing.Point(208, 112)
+        Me.RD3_urine.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_urine.Name = "RD3_urine"
+        Me.RD3_urine.ReadOnly = True
+        Me.RD3_urine.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_urine.TabIndex = 110
+        '
+        'Label32
+        '
+        Me.Label32.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label32.ForeColor = System.Drawing.Color.DimGray
+        Me.Label32.Location = New System.Drawing.Point(150, 112)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label32.Name = "Label32"
+        Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label32.Size = New System.Drawing.Size(61, 23)
+        Me.Label32.TabIndex = 111
+        Me.Label32.Text = "Urine :"
+        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_SGPT
+        '
+        Me.RD3_SGPT.BackColor = System.Drawing.Color.White
+        Me.RD3_SGPT.ForeColor = System.Drawing.Color.Black
+        Me.RD3_SGPT.Location = New System.Drawing.Point(73, 111)
+        Me.RD3_SGPT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_SGPT.Name = "RD3_SGPT"
+        Me.RD3_SGPT.ReadOnly = True
+        Me.RD3_SGPT.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_SGPT.TabIndex = 108
+        '
+        'Label34
+        '
+        Me.Label34.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label34.ForeColor = System.Drawing.Color.DimGray
+        Me.Label34.Location = New System.Drawing.Point(7, 110)
+        Me.Label34.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label34.Name = "Label34"
+        Me.Label34.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label34.Size = New System.Drawing.Size(65, 23)
+        Me.Label34.TabIndex = 109
+        Me.Label34.Text = "SGPT :"
+        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_rbs
+        '
+        Me.RD3_rbs.BackColor = System.Drawing.Color.White
+        Me.RD3_rbs.ForeColor = System.Drawing.Color.Black
+        Me.RD3_rbs.Location = New System.Drawing.Point(208, 80)
+        Me.RD3_rbs.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_rbs.Name = "RD3_rbs"
+        Me.RD3_rbs.ReadOnly = True
+        Me.RD3_rbs.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_rbs.TabIndex = 106
+        '
+        'Label36
+        '
+        Me.Label36.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label36.ForeColor = System.Drawing.Color.DimGray
+        Me.Label36.Location = New System.Drawing.Point(150, 80)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label36.Name = "Label36"
+        Me.Label36.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label36.Size = New System.Drawing.Size(61, 23)
+        Me.Label36.TabIndex = 107
+        Me.Label36.Text = "RBS :"
+        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_pc
+        '
+        Me.RD3_pc.BackColor = System.Drawing.Color.White
+        Me.RD3_pc.ForeColor = System.Drawing.Color.Black
+        Me.RD3_pc.Location = New System.Drawing.Point(73, 79)
+        Me.RD3_pc.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_pc.Name = "RD3_pc"
+        Me.RD3_pc.ReadOnly = True
+        Me.RD3_pc.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_pc.TabIndex = 104
+        '
+        'Label40
+        '
+        Me.Label40.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label40.ForeColor = System.Drawing.Color.DimGray
+        Me.Label40.Location = New System.Drawing.Point(7, 78)
+        Me.Label40.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label40.Name = "Label40"
+        Me.Label40.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label40.Size = New System.Drawing.Size(65, 23)
+        Me.Label40.TabIndex = 105
+        Me.Label40.Text = "PC :"
+        Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_TSH
+        '
+        Me.RD3_TSH.BackColor = System.Drawing.Color.White
+        Me.RD3_TSH.ForeColor = System.Drawing.Color.Black
+        Me.RD3_TSH.Location = New System.Drawing.Point(208, 51)
+        Me.RD3_TSH.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_TSH.Name = "RD3_TSH"
+        Me.RD3_TSH.ReadOnly = True
+        Me.RD3_TSH.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_TSH.TabIndex = 102
+        '
+        'Label41
+        '
+        Me.Label41.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label41.ForeColor = System.Drawing.Color.DimGray
+        Me.Label41.Location = New System.Drawing.Point(150, 51)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label41.Name = "Label41"
+        Me.Label41.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label41.Size = New System.Drawing.Size(61, 23)
+        Me.Label41.TabIndex = 103
+        Me.Label41.Text = "TsH :"
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_plt
+        '
+        Me.RD3_plt.BackColor = System.Drawing.Color.White
+        Me.RD3_plt.ForeColor = System.Drawing.Color.Black
+        Me.RD3_plt.Location = New System.Drawing.Point(73, 50)
+        Me.RD3_plt.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_plt.Name = "RD3_plt"
+        Me.RD3_plt.ReadOnly = True
+        Me.RD3_plt.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_plt.TabIndex = 100
+        '
+        'Label42
+        '
+        Me.Label42.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label42.ForeColor = System.Drawing.Color.DimGray
+        Me.Label42.Location = New System.Drawing.Point(7, 49)
+        Me.Label42.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label42.Name = "Label42"
+        Me.Label42.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label42.Size = New System.Drawing.Size(65, 23)
+        Me.Label42.TabIndex = 101
+        Me.Label42.Text = "PLT :"
+        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_HOUR
+        '
+        Me.RD3_HOUR.BackColor = System.Drawing.Color.White
+        Me.RD3_HOUR.ForeColor = System.Drawing.Color.Black
+        Me.RD3_HOUR.Location = New System.Drawing.Point(208, 24)
+        Me.RD3_HOUR.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_HOUR.Name = "RD3_HOUR"
+        Me.RD3_HOUR.ReadOnly = True
+        Me.RD3_HOUR.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_HOUR.TabIndex = 98
+        '
+        'Label43
+        '
+        Me.Label43.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label43.ForeColor = System.Drawing.Color.DimGray
+        Me.Label43.Location = New System.Drawing.Point(150, 24)
+        Me.Label43.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label43.Name = "Label43"
+        Me.Label43.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label43.Size = New System.Drawing.Size(61, 23)
+        Me.Label43.TabIndex = 99
+        Me.Label43.Text = "1HOUR :"
+        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RD3_hb
+        '
+        Me.RD3_hb.BackColor = System.Drawing.Color.White
+        Me.RD3_hb.ForeColor = System.Drawing.Color.Black
+        Me.RD3_hb.Location = New System.Drawing.Point(73, 23)
+        Me.RD3_hb.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RD3_hb.Name = "RD3_hb"
+        Me.RD3_hb.ReadOnly = True
+        Me.RD3_hb.Size = New System.Drawing.Size(73, 23)
+        Me.RD3_hb.TabIndex = 96
+        '
+        'Label44
+        '
+        Me.Label44.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label44.ForeColor = System.Drawing.Color.DimGray
+        Me.Label44.Location = New System.Drawing.Point(7, 22)
+        Me.Label44.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label44.Name = "Label44"
+        Me.Label44.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label44.Size = New System.Drawing.Size(63, 23)
+        Me.Label44.TabIndex = 97
+        Me.Label44.Text = "Hb%:"
+        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'GRBTN
+        '
+        Me.GRBTN.Controls.Add(Me.EXITBTN)
+        Me.GRBTN.Controls.Add(Me.PRINTBTN)
+        Me.GRBTN.Controls.Add(Me.UNDOBTN)
+        Me.GRBTN.Controls.Add(Me.SEARCHBTN)
+        Me.GRBTN.Controls.Add(Me.DELETBTN)
+        Me.GRBTN.Controls.Add(Me.EDITBTN)
+        Me.GRBTN.Controls.Add(Me.SAVEBTN)
+        Me.GRBTN.Controls.Add(Me.NEWBTN)
+        Me.GRBTN.Location = New System.Drawing.Point(219, 547)
+        Me.GRBTN.Name = "GRBTN"
+        Me.GRBTN.Size = New System.Drawing.Size(842, 72)
+        Me.GRBTN.TabIndex = 85
+        Me.GRBTN.TabStop = False
+        '
+        'EXITBTN
+        '
+        Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EXITBTN.Appearance.Options.UseFont = True
+        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EXITBTN.Location = New System.Drawing.Point(12, 20)
+        Me.EXITBTN.Name = "EXITBTN"
+        Me.EXITBTN.Size = New System.Drawing.Size(41, 44)
+        Me.EXITBTN.TabIndex = 7
+        '
+        'PRINTBTN
+        '
+        Me.PRINTBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PRINTBTN.Appearance.Options.UseFont = True
+        Me.PRINTBTN.ImageOptions.Image = CType(resources.GetObject("PRINTBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.PRINTBTN.Location = New System.Drawing.Point(70, 20)
+        Me.PRINTBTN.Name = "PRINTBTN"
+        Me.PRINTBTN.Size = New System.Drawing.Size(96, 44)
+        Me.PRINTBTN.TabIndex = 6
+        Me.PRINTBTN.Text = "طباعة"
+        '
+        'UNDOBTN
+        '
+        Me.UNDOBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UNDOBTN.Appearance.ForeColor = System.Drawing.Color.Purple
+        Me.UNDOBTN.Appearance.Options.UseFont = True
+        Me.UNDOBTN.Appearance.Options.UseForeColor = True
+        Me.UNDOBTN.ImageOptions.Image = CType(resources.GetObject("UNDOBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.UNDOBTN.Location = New System.Drawing.Point(180, 20)
+        Me.UNDOBTN.Name = "UNDOBTN"
+        Me.UNDOBTN.Size = New System.Drawing.Size(106, 44)
+        Me.UNDOBTN.TabIndex = 5
+        Me.UNDOBTN.Text = "الأرشيف"
+        '
+        'SEARCHBTN
+        '
+        Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SEARCHBTN.Appearance.Options.UseFont = True
+        Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SEARCHBTN.Location = New System.Drawing.Point(300, 20)
+        Me.SEARCHBTN.Name = "SEARCHBTN"
+        Me.SEARCHBTN.Size = New System.Drawing.Size(96, 44)
+        Me.SEARCHBTN.TabIndex = 4
+        Me.SEARCHBTN.Text = "بحث"
+        '
+        'DELETBTN
+        '
+        Me.DELETBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DELETBTN.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.DELETBTN.Appearance.Options.UseFont = True
+        Me.DELETBTN.Appearance.Options.UseForeColor = True
+        Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.DELETBTN.Location = New System.Drawing.Point(408, 20)
+        Me.DELETBTN.Name = "DELETBTN"
+        Me.DELETBTN.Size = New System.Drawing.Size(96, 44)
+        Me.DELETBTN.TabIndex = 3
+        Me.DELETBTN.Text = "حذف"
+        '
+        'EDITBTN
+        '
+        Me.EDITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EDITBTN.Appearance.ForeColor = System.Drawing.Color.SteelBlue
+        Me.EDITBTN.Appearance.Options.UseFont = True
+        Me.EDITBTN.Appearance.Options.UseForeColor = True
+        Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EDITBTN.Location = New System.Drawing.Point(516, 20)
+        Me.EDITBTN.Name = "EDITBTN"
+        Me.EDITBTN.Size = New System.Drawing.Size(96, 44)
+        Me.EDITBTN.TabIndex = 2
+        Me.EDITBTN.Text = "تعديل"
+        '
+        'SAVEBTN
+        '
+        Me.SAVEBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SAVEBTN.Appearance.ForeColor = System.Drawing.Color.DarkRed
+        Me.SAVEBTN.Appearance.Options.UseFont = True
+        Me.SAVEBTN.Appearance.Options.UseForeColor = True
+        Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SAVEBTN.Location = New System.Drawing.Point(628, 20)
+        Me.SAVEBTN.Name = "SAVEBTN"
+        Me.SAVEBTN.Size = New System.Drawing.Size(96, 44)
+        Me.SAVEBTN.TabIndex = 0
+        Me.SAVEBTN.Text = "حفظ"
+        '
+        'NEWBTN
+        '
+        Me.NEWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NEWBTN.Appearance.ForeColor = System.Drawing.Color.LimeGreen
+        Me.NEWBTN.Appearance.Options.UseFont = True
+        Me.NEWBTN.Appearance.Options.UseForeColor = True
+        Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.NEWBTN.Location = New System.Drawing.Point(735, 20)
+        Me.NEWBTN.Name = "NEWBTN"
+        Me.NEWBTN.Size = New System.Drawing.Size(96, 44)
+        Me.NEWBTN.TabIndex = 1
+        Me.NEWBTN.Text = "جديد"
         '
         'FOLOUP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1334, 631)
+        Me.Controls.Add(Me.GRBTN)
         Me.Controls.Add(Me.GroupBox9)
         Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.GroupBox7)
@@ -1463,7 +1509,6 @@ Partial Class FOLOUP
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.GRBTN)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
@@ -1472,7 +1517,6 @@ Partial Class FOLOUP
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FOLOUP"
-        Me.GRBTN.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -1490,21 +1534,13 @@ Partial Class FOLOUP
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
+        Me.GRBTN.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GRBTN As GroupBox
-    Friend WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents PRINTBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents UNDOBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SEARCHBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents DELETBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents EDITBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SAVEBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents NEWBTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TXT_PA_NAME As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox2 As TextBox
@@ -1520,70 +1556,36 @@ Partial Class FOLOUP
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_1ST As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label10 As Label
-    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton6 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton7 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_2ND As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_3RD As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_OBSTETRIC As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_FETAL As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_4D As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_BABY As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label11 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents st1_toxo As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents st1_hb As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents st1_tsh As TextBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents st1_urine As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents st1_hbac As TextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents st1_rbs As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents st1_pc As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents st1_cmv As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents st1_plt As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents Label23 As Label
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents Label24 As Label
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents Label25 As Label
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents Label26 As Label
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents Label27 As Label
-    Friend WithEvents TextBox22 As TextBox
-    Friend WithEvents Label28 As Label
-    Friend WithEvents TextBox23 As TextBox
-    Friend WithEvents Label29 As Label
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents Label21 As Label
-    Friend WithEvents TextBox24 As TextBox
-    Friend WithEvents Label30 As Label
-    Friend WithEvents TextBox25 As TextBox
-    Friend WithEvents Label31 As Label
-    Friend WithEvents TextBox26 As TextBox
-    Friend WithEvents Label32 As Label
-    Friend WithEvents TextBox27 As TextBox
-    Friend WithEvents Label33 As Label
-    Friend WithEvents TextBox28 As TextBox
-    Friend WithEvents Label34 As Label
-    Friend WithEvents TextBox29 As TextBox
-    Friend WithEvents Label35 As Label
-    Friend WithEvents TextBox30 As TextBox
-    Friend WithEvents Label36 As Label
-    Friend WithEvents TextBox31 As TextBox
-    Friend WithEvents Label37 As Label
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents TextBox32 As TextBox
     Friend WithEvents GroupBox6 As GroupBox
@@ -1601,4 +1603,48 @@ Partial Class FOLOUP
     Friend WithEvents TextBox35 As TextBox
     Friend WithEvents SimpleButton9 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents TXT_PA_CODE As TextBox
+    Friend WithEvents ND2_TOTAL As TextBox
+    Friend WithEvents ND2_urine As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents ND2_TSH As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents ND2_LONIZED As TextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents ND2_HOUR As TextBox
+    Friend WithEvents ND2_hb As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents ND2_pc As TextBox
+    Friend WithEvents ND2_plt As TextBox
+    Friend WithEvents RD3_CREAT As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents RD3_urine As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents RD3_SGPT As TextBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents RD3_rbs As TextBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents RD3_pc As TextBox
+    Friend WithEvents Label40 As Label
+    Friend WithEvents RD3_TSH As TextBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents RD3_plt As TextBox
+    Friend WithEvents Label42 As Label
+    Friend WithEvents RD3_HOUR As TextBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents RD3_hb As TextBox
+    Friend WithEvents Label44 As Label
+    Friend WithEvents GRBTN As GroupBox
+    Friend WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents PRINTBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents UNDOBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SEARCHBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DELETBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents EDITBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SAVEBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents NEWBTN As DevExpress.XtraEditors.SimpleButton
 End Class
