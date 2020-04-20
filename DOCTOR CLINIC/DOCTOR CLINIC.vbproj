@@ -715,6 +715,12 @@
     <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\FOLOUP.Designer.vb">
+      <DependentUpon>FOLOUP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\FOLOUP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.Designer.vb">
       <DependentUpon>PERSONAL_HISTORY_FRM.vb</DependentUpon>
     </Compile>
@@ -1006,6 +1012,9 @@
     <EmbeddedResource Include="الحسابات\صرف نقدية\SEARCH_MASROUF.resx">
       <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\FOLOUP.resx">
+      <DependentUpon>FOLOUP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.resx">
       <DependentUpon>PERSONAL_HISTORY_FRM.vb</DependentUpon>
     </EmbeddedResource>
@@ -1167,6 +1176,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="67520_doctor.ico" />
+    <None Include="Resources\icons8-baby-64.png" />
+    <None Include="Resources\icons8-3-32.png" />
+    <None Include="Resources\icons8-2-50.png" />
+    <None Include="Resources\icons8-2-32.png" />
+    <None Include="Resources\icons8-level-1-32.png" />
     <None Include="Resources\iconfinder_business-work_2_2377644.png" />
     <None Include="Resources\iconfinder_blood-test-laboratory-lab-virus_5986182.png" />
     <None Include="Resources\iconfinder_Corona_Virus_Research_lap_microscope_research_test_virus_corona_5959974.png" />

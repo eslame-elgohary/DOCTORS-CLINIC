@@ -417,4 +417,12 @@
 
         End Try
     End Sub
+
+    Private Sub PFOLOWUPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PFOLOWUPToolStripMenuItem.Click
+        Try
+            ROLES("S100", FOLOUP)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class
