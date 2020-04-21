@@ -28,12 +28,13 @@
         TXT_MAML_CODE.Text = ""
         TXT_THLIL_CODE.Text = ""
         TXT_CODE.Text = ""
+        TextBox1.Text = ""
         TXT_MAML_NAME.Select()
         TXT_CODE.Text = CODE_GENE("PRICETHLEL", "ID") + 1
         DELETBTN.Enabled = False
         EDITBTN.Enabled = False
         SAVEBTN.Enabled = True
-        FILL_DGV(DataGridView1, "SELECT * FROM PRICETHLEL WHERE STAT='TRUE' ORDER BY MAML_CODE")
+        FILL_DGV(DataGridView1, "SELECT * FROM PRICETHLEL WHERE STAT='TRUE' ORDER BY ID")
         FILL_MAML()
         FILL_THLEL()
     End Sub
@@ -272,9 +273,9 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("H3").ToString = True Then
                 If MessageBox.Show("هل ترغب في حذف اسعار التحاليل ؟", "رسالة تنبيه", MessageBoxButtons.YesNo) = DialogResult.No Then Exit Sub
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PRICETHLEL WHERE ES_CODE = '" & TXT_CODE.Text & "'", SqlConn)
-        DA.Fill(DT)
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PRICETHLEL WHERE ES_CODE = '" & TXT_CODE.Text & "'", SqlConn)
+                DA.Fill(DT)
 
                 If DT.Rows.Count = 0 Then
                     MessageBox.Show("اسعار التحليل غير موجودة ", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -293,5 +294,14 @@
 
             End If
         End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter
+        DT.Clear()
+        DA = New SqlClient.SqlDataAdapter("SELECT * FROM PRICETHLEL WHERE STAT='TRUE' AND THLIL_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
+        DA.Fill(DT)
+        DataGridView1.DataSource = DT.DefaultView
     End Sub
 End Class

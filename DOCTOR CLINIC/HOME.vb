@@ -319,7 +319,8 @@
     End Sub
 
     Private Sub STB_RESALSE_Click(sender As Object, e As EventArgs) Handles STB_RESALSE.Click
-        HAGEZFRM.ShowDialog()
+        ' HAGEZFRM.ShowDialog()
+        HAGEZ_PATEINT.ShowDialog()
     End Sub
 
     Private Sub BTNBACKUP_Click(sender As Object, e As EventArgs) Handles BTNBACKUP.Click

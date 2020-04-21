@@ -201,4 +201,13 @@
             SendKeys.Send("{Tab}")
         End If
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter
+        DT.Clear()
+        DA = New SqlClient.SqlDataAdapter("SELECT * FROM PHARM WHERE STAT='TRUE' AND PH_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
+        DA.Fill(DT)
+        DataGridView1.DataSource = DT.DefaultView
+    End Sub
 End Class

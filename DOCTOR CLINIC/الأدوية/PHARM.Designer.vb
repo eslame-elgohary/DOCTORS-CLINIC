@@ -24,10 +24,13 @@ Partial Class PHARM
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PHARM))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_NO3 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TXT_NAME = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
@@ -36,10 +39,9 @@ Partial Class PHARM
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.DELETBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,11 +54,41 @@ Partial Class PHARM
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 164)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 199)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(493, 312)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "PH_CODE"
+        Me.Column1.HeaderText = "كود الدواء"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "PH_NAME"
+        Me.Column2.HeaderText = "أسم الدواء"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "PH_NO3"
+        Me.Column3.FillWeight = 60.0!
+        Me.Column3.HeaderText = "نوع الدواء"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 50.0!
+        Me.Column4.HeaderText = "-"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'GroupBox1
         '
@@ -77,7 +109,7 @@ Partial Class PHARM
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(206, 26)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 21)
+        Me.Label3.Size = New System.Drawing.Size(80, 21)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "نوع الدواء :"
         '
@@ -88,15 +120,6 @@ Partial Class PHARM
         Me.TXT_NO3.Size = New System.Drawing.Size(177, 29)
         Me.TXT_NO3.TabIndex = 4
         Me.TXT_NO3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(412, 66)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "أسم الدواء :"
         '
         'TXT_NAME
         '
@@ -177,41 +200,39 @@ Partial Class PHARM
         Me.EXITBTN.Size = New System.Drawing.Size(44, 36)
         Me.EXITBTN.TabIndex = 6
         '
-        'Column1
+        'TextBox1
         '
-        Me.Column1.DataPropertyName = "PH_CODE"
-        Me.Column1.HeaderText = "كود الدواء"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
+        Me.TextBox1.Location = New System.Drawing.Point(146, 160)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(330, 29)
+        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Column2
+        'Label2
         '
-        Me.Column2.DataPropertyName = "PH_NAME"
-        Me.Column2.HeaderText = "أسم الدواء"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(412, 66)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(84, 21)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "أسم الدواء :"
         '
-        'Column3
+        'Label4
         '
-        Me.Column3.DataPropertyName = "PH_NO3"
-        Me.Column3.FillWeight = 60.0!
-        Me.Column3.HeaderText = "نوع الدواء"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.FillWeight = 50.0!
-        Me.Column4.HeaderText = "-"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(29, 163)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(111, 21)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "البحث عن دواء :"
         '
         'PHARM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(517, 488)
+        Me.ClientSize = New System.Drawing.Size(517, 517)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.EXITBTN)
         Me.Controls.Add(Me.DELETBTN)
         Me.Controls.Add(Me.EDITBTN)
@@ -234,6 +255,7 @@ Partial Class PHARM
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -241,7 +263,6 @@ Partial Class PHARM
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TXT_NO3 As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents TXT_NAME As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TXT_CODE As TextBox
@@ -254,4 +275,7 @@ Partial Class PHARM
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewButtonColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label4 As Label
 End Class

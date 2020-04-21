@@ -5,11 +5,11 @@ Public Class BACKUPFRM
     Dim dread As SqlDataReader
     Private Sub BACKUPFRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbserver.Text = ".\SQLEXPRESS"
-        CONNECTION()
+        connection()
         cmbdatabase.Text = "DOCTOR_CLINIC"
     End Sub
     Sub connection()
-        con = New SqlConnection("Data Source=.\SQLEXPRESS; User ID=sa;Password=xyz.1234")
+        con = New SqlConnection("Data Source=192.168.1.111,1433\SQLEXPRESS; User ID=sa;Password=xyz.1234")
 
         con.Open()
         cmbdatabase.Items.Clear()
@@ -33,10 +33,8 @@ Public Class BACKUPFRM
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         SaveFileDialog1.FileName = cmbdatabase.Text
-        'cmbdatabase.Text = "D:\BACKUP"
-        'SaveFileDialog1.ShowDialog()
         Dim s As String
-        s = "\\192.168.1.111\backup\KARMA-SOFT-DOCTORS-CLINIC-" & DateTime.Now.ToShortDateString.Replace("/", "-") & "-" & DateTime.Now.ToLongTimeString.Replace(":", "-") & ".BAK"
+        s = "Z:\backup\KARMA-SOFT-DOCTORS-CLINIC-" & DateTime.Now.ToShortDateString.Replace("/", "-") & "-" & DateTime.Now.ToLongTimeString.Replace(":", "-") & ".BAK"
         Timer2.Enabled = True
         query("backup database " & cmbdatabase.Text & " to disk='" & s & "'")
     End Sub

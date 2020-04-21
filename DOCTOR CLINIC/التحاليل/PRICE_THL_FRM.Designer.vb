@@ -49,6 +49,8 @@ Partial Class PRICE_THL_FRM
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -137,7 +139,7 @@ Partial Class PRICE_THL_FRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(480, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 21)
+        Me.Label2.Size = New System.Drawing.Size(95, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "أسم المعمل :"
         '
@@ -146,7 +148,7 @@ Partial Class PRICE_THL_FRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(197, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.Size = New System.Drawing.Size(92, 21)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "أسم التحليل :"
         '
@@ -178,7 +180,7 @@ Partial Class PRICE_THL_FRM
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column2, Me.Column5, Me.Column3, Me.Column6, Me.Column7, Me.Column8})
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 181)
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 223)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(573, 278)
@@ -297,11 +299,30 @@ Partial Class PRICE_THL_FRM
         Me.NEWBTN.TabIndex = 8
         Me.NEWBTN.Text = "جديد"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(96, 188)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(380, 29)
+        Me.TextBox1.TabIndex = 12
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(44, 192)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(47, 21)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "بحث :"
+        '
         'PRICE_THL_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(593, 471)
+        Me.ClientSize = New System.Drawing.Size(593, 508)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.EXITBTN)
         Me.Controls.Add(Me.DELETBTN)
         Me.Controls.Add(Me.EDITBTN)
@@ -323,6 +344,7 @@ Partial Class PRICE_THL_FRM
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -352,4 +374,6 @@ Partial Class PRICE_THL_FRM
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewButtonColumn
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label5 As Label
 End Class
