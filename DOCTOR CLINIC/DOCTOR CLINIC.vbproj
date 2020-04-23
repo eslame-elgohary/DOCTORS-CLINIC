@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationRevision>27</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -733,6 +733,12 @@
     <Compile Include="عيادة النساء\FOLOW UP\FOLOUP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\FOLOWUPREP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOLOWUPREP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.Designer.vb">
       <DependentUpon>OBSTETRIC_HISTORY_FRM.vb</DependentUpon>
     </Compile>
@@ -1056,6 +1062,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\FOLOUP.resx">
       <DependentUpon>FOLOUP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\FOLOWUPREP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FOLOWUPREP.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.resx">
       <DependentUpon>OBSTETRIC_HISTORY_FRM.vb</DependentUpon>

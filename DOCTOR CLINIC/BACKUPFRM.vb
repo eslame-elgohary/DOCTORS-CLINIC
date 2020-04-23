@@ -26,6 +26,7 @@ Public Class BACKUPFRM
             Timer2.Enabled = False
             MsgBox("تمت العملية بنجاح")
             ProgressBar1.Value = 0.25
+            Me.Close()
         Else
             ProgressBar1.Value = ProgressBar1.Value + 5
         End If

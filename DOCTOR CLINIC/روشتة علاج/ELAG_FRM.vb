@@ -69,6 +69,7 @@
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
+        TXT_CODE2.Text = ""
         '""""""""""""""" تنظيف الشاشة """""""""""""
         For I = 0 To GroupBox1.Controls.Count - 1
             If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = ""
@@ -106,6 +107,7 @@
             TXT_AGE_PA.Text = DT.Rows(I).Item("PA_AGE")
             TXT_TYPE_PA.Text = DT.Rows(I).Item("PA_TYPE")
             TXT_3MLIAT.Text = DT.Rows(I).Item("PA_OP")
+            TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
         Next
         FILL_DGV(VIWERPATIN, "SELECT * FROM R_DOCTOR,R_DOCTOR_DT,DOCTORS WHERE R_CODE = R_CODE_DT AND R_CODE_DOC = DO_CODE AND R_CODE_PA = '" & TXT_CODE_PA.Text & "'")
     End Sub
@@ -191,6 +193,7 @@
                 Else
                     Dim DR = DT.NewRow
                     DR!R_CODE = TXT_CODE.Text
+                    DR!R_CODE_FOLOWUP = "0"
                     DR!R_DATE = TXT_DATE.Text
                     DR!R_CODE_DOC = TXT_CODE_DOCTOR.Text
                     DR!R_CODE_PA = TXT_CODE_PA.Text
@@ -523,6 +526,7 @@
             TXT_AGE_PA.Text = DT.Rows(I).Item("PA_AGE")
             TXT_TYPE_PA.Text = DT.Rows(I).Item("PA_TYPE")
             TXT_3MLIAT.Text = DT.Rows(I).Item("PA_OP")
+            TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
         Next
     End Sub
 

@@ -25,6 +25,16 @@ Partial Class THLEL_FRM_ROSHTA
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(THLEL_FRM_ROSHTA))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.VIWERPATIN = New System.Windows.Forms.DataGridView()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXT_3MLIAT = New System.Windows.Forms.TextBox()
         Me.TXT_TKHASOS = New System.Windows.Forms.TextBox()
         Me.TXT_DOCTOR = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -72,25 +82,17 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.VIWERPATIN = New System.Windows.Forms.DataGridView()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXT_3MLIAT = New System.Windows.Forms.TextBox()
+        Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GRBTN.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_CODE2)
         Me.GroupBox1.Controls.Add(Me.VIWERPATIN)
         Me.GroupBox1.Controls.Add(Me.TXT_3MLIAT)
         Me.GroupBox1.Controls.Add(Me.TXT_TKHASOS)
@@ -122,6 +124,86 @@ Partial Class THLEL_FRM_ROSHTA
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         '
+        'VIWERPATIN
+        '
+        Me.VIWERPATIN.AllowUserToAddRows = False
+        Me.VIWERPATIN.AllowUserToDeleteRows = False
+        Me.VIWERPATIN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.VIWERPATIN.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11})
+        Me.VIWERPATIN.Location = New System.Drawing.Point(747, 89)
+        Me.VIWERPATIN.Name = "VIWERPATIN"
+        Me.VIWERPATIN.ReadOnly = True
+        Me.VIWERPATIN.Size = New System.Drawing.Size(33, 33)
+        Me.VIWERPATIN.TabIndex = 10
+        Me.VIWERPATIN.Visible = False
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "R_CODE_PA"
+        Me.Column4.HeaderText = "كود المريض"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "R_INFO"
+        Me.Column5.HeaderText = "شكوى المريض"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "R_DT_PHARM"
+        Me.Column6.HeaderText = "الدواء"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "R_DT_NO3"
+        Me.Column7.HeaderText = "نوع الدواء"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "R_DT_GOR3A"
+        Me.Column8.HeaderText = "الجرعة"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "R_DATE"
+        Me.Column9.HeaderText = "التاريخ"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        '
+        'Column10
+        '
+        Me.Column10.DataPropertyName = "DO_NAME"
+        Me.Column10.HeaderText = "اسم الطبيب"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        '
+        'Column11
+        '
+        Me.Column11.DataPropertyName = "DO_TKHSOS"
+        Me.Column11.HeaderText = "التخصص"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        '
+        'TXT_3MLIAT
+        '
+        Me.TXT_3MLIAT.BackColor = System.Drawing.Color.White
+        Me.TXT_3MLIAT.Enabled = False
+        Me.TXT_3MLIAT.Location = New System.Drawing.Point(848, 53)
+        Me.TXT_3MLIAT.Name = "TXT_3MLIAT"
+        Me.TXT_3MLIAT.Size = New System.Drawing.Size(30, 29)
+        Me.TXT_3MLIAT.TabIndex = 35
+        Me.TXT_3MLIAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_3MLIAT.Visible = False
+        '
         'TXT_TKHASOS
         '
         Me.TXT_TKHASOS.BackColor = System.Drawing.Color.White
@@ -144,9 +226,9 @@ Partial Class THLEL_FRM_ROSHTA
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(775, 97)
+        Me.Label12.Location = New System.Drawing.Point(706, 97)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(114, 21)
+        Me.Label12.Size = New System.Drawing.Size(115, 21)
         Me.Label12.TabIndex = 29
         Me.Label12.Text = "شكوي المريض :"
         '
@@ -163,9 +245,10 @@ Partial Class THLEL_FRM_ROSHTA
         '
         'TXT_INFO
         '
-        Me.TXT_INFO.Location = New System.Drawing.Point(410, 93)
+        Me.TXT_INFO.Location = New System.Drawing.Point(413, 93)
+        Me.TXT_INFO.Multiline = True
         Me.TXT_INFO.Name = "TXT_INFO"
-        Me.TXT_INFO.Size = New System.Drawing.Size(359, 29)
+        Me.TXT_INFO.Size = New System.Drawing.Size(290, 29)
         Me.TXT_INFO.TabIndex = 28
         Me.TXT_INFO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -214,7 +297,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(297, 95)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 21)
+        Me.Label8.Size = New System.Drawing.Size(100, 21)
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "أسم التحاليل : "
         '
@@ -252,7 +335,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(350, 60)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(50, 21)
+        Me.Label6.Size = New System.Drawing.Size(49, 21)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "النوع :"
         '
@@ -271,7 +354,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(615, 59)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 21)
+        Me.Label5.Size = New System.Drawing.Size(100, 21)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "أسم المريض :"
         '
@@ -280,7 +363,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(804, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(97, 21)
+        Me.Label4.Size = New System.Drawing.Size(98, 21)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "كود المريض :"
         '
@@ -299,7 +382,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(302, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 21)
+        Me.Label3.Size = New System.Drawing.Size(144, 21)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "أسم الطبيب المعالج :"
         '
@@ -308,7 +391,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(625, 21)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 21)
+        Me.Label2.Size = New System.Drawing.Size(58, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "التاريخ :"
         '
@@ -472,52 +555,52 @@ Partial Class THLEL_FRM_ROSHTA
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -555,85 +638,18 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
-        'VIWERPATIN
+        'TXT_CODE2
         '
-        Me.VIWERPATIN.AllowUserToAddRows = False
-        Me.VIWERPATIN.AllowUserToDeleteRows = False
-        Me.VIWERPATIN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.VIWERPATIN.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11})
-        Me.VIWERPATIN.Location = New System.Drawing.Point(848, 89)
-        Me.VIWERPATIN.Name = "VIWERPATIN"
-        Me.VIWERPATIN.ReadOnly = True
-        Me.VIWERPATIN.Size = New System.Drawing.Size(33, 33)
-        Me.VIWERPATIN.TabIndex = 10
-        Me.VIWERPATIN.Visible = False
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "R_CODE_PA"
-        Me.Column4.HeaderText = "كود المريض"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "R_INFO"
-        Me.Column5.HeaderText = "شكوى المريض"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "R_DT_PHARM"
-        Me.Column6.HeaderText = "الدواء"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "R_DT_NO3"
-        Me.Column7.HeaderText = "نوع الدواء"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "R_DT_GOR3A"
-        Me.Column8.HeaderText = "الجرعة"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        '
-        'Column9
-        '
-        Me.Column9.DataPropertyName = "R_DATE"
-        Me.Column9.HeaderText = "التاريخ"
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        '
-        'Column10
-        '
-        Me.Column10.DataPropertyName = "DO_NAME"
-        Me.Column10.HeaderText = "اسم الطبيب"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        '
-        'Column11
-        '
-        Me.Column11.DataPropertyName = "DO_TKHSOS"
-        Me.Column11.HeaderText = "التخصص"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        '
-        'TXT_3MLIAT
-        '
-        Me.TXT_3MLIAT.BackColor = System.Drawing.Color.White
-        Me.TXT_3MLIAT.Enabled = False
-        Me.TXT_3MLIAT.Location = New System.Drawing.Point(848, 53)
-        Me.TXT_3MLIAT.Name = "TXT_3MLIAT"
-        Me.TXT_3MLIAT.Size = New System.Drawing.Size(30, 29)
-        Me.TXT_3MLIAT.TabIndex = 35
-        Me.TXT_3MLIAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TXT_3MLIAT.Visible = False
+        Me.TXT_CODE2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_CODE2.ForeColor = System.Drawing.Color.DeepPink
+        Me.TXT_CODE2.Location = New System.Drawing.Point(821, 90)
+        Me.TXT_CODE2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.TXT_CODE2.Name = "TXT_CODE2"
+        Me.TXT_CODE2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_CODE2.Size = New System.Drawing.Size(74, 33)
+        Me.TXT_CODE2.TabIndex = 65
+        Me.TXT_CODE2.Text = "000000"
+        Me.TXT_CODE2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'THLEL_FRM_ROSHTA
         '
@@ -656,11 +672,11 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Text = "روشتة تحاليل"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GRBTN.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -724,4 +740,5 @@ Partial Class THLEL_FRM_ROSHTA
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents TXT_3MLIAT As TextBox
+    Friend WithEvents TXT_CODE2 As Label
 End Class
