@@ -114,6 +114,8 @@ Partial Class HOME
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ReportingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -237,7 +239,7 @@ Partial Class HOME
         '
         Me.MenuStrip2.BackColor = System.Drawing.SystemColors.HotTrack
         Me.MenuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.ReportingToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 24)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -763,6 +765,23 @@ Partial Class HOME
         Me.PictureBox2.TabIndex = 72
         Me.PictureBox2.TabStop = False
         '
+        'ReportingToolStripMenuItem
+        '
+        Me.ReportingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FOLOWUPCARDCLOSEToolStripMenuItem})
+        Me.ReportingToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportingToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ReportingToolStripMenuItem.Name = "ReportingToolStripMenuItem"
+        Me.ReportingToolStripMenuItem.Size = New System.Drawing.Size(92, 21)
+        Me.ReportingToolStripMenuItem.Text = "REPORTING"
+        '
+        'FOLOWUPCARDCLOSEToolStripMenuItem
+        '
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Name = "FOLOWUPCARDCLOSEToolStripMenuItem"
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Text = "FOLOW UP CARD CLOSE"
+        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -893,4 +912,6 @@ Partial Class HOME
     Friend WithEvents PERSONALHISTORYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PFOLOWUPToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ReportingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FOLOWUPCARDCLOSEToolStripMenuItem As ToolStripMenuItem
 End Class

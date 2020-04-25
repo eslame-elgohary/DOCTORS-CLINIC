@@ -426,4 +426,14 @@
 
         End Try
     End Sub
+
+    Private Sub FOLOWUPCARDCLOSEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FOLOWUPCARDCLOSEToolStripMenuItem.Click
+
+        Try
+            ROLES("S100", REP_FOLOWUP_CLOSE)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
 End Class

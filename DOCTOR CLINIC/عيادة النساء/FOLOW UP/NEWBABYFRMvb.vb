@@ -107,7 +107,7 @@
         Dim DT100 As New DataTable
         Dim DA100 As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE ='" & TXT_PA_CODE.Text & "'", SqlConn)
         DA100.Fill(DT100)
-        Dim DR = DT.Rows(0)
+        Dim DR = DT100.Rows(0)
         DR!PA_OP_R1 = True
         DR!PA_OP = TXT_LAST_OP.Text & " & تمت الولادة بتاريخ" & TXT_DATE.Text
         DR!PA_CHI_R1 = True

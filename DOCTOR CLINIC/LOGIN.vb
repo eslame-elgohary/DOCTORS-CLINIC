@@ -1,5 +1,4 @@
 ﻿Public Class LOGIN
-
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         open_connection()

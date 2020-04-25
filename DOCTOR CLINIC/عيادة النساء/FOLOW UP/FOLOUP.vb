@@ -233,14 +233,31 @@
     End Sub
 
     Private Sub BTN_BABY_Click(sender As Object, e As EventArgs) Handles BTN_BABY.Click
-        If TXT_PA_CODE.Text = "" Then
-            MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            TXT_PA_NAME.Select()
-            Exit Sub
-        Else
-            NEWBABYFRMvb.ShowDialog()
-            Me.Close()
+        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim DS0 As New DataSet
+        ADP0.Fill(DS0)
+        Dim DT0 = DS0.Tables(0)
+        If DT0.Rows.Count > 0 Then
+            If DT0.Rows(0).Item("S104").ToString = True Then
+
+                If TXT_PA_CODE.Text = "" Then
+                    MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_PA_NAME.Select()
+                    Exit Sub
+                Else
+                    NEWBABYFRMvb.ShowDialog()
+                    Me.Close()
+                End If
+
+
+            Else
+                MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End If
         End If
+
+
     End Sub
 
     Private Sub TXT_PHARM_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_PHARM.SelectedIndexChanged

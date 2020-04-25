@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>27</ApplicationRevision>
+    <ApplicationRevision>28</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -763,6 +763,12 @@
     <Compile Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\REPORTING\REP_FOLOWUP_CLOSE.Designer.vb">
+      <DependentUpon>REP_FOLOWUP_CLOSE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\REPORTING\REP_FOLOWUP_CLOSE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.Designer.vb">
       <DependentUpon>SEARCH_FOLOWUP_FRM.vb</DependentUpon>
     </Compile>
@@ -1090,6 +1096,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.resx">
       <DependentUpon>RD3_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\REPORTING\REP_FOLOWUP_CLOSE.resx">
+      <DependentUpon>REP_FOLOWUP_CLOSE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.resx">
       <DependentUpon>SEARCH_FOLOWUP_FRM.vb</DependentUpon>
