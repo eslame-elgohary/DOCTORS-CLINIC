@@ -739,6 +739,12 @@
       <DependentUpon>FOLOWUPREP.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\NEWBABYFRMvb.Designer.vb">
+      <DependentUpon>NEWBABYFRMvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\NEWBABYFRMvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.Designer.vb">
       <DependentUpon>OBSTETRIC_HISTORY_FRM.vb</DependentUpon>
     </Compile>
@@ -755,6 +761,12 @@
       <DependentUpon>RD3_FRM.vb</DependentUpon>
     </Compile>
     <Compile Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.Designer.vb">
+      <DependentUpon>SEARCH_FOLOWUP_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="عيادة النساء\FOLOW UP\ST1\ST1_FRM.Designer.vb">
@@ -1067,6 +1079,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>FOLOWUPREP.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\NEWBABYFRMvb.resx">
+      <DependentUpon>NEWBABYFRMvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.resx">
       <DependentUpon>OBSTETRIC_HISTORY_FRM.vb</DependentUpon>
     </EmbeddedResource>
@@ -1075,6 +1090,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.resx">
       <DependentUpon>RD3_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.resx">
+      <DependentUpon>SEARCH_FOLOWUP_FRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLOW UP\ST1\ST1_FRM.resx">
       <DependentUpon>ST1_FRM.vb</DependentUpon>
@@ -1240,6 +1258,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="67520_doctor.ico" />
+    <None Include="Resources\karma logo-02.png" />
     <None Include="Resources\icons8-baby-64.png" />
     <None Include="Resources\icons8-3-32.png" />
     <None Include="Resources\icons8-2-50.png" />

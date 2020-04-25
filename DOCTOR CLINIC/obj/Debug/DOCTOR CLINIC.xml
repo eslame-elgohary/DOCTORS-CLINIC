@@ -97,6 +97,11 @@ DOCTOR CLINIC
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DOCTOR_CLINIC.My.Resources.Resources.patient_reported_outcomes_measures">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

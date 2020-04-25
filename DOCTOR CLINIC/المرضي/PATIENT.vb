@@ -19,6 +19,7 @@
             PA_CHI_R1.Checked = DR!PA_CHI_R1
             PA_CHI.Text = DR!PA_CHI
             PA_TYPE.Text = DR!PA_TYPE
+
             DELETBTN.Enabled = True
             EDITBTN.Enabled = True
             SAVEBTN.Enabled = False
@@ -395,7 +396,6 @@
 
             PA_OP.Visible = True
             Label8.Visible = True
-            PA_OP.Text = ""
 
         End If
     End Sub
@@ -408,7 +408,6 @@
         Else
             PA_CHI.Visible = True
             Label9.Visible = True
-            PA_CHI.Text = ""
         End If
     End Sub
 End Class

@@ -464,18 +464,18 @@
 
         Dim DT As New DataTable
         With DT
-            .Columns.Add("اسم المريض")
-            .Columns.Add("عمر المريض")
-            .Columns.Add("نوع المريض")
-            .Columns.Add("عمليات سابقة")
-            .Columns.Add("كود المريض")
-            .Columns.Add("شكوى المريض")
-            .Columns.Add("الدواء")
-            .Columns.Add("نوع الدواء")
-            .Columns.Add("الجرعة")
-            .Columns.Add("تاريخ الروشتة")
-            .Columns.Add("أسم الطبيب")
-            .Columns.Add("تخصص الطبيب")
+            .Columns.Add("PA_NAME")
+            .Columns.Add("PA_AGE")
+            .Columns.Add("PA_TYPE")
+            .Columns.Add("PA_OP")
+            .Columns.Add("R_CODE_PA")
+            .Columns.Add("R_INFO")
+            .Columns.Add("R_DT_PHARM")
+            .Columns.Add("R_DT_NO3")
+            .Columns.Add("R_DT_GOR3A")
+            .Columns.Add("R_DATE")
+            .Columns.Add("DO_NAME")
+            .Columns.Add("DO_TKHSOS")
         End With
         For I As Integer = 0 To VIWERPATIN.Rows.Count - 1
             If VIWERPATIN.Rows(I).Cells(0).Value <> Nothing Then

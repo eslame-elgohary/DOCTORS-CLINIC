@@ -283,39 +283,41 @@ Partial Public Class HISTORY_REP_DATA
     Partial Public Class HISTORY_PATIONDataTable
         Inherits Global.System.Data.TypedTableBase(Of HISTORY_PATIONRow)
         
-        Private columnكود_الروشتة As Global.System.Data.DataColumn
+        Private columnR_CODE As Global.System.Data.DataColumn
         
-        Private columnتاريخ_الروشتة As Global.System.Data.DataColumn
+        Private columnR_DATE As Global.System.Data.DataColumn
         
-        Private columnكود_الطبيب As Global.System.Data.DataColumn
+        Private columnR_CODE_DOC As Global.System.Data.DataColumn
         
-        Private columnأسم_الطبيب As Global.System.Data.DataColumn
+        Private columnDO_NAME As Global.System.Data.DataColumn
         
-        Private columnتخصص_الطبيب As Global.System.Data.DataColumn
+        Private columnDO_TKHSOS As Global.System.Data.DataColumn
         
-        Private columnكود_المريض As Global.System.Data.DataColumn
+        Private columnR_CODE_PA As Global.System.Data.DataColumn
         
-        Private columnاسم_المريض As Global.System.Data.DataColumn
+        Private columnPA_NAME As Global.System.Data.DataColumn
         
-        Private columnعمر_المريض As Global.System.Data.DataColumn
+        Private columnPA_AGE As Global.System.Data.DataColumn
         
-        Private columnنوع_المريض As Global.System.Data.DataColumn
+        Private columnPA_TYPE As Global.System.Data.DataColumn
         
-        Private columnعمليات_سابقة As Global.System.Data.DataColumn
+        Private columnPA_OP As Global.System.Data.DataColumn
         
-        Private columnدرجة_الحرارة As Global.System.Data.DataColumn
+        Private columnR_HRARA As Global.System.Data.DataColumn
         
-        Private columnالضغط As Global.System.Data.DataColumn
+        Private columnR_D As Global.System.Data.DataColumn
         
-        Private columnالوزن As Global.System.Data.DataColumn
+        Private columnR_KG As Global.System.Data.DataColumn
         
-        Private columnشكوى_المريض As Global.System.Data.DataColumn
+        Private columnR_INFO As Global.System.Data.DataColumn
         
-        Private columnالدواء As Global.System.Data.DataColumn
+        Private columnR_DT_PHARM As Global.System.Data.DataColumn
         
-        Private columnنوع_الدواء As Global.System.Data.DataColumn
+        Private columnR_DT_NO3 As Global.System.Data.DataColumn
         
-        Private columnالجرعة As Global.System.Data.DataColumn
+        Private columnR_DT_GOR3A As Global.System.Data.DataColumn
+        
+        Private columnR_STAT As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -354,137 +356,145 @@ Partial Public Class HISTORY_REP_DATA
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property كود_الروشتةColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_CODEColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnكود_الروشتة
+                Return Me.columnR_CODE
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property تاريخ_الروشتةColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_DATEColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnتاريخ_الروشتة
+                Return Me.columnR_DATE
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property كود_الطبيبColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_CODE_DOCColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnكود_الطبيب
+                Return Me.columnR_CODE_DOC
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property أسم_الطبيبColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property DO_NAMEColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnأسم_الطبيب
+                Return Me.columnDO_NAME
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property تخصص_الطبيبColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property DO_TKHSOSColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnتخصص_الطبيب
+                Return Me.columnDO_TKHSOS
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property كود_المريضColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_CODE_PAColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnكود_المريض
+                Return Me.columnR_CODE_PA
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property اسم_المريضColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PA_NAMEColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnاسم_المريض
+                Return Me.columnPA_NAME
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property عمر_المريضColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PA_AGEColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnعمر_المريض
+                Return Me.columnPA_AGE
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property نوع_المريضColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PA_TYPEColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnنوع_المريض
+                Return Me.columnPA_TYPE
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property عمليات_سابقةColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property PA_OPColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnعمليات_سابقة
+                Return Me.columnPA_OP
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property درجة_الحرارةColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_HRARAColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnدرجة_الحرارة
+                Return Me.columnR_HRARA
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property الضغطColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_DColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnالضغط
+                Return Me.columnR_D
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property الوزنColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_KGColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnالوزن
+                Return Me.columnR_KG
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property شكوى_المريضColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_INFOColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnشكوى_المريض
+                Return Me.columnR_INFO
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property الدواءColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_DT_PHARMColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnالدواء
+                Return Me.columnR_DT_PHARM
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property نوع_الدواءColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_DT_NO3Column() As Global.System.Data.DataColumn
             Get
-                Return Me.columnنوع_الدواء
+                Return Me.columnR_DT_NO3
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property الجرعةColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property R_DT_GOR3AColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnالجرعة
+                Return Me.columnR_DT_GOR3A
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property R_STATColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnR_STAT
             End Get
         End Property
         
@@ -526,25 +536,26 @@ Partial Public Class HISTORY_REP_DATA
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddHISTORY_PATIONRow( _
-                    ByVal كود_الروشتة As String,  _
-                    ByVal تاريخ_الروشتة As String,  _
-                    ByVal كود_الطبيب As String,  _
-                    ByVal أسم_الطبيب As String,  _
-                    ByVal تخصص_الطبيب As String,  _
-                    ByVal كود_المريض As String,  _
-                    ByVal اسم_المريض As String,  _
-                    ByVal عمر_المريض As String,  _
-                    ByVal نوع_المريض As String,  _
-                    ByVal عمليات_سابقة As String,  _
-                    ByVal درجة_الحرارة As String,  _
-                    ByVal الضغط As String,  _
-                    ByVal الوزن As String,  _
-                    ByVal شكوى_المريض As String,  _
-                    ByVal الدواء As String,  _
-                    ByVal نوع_الدواء As String,  _
-                    ByVal الجرعة As String) As HISTORY_PATIONRow
+                    ByVal R_CODE As String,  _
+                    ByVal R_DATE As String,  _
+                    ByVal R_CODE_DOC As String,  _
+                    ByVal DO_NAME As String,  _
+                    ByVal DO_TKHSOS As String,  _
+                    ByVal R_CODE_PA As String,  _
+                    ByVal PA_NAME As String,  _
+                    ByVal PA_AGE As String,  _
+                    ByVal PA_TYPE As String,  _
+                    ByVal PA_OP As String,  _
+                    ByVal R_HRARA As String,  _
+                    ByVal R_D As String,  _
+                    ByVal R_KG As String,  _
+                    ByVal R_INFO As String,  _
+                    ByVal R_DT_PHARM As String,  _
+                    ByVal R_DT_NO3 As String,  _
+                    ByVal R_DT_GOR3A As String,  _
+                    ByVal R_STAT As Boolean) As HISTORY_PATIONRow
             Dim rowHISTORY_PATIONRow As HISTORY_PATIONRow = CType(Me.NewRow,HISTORY_PATIONRow)
-            Dim columnValuesArray() As Object = New Object() {كود_الروشتة, تاريخ_الروشتة, كود_الطبيب, أسم_الطبيب, تخصص_الطبيب, كود_المريض, اسم_المريض, عمر_المريض, نوع_المريض, عمليات_سابقة, درجة_الحرارة, الضغط, الوزن, شكوى_المريض, الدواء, نوع_الدواء, الجرعة}
+            Dim columnValuesArray() As Object = New Object() {R_CODE, R_DATE, R_CODE_DOC, DO_NAME, DO_TKHSOS, R_CODE_PA, PA_NAME, PA_AGE, PA_TYPE, PA_OP, R_HRARA, R_D, R_KG, R_INFO, R_DT_PHARM, R_DT_NO3, R_DT_GOR3A, R_STAT}
             rowHISTORY_PATIONRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowHISTORY_PATIONRow)
             Return rowHISTORY_PATIONRow
@@ -567,79 +578,82 @@ Partial Public Class HISTORY_REP_DATA
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnكود_الروشتة = MyBase.Columns("كود الروشتة")
-            Me.columnتاريخ_الروشتة = MyBase.Columns("تاريخ الروشتة")
-            Me.columnكود_الطبيب = MyBase.Columns("كود الطبيب")
-            Me.columnأسم_الطبيب = MyBase.Columns("أسم الطبيب")
-            Me.columnتخصص_الطبيب = MyBase.Columns("تخصص الطبيب")
-            Me.columnكود_المريض = MyBase.Columns("كود المريض")
-            Me.columnاسم_المريض = MyBase.Columns("اسم المريض")
-            Me.columnعمر_المريض = MyBase.Columns("عمر المريض")
-            Me.columnنوع_المريض = MyBase.Columns("نوع المريض")
-            Me.columnعمليات_سابقة = MyBase.Columns("عمليات سابقة")
-            Me.columnدرجة_الحرارة = MyBase.Columns("درجة الحرارة")
-            Me.columnالضغط = MyBase.Columns("الضغط")
-            Me.columnالوزن = MyBase.Columns("الوزن")
-            Me.columnشكوى_المريض = MyBase.Columns("شكوى المريض")
-            Me.columnالدواء = MyBase.Columns("الدواء")
-            Me.columnنوع_الدواء = MyBase.Columns("نوع الدواء")
-            Me.columnالجرعة = MyBase.Columns("الجرعة")
+            Me.columnR_CODE = MyBase.Columns("R_CODE")
+            Me.columnR_DATE = MyBase.Columns("R_DATE")
+            Me.columnR_CODE_DOC = MyBase.Columns("R_CODE_DOC")
+            Me.columnDO_NAME = MyBase.Columns("DO_NAME")
+            Me.columnDO_TKHSOS = MyBase.Columns("DO_TKHSOS")
+            Me.columnR_CODE_PA = MyBase.Columns("R_CODE_PA")
+            Me.columnPA_NAME = MyBase.Columns("PA_NAME")
+            Me.columnPA_AGE = MyBase.Columns("PA_AGE")
+            Me.columnPA_TYPE = MyBase.Columns("PA_TYPE")
+            Me.columnPA_OP = MyBase.Columns("PA_OP")
+            Me.columnR_HRARA = MyBase.Columns("R_HRARA")
+            Me.columnR_D = MyBase.Columns("R_D")
+            Me.columnR_KG = MyBase.Columns("R_KG")
+            Me.columnR_INFO = MyBase.Columns("R_INFO")
+            Me.columnR_DT_PHARM = MyBase.Columns("R_DT_PHARM")
+            Me.columnR_DT_NO3 = MyBase.Columns("R_DT_NO3")
+            Me.columnR_DT_GOR3A = MyBase.Columns("R_DT_GOR3A")
+            Me.columnR_STAT = MyBase.Columns("R_STAT")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnكود_الروشتة = New Global.System.Data.DataColumn("كود الروشتة", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnكود_الروشتة)
-            Me.columnتاريخ_الروشتة = New Global.System.Data.DataColumn("تاريخ الروشتة", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnتاريخ_الروشتة)
-            Me.columnكود_الطبيب = New Global.System.Data.DataColumn("كود الطبيب", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnكود_الطبيب)
-            Me.columnأسم_الطبيب = New Global.System.Data.DataColumn("أسم الطبيب", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnأسم_الطبيب)
-            Me.columnتخصص_الطبيب = New Global.System.Data.DataColumn("تخصص الطبيب", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnتخصص_الطبيب)
-            Me.columnكود_المريض = New Global.System.Data.DataColumn("كود المريض", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnكود_المريض)
-            Me.columnاسم_المريض = New Global.System.Data.DataColumn("اسم المريض", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnاسم_المريض)
-            Me.columnعمر_المريض = New Global.System.Data.DataColumn("عمر المريض", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnعمر_المريض)
-            Me.columnنوع_المريض = New Global.System.Data.DataColumn("نوع المريض", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnنوع_المريض)
-            Me.columnعمليات_سابقة = New Global.System.Data.DataColumn("عمليات سابقة", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnعمليات_سابقة)
-            Me.columnدرجة_الحرارة = New Global.System.Data.DataColumn("درجة الحرارة", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnدرجة_الحرارة)
-            Me.columnالضغط = New Global.System.Data.DataColumn("الضغط", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnالضغط)
-            Me.columnالوزن = New Global.System.Data.DataColumn("الوزن", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnالوزن)
-            Me.columnشكوى_المريض = New Global.System.Data.DataColumn("شكوى المريض", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnشكوى_المريض)
-            Me.columnالدواء = New Global.System.Data.DataColumn("الدواء", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnالدواء)
-            Me.columnنوع_الدواء = New Global.System.Data.DataColumn("نوع الدواء", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnنوع_الدواء)
-            Me.columnالجرعة = New Global.System.Data.DataColumn("الجرعة", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnالجرعة)
-            Me.columnكود_الروشتة.MaxLength = 50
-            Me.columnتاريخ_الروشتة.MaxLength = 50
-            Me.columnكود_الطبيب.MaxLength = 50
-            Me.columnأسم_الطبيب.MaxLength = 50
-            Me.columnتخصص_الطبيب.MaxLength = 50
-            Me.columnكود_المريض.MaxLength = 50
-            Me.columnاسم_المريض.MaxLength = 50
-            Me.columnعمر_المريض.MaxLength = 50
-            Me.columnنوع_المريض.MaxLength = 50
-            Me.columnعمليات_سابقة.MaxLength = 50
-            Me.columnدرجة_الحرارة.MaxLength = 50
-            Me.columnالضغط.MaxLength = 50
-            Me.columnالوزن.MaxLength = 50
-            Me.columnشكوى_المريض.MaxLength = 2147483647
-            Me.columnالدواء.MaxLength = 50
-            Me.columnنوع_الدواء.MaxLength = 50
-            Me.columnالجرعة.MaxLength = 50
+            Me.columnR_CODE = New Global.System.Data.DataColumn("R_CODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_CODE)
+            Me.columnR_DATE = New Global.System.Data.DataColumn("R_DATE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_DATE)
+            Me.columnR_CODE_DOC = New Global.System.Data.DataColumn("R_CODE_DOC", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_CODE_DOC)
+            Me.columnDO_NAME = New Global.System.Data.DataColumn("DO_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDO_NAME)
+            Me.columnDO_TKHSOS = New Global.System.Data.DataColumn("DO_TKHSOS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDO_TKHSOS)
+            Me.columnR_CODE_PA = New Global.System.Data.DataColumn("R_CODE_PA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_CODE_PA)
+            Me.columnPA_NAME = New Global.System.Data.DataColumn("PA_NAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPA_NAME)
+            Me.columnPA_AGE = New Global.System.Data.DataColumn("PA_AGE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPA_AGE)
+            Me.columnPA_TYPE = New Global.System.Data.DataColumn("PA_TYPE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPA_TYPE)
+            Me.columnPA_OP = New Global.System.Data.DataColumn("PA_OP", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPA_OP)
+            Me.columnR_HRARA = New Global.System.Data.DataColumn("R_HRARA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_HRARA)
+            Me.columnR_D = New Global.System.Data.DataColumn("R_D", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_D)
+            Me.columnR_KG = New Global.System.Data.DataColumn("R_KG", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_KG)
+            Me.columnR_INFO = New Global.System.Data.DataColumn("R_INFO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_INFO)
+            Me.columnR_DT_PHARM = New Global.System.Data.DataColumn("R_DT_PHARM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_DT_PHARM)
+            Me.columnR_DT_NO3 = New Global.System.Data.DataColumn("R_DT_NO3", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_DT_NO3)
+            Me.columnR_DT_GOR3A = New Global.System.Data.DataColumn("R_DT_GOR3A", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_DT_GOR3A)
+            Me.columnR_STAT = New Global.System.Data.DataColumn("R_STAT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnR_STAT)
+            Me.columnR_CODE.MaxLength = 50
+            Me.columnR_DATE.MaxLength = 50
+            Me.columnR_CODE_DOC.MaxLength = 50
+            Me.columnDO_NAME.MaxLength = 50
+            Me.columnDO_TKHSOS.MaxLength = 50
+            Me.columnR_CODE_PA.MaxLength = 50
+            Me.columnPA_NAME.MaxLength = 50
+            Me.columnPA_AGE.MaxLength = 50
+            Me.columnPA_TYPE.MaxLength = 50
+            Me.columnPA_OP.MaxLength = 50
+            Me.columnR_HRARA.MaxLength = 50
+            Me.columnR_D.MaxLength = 50
+            Me.columnR_KG.MaxLength = 50
+            Me.columnR_INFO.MaxLength = 2147483647
+            Me.columnR_DT_PHARM.MaxLength = 50
+            Me.columnR_DT_NO3.MaxLength = 50
+            Me.columnR_DT_GOR3A.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -786,461 +800,488 @@ Partial Public Class HISTORY_REP_DATA
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property كود_الروشتة() As String
+        Public Property R_CODE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.كود_الروشتةColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_CODEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'كود الروشتة' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_CODE' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.كود_الروشتةColumn) = value
+                Me(Me.tableHISTORY_PATION.R_CODEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property تاريخ_الروشتة() As String
+        Public Property R_DATE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.تاريخ_الروشتةColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_DATEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'تاريخ الروشتة' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_DATE' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.تاريخ_الروشتةColumn) = value
+                Me(Me.tableHISTORY_PATION.R_DATEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property كود_الطبيب() As String
+        Public Property R_CODE_DOC() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.كود_الطبيبColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_CODE_DOCColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'كود الطبيب' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_CODE_DOC' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.كود_الطبيبColumn) = value
+                Me(Me.tableHISTORY_PATION.R_CODE_DOCColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property أسم_الطبيب() As String
+        Public Property DO_NAME() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.أسم_الطبيبColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.DO_NAMEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'أسم الطبيب' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DO_NAME' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.أسم_الطبيبColumn) = value
+                Me(Me.tableHISTORY_PATION.DO_NAMEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property تخصص_الطبيب() As String
+        Public Property DO_TKHSOS() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.تخصص_الطبيبColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.DO_TKHSOSColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'تخصص الطبيب' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DO_TKHSOS' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.تخصص_الطبيبColumn) = value
+                Me(Me.tableHISTORY_PATION.DO_TKHSOSColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property كود_المريض() As String
+        Public Property R_CODE_PA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.كود_المريضColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_CODE_PAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'كود المريض' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_CODE_PA' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.كود_المريضColumn) = value
+                Me(Me.tableHISTORY_PATION.R_CODE_PAColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property اسم_المريض() As String
+        Public Property PA_NAME() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.اسم_المريضColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.PA_NAMEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'اسم المريض' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PA_NAME' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.اسم_المريضColumn) = value
+                Me(Me.tableHISTORY_PATION.PA_NAMEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property عمر_المريض() As String
+        Public Property PA_AGE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.عمر_المريضColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.PA_AGEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'عمر المريض' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PA_AGE' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.عمر_المريضColumn) = value
+                Me(Me.tableHISTORY_PATION.PA_AGEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property نوع_المريض() As String
+        Public Property PA_TYPE() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.نوع_المريضColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.PA_TYPEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'نوع المريض' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PA_TYPE' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.نوع_المريضColumn) = value
+                Me(Me.tableHISTORY_PATION.PA_TYPEColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property عمليات_سابقة() As String
+        Public Property PA_OP() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.عمليات_سابقةColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.PA_OPColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'عمليات سابقة' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PA_OP' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.عمليات_سابقةColumn) = value
+                Me(Me.tableHISTORY_PATION.PA_OPColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property درجة_الحرارة() As String
+        Public Property R_HRARA() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.درجة_الحرارةColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_HRARAColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'درجة الحرارة' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_HRARA' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.درجة_الحرارةColumn) = value
+                Me(Me.tableHISTORY_PATION.R_HRARAColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property الضغط() As String
+        Public Property R_D() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.الضغطColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_DColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'الضغط' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_D' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.الضغطColumn) = value
+                Me(Me.tableHISTORY_PATION.R_DColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property الوزن() As String
+        Public Property R_KG() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.الوزنColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_KGColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'الوزن' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_KG' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.الوزنColumn) = value
+                Me(Me.tableHISTORY_PATION.R_KGColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property شكوى_المريض() As String
+        Public Property R_INFO() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.شكوى_المريضColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_INFOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'شكوى المريض' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_INFO' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.شكوى_المريضColumn) = value
+                Me(Me.tableHISTORY_PATION.R_INFOColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property الدواء() As String
+        Public Property R_DT_PHARM() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.الدواءColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_DT_PHARMColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'الدواء' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_DT_PHARM' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.الدواءColumn) = value
+                Me(Me.tableHISTORY_PATION.R_DT_PHARMColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property نوع_الدواء() As String
+        Public Property R_DT_NO3() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.نوع_الدواءColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_DT_NO3Column),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'نوع الدواء' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_DT_NO3' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.نوع_الدواءColumn) = value
+                Me(Me.tableHISTORY_PATION.R_DT_NO3Column) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property الجرعة() As String
+        Public Property R_DT_GOR3A() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableHISTORY_PATION.الجرعةColumn),String)
+                    Return CType(Me(Me.tableHISTORY_PATION.R_DT_GOR3AColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'الجرعة' in table 'HISTORY_PATION' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_DT_GOR3A' in table 'HISTORY_PATION' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableHISTORY_PATION.الجرعةColumn) = value
+                Me(Me.tableHISTORY_PATION.R_DT_GOR3AColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isكود_الروشتةNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.كود_الروشتةColumn)
+        Public Property R_STAT() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableHISTORY_PATION.R_STATColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'R_STAT' in table 'HISTORY_PATION' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableHISTORY_PATION.R_STATColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsR_CODENull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_CODEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setكود_الروشتةNull()
-            Me(Me.tableHISTORY_PATION.كود_الروشتةColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_CODENull()
+            Me(Me.tableHISTORY_PATION.R_CODEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isتاريخ_الروشتةNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.تاريخ_الروشتةColumn)
+        Public Function IsR_DATENull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_DATEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setتاريخ_الروشتةNull()
-            Me(Me.tableHISTORY_PATION.تاريخ_الروشتةColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_DATENull()
+            Me(Me.tableHISTORY_PATION.R_DATEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isكود_الطبيبNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.كود_الطبيبColumn)
+        Public Function IsR_CODE_DOCNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_CODE_DOCColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setكود_الطبيبNull()
-            Me(Me.tableHISTORY_PATION.كود_الطبيبColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_CODE_DOCNull()
+            Me(Me.tableHISTORY_PATION.R_CODE_DOCColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isأسم_الطبيبNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.أسم_الطبيبColumn)
+        Public Function IsDO_NAMENull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.DO_NAMEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setأسم_الطبيبNull()
-            Me(Me.tableHISTORY_PATION.أسم_الطبيبColumn) = Global.System.Convert.DBNull
+        Public Sub SetDO_NAMENull()
+            Me(Me.tableHISTORY_PATION.DO_NAMEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isتخصص_الطبيبNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.تخصص_الطبيبColumn)
+        Public Function IsDO_TKHSOSNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.DO_TKHSOSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setتخصص_الطبيبNull()
-            Me(Me.tableHISTORY_PATION.تخصص_الطبيبColumn) = Global.System.Convert.DBNull
+        Public Sub SetDO_TKHSOSNull()
+            Me(Me.tableHISTORY_PATION.DO_TKHSOSColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isكود_المريضNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.كود_المريضColumn)
+        Public Function IsR_CODE_PANull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_CODE_PAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setكود_المريضNull()
-            Me(Me.tableHISTORY_PATION.كود_المريضColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_CODE_PANull()
+            Me(Me.tableHISTORY_PATION.R_CODE_PAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isاسم_المريضNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.اسم_المريضColumn)
+        Public Function IsPA_NAMENull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.PA_NAMEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setاسم_المريضNull()
-            Me(Me.tableHISTORY_PATION.اسم_المريضColumn) = Global.System.Convert.DBNull
+        Public Sub SetPA_NAMENull()
+            Me(Me.tableHISTORY_PATION.PA_NAMEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isعمر_المريضNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.عمر_المريضColumn)
+        Public Function IsPA_AGENull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.PA_AGEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setعمر_المريضNull()
-            Me(Me.tableHISTORY_PATION.عمر_المريضColumn) = Global.System.Convert.DBNull
+        Public Sub SetPA_AGENull()
+            Me(Me.tableHISTORY_PATION.PA_AGEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isنوع_المريضNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.نوع_المريضColumn)
+        Public Function IsPA_TYPENull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.PA_TYPEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setنوع_المريضNull()
-            Me(Me.tableHISTORY_PATION.نوع_المريضColumn) = Global.System.Convert.DBNull
+        Public Sub SetPA_TYPENull()
+            Me(Me.tableHISTORY_PATION.PA_TYPEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isعمليات_سابقةNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.عمليات_سابقةColumn)
+        Public Function IsPA_OPNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.PA_OPColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setعمليات_سابقةNull()
-            Me(Me.tableHISTORY_PATION.عمليات_سابقةColumn) = Global.System.Convert.DBNull
+        Public Sub SetPA_OPNull()
+            Me(Me.tableHISTORY_PATION.PA_OPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isدرجة_الحرارةNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.درجة_الحرارةColumn)
+        Public Function IsR_HRARANull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_HRARAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setدرجة_الحرارةNull()
-            Me(Me.tableHISTORY_PATION.درجة_الحرارةColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_HRARANull()
+            Me(Me.tableHISTORY_PATION.R_HRARAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsالضغطNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.الضغطColumn)
+        Public Function IsR_DNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_DColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetالضغطNull()
-            Me(Me.tableHISTORY_PATION.الضغطColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_DNull()
+            Me(Me.tableHISTORY_PATION.R_DColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsالوزنNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.الوزنColumn)
+        Public Function IsR_KGNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_KGColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetالوزنNull()
-            Me(Me.tableHISTORY_PATION.الوزنColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_KGNull()
+            Me(Me.tableHISTORY_PATION.R_KGColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isشكوى_المريضNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.شكوى_المريضColumn)
+        Public Function IsR_INFONull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_INFOColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setشكوى_المريضNull()
-            Me(Me.tableHISTORY_PATION.شكوى_المريضColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_INFONull()
+            Me(Me.tableHISTORY_PATION.R_INFOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsالدواءNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.الدواءColumn)
+        Public Function IsR_DT_PHARMNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_DT_PHARMColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetالدواءNull()
-            Me(Me.tableHISTORY_PATION.الدواءColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_DT_PHARMNull()
+            Me(Me.tableHISTORY_PATION.R_DT_PHARMColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isنوع_الدواءNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.نوع_الدواءColumn)
+        Public Function IsR_DT_NO3Null() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_DT_NO3Column)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setنوع_الدواءNull()
-            Me(Me.tableHISTORY_PATION.نوع_الدواءColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_DT_NO3Null()
+            Me(Me.tableHISTORY_PATION.R_DT_NO3Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsالجرعةNull() As Boolean
-            Return Me.IsNull(Me.tableHISTORY_PATION.الجرعةColumn)
+        Public Function IsR_DT_GOR3ANull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_DT_GOR3AColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetالجرعةNull()
-            Me(Me.tableHISTORY_PATION.الجرعةColumn) = Global.System.Convert.DBNull
+        Public Sub SetR_DT_GOR3ANull()
+            Me(Me.tableHISTORY_PATION.R_DT_GOR3AColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsR_STATNull() As Boolean
+            Return Me.IsNull(Me.tableHISTORY_PATION.R_STATColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetR_STATNull()
+            Me(Me.tableHISTORY_PATION.R_STATColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1410,23 +1451,24 @@ Namespace HISTORY_REP_DATATableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "HISTORY_PATION"
-            tableMapping.ColumnMappings.Add("كود الروشتة", "كود الروشتة")
-            tableMapping.ColumnMappings.Add("تاريخ الروشتة", "تاريخ الروشتة")
-            tableMapping.ColumnMappings.Add("كود الطبيب", "كود الطبيب")
-            tableMapping.ColumnMappings.Add("أسم الطبيب", "أسم الطبيب")
-            tableMapping.ColumnMappings.Add("تخصص الطبيب", "تخصص الطبيب")
-            tableMapping.ColumnMappings.Add("كود المريض", "كود المريض")
-            tableMapping.ColumnMappings.Add("اسم المريض", "اسم المريض")
-            tableMapping.ColumnMappings.Add("عمر المريض", "عمر المريض")
-            tableMapping.ColumnMappings.Add("نوع المريض", "نوع المريض")
-            tableMapping.ColumnMappings.Add("عمليات سابقة", "عمليات سابقة")
-            tableMapping.ColumnMappings.Add("درجة الحرارة", "درجة الحرارة")
-            tableMapping.ColumnMappings.Add("الضغط", "الضغط")
-            tableMapping.ColumnMappings.Add("الوزن", "الوزن")
-            tableMapping.ColumnMappings.Add("شكوى المريض", "شكوى المريض")
-            tableMapping.ColumnMappings.Add("الدواء", "الدواء")
-            tableMapping.ColumnMappings.Add("نوع الدواء", "نوع الدواء")
-            tableMapping.ColumnMappings.Add("الجرعة", "الجرعة")
+            tableMapping.ColumnMappings.Add("R_CODE", "R_CODE")
+            tableMapping.ColumnMappings.Add("R_DATE", "R_DATE")
+            tableMapping.ColumnMappings.Add("R_CODE_DOC", "R_CODE_DOC")
+            tableMapping.ColumnMappings.Add("DO_NAME", "DO_NAME")
+            tableMapping.ColumnMappings.Add("DO_TKHSOS", "DO_TKHSOS")
+            tableMapping.ColumnMappings.Add("R_CODE_PA", "R_CODE_PA")
+            tableMapping.ColumnMappings.Add("PA_NAME", "PA_NAME")
+            tableMapping.ColumnMappings.Add("PA_AGE", "PA_AGE")
+            tableMapping.ColumnMappings.Add("PA_TYPE", "PA_TYPE")
+            tableMapping.ColumnMappings.Add("PA_OP", "PA_OP")
+            tableMapping.ColumnMappings.Add("R_HRARA", "R_HRARA")
+            tableMapping.ColumnMappings.Add("R_D", "R_D")
+            tableMapping.ColumnMappings.Add("R_KG", "R_KG")
+            tableMapping.ColumnMappings.Add("R_INFO", "R_INFO")
+            tableMapping.ColumnMappings.Add("R_DT_PHARM", "R_DT_PHARM")
+            tableMapping.ColumnMappings.Add("R_DT_NO3", "R_DT_NO3")
+            tableMapping.ColumnMappings.Add("R_DT_GOR3A", "R_DT_GOR3A")
+            tableMapping.ColumnMappings.Add("R_STAT", "R_STAT")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1443,7 +1485,9 @@ Namespace HISTORY_REP_DATATableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        HISTORY_PATION.*"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            HISTORY_PATION"
+            Me._commandCollection(0).CommandText = "SELECT R_CODE, R_DATE, R_CODE_DOC, DO_NAME, DO_TKHSOS, R_CODE_PA, PA_NAME, PA_AGE"& _ 
+                ", PA_TYPE, PA_OP, R_HRARA, R_D, R_KG, R_INFO, R_DT_PHARM, R_DT_NO3, R_DT_GOR3A, "& _ 
+                "R_STAT FROM HISTORY_PATION"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

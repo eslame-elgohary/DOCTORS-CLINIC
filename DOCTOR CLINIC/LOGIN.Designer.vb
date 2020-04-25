@@ -50,9 +50,11 @@ Partial Class LOGIN
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TXT_TYPE
@@ -125,7 +127,7 @@ Partial Class LOGIN
         Me.USER1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.USER1.BackColor = System.Drawing.Color.White
         Me.USER1.FormattingEnabled = True
-        Me.USER1.Location = New System.Drawing.Point(227, 145)
+        Me.USER1.Location = New System.Drawing.Point(227, 155)
         Me.USER1.Name = "USER1"
         Me.USER1.Size = New System.Drawing.Size(258, 29)
         Me.USER1.TabIndex = 46
@@ -186,7 +188,7 @@ Partial Class LOGIN
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(115, 148)
+        Me.Label1.Location = New System.Drawing.Point(115, 158)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(110, 21)
@@ -212,9 +214,9 @@ Partial Class LOGIN
         Me.Label3.Location = New System.Drawing.Point(41, 374)
         Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(515, 45)
+        Me.Label3.Size = New System.Drawing.Size(577, 45)
         Me.Label3.TabIndex = 67
-        Me.Label3.Text = "Karma Software Company "
+        Me.Label3.Text = "AL-Karma Software Company "
         '
         'ENTERBUTTON
         '
@@ -269,7 +271,7 @@ Partial Class LOGIN
         Me.PictureBox17.BackColor = System.Drawing.Color.White
         Me.PictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox17.Image = CType(resources.GetObject("PictureBox17.Image"), System.Drawing.Image)
-        Me.PictureBox17.Location = New System.Drawing.Point(67, 137)
+        Me.PictureBox17.Location = New System.Drawing.Point(67, 147)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -326,6 +328,18 @@ Partial Class LOGIN
         Me.Label10.TabIndex = 91
         Me.Label10.Text = "x"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.White
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox3.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
+        Me.PictureBox3.Location = New System.Drawing.Point(576, -5)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(232, 189)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 92
+        Me.PictureBox3.TabStop = False
+        '
         'LOGIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -356,6 +370,7 @@ Partial Class LOGIN
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.password)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -368,6 +383,7 @@ Partial Class LOGIN
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -399,4 +415,5 @@ Partial Class LOGIN
     Friend WithEvents Label8 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

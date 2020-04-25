@@ -1,4 +1,62 @@
 ﻿Public Class FOLOUP
+    Sub SHOW_DETA(CODE_)
+        DataGridView1.Rows.Clear()
+        DataGridView2.Rows.Clear()
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOWUP_DT WHERE CODE_FOLOWUP ='" & CODE_ & "'", SqlConn)
+        DA.Fill(DT)
+
+        If DT.Rows.Count = 0 Then
+            MessageBox.Show("يرجى التأكد من كود الروشتة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Dim DR = DT.Rows(0)
+            TXT_PA_CODE.Text = DR!PA_CODE_FOLOWUP
+            TXT_DATE_TODAY.Text = DR!DATE_FOLOWUP
+            TXT_CODE.Text = DR!CODE_FOLOWUP
+            TXT_BP.Text = DR!BP_FOLOWUP
+            TXT_W.Text = DR!W_FOLOWUP
+            TXT_WEEK.Text = DR!WEEKS_FOLOWUP
+            TXT_WIGHT.Text = DR!FET_FOLOWUP
+            TXT_LIQPUR.Text = DR!LIQOUR_FOLOWUP
+            TXT_SEX.Text = DR!SEX_FOLOWUP
+            TXT_PLACENTA.Text = DR!PLACENTA_FOLOWUP
+            '=================================================
+            Dim DT1 As New DataTable
+            Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOW_V WHERE CODE_FOLOWUP ='" & CODE_ & "' ", SqlConn)
+            DA1.Fill(DT1)
+            If DT1.Rows.Count > 0 Then
+                For I = 0 To DT1.Rows.Count - 1
+                    DataGridView1.Rows.Add()
+                    DataGridView1.Rows(I).Cells(0).Value = DT1.Rows(I).Item("FOLOWUP_DS_CODE_SHKWA")
+                    DataGridView1.Rows(I).Cells(1).Value = DT1.Rows(I).Item("NAME_NESA_SHKWA")
+                Next
+            End If
+            '=================================================================================
+            Dim DT2 As New DataTable
+            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM R_DOCTOR WHERE R_CODE_FOLOWUP ='" & CODE_ & "' ", SqlConn)
+            DA2.Fill(DT2)
+            If DT2.Rows.Count > 0 Then
+                Dim DR2 = DT2.Rows(0)
+                TXT_CODE100.Text = DR2!R_CODE
+
+                Dim DT3 As New DataTable
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM R_DOCTOR_DT WHERE R_CODE_DT ='" & TXT_CODE100.Text & "'", SqlConn)
+                DA3.Fill(DT3)
+                For I = 0 To DT3.Rows.Count - 1
+                    DataGridView2.Rows.Add()
+                    DataGridView2.Rows(I).Cells(0).Value = DT3.Rows(I).Item("R_DT_CODE")
+                    DataGridView2.Rows(I).Cells(1).Value = DT3.Rows(I).Item("R_DT_PHARM")
+                    DataGridView2.Rows(I).Cells(2).Value = DT3.Rows(I).Item("R_DT_NO3")
+                    DataGridView2.Rows(I).Cells(3).Value = DT3.Rows(I).Item("R_DT_CODE2")
+                    DataGridView2.Rows(I).Cells(4).Value = DT3.Rows(I).Item("R_DT_GOR3A")
+                Next
+            End If
+        End If
+
+        DELETBTN.Enabled = True
+        EDITBTN.Enabled = True
+        SAVEBTN.Enabled = False
+    End Sub
     Private Sub BTN_4D_Click(sender As Object, e As EventArgs) Handles BTN_4D.Click
         If TXT_PA_CODE.Text = "" Then
             MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -117,7 +175,7 @@
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PERSONAL_HISTORY_V WHERE PA_CODE ='" & TXT_PA_CODE.Text & "'", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
-            TXT_PA_CODE.Text = DT.Rows(I).Item("PA_CODE")
+            TXT_PA_NAME.Text = DT.Rows(I).Item("PA_NAME")
             TXT_AGE.Text = DT.Rows(I).Item("PA_AGE")
             TXT_NAME2.Text = DT.Rows(I).Item("PA_NAME2")
             TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
@@ -127,7 +185,7 @@
             TXT_RH.Text = DT.Rows(I).Item("RH_PERS")
             TXT_ABO.Text = DT.Rows(I).Item("ABO_PERS")
         Next
-        T_CHANG.Enabled = True
+        T_CHANG.Enabled = False
         FILL_PHARM()
         FILL_COMPLAINT()
         FILL_GOR3A()
@@ -180,7 +238,8 @@
             TXT_PA_NAME.Select()
             Exit Sub
         Else
-
+            NEWBABYFRMvb.ShowDialog()
+            Me.Close()
         End If
     End Sub
 
@@ -326,7 +385,9 @@
         '========================================================
 
         TXT_PA_NAME.Select()
-
+        DELETBTN.Enabled = False
+        EDITBTN.Enabled = False
+        SAVEBTN.Enabled = True
     End Sub
 
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
@@ -346,7 +407,11 @@
                 If Not TXT_DATE_TODAY.Text = Date.Today Then
                     If MessageBox.Show("Today's date does not match. Do you want to change? ", "ERROR", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then TXT_DATE_TODAY.Select() Exit Sub
                 End If
-
+                If DataGridView1.Rows.Count < 1 Then
+                    MessageBox.Show("PLEASE ENTER THE COMPLAIONT FOR PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_COMPLAIONT.Select()
+                    Exit Sub
+                End If
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOWUP_DT ", SqlConn)
                 DA.Fill(DT)
@@ -425,8 +490,193 @@
                         DA3.Update(DT)
                     Next
                 End If
+                If DataGridView2.Rows.Count > 0 Then
+                    If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.Yes Then
+                        BTN_PRESCRIPTION_Click(sender, e)
+                        MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        NEWBTN_Click(sender, e)
+                    Else
+                        MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        NEWBTN_Click(sender, e)
+                    End If
+                Else
+                    MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    NEWBTN_Click(sender, e)
+                End If
 
-                MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+
+            Else
+                    MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub EDITBTN_Click(sender As Object, e As EventArgs) Handles EDITBTN.Click
+        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim DS0 As New DataSet
+        ADP0.Fill(DS0)
+        Dim DT0 = DS0.Tables(0)
+        If DT0.Rows.Count > 0 Then
+            If DT0.Rows(0).Item("S102").ToString = True Then
+
+                If TXT_PA_CODE.Text = "" Then
+                    MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_PA_NAME.Select()
+                    Exit Sub
+                End If
+                If DataGridView1.Rows.Count < 1 Then
+                    MessageBox.Show("PLEASE ENTER THE COMPLAIONT FOR PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_COMPLAIONT.Select()
+                    Exit Sub
+                End If
+
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOWUP_DT WHERE CODE_FOLOWUP='" & TXT_CODE.Text & "'  ", SqlConn)
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!DATE_FOLOWUP = TXT_DATE_TODAY.Text
+                DR!CODE_FOLOWUP = TXT_CODE.Text
+                DR!PA_CODE_FOLOWUP = TXT_PA_CODE.Text
+                DR!BP_FOLOWUP = TXT_BP.Text
+                DR!W_FOLOWUP = TXT_W.Text
+                DR!WEEKS_FOLOWUP = TXT_WEEK.Text
+                DR!FET_FOLOWUP = TXT_WIGHT.Text
+                DR!LIQOUR_FOLOWUP = TXT_LIQPUR.Text
+                DR!SEX_FOLOWUP = TXT_SEX.Text
+                DR!PLACENTA_FOLOWUP = TXT_PLACENTA.Text
+                DR!STAT_FOLOWUP = True
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                '=================================================
+                Dim CMD_DEL1 As New SqlClient.SqlCommand
+                CMD_DEL1.Connection = SqlConn
+                CMD_DEL1.CommandText = "DELETE FROM FOLOWUP_DTELS WHERE CODE_FOLOWUP_DS ='" & TXT_CODE.Text & "'"
+                CMD_DEL1.ExecuteNonQuery()
+
+                '=================================================
+                Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOWUP_DTELS", SqlConn)
+                DA1.Fill(DT)
+                If DataGridView1.Rows.Count > 0 Then
+                    For I = 0 To DataGridView1.Rows.Count - 1
+                        Dim DR1 = DT.NewRow
+                        DR1!CODE_FOLOWUP_DS = TXT_CODE.Text
+                        DR1!DATE_FOLOWUP_DS = TXT_DATE_TODAY.Text
+                        DR1!PA_CODE_FOLOWUP_DS = TXT_PA_CODE.Text
+                        DR1!FOLOWUP_DS_CODE_SHKWA = DataGridView1.Rows(I).Cells(0).Value
+                        DR1!STAT_FOLOWUP_DS = True
+                        DT.Rows.Add(DR1)
+                        Dim CMD100_ As New SqlClient.SqlCommandBuilder(DA1)
+                        DA1.Update(DT)
+                    Next
+                End If
+                '======================================================
+                Dim CMD_DEL As New SqlClient.SqlCommand
+                CMD_DEL.Connection = SqlConn
+                CMD_DEL.CommandText = "DELETE FROM R_DOCTOR_DT WHERE R_CODE_DT ='" & TXT_CODE100.Text & "'"
+                CMD_DEL.ExecuteNonQuery()
+                '=================================================================================
+                If DataGridView2.Rows.Count > 0 Then
+                    '============================================================
+                    Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM R_DOCTOR_DT", SqlConn)
+                    DA3.Fill(DT)
+                    For I = 0 To DataGridView2.Rows.Count - 1
+                        Dim DR3 = DT.NewRow
+                        DR3!R_CODE_DT = TXT_CODE100.Text
+                        DR3!R_DATE = TXT_DATE_TODAY.Text
+                        DR3!R_DT_CODE = DataGridView2.Rows(I).Cells(0).Value
+                        DR3!R_DT_PHARM = DataGridView2.Rows(I).Cells(1).Value
+                        DR3!R_DT_NO3 = DataGridView2.Rows(I).Cells(2).Value
+                        DR3!R_DT_CODE2 = DataGridView2.Rows(I).Cells(3).Value
+                        DR3!R_DT_GOR3A = DataGridView2.Rows(I).Cells(4).Value
+                        DR3!STAT_DT = True
+                        DT.Rows.Add(DR3)
+                        Dim CM_ As New SqlClient.SqlCommandBuilder(DA3)
+                        DA3.Update(DT)
+                    Next
+                End If
+
+                If DataGridView2.Rows.Count > 0 Then
+                    If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.Yes Then
+                        BTN_PRESCRIPTION_Click(sender, e)
+                        MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        NEWBTN_Click(sender, e)
+                    Else
+                        MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        NEWBTN_Click(sender, e)
+                    End If
+                Else
+                    MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    NEWBTN_Click(sender, e)
+                End If
+
+            Else
+                MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub DELETBTN_Click(sender As Object, e As EventArgs) Handles DELETBTN.Click
+        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim DS0 As New DataSet
+        ADP0.Fill(DS0)
+        Dim DT0 = DS0.Tables(0)
+        If DT0.Rows.Count > 0 Then
+            If DT0.Rows(0).Item("S103").ToString = True Then
+                If MessageBox.Show("هل ترغب في حذف البيانات ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOWUP_DT WHERE CODE_FOLOWUP='" & TXT_CODE.Text & "'  ", SqlConn)
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+
+                DR!STAT_FOLOWUP = False
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                '=================================================
+                Dim DT1 As New DataTable
+                Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM FOLOWUP_DTELS WHERE CODE_FOLOWUP_DS ='" & TXT_CODE.Text & "' ", SqlConn)
+                DA1.Fill(DT1)
+
+                Dim DR1 = DT1.Rows(0)
+
+                DR1!STAT_FOLOWUP_DS = False
+
+                Dim SAVE1 As New SqlClient.SqlCommandBuilder(DA1)
+                DA1.Update(DT1)
+
+                '=================================================================================
+                Dim DT2 As New DataTable
+                Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM R_DOCTOR WHERE R_CODE = '" & TXT_CODE100.Text & "' ", SqlConn)
+                DA2.Fill(DT2)
+                Dim DR2 = DT2.Rows(0)
+
+                DR2!R_STAT = False
+
+                Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
+                DA2.Update(DT2)
+                ''====================================================================
+                Dim DT3 As New DataTable
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM R_DOCTOR_DT WHERE R_CODE_DT = '" & TXT_CODE100.Text & "' ", SqlConn)
+                DA3.Fill(DT3)
+
+                Dim DR3 = DT3.Rows(0)
+
+                DR3!STAT_DT = False
+
+                Dim SAVE3 As New SqlClient.SqlCommandBuilder(DA3)
+                DA3.Update(DT3)
+
+
+
+                MessageBox.Show("تمت عملية الحذف بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
 
             Else
@@ -436,23 +686,85 @@
         End If
     End Sub
 
-    Private Sub EDITBTN_Click(sender As Object, e As EventArgs) Handles EDITBTN.Click
-
-    End Sub
-
-    Private Sub DELETBTN_Click(sender As Object, e As EventArgs) Handles DELETBTN.Click
-
-    End Sub
-
     Private Sub SEARCHBTN_Click(sender As Object, e As EventArgs) Handles SEARCHBTN.Click
-
+        SEARCH_FOLOWUP_FRM.ShowDialog()
     End Sub
 
     Private Sub BTN_PRESCRIPTION_Click(sender As Object, e As EventArgs) Handles BTN_PRESCRIPTION.Click
-
+        Dim DT As New DataTable
+        With DT
+            .Columns.Add("R_CODE")
+            .Columns.Add("R_DATE")
+            .Columns.Add("PA_NAME")
+            .Columns.Add("R_DT_PHARM")
+            .Columns.Add("R_DT_NO3")
+            .Columns.Add("R_DT_GOR3A")
+        End With
+        For I As Integer = 0 To DataGridView2.Rows.Count - 1
+            If DataGridView2.Rows(I).Cells(0).Value <> Nothing Then
+                DT.Rows.Add(TXT_CODE100.Text, TXT_DATE_TODAY.Text, TXT_PA_NAME.Text, DataGridView2.Rows(I).Cells(1).Value, DataGridView2.Rows(I).Cells(2).Value, DataGridView2.Rows(I).Cells(4).Value)
+            End If
+        Next
+        Dim REP As New ROSHTA_ELAG_CRS2
+        REP.SetDataSource(DT)
+        Dim FRM As New REOSHTA_ELAG_REP
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
     End Sub
 
     Private Sub BTN_FOLOWUP_Click(sender As Object, e As EventArgs) Handles BTN_FOLOWUP.Click
+
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter(" SELECT * FROM FOLOW_V WHERE STAT_FOLOWUP ='TRUE' AND PA_CODE_FOLOWUP = '" & TXT_PA_CODE.Text & "'", SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New FOLOWUPREP
+            REP.SetDataSource(DT)
+            REP.SetParameterValue(0, TXT_4D.Text)
+            REP.SetParameterValue(1, TXT_FETAL.Text)
+            REP.SetParameterValue(2, TXT_DATE_MARRIED.Text)
+            REP.SetParameterValue(3, TXT_DATE_LMP.Text)
+            REP.SetParameterValue(4, TXT_RH.Text)
+            REP.SetParameterValue(5, TXT_ABO.Text)
+            REP.SetParameterValue(6, TXT_OBSTETRIC.Text)
+            REP.SetParameterValue(7, TXT_DATE_EDD.Text)
+            REP.SetParameterValue(8, st1_hb.Text)
+            REP.SetParameterValue(9, st1_plt.Text)
+            REP.SetParameterValue(10, st1_pc.Text)
+            REP.SetParameterValue(11, st1_cmv.Text)
+            REP.SetParameterValue(12, st1_hbac.Text)
+            REP.SetParameterValue(13, st1_rbs.Text)
+            REP.SetParameterValue(14, st1_tsh.Text)
+            REP.SetParameterValue(15, st1_urine.Text)
+            REP.SetParameterValue(16, st1_toxo.Text)
+            REP.SetParameterValue(17, ND2_hb.Text)
+            REP.SetParameterValue(18, ND2_plt.Text)
+            REP.SetParameterValue(19, ND2_pc.Text)
+            REP.SetParameterValue(20, ND2_LONIZED.Text)
+            REP.SetParameterValue(21, ND2_HOUR.Text)
+            REP.SetParameterValue(22, ND2_TSH.Text)
+            REP.SetParameterValue(23, ND2_TOTAL.Text)
+            REP.SetParameterValue(24, ND2_urine.Text)
+            REP.SetParameterValue(25, RD3_hb.Text)
+            REP.SetParameterValue(26, RD3_plt.Text)
+            REP.SetParameterValue(27, RD3_pc.Text)
+            REP.SetParameterValue(28, RD3_rbs.Text)
+            REP.SetParameterValue(29, RD3_SGPT.Text)
+            REP.SetParameterValue(30, RD3_TSH.Text)
+            REP.SetParameterValue(31, RD3_CREAT.Text)
+            REP.SetParameterValue(32, RD3_urine.Text)
+            REP.SetParameterValue(33, RD3_HOUR.Text)
+
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+        End If
+
 
     End Sub
 
@@ -605,5 +917,23 @@
         For I = 0 To DT.Rows.Count - 1
             TXT_COMPLAIONT.Text = DT.Rows(I).Item("NAME_NESA_SHKWA")
         Next
+    End Sub
+
+    Private Sub ALL_Prescription_Click(sender As Object, e As EventArgs) Handles ALL_Prescription.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter(" SELECT * FROM HISTORY_PATION WHERE R_STAT ='TRUE' AND R_CODE_PA = '" & TXT_PA_CODE.Text & "' AND R_CODE_DOC='1'", SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New HISTORY_PATION_CRS
+            REP.SetDataSource(DT)
+            Dim FRM As New HISTORY_PATION_FRM_REP
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+        End If
     End Sub
 End Class

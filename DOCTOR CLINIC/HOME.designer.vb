@@ -38,7 +38,6 @@ Partial Class HOME
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.MASEGETXT = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FffffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -95,29 +94,32 @@ Partial Class HOME
         Me.BTNBACKUP = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_EXIT = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.STB_SALSE = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.STB_RESALSE = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BT_ADDTHLEL_PATION = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BTN_ADD_MONY_DOCT = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BTL_CONVERTKHAZINA = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.STB_SALSE = New System.Windows.Forms.ToolStripButton()
+        Me.STB_RESALSE = New System.Windows.Forms.ToolStripButton()
+        Me.BT_ADDTHLEL_PATION = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.BTN_ADD_MONY_DOCT = New System.Windows.Forms.ToolStripButton()
+        Me.BTL_CONVERTKHAZINA = New System.Windows.Forms.ToolStripButton()
+        Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
+        Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
+        Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -203,12 +205,12 @@ Partial Class HOME
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(410, 583)
+        Me.Label3.Location = New System.Drawing.Point(381, 583)
         Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(515, 45)
+        Me.Label3.Size = New System.Drawing.Size(577, 45)
         Me.Label3.TabIndex = 69
-        Me.Label3.Text = "Karma Software Company "
+        Me.Label3.Text = "AL-Karma Software Company "
         '
         'Label9
         '
@@ -230,16 +232,6 @@ Partial Class HOME
         Me.MASEGETXT.Name = "MASEGETXT"
         Me.MASEGETXT.Size = New System.Drawing.Size(350, 162)
         Me.MASEGETXT.TabIndex = 70
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.Doctors_Pic
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 81)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1350, 616)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
         '
         'MenuStrip2
         '
@@ -613,128 +605,45 @@ Partial Class HOME
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'STB_SALSE
-        '
-        Me.STB_SALSE.Image = CType(resources.GetObject("STB_SALSE.Image"), System.Drawing.Image)
-        Me.STB_SALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.STB_SALSE.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.STB_SALSE.Name = "STB_SALSE"
-        Me.STB_SALSE.Size = New System.Drawing.Size(82, 52)
-        Me.STB_SALSE.Text = "زيارة"
-        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 55)
-        '
-        'STB_RESALSE
-        '
-        Me.STB_RESALSE.Image = CType(resources.GetObject("STB_RESALSE.Image"), System.Drawing.Image)
-        Me.STB_RESALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.STB_RESALSE.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.STB_RESALSE.Name = "STB_RESALSE"
-        Me.STB_RESALSE.Size = New System.Drawing.Size(78, 52)
-        Me.STB_RESALSE.Text = "حجز"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 55)
         '
-        'BT_ADDTHLEL_PATION
-        '
-        Me.BT_ADDTHLEL_PATION.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_Corona_Virus_Research_lap_microscope_research_test_virus_corona_5959974
-        Me.BT_ADDTHLEL_PATION.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BT_ADDTHLEL_PATION.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_ADDTHLEL_PATION.Name = "BT_ADDTHLEL_PATION"
-        Me.BT_ADDTHLEL_PATION.Size = New System.Drawing.Size(132, 52)
-        Me.BT_ADDTHLEL_PATION.Text = "تحاليل المريض"
-        '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_blood_test_laboratory_lab_virus_5986182
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(121, 52)
-        Me.ToolStripButton2.Text = "أيصال معمل"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 55)
         '
-        'BTN_ADD_MONY_DOCT
-        '
-        Me.BTN_ADD_MONY_DOCT.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_business_work_2_2377644
-        Me.BTN_ADD_MONY_DOCT.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BTN_ADD_MONY_DOCT.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BTN_ADD_MONY_DOCT.Name = "BTN_ADD_MONY_DOCT"
-        Me.BTN_ADD_MONY_DOCT.Size = New System.Drawing.Size(126, 52)
-        Me.BTN_ADD_MONY_DOCT.Text = "أيصال عيادات"
-        '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
         Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 55)
-        '
-        'BTL_CONVERTKHAZINA
-        '
-        Me.BTL_CONVERTKHAZINA.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_currency_exchange_3383436
-        Me.BTL_CONVERTKHAZINA.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BTL_CONVERTKHAZINA.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BTL_CONVERTKHAZINA.Name = "BTL_CONVERTKHAZINA"
-        Me.BTL_CONVERTKHAZINA.Size = New System.Drawing.Size(119, 52)
-        Me.BTL_CONVERTKHAZINA.Text = "تحويل خزينة"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 55)
         '
-        'BT_SMS
-        '
-        Me.BT_SMS.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BT_SMS.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_phone_call__text__sms_dial__2992207__1_
-        Me.BT_SMS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BT_SMS.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_SMS.Name = "BT_SMS"
-        Me.BT_SMS.Size = New System.Drawing.Size(84, 52)
-        Me.BT_SMS.Text = "SMS"
-        '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 55)
         '
-        'STB_EXIT
-        '
-        Me.STB_EXIT.Image = CType(resources.GetObject("STB_EXIT.Image"), System.Drawing.Image)
-        Me.STB_EXIT.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.STB_EXIT.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.STB_EXIT.Name = "STB_EXIT"
-        Me.STB_EXIT.Size = New System.Drawing.Size(91, 52)
-        Me.STB_EXIT.Text = "الخروج"
-        '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 55)
-        '
-        'BT_JOGOUT
-        '
-        Me.BT_JOGOUT.AutoSize = False
-        Me.BT_JOGOUT.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BT_JOGOUT.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_security__key__lock__protect_2537334
-        Me.BT_JOGOUT.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_JOGOUT.Name = "BT_JOGOUT"
-        Me.BT_JOGOUT.Size = New System.Drawing.Size(50, 52)
-        Me.BT_JOGOUT.Text = "تغيير المستخدم"
         '
         'ToolStrip1
         '
@@ -748,12 +657,119 @@ Partial Class HOME
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'STB_SALSE
+        '
+        Me.STB_SALSE.Image = CType(resources.GetObject("STB_SALSE.Image"), System.Drawing.Image)
+        Me.STB_SALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.STB_SALSE.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.STB_SALSE.Name = "STB_SALSE"
+        Me.STB_SALSE.Size = New System.Drawing.Size(82, 52)
+        Me.STB_SALSE.Text = "زيارة"
+        '
+        'STB_RESALSE
+        '
+        Me.STB_RESALSE.Image = CType(resources.GetObject("STB_RESALSE.Image"), System.Drawing.Image)
+        Me.STB_RESALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.STB_RESALSE.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.STB_RESALSE.Name = "STB_RESALSE"
+        Me.STB_RESALSE.Size = New System.Drawing.Size(78, 52)
+        Me.STB_RESALSE.Text = "حجز"
+        '
+        'BT_ADDTHLEL_PATION
+        '
+        Me.BT_ADDTHLEL_PATION.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_Corona_Virus_Research_lap_microscope_research_test_virus_corona_5959974
+        Me.BT_ADDTHLEL_PATION.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BT_ADDTHLEL_PATION.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_ADDTHLEL_PATION.Name = "BT_ADDTHLEL_PATION"
+        Me.BT_ADDTHLEL_PATION.Size = New System.Drawing.Size(132, 52)
+        Me.BT_ADDTHLEL_PATION.Text = "تحاليل المريض"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_blood_test_laboratory_lab_virus_5986182
+        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(121, 52)
+        Me.ToolStripButton2.Text = "أيصال معمل"
+        '
+        'BTN_ADD_MONY_DOCT
+        '
+        Me.BTN_ADD_MONY_DOCT.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_business_work_2_2377644
+        Me.BTN_ADD_MONY_DOCT.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BTN_ADD_MONY_DOCT.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BTN_ADD_MONY_DOCT.Name = "BTN_ADD_MONY_DOCT"
+        Me.BTN_ADD_MONY_DOCT.Size = New System.Drawing.Size(126, 52)
+        Me.BTN_ADD_MONY_DOCT.Text = "أيصال عيادات"
+        '
+        'BTL_CONVERTKHAZINA
+        '
+        Me.BTL_CONVERTKHAZINA.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_currency_exchange_3383436
+        Me.BTL_CONVERTKHAZINA.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BTL_CONVERTKHAZINA.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BTL_CONVERTKHAZINA.Name = "BTL_CONVERTKHAZINA"
+        Me.BTL_CONVERTKHAZINA.Size = New System.Drawing.Size(119, 52)
+        Me.BTL_CONVERTKHAZINA.Text = "تحويل خزينة"
+        '
+        'BT_SMS
+        '
+        Me.BT_SMS.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BT_SMS.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_phone_call__text__sms_dial__2992207__1_
+        Me.BT_SMS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BT_SMS.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_SMS.Name = "BT_SMS"
+        Me.BT_SMS.Size = New System.Drawing.Size(84, 52)
+        Me.BT_SMS.Text = "SMS"
+        '
+        'STB_EXIT
+        '
+        Me.STB_EXIT.Image = CType(resources.GetObject("STB_EXIT.Image"), System.Drawing.Image)
+        Me.STB_EXIT.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.STB_EXIT.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.STB_EXIT.Name = "STB_EXIT"
+        Me.STB_EXIT.Size = New System.Drawing.Size(91, 52)
+        Me.STB_EXIT.Text = "الخروج"
+        '
+        'BT_JOGOUT
+        '
+        Me.BT_JOGOUT.AutoSize = False
+        Me.BT_JOGOUT.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BT_JOGOUT.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_security__key__lock__protect_2537334
+        Me.BT_JOGOUT.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_JOGOUT.Name = "BT_JOGOUT"
+        Me.BT_JOGOUT.Size = New System.Drawing.Size(50, 52)
+        Me.BT_JOGOUT.Text = "تغيير المستخدم"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox1.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.Doctors_Pic
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 81)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1350, 616)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
+        Me.PictureBox2.Location = New System.Drawing.Point(58, 367)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(155, 189)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 72
+        Me.PictureBox2.TabStop = False
+        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1350, 730)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.MASEGETXT)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label9)
@@ -775,13 +791,14 @@ Partial Class HOME
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -875,4 +892,5 @@ Partial Class HOME
     Friend WithEvents FffffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PERSONALHISTORYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PFOLOWUPToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

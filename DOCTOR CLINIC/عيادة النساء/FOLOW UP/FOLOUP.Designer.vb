@@ -45,13 +45,9 @@ Partial Class FOLOUP
         Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.BTN_BABY = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_OBSTETRIC = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_FETAL = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_4D = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_3RD = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_2ND = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_1ST = New DevExpress.XtraEditors.SimpleButton()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -117,25 +113,16 @@ Partial Class FOLOUP
         Me.TXT_OBSTETRIC = New System.Windows.Forms.TextBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.TXT_CODE_COMPLAIONT = New System.Windows.Forms.TextBox()
-        Me.BTN_COMPLAIONT = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_COMPLAIONT = New System.Windows.Forms.ComboBox()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
+        Me.TXT_CODE100 = New System.Windows.Forms.TextBox()
         Me.TXT_CODE_GOR3A = New System.Windows.Forms.TextBox()
         Me.TXT_CODE_PHARM = New System.Windows.Forms.TextBox()
         Me.TXT_GOR3A = New System.Windows.Forms.ComboBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.TXT_NO3 = New System.Windows.Forms.TextBox()
-        Me.BTN_PHARM = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PHARM = New System.Windows.Forms.ComboBox()
         Me.GRBTN = New System.Windows.Forms.GroupBox()
-        Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_FOLOWUP = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_PRESCRIPTION = New DevExpress.XtraEditors.SimpleButton()
-        Me.SEARCHBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.DELETBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.T_CHANG = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
@@ -159,6 +146,11 @@ Partial Class FOLOUP
         Me.TXT_WEEK = New System.Windows.Forms.TextBox()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -184,20 +176,29 @@ Partial Class FOLOUP
         Me.TXT_WEEK1 = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXT_CODE100 = New System.Windows.Forms.TextBox()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BTN_PHARM = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_COMPLAIONT = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_BABY = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_3RD = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_2ND = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_1ST = New DevExpress.XtraEditors.SimpleButton()
+        Me.ALL_Prescription = New DevExpress.XtraEditors.SimpleButton()
+        Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_FOLOWUP = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_PRESCRIPTION = New DevExpress.XtraEditors.SimpleButton()
+        Me.SEARCHBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.DELETBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -492,19 +493,6 @@ Partial Class FOLOUP
         Me.Label11.TabIndex = 59
         Me.Label11.Text = "RH:"
         '
-        'BTN_BABY
-        '
-        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_BABY.Appearance.ForeColor = System.Drawing.Color.OrangeRed
-        Me.BTN_BABY.Appearance.Options.UseFont = True
-        Me.BTN_BABY.Appearance.Options.UseForeColor = True
-        Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_baby_64
-        Me.BTN_BABY.Location = New System.Drawing.Point(1227, 16)
-        Me.BTN_BABY.Name = "BTN_BABY"
-        Me.BTN_BABY.Size = New System.Drawing.Size(74, 70)
-        Me.BTN_BABY.TabIndex = 58
-        Me.BTN_BABY.Text = "BABY IS COME"
-        '
         'BTN_OBSTETRIC
         '
         Me.BTN_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -540,39 +528,6 @@ Partial Class FOLOUP
         Me.BTN_4D.Size = New System.Drawing.Size(38, 34)
         Me.BTN_4D.TabIndex = 55
         Me.BTN_4D.Text = "4D"
-        '
-        'BTN_3RD
-        '
-        Me.BTN_3RD.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_3RD.Appearance.Options.UseFont = True
-        Me.BTN_3RD.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_3_32
-        Me.BTN_3RD.Location = New System.Drawing.Point(1169, 14)
-        Me.BTN_3RD.Name = "BTN_3RD"
-        Me.BTN_3RD.Size = New System.Drawing.Size(38, 34)
-        Me.BTN_3RD.TabIndex = 54
-        Me.BTN_3RD.Text = "1st"
-        '
-        'BTN_2ND
-        '
-        Me.BTN_2ND.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_2ND.Appearance.Options.UseFont = True
-        Me.BTN_2ND.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_2_32
-        Me.BTN_2ND.Location = New System.Drawing.Point(1121, 14)
-        Me.BTN_2ND.Name = "BTN_2ND"
-        Me.BTN_2ND.Size = New System.Drawing.Size(38, 34)
-        Me.BTN_2ND.TabIndex = 53
-        Me.BTN_2ND.Text = "1st"
-        '
-        'BTN_1ST
-        '
-        Me.BTN_1ST.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_1ST.Appearance.Options.UseFont = True
-        Me.BTN_1ST.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_level_1_32
-        Me.BTN_1ST.Location = New System.Drawing.Point(1072, 14)
-        Me.BTN_1ST.Name = "BTN_1ST"
-        Me.BTN_1ST.Size = New System.Drawing.Size(38, 34)
-        Me.BTN_1ST.TabIndex = 52
-        Me.BTN_1ST.Text = "1st"
         '
         'Label10
         '
@@ -1418,14 +1373,6 @@ Partial Class FOLOUP
         Me.TXT_CODE_COMPLAIONT.TabIndex = 85
         Me.TXT_CODE_COMPLAIONT.Visible = False
         '
-        'BTN_COMPLAIONT
-        '
-        Me.BTN_COMPLAIONT.ImageOptions.Image = CType(resources.GetObject("BTN_COMPLAIONT.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_COMPLAIONT.Location = New System.Drawing.Point(321, 9)
-        Me.BTN_COMPLAIONT.Name = "BTN_COMPLAIONT"
-        Me.BTN_COMPLAIONT.Size = New System.Drawing.Size(38, 37)
-        Me.BTN_COMPLAIONT.TabIndex = 84
-        '
         'TXT_COMPLAIONT
         '
         Me.TXT_COMPLAIONT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
@@ -1456,6 +1403,16 @@ Partial Class FOLOUP
         Me.GroupBox9.TabIndex = 84
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Drugs"
+        '
+        'TXT_CODE100
+        '
+        Me.TXT_CODE100.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE100.Enabled = False
+        Me.TXT_CODE100.Location = New System.Drawing.Point(335, 6)
+        Me.TXT_CODE100.Name = "TXT_CODE100"
+        Me.TXT_CODE100.Size = New System.Drawing.Size(42, 23)
+        Me.TXT_CODE100.TabIndex = 90
+        Me.TXT_CODE100.Visible = False
         '
         'TXT_CODE_GOR3A
         '
@@ -1513,14 +1470,6 @@ Partial Class FOLOUP
         Me.TXT_NO3.TabIndex = 85
         Me.TXT_NO3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BTN_PHARM
-        '
-        Me.BTN_PHARM.ImageOptions.Image = CType(resources.GetObject("BTN_PHARM.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_PHARM.Location = New System.Drawing.Point(801, 10)
-        Me.BTN_PHARM.Name = "BTN_PHARM"
-        Me.BTN_PHARM.Size = New System.Drawing.Size(38, 37)
-        Me.BTN_PHARM.TabIndex = 84
-        '
         'TXT_PHARM
         '
         Me.TXT_PHARM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
@@ -1536,6 +1485,7 @@ Partial Class FOLOUP
         '
         'GRBTN
         '
+        Me.GRBTN.Controls.Add(Me.ALL_Prescription)
         Me.GRBTN.Controls.Add(Me.EXITBTN)
         Me.GRBTN.Controls.Add(Me.BTN_FOLOWUP)
         Me.GRBTN.Controls.Add(Me.BTN_PRESCRIPTION)
@@ -1544,109 +1494,11 @@ Partial Class FOLOUP
         Me.GRBTN.Controls.Add(Me.EDITBTN)
         Me.GRBTN.Controls.Add(Me.SAVEBTN)
         Me.GRBTN.Controls.Add(Me.NEWBTN)
-        Me.GRBTN.Location = New System.Drawing.Point(65, 566)
+        Me.GRBTN.Location = New System.Drawing.Point(20, 566)
         Me.GRBTN.Name = "GRBTN"
-        Me.GRBTN.Size = New System.Drawing.Size(1192, 72)
+        Me.GRBTN.Size = New System.Drawing.Size(1300, 72)
         Me.GRBTN.TabIndex = 85
         Me.GRBTN.TabStop = False
-        '
-        'EXITBTN
-        '
-        Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EXITBTN.Appearance.Options.UseFont = True
-        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EXITBTN.Location = New System.Drawing.Point(47, 18)
-        Me.EXITBTN.Name = "EXITBTN"
-        Me.EXITBTN.Size = New System.Drawing.Size(106, 44)
-        Me.EXITBTN.TabIndex = 7
-        Me.EXITBTN.Text = "Exit"
-        '
-        'BTN_FOLOWUP
-        '
-        Me.BTN_FOLOWUP.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_FOLOWUP.Appearance.Options.UseFont = True
-        Me.BTN_FOLOWUP.ImageOptions.Image = CType(resources.GetObject("BTN_FOLOWUP.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(173, 18)
-        Me.BTN_FOLOWUP.Name = "BTN_FOLOWUP"
-        Me.BTN_FOLOWUP.Size = New System.Drawing.Size(167, 44)
-        Me.BTN_FOLOWUP.TabIndex = 6
-        Me.BTN_FOLOWUP.Text = "Folow up Card"
-        '
-        'BTN_PRESCRIPTION
-        '
-        Me.BTN_PRESCRIPTION.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_PRESCRIPTION.Appearance.ForeColor = System.Drawing.Color.Purple
-        Me.BTN_PRESCRIPTION.Appearance.Options.UseFont = True
-        Me.BTN_PRESCRIPTION.Appearance.Options.UseForeColor = True
-        Me.BTN_PRESCRIPTION.ImageOptions.Image = CType(resources.GetObject("BTN_PRESCRIPTION.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_PRESCRIPTION.Location = New System.Drawing.Point(362, 18)
-        Me.BTN_PRESCRIPTION.Name = "BTN_PRESCRIPTION"
-        Me.BTN_PRESCRIPTION.Size = New System.Drawing.Size(151, 44)
-        Me.BTN_PRESCRIPTION.TabIndex = 5
-        Me.BTN_PRESCRIPTION.Text = "Prescription"
-        '
-        'SEARCHBTN
-        '
-        Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SEARCHBTN.Appearance.Options.UseFont = True
-        Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SEARCHBTN.Location = New System.Drawing.Point(539, 18)
-        Me.SEARCHBTN.Name = "SEARCHBTN"
-        Me.SEARCHBTN.Size = New System.Drawing.Size(112, 44)
-        Me.SEARCHBTN.TabIndex = 4
-        Me.SEARCHBTN.Text = "Search"
-        '
-        'DELETBTN
-        '
-        Me.DELETBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DELETBTN.Appearance.ForeColor = System.Drawing.Color.Red
-        Me.DELETBTN.Appearance.Options.UseFont = True
-        Me.DELETBTN.Appearance.Options.UseForeColor = True
-        Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.DELETBTN.Location = New System.Drawing.Point(672, 18)
-        Me.DELETBTN.Name = "DELETBTN"
-        Me.DELETBTN.Size = New System.Drawing.Size(116, 44)
-        Me.DELETBTN.TabIndex = 3
-        Me.DELETBTN.Text = "Delet"
-        '
-        'EDITBTN
-        '
-        Me.EDITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EDITBTN.Appearance.ForeColor = System.Drawing.Color.SteelBlue
-        Me.EDITBTN.Appearance.Options.UseFont = True
-        Me.EDITBTN.Appearance.Options.UseForeColor = True
-        Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EDITBTN.Location = New System.Drawing.Point(803, 18)
-        Me.EDITBTN.Name = "EDITBTN"
-        Me.EDITBTN.Size = New System.Drawing.Size(116, 44)
-        Me.EDITBTN.TabIndex = 2
-        Me.EDITBTN.Text = "Edit"
-        '
-        'SAVEBTN
-        '
-        Me.SAVEBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SAVEBTN.Appearance.ForeColor = System.Drawing.Color.DarkRed
-        Me.SAVEBTN.Appearance.Options.UseFont = True
-        Me.SAVEBTN.Appearance.Options.UseForeColor = True
-        Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SAVEBTN.Location = New System.Drawing.Point(938, 18)
-        Me.SAVEBTN.Name = "SAVEBTN"
-        Me.SAVEBTN.Size = New System.Drawing.Size(115, 44)
-        Me.SAVEBTN.TabIndex = 0
-        Me.SAVEBTN.Text = "Save"
-        '
-        'NEWBTN
-        '
-        Me.NEWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NEWBTN.Appearance.ForeColor = System.Drawing.Color.LimeGreen
-        Me.NEWBTN.Appearance.Options.UseFont = True
-        Me.NEWBTN.Appearance.Options.UseForeColor = True
-        Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.NEWBTN.Location = New System.Drawing.Point(1072, 18)
-        Me.NEWBTN.Name = "NEWBTN"
-        Me.NEWBTN.Size = New System.Drawing.Size(104, 44)
-        Me.NEWBTN.TabIndex = 1
-        Me.NEWBTN.Text = "New"
         '
         'T_CHANG
         '
@@ -1681,7 +1533,7 @@ Partial Class FOLOUP
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 437.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 460.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label47, 1, 0)
@@ -1706,7 +1558,7 @@ Partial Class FOLOUP
         Me.TableLayoutPanel4.RowCount = 2
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(49, 75)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(36, 75)
         Me.TableLayoutPanel4.TabIndex = 99
         '
         'TXT_BP
@@ -1716,7 +1568,7 @@ Partial Class FOLOUP
         Me.TXT_BP.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_BP.Multiline = True
         Me.TXT_BP.Name = "TXT_BP"
-        Me.TXT_BP.Size = New System.Drawing.Size(45, 34)
+        Me.TXT_BP.Size = New System.Drawing.Size(32, 34)
         Me.TXT_BP.TabIndex = 97
         Me.TXT_BP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1725,12 +1577,12 @@ Partial Class FOLOUP
         Me.TableLayoutPanel3.ColumnCount = 1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.TXT_W, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(64, 29)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(51, 29)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(42, 75)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(32, 75)
         Me.TableLayoutPanel3.TabIndex = 98
         '
         'TXT_W
@@ -1740,18 +1592,18 @@ Partial Class FOLOUP
         Me.TXT_W.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_W.Multiline = True
         Me.TXT_W.Name = "TXT_W"
-        Me.TXT_W.Size = New System.Drawing.Size(38, 34)
+        Me.TXT_W.Size = New System.Drawing.Size(28, 34)
         Me.TXT_W.TabIndex = 97
         Me.TXT_W.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label47
         '
         Me.Label47.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label47.Location = New System.Drawing.Point(63, 3)
+        Me.Label47.Location = New System.Drawing.Point(50, 3)
         Me.Label47.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label47.Name = "Label47"
         Me.Label47.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label47.Size = New System.Drawing.Size(44, 20)
+        Me.Label47.Size = New System.Drawing.Size(34, 20)
         Me.Label47.TabIndex = 95
         Me.Label47.Text = "W"
         Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1763,7 +1615,7 @@ Partial Class FOLOUP
         Me.Label46.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label46.Name = "Label46"
         Me.Label46.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label46.Size = New System.Drawing.Size(51, 20)
+        Me.Label46.Size = New System.Drawing.Size(38, 20)
         Me.Label46.TabIndex = 94
         Me.Label46.Text = "BP"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1779,7 +1631,7 @@ Partial Class FOLOUP
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.06383!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_PLACENTA, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_WIGHT, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_LIQPUR, 2, 1)
@@ -1790,18 +1642,18 @@ Partial Class FOLOUP
         Me.TableLayoutPanel1.Controls.Add(Me.Label31, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label21, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_WEEK, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(115, 29)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(92, 29)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.12644!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.87356!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(432, 75)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(455, 75)
         Me.TableLayoutPanel1.TabIndex = 87
         '
         'TXT_PLACENTA
         '
         Me.TXT_PLACENTA.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_PLACENTA.Location = New System.Drawing.Point(333, 39)
+        Me.TXT_PLACENTA.Location = New System.Drawing.Point(338, 39)
         Me.TXT_PLACENTA.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_PLACENTA.Multiline = True
         Me.TXT_PLACENTA.Name = "TXT_PLACENTA"
@@ -1812,7 +1664,7 @@ Partial Class FOLOUP
         'TXT_WIGHT
         '
         Me.TXT_WIGHT.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_WIGHT.Location = New System.Drawing.Point(81, 39)
+        Me.TXT_WIGHT.Location = New System.Drawing.Point(84, 39)
         Me.TXT_WIGHT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_WIGHT.Multiline = True
         Me.TXT_WIGHT.Name = "TXT_WIGHT"
@@ -1823,7 +1675,7 @@ Partial Class FOLOUP
         'TXT_LIQPUR
         '
         Me.TXT_LIQPUR.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_LIQPUR.Location = New System.Drawing.Point(162, 39)
+        Me.TXT_LIQPUR.Location = New System.Drawing.Point(167, 39)
         Me.TXT_LIQPUR.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_LIQPUR.Multiline = True
         Me.TXT_LIQPUR.Name = "TXT_LIQPUR"
@@ -1838,8 +1690,8 @@ Partial Class FOLOUP
         Me.TXT_SEX.BackColor = System.Drawing.Color.Aqua
         Me.TXT_SEX.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_SEX.FormattingEnabled = True
-        Me.TXT_SEX.Items.AddRange(New Object() {"undefined", "Male", "Femal"})
-        Me.TXT_SEX.Location = New System.Drawing.Point(228, 39)
+        Me.TXT_SEX.Items.AddRange(New Object() {"undefined", "Male", "Femal", "Male & Femal", "Male  & Male ", "Femal & Femal"})
+        Me.TXT_SEX.Location = New System.Drawing.Point(233, 39)
         Me.TXT_SEX.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_SEX.Name = "TXT_SEX"
         Me.TXT_SEX.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1849,7 +1701,7 @@ Partial Class FOLOUP
         'Label37
         '
         Me.Label37.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label37.Location = New System.Drawing.Point(333, 2)
+        Me.Label37.Location = New System.Drawing.Point(338, 2)
         Me.Label37.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label37.Name = "Label37"
         Me.Label37.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1861,7 +1713,7 @@ Partial Class FOLOUP
         'Label35
         '
         Me.Label35.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label35.Location = New System.Drawing.Point(228, 2)
+        Me.Label35.Location = New System.Drawing.Point(233, 2)
         Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label35.Name = "Label35"
         Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1873,7 +1725,7 @@ Partial Class FOLOUP
         'Label33
         '
         Me.Label33.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label33.Location = New System.Drawing.Point(162, 2)
+        Me.Label33.Location = New System.Drawing.Point(167, 2)
         Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label33.Name = "Label33"
         Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1885,7 +1737,7 @@ Partial Class FOLOUP
         'Label31
         '
         Me.Label31.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label31.Location = New System.Drawing.Point(81, 2)
+        Me.Label31.Location = New System.Drawing.Point(84, 2)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1920,7 +1772,7 @@ Partial Class FOLOUP
         'Label45
         '
         Me.Label45.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label45.Location = New System.Drawing.Point(114, 3)
+        Me.Label45.Location = New System.Drawing.Point(91, 3)
         Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label45.Name = "Label45"
         Me.Label45.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1941,6 +1793,40 @@ Partial Class FOLOUP
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(376, 110)
         Me.DataGridView2.TabIndex = 90
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CODE_DRUGS"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Drugs"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "NO3"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Visible = False
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "dose"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Visible = False
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "CODE_DOS"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
         '
         'DataGridView1
         '
@@ -1999,7 +1885,7 @@ Partial Class FOLOUP
         Me.TableLayoutPanel5.ColumnCount = 3
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.0!))
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 437.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 460.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel6, 0, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel7, 1, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.Label48, 1, 0)
@@ -2024,7 +1910,7 @@ Partial Class FOLOUP
         Me.TableLayoutPanel6.RowCount = 2
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(49, 75)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(36, 75)
         Me.TableLayoutPanel6.TabIndex = 99
         '
         'TXT_BP1
@@ -2035,7 +1921,7 @@ Partial Class FOLOUP
         Me.TXT_BP1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_BP1.Multiline = True
         Me.TXT_BP1.Name = "TXT_BP1"
-        Me.TXT_BP1.Size = New System.Drawing.Size(45, 34)
+        Me.TXT_BP1.Size = New System.Drawing.Size(32, 34)
         Me.TXT_BP1.TabIndex = 97
         Me.TXT_BP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -2044,12 +1930,12 @@ Partial Class FOLOUP
         Me.TableLayoutPanel7.ColumnCount = 1
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.TXT_W1, 0, 1)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(64, 29)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(51, 29)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 2
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(42, 75)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(32, 75)
         Me.TableLayoutPanel7.TabIndex = 98
         '
         'TXT_W1
@@ -2060,18 +1946,18 @@ Partial Class FOLOUP
         Me.TXT_W1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_W1.Multiline = True
         Me.TXT_W1.Name = "TXT_W1"
-        Me.TXT_W1.Size = New System.Drawing.Size(38, 34)
+        Me.TXT_W1.Size = New System.Drawing.Size(28, 34)
         Me.TXT_W1.TabIndex = 97
         Me.TXT_W1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label48
         '
         Me.Label48.ForeColor = System.Drawing.Color.Maroon
-        Me.Label48.Location = New System.Drawing.Point(63, 3)
+        Me.Label48.Location = New System.Drawing.Point(50, 3)
         Me.Label48.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label48.Name = "Label48"
         Me.Label48.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label48.Size = New System.Drawing.Size(44, 20)
+        Me.Label48.Size = New System.Drawing.Size(34, 20)
         Me.Label48.TabIndex = 95
         Me.Label48.Text = "W"
         Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2083,7 +1969,7 @@ Partial Class FOLOUP
         Me.Label49.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label49.Name = "Label49"
         Me.Label49.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label49.Size = New System.Drawing.Size(51, 20)
+        Me.Label49.Size = New System.Drawing.Size(38, 20)
         Me.Label49.TabIndex = 94
         Me.Label49.Text = "BP"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2099,7 +1985,7 @@ Partial Class FOLOUP
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.06383!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64.0!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103.0!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98.0!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_PLACENTA1, 4, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_WEIGHT1, 1, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_LIQOUR1, 2, 1)
@@ -2110,19 +1996,19 @@ Partial Class FOLOUP
         Me.TableLayoutPanel8.Controls.Add(Me.Label53, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.Label54, 0, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_WEEK1, 0, 1)
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(115, 29)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(92, 29)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 2
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.12644!))
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.87356!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(432, 75)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(455, 75)
         Me.TableLayoutPanel8.TabIndex = 87
         '
         'TXT_PLACENTA1
         '
         Me.TXT_PLACENTA1.BackColor = System.Drawing.Color.White
         Me.TXT_PLACENTA1.Enabled = False
-        Me.TXT_PLACENTA1.Location = New System.Drawing.Point(333, 39)
+        Me.TXT_PLACENTA1.Location = New System.Drawing.Point(338, 39)
         Me.TXT_PLACENTA1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_PLACENTA1.Multiline = True
         Me.TXT_PLACENTA1.Name = "TXT_PLACENTA1"
@@ -2135,7 +2021,7 @@ Partial Class FOLOUP
         '
         Me.TXT_WEIGHT1.BackColor = System.Drawing.Color.White
         Me.TXT_WEIGHT1.Enabled = False
-        Me.TXT_WEIGHT1.Location = New System.Drawing.Point(81, 39)
+        Me.TXT_WEIGHT1.Location = New System.Drawing.Point(84, 39)
         Me.TXT_WEIGHT1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_WEIGHT1.Multiline = True
         Me.TXT_WEIGHT1.Name = "TXT_WEIGHT1"
@@ -2147,7 +2033,7 @@ Partial Class FOLOUP
         '
         Me.TXT_LIQOUR1.BackColor = System.Drawing.Color.White
         Me.TXT_LIQOUR1.Enabled = False
-        Me.TXT_LIQOUR1.Location = New System.Drawing.Point(162, 39)
+        Me.TXT_LIQOUR1.Location = New System.Drawing.Point(167, 39)
         Me.TXT_LIQOUR1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_LIQOUR1.Multiline = True
         Me.TXT_LIQOUR1.Name = "TXT_LIQOUR1"
@@ -2162,7 +2048,7 @@ Partial Class FOLOUP
         Me.TXT_SEX1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_SEX1.FormattingEnabled = True
         Me.TXT_SEX1.Items.AddRange(New Object() {"undefined", "Male", "Femal"})
-        Me.TXT_SEX1.Location = New System.Drawing.Point(228, 39)
+        Me.TXT_SEX1.Location = New System.Drawing.Point(233, 39)
         Me.TXT_SEX1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_SEX1.Name = "TXT_SEX1"
         Me.TXT_SEX1.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2172,7 +2058,7 @@ Partial Class FOLOUP
         'Label50
         '
         Me.Label50.ForeColor = System.Drawing.Color.Maroon
-        Me.Label50.Location = New System.Drawing.Point(333, 2)
+        Me.Label50.Location = New System.Drawing.Point(338, 2)
         Me.Label50.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label50.Name = "Label50"
         Me.Label50.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2184,7 +2070,7 @@ Partial Class FOLOUP
         'Label51
         '
         Me.Label51.ForeColor = System.Drawing.Color.Maroon
-        Me.Label51.Location = New System.Drawing.Point(228, 2)
+        Me.Label51.Location = New System.Drawing.Point(233, 2)
         Me.Label51.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label51.Name = "Label51"
         Me.Label51.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2196,7 +2082,7 @@ Partial Class FOLOUP
         'Label52
         '
         Me.Label52.ForeColor = System.Drawing.Color.Maroon
-        Me.Label52.Location = New System.Drawing.Point(162, 2)
+        Me.Label52.Location = New System.Drawing.Point(167, 2)
         Me.Label52.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label52.Name = "Label52"
         Me.Label52.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2208,7 +2094,7 @@ Partial Class FOLOUP
         'Label53
         '
         Me.Label53.ForeColor = System.Drawing.Color.Maroon
-        Me.Label53.Location = New System.Drawing.Point(81, 2)
+        Me.Label53.Location = New System.Drawing.Point(84, 2)
         Me.Label53.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label53.Name = "Label53"
         Me.Label53.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2244,7 +2130,7 @@ Partial Class FOLOUP
         'Label55
         '
         Me.Label55.ForeColor = System.Drawing.Color.Maroon
-        Me.Label55.Location = New System.Drawing.Point(114, 3)
+        Me.Label55.Location = New System.Drawing.Point(91, 3)
         Me.Label55.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label55.Name = "Label55"
         Me.Label55.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2266,79 +2152,6 @@ Partial Class FOLOUP
         Me.DataGridView4.ReadOnly = True
         Me.DataGridView4.Size = New System.Drawing.Size(376, 110)
         Me.DataGridView4.TabIndex = 90
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.AllowUserToAddRows = False
-        Me.DataGridView3.AllowUserToDeleteRows = False
-        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
-        Me.DataGridView3.Location = New System.Drawing.Point(2, 12)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.ReadOnly = True
-        Me.DataGridView3.Size = New System.Drawing.Size(365, 109)
-        Me.DataGridView3.TabIndex = 89
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "CODE_DRUGS"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Drugs"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "NO3"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Visible = False
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "dose"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Visible = False
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "CODE_DOS"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CODE_NESA_SHKWA"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "CODE_COMP"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Visible = False
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "NAME_NESA_SHKWA"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Complaiont"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'TXT_CODE100
-        '
-        Me.TXT_CODE100.BackColor = System.Drawing.Color.White
-        Me.TXT_CODE100.Enabled = False
-        Me.TXT_CODE100.Location = New System.Drawing.Point(335, 6)
-        Me.TXT_CODE100.Name = "TXT_CODE100"
-        Me.TXT_CODE100.Size = New System.Drawing.Size(42, 23)
-        Me.TXT_CODE100.TabIndex = 90
-        Me.TXT_CODE100.Visible = False
         '
         'DataGridViewTextBoxColumn3
         '
@@ -2378,6 +2191,208 @@ Partial Class FOLOUP
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         Me.DataGridViewTextBoxColumn6.Visible = False
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.DataGridView3.Location = New System.Drawing.Point(2, 12)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.Size = New System.Drawing.Size(365, 109)
+        Me.DataGridView3.TabIndex = 89
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CODE_NESA_SHKWA"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CODE_COMP"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "NAME_NESA_SHKWA"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Complaiont"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'BTN_PHARM
+        '
+        Me.BTN_PHARM.ImageOptions.Image = CType(resources.GetObject("BTN_PHARM.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PHARM.Location = New System.Drawing.Point(801, 10)
+        Me.BTN_PHARM.Name = "BTN_PHARM"
+        Me.BTN_PHARM.Size = New System.Drawing.Size(38, 37)
+        Me.BTN_PHARM.TabIndex = 84
+        '
+        'BTN_COMPLAIONT
+        '
+        Me.BTN_COMPLAIONT.ImageOptions.Image = CType(resources.GetObject("BTN_COMPLAIONT.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_COMPLAIONT.Location = New System.Drawing.Point(321, 9)
+        Me.BTN_COMPLAIONT.Name = "BTN_COMPLAIONT"
+        Me.BTN_COMPLAIONT.Size = New System.Drawing.Size(38, 37)
+        Me.BTN_COMPLAIONT.TabIndex = 84
+        '
+        'BTN_BABY
+        '
+        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_BABY.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.BTN_BABY.Appearance.Options.UseFont = True
+        Me.BTN_BABY.Appearance.Options.UseForeColor = True
+        Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_baby_64
+        Me.BTN_BABY.Location = New System.Drawing.Point(1227, 16)
+        Me.BTN_BABY.Name = "BTN_BABY"
+        Me.BTN_BABY.Size = New System.Drawing.Size(74, 70)
+        Me.BTN_BABY.TabIndex = 58
+        Me.BTN_BABY.Text = "BABY IS COME"
+        '
+        'BTN_3RD
+        '
+        Me.BTN_3RD.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_3RD.Appearance.Options.UseFont = True
+        Me.BTN_3RD.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_3_32
+        Me.BTN_3RD.Location = New System.Drawing.Point(1169, 14)
+        Me.BTN_3RD.Name = "BTN_3RD"
+        Me.BTN_3RD.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_3RD.TabIndex = 54
+        Me.BTN_3RD.Text = "1st"
+        '
+        'BTN_2ND
+        '
+        Me.BTN_2ND.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_2ND.Appearance.Options.UseFont = True
+        Me.BTN_2ND.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_2_32
+        Me.BTN_2ND.Location = New System.Drawing.Point(1121, 14)
+        Me.BTN_2ND.Name = "BTN_2ND"
+        Me.BTN_2ND.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_2ND.TabIndex = 53
+        Me.BTN_2ND.Text = "1st"
+        '
+        'BTN_1ST
+        '
+        Me.BTN_1ST.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_1ST.Appearance.Options.UseFont = True
+        Me.BTN_1ST.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_level_1_32
+        Me.BTN_1ST.Location = New System.Drawing.Point(1072, 14)
+        Me.BTN_1ST.Name = "BTN_1ST"
+        Me.BTN_1ST.Size = New System.Drawing.Size(38, 34)
+        Me.BTN_1ST.TabIndex = 52
+        Me.BTN_1ST.Text = "1st"
+        '
+        'ALL_Prescription
+        '
+        Me.ALL_Prescription.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ALL_Prescription.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.ALL_Prescription.Appearance.Options.UseFont = True
+        Me.ALL_Prescription.Appearance.Options.UseForeColor = True
+        Me.ALL_Prescription.ImageOptions.Image = CType(resources.GetObject("ALL_Prescription.ImageOptions.Image"), System.Drawing.Image)
+        Me.ALL_Prescription.Location = New System.Drawing.Point(318, 17)
+        Me.ALL_Prescription.Name = "ALL_Prescription"
+        Me.ALL_Prescription.Size = New System.Drawing.Size(174, 44)
+        Me.ALL_Prescription.TabIndex = 8
+        Me.ALL_Prescription.Text = "ALL Prescription"
+        '
+        'EXITBTN
+        '
+        Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EXITBTN.Appearance.Options.UseFont = True
+        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EXITBTN.Location = New System.Drawing.Point(11, 18)
+        Me.EXITBTN.Name = "EXITBTN"
+        Me.EXITBTN.Size = New System.Drawing.Size(106, 44)
+        Me.EXITBTN.TabIndex = 7
+        Me.EXITBTN.Text = "Exit"
+        '
+        'BTN_FOLOWUP
+        '
+        Me.BTN_FOLOWUP.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_FOLOWUP.Appearance.Options.UseFont = True
+        Me.BTN_FOLOWUP.ImageOptions.Image = CType(resources.GetObject("BTN_FOLOWUP.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(129, 18)
+        Me.BTN_FOLOWUP.Name = "BTN_FOLOWUP"
+        Me.BTN_FOLOWUP.Size = New System.Drawing.Size(167, 44)
+        Me.BTN_FOLOWUP.TabIndex = 6
+        Me.BTN_FOLOWUP.Text = "Folow up Card"
+        '
+        'BTN_PRESCRIPTION
+        '
+        Me.BTN_PRESCRIPTION.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_PRESCRIPTION.Appearance.ForeColor = System.Drawing.Color.Purple
+        Me.BTN_PRESCRIPTION.Appearance.Options.UseFont = True
+        Me.BTN_PRESCRIPTION.Appearance.Options.UseForeColor = True
+        Me.BTN_PRESCRIPTION.ImageOptions.Image = CType(resources.GetObject("BTN_PRESCRIPTION.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PRESCRIPTION.Location = New System.Drawing.Point(507, 17)
+        Me.BTN_PRESCRIPTION.Name = "BTN_PRESCRIPTION"
+        Me.BTN_PRESCRIPTION.Size = New System.Drawing.Size(151, 44)
+        Me.BTN_PRESCRIPTION.TabIndex = 5
+        Me.BTN_PRESCRIPTION.Text = "Prescription"
+        '
+        'SEARCHBTN
+        '
+        Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SEARCHBTN.Appearance.Options.UseFont = True
+        Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SEARCHBTN.Location = New System.Drawing.Point(673, 17)
+        Me.SEARCHBTN.Name = "SEARCHBTN"
+        Me.SEARCHBTN.Size = New System.Drawing.Size(112, 44)
+        Me.SEARCHBTN.TabIndex = 4
+        Me.SEARCHBTN.Text = "Search"
+        '
+        'DELETBTN
+        '
+        Me.DELETBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DELETBTN.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.DELETBTN.Appearance.Options.UseFont = True
+        Me.DELETBTN.Appearance.Options.UseForeColor = True
+        Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.DELETBTN.Location = New System.Drawing.Point(798, 18)
+        Me.DELETBTN.Name = "DELETBTN"
+        Me.DELETBTN.Size = New System.Drawing.Size(116, 44)
+        Me.DELETBTN.TabIndex = 3
+        Me.DELETBTN.Text = "Delet"
+        '
+        'EDITBTN
+        '
+        Me.EDITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EDITBTN.Appearance.ForeColor = System.Drawing.Color.SteelBlue
+        Me.EDITBTN.Appearance.Options.UseFont = True
+        Me.EDITBTN.Appearance.Options.UseForeColor = True
+        Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EDITBTN.Location = New System.Drawing.Point(928, 17)
+        Me.EDITBTN.Name = "EDITBTN"
+        Me.EDITBTN.Size = New System.Drawing.Size(116, 44)
+        Me.EDITBTN.TabIndex = 2
+        Me.EDITBTN.Text = "Edit"
+        '
+        'SAVEBTN
+        '
+        Me.SAVEBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SAVEBTN.Appearance.ForeColor = System.Drawing.Color.DarkRed
+        Me.SAVEBTN.Appearance.Options.UseFont = True
+        Me.SAVEBTN.Appearance.Options.UseForeColor = True
+        Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SAVEBTN.Location = New System.Drawing.Point(1056, 17)
+        Me.SAVEBTN.Name = "SAVEBTN"
+        Me.SAVEBTN.Size = New System.Drawing.Size(115, 44)
+        Me.SAVEBTN.TabIndex = 0
+        Me.SAVEBTN.Text = "Save"
+        '
+        'NEWBTN
+        '
+        Me.NEWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NEWBTN.Appearance.ForeColor = System.Drawing.Color.LimeGreen
+        Me.NEWBTN.Appearance.Options.UseFont = True
+        Me.NEWBTN.Appearance.Options.UseForeColor = True
+        Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.NEWBTN.Location = New System.Drawing.Point(1184, 18)
+        Me.NEWBTN.Name = "NEWBTN"
+        Me.NEWBTN.Size = New System.Drawing.Size(104, 44)
+        Me.NEWBTN.TabIndex = 1
+        Me.NEWBTN.Text = "New"
         '
         'FOLOUP
         '
@@ -2620,4 +2635,5 @@ Partial Class FOLOUP
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents ALL_Prescription As DevExpress.XtraEditors.SimpleButton
 End Class

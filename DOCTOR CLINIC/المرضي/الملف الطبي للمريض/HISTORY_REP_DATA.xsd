@@ -9,34 +9,34 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HISTORY_PATIONTableAdapter" GeneratorDataComponentClassName="HISTORY_PATIONTableAdapter" Name="HISTORY_PATION" UserDataComponentName="HISTORY_PATIONTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.HISTORY_PATION" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.HISTORY_PATION" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        HISTORY_PATION.*
-FROM            HISTORY_PATION</CommandText>
+                    <CommandText>SELECT R_CODE, R_DATE, R_CODE_DOC, DO_NAME, DO_TKHSOS, R_CODE_PA, PA_NAME, PA_AGE, PA_TYPE, PA_OP, R_HRARA, R_D, R_KG, R_INFO, R_DT_PHARM, R_DT_NO3, R_DT_GOR3A, R_STAT FROM HISTORY_PATION</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="كود الروشتة" DataSetColumn="كود الروشتة" />
-              <Mapping SourceColumn="تاريخ الروشتة" DataSetColumn="تاريخ الروشتة" />
-              <Mapping SourceColumn="كود الطبيب" DataSetColumn="كود الطبيب" />
-              <Mapping SourceColumn="أسم الطبيب" DataSetColumn="أسم الطبيب" />
-              <Mapping SourceColumn="تخصص الطبيب" DataSetColumn="تخصص الطبيب" />
-              <Mapping SourceColumn="كود المريض" DataSetColumn="كود المريض" />
-              <Mapping SourceColumn="اسم المريض" DataSetColumn="اسم المريض" />
-              <Mapping SourceColumn="عمر المريض" DataSetColumn="عمر المريض" />
-              <Mapping SourceColumn="نوع المريض" DataSetColumn="نوع المريض" />
-              <Mapping SourceColumn="عمليات سابقة" DataSetColumn="عمليات سابقة" />
-              <Mapping SourceColumn="درجة الحرارة" DataSetColumn="درجة الحرارة" />
-              <Mapping SourceColumn="الضغط" DataSetColumn="الضغط" />
-              <Mapping SourceColumn="الوزن" DataSetColumn="الوزن" />
-              <Mapping SourceColumn="شكوى المريض" DataSetColumn="شكوى المريض" />
-              <Mapping SourceColumn="الدواء" DataSetColumn="الدواء" />
-              <Mapping SourceColumn="نوع الدواء" DataSetColumn="نوع الدواء" />
-              <Mapping SourceColumn="الجرعة" DataSetColumn="الجرعة" />
+              <Mapping SourceColumn="R_CODE" DataSetColumn="R_CODE" />
+              <Mapping SourceColumn="R_DATE" DataSetColumn="R_DATE" />
+              <Mapping SourceColumn="R_CODE_DOC" DataSetColumn="R_CODE_DOC" />
+              <Mapping SourceColumn="DO_NAME" DataSetColumn="DO_NAME" />
+              <Mapping SourceColumn="DO_TKHSOS" DataSetColumn="DO_TKHSOS" />
+              <Mapping SourceColumn="R_CODE_PA" DataSetColumn="R_CODE_PA" />
+              <Mapping SourceColumn="PA_NAME" DataSetColumn="PA_NAME" />
+              <Mapping SourceColumn="PA_AGE" DataSetColumn="PA_AGE" />
+              <Mapping SourceColumn="PA_TYPE" DataSetColumn="PA_TYPE" />
+              <Mapping SourceColumn="PA_OP" DataSetColumn="PA_OP" />
+              <Mapping SourceColumn="R_HRARA" DataSetColumn="R_HRARA" />
+              <Mapping SourceColumn="R_D" DataSetColumn="R_D" />
+              <Mapping SourceColumn="R_KG" DataSetColumn="R_KG" />
+              <Mapping SourceColumn="R_INFO" DataSetColumn="R_INFO" />
+              <Mapping SourceColumn="R_DT_PHARM" DataSetColumn="R_DT_PHARM" />
+              <Mapping SourceColumn="R_DT_NO3" DataSetColumn="R_DT_NO3" />
+              <Mapping SourceColumn="R_DT_GOR3A" DataSetColumn="R_DT_GOR3A" />
+              <Mapping SourceColumn="R_STAT" DataSetColumn="R_STAT" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -48,128 +48,129 @@ FROM            HISTORY_PATION</CommandText>
   <xs:element name="HISTORY_REP_DATA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HISTORY_REP_DATA" msprop:Generator_UserDSName="HISTORY_REP_DATA">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="HISTORY_PATION" msprop:Generator_TableClassName="HISTORY_PATIONDataTable" msprop:Generator_TableVarName="tableHISTORY_PATION" msprop:Generator_RowChangedName="HISTORY_PATIONRowChanged" msprop:Generator_TablePropName="HISTORY_PATION" msprop:Generator_RowDeletingName="HISTORY_PATIONRowDeleting" msprop:Generator_RowChangingName="HISTORY_PATIONRowChanging" msprop:Generator_RowEvHandlerName="HISTORY_PATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="HISTORY_PATIONRowDeleted" msprop:Generator_RowClassName="HISTORY_PATIONRow" msprop:Generator_UserTableName="HISTORY_PATION" msprop:Generator_RowEvArgName="HISTORY_PATIONRowChangeEvent">
+        <xs:element name="HISTORY_PATION" msprop:Generator_TableClassName="HISTORY_PATIONDataTable" msprop:Generator_TableVarName="tableHISTORY_PATION" msprop:Generator_TablePropName="HISTORY_PATION" msprop:Generator_RowDeletingName="HISTORY_PATIONRowDeleting" msprop:Generator_RowChangingName="HISTORY_PATIONRowChanging" msprop:Generator_RowEvHandlerName="HISTORY_PATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="HISTORY_PATIONRowDeleted" msprop:Generator_UserTableName="HISTORY_PATION" msprop:Generator_RowChangedName="HISTORY_PATIONRowChanged" msprop:Generator_RowEvArgName="HISTORY_PATIONRowChangeEvent" msprop:Generator_RowClassName="HISTORY_PATIONRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="كود_x0020_الروشتة" msprop:Generator_ColumnVarNameInTable="columnكود_الروشتة" msprop:Generator_ColumnPropNameInRow="كود_الروشتة" msprop:Generator_ColumnPropNameInTable="كود_الروشتةColumn" msprop:Generator_UserColumnName="كود الروشتة" minOccurs="0">
+              <xs:element name="R_CODE" msprop:Generator_ColumnVarNameInTable="columnR_CODE" msprop:Generator_ColumnPropNameInRow="R_CODE" msprop:Generator_ColumnPropNameInTable="R_CODEColumn" msprop:Generator_UserColumnName="R_CODE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="تاريخ_x0020_الروشتة" msprop:Generator_ColumnVarNameInTable="columnتاريخ_الروشتة" msprop:Generator_ColumnPropNameInRow="تاريخ_الروشتة" msprop:Generator_ColumnPropNameInTable="تاريخ_الروشتةColumn" msprop:Generator_UserColumnName="تاريخ الروشتة" minOccurs="0">
+              <xs:element name="R_DATE" msprop:Generator_ColumnVarNameInTable="columnR_DATE" msprop:Generator_ColumnPropNameInRow="R_DATE" msprop:Generator_ColumnPropNameInTable="R_DATEColumn" msprop:Generator_UserColumnName="R_DATE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="كود_x0020_الطبيب" msprop:Generator_ColumnVarNameInTable="columnكود_الطبيب" msprop:Generator_ColumnPropNameInRow="كود_الطبيب" msprop:Generator_ColumnPropNameInTable="كود_الطبيبColumn" msprop:Generator_UserColumnName="كود الطبيب" minOccurs="0">
+              <xs:element name="R_CODE_DOC" msprop:Generator_ColumnVarNameInTable="columnR_CODE_DOC" msprop:Generator_ColumnPropNameInRow="R_CODE_DOC" msprop:Generator_ColumnPropNameInTable="R_CODE_DOCColumn" msprop:Generator_UserColumnName="R_CODE_DOC" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="أسم_x0020_الطبيب" msprop:Generator_ColumnVarNameInTable="columnأسم_الطبيب" msprop:Generator_ColumnPropNameInRow="أسم_الطبيب" msprop:Generator_ColumnPropNameInTable="أسم_الطبيبColumn" msprop:Generator_UserColumnName="أسم الطبيب" minOccurs="0">
+              <xs:element name="DO_NAME" msprop:Generator_ColumnVarNameInTable="columnDO_NAME" msprop:Generator_ColumnPropNameInRow="DO_NAME" msprop:Generator_ColumnPropNameInTable="DO_NAMEColumn" msprop:Generator_UserColumnName="DO_NAME" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="تخصص_x0020_الطبيب" msprop:Generator_ColumnVarNameInTable="columnتخصص_الطبيب" msprop:Generator_ColumnPropNameInRow="تخصص_الطبيب" msprop:Generator_ColumnPropNameInTable="تخصص_الطبيبColumn" msprop:Generator_UserColumnName="تخصص الطبيب" minOccurs="0">
+              <xs:element name="DO_TKHSOS" msprop:Generator_ColumnVarNameInTable="columnDO_TKHSOS" msprop:Generator_ColumnPropNameInRow="DO_TKHSOS" msprop:Generator_ColumnPropNameInTable="DO_TKHSOSColumn" msprop:Generator_UserColumnName="DO_TKHSOS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="كود_x0020_المريض" msprop:Generator_ColumnVarNameInTable="columnكود_المريض" msprop:Generator_ColumnPropNameInRow="كود_المريض" msprop:Generator_ColumnPropNameInTable="كود_المريضColumn" msprop:Generator_UserColumnName="كود المريض" minOccurs="0">
+              <xs:element name="R_CODE_PA" msprop:Generator_ColumnVarNameInTable="columnR_CODE_PA" msprop:Generator_ColumnPropNameInRow="R_CODE_PA" msprop:Generator_ColumnPropNameInTable="R_CODE_PAColumn" msprop:Generator_UserColumnName="R_CODE_PA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="اسم_x0020_المريض" msprop:Generator_ColumnVarNameInTable="columnاسم_المريض" msprop:Generator_ColumnPropNameInRow="اسم_المريض" msprop:Generator_ColumnPropNameInTable="اسم_المريضColumn" msprop:Generator_UserColumnName="اسم المريض" minOccurs="0">
+              <xs:element name="PA_NAME" msprop:Generator_ColumnVarNameInTable="columnPA_NAME" msprop:Generator_ColumnPropNameInRow="PA_NAME" msprop:Generator_ColumnPropNameInTable="PA_NAMEColumn" msprop:Generator_UserColumnName="PA_NAME" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="عمر_x0020_المريض" msprop:Generator_ColumnVarNameInTable="columnعمر_المريض" msprop:Generator_ColumnPropNameInRow="عمر_المريض" msprop:Generator_ColumnPropNameInTable="عمر_المريضColumn" msprop:Generator_UserColumnName="عمر المريض" minOccurs="0">
+              <xs:element name="PA_AGE" msprop:Generator_ColumnVarNameInTable="columnPA_AGE" msprop:Generator_ColumnPropNameInRow="PA_AGE" msprop:Generator_ColumnPropNameInTable="PA_AGEColumn" msprop:Generator_UserColumnName="PA_AGE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="نوع_x0020_المريض" msprop:Generator_ColumnVarNameInTable="columnنوع_المريض" msprop:Generator_ColumnPropNameInRow="نوع_المريض" msprop:Generator_ColumnPropNameInTable="نوع_المريضColumn" msprop:Generator_UserColumnName="نوع المريض" minOccurs="0">
+              <xs:element name="PA_TYPE" msprop:Generator_ColumnVarNameInTable="columnPA_TYPE" msprop:Generator_ColumnPropNameInRow="PA_TYPE" msprop:Generator_ColumnPropNameInTable="PA_TYPEColumn" msprop:Generator_UserColumnName="PA_TYPE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="عمليات_x0020_سابقة" msprop:Generator_ColumnVarNameInTable="columnعمليات_سابقة" msprop:Generator_ColumnPropNameInRow="عمليات_سابقة" msprop:Generator_ColumnPropNameInTable="عمليات_سابقةColumn" msprop:Generator_UserColumnName="عمليات سابقة" minOccurs="0">
+              <xs:element name="PA_OP" msprop:Generator_ColumnVarNameInTable="columnPA_OP" msprop:Generator_ColumnPropNameInRow="PA_OP" msprop:Generator_ColumnPropNameInTable="PA_OPColumn" msprop:Generator_UserColumnName="PA_OP" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="درجة_x0020_الحرارة" msprop:Generator_ColumnVarNameInTable="columnدرجة_الحرارة" msprop:Generator_ColumnPropNameInRow="درجة_الحرارة" msprop:Generator_ColumnPropNameInTable="درجة_الحرارةColumn" msprop:Generator_UserColumnName="درجة الحرارة" minOccurs="0">
+              <xs:element name="R_HRARA" msprop:Generator_ColumnVarNameInTable="columnR_HRARA" msprop:Generator_ColumnPropNameInRow="R_HRARA" msprop:Generator_ColumnPropNameInTable="R_HRARAColumn" msprop:Generator_UserColumnName="R_HRARA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الضغط" msprop:Generator_ColumnVarNameInTable="columnالضغط" msprop:Generator_ColumnPropNameInRow="الضغط" msprop:Generator_ColumnPropNameInTable="الضغطColumn" msprop:Generator_UserColumnName="الضغط" minOccurs="0">
+              <xs:element name="R_D" msprop:Generator_ColumnVarNameInTable="columnR_D" msprop:Generator_ColumnPropNameInRow="R_D" msprop:Generator_ColumnPropNameInTable="R_DColumn" msprop:Generator_UserColumnName="R_D" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الوزن" msprop:Generator_ColumnVarNameInTable="columnالوزن" msprop:Generator_ColumnPropNameInRow="الوزن" msprop:Generator_ColumnPropNameInTable="الوزنColumn" msprop:Generator_UserColumnName="الوزن" minOccurs="0">
+              <xs:element name="R_KG" msprop:Generator_ColumnVarNameInTable="columnR_KG" msprop:Generator_ColumnPropNameInRow="R_KG" msprop:Generator_ColumnPropNameInTable="R_KGColumn" msprop:Generator_UserColumnName="R_KG" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="شكوى_x0020_المريض" msprop:Generator_ColumnVarNameInTable="columnشكوى_المريض" msprop:Generator_ColumnPropNameInRow="شكوى_المريض" msprop:Generator_ColumnPropNameInTable="شكوى_المريضColumn" msprop:Generator_UserColumnName="شكوى المريض" minOccurs="0">
+              <xs:element name="R_INFO" msprop:Generator_ColumnVarNameInTable="columnR_INFO" msprop:Generator_ColumnPropNameInRow="R_INFO" msprop:Generator_ColumnPropNameInTable="R_INFOColumn" msprop:Generator_UserColumnName="R_INFO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الدواء" msprop:Generator_ColumnVarNameInTable="columnالدواء" msprop:Generator_ColumnPropNameInRow="الدواء" msprop:Generator_ColumnPropNameInTable="الدواءColumn" msprop:Generator_UserColumnName="الدواء" minOccurs="0">
+              <xs:element name="R_DT_PHARM" msprop:Generator_ColumnVarNameInTable="columnR_DT_PHARM" msprop:Generator_ColumnPropNameInRow="R_DT_PHARM" msprop:Generator_ColumnPropNameInTable="R_DT_PHARMColumn" msprop:Generator_UserColumnName="R_DT_PHARM" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="نوع_x0020_الدواء" msprop:Generator_ColumnVarNameInTable="columnنوع_الدواء" msprop:Generator_ColumnPropNameInRow="نوع_الدواء" msprop:Generator_ColumnPropNameInTable="نوع_الدواءColumn" msprop:Generator_UserColumnName="نوع الدواء" minOccurs="0">
+              <xs:element name="R_DT_NO3" msprop:Generator_ColumnVarNameInTable="columnR_DT_NO3" msprop:Generator_ColumnPropNameInRow="R_DT_NO3" msprop:Generator_ColumnPropNameInTable="R_DT_NO3Column" msprop:Generator_UserColumnName="R_DT_NO3" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="الجرعة" msprop:Generator_ColumnVarNameInTable="columnالجرعة" msprop:Generator_ColumnPropNameInRow="الجرعة" msprop:Generator_ColumnPropNameInTable="الجرعةColumn" msprop:Generator_UserColumnName="الجرعة" minOccurs="0">
+              <xs:element name="R_DT_GOR3A" msprop:Generator_ColumnVarNameInTable="columnR_DT_GOR3A" msprop:Generator_ColumnPropNameInRow="R_DT_GOR3A" msprop:Generator_ColumnPropNameInTable="R_DT_GOR3AColumn" msprop:Generator_UserColumnName="R_DT_GOR3A" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="R_STAT" msprop:Generator_ColumnVarNameInTable="columnR_STAT" msprop:Generator_ColumnPropNameInRow="R_STAT" msprop:Generator_ColumnPropNameInTable="R_STATColumn" msprop:Generator_UserColumnName="R_STAT" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
