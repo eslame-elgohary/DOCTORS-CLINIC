@@ -163,6 +163,7 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("O1").ToString = True Then
                 '========= قيود الادخال =======================
+                CALC()
                 If TOTAL.Text < 1 Then
                     MessageBox.Show("برجاء ادخال المصروفات المراد حفظها ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     TXT_ACTION.Select()
@@ -252,6 +253,7 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("O2").ToString = True Then
                 '========= قيود الادخال =======================
+                CALC()
                 If TOTAL.Text < 1 Then
                     MessageBox.Show("برجاء ادخال المصروفات المراد حفظها ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     TXT_ACTION.Select()
@@ -449,19 +451,19 @@
         CALC()
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(5).Value = "حذف"
-            Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-            TXT_M.Text = Val(DataGridView1.Rows(I).Cells(1).Value) + 1
-        Next
+        'For I As Integer = 0 To DataGridView1.Rows.Count - 1
+        '    DataGridView1.Rows(I).Cells(5).Value = "حذف"
+        '    Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
+        '    TXT_M.Text = Val(DataGridView1.Rows(I).Cells(1).Value) + 1
+        'Next
 
     End Sub
     Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-        For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(5, DataGridView1.CurrentRow.Index).Selected = True Then
-                DataGridView1.Rows.Remove(ROW)
-            End If
-        Next
+        'For Each ROW As DataGridViewRow In DataGridView1.Rows
+        '    If DataGridView1(5, DataGridView1.CurrentRow.Index).Selected = True Then
+        '        DataGridView1.Rows.Remove(ROW)
+        '    End If
+        'Next
         CALC()
     End Sub
 

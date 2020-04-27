@@ -148,19 +148,19 @@
             TXT_NAME_THLEL.Text = DT.Rows(I).Item("TAH_NAME")
         Next
     End Sub
-    Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(2).Value = "حذف"
-            Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-        Next
-    End Sub
-    Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-        For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(2, DataGridView1.CurrentRow.Index).Selected = True Then
-                DataGridView1.Rows.Remove(ROW)
-            End If
-        Next
-    End Sub
+    'Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
+    '    For I As Integer = 0 To DataGridView1.Rows.Count - 1
+    '        DataGridView1.Rows(I).Cells(2).Value = "حذف"
+    '        Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
+    '    Next
+    'End Sub
+    'Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
+    '    For Each ROW As DataGridViewRow In DataGridView1.Rows
+    '        If DataGridView1(2, DataGridView1.CurrentRow.Index).Selected = True Then
+    '            DataGridView1.Rows.Remove(ROW)
+    '        End If
+    '    Next
+    'End Sub
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False

@@ -87,6 +87,9 @@
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
         TXT_NAME_PA.Select()
+        TXT_D.Text = "0"
+        TXT_KG.Text = "0"
+        TXT_HRARA.Text = "0"
 
     End Sub
     Sub FILL_PATIENT()
@@ -453,6 +456,30 @@
         FILL_PHARM()
         FILL_GOR3A()
         FILL_DOCTOR()
+        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim DS0 As New DataSet
+        ADP0.Fill(DS0)
+        Dim DT0 = DS0.Tables(0)
+        If DT0.Rows.Count > 0 Then
+            If DT0.Rows(0).Item("S100").ToString = True Then
+                TXT_INFO.Visible = False
+                TXT_INFO2.Visible = True
+                FILL_COMPLAINT()
+            Else
+                TXT_INFO.Visible = True
+                TXT_INFO2.Visible = False
+            End If
+        End If
+    End Sub
+    Sub FILL_COMPLAINT()
+        TXT_INFO2.Items.Clear()
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM NESA_SHKWA WHERE STAT_NESA_SHKWA='TRUE' ", SqlConn)
+        DA.Fill(DT)
+        For I = 0 To DT.Rows.Count - 1
+            TXT_INFO2.Items.Add(DT.Rows(I).Item("NAME_NESA_SHKWA"))
+        Next
     End Sub
     Private Sub ELAG_FRM_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F2 Then
@@ -580,17 +607,21 @@
         End If
 
     End Sub
-    Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(5).Value = "حذف"
-            Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-        Next
+
+    Private Sub TXT_INFO2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_INFO2.SelectedIndexChanged
+        TXT_INFO.Text = TXT_INFO2.Text
     End Sub
-    Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-        For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(5, DataGridView1.CurrentRow.Index).Selected = True Then
-                DataGridView1.Rows.Remove(ROW)
-            End If
-        Next
-    End Sub
+    'Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
+    '    For I As Integer = 0 To DataGridView1.Rows.Count - 1
+    '        DataGridView1.Rows(I).Cells(5).Value = "حذف"
+    '        Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
+    '    Next
+    'End Sub
+    'Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
+    '    For Each ROW As DataGridViewRow In DataGridView1.Rows
+    '        If DataGridView1(5, DataGridView1.CurrentRow.Index).Selected = True Then
+    '            DataGridView1.Rows.Remove(ROW)
+    '        End If
+    '    Next
+    'End Sub
 End Class

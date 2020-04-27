@@ -25,6 +25,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(THLEL_FRM_ROSHTA))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.VIWERPATIN = New System.Windows.Forms.DataGridView()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -82,7 +83,6 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GRBTN.SuspendLayout()
@@ -123,6 +123,19 @@ Partial Class THLEL_FRM_ROSHTA
         Me.GroupBox1.Size = New System.Drawing.Size(907, 133)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
+        '
+        'TXT_CODE2
+        '
+        Me.TXT_CODE2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_CODE2.ForeColor = System.Drawing.Color.DeepPink
+        Me.TXT_CODE2.Location = New System.Drawing.Point(821, 90)
+        Me.TXT_CODE2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.TXT_CODE2.Name = "TXT_CODE2"
+        Me.TXT_CODE2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_CODE2.Size = New System.Drawing.Size(74, 33)
+        Me.TXT_CODE2.TabIndex = 65
+        Me.TXT_CODE2.Text = "000000"
+        Me.TXT_CODE2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'VIWERPATIN
         '
@@ -607,7 +620,6 @@ Partial Class THLEL_FRM_ROSHTA
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -637,19 +649,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column3.HeaderText = "-"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
-        '
-        'TXT_CODE2
-        '
-        Me.TXT_CODE2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_CODE2.ForeColor = System.Drawing.Color.DeepPink
-        Me.TXT_CODE2.Location = New System.Drawing.Point(821, 90)
-        Me.TXT_CODE2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.TXT_CODE2.Name = "TXT_CODE2"
-        Me.TXT_CODE2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_CODE2.Size = New System.Drawing.Size(74, 33)
-        Me.TXT_CODE2.TabIndex = 65
-        Me.TXT_CODE2.Text = "000000"
-        Me.TXT_CODE2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Column3.Visible = False
         '
         'THLEL_FRM_ROSHTA
         '
@@ -727,9 +727,6 @@ Partial Class THLEL_FRM_ROSHTA
     Friend WithEvents DATE_EDIT As ToolStripStatusLabel
     Friend WithEvents TIME_EDIT As ToolStripStatusLabel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewButtonColumn
     Friend WithEvents VIWERPATIN As DataGridView
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
@@ -741,4 +738,7 @@ Partial Class THLEL_FRM_ROSHTA
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents TXT_3MLIAT As TextBox
     Friend WithEvents TXT_CODE2 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewButtonColumn
 End Class

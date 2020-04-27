@@ -436,4 +436,20 @@
         End Try
     End Sub
 
+    Private Sub PERSONALHISTORYFORINFERTILITYToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Click
+        Try
+            ROLES("M100", INFERTRTIY)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub INFERTILITYToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles INFERTILITYToolStripMenuItem.Click
+
+        Try
+            ROLES("S100", INFERTRTIY)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class

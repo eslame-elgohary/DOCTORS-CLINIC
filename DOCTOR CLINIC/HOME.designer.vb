@@ -43,6 +43,8 @@ Partial Class HOME
         Me.FffffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PERSONALHISTORYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PFOLOWUPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.التكويداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_PATIONT = New System.Windows.Forms.ToolStripMenuItem()
         Me.العملاءالموردينToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -114,8 +116,8 @@ Partial Class HOME
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ReportingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.INFERTILITYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -249,7 +251,7 @@ Partial Class HOME
         '
         'ToolStripMenuItem2
         '
-        Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FffffToolStripMenuItem, Me.PERSONALHISTORYToolStripMenuItem, Me.PFOLOWUPToolStripMenuItem})
+        Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FffffToolStripMenuItem, Me.PERSONALHISTORYToolStripMenuItem, Me.PFOLOWUPToolStripMenuItem, Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem, Me.INFERTILITYToolStripMenuItem})
         Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.White
         Me.ToolStripMenuItem2.ImageTransparentColor = System.Drawing.SystemColors.HotTrack
@@ -262,22 +264,39 @@ Partial Class HOME
         Me.FffffToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
         Me.FffffToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.FffffToolStripMenuItem.Name = "FffffToolStripMenuItem"
-        Me.FffffToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.FffffToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
         Me.FffffToolStripMenuItem.Text = "WOMEN CLINIC COMPLAINT"
         '
         'PERSONALHISTORYToolStripMenuItem
         '
         Me.PERSONALHISTORYToolStripMenuItem.Name = "PERSONALHISTORYToolStripMenuItem"
-        Me.PERSONALHISTORYToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
-        Me.PERSONALHISTORYToolStripMenuItem.Text = "PERSONAL HISTORY"
+        Me.PERSONALHISTORYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
+        Me.PERSONALHISTORYToolStripMenuItem.Text = "PERSONAL HISTORY FOR FOLLOW UP"
         '
         'PFOLOWUPToolStripMenuItem
         '
         Me.PFOLOWUPToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
         Me.PFOLOWUPToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.PFOLOWUPToolStripMenuItem.Name = "PFOLOWUPToolStripMenuItem"
-        Me.PFOLOWUPToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.PFOLOWUPToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
         Me.PFOLOWUPToolStripMenuItem.Text = "P FOLLOW UP CARD"
+        '
+        'ReportingToolStripMenuItem
+        '
+        Me.ReportingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FOLOWUPCARDCLOSEToolStripMenuItem})
+        Me.ReportingToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportingToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ReportingToolStripMenuItem.Name = "ReportingToolStripMenuItem"
+        Me.ReportingToolStripMenuItem.Size = New System.Drawing.Size(92, 21)
+        Me.ReportingToolStripMenuItem.Text = "REPORTING"
+        '
+        'FOLOWUPCARDCLOSEToolStripMenuItem
+        '
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Name = "FOLOWUPCARDCLOSEToolStripMenuItem"
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Text = "FOLOW UP CARD CLOSE"
         '
         'التكويداتToolStripMenuItem
         '
@@ -765,22 +784,19 @@ Partial Class HOME
         Me.PictureBox2.TabIndex = 72
         Me.PictureBox2.TabStop = False
         '
-        'ReportingToolStripMenuItem
+        'INFERTILITYToolStripMenuItem
         '
-        Me.ReportingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FOLOWUPCARDCLOSEToolStripMenuItem})
-        Me.ReportingToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ReportingToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.ReportingToolStripMenuItem.Name = "ReportingToolStripMenuItem"
-        Me.ReportingToolStripMenuItem.Size = New System.Drawing.Size(92, 21)
-        Me.ReportingToolStripMenuItem.Text = "REPORTING"
+        Me.INFERTILITYToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.INFERTILITYToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.INFERTILITYToolStripMenuItem.Name = "INFERTILITYToolStripMenuItem"
+        Me.INFERTILITYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
+        Me.INFERTILITYToolStripMenuItem.Text = "INFERTILITY CARD"
         '
-        'FOLOWUPCARDCLOSEToolStripMenuItem
+        'PERSONALHISTORYFORINFERTILITYToolStripMenuItem
         '
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Name = "FOLOWUPCARDCLOSEToolStripMenuItem"
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Text = "FOLOW UP CARD CLOSE"
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Name = "PERSONALHISTORYFORINFERTILITYToolStripMenuItem"
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Text = "PERSONAL HISTORY FOR INFERTILITY"
         '
         'HOME
         '
@@ -914,4 +930,6 @@ Partial Class HOME
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ReportingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FOLOWUPCARDCLOSEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PERSONALHISTORYFORINFERTILITYToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents INFERTILITYToolStripMenuItem As ToolStripMenuItem
 End Class

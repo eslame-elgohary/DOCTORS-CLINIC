@@ -96,6 +96,7 @@ Partial Class ELAG_FRM
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.TXT_INFO2 = New System.Windows.Forms.ComboBox()
         Me.StatusStrip1.SuspendLayout()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -286,6 +287,7 @@ Partial Class ELAG_FRM
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_INFO2)
         Me.GroupBox1.Controls.Add(Me.TXT_CODE2)
         Me.GroupBox1.Controls.Add(Me.VIWERPATIN)
         Me.GroupBox1.Controls.Add(Me.TXT_3MLIAT)
@@ -733,7 +735,6 @@ Partial Class ELAG_FRM
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -782,6 +783,20 @@ Partial Class ELAG_FRM
         Me.Column5.HeaderText = "-"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'TXT_INFO2
+        '
+        Me.TXT_INFO2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_INFO2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_INFO2.BackColor = System.Drawing.Color.White
+        Me.TXT_INFO2.FormattingEnabled = True
+        Me.TXT_INFO2.Location = New System.Drawing.Point(5, 95)
+        Me.TXT_INFO2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_INFO2.Name = "TXT_INFO2"
+        Me.TXT_INFO2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TXT_INFO2.Size = New System.Drawing.Size(366, 29)
+        Me.TXT_INFO2.TabIndex = 65
         '
         'ELAG_FRM
         '
@@ -865,12 +880,6 @@ Partial Class ELAG_FRM
     Friend WithEvents TXT_KG As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TXT_D As TextBox
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewButtonColumn
     Friend WithEvents TXT_NO3_PHARM As TextBox
     Friend WithEvents TXT_DOCTOR As ComboBox
     Friend WithEvents Label13 As Label
@@ -887,4 +896,11 @@ Partial Class ELAG_FRM
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents TXT_3MLIAT As TextBox
     Friend WithEvents TXT_CODE2 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewButtonColumn
+    Friend WithEvents TXT_INFO2 As ComboBox
 End Class

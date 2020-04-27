@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>28</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -618,6 +618,12 @@
     <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\INFERTRTIY.Designer.vb">
+      <DependentUpon>INFERTRTIY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\INFERTRTIY.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1027,6 +1033,9 @@
     <EmbeddedResource Include="المعمل\SEARCHPRICETHLELFRM.resx">
       <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PERSONAL HISTORY\INFERTRTIY.resx">
+      <DependentUpon>INFERTRTIY.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
       <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>
     </EmbeddedResource>
@@ -1267,6 +1276,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="67520_doctor.ico" />
+    <None Include="Resources\icons8-palm-scan-40.png" />
+    <None Include="Resources\icons8-palm-scan-144.png" />
+    <None Include="Resources\icons8-uterus-40.png" />
+    <None Include="Resources\icons8-strategy-48.png" />
+    <None Include="Resources\icons8-x-ray-39.png" />
+    <None Include="Resources\icons8-reproduction-30.png" />
+    <None Include="Resources\icons8-medical-bag-42.png" />
+    <None Include="Resources\icons8-order-history-42.png" />
+    <None Include="Resources\icons8-test-tube-48.png" />
     <None Include="Resources\karma logo-02.png" />
     <None Include="Resources\icons8-baby-64.png" />
     <None Include="Resources\icons8-3-32.png" />

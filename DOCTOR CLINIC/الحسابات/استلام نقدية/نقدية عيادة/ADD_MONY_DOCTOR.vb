@@ -272,17 +272,17 @@
         CALC()
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(4).Value = "حذف"
-            Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-        Next
+        'For I As Integer = 0 To DataGridView1.Rows.Count - 1
+        '    DataGridView1.Rows(I).Cells(4).Value = "حذف"
+        '    Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
+        'Next
     End Sub
     Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-        For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(4, DataGridView1.CurrentRow.Index).Selected = True Then
-                DataGridView1.Rows.Remove(ROW)
-            End If
-        Next
+        'For Each ROW As DataGridViewRow In DataGridView1.Rows
+        '    If DataGridView1(4, DataGridView1.CurrentRow.Index).Selected = True Then
+        '        DataGridView1.Rows.Remove(ROW)
+        '    End If
+        'Next
 
         CALC()
     End Sub
@@ -297,6 +297,7 @@
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("M1").ToString = True Then
+                CALC()
                 '========= قيود الادخال =======================
                 If PA_NAME.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -397,6 +398,7 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("M2").ToString = True Then
                 '========= قيود الادخال =======================
+                CALC()
                 If PA_NAME.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     PA_NAME.Select()

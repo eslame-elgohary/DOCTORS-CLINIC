@@ -57,12 +57,6 @@ Partial Class SARF_MASRUF_FRM
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_M = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ACTIVE_DOCTOR = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PRICE = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -77,6 +71,12 @@ Partial Class SARF_MASRUF_FRM
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TOTAL = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GRBTN.SuspendLayout()
@@ -97,52 +97,52 @@ Partial Class SARF_MASRUF_FRM
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -187,7 +187,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(235, 32)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 21)
+        Me.Label4.Size = New System.Drawing.Size(92, 21)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "أسم الخزينة :"
         '
@@ -204,7 +204,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(505, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 21)
+        Me.Label2.Size = New System.Drawing.Size(102, 21)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "تاريخ الأيصال :"
         '
@@ -223,7 +223,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(712, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 21)
+        Me.Label1.Size = New System.Drawing.Size(94, 21)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "رقم الايصال :"
         '
@@ -386,7 +386,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(712, 63)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 21)
+        Me.Label3.Size = New System.Drawing.Size(67, 21)
         Me.Label3.TabIndex = 59
         Me.Label3.Text = "تفاصيل :"
         '
@@ -404,7 +404,6 @@ Partial Class SARF_MASRUF_FRM
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -414,46 +413,6 @@ Partial Class SARF_MASRUF_FRM
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(815, 135)
         Me.DataGridView1.TabIndex = 57
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "كود الخدمة"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.FillWeight = 30.0!
-        Me.Column2.HeaderText = "م"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "أسم المصروف"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.FillWeight = 60.0!
-        Me.Column4.HeaderText = "قيمة المصروف"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "تفاصيل"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.FillWeight = 25.0!
-        Me.Column6.HeaderText = "-"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
         '
         'ACTIVE_DOCTOR
         '
@@ -479,7 +438,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(366, 29)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(117, 21)
+        Me.Label11.Size = New System.Drawing.Size(119, 21)
         Me.Label11.TabIndex = 54
         Me.Label11.Text = "قيمة المصروف : "
         '
@@ -539,7 +498,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(323, 241)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(65, 21)
+        Me.Label19.Size = New System.Drawing.Size(68, 21)
         Me.Label19.TabIndex = 48
         Me.Label19.Text = "الصافي :"
         Me.Label19.Visible = False
@@ -549,7 +508,7 @@ Partial Class SARF_MASRUF_FRM
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(541, 241)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(60, 21)
+        Me.Label18.Size = New System.Drawing.Size(61, 21)
         Me.Label18.TabIndex = 47
         Me.Label18.Text = "الخصم :"
         Me.Label18.Visible = False
@@ -594,6 +553,47 @@ Partial Class SARF_MASRUF_FRM
         Me.Label6.Size = New System.Drawing.Size(48, 50)
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "+"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "كود الخدمة"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.FillWeight = 30.0!
+        Me.Column2.HeaderText = "م"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "أسم المصروف"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 60.0!
+        Me.Column4.HeaderText = "قيمة المصروف"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "تفاصيل"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.FillWeight = 25.0!
+        Me.Column6.HeaderText = "-"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
         '
         'SARF_MASRUF_FRM
         '

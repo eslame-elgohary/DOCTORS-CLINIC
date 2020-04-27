@@ -97,6 +97,51 @@ DOCTOR CLINIC
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_medical_bag_42">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_order_history_42">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_palm_scan_144">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_palm_scan_40">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_reproduction_30">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_strategy_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_test_tube_48">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_uterus_40">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_x_ray_39">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
