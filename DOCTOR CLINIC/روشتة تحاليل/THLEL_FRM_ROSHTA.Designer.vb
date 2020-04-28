@@ -83,6 +83,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.TXT_INFO2 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GRBTN.SuspendLayout()
@@ -92,6 +93,7 @@ Partial Class THLEL_FRM_ROSHTA
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_INFO2)
         Me.GroupBox1.Controls.Add(Me.TXT_CODE2)
         Me.GroupBox1.Controls.Add(Me.VIWERPATIN)
         Me.GroupBox1.Controls.Add(Me.TXT_3MLIAT)
@@ -651,6 +653,19 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column3.ReadOnly = True
         Me.Column3.Visible = False
         '
+        'TXT_INFO2
+        '
+        Me.TXT_INFO2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_INFO2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_INFO2.BackColor = System.Drawing.Color.White
+        Me.TXT_INFO2.FormattingEnabled = True
+        Me.TXT_INFO2.Location = New System.Drawing.Point(413, 93)
+        Me.TXT_INFO2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_INFO2.Name = "TXT_INFO2"
+        Me.TXT_INFO2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TXT_INFO2.Size = New System.Drawing.Size(290, 29)
+        Me.TXT_INFO2.TabIndex = 66
+        '
         'THLEL_FRM_ROSHTA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -741,4 +756,5 @@ Partial Class THLEL_FRM_ROSHTA
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewButtonColumn
+    Friend WithEvents TXT_INFO2 As ComboBox
 End Class

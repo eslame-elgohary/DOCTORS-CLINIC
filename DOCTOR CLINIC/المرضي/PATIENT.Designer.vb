@@ -34,6 +34,8 @@ Partial Class PATIENT
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PA_CHI_R1 = New System.Windows.Forms.CheckBox()
         Me.PA_OP_R1 = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PA_TYPE = New System.Windows.Forms.ComboBox()
@@ -49,8 +51,6 @@ Partial Class PATIENT
         Me.PA_TEL2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PA_TEL = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.PA_NAME = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -58,6 +58,7 @@ Partial Class PATIENT
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PA_OP = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.USER_ADD = New System.Windows.Forms.ToolStripStatusLabel()
@@ -70,7 +71,6 @@ Partial Class PATIENT
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.AUTOPA = New System.Windows.Forms.Timer(Me.components)
-        Me.PA_CHI_R1 = New System.Windows.Forms.CheckBox()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -193,6 +193,7 @@ Partial Class PATIENT
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PA_NAME)
         Me.GroupBox1.Controls.Add(Me.PA_CHI_R1)
         Me.GroupBox1.Controls.Add(Me.PA_OP_R1)
         Me.GroupBox1.Controls.Add(Me.Label12)
@@ -204,19 +205,39 @@ Partial Class PATIENT
         Me.GroupBox1.Controls.Add(Me.PA_TEL2)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.PA_TEL)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.PA_NAME)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.PA_CODE)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(842, 254)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "بيانات المرضي"
+        '
+        'PA_NAME
+        '
+        Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PA_NAME.FormattingEnabled = True
+        Me.PA_NAME.Location = New System.Drawing.Point(281, 24)
+        Me.PA_NAME.Name = "PA_NAME"
+        Me.PA_NAME.Size = New System.Drawing.Size(259, 29)
+        Me.PA_NAME.TabIndex = 1
+        '
+        'PA_CHI_R1
+        '
+        Me.PA_CHI_R1.AutoSize = True
+        Me.PA_CHI_R1.Location = New System.Drawing.Point(641, 202)
+        Me.PA_CHI_R1.Name = "PA_CHI_R1"
+        Me.PA_CHI_R1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.PA_CHI_R1.Size = New System.Drawing.Size(129, 25)
+        Me.PA_CHI_R1.TabIndex = 25
+        Me.PA_CHI_R1.Text = "هل يوجد اطفال"
+        Me.PA_CHI_R1.UseVisualStyleBackColor = True
         '
         'PA_OP_R1
         '
@@ -245,7 +266,7 @@ Partial Class PATIENT
         Me.PA_TYPE.Location = New System.Drawing.Point(12, 67)
         Me.PA_TYPE.Name = "PA_TYPE"
         Me.PA_TYPE.Size = New System.Drawing.Size(98, 29)
-        Me.PA_TYPE.TabIndex = 23
+        Me.PA_TYPE.TabIndex = 6
         '
         'GroupBox3
         '
@@ -356,23 +377,6 @@ Partial Class PATIENT
         Me.PA_TEL.TabIndex = 2
         Me.PA_TEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(155, 29)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 21)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "تليفون المريض :"
-        '
-        'PA_NAME
-        '
-        Me.PA_NAME.Location = New System.Drawing.Point(270, 26)
-        Me.PA_NAME.Name = "PA_NAME"
-        Me.PA_NAME.Size = New System.Drawing.Size(270, 29)
-        Me.PA_NAME.TabIndex = 1
-        Me.PA_NAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -439,6 +443,15 @@ Partial Class PATIENT
         Me.Label8.TabIndex = 19
         Me.Label8.Text = "أذكرها  :"
         Me.Label8.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(155, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 21)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "تليفون المريض :"
         '
         'StatusStrip1
         '
@@ -511,17 +524,6 @@ Partial Class PATIENT
         'AUTOPA
         '
         '
-        'PA_CHI_R1
-        '
-        Me.PA_CHI_R1.AutoSize = True
-        Me.PA_CHI_R1.Location = New System.Drawing.Point(641, 202)
-        Me.PA_CHI_R1.Name = "PA_CHI_R1"
-        Me.PA_CHI_R1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PA_CHI_R1.Size = New System.Drawing.Size(129, 25)
-        Me.PA_CHI_R1.TabIndex = 25
-        Me.PA_CHI_R1.Text = "هل يوجد اطفال"
-        Me.PA_CHI_R1.UseVisualStyleBackColor = True
-        '
         'PATIENT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -575,7 +577,6 @@ Partial Class PATIENT
     Friend WithEvents Label6 As Label
     Friend WithEvents PA_TEL As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents PA_NAME As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents PA_CHI As TextBox
@@ -602,4 +603,5 @@ Partial Class PATIENT
     Friend WithEvents AUTOPA As Timer
     Friend WithEvents PA_OP_R1 As CheckBox
     Friend WithEvents PA_CHI_R1 As CheckBox
+    Friend WithEvents PA_NAME As ComboBox
 End Class

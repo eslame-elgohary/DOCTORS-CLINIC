@@ -50,7 +50,6 @@
         DATE_EDIT.Text = Date.Today
         TIME_EDIT.Text = TimeOfDay
     End Sub
-
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
@@ -66,10 +65,33 @@
         '""""""""""""""" الترقيم التلقائي """"""""""""""
         PA_CODE.Text = CODE_GENE("PATIENT", "ID") + 1
         '""""""""""""""""""""""""""""""
+
+
         EDITBTN.Enabled = False
         DELETBTN.Enabled = False
         SAVEBTN.Enabled = True
         PA_NAME.Select()
+        PATION()
+        PA_NAME.Text = ""
+
+    End Sub
+    Sub PATION()
+        PA_NAME.Items.Clear()
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT PA_NAME,STAT FROM PATIENT WHERE STAT = 'TRUE'", SqlConn)
+        DA.Fill(DT)
+        If DT.Rows.Count > 0 Then
+            'Dim R As DataRow
+            'PA_NAME.AutoCompleteCustomSource.Clear()
+            'For Each R In DT.Rows
+            '    PA_NAME.AutoCompleteCustomSource.Add(R.Item(0).ToString)
+            'Next
+            For I = 0 To DT.Rows.Count - 1
+                PA_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
+
+            Next
+
+        End If
     End Sub
 
     Private Sub PATIENT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -78,13 +100,6 @@
 
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click
         Me.Close()
-    End Sub
-
-    Private Sub PA_NAME_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_NAME.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            e.SuppressKeyPress = True
-            SendKeys.Send("{Tab}")
-        End If
     End Sub
 
     Private Sub PA_TEL_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_TEL.KeyDown
@@ -135,7 +150,7 @@
             SendKeys.Send("{Tab}")
         End If
     End Sub
-    Private Sub PA_NAME_TextChanged(sender As Object, e As EventArgs) Handles PA_NAME.TextChanged
+    Private Sub PA_NAME_TextChanged(sender As Object, e As EventArgs)
         PA_NAME.BackColor = Color.White
     End Sub
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
@@ -214,7 +229,7 @@
                 End If
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable
-                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME = '" & PA_NAME.Text & "'", SqlConn)
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE = '" & PA_CODE.Text & "'", SqlConn)
                 DA.Fill(DT)
                 If DT.Rows.Count = 0 Then
                     MessageBox.Show("المريض موجود مسبقاً ، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -252,7 +267,7 @@
 
     Private Sub DELETBTN_Click(sender As Object, e As EventArgs) Handles DELETBTN.Click
         Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
-                    Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
         Dim DS0 As New DataSet
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
@@ -408,6 +423,51 @@
         Else
             PA_CHI.Visible = True
             Label9.Visible = True
+        End If
+    End Sub
+
+    Private Sub PA_NAME_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_NAME.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            SendKeys.Send("{Tab}")
+            Try
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME = '" & PA_NAME.Text & "'", SqlConn)
+                DA.Fill(DT)
+
+                Dim DR = DT.Rows(0)
+                PA_CODE.Text = DR!PA_CODE
+                PA_CODE2.Text = DR!PA_CODE2
+                PA_NAME.Text = DR!PA_NAME
+                PA_NAME2.Text = DR!PA_NAME2
+                PA_TEL.Text = DR!PA_TEL
+                PA_TEL2.Text = DR!PA_TEL2
+                PA_AGE.Text = DR!PA_AGE
+                PA_OP_R1.Checked = DR!PA_OP_R1
+                PA_OP.Text = DR!PA_OP
+                PA_CHI_R1.Checked = DR!PA_CHI_R1
+                PA_CHI.Text = DR!PA_CHI
+                PA_TYPE.Text = DR!PA_TYPE
+
+                DELETBTN.Enabled = True
+                EDITBTN.Enabled = True
+                SAVEBTN.Enabled = False
+                TIMEREDIT.Enabled = True
+                TIMERADD.Enabled = False
+                AUTOCHI.Checked = False
+                AUTOCHI.Visible = False
+
+            Catch ex As Exception
+
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub PA_TYPE_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_TYPE.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            SendKeys.Send("{Tab}")
         End If
     End Sub
 End Class

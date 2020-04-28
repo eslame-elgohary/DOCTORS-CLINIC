@@ -16,7 +16,11 @@
             TXT_HRARA.Text = DR!R_HRARA
             TXT_D.Text = DR!R_D
             TXT_KG.Text = DR!R_KG
-            TXT_INFO.Text = DR!R_INFO
+            If TXT_INFO.Visible = False Then
+                TXT_INFO2.Text = DR!R_INFO
+            Else
+                TXT_INFO.Text = DR!R_INFO
+            End If
 
             USER_ADD.Text = DR!USER_ADD
             DATE_ADD.Text = DR!DATE_ADD

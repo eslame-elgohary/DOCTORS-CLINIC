@@ -14,7 +14,11 @@
             TXT_CODE_DOCTOR.Text = DR!R_CODE_DOC
             TXT_CODE_PA.Text = DR!R_CODE_PA
 
-            TXT_INFO.Text = DR!R_INFO
+            If TXT_INFO.Visible = False Then
+                TXT_INFO2.Text = DR!R_INFO
+            Else
+                TXT_INFO.Text = DR!R_INFO
+            End If
 
             USER_ADD.Text = DR!USER_ADD
             DATE_ADD.Text = DR!DATE_ADD
@@ -448,6 +452,30 @@
         FILL_PATIENT()
         FILL_DOCTOR()
         FILL_THLEL()
+        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim DS0 As New DataSet
+        ADP0.Fill(DS0)
+        Dim DT0 = DS0.Tables(0)
+        If DT0.Rows.Count > 0 Then
+            If DT0.Rows(0).Item("S100").ToString = True Then
+                TXT_INFO.Visible = False
+                TXT_INFO2.Visible = True
+                FILL_COMPLAINT()
+            Else
+                TXT_INFO.Visible = True
+                TXT_INFO2.Visible = False
+            End If
+        End If
+    End Sub
+    Sub FILL_COMPLAINT()
+        TXT_INFO2.Items.Clear()
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM NESA_SHKWA WHERE STAT_NESA_SHKWA='TRUE' ", SqlConn)
+        DA.Fill(DT)
+        For I = 0 To DT.Rows.Count - 1
+            TXT_INFO2.Items.Add(DT.Rows(I).Item("NAME_NESA_SHKWA"))
+        Next
     End Sub
 
     Private Sub HISTORY_PA_Click(sender As Object, e As EventArgs) Handles HISTORY_PA.Click
@@ -502,5 +530,7 @@
 
     End Sub
 
-
+    Private Sub TXT_INFO2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_INFO2.SelectedIndexChanged
+        TXT_INFO.Text = TXT_INFO2.Text
+    End Sub
 End Class
