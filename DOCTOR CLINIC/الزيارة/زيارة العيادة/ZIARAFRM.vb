@@ -93,7 +93,7 @@
         End If
         '===== اجراء تخزين اسم الوحدة ==========
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "'AND TYPE_A = 'تأكيد الحجز' ", SqlConn)
         DA.Fill(DT)
 
         If DT.Rows.Count > 0 Then
@@ -105,7 +105,7 @@
             DR!CODE_TKH_H_A = TXT_TKHSOS_CODE.Text
             DR!CODE_DOC_H_A = TXT_DOC_CODE.Text
             DR!DATE_H_A = DATE_TODAY.Text
-            DR!TYPE_A = "تأكيد الحجز"
+            DR!TYPE_A = "تأكيد الحجز" & " " & Date.Now
             DT.Rows.Add(DR)
             Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
             DA.Update(DT)
@@ -125,7 +125,7 @@
         End If
         '===== اجراء تخزين اسم الوحدة ==========
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء الحجز'", SqlConn)
         DA.Fill(DT)
 
         If DT.Rows.Count > 0 Then
@@ -137,7 +137,7 @@
             DR!CODE_TKH_H_A = TXT_TKHSOS_CODE.Text
             DR!CODE_DOC_H_A = TXT_DOC_CODE.Text
             DR!DATE_H_A = DATE_TODAY.Text
-            DR!TYPE_A = "الغاء الحجز"
+            DR!TYPE_A = "الغاء الحجز" & " " & Date.Now
             DT.Rows.Add(DR)
             Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
             DA.Update(DT)
@@ -146,5 +146,52 @@
             MessageBox.Show("تمت عملية الغاء الحجز بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
             BTN_NEW_Click(sender, e)
         End If
+    End Sub
+
+    Private Sub CALL_BTN_Click(sender As Object, e As EventArgs) Handles CALL_BTN.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("يرجى ادخال اسم المريض", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA.Select()
+            Exit Sub
+        End If
+        If TXT_CALL_INFO.Text = "" Then
+            MessageBox.Show("يرجى ادخال ما تم فى المكالمة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_CALL_INFO.Select()
+            Exit Sub
+        End If
+        '===== اجراء تخزين اسم الوحدة ==========
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT ", SqlConn)
+        DA.Fill(DT)
+
+        Dim DR = DT.NewRow
+        DR!CODE_H_A = TXT_CODE.Text
+            DR!CODE_PA_H_A = TXT_PA_CODE.Text
+            DR!CODE_TKH_H_A = TXT_TKHSOS_CODE.Text
+            DR!CODE_DOC_H_A = TXT_DOC_CODE.Text
+            DR!DATE_H_A = DATE_TODAY.Text
+        DR!TYPE_A = TXT_CALL_INFO.Text & " " & Date.Now
+        DT.Rows.Add(DR)
+            Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+            DA.Update(DT)
+        '===================================================================
+
+        MessageBox.Show("تمت عملية الأتصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        BTN_NEW_Click(sender, e)
+
+    End Sub
+
+    Private Sub SEARCH_BTN_Click(sender As Object, e As EventArgs) Handles SEARCH_BTN.Click
+        If TXT_PA.Text = "" Then
+            MessageBox.Show("يرجى ادخال اسم المريض", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA.Select()
+            Exit Sub
+        End If
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter
+        DT.Clear()
+        DA = New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT,PATIENT,DOCTORS WHERE CODE_PA_H_A = PA_CODE AND CODE_DOC_H_A = DO_CODE AND DATE_H_A = '" & DATE_TODAY.Text & "' AND PA_NAME LIKE '%" & TXT_PA.Text & "%'", SqlConn)
+        DA.Fill(DT)
+        DataGridView1.DataSource = DT.DefaultView
     End Sub
 End Class

@@ -47,6 +47,14 @@ Partial Class HAGEZ_PATEINT
         Me.TXT_CODE = New System.Windows.Forms.Label()
         Me.ADD_PA = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -59,14 +67,6 @@ Partial Class HAGEZ_PATEINT
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.CODE_TIMER = New System.Windows.Forms.Timer(Me.components)
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
@@ -122,7 +122,7 @@ Partial Class HAGEZ_PATEINT
         Me.BTN_NEW.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_NEW.Appearance.Options.UseFont = True
         Me.BTN_NEW.ImageOptions.Image = CType(resources.GetObject("BTN_NEW.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_NEW.Location = New System.Drawing.Point(366, 72)
+        Me.BTN_NEW.Location = New System.Drawing.Point(381, 72)
         Me.BTN_NEW.Name = "BTN_NEW"
         Me.BTN_NEW.Size = New System.Drawing.Size(80, 42)
         Me.BTN_NEW.TabIndex = 72
@@ -133,7 +133,7 @@ Partial Class HAGEZ_PATEINT
         Me.BTN_CLOSE.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_CLOSE.Appearance.Options.UseFont = True
         Me.BTN_CLOSE.ImageOptions.Image = CType(resources.GetObject("BTN_CLOSE.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_CLOSE.Location = New System.Drawing.Point(10, 71)
+        Me.BTN_CLOSE.Location = New System.Drawing.Point(8, 71)
         Me.BTN_CLOSE.Name = "BTN_CLOSE"
         Me.BTN_CLOSE.Size = New System.Drawing.Size(41, 42)
         Me.BTN_CLOSE.TabIndex = 71
@@ -143,7 +143,7 @@ Partial Class HAGEZ_PATEINT
         Me.BTN_EDIT.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_EDIT.Appearance.Options.UseFont = True
         Me.BTN_EDIT.ImageOptions.Image = CType(resources.GetObject("BTN_EDIT.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_EDIT.Location = New System.Drawing.Point(157, 71)
+        Me.BTN_EDIT.Location = New System.Drawing.Point(170, 71)
         Me.BTN_EDIT.Name = "BTN_EDIT"
         Me.BTN_EDIT.Size = New System.Drawing.Size(91, 42)
         Me.BTN_EDIT.TabIndex = 70
@@ -154,9 +154,9 @@ Partial Class HAGEZ_PATEINT
         Me.BTN_DELET.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_DELET.Appearance.Options.UseFont = True
         Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_DELET.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_DELET.Location = New System.Drawing.Point(59, 72)
+        Me.BTN_DELET.Location = New System.Drawing.Point(58, 72)
         Me.BTN_DELET.Name = "BTN_DELET"
-        Me.BTN_DELET.Size = New System.Drawing.Size(86, 42)
+        Me.BTN_DELET.Size = New System.Drawing.Size(103, 42)
         Me.BTN_DELET.TabIndex = 69
         Me.BTN_DELET.Text = "طباعة"
         '
@@ -165,7 +165,7 @@ Partial Class HAGEZ_PATEINT
         Me.BTN_SAVE.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_SAVE.Appearance.Options.UseFont = True
         Me.BTN_SAVE.ImageOptions.Image = CType(resources.GetObject("BTN_SAVE.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_SAVE.Location = New System.Drawing.Point(259, 71)
+        Me.BTN_SAVE.Location = New System.Drawing.Point(270, 71)
         Me.BTN_SAVE.Name = "BTN_SAVE"
         Me.BTN_SAVE.Size = New System.Drawing.Size(101, 42)
         Me.BTN_SAVE.TabIndex = 68
@@ -285,12 +285,11 @@ Partial Class HAGEZ_PATEINT
         '
         'TXT_CODE
         '
-        Me.TXT_CODE.AutoSize = True
         Me.TXT_CODE.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_CODE.ForeColor = System.Drawing.Color.Green
-        Me.TXT_CODE.Location = New System.Drawing.Point(452, 63)
+        Me.TXT_CODE.Location = New System.Drawing.Point(477, 63)
         Me.TXT_CODE.Name = "TXT_CODE"
-        Me.TXT_CODE.Size = New System.Drawing.Size(104, 47)
+        Me.TXT_CODE.Size = New System.Drawing.Size(108, 47)
         Me.TXT_CODE.TabIndex = 1
         Me.TXT_CODE.Text = "100000"
         '
@@ -319,6 +318,66 @@ Partial Class HAGEZ_PATEINT
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(940, 328)
         Me.DataGridView1.TabIndex = 1
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "CODE_H"
+        Me.Column1.FillWeight = 50.0!
+        Me.Column1.HeaderText = "رقم الحجز"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "PA_NAME"
+        Me.Column2.HeaderText = "أسم المريض"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "DO_TKHSOS"
+        Me.Column3.HeaderText = "العيادة"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "DO_NAME"
+        Me.Column4.HeaderText = "أسم الطبيب"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.FillWeight = 50.0!
+        Me.Column5.HeaderText = "-"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "PA_TEL"
+        Me.Column6.HeaderText = "TEL_PA"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "PA_CODE2"
+        Me.Column7.HeaderText = "CODE2_PA"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "DATE_H"
+        Me.Column8.HeaderText = "DATE"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Visible = False
         '
         'TIMEREDIT
         '
@@ -392,66 +451,6 @@ Partial Class HAGEZ_PATEINT
         '
         'CODE_TIMER
         '
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "CODE_H"
-        Me.Column1.FillWeight = 50.0!
-        Me.Column1.HeaderText = "رقم الحجز"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "PA_NAME"
-        Me.Column2.HeaderText = "أسم المريض"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "DO_TKHSOS"
-        Me.Column3.HeaderText = "العيادة"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "DO_NAME"
-        Me.Column4.HeaderText = "أسم الطبيب"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.FillWeight = 50.0!
-        Me.Column5.HeaderText = "-"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "PA_TEL"
-        Me.Column6.HeaderText = "TEL_PA"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "PA_CODE2"
-        Me.Column7.HeaderText = "CODE2_PA"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Visible = False
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "DATE_H"
-        Me.Column8.HeaderText = "DATE"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Visible = False
         '
         'HAGEZ_PATEINT
         '
