@@ -451,4 +451,8 @@
 
         End Try
     End Sub
+
+    Private Sub REP_HAGEZ_PA_Click(sender As Object, e As EventArgs) Handles REP_HAGEZ_PA.Click
+        REP_HAGEZ.ShowDialog()
+    End Sub
 End Class

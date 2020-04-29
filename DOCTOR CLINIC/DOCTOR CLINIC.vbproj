@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -231,6 +231,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PATIENT_CRS_ALL.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير حجز مريض\HAGEZ_REP_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAGEZ_REP_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير حجز مريض\REP_HAGEZ.Designer.vb">
+      <DependentUpon>REP_HAGEZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\تقرير حجز مريض\REP_HAGEZ.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="التقارير\حساب الأطباء\DOCTOR_HESAP.vb">
       <AutoGen>True</AutoGen>
@@ -848,6 +860,13 @@
     <EmbeddedResource Include="التقارير\تقرير المرضي\PATIENT_CRS_ALL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PATIENT_CRS_ALL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير حجز مريض\HAGEZ_REP_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HAGEZ_REP_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير حجز مريض\REP_HAGEZ.resx">
+      <DependentUpon>REP_HAGEZ.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\حساب الأطباء\DOCTOR_HESAP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

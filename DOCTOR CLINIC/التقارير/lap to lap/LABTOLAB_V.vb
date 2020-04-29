@@ -93,7 +93,7 @@
         End If
         '=================================================================
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM THLEL_MAML_LABTOLAB_V WHERE ADD_DATE <='" & TXT_START_DATE.Text & "' AND ADD_DATE >='" & TXT_END_DATE.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM THLEL_MAML_LABTOLAB_V WHERE ADD_DATE >='" & TXT_START_DATE.Text & "' AND ADD_DATE <='" & TXT_END_DATE.Text & "'", SqlConn)
         DA.Fill(DT)
 
         Dim REP As New LABTOLABCRS

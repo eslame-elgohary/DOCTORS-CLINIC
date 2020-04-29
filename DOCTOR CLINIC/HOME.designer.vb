@@ -43,6 +43,8 @@ Partial Class HOME
         Me.FffffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PERSONALHISTORYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PFOLOWUPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.INFERTILITYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FOLOWUPCARDCLOSEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.التكويداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -116,8 +118,7 @@ Partial Class HOME
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.INFERTILITYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REP_HAGEZ_PA = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -280,6 +281,20 @@ Partial Class HOME
         Me.PFOLOWUPToolStripMenuItem.Name = "PFOLOWUPToolStripMenuItem"
         Me.PFOLOWUPToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
         Me.PFOLOWUPToolStripMenuItem.Text = "P FOLLOW UP CARD"
+        '
+        'PERSONALHISTORYFORINFERTILITYToolStripMenuItem
+        '
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Name = "PERSONALHISTORYFORINFERTILITYToolStripMenuItem"
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
+        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Text = "PERSONAL HISTORY FOR INFERTILITY"
+        '
+        'INFERTILITYToolStripMenuItem
+        '
+        Me.INFERTILITYToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.INFERTILITYToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.INFERTILITYToolStripMenuItem.Name = "INFERTILITYToolStripMenuItem"
+        Me.INFERTILITYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
+        Me.INFERTILITYToolStripMenuItem.Text = "INFERTILITY CARD"
         '
         'ReportingToolStripMenuItem
         '
@@ -516,7 +531,7 @@ Partial Class HOME
         '
         'التقاريرToolStripMenuItem
         '
-        Me.التقاريرToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_PATENT_REP, Me.تقريرالحساباتToolStripMenuItem, Me.BT_HESAP_DOC_FRM, Me.LABTOLABToolStripMenuItem, Me.BTN_PA_HESAPFRM})
+        Me.التقاريرToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_PATENT_REP, Me.تقريرالحساباتToolStripMenuItem, Me.BT_HESAP_DOC_FRM, Me.LABTOLABToolStripMenuItem, Me.BTN_PA_HESAPFRM, Me.REP_HAGEZ_PA})
         Me.التقاريرToolStripMenuItem.Name = "التقاريرToolStripMenuItem"
         Me.التقاريرToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.التقاريرToolStripMenuItem.Text = "التقارير"
@@ -784,19 +799,11 @@ Partial Class HOME
         Me.PictureBox2.TabIndex = 72
         Me.PictureBox2.TabStop = False
         '
-        'INFERTILITYToolStripMenuItem
+        'REP_HAGEZ_PA
         '
-        Me.INFERTILITYToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.INFERTILITYToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.INFERTILITYToolStripMenuItem.Name = "INFERTILITYToolStripMenuItem"
-        Me.INFERTILITYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
-        Me.INFERTILITYToolStripMenuItem.Text = "INFERTILITY CARD"
-        '
-        'PERSONALHISTORYFORINFERTILITYToolStripMenuItem
-        '
-        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Name = "PERSONALHISTORYFORINFERTILITYToolStripMenuItem"
-        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Size = New System.Drawing.Size(309, 22)
-        Me.PERSONALHISTORYFORINFERTILITYToolStripMenuItem.Text = "PERSONAL HISTORY FOR INFERTILITY"
+        Me.REP_HAGEZ_PA.Name = "REP_HAGEZ_PA"
+        Me.REP_HAGEZ_PA.Size = New System.Drawing.Size(172, 22)
+        Me.REP_HAGEZ_PA.Text = "تقرير حجز مريض"
         '
         'HOME
         '
@@ -932,4 +939,5 @@ Partial Class HOME
     Friend WithEvents FOLOWUPCARDCLOSEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PERSONALHISTORYFORINFERTILITYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents INFERTILITYToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents REP_HAGEZ_PA As ToolStripMenuItem
 End Class

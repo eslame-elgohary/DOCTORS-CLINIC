@@ -56,9 +56,9 @@ Partial Class LABTOLAB_V
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(35, 29)
+        Me.Label1.Location = New System.Drawing.Point(28, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 21)
+        Me.Label1.Size = New System.Drawing.Size(88, 21)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "بداية الفترة :"
         '
@@ -67,7 +67,7 @@ Partial Class LABTOLAB_V
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(284, 29)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 21)
+        Me.Label2.Size = New System.Drawing.Size(88, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "نهاية الفترة :"
         '
@@ -77,7 +77,7 @@ Partial Class LABTOLAB_V
         Me.CH_MAML.Location = New System.Drawing.Point(23, 93)
         Me.CH_MAML.Name = "CH_MAML"
         Me.CH_MAML.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_MAML.Size = New System.Drawing.Size(100, 25)
+        Me.CH_MAML.Size = New System.Drawing.Size(106, 25)
         Me.CH_MAML.TabIndex = 4
         Me.CH_MAML.Text = "أسم المعمل"
         Me.CH_MAML.UseVisualStyleBackColor = True
@@ -88,13 +88,15 @@ Partial Class LABTOLAB_V
         Me.CH_PA.Location = New System.Drawing.Point(14, 139)
         Me.CH_PA.Name = "CH_PA"
         Me.CH_PA.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_PA.Size = New System.Drawing.Size(109, 25)
+        Me.CH_PA.Size = New System.Drawing.Size(111, 25)
         Me.CH_PA.TabIndex = 5
         Me.CH_PA.Text = "أسم المريض"
         Me.CH_PA.UseVisualStyleBackColor = True
         '
         'TXT_MAML_NAME
         '
+        Me.TXT_MAML_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_MAML_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_MAML_NAME.Enabled = False
         Me.TXT_MAML_NAME.FormattingEnabled = True
         Me.TXT_MAML_NAME.Location = New System.Drawing.Point(140, 89)
@@ -104,6 +106,8 @@ Partial Class LABTOLAB_V
         '
         'TXT_PA_NAME
         '
+        Me.TXT_PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_PA_NAME.Enabled = False
         Me.TXT_PA_NAME.FormattingEnabled = True
         Me.TXT_PA_NAME.Location = New System.Drawing.Point(140, 139)
@@ -168,7 +172,7 @@ Partial Class LABTOLAB_V
         Me.Controls.Add(Me.TXT_START_DATE)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "LABTOLAB_V"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True

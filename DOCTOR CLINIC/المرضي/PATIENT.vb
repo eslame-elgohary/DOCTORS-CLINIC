@@ -238,6 +238,7 @@
                     UPDATE!PA_CODE = PA_CODE.Text
                     UPDATE!PA_CODE2 = PA_CODE2.Text
                     UPDATE!PA_NAME = PA_NAME.Text
+                    UPDATE!PA_NAME2 = PA_NAME2.Text
                     UPDATE!PA_TEL = PA_TEL.Text
                     UPDATE!PA_TEL2 = PA_TEL2.Text
                     UPDATE!PA_AGE = PA_AGE.Text
