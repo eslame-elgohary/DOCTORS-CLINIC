@@ -28,6 +28,19 @@ Partial Class USERSLAHFRM
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BTNACTIVE = New DevExpress.XtraEditors.SimpleButton()
         Me.GRS = New System.Windows.Forms.GroupBox()
+        Me.S104 = New System.Windows.Forms.CheckBox()
+        Me.S101 = New System.Windows.Forms.CheckBox()
+        Me.S102 = New System.Windows.Forms.CheckBox()
+        Me.S103 = New System.Windows.Forms.CheckBox()
+        Me.S100 = New System.Windows.Forms.CheckBox()
+        Me.M101 = New System.Windows.Forms.CheckBox()
+        Me.M102 = New System.Windows.Forms.CheckBox()
+        Me.M103 = New System.Windows.Forms.CheckBox()
+        Me.M100 = New System.Windows.Forms.CheckBox()
+        Me.N101 = New System.Windows.Forms.CheckBox()
+        Me.N102 = New System.Windows.Forms.CheckBox()
+        Me.N103 = New System.Windows.Forms.CheckBox()
+        Me.N100 = New System.Windows.Forms.CheckBox()
         Me.Q24 = New System.Windows.Forms.CheckBox()
         Me.Q21 = New System.Windows.Forms.CheckBox()
         Me.Q22 = New System.Windows.Forms.CheckBox()
@@ -117,19 +130,7 @@ Partial Class USERSLAHFRM
         Me.A3 = New System.Windows.Forms.CheckBox()
         Me.A = New System.Windows.Forms.CheckBox()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.N101 = New System.Windows.Forms.CheckBox()
-        Me.N102 = New System.Windows.Forms.CheckBox()
-        Me.N103 = New System.Windows.Forms.CheckBox()
-        Me.N100 = New System.Windows.Forms.CheckBox()
-        Me.M101 = New System.Windows.Forms.CheckBox()
-        Me.M102 = New System.Windows.Forms.CheckBox()
-        Me.M103 = New System.Windows.Forms.CheckBox()
-        Me.M100 = New System.Windows.Forms.CheckBox()
-        Me.S101 = New System.Windows.Forms.CheckBox()
-        Me.S102 = New System.Windows.Forms.CheckBox()
-        Me.S103 = New System.Windows.Forms.CheckBox()
-        Me.S100 = New System.Windows.Forms.CheckBox()
-        Me.S104 = New System.Windows.Forms.CheckBox()
+        Me.U = New System.Windows.Forms.CheckBox()
         Me.GRS.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -175,6 +176,7 @@ Partial Class USERSLAHFRM
         '
         'GRS
         '
+        Me.GRS.Controls.Add(Me.U)
         Me.GRS.Controls.Add(Me.S104)
         Me.GRS.Controls.Add(Me.S101)
         Me.GRS.Controls.Add(Me.S102)
@@ -284,6 +286,149 @@ Partial Class USERSLAHFRM
         Me.GRS.Text = "الصلاحيات"
         Me.GRS.Visible = False
         '
+        'S104
+        '
+        Me.S104.AutoSize = True
+        Me.S104.ForeColor = System.Drawing.Color.Red
+        Me.S104.Location = New System.Drawing.Point(6, 375)
+        Me.S104.Name = "S104"
+        Me.S104.Size = New System.Drawing.Size(152, 25)
+        Me.S104.TabIndex = 106
+        Me.S104.Text = "BIRTH  PROCESS"
+        Me.S104.UseVisualStyleBackColor = True
+        '
+        'S101
+        '
+        Me.S101.AutoSize = True
+        Me.S101.ForeColor = System.Drawing.Color.Green
+        Me.S101.Location = New System.Drawing.Point(90, 304)
+        Me.S101.Name = "S101"
+        Me.S101.Size = New System.Drawing.Size(68, 25)
+        Me.S101.TabIndex = 105
+        Me.S101.Text = "SAVE"
+        Me.S101.UseVisualStyleBackColor = True
+        '
+        'S102
+        '
+        Me.S102.AutoSize = True
+        Me.S102.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.S102.Location = New System.Drawing.Point(94, 327)
+        Me.S102.Name = "S102"
+        Me.S102.Size = New System.Drawing.Size(64, 25)
+        Me.S102.TabIndex = 104
+        Me.S102.Text = "EDIT"
+        Me.S102.UseVisualStyleBackColor = True
+        '
+        'S103
+        '
+        Me.S103.AutoSize = True
+        Me.S103.ForeColor = System.Drawing.Color.Red
+        Me.S103.Location = New System.Drawing.Point(82, 350)
+        Me.S103.Name = "S103"
+        Me.S103.Size = New System.Drawing.Size(76, 25)
+        Me.S103.TabIndex = 103
+        Me.S103.Text = "DELET"
+        Me.S103.UseVisualStyleBackColor = True
+        '
+        'S100
+        '
+        Me.S100.AutoSize = True
+        Me.S100.ForeColor = System.Drawing.Color.DarkGoldenrod
+        Me.S100.Location = New System.Drawing.Point(17, 280)
+        Me.S100.Name = "S100"
+        Me.S100.Size = New System.Drawing.Size(154, 25)
+        Me.S100.TabIndex = 102
+        Me.S100.Text = "FOLOWUP CARD"
+        Me.S100.UseVisualStyleBackColor = True
+        '
+        'M101
+        '
+        Me.M101.AutoSize = True
+        Me.M101.ForeColor = System.Drawing.Color.Green
+        Me.M101.Location = New System.Drawing.Point(291, 302)
+        Me.M101.Name = "M101"
+        Me.M101.Size = New System.Drawing.Size(68, 25)
+        Me.M101.TabIndex = 101
+        Me.M101.Text = "SAVE"
+        Me.M101.UseVisualStyleBackColor = True
+        '
+        'M102
+        '
+        Me.M102.AutoSize = True
+        Me.M102.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.M102.Location = New System.Drawing.Point(295, 329)
+        Me.M102.Name = "M102"
+        Me.M102.Size = New System.Drawing.Size(64, 25)
+        Me.M102.TabIndex = 100
+        Me.M102.Text = "EDIT"
+        Me.M102.UseVisualStyleBackColor = True
+        '
+        'M103
+        '
+        Me.M103.AutoSize = True
+        Me.M103.ForeColor = System.Drawing.Color.Red
+        Me.M103.Location = New System.Drawing.Point(283, 360)
+        Me.M103.Name = "M103"
+        Me.M103.Size = New System.Drawing.Size(76, 25)
+        Me.M103.TabIndex = 99
+        Me.M103.Text = "DELET"
+        Me.M103.UseVisualStyleBackColor = True
+        '
+        'M100
+        '
+        Me.M100.AutoSize = True
+        Me.M100.ForeColor = System.Drawing.Color.DarkGoldenrod
+        Me.M100.Location = New System.Drawing.Point(188, 276)
+        Me.M100.Name = "M100"
+        Me.M100.Size = New System.Drawing.Size(181, 25)
+        Me.M100.TabIndex = 98
+        Me.M100.Text = "PERSONAL HISTORY"
+        Me.M100.UseVisualStyleBackColor = True
+        '
+        'N101
+        '
+        Me.N101.AutoSize = True
+        Me.N101.ForeColor = System.Drawing.Color.Green
+        Me.N101.Location = New System.Drawing.Point(478, 302)
+        Me.N101.Name = "N101"
+        Me.N101.Size = New System.Drawing.Size(59, 25)
+        Me.N101.TabIndex = 97
+        Me.N101.Text = "حفظ"
+        Me.N101.UseVisualStyleBackColor = True
+        '
+        'N102
+        '
+        Me.N102.AutoSize = True
+        Me.N102.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.N102.Location = New System.Drawing.Point(470, 325)
+        Me.N102.Name = "N102"
+        Me.N102.Size = New System.Drawing.Size(67, 25)
+        Me.N102.TabIndex = 96
+        Me.N102.Text = "تعديل"
+        Me.N102.UseVisualStyleBackColor = True
+        '
+        'N103
+        '
+        Me.N103.AutoSize = True
+        Me.N103.ForeColor = System.Drawing.Color.Red
+        Me.N103.Location = New System.Drawing.Point(473, 348)
+        Me.N103.Name = "N103"
+        Me.N103.Size = New System.Drawing.Size(62, 25)
+        Me.N103.TabIndex = 95
+        Me.N103.Text = "حذف"
+        Me.N103.UseVisualStyleBackColor = True
+        '
+        'N100
+        '
+        Me.N100.AutoSize = True
+        Me.N100.ForeColor = System.Drawing.Color.DarkGoldenrod
+        Me.N100.Location = New System.Drawing.Point(391, 276)
+        Me.N100.Name = "N100"
+        Me.N100.Size = New System.Drawing.Size(156, 25)
+        Me.N100.TabIndex = 94
+        Me.N100.Text = "أدخال شكاوى النساء"
+        Me.N100.UseVisualStyleBackColor = True
+        '
         'Q24
         '
         Me.Q24.AutoSize = True
@@ -343,7 +488,7 @@ Partial Class USERSLAHFRM
         '
         Me.UP.AutoSize = True
         Me.UP.ForeColor = System.Drawing.Color.DarkCyan
-        Me.UP.Location = New System.Drawing.Point(558, 420)
+        Me.UP.Location = New System.Drawing.Point(319, 454)
         Me.UP.Name = "UP"
         Me.UP.Size = New System.Drawing.Size(206, 25)
         Me.UP.TabIndex = 88
@@ -1257,148 +1402,16 @@ Partial Class USERSLAHFRM
         Me.EXITBTN.Size = New System.Drawing.Size(43, 39)
         Me.EXITBTN.TabIndex = 5
         '
-        'N101
+        'U
         '
-        Me.N101.AutoSize = True
-        Me.N101.ForeColor = System.Drawing.Color.Green
-        Me.N101.Location = New System.Drawing.Point(478, 302)
-        Me.N101.Name = "N101"
-        Me.N101.Size = New System.Drawing.Size(59, 25)
-        Me.N101.TabIndex = 97
-        Me.N101.Text = "حفظ"
-        Me.N101.UseVisualStyleBackColor = True
-        '
-        'N102
-        '
-        Me.N102.AutoSize = True
-        Me.N102.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.N102.Location = New System.Drawing.Point(470, 325)
-        Me.N102.Name = "N102"
-        Me.N102.Size = New System.Drawing.Size(67, 25)
-        Me.N102.TabIndex = 96
-        Me.N102.Text = "تعديل"
-        Me.N102.UseVisualStyleBackColor = True
-        '
-        'N103
-        '
-        Me.N103.AutoSize = True
-        Me.N103.ForeColor = System.Drawing.Color.Red
-        Me.N103.Location = New System.Drawing.Point(473, 348)
-        Me.N103.Name = "N103"
-        Me.N103.Size = New System.Drawing.Size(62, 25)
-        Me.N103.TabIndex = 95
-        Me.N103.Text = "حذف"
-        Me.N103.UseVisualStyleBackColor = True
-        '
-        'N100
-        '
-        Me.N100.AutoSize = True
-        Me.N100.ForeColor = System.Drawing.Color.DarkGoldenrod
-        Me.N100.Location = New System.Drawing.Point(391, 276)
-        Me.N100.Name = "N100"
-        Me.N100.Size = New System.Drawing.Size(156, 25)
-        Me.N100.TabIndex = 94
-        Me.N100.Text = "أدخال شكاوى النساء"
-        Me.N100.UseVisualStyleBackColor = True
-        '
-        'M101
-        '
-        Me.M101.AutoSize = True
-        Me.M101.ForeColor = System.Drawing.Color.Green
-        Me.M101.Location = New System.Drawing.Point(291, 302)
-        Me.M101.Name = "M101"
-        Me.M101.Size = New System.Drawing.Size(68, 25)
-        Me.M101.TabIndex = 101
-        Me.M101.Text = "SAVE"
-        Me.M101.UseVisualStyleBackColor = True
-        '
-        'M102
-        '
-        Me.M102.AutoSize = True
-        Me.M102.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.M102.Location = New System.Drawing.Point(295, 329)
-        Me.M102.Name = "M102"
-        Me.M102.Size = New System.Drawing.Size(64, 25)
-        Me.M102.TabIndex = 100
-        Me.M102.Text = "EDIT"
-        Me.M102.UseVisualStyleBackColor = True
-        '
-        'M103
-        '
-        Me.M103.AutoSize = True
-        Me.M103.ForeColor = System.Drawing.Color.Red
-        Me.M103.Location = New System.Drawing.Point(283, 360)
-        Me.M103.Name = "M103"
-        Me.M103.Size = New System.Drawing.Size(76, 25)
-        Me.M103.TabIndex = 99
-        Me.M103.Text = "DELET"
-        Me.M103.UseVisualStyleBackColor = True
-        '
-        'M100
-        '
-        Me.M100.AutoSize = True
-        Me.M100.ForeColor = System.Drawing.Color.DarkGoldenrod
-        Me.M100.Location = New System.Drawing.Point(188, 276)
-        Me.M100.Name = "M100"
-        Me.M100.Size = New System.Drawing.Size(181, 25)
-        Me.M100.TabIndex = 98
-        Me.M100.Text = "PERSONAL HISTORY"
-        Me.M100.UseVisualStyleBackColor = True
-        '
-        'S101
-        '
-        Me.S101.AutoSize = True
-        Me.S101.ForeColor = System.Drawing.Color.Green
-        Me.S101.Location = New System.Drawing.Point(90, 304)
-        Me.S101.Name = "S101"
-        Me.S101.Size = New System.Drawing.Size(68, 25)
-        Me.S101.TabIndex = 105
-        Me.S101.Text = "SAVE"
-        Me.S101.UseVisualStyleBackColor = True
-        '
-        'S102
-        '
-        Me.S102.AutoSize = True
-        Me.S102.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.S102.Location = New System.Drawing.Point(94, 327)
-        Me.S102.Name = "S102"
-        Me.S102.Size = New System.Drawing.Size(64, 25)
-        Me.S102.TabIndex = 104
-        Me.S102.Text = "EDIT"
-        Me.S102.UseVisualStyleBackColor = True
-        '
-        'S103
-        '
-        Me.S103.AutoSize = True
-        Me.S103.ForeColor = System.Drawing.Color.Red
-        Me.S103.Location = New System.Drawing.Point(82, 350)
-        Me.S103.Name = "S103"
-        Me.S103.Size = New System.Drawing.Size(76, 25)
-        Me.S103.TabIndex = 103
-        Me.S103.Text = "DELET"
-        Me.S103.UseVisualStyleBackColor = True
-        '
-        'S100
-        '
-        Me.S100.AutoSize = True
-        Me.S100.ForeColor = System.Drawing.Color.DarkGoldenrod
-        Me.S100.Location = New System.Drawing.Point(17, 280)
-        Me.S100.Name = "S100"
-        Me.S100.Size = New System.Drawing.Size(154, 25)
-        Me.S100.TabIndex = 102
-        Me.S100.Text = "FOLOWUP CARD"
-        Me.S100.UseVisualStyleBackColor = True
-        '
-        'S104
-        '
-        Me.S104.AutoSize = True
-        Me.S104.ForeColor = System.Drawing.Color.Red
-        Me.S104.Location = New System.Drawing.Point(6, 375)
-        Me.S104.Name = "S104"
-        Me.S104.Size = New System.Drawing.Size(152, 25)
-        Me.S104.TabIndex = 106
-        Me.S104.Text = "BIRTH  PROCESS"
-        Me.S104.UseVisualStyleBackColor = True
+        Me.U.AutoSize = True
+        Me.U.ForeColor = System.Drawing.Color.DarkCyan
+        Me.U.Location = New System.Drawing.Point(215, 454)
+        Me.U.Name = "U"
+        Me.U.Size = New System.Drawing.Size(78, 25)
+        Me.U.TabIndex = 107
+        Me.U.Text = "الأنترنت"
+        Me.U.UseVisualStyleBackColor = True
         '
         'USERSLAHFRM
         '
@@ -1536,4 +1549,5 @@ Partial Class USERSLAHFRM
     Friend WithEvents N103 As CheckBox
     Friend WithEvents N100 As CheckBox
     Friend WithEvents S104 As CheckBox
+    Friend WithEvents U As CheckBox
 End Class

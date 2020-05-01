@@ -11,7 +11,7 @@
     <AssemblyName>DOCTOR CLINIC</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
@@ -105,6 +105,9 @@
       <HintPath>..\interop.craxdrt.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\mysql-for-visualstudio-1.2.9-noinstall\14.0v46\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -189,6 +192,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NETFRM.Designer.vb">
+      <DependentUpon>NETFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NETFRM.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="REPFORALL.Designer.vb">
       <DependentUpon>REPFORALL.vb</DependentUpon>
@@ -630,10 +639,10 @@
     <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\INFERTRTIY.Designer.vb">
+    <Compile Include="تأخر الأنجاب\INFERTRTIY.Designer.vb">
       <DependentUpon>INFERTRTIY.vb</DependentUpon>
     </Compile>
-    <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\INFERTRTIY.vb">
+    <Compile Include="تأخر الأنجاب\INFERTRTIY.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
@@ -836,6 +845,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NETFRM.resx">
+      <DependentUpon>NETFRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPFORALL.resx">
       <DependentUpon>REPFORALL.vb</DependentUpon>
@@ -1049,7 +1061,7 @@
     <EmbeddedResource Include="المعمل\SEARCHPRICETHLELFRM.resx">
       <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="تأخر الأنجاب\PERSONAL HISTORY\INFERTRTIY.resx">
+    <EmbeddedResource Include="تأخر الأنجاب\INFERTRTIY.resx">
       <DependentUpon>INFERTRTIY.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
@@ -1293,6 +1305,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="67520_doctor.ico" />
+    <None Include="Resources\iconfinder_whatsapp_986960.png" />
     <None Include="Resources\icons8-palm-scan-40.png" />
     <None Include="Resources\icons8-palm-scan-144.png" />
     <None Include="Resources\icons8-uterus-40.png" />
@@ -1327,7 +1340,9 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="تأخر الأنجاب\PERSONAL HISTORY\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -81,11 +81,6 @@
         Dim DA As New SqlClient.SqlDataAdapter("SELECT PA_NAME,STAT FROM PATIENT WHERE STAT = 'TRUE'", SqlConn)
         DA.Fill(DT)
         If DT.Rows.Count > 0 Then
-            'Dim R As DataRow
-            'PA_NAME.AutoCompleteCustomSource.Clear()
-            'For Each R In DT.Rows
-            '    PA_NAME.AutoCompleteCustomSource.Add(R.Item(0).ToString)
-            'Next
             For I = 0 To DT.Rows.Count - 1
                 PA_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
 

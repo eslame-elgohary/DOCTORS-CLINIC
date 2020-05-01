@@ -73,19 +73,17 @@ Partial Class LOGIN
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(180, 357)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(98, 21)
+        Me.Label7.Size = New System.Drawing.Size(96, 21)
         Me.Label7.TabIndex = 54
         Me.Label7.Text = "01112577838 / "
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(271, 357)
+        Me.Label6.Location = New System.Drawing.Point(281, 357)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(91, 21)
+        Me.Label6.Size = New System.Drawing.Size(109, 21)
         Me.Label6.TabIndex = 53
         Me.Label6.Text = "01003587857"
         '

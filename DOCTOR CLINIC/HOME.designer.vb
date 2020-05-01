@@ -89,6 +89,7 @@ Partial Class HOME
         Me.BT_HESAP_DOC_FRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.LABTOLABToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_PA_HESAPFRM = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REP_HAGEZ_PA = New System.Windows.Forms.ToolStripMenuItem()
         Me.الاعداداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REGBTN = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_T3AKODAT = New System.Windows.Forms.ToolStripMenuItem()
@@ -96,6 +97,7 @@ Partial Class HOME
         Me.MASSEGADMIN_BTN = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTNBACKUP = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTNNET = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_EXIT = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -107,6 +109,8 @@ Partial Class HOME
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.STB_SALSE = New System.Windows.Forms.ToolStripButton()
         Me.STB_RESALSE = New System.Windows.Forms.ToolStripButton()
         Me.BT_ADDTHLEL_PATION = New System.Windows.Forms.ToolStripButton()
@@ -114,17 +118,16 @@ Partial Class HOME
         Me.BTN_ADD_MONY_DOCT = New System.Windows.Forms.ToolStripButton()
         Me.BTL_CONVERTKHAZINA = New System.Windows.Forms.ToolStripButton()
         Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
+        Me.BT_WHATSAPP = New System.Windows.Forms.ToolStripButton()
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.REP_HAGEZ_PA = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -579,6 +582,12 @@ Partial Class HOME
         Me.BTN_PA_HESAPFRM.Size = New System.Drawing.Size(172, 22)
         Me.BTN_PA_HESAPFRM.Text = "كشف حساب مريض"
         '
+        'REP_HAGEZ_PA
+        '
+        Me.REP_HAGEZ_PA.Name = "REP_HAGEZ_PA"
+        Me.REP_HAGEZ_PA.Size = New System.Drawing.Size(172, 22)
+        Me.REP_HAGEZ_PA.Text = "تقرير حجز مريض"
+        '
         'الاعداداتToolStripMenuItem
         '
         Me.الاعداداتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGBTN, Me.BT_T3AKODAT, Me.HELPBTN, Me.MASSEGADMIN_BTN})
@@ -614,7 +623,7 @@ Partial Class HOME
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTNBACKUP})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTNBACKUP, Me.BTNNET})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(22, 20)
         Me.ToolStripMenuItem1.Text = "."
@@ -624,6 +633,12 @@ Partial Class HOME
         Me.BTNBACKUP.Name = "BTNBACKUP"
         Me.BTNBACKUP.Size = New System.Drawing.Size(119, 22)
         Me.BTNBACKUP.Text = "BACKUP"
+        '
+        'BTNNET
+        '
+        Me.BTNNET.Name = "BTNNET"
+        Me.BTNNET.Size = New System.Drawing.Size(119, 22)
+        Me.BTNNET.Text = "الأنترنت"
         '
         'BT_EXIT
         '
@@ -686,12 +701,29 @@ Partial Class HOME
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.BackColor = System.Drawing.Color.LightBlue
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.BT_SMS, Me.ToolStripSeparator5, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.BT_SMS, Me.ToolStripSeparator5, Me.BT_WHATSAPP, Me.ToolStripSeparator9, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 49)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1350, 55)
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
+        Me.PictureBox2.Location = New System.Drawing.Point(58, 367)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(155, 189)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 72
+        Me.PictureBox2.TabStop = False
         '
         'STB_SALSE
         '
@@ -757,6 +789,15 @@ Partial Class HOME
         Me.BT_SMS.Size = New System.Drawing.Size(84, 52)
         Me.BT_SMS.Text = "SMS"
         '
+        'BT_WHATSAPP
+        '
+        Me.BT_WHATSAPP.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_whatsapp_986960
+        Me.BT_WHATSAPP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BT_WHATSAPP.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_WHATSAPP.Name = "BT_WHATSAPP"
+        Me.BT_WHATSAPP.Size = New System.Drawing.Size(96, 52)
+        Me.BT_WHATSAPP.Text = "الأنترنت"
+        '
         'STB_EXIT
         '
         Me.STB_EXIT.Image = CType(resources.GetObject("STB_EXIT.Image"), System.Drawing.Image)
@@ -786,24 +827,6 @@ Partial Class HOME
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
-        Me.PictureBox2.Location = New System.Drawing.Point(58, 367)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(155, 189)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 72
-        Me.PictureBox2.TabStop = False
-        '
-        'REP_HAGEZ_PA
-        '
-        Me.REP_HAGEZ_PA.Name = "REP_HAGEZ_PA"
-        Me.REP_HAGEZ_PA.Size = New System.Drawing.Size(172, 22)
-        Me.REP_HAGEZ_PA.Text = "تقرير حجز مريض"
         '
         'HOME
         '
@@ -839,8 +862,8 @@ Partial Class HOME
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -940,4 +963,7 @@ Partial Class HOME
     Friend WithEvents PERSONALHISTORYFORINFERTILITYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents INFERTILITYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents REP_HAGEZ_PA As ToolStripMenuItem
+    Friend WithEvents BTNNET As ToolStripMenuItem
+    Friend WithEvents BT_WHATSAPP As ToolStripButton
+    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
 End Class

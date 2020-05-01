@@ -455,4 +455,20 @@
     Private Sub REP_HAGEZ_PA_Click(sender As Object, e As EventArgs) Handles REP_HAGEZ_PA.Click
         REP_HAGEZ.ShowDialog()
     End Sub
+
+    Private Sub BTNNET_Click(sender As Object, e As EventArgs) Handles BTNNET.Click
+        Try
+            ROLES("U", NETFRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BT_WHATSAPP_Click(sender As Object, e As EventArgs) Handles BT_WHATSAPP.Click
+        Try
+            ROLES("U", NETFRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class

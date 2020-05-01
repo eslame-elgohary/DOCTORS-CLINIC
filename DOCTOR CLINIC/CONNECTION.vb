@@ -1,14 +1,24 @@
-﻿
+﻿Imports MySql.Data.MySqlClient
 Imports System.Data.SqlClient
 Module CONNECTION
     Public StrID As Integer
     Public SqlConn As New SqlClient.SqlConnection
+    Public SqlConn2 As New MySqlConnection
     '""""""""""""" الاتصال بالسيرفر """""""""""""""
     Public Sub open_connection()
         If SqlConn.State = 1 Then SqlConn.Close()
         Try
             SqlConn = New SqlConnection(My.Settings.sqlconn1)
             SqlConn.Open()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message.ToString)
+        End Try
+    End Sub
+    Public Sub open_connection2()
+        If SqlConn2.State = 1 Then SqlConn2.Close()
+        Try
+            SqlConn2 = New MySqlConnection("SERVER=127.0.0.1 ; DATABASE=DOCTORS_CLINIC; uid=root; password=xyz@1234; CharSet=utf8;")
+            SqlConn2.Open()
         Catch ex As Exception
             MessageBox.Show(ex.Message.ToString)
         End Try

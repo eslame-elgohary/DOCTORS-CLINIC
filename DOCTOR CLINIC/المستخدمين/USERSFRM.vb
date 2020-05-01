@@ -203,6 +203,8 @@
                     DR2!N102 = False
                     DR2!N103 = False
 
+                    DR2!U = False
+
 
                     DT2.Rows.Add(DR2)
                     Dim SAVE1 As New SqlClient.SqlCommandBuilder(DS)

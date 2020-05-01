@@ -162,6 +162,8 @@
                 S103.Checked = DR!S103
                 S104.Checked = DR!S104
 
+                U.Checked = DR!U
+
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
             Else
@@ -332,6 +334,8 @@
                 DR!S102 = S102.Checked
                 DR!S103 = S103.Checked
                 DR!S104 = S104.Checked
+
+                DR!U = U.Checked
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
