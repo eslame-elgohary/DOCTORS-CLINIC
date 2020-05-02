@@ -109,8 +109,6 @@ Partial Class HOME
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.STB_SALSE = New System.Windows.Forms.ToolStripButton()
         Me.STB_RESALSE = New System.Windows.Forms.ToolStripButton()
         Me.BT_ADDTHLEL_PATION = New System.Windows.Forms.ToolStripButton()
@@ -119,9 +117,12 @@ Partial Class HOME
         Me.BTL_CONVERTKHAZINA = New System.Windows.Forms.ToolStripButton()
         Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
         Me.BT_WHATSAPP = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BTN_HAGEZ_FRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -432,7 +433,7 @@ Partial Class HOME
         '
         'زيارةToolStripMenuItem
         '
-        Me.زيارةToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_ZIARAFRM})
+        Me.زيارةToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_ZIARAFRM, Me.BTN_HAGEZ_FRM})
         Me.زيارةToolStripMenuItem.Name = "زيارةToolStripMenuItem"
         Me.زيارةToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.زيارةToolStripMenuItem.Text = "زيارة"
@@ -440,7 +441,7 @@ Partial Class HOME
         'BTN_ZIARAFRM
         '
         Me.BTN_ZIARAFRM.Name = "BTN_ZIARAFRM"
-        Me.BTN_ZIARAFRM.Size = New System.Drawing.Size(133, 22)
+        Me.BTN_ZIARAFRM.Size = New System.Drawing.Size(152, 22)
         Me.BTN_ZIARAFRM.Text = "زيارة العيادة"
         '
         'المبيعاتToolStripMenuItem
@@ -492,13 +493,13 @@ Partial Class HOME
         'BT_ADDMONY_DOCTOR
         '
         Me.BT_ADDMONY_DOCTOR.Name = "BT_ADDMONY_DOCTOR"
-        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(141, 22)
+        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(152, 22)
         Me.BT_ADDMONY_DOCTOR.Text = "أيصال عيادات"
         '
         'BT_ADDMONY_MAML
         '
         Me.BT_ADDMONY_MAML.Name = "BT_ADDMONY_MAML"
-        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(141, 22)
+        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(152, 22)
         Me.BT_ADDMONY_MAML.Text = "أيصال معمل"
         '
         'أذنصرفنقديةToolStripMenuItem
@@ -708,23 +709,6 @@ Partial Class HOME
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripSeparator9
-        '
-        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
-        Me.PictureBox2.Location = New System.Drawing.Point(58, 367)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(155, 189)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 72
-        Me.PictureBox2.TabStop = False
-        '
         'STB_SALSE
         '
         Me.STB_SALSE.Image = CType(resources.GetObject("STB_SALSE.Image"), System.Drawing.Image)
@@ -797,6 +781,13 @@ Partial Class HOME
         Me.BT_WHATSAPP.Name = "BT_WHATSAPP"
         Me.BT_WHATSAPP.Size = New System.Drawing.Size(96, 52)
         Me.BT_WHATSAPP.Text = "الأنترنت"
+        Me.BT_WHATSAPP.Visible = False
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
+        Me.ToolStripSeparator9.Visible = False
         '
         'STB_EXIT
         '
@@ -817,6 +808,18 @@ Partial Class HOME
         Me.BT_JOGOUT.Size = New System.Drawing.Size(50, 52)
         Me.BT_JOGOUT.Text = "تغيير المستخدم"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
+        Me.PictureBox2.Location = New System.Drawing.Point(58, 367)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(155, 189)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 72
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.Control
@@ -827,6 +830,12 @@ Partial Class HOME
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
+        '
+        'BTN_HAGEZ_FRM
+        '
+        Me.BTN_HAGEZ_FRM.Name = "BTN_HAGEZ_FRM"
+        Me.BTN_HAGEZ_FRM.Size = New System.Drawing.Size(152, 22)
+        Me.BTN_HAGEZ_FRM.Text = "حجز العيادات"
         '
         'HOME
         '
@@ -966,4 +975,5 @@ Partial Class HOME
     Friend WithEvents BTNNET As ToolStripMenuItem
     Friend WithEvents BT_WHATSAPP As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
+    Friend WithEvents BTN_HAGEZ_FRM As ToolStripMenuItem
 End Class

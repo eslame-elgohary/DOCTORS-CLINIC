@@ -50,51 +50,51 @@
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
-        If st1_hb.Text = "" Then
-            MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_hb.Select()
-            Exit Sub
-        End If
-        If st1_plt.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_plt.Select()
-            Exit Sub
-        End If
-        If st1_pc.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_pc.Select()
-            Exit Sub
-        End If
-        If st1_hbac.Text = "" Then
-            MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_hbac.Select()
-            Exit Sub
-        End If
-        If st1_tsh.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_tsh.Select()
-            Exit Sub
-        End If
-        If st1_toxo.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_toxo.Select()
-            Exit Sub
-        End If
-        If st1_cmv.Text = "" Then
-            MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_cmv.Select()
-            Exit Sub
-        End If
-        If st1_rbs.Text = "" Then
-            MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_rbs.Select()
-            Exit Sub
-        End If
-        If st1_urine.Text = "" Then
-            MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_urine.Select()
-            Exit Sub
-        End If
+        'If st1_hb.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_hb.Select()
+        '    Exit Sub
+        'End If
+        'If st1_plt.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_plt.Select()
+        '    Exit Sub
+        'End If
+        'If st1_pc.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_pc.Select()
+        '    Exit Sub
+        'End If
+        'If st1_hbac.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_hbac.Select()
+        '    Exit Sub
+        'End If
+        'If st1_tsh.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_tsh.Select()
+        '    Exit Sub
+        'End If
+        'If st1_toxo.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_toxo.Select()
+        '    Exit Sub
+        'End If
+        'If st1_cmv.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_cmv.Select()
+        '    Exit Sub
+        'End If
+        'If st1_rbs.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_rbs.Select()
+        '    Exit Sub
+        'End If
+        'If st1_urine.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_urine.Select()
+        '    Exit Sub
+        'End If
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ST1_TEST ", SqlConn)
         DA.Fill(DT)
@@ -120,51 +120,51 @@
     End Sub
 
     Private Sub BTN_EDIT_Click(sender As Object, e As EventArgs) Handles BTN_EDIT.Click
-        If st1_hb.Text = "" Then
-            MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_hb.Select()
-            Exit Sub
-        End If
-        If st1_plt.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_plt.Select()
-            Exit Sub
-        End If
-        If st1_pc.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_pc.Select()
-            Exit Sub
-        End If
-        If st1_hbac.Text = "" Then
-            MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_hbac.Select()
-            Exit Sub
-        End If
-        If st1_tsh.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_tsh.Select()
-            Exit Sub
-        End If
-        If st1_toxo.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_toxo.Select()
-            Exit Sub
-        End If
-        If st1_cmv.Text = "" Then
-            MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_cmv.Select()
-            Exit Sub
-        End If
-        If st1_rbs.Text = "" Then
-            MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_rbs.Select()
-            Exit Sub
-        End If
-        If st1_urine.Text = "" Then
-            MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            st1_urine.Select()
-            Exit Sub
-        End If
+        'If st1_hb.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_hb.Select()
+        '    Exit Sub
+        'End If
+        'If st1_plt.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_plt.Select()
+        '    Exit Sub
+        'End If
+        'If st1_pc.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_pc.Select()
+        '    Exit Sub
+        'End If
+        'If st1_hbac.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_hbac.Select()
+        '    Exit Sub
+        'End If
+        'If st1_tsh.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_tsh.Select()
+        '    Exit Sub
+        'End If
+        'If st1_toxo.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_toxo.Select()
+        '    Exit Sub
+        'End If
+        'If st1_cmv.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_cmv.Select()
+        '    Exit Sub
+        'End If
+        'If st1_rbs.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_rbs.Select()
+        '    Exit Sub
+        'End If
+        'If st1_urine.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    st1_urine.Select()
+        '    Exit Sub
+        'End If
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ST1_TEST WHERE CODE_ST1='" & TXT_CODE.Text & "' ", SqlConn)
         DA.Fill(DT)

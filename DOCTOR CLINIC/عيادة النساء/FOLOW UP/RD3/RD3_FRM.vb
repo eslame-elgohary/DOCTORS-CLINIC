@@ -50,51 +50,51 @@
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
-        If RD3_hb.Text = "" Then
-            MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_hb.Select()
-            Exit Sub
-        End If
-        If RD3_plt.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_plt.Select()
-            Exit Sub
-        End If
-        If RD3_pc.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_pc.Select()
-            Exit Sub
-        End If
-        If RD3_SGPT.Text = "" Then
-            MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_SGPT.Select()
-            Exit Sub
-        End If
-        If RD3_CREAT.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_CREAT.Select()
-            Exit Sub
-        End If
-        If RD3_HOUR.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_HOUR.Select()
-            Exit Sub
-        End If
-        If RD3_TSH.Text = "" Then
-            MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_TSH.Select()
-            Exit Sub
-        End If
-        If RD3_rbs.Text = "" Then
-            MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_rbs.Select()
-            Exit Sub
-        End If
-        If RD3_urine.Text = "" Then
-            MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_urine.Select()
-            Exit Sub
-        End If
+        'If RD3_hb.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_hb.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_plt.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_plt.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_pc.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_pc.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_SGPT.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_SGPT.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_CREAT.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_CREAT.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_HOUR.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_HOUR.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_TSH.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_TSH.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_rbs.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_rbs.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_urine.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_urine.Select()
+        '    Exit Sub
+        'End If
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM RD3_TEST ", SqlConn)
         DA.Fill(DT)

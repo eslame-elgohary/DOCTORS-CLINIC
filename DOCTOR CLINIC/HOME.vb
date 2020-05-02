@@ -284,7 +284,7 @@
 
     Private Sub BT_ADDMONY_MAML_Click(sender As Object, e As EventArgs) Handles BT_ADDMONY_MAML.Click
         Try
-            ROLES("Q", ADD_MONY_MAML)
+            ROLES("M", ADD_MONY_MAML)
         Catch EX As Exception
 
         End Try
@@ -376,7 +376,7 @@
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
         Try
-            ROLES("Q", ADD_MONY_MAML)
+            ROLES("M", ADD_MONY_MAML)
         Catch EX As Exception
 
         End Try
@@ -446,7 +446,7 @@
     Private Sub INFERTILITYToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles INFERTILITYToolStripMenuItem.Click
 
         Try
-            ROLES("S100", INFERTRTIY)
+            ROLES("S100", ENGABFRM)
         Catch EX As Exception
 
         End Try
@@ -470,5 +470,9 @@
         Catch EX As Exception
 
         End Try
+    End Sub
+
+    Private Sub BTN_HAGEZ_FRM_Click(sender As Object, e As EventArgs) Handles BTN_HAGEZ_FRM.Click
+        HAGEZ_PATEINT.ShowDialog()
     End Sub
 End Class

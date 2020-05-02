@@ -9,6 +9,7 @@
             Dim DR = DT.Rows(0)
             TXT_CODE.Text = DR!CODE_4D
             TXT_NAME.Text = DR!NAME_4D
+            TXT_DATE.Text = DR!DATE_4D
             BTN_EDIT.Enabled = True
             BTN_DELET.Enabled = True
             BTN_SAVE.Enabled = False
@@ -22,6 +23,7 @@
         TXT_CODE.Text = CODE_GENE("E4D_HISTORY", "ID") + 1
         TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
         TXT_NAME.Text = ""
+        TXT_DATE.Text = Date.Today
         BTN_EDIT.Enabled = False
         BTN_DELET.Enabled = False
         BTN_SAVE.Enabled = True
@@ -41,6 +43,7 @@
         DR!CODE_4D = TXT_CODE.Text
         DR!PA_CODE_4D = TXT_PA_CODE.Text
         DR!NAME_4D = TXT_NAME.Text
+        DR!DATE_4D = TXT_DATE.Text
         DR!STAT_4D = True
         DT.Rows.Add(DR)
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
@@ -63,6 +66,7 @@
         DR!CODE_4D = TXT_CODE.Text
         DR!PA_CODE_4D = TXT_PA_CODE.Text
         DR!NAME_4D = TXT_NAME.Text
+        DR!DATE_4D = TXT_DATE.Text
         DR!STAT_4D = True
 
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)

@@ -508,7 +508,7 @@
                     Next
                 End If
                 If DataGridView2.Rows.Count > 0 Then
-                    If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.Yes Then
+                    If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                         BTN_PRESCRIPTION_Click(sender, e)
                         MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         NEWBTN_Click(sender, e)
@@ -618,7 +618,7 @@
                 End If
 
                 If DataGridView2.Rows.Count > 0 Then
-                    If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.Yes Then
+                    If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
                         BTN_PRESCRIPTION_Click(sender, e)
                         MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         NEWBTN_Click(sender, e)

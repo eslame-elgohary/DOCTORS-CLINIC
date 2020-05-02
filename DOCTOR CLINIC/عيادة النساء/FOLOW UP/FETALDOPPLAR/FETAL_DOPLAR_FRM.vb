@@ -9,6 +9,7 @@
             Dim DR = DT.Rows(0)
             TXT_CODE.Text = DR!CODE_FETAL
             TXT_NAME.Text = DR!NAME_FETAL
+            TXT_DATE.Text = DR!DATE_FETAL
             BTN_EDIT.Enabled = True
             BTN_DELET.Enabled = True
             BTN_SAVE.Enabled = False
@@ -41,6 +42,7 @@
         DR!CODE_FETAL = TXT_CODE.Text
         DR!PA_CODE_FETAL = TXT_PA_CODE.Text
         DR!NAME_FETAL = TXT_NAME.Text
+        DR!DATE_FETAL = TXT_DATE.Text
         DR!STAT_FETAL = True
         DT.Rows.Add(DR)
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
@@ -63,6 +65,7 @@
         DR!CODE_FETAL = TXT_CODE.Text
         DR!PA_CODE_FETAL = TXT_PA_CODE.Text
         DR!NAME_FETAL = TXT_NAME.Text
+        DR!DATE_FETAL = TXT_DATE.Text
         DR!STAT_FETAL = True
 
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)

@@ -47,46 +47,46 @@
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
-        If ND2_hb.Text = "" Then
-            MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_hb.Select()
-            Exit Sub
-        End If
-        If ND2_plt.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_plt.Select()
-            Exit Sub
-        End If
-        If ND2_pc.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_pc.Select()
-            Exit Sub
-        End If
-        If ND2_HOUR.Text = "" Then
-            MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_HOUR.Select()
-            Exit Sub
-        End If
-        If ND2_TOTAL.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_TOTAL.Select()
-            Exit Sub
-        End If
-        If ND2_LONIZED.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_LONIZED.Select()
-            Exit Sub
-        End If
-        If ND2_TSH.Text = "" Then
-            MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_TSH.Select()
-            Exit Sub
-        End If
-        If ND2_urine.Text = "" Then
-            MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_urine.Select()
-            Exit Sub
-        End If
+        'If ND2_hb.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_hb.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_plt.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_plt.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_pc.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_pc.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_HOUR.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_HOUR.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_TOTAL.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_TOTAL.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_LONIZED.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_LONIZED.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_TSH.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_TSH.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_urine.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_urine.Select()
+        '    Exit Sub
+        'End If
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ND2_TEST ", SqlConn)
         DA.Fill(DT)
@@ -111,46 +111,46 @@
     End Sub
 
     Private Sub BTN_EDIT_Click(sender As Object, e As EventArgs) Handles BTN_EDIT.Click
-        If ND2_hb.Text = "" Then
-            MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_hb.Select()
-            Exit Sub
-        End If
-        If ND2_plt.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_plt.Select()
-            Exit Sub
-        End If
-        If ND2_pc.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_pc.Select()
-            Exit Sub
-        End If
-        If ND2_HOUR.Text = "" Then
-            MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_HOUR.Select()
-            Exit Sub
-        End If
-        If ND2_TOTAL.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_TOTAL.Select()
-            Exit Sub
-        End If
-        If ND2_LONIZED.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_LONIZED.Select()
-            Exit Sub
-        End If
-        If ND2_TSH.Text = "" Then
-            MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_TSH.Select()
-            Exit Sub
-        End If
-        If ND2_urine.Text = "" Then
-            MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ND2_urine.Select()
-            Exit Sub
-        End If
+        'If ND2_hb.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_hb.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_plt.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_plt.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_pc.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_pc.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_HOUR.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_HOUR.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_TOTAL.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_TOTAL.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_LONIZED.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_LONIZED.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_TSH.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_TSH.Select()
+        '    Exit Sub
+        'End If
+        'If ND2_urine.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    ND2_urine.Select()
+        '    Exit Sub
+        'End If
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ND2_TEST WHERE CODE_ND2='" & TXT_CODE.Text & "' ", SqlConn)
         DA.Fill(DT)

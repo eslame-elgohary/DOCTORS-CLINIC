@@ -17,11 +17,11 @@ Public Class NETFRM
             STNET.Text = "متصل"
             STNET.ForeColor = Color.Green
             Dim DTMY As New DataTable
-            Dim DAMY As New MySqlDataAdapter(" SELECT  STAT FROM aiada ORDER BY ID DESC ", SqlConn2)
+            Dim DAMY As New MySqlDataAdapter(" SELECT  AIADA_STAT FROM aiada ORDER BY ID DESC ", SqlConn2)
             DAMY.Fill(DTMY)
             If DTMY.Rows.Count > 0 Then
                 Dim DR2 = DTMY.Rows(0)
-                STAT_LAST.Text = DR2!STAT
+                STAT_LAST.Text = DR2!AIADA_STAT
 
             End If
         Else
@@ -35,7 +35,7 @@ Public Class NETFRM
         Dim DAMY As New MySqlDataAdapter("SELECT * FROM aiada ", SqlConn2)
         DAMY.Fill(DTMY)
         Dim DR10 = DTMY.NewRow
-        DR10!STAT = TXT_MASS.Text
+        DR10!AIADA_STAT = TXT_MASS.Text
         DTMY.Rows.Add(DR10)
         Dim SAVE2 As New MySqlCommandBuilder(DAMY)
         DAMY.Update(DTMY)
@@ -47,7 +47,7 @@ Public Class NETFRM
         Dim DAMY As New MySqlDataAdapter("SELECT * FROM aiada ", SqlConn2)
         DAMY.Fill(DTMY)
         Dim DR10 = DTMY.NewRow
-        DR10!STAT = "العيادة مغلقة الأن"
+        DR10!AIADA_STAT = "العيادة مغلقة الأن"
         DTMY.Rows.Add(DR10)
         Dim SAVE2 As New MySqlCommandBuilder(DAMY)
         DAMY.Update(DTMY)

@@ -148,7 +148,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("Q1").ToString = True Then
+            If DT0.Rows(0).Item("M1").ToString = True Then
                 '========= قيود الادخال =======================
                 If PA_NAME.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -266,7 +266,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("Q2").ToString = True Then
+            If DT0.Rows(0).Item("M2").ToString = True Then
                 '========= قيود الادخال =======================
                 If PA_NAME.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -396,7 +396,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("Q3").ToString = True Then
+            If DT0.Rows(0).Item("M3").ToString = True Then
                 If MessageBox.Show("هل ترغب في حذف بيانات الأيصال ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable
@@ -469,7 +469,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("Q4").ToString = True Then
+            If DT0.Rows(0).Item("M4").ToString = True Then
                 '===========================================================
 
                 Dim DT As New DataTable
