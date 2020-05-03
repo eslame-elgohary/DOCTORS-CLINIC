@@ -420,7 +420,7 @@
 
     Private Sub PFOLOWUPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PFOLOWUPToolStripMenuItem.Click
         Try
-            ROLES("S100", FOLOUP)
+            ROLES("S100", FOLLOWUPFRM)
         Catch EX As Exception
 
         End Try

@@ -30,7 +30,7 @@
 
     Private Sub BTN_NEW_Click(sender As Object, e As EventArgs) Handles BTN_NEW.Click
         TXT_CODE.Text = CODE_GENE("ST1_TEST", "ID") + 1
-        TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
+        TXT_PA_CODE.Text = FOLLOWUPFRM.TXT_PA_CODE.Text
         '===================================================================
         st1_hb.Text = ""
         st1_plt.Text = ""
@@ -47,6 +47,9 @@
         BTN_DELET.Enabled = False
         BTN_SAVE.Enabled = True
         FILL_DGV(DataGridView1, "SELECT * FROM ST1_TEST WHERE STAT_ST1 ='TRUE' AND CODE_PA_ST1 ='" & TXT_PA_CODE.Text & "'")
+        If DataGridView1.Rows.Count > 0 Then
+            DataGridView1_Click(sender, e)
+        End If
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
@@ -115,7 +118,19 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 1st trimester INFORMATION IS SAVED", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        st1_hb.Text = ""
+        st1_plt.Text = ""
+        st1_pc.Text = ""
+        st1_hbac.Text = ""
+        st1_tsh.Text = ""
+        st1_toxo.Text = ""
+        st1_cmv.Text = ""
+        st1_rbs.Text = ""
+        st1_urine.Text = ""
+        '========================================================================
+        Me.Close()
 
     End Sub
 
@@ -184,7 +199,19 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 1st trimester INFORMATION IS EDIT", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        st1_hb.Text = ""
+        st1_plt.Text = ""
+        st1_pc.Text = ""
+        st1_hbac.Text = ""
+        st1_tsh.Text = ""
+        st1_toxo.Text = ""
+        st1_cmv.Text = ""
+        st1_rbs.Text = ""
+        st1_urine.Text = ""
+        '========================================================================
+        Me.Close()
 
     End Sub
 
@@ -200,7 +227,19 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 1st trimester INFORMATION IS DELET", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        st1_hb.Text = ""
+        st1_plt.Text = ""
+        st1_pc.Text = ""
+        st1_hbac.Text = ""
+        st1_tsh.Text = ""
+        st1_toxo.Text = ""
+        st1_cmv.Text = ""
+        st1_rbs.Text = ""
+        st1_urine.Text = ""
+        '========================================================================
+        Me.Close()
     End Sub
 
     Private Sub BTN_EXIT_Click(sender As Object, e As EventArgs) Handles BTN_EXIT.Click

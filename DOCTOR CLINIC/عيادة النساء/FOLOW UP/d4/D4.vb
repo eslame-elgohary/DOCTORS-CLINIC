@@ -1,4 +1,5 @@
 ﻿Public Class D4
+
     Sub SHOW_DETA(CODE_)
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter(" SELECT * FROM E4D_HISTORY WHERE CODE_4D = '" & CODE_ & "'  ", SqlConn)
@@ -21,7 +22,7 @@
 
     Private Sub BTN_NEW_Click(sender As Object, e As EventArgs) Handles BTN_NEW.Click
         TXT_CODE.Text = CODE_GENE("E4D_HISTORY", "ID") + 1
-        TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
+        TXT_PA_CODE.Text = FOLLOWUPFRM.TXT_PA_CODE.Text
         TXT_NAME.Text = ""
         TXT_DATE.Text = Date.Today
         BTN_EDIT.Enabled = False

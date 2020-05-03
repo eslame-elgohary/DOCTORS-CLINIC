@@ -30,7 +30,7 @@
 
     Private Sub BTN_NEW_Click(sender As Object, e As EventArgs) Handles BTN_NEW.Click
         TXT_CODE.Text = CODE_GENE("RD3_TEST", "ID") + 1
-        TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
+        TXT_PA_CODE.Text = FOLLOWUPFRM.TXT_PA_CODE.Text
         '===================================================================
         RD3_hb.Text = ""
         RD3_plt.Text = ""
@@ -47,6 +47,9 @@
         BTN_DELET.Enabled = False
         BTN_SAVE.Enabled = True
         FILL_DGV(DataGridView1, "SELECT * FROM RD3_TEST WHERE STAT_RD3 ='TRUE' AND CODE_PA_RD3 ='" & TXT_PA_CODE.Text & "'")
+        If DataGridView1.Rows.Count > 0 Then
+            DataGridView1_Click(sender, e)
+        End If
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
@@ -115,56 +118,68 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 3RD trimester INFORMATION IS SAVED", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        RD3_hb.Text = ""
+        RD3_plt.Text = ""
+        RD3_pc.Text = ""
+        RD3_SGPT.Text = ""
+        RD3_CREAT.Text = ""
+        RD3_HOUR.Text = ""
+        RD3_TSH.Text = ""
+        RD3_rbs.Text = ""
+        RD3_urine.Text = ""
+        '========================================================================
+        Me.Close()
 
     End Sub
 
     Private Sub BTN_EDIT_Click(sender As Object, e As EventArgs) Handles BTN_EDIT.Click
-        If RD3_hb.Text = "" Then
-            MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_hb.Select()
-            Exit Sub
-        End If
-        If RD3_plt.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_plt.Select()
-            Exit Sub
-        End If
-        If RD3_pc.Text = "" Then
-            MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_pc.Select()
-            Exit Sub
-        End If
-        If RD3_SGPT.Text = "" Then
-            MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_SGPT.Select()
-            Exit Sub
-        End If
-        If RD3_CREAT.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_CREAT.Select()
-            Exit Sub
-        End If
-        If RD3_HOUR.Text = "" Then
-            MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_HOUR.Select()
-            Exit Sub
-        End If
-        If RD3_TSH.Text = "" Then
-            MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_TSH.Select()
-            Exit Sub
-        End If
-        If RD3_rbs.Text = "" Then
-            MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_rbs.Select()
-            Exit Sub
-        End If
-        If RD3_urine.Text = "" Then
-            MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            RD3_urine.Select()
-            Exit Sub
-        End If
+        'If RD3_hb.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER HB% INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_hb.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_plt.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PLT INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_plt.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_pc.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER PC INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_pc.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_SGPT.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER Hbac1 INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_SGPT.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_CREAT.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TsH INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_CREAT.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_HOUR.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER TOXO.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_HOUR.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_TSH.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER CMV.IgM INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_TSH.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_rbs.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER RBS INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_rbs.Select()
+        '    Exit Sub
+        'End If
+        'If RD3_urine.Text = "" Then
+        '    MessageBox.Show("PLEASE ENTER URINE INFORMATION", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    RD3_urine.Select()
+        '    Exit Sub
+        'End If
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM RD3_TEST WHERE CODE_RD3='" & TXT_CODE.Text & "' ", SqlConn)
         DA.Fill(DT)
@@ -184,7 +199,19 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 3RD trimester INFORMATION IS EDIT", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        RD3_hb.Text = ""
+        RD3_plt.Text = ""
+        RD3_pc.Text = ""
+        RD3_SGPT.Text = ""
+        RD3_CREAT.Text = ""
+        RD3_HOUR.Text = ""
+        RD3_TSH.Text = ""
+        RD3_rbs.Text = ""
+        RD3_urine.Text = ""
+        '========================================================================
+        Me.Close()
 
     End Sub
 
@@ -200,7 +227,19 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 3RD trimester INFORMATION IS DELET", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        RD3_hb.Text = ""
+        RD3_plt.Text = ""
+        RD3_pc.Text = ""
+        RD3_SGPT.Text = ""
+        RD3_CREAT.Text = ""
+        RD3_HOUR.Text = ""
+        RD3_TSH.Text = ""
+        RD3_rbs.Text = ""
+        RD3_urine.Text = ""
+        '========================================================================
+        Me.Close()
     End Sub
 
     Private Sub BTN_EXIT_Click(sender As Object, e As EventArgs) Handles BTN_EXIT.Click

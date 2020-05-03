@@ -52,9 +52,9 @@ Partial Class ST1_FRM
         Me.BTN_SAVE = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_NEW = New DevExpress.XtraEditors.SimpleButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BTN_DELET = New DevExpress.XtraEditors.SimpleButton()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.BTN_DELET = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -409,17 +409,6 @@ Partial Class ST1_FRM
         Me.DataGridView1.Size = New System.Drawing.Size(488, 208)
         Me.DataGridView1.TabIndex = 16
         '
-        'BTN_DELET
-        '
-        Me.BTN_DELET.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_DELET.Appearance.Options.UseFont = True
-        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_DELET.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_DELET.Location = New System.Drawing.Point(318, 225)
-        Me.BTN_DELET.Name = "BTN_DELET"
-        Me.BTN_DELET.Size = New System.Drawing.Size(87, 33)
-        Me.BTN_DELET.TabIndex = 20
-        Me.BTN_DELET.Text = "DELET"
-        '
         'Column1
         '
         Me.Column1.DataPropertyName = "CODE_ST1"
@@ -435,11 +424,22 @@ Partial Class ST1_FRM
         Me.Column3.ReadOnly = True
         Me.Column3.Visible = False
         '
+        'BTN_DELET
+        '
+        Me.BTN_DELET.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_DELET.Appearance.Options.UseFont = True
+        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_DELET.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_DELET.Location = New System.Drawing.Point(318, 225)
+        Me.BTN_DELET.Name = "BTN_DELET"
+        Me.BTN_DELET.Size = New System.Drawing.Size(87, 33)
+        Me.BTN_DELET.TabIndex = 20
+        Me.BTN_DELET.Text = "DELET"
+        '
         'ST1_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 494)
+        Me.ClientSize = New System.Drawing.Size(522, 272)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BTN_EXIT)
         Me.Controls.Add(Me.BTN_EDIT)

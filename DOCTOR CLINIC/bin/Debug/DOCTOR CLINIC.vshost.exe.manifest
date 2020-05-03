@@ -668,14 +668,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DOCTOR CLINIC.exe" size="11337216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DOCTOR CLINIC.exe" size="11419648">
       <assemblyIdentity name="DOCTOR CLINIC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+bYw8p9cLqtmDp0bI9Kh3/EO3sEHufA2MOwW7uN9hU4=</dsig:DigestValue>
+        <dsig:DigestValue>mL3WPqHJ2fyl5HrKGPv+N1PQjB4715ahEZV6L5Rr158=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

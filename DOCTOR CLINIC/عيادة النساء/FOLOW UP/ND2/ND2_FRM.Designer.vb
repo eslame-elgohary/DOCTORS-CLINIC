@@ -412,7 +412,7 @@ Partial Class ND2_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 463)
+        Me.ClientSize = New System.Drawing.Size(522, 241)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BTN_EXIT)
         Me.Controls.Add(Me.BTN_EDIT)

@@ -25,6 +25,8 @@ Partial Class D4
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(D4))
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_DATE = New System.Windows.Forms.DateTimePicker()
+        Me.LAB = New System.Windows.Forms.Label()
         Me.TXT_PA_NAME = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TXT_NAME = New System.Windows.Forms.TextBox()
@@ -41,8 +43,6 @@ Partial Class D4
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LAB = New System.Windows.Forms.Label()
-        Me.TXT_DATE = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -76,6 +76,25 @@ Partial Class D4
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         '
+        'TXT_DATE
+        '
+        Me.TXT_DATE.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE.Location = New System.Drawing.Point(98, 51)
+        Me.TXT_DATE.Name = "TXT_DATE"
+        Me.TXT_DATE.Size = New System.Drawing.Size(147, 29)
+        Me.TXT_DATE.TabIndex = 22
+        '
+        'LAB
+        '
+        Me.LAB.AutoSize = True
+        Me.LAB.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LAB.Location = New System.Drawing.Point(27, 58)
+        Me.LAB.Name = "LAB"
+        Me.LAB.Size = New System.Drawing.Size(65, 19)
+        Me.LAB.TabIndex = 21
+        Me.LAB.Text = "DATE :"
+        '
         'TXT_PA_NAME
         '
         Me.TXT_PA_NAME.BackColor = System.Drawing.Color.White
@@ -98,6 +117,8 @@ Partial Class D4
         '
         'TXT_NAME
         '
+        Me.TXT_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories
         Me.TXT_NAME.BackColor = System.Drawing.Color.Aqua
         Me.TXT_NAME.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_NAME.Location = New System.Drawing.Point(67, 89)
@@ -231,29 +252,11 @@ Partial Class D4
         '
         'Column4
         '
+        Me.Column4.DataPropertyName = "DATE_4D"
         Me.Column4.FillWeight = 40.0!
         Me.Column4.HeaderText = "DATE"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        '
-        'LAB
-        '
-        Me.LAB.AutoSize = True
-        Me.LAB.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LAB.Location = New System.Drawing.Point(27, 58)
-        Me.LAB.Name = "LAB"
-        Me.LAB.Size = New System.Drawing.Size(65, 19)
-        Me.LAB.TabIndex = 21
-        Me.LAB.Text = "DATE :"
-        '
-        'TXT_DATE
-        '
-        Me.TXT_DATE.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE.Location = New System.Drawing.Point(98, 51)
-        Me.TXT_DATE.Name = "TXT_DATE"
-        Me.TXT_DATE.Size = New System.Drawing.Size(147, 29)
-        Me.TXT_DATE.TabIndex = 22
         '
         'D4
         '
@@ -296,10 +299,10 @@ Partial Class D4
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BTN_DELET As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PA_NAME As TextBox
+    Friend WithEvents TXT_DATE As DateTimePicker
+    Friend WithEvents LAB As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewButtonColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents TXT_DATE As DateTimePicker
-    Friend WithEvents LAB As Label
 End Class

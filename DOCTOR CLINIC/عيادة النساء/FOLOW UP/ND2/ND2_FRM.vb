@@ -28,7 +28,7 @@
 
     Private Sub BTN_NEW_Click(sender As Object, e As EventArgs) Handles BTN_NEW.Click
         TXT_CODE.Text = CODE_GENE("ND2_TEST", "ID") + 1
-        TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
+        TXT_PA_CODE.Text = FOLLOWUPFRM.TXT_PA_CODE.Text
         '===================================================================
         ND2_hb.Text = ""
         ND2_plt.Text = ""
@@ -44,6 +44,10 @@
         BTN_DELET.Enabled = False
         BTN_SAVE.Enabled = True
         FILL_DGV(DataGridView1, "SELECT * FROM ND2_TEST WHERE STAT_ND2 ='TRUE' AND CODE_PA_ND2 ='" & TXT_PA_CODE.Text & "'")
+        If DataGridView1.Rows.Count > 0 Then
+            DataGridView1_Click(sender, e)
+        End If
+
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
@@ -106,7 +110,18 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 2nd trimester INFORMATION IS SAVED", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        ND2_hb.Text = ""
+        ND2_plt.Text = ""
+        ND2_pc.Text = ""
+        ND2_HOUR.Text = ""
+        ND2_TOTAL.Text = ""
+        ND2_LONIZED.Text = ""
+        ND2_TSH.Text = ""
+        ND2_urine.Text = ""
+        '========================================================================
+        Me.Close()
 
     End Sub
 
@@ -169,7 +184,18 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 2nd trimester INFORMATION IS EDIT", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        ND2_hb.Text = ""
+        ND2_plt.Text = ""
+        ND2_pc.Text = ""
+        ND2_HOUR.Text = ""
+        ND2_TOTAL.Text = ""
+        ND2_LONIZED.Text = ""
+        ND2_TSH.Text = ""
+        ND2_urine.Text = ""
+        '========================================================================
+        Me.Close()
 
     End Sub
 
@@ -185,7 +211,18 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("THE 2nd trimester INFORMATION IS DELET", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        BTN_NEW_Click(sender, e)
+        ' BTN_NEW_Click(sender, e)
+        '===================================================================
+        ND2_hb.Text = ""
+        ND2_plt.Text = ""
+        ND2_pc.Text = ""
+        ND2_HOUR.Text = ""
+        ND2_TOTAL.Text = ""
+        ND2_LONIZED.Text = ""
+        ND2_TSH.Text = ""
+        ND2_urine.Text = ""
+        '========================================================================
+        Me.Close()
     End Sub
 
     Private Sub BTN_EXIT_Click(sender As Object, e As EventArgs) Handles BTN_EXIT.Click

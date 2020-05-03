@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FOLLOWUPFRM
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class FOLLOWUPFRM
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FOLLOWUPFRM))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
@@ -45,6 +46,10 @@ Partial Class FOLLOWUPFRM
         Me.TXT_ABO = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.BTN_OBSTETRIC = New DevExpress.XtraEditors.SimpleButton()
+        Me.TXT_OBSTETRIC = New System.Windows.Forms.TextBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.BTN_3RD = New DevExpress.XtraEditors.SimpleButton()
@@ -104,33 +109,11 @@ Partial Class FOLLOWUPFRM
         Me.Label13 = New System.Windows.Forms.Label()
         Me.st1_hb = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.TXT_4D = New System.Windows.Forms.TextBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.TXT_FETAL = New System.Windows.Forms.TextBox()
-        Me.BTN_FETAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TXT_BP = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TXT_W = New System.Windows.Forms.TextBox()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TXT_PLACENTA = New System.Windows.Forms.TextBox()
-        Me.TXT_WIGHT = New System.Windows.Forms.TextBox()
-        Me.TXT_LIQPUR = New System.Windows.Forms.TextBox()
-        Me.TXT_SEX = New System.Windows.Forms.ComboBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.TXT_WEEK = New System.Windows.Forms.TextBox()
-        Me.Label45 = New System.Windows.Forms.Label()
+        Me.TXT_DATE_LASTVISET1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.TXT_DATE_TODAY1 = New System.Windows.Forms.DateTimePicker()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.TXT_BP1 = New System.Windows.Forms.TextBox()
@@ -150,30 +133,107 @@ Partial Class FOLLOWUPFRM
         Me.Label54 = New System.Windows.Forms.Label()
         Me.TXT_WEEK1 = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TXT_BP = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TXT_W = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TXT_PLACENTA = New System.Windows.Forms.TextBox()
+        Me.TXT_WIGHT = New System.Windows.Forms.TextBox()
+        Me.TXT_LIQPUR = New System.Windows.Forms.TextBox()
+        Me.TXT_SEX = New System.Windows.Forms.ComboBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TXT_WEEK = New System.Windows.Forms.TextBox()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.TXT_OBSTETRIC = New System.Windows.Forms.TextBox()
+        Me.BTN_PHARM = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.TXT_CODE100 = New System.Windows.Forms.TextBox()
+        Me.TXT_CODE_GOR3A = New System.Windows.Forms.TextBox()
+        Me.TXT_CODE_PHARM = New System.Windows.Forms.TextBox()
+        Me.TXT_GOR3A = New System.Windows.Forms.ComboBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.TXT_NO3 = New System.Windows.Forms.TextBox()
+        Me.TXT_PHARM = New System.Windows.Forms.ComboBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXT_CODE_COMPLAIONT = New System.Windows.Forms.TextBox()
+        Me.BTN_COMPLAIONT = New DevExpress.XtraEditors.SimpleButton()
+        Me.TXT_COMPLAIONT = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXT_DATE_LASTVISET = New System.Windows.Forms.DateTimePicker()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.BTN_4D = New DevExpress.XtraEditors.SimpleButton()
+        Me.TXT_4D = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.BTN_FETAL = New DevExpress.XtraEditors.SimpleButton()
+        Me.TXT_FETAL = New System.Windows.Forms.TextBox()
+        Me.GRBTN = New System.Windows.Forms.GroupBox()
+        Me.ALL_Prescription = New DevExpress.XtraEditors.SimpleButton()
+        Me.SEARCHBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_FOLOWUP = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_PRESCRIPTION = New DevExpress.XtraEditors.SimpleButton()
+        Me.DELETBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.T_CHANG = New System.Windows.Forms.Timer(Me.components)
+        Me.BTN_BABY = New DevExpress.XtraEditors.SimpleButton()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.TableLayoutPanel7.SuspendLayout()
         Me.TableLayoutPanel8.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox18.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GRBTN.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -296,7 +356,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_CODE2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_CODE2.ForeColor = System.Drawing.Color.DeepPink
-        Me.TXT_CODE2.Location = New System.Drawing.Point(994, 17)
+        Me.TXT_CODE2.Location = New System.Drawing.Point(960, 20)
         Me.TXT_CODE2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.TXT_CODE2.Name = "TXT_CODE2"
         Me.TXT_CODE2.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -433,6 +493,54 @@ Partial Class FOLLOWUPFRM
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1118, 423)
         Me.TabControl1.TabIndex = 81
+        '
+        'TabPage5
+        '
+        Me.TabPage5.BackColor = System.Drawing.Color.RosyBrown
+        Me.TabPage5.Controls.Add(Me.GroupBox7)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(1110, 388)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Obstetric History"
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.BTN_OBSTETRIC)
+        Me.GroupBox7.Controls.Add(Me.TXT_OBSTETRIC)
+        Me.GroupBox7.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.GroupBox7.Location = New System.Drawing.Point(7, 6)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(1087, 210)
+        Me.GroupBox7.TabIndex = 86
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Obstetric History"
+        '
+        'BTN_OBSTETRIC
+        '
+        Me.BTN_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_OBSTETRIC.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
+        Me.BTN_OBSTETRIC.Appearance.Options.UseFont = True
+        Me.BTN_OBSTETRIC.Appearance.Options.UseForeColor = True
+        Me.BTN_OBSTETRIC.ImageOptions.Image = CType(resources.GetObject("BTN_OBSTETRIC.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_OBSTETRIC.Location = New System.Drawing.Point(1027, 82)
+        Me.BTN_OBSTETRIC.Name = "BTN_OBSTETRIC"
+        Me.BTN_OBSTETRIC.Size = New System.Drawing.Size(43, 40)
+        Me.BTN_OBSTETRIC.TabIndex = 59
+        '
+        'TXT_OBSTETRIC
+        '
+        Me.TXT_OBSTETRIC.BackColor = System.Drawing.Color.White
+        Me.TXT_OBSTETRIC.Enabled = False
+        Me.TXT_OBSTETRIC.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_OBSTETRIC.ForeColor = System.Drawing.Color.OrangeRed
+        Me.TXT_OBSTETRIC.Location = New System.Drawing.Point(5, 19)
+        Me.TXT_OBSTETRIC.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_OBSTETRIC.Multiline = True
+        Me.TXT_OBSTETRIC.Name = "TXT_OBSTETRIC"
+        Me.TXT_OBSTETRIC.Size = New System.Drawing.Size(1008, 172)
+        Me.TXT_OBSTETRIC.TabIndex = 41
         '
         'TabPage1
         '
@@ -1207,21 +1315,13 @@ Partial Class FOLLOWUPFRM
         Me.Label12.Text = "Hb%:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(14, Byte), Integer), CType(CType(67, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.GroupBox6)
-        Me.TabPage2.Controls.Add(Me.GroupBox5)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 31)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1110, 388)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Fetal Doppler & 4D"
-        '
         'TabPage3
         '
-        Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(5, Byte), Integer))
+        Me.TabPage3.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.TabPage3.Controls.Add(Me.TXT_DATE_LASTVISET1)
+        Me.TabPage3.Controls.Add(Me.Label59)
+        Me.TabPage3.Controls.Add(Me.Label58)
+        Me.TabPage3.Controls.Add(Me.TXT_DATE_TODAY1)
         Me.TabPage3.Controls.Add(Me.TableLayoutPanel5)
         Me.TabPage3.Controls.Add(Me.TableLayoutPanel2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 31)
@@ -1231,335 +1331,50 @@ Partial Class FOLLOWUPFRM
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Sonar"
         '
-        'GroupBox6
+        'TXT_DATE_LASTVISET1
         '
-        Me.GroupBox6.Controls.Add(Me.SimpleButton1)
-        Me.GroupBox6.Controls.Add(Me.TXT_4D)
-        Me.GroupBox6.ForeColor = System.Drawing.Color.SandyBrown
-        Me.GroupBox6.Location = New System.Drawing.Point(17, 195)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(1087, 172)
-        Me.GroupBox6.TabIndex = 84
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "4D"
+        Me.TXT_DATE_LASTVISET1.Enabled = False
+        Me.TXT_DATE_LASTVISET1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_LASTVISET1.Location = New System.Drawing.Point(491, 185)
+        Me.TXT_DATE_LASTVISET1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_LASTVISET1.Name = "TXT_DATE_LASTVISET1"
+        Me.TXT_DATE_LASTVISET1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_LASTVISET1.Size = New System.Drawing.Size(189, 27)
+        Me.TXT_DATE_LASTVISET1.TabIndex = 113
         '
-        'TXT_4D
+        'Label59
         '
-        Me.TXT_4D.BackColor = System.Drawing.Color.White
-        Me.TXT_4D.Enabled = False
-        Me.TXT_4D.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_4D.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.TXT_4D.Location = New System.Drawing.Point(5, 19)
-        Me.TXT_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_4D.Multiline = True
-        Me.TXT_4D.Name = "TXT_4D"
-        Me.TXT_4D.Size = New System.Drawing.Size(1008, 147)
-        Me.TXT_4D.TabIndex = 41
+        Me.Label59.AutoSize = True
+        Me.Label59.ForeColor = System.Drawing.Color.White
+        Me.Label59.Location = New System.Drawing.Point(388, 10)
+        Me.Label59.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label59.Name = "Label59"
+        Me.Label59.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label59.Size = New System.Drawing.Size(97, 19)
+        Me.Label59.TabIndex = 112
+        Me.Label59.Text = "New Visit :"
         '
-        'GroupBox5
+        'Label58
         '
-        Me.GroupBox5.Controls.Add(Me.BTN_FETAL)
-        Me.GroupBox5.Controls.Add(Me.TXT_FETAL)
-        Me.GroupBox5.ForeColor = System.Drawing.Color.MediumPurple
-        Me.GroupBox5.Location = New System.Drawing.Point(17, 6)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1087, 165)
-        Me.GroupBox5.TabIndex = 83
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Fetal Doppler"
+        Me.Label58.AutoSize = True
+        Me.Label58.ForeColor = System.Drawing.Color.White
+        Me.Label58.Location = New System.Drawing.Point(390, 188)
+        Me.Label58.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label58.Name = "Label58"
+        Me.Label58.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label58.Size = New System.Drawing.Size(95, 19)
+        Me.Label58.TabIndex = 111
+        Me.Label58.Text = "Last Visit :"
         '
-        'TXT_FETAL
+        'TXT_DATE_TODAY1
         '
-        Me.TXT_FETAL.BackColor = System.Drawing.Color.White
-        Me.TXT_FETAL.Enabled = False
-        Me.TXT_FETAL.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_FETAL.ForeColor = System.Drawing.Color.Indigo
-        Me.TXT_FETAL.Location = New System.Drawing.Point(5, 19)
-        Me.TXT_FETAL.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_FETAL.Multiline = True
-        Me.TXT_FETAL.Name = "TXT_FETAL"
-        Me.TXT_FETAL.Size = New System.Drawing.Size(1008, 131)
-        Me.TXT_FETAL.TabIndex = 41
-        '
-        'BTN_FETAL
-        '
-        Me.BTN_FETAL.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_FETAL.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
-        Me.BTN_FETAL.Appearance.Options.UseFont = True
-        Me.BTN_FETAL.Appearance.Options.UseForeColor = True
-        Me.BTN_FETAL.ImageOptions.Image = CType(resources.GetObject("BTN_FETAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_FETAL.Location = New System.Drawing.Point(1026, 64)
-        Me.BTN_FETAL.Name = "BTN_FETAL"
-        Me.BTN_FETAL.Size = New System.Drawing.Size(43, 40)
-        Me.BTN_FETAL.TabIndex = 57
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton1.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
-        Me.SimpleButton1.Appearance.Options.UseFont = True
-        Me.SimpleButton1.Appearance.Options.UseForeColor = True
-        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(1026, 82)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(43, 40)
-        Me.SimpleButton1.TabIndex = 58
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.TableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble
-        Me.TableLayoutPanel2.ColumnCount = 3
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.45055!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.54945!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 796.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label47, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label46, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel1, 2, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label45, 2, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(7, 37)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.56075!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.43925!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1097, 132)
-        Me.TableLayoutPanel2.TabIndex = 92
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.ColumnCount = 1
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.TXT_BP, 0, 1)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(6, 34)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 2
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(136, 92)
-        Me.TableLayoutPanel4.TabIndex = 99
-        '
-        'TXT_BP
-        '
-        Me.TXT_BP.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_BP.Location = New System.Drawing.Point(2, 27)
-        Me.TXT_BP.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_BP.Multiline = True
-        Me.TXT_BP.Name = "TXT_BP"
-        Me.TXT_BP.Size = New System.Drawing.Size(132, 48)
-        Me.TXT_BP.TabIndex = 97
-        Me.TXT_BP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 1
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.TXT_W, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(151, 34)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(140, 92)
-        Me.TableLayoutPanel3.TabIndex = 98
-        '
-        'TXT_W
-        '
-        Me.TXT_W.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_W.Location = New System.Drawing.Point(2, 27)
-        Me.TXT_W.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_W.Multiline = True
-        Me.TXT_W.Name = "TXT_W"
-        Me.TXT_W.Size = New System.Drawing.Size(136, 48)
-        Me.TXT_W.TabIndex = 97
-        Me.TXT_W.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label47
-        '
-        Me.Label47.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label47.Location = New System.Drawing.Point(150, 3)
-        Me.Label47.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label47.Name = "Label47"
-        Me.Label47.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label47.Size = New System.Drawing.Size(130, 25)
-        Me.Label47.TabIndex = 95
-        Me.Label47.Text = "W"
-        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label46
-        '
-        Me.Label46.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label46.Location = New System.Drawing.Point(5, 3)
-        Me.Label46.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label46.Name = "Label46"
-        Me.Label46.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label46.Size = New System.Drawing.Size(131, 25)
-        Me.Label46.TabIndex = 94
-        Me.Label46.Text = "BP"
-        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
-        Me.TableLayoutPanel1.ColumnCount = 5
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.82943!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.17057!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TXT_PLACENTA, 4, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TXT_WIGHT, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TXT_LIQPUR, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TXT_SEX, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label37, 4, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label35, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label33, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label31, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label21, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TXT_WEEK, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(300, 34)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.12644!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.87356!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(791, 92)
-        Me.TableLayoutPanel1.TabIndex = 87
-        '
-        'TXT_PLACENTA
-        '
-        Me.TXT_PLACENTA.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_PLACENTA.Location = New System.Drawing.Point(646, 47)
-        Me.TXT_PLACENTA.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_PLACENTA.Multiline = True
-        Me.TXT_PLACENTA.Name = "TXT_PLACENTA"
-        Me.TXT_PLACENTA.Size = New System.Drawing.Size(141, 40)
-        Me.TXT_PLACENTA.TabIndex = 95
-        Me.TXT_PLACENTA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_WIGHT
-        '
-        Me.TXT_WIGHT.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_WIGHT.Location = New System.Drawing.Point(146, 47)
-        Me.TXT_WIGHT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_WIGHT.Multiline = True
-        Me.TXT_WIGHT.Name = "TXT_WIGHT"
-        Me.TXT_WIGHT.Size = New System.Drawing.Size(143, 40)
-        Me.TXT_WIGHT.TabIndex = 94
-        Me.TXT_WIGHT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_LIQPUR
-        '
-        Me.TXT_LIQPUR.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_LIQPUR.Location = New System.Drawing.Point(295, 47)
-        Me.TXT_LIQPUR.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_LIQPUR.Multiline = True
-        Me.TXT_LIQPUR.Name = "TXT_LIQPUR"
-        Me.TXT_LIQPUR.Size = New System.Drawing.Size(186, 40)
-        Me.TXT_LIQPUR.TabIndex = 88
-        Me.TXT_LIQPUR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_SEX
-        '
-        Me.TXT_SEX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_SEX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_SEX.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_SEX.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_SEX.FormattingEnabled = True
-        Me.TXT_SEX.Items.AddRange(New Object() {"undefined", "Male", "Femal", "Male & Femal", "Male  & Male ", "Femal & Femal"})
-        Me.TXT_SEX.Location = New System.Drawing.Point(487, 47)
-        Me.TXT_SEX.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_SEX.Name = "TXT_SEX"
-        Me.TXT_SEX.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_SEX.Size = New System.Drawing.Size(151, 22)
-        Me.TXT_SEX.TabIndex = 88
-        '
-        'Label37
-        '
-        Me.Label37.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label37.Location = New System.Drawing.Point(646, 2)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label37.Size = New System.Drawing.Size(141, 40)
-        Me.Label37.TabIndex = 92
-        Me.Label37.Text = "Placenta"
-        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label35
-        '
-        Me.Label35.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label35.Location = New System.Drawing.Point(487, 2)
-        Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label35.Name = "Label35"
-        Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label35.Size = New System.Drawing.Size(151, 40)
-        Me.Label35.TabIndex = 91
-        Me.Label35.Text = "Sex"
-        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label33
-        '
-        Me.Label33.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label33.Location = New System.Drawing.Point(295, 2)
-        Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label33.Name = "Label33"
-        Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label33.Size = New System.Drawing.Size(186, 40)
-        Me.Label33.TabIndex = 90
-        Me.Label33.Text = "Liqour"
-        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label31
-        '
-        Me.Label31.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label31.Location = New System.Drawing.Point(146, 2)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label31.Size = New System.Drawing.Size(143, 40)
-        Me.Label31.TabIndex = 89
-        Me.Label31.Text = "Fet. weight"
-        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label21
-        '
-        Me.Label21.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label21.Location = New System.Drawing.Point(4, 2)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label21.Size = New System.Drawing.Size(136, 40)
-        Me.Label21.TabIndex = 88
-        Me.Label21.Text = "WEEKS"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TXT_WEEK
-        '
-        Me.TXT_WEEK.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_WEEK.Location = New System.Drawing.Point(4, 47)
-        Me.TXT_WEEK.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_WEEK.Multiline = True
-        Me.TXT_WEEK.Name = "TXT_WEEK"
-        Me.TXT_WEEK.Size = New System.Drawing.Size(136, 40)
-        Me.TXT_WEEK.TabIndex = 93
-        Me.TXT_WEEK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label45
-        '
-        Me.Label45.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label45.Location = New System.Drawing.Point(299, 3)
-        Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label45.Name = "Label45"
-        Me.Label45.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label45.Size = New System.Drawing.Size(788, 25)
-        Me.Label45.TabIndex = 93
-        Me.Label45.Text = "Sonar"
-        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.TXT_DATE_TODAY1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_TODAY1.Location = New System.Drawing.Point(491, 5)
+        Me.TXT_DATE_TODAY1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_TODAY1.Name = "TXT_DATE_TODAY1"
+        Me.TXT_DATE_TODAY1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_TODAY1.Size = New System.Drawing.Size(189, 27)
+        Me.TXT_DATE_TODAY1.TabIndex = 94
         '
         'TableLayoutPanel5
         '
@@ -1568,7 +1383,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel5.ColumnCount = 3
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 798.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 826.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel6, 0, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel7, 1, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.Label48, 1, 0)
@@ -1593,7 +1408,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel6.RowCount = 2
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(137, 103)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(123, 103)
         Me.TableLayoutPanel6.TabIndex = 99
         '
         'TXT_BP1
@@ -1604,7 +1419,7 @@ Partial Class FOLLOWUPFRM
         Me.TXT_BP1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_BP1.Multiline = True
         Me.TXT_BP1.Name = "TXT_BP1"
-        Me.TXT_BP1.Size = New System.Drawing.Size(128, 58)
+        Me.TXT_BP1.Size = New System.Drawing.Size(119, 58)
         Me.TXT_BP1.TabIndex = 97
         Me.TXT_BP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1613,12 +1428,12 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel7.ColumnCount = 1
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.TXT_W1, 0, 1)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(152, 37)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(138, 37)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 2
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(137, 103)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(123, 103)
         Me.TableLayoutPanel7.TabIndex = 98
         '
         'TXT_W1
@@ -1629,18 +1444,18 @@ Partial Class FOLLOWUPFRM
         Me.TXT_W1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_W1.Multiline = True
         Me.TXT_W1.Name = "TXT_W1"
-        Me.TXT_W1.Size = New System.Drawing.Size(133, 58)
+        Me.TXT_W1.Size = New System.Drawing.Size(119, 58)
         Me.TXT_W1.TabIndex = 97
         Me.TXT_W1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label48
         '
         Me.Label48.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label48.Location = New System.Drawing.Point(151, 3)
+        Me.Label48.Location = New System.Drawing.Point(137, 3)
         Me.Label48.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label48.Name = "Label48"
         Me.Label48.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label48.Size = New System.Drawing.Size(139, 28)
+        Me.Label48.Size = New System.Drawing.Size(125, 28)
         Me.Label48.TabIndex = 95
         Me.Label48.Text = "W"
         Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1652,7 +1467,7 @@ Partial Class FOLLOWUPFRM
         Me.Label49.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label49.Name = "Label49"
         Me.Label49.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label49.Size = New System.Drawing.Size(139, 28)
+        Me.Label49.Size = New System.Drawing.Size(125, 28)
         Me.Label49.TabIndex = 94
         Me.Label49.Text = "BP"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1668,7 +1483,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.06383!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191.0!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157.0!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140.0!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_PLACENTA1, 4, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_WEIGHT1, 1, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_LIQOUR1, 2, 1)
@@ -1679,19 +1494,19 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel8.Controls.Add(Me.Label53, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.Label54, 0, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_WEEK1, 0, 1)
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(298, 37)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(270, 37)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 2
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.68966!))
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.31034!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(793, 103)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(821, 103)
         Me.TableLayoutPanel8.TabIndex = 87
         '
         'TXT_PLACENTA1
         '
         Me.TXT_PLACENTA1.BackColor = System.Drawing.Color.White
         Me.TXT_PLACENTA1.Enabled = False
-        Me.TXT_PLACENTA1.Location = New System.Drawing.Point(652, 51)
+        Me.TXT_PLACENTA1.Location = New System.Drawing.Point(659, 51)
         Me.TXT_PLACENTA1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_PLACENTA1.Multiline = True
         Me.TXT_PLACENTA1.Name = "TXT_PLACENTA1"
@@ -1704,7 +1519,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_WEIGHT1.BackColor = System.Drawing.Color.White
         Me.TXT_WEIGHT1.Enabled = False
-        Me.TXT_WEIGHT1.Location = New System.Drawing.Point(149, 51)
+        Me.TXT_WEIGHT1.Location = New System.Drawing.Point(152, 51)
         Me.TXT_WEIGHT1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_WEIGHT1.Multiline = True
         Me.TXT_WEIGHT1.Name = "TXT_WEIGHT1"
@@ -1716,7 +1531,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_LIQOUR1.BackColor = System.Drawing.Color.White
         Me.TXT_LIQOUR1.Enabled = False
-        Me.TXT_LIQOUR1.Location = New System.Drawing.Point(300, 51)
+        Me.TXT_LIQOUR1.Location = New System.Drawing.Point(307, 51)
         Me.TXT_LIQOUR1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_LIQOUR1.Multiline = True
         Me.TXT_LIQOUR1.Name = "TXT_LIQOUR1"
@@ -1731,7 +1546,7 @@ Partial Class FOLLOWUPFRM
         Me.TXT_SEX1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_SEX1.FormattingEnabled = True
         Me.TXT_SEX1.Items.AddRange(New Object() {"undefined", "Male", "Femal"})
-        Me.TXT_SEX1.Location = New System.Drawing.Point(493, 51)
+        Me.TXT_SEX1.Location = New System.Drawing.Point(500, 51)
         Me.TXT_SEX1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_SEX1.Name = "TXT_SEX1"
         Me.TXT_SEX1.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1741,7 +1556,7 @@ Partial Class FOLLOWUPFRM
         'Label50
         '
         Me.Label50.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label50.Location = New System.Drawing.Point(652, 2)
+        Me.Label50.Location = New System.Drawing.Point(659, 2)
         Me.Label50.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label50.Name = "Label50"
         Me.Label50.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1753,7 +1568,7 @@ Partial Class FOLLOWUPFRM
         'Label51
         '
         Me.Label51.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label51.Location = New System.Drawing.Point(493, 2)
+        Me.Label51.Location = New System.Drawing.Point(500, 2)
         Me.Label51.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label51.Name = "Label51"
         Me.Label51.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1765,7 +1580,7 @@ Partial Class FOLLOWUPFRM
         'Label52
         '
         Me.Label52.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label52.Location = New System.Drawing.Point(300, 2)
+        Me.Label52.Location = New System.Drawing.Point(307, 2)
         Me.Label52.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label52.Name = "Label52"
         Me.Label52.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1777,7 +1592,7 @@ Partial Class FOLLOWUPFRM
         'Label53
         '
         Me.Label53.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label53.Location = New System.Drawing.Point(149, 2)
+        Me.Label53.Location = New System.Drawing.Point(152, 2)
         Me.Label53.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label53.Name = "Label53"
         Me.Label53.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1813,7 +1628,7 @@ Partial Class FOLLOWUPFRM
         'Label55
         '
         Me.Label55.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label55.Location = New System.Drawing.Point(297, 3)
+        Me.Label55.Location = New System.Drawing.Point(269, 3)
         Me.Label55.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label55.Name = "Label55"
         Me.Label55.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1822,70 +1637,885 @@ Partial Class FOLLOWUPFRM
         Me.Label55.Text = "Sonar"
         Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.TableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble
+        Me.TableLayoutPanel2.ColumnCount = 3
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.45055!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.54945!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 824.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label47, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label46, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel1, 2, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label45, 2, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(7, 37)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.56075!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.43925!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1097, 132)
+        Me.TableLayoutPanel2.TabIndex = 92
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 1
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.TXT_BP, 0, 1)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(6, 34)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 2
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(123, 92)
+        Me.TableLayoutPanel4.TabIndex = 99
+        '
+        'TXT_BP
+        '
+        Me.TXT_BP.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_BP.Location = New System.Drawing.Point(2, 27)
+        Me.TXT_BP.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_BP.Multiline = True
+        Me.TXT_BP.Name = "TXT_BP"
+        Me.TXT_BP.Size = New System.Drawing.Size(119, 48)
+        Me.TXT_BP.TabIndex = 97
+        Me.TXT_BP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.TXT_W, 0, 1)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(138, 34)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 2
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(125, 92)
+        Me.TableLayoutPanel3.TabIndex = 98
+        '
+        'TXT_W
+        '
+        Me.TXT_W.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_W.Location = New System.Drawing.Point(2, 27)
+        Me.TXT_W.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_W.Multiline = True
+        Me.TXT_W.Name = "TXT_W"
+        Me.TXT_W.Size = New System.Drawing.Size(121, 48)
+        Me.TXT_W.TabIndex = 97
+        Me.TXT_W.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label47
+        '
+        Me.Label47.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label47.Location = New System.Drawing.Point(137, 3)
+        Me.Label47.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label47.Name = "Label47"
+        Me.Label47.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label47.Size = New System.Drawing.Size(127, 25)
+        Me.Label47.TabIndex = 95
+        Me.Label47.Text = "W"
+        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label46
+        '
+        Me.Label46.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label46.Location = New System.Drawing.Point(5, 3)
+        Me.Label46.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label46.Name = "Label46"
+        Me.Label46.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label46.Size = New System.Drawing.Size(125, 25)
+        Me.Label46.TabIndex = 94
+        Me.Label46.Text = "BP"
+        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
+        Me.TableLayoutPanel1.ColumnCount = 5
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.82943!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.17057!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.TXT_PLACENTA, 4, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TXT_WIGHT, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TXT_LIQPUR, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TXT_SEX, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label37, 4, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label35, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label33, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label31, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label21, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TXT_WEEK, 0, 1)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(272, 34)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.12644!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.87356!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(819, 92)
+        Me.TableLayoutPanel1.TabIndex = 87
+        '
+        'TXT_PLACENTA
+        '
+        Me.TXT_PLACENTA.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_PLACENTA.Location = New System.Drawing.Point(653, 47)
+        Me.TXT_PLACENTA.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_PLACENTA.Multiline = True
+        Me.TXT_PLACENTA.Name = "TXT_PLACENTA"
+        Me.TXT_PLACENTA.Size = New System.Drawing.Size(141, 40)
+        Me.TXT_PLACENTA.TabIndex = 95
+        Me.TXT_PLACENTA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_WIGHT
+        '
+        Me.TXT_WIGHT.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_WIGHT.Location = New System.Drawing.Point(150, 47)
+        Me.TXT_WIGHT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_WIGHT.Multiline = True
+        Me.TXT_WIGHT.Name = "TXT_WIGHT"
+        Me.TXT_WIGHT.Size = New System.Drawing.Size(143, 40)
+        Me.TXT_WIGHT.TabIndex = 94
+        Me.TXT_WIGHT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_LIQPUR
+        '
+        Me.TXT_LIQPUR.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_LIQPUR.Location = New System.Drawing.Point(302, 47)
+        Me.TXT_LIQPUR.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_LIQPUR.Multiline = True
+        Me.TXT_LIQPUR.Name = "TXT_LIQPUR"
+        Me.TXT_LIQPUR.Size = New System.Drawing.Size(186, 40)
+        Me.TXT_LIQPUR.TabIndex = 88
+        Me.TXT_LIQPUR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_SEX
+        '
+        Me.TXT_SEX.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_SEX.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_SEX.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_SEX.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_SEX.FormattingEnabled = True
+        Me.TXT_SEX.Items.AddRange(New Object() {"undefined", "Male", "Femal", "Male & Femal", "Male  & Male ", "Femal & Femal"})
+        Me.TXT_SEX.Location = New System.Drawing.Point(494, 47)
+        Me.TXT_SEX.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_SEX.Name = "TXT_SEX"
+        Me.TXT_SEX.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_SEX.Size = New System.Drawing.Size(151, 22)
+        Me.TXT_SEX.TabIndex = 88
+        '
+        'Label37
+        '
+        Me.Label37.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label37.Location = New System.Drawing.Point(653, 2)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label37.Name = "Label37"
+        Me.Label37.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label37.Size = New System.Drawing.Size(141, 40)
+        Me.Label37.TabIndex = 92
+        Me.Label37.Text = "Placenta"
+        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label35
+        '
+        Me.Label35.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label35.Location = New System.Drawing.Point(494, 2)
+        Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label35.Name = "Label35"
+        Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label35.Size = New System.Drawing.Size(151, 40)
+        Me.Label35.TabIndex = 91
+        Me.Label35.Text = "Sex"
+        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label33
+        '
+        Me.Label33.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label33.Location = New System.Drawing.Point(302, 2)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label33.Size = New System.Drawing.Size(186, 40)
+        Me.Label33.TabIndex = 90
+        Me.Label33.Text = "Liqour"
+        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label31
+        '
+        Me.Label31.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label31.Location = New System.Drawing.Point(150, 2)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label31.Size = New System.Drawing.Size(143, 40)
+        Me.Label31.TabIndex = 89
+        Me.Label31.Text = "Fet. weight"
+        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label21
+        '
+        Me.Label21.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label21.Location = New System.Drawing.Point(4, 2)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label21.Size = New System.Drawing.Size(136, 40)
+        Me.Label21.TabIndex = 88
+        Me.Label21.Text = "WEEKS"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TXT_WEEK
+        '
+        Me.TXT_WEEK.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_WEEK.Location = New System.Drawing.Point(4, 47)
+        Me.TXT_WEEK.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_WEEK.Multiline = True
+        Me.TXT_WEEK.Name = "TXT_WEEK"
+        Me.TXT_WEEK.Size = New System.Drawing.Size(136, 40)
+        Me.TXT_WEEK.TabIndex = 93
+        Me.TXT_WEEK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label45
+        '
+        Me.Label45.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label45.Location = New System.Drawing.Point(271, 3)
+        Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label45.Name = "Label45"
+        Me.Label45.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label45.Size = New System.Drawing.Size(788, 25)
+        Me.Label45.TabIndex = 93
+        Me.Label45.Text = "Sonar"
+        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'TabPage4
         '
+        Me.TabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TabPage4.Controls.Add(Me.BTN_PHARM)
+        Me.TabPage4.Controls.Add(Me.Label56)
+        Me.TabPage4.Controls.Add(Me.Label38)
+        Me.TabPage4.Controls.Add(Me.TXT_CODE100)
+        Me.TabPage4.Controls.Add(Me.TXT_CODE_GOR3A)
+        Me.TabPage4.Controls.Add(Me.TXT_CODE_PHARM)
+        Me.TabPage4.Controls.Add(Me.TXT_GOR3A)
+        Me.TabPage4.Controls.Add(Me.Label39)
+        Me.TabPage4.Controls.Add(Me.TXT_NO3)
+        Me.TabPage4.Controls.Add(Me.TXT_PHARM)
+        Me.TabPage4.Controls.Add(Me.DataGridView2)
+        Me.TabPage4.Controls.Add(Me.TXT_CODE_COMPLAIONT)
+        Me.TabPage4.Controls.Add(Me.BTN_COMPLAIONT)
+        Me.TabPage4.Controls.Add(Me.TXT_COMPLAIONT)
+        Me.TabPage4.Controls.Add(Me.Label10)
+        Me.TabPage4.Controls.Add(Me.TXT_DATE_TODAY)
+        Me.TabPage4.Controls.Add(Me.DataGridView1)
+        Me.TabPage4.Controls.Add(Me.GroupBox18)
         Me.TabPage4.Location = New System.Drawing.Point(4, 31)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage4.Size = New System.Drawing.Size(1110, 388)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Complaint & Drugs"
-        Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'TabPage5
+        'BTN_PHARM
         '
-        Me.TabPage5.Controls.Add(Me.GroupBox7)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 31)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1110, 388)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Obstetric History"
-        Me.TabPage5.UseVisualStyleBackColor = True
+        Me.BTN_PHARM.ImageOptions.Image = CType(resources.GetObject("BTN_PHARM.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PHARM.Location = New System.Drawing.Point(1043, 36)
+        Me.BTN_PHARM.Name = "BTN_PHARM"
+        Me.BTN_PHARM.Size = New System.Drawing.Size(38, 37)
+        Me.BTN_PHARM.TabIndex = 107
         '
-        'GroupBox7
+        'Label56
         '
-        Me.GroupBox7.Controls.Add(Me.SimpleButton2)
-        Me.GroupBox7.Controls.Add(Me.TXT_OBSTETRIC)
-        Me.GroupBox7.ForeColor = System.Drawing.Color.OrangeRed
-        Me.GroupBox7.Location = New System.Drawing.Point(7, 6)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(1087, 210)
-        Me.GroupBox7.TabIndex = 86
-        Me.GroupBox7.TabStop = False
-        Me.GroupBox7.Text = "Obstetric History"
+        Me.Label56.AutoSize = True
+        Me.Label56.ForeColor = System.Drawing.Color.Black
+        Me.Label56.Location = New System.Drawing.Point(564, 10)
+        Me.Label56.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label56.Name = "Label56"
+        Me.Label56.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label56.Size = New System.Drawing.Size(67, 19)
+        Me.Label56.TabIndex = 106
+        Me.Label56.Text = "Drugs :"
         '
-        'SimpleButton2
+        'Label38
         '
-        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton2.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
-        Me.SimpleButton2.Appearance.Options.UseFont = True
-        Me.SimpleButton2.Appearance.Options.UseForeColor = True
-        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(1027, 82)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(43, 40)
-        Me.SimpleButton2.TabIndex = 59
+        Me.Label38.AutoSize = True
+        Me.Label38.ForeColor = System.Drawing.Color.Black
+        Me.Label38.Location = New System.Drawing.Point(10, 46)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label38.Name = "Label38"
+        Me.Label38.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label38.Size = New System.Drawing.Size(103, 19)
+        Me.Label38.TabIndex = 105
+        Me.Label38.Text = "Complaint :"
         '
-        'TXT_OBSTETRIC
+        'TXT_CODE100
         '
-        Me.TXT_OBSTETRIC.BackColor = System.Drawing.Color.White
-        Me.TXT_OBSTETRIC.Enabled = False
-        Me.TXT_OBSTETRIC.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_OBSTETRIC.ForeColor = System.Drawing.Color.OrangeRed
-        Me.TXT_OBSTETRIC.Location = New System.Drawing.Point(5, 19)
-        Me.TXT_OBSTETRIC.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_OBSTETRIC.Multiline = True
-        Me.TXT_OBSTETRIC.Name = "TXT_OBSTETRIC"
-        Me.TXT_OBSTETRIC.Size = New System.Drawing.Size(1008, 172)
-        Me.TXT_OBSTETRIC.TabIndex = 41
+        Me.TXT_CODE100.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE100.Enabled = False
+        Me.TXT_CODE100.Location = New System.Drawing.Point(1012, -6)
+        Me.TXT_CODE100.Name = "TXT_CODE100"
+        Me.TXT_CODE100.Size = New System.Drawing.Size(42, 27)
+        Me.TXT_CODE100.TabIndex = 104
+        Me.TXT_CODE100.Visible = False
+        '
+        'TXT_CODE_GOR3A
+        '
+        Me.TXT_CODE_GOR3A.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE_GOR3A.Enabled = False
+        Me.TXT_CODE_GOR3A.Location = New System.Drawing.Point(643, 33)
+        Me.TXT_CODE_GOR3A.Name = "TXT_CODE_GOR3A"
+        Me.TXT_CODE_GOR3A.Size = New System.Drawing.Size(42, 27)
+        Me.TXT_CODE_GOR3A.TabIndex = 103
+        Me.TXT_CODE_GOR3A.Visible = False
+        '
+        'TXT_CODE_PHARM
+        '
+        Me.TXT_CODE_PHARM.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE_PHARM.Enabled = False
+        Me.TXT_CODE_PHARM.Location = New System.Drawing.Point(842, -3)
+        Me.TXT_CODE_PHARM.Name = "TXT_CODE_PHARM"
+        Me.TXT_CODE_PHARM.Size = New System.Drawing.Size(42, 27)
+        Me.TXT_CODE_PHARM.TabIndex = 102
+        Me.TXT_CODE_PHARM.Visible = False
+        '
+        'TXT_GOR3A
+        '
+        Me.TXT_GOR3A.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_GOR3A.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_GOR3A.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_GOR3A.FormattingEnabled = True
+        Me.TXT_GOR3A.Location = New System.Drawing.Point(634, 43)
+        Me.TXT_GOR3A.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_GOR3A.Name = "TXT_GOR3A"
+        Me.TXT_GOR3A.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_GOR3A.Size = New System.Drawing.Size(369, 27)
+        Me.TXT_GOR3A.TabIndex = 101
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.ForeColor = System.Drawing.Color.Black
+        Me.Label39.Location = New System.Drawing.Point(572, 45)
+        Me.Label39.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label39.Name = "Label39"
+        Me.Label39.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label39.Size = New System.Drawing.Size(60, 19)
+        Me.Label39.TabIndex = 100
+        Me.Label39.Text = "Dose :"
+        '
+        'TXT_NO3
+        '
+        Me.TXT_NO3.BackColor = System.Drawing.Color.White
+        Me.TXT_NO3.Enabled = False
+        Me.TXT_NO3.Location = New System.Drawing.Point(975, 6)
+        Me.TXT_NO3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_NO3.Name = "TXT_NO3"
+        Me.TXT_NO3.Size = New System.Drawing.Size(122, 27)
+        Me.TXT_NO3.TabIndex = 99
+        Me.TXT_NO3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_PHARM
+        '
+        Me.TXT_PHARM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_PHARM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_PHARM.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_PHARM.FormattingEnabled = True
+        Me.TXT_PHARM.Location = New System.Drawing.Point(634, 6)
+        Me.TXT_PHARM.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_PHARM.Name = "TXT_PHARM"
+        Me.TXT_PHARM.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_PHARM.Size = New System.Drawing.Size(328, 27)
+        Me.TXT_PHARM.TabIndex = 98
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column4, Me.Column3, Me.Column5})
+        Me.DataGridView2.Location = New System.Drawing.Point(569, 75)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(536, 110)
+        Me.DataGridView2.TabIndex = 97
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CODE_DRUGS"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Drugs"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "NO3"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Visible = False
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "dose"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Visible = False
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "CODE_DOS"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'TXT_CODE_COMPLAIONT
+        '
+        Me.TXT_CODE_COMPLAIONT.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE_COMPLAIONT.Enabled = False
+        Me.TXT_CODE_COMPLAIONT.Location = New System.Drawing.Point(136, 36)
+        Me.TXT_CODE_COMPLAIONT.Name = "TXT_CODE_COMPLAIONT"
+        Me.TXT_CODE_COMPLAIONT.Size = New System.Drawing.Size(42, 27)
+        Me.TXT_CODE_COMPLAIONT.TabIndex = 96
+        Me.TXT_CODE_COMPLAIONT.Visible = False
+        '
+        'BTN_COMPLAIONT
+        '
+        Me.BTN_COMPLAIONT.ImageOptions.Image = CType(resources.GetObject("BTN_COMPLAIONT.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_COMPLAIONT.Location = New System.Drawing.Point(505, 36)
+        Me.BTN_COMPLAIONT.Name = "BTN_COMPLAIONT"
+        Me.BTN_COMPLAIONT.Size = New System.Drawing.Size(38, 37)
+        Me.BTN_COMPLAIONT.TabIndex = 95
+        '
+        'TXT_COMPLAIONT
+        '
+        Me.TXT_COMPLAIONT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_COMPLAIONT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_COMPLAIONT.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_COMPLAIONT.FormattingEnabled = True
+        Me.TXT_COMPLAIONT.Location = New System.Drawing.Point(117, 43)
+        Me.TXT_COMPLAIONT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_COMPLAIONT.Name = "TXT_COMPLAIONT"
+        Me.TXT_COMPLAIONT.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_COMPLAIONT.Size = New System.Drawing.Size(367, 27)
+        Me.TXT_COMPLAIONT.TabIndex = 94
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(13, 9)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label10.Size = New System.Drawing.Size(97, 19)
+        Me.Label10.TabIndex = 93
+        Me.Label10.Text = "New Visit :"
+        '
+        'TXT_DATE_TODAY
+        '
+        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(114, 6)
+        Me.TXT_DATE_TODAY.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
+        Me.TXT_DATE_TODAY.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(189, 27)
+        Me.TXT_DATE_TODAY.TabIndex = 92
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 76)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(537, 109)
+        Me.DataGridView1.TabIndex = 91
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "CODE_COMP"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Complaint"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'GroupBox18
+        '
+        Me.GroupBox18.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox18.Controls.Add(Me.DataGridView4)
+        Me.GroupBox18.Controls.Add(Me.Label57)
+        Me.GroupBox18.Controls.Add(Me.DataGridView3)
+        Me.GroupBox18.Controls.Add(Me.TXT_DATE_LASTVISET)
+        Me.GroupBox18.Enabled = False
+        Me.GroupBox18.Location = New System.Drawing.Point(0, 188)
+        Me.GroupBox18.Margin = New System.Windows.Forms.Padding(0)
+        Me.GroupBox18.Name = "GroupBox18"
+        Me.GroupBox18.Padding = New System.Windows.Forms.Padding(0)
+        Me.GroupBox18.Size = New System.Drawing.Size(1114, 200)
+        Me.GroupBox18.TabIndex = 111
+        Me.GroupBox18.TabStop = False
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.AllowUserToAddRows = False
+        Me.DataGridView4.AllowUserToDeleteRows = False
+        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.Column6, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridView4.Location = New System.Drawing.Point(569, 44)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.ReadOnly = True
+        Me.DataGridView4.Size = New System.Drawing.Size(536, 153)
+        Me.DataGridView4.TabIndex = 111
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "R_DT_CODE"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "CODE_COMP"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Visible = False
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "R_DT_PHARM"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Drugs"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "R_DT_NO3"
+        Me.Column6.HeaderText = "NO3"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "R_DT_CODE2"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "code_dose"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Visible = False
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "R_DT_GOR3A"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "dose"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Visible = False
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.ForeColor = System.Drawing.Color.Black
+        Me.Label57.Location = New System.Drawing.Point(8, 17)
+        Me.Label57.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label57.Name = "Label57"
+        Me.Label57.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label57.Size = New System.Drawing.Size(95, 19)
+        Me.Label57.TabIndex = 110
+        Me.Label57.Text = "Last Visit :"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.DataGridView3.Location = New System.Drawing.Point(5, 44)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.Size = New System.Drawing.Size(536, 153)
+        Me.DataGridView3.TabIndex = 108
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CODE_NESA_SHKWA"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CODE_COMP"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "NAME_NESA_SHKWA"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Complaint"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'TXT_DATE_LASTVISET
+        '
+        Me.TXT_DATE_LASTVISET.Enabled = False
+        Me.TXT_DATE_LASTVISET.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_LASTVISET.Location = New System.Drawing.Point(112, 13)
+        Me.TXT_DATE_LASTVISET.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_LASTVISET.Name = "TXT_DATE_LASTVISET"
+        Me.TXT_DATE_LASTVISET.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_LASTVISET.Size = New System.Drawing.Size(189, 27)
+        Me.TXT_DATE_LASTVISET.TabIndex = 109
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(14, Byte), Integer), CType(CType(67, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.GroupBox6)
+        Me.TabPage2.Controls.Add(Me.GroupBox5)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1110, 388)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Fetal Doppler & 4D"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.BTN_4D)
+        Me.GroupBox6.Controls.Add(Me.TXT_4D)
+        Me.GroupBox6.ForeColor = System.Drawing.Color.SandyBrown
+        Me.GroupBox6.Location = New System.Drawing.Point(17, 195)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(1087, 172)
+        Me.GroupBox6.TabIndex = 84
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "4D"
+        '
+        'BTN_4D
+        '
+        Me.BTN_4D.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_4D.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
+        Me.BTN_4D.Appearance.Options.UseFont = True
+        Me.BTN_4D.Appearance.Options.UseForeColor = True
+        Me.BTN_4D.ImageOptions.Image = CType(resources.GetObject("BTN_4D.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_4D.Location = New System.Drawing.Point(1026, 82)
+        Me.BTN_4D.Name = "BTN_4D"
+        Me.BTN_4D.Size = New System.Drawing.Size(43, 40)
+        Me.BTN_4D.TabIndex = 58
+        '
+        'TXT_4D
+        '
+        Me.TXT_4D.BackColor = System.Drawing.Color.White
+        Me.TXT_4D.Enabled = False
+        Me.TXT_4D.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_4D.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.TXT_4D.Location = New System.Drawing.Point(5, 19)
+        Me.TXT_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_4D.Multiline = True
+        Me.TXT_4D.Name = "TXT_4D"
+        Me.TXT_4D.Size = New System.Drawing.Size(1008, 147)
+        Me.TXT_4D.TabIndex = 41
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.BTN_FETAL)
+        Me.GroupBox5.Controls.Add(Me.TXT_FETAL)
+        Me.GroupBox5.ForeColor = System.Drawing.Color.MediumPurple
+        Me.GroupBox5.Location = New System.Drawing.Point(17, 6)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(1087, 165)
+        Me.GroupBox5.TabIndex = 83
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Fetal Doppler"
+        '
+        'BTN_FETAL
+        '
+        Me.BTN_FETAL.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_FETAL.Appearance.ForeColor = System.Drawing.Color.DarkOrchid
+        Me.BTN_FETAL.Appearance.Options.UseFont = True
+        Me.BTN_FETAL.Appearance.Options.UseForeColor = True
+        Me.BTN_FETAL.ImageOptions.Image = CType(resources.GetObject("BTN_FETAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_FETAL.Location = New System.Drawing.Point(1026, 64)
+        Me.BTN_FETAL.Name = "BTN_FETAL"
+        Me.BTN_FETAL.Size = New System.Drawing.Size(43, 40)
+        Me.BTN_FETAL.TabIndex = 57
+        '
+        'TXT_FETAL
+        '
+        Me.TXT_FETAL.BackColor = System.Drawing.Color.White
+        Me.TXT_FETAL.Enabled = False
+        Me.TXT_FETAL.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_FETAL.ForeColor = System.Drawing.Color.Indigo
+        Me.TXT_FETAL.Location = New System.Drawing.Point(5, 19)
+        Me.TXT_FETAL.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_FETAL.Multiline = True
+        Me.TXT_FETAL.Name = "TXT_FETAL"
+        Me.TXT_FETAL.Size = New System.Drawing.Size(1008, 131)
+        Me.TXT_FETAL.TabIndex = 41
+        '
+        'GRBTN
+        '
+        Me.GRBTN.Controls.Add(Me.ALL_Prescription)
+        Me.GRBTN.Controls.Add(Me.SEARCHBTN)
+        Me.GRBTN.Controls.Add(Me.EXITBTN)
+        Me.GRBTN.Controls.Add(Me.BTN_FOLOWUP)
+        Me.GRBTN.Controls.Add(Me.BTN_PRESCRIPTION)
+        Me.GRBTN.Controls.Add(Me.DELETBTN)
+        Me.GRBTN.Controls.Add(Me.EDITBTN)
+        Me.GRBTN.Controls.Add(Me.SAVEBTN)
+        Me.GRBTN.Controls.Add(Me.NEWBTN)
+        Me.GRBTN.Location = New System.Drawing.Point(5, 521)
+        Me.GRBTN.Name = "GRBTN"
+        Me.GRBTN.Size = New System.Drawing.Size(1113, 72)
+        Me.GRBTN.TabIndex = 86
+        Me.GRBTN.TabStop = False
+        '
+        'ALL_Prescription
+        '
+        Me.ALL_Prescription.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ALL_Prescription.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.ALL_Prescription.Appearance.Options.UseFont = True
+        Me.ALL_Prescription.Appearance.Options.UseForeColor = True
+        Me.ALL_Prescription.ImageOptions.Image = CType(resources.GetObject("ALL_Prescription.ImageOptions.Image"), System.Drawing.Image)
+        Me.ALL_Prescription.Location = New System.Drawing.Point(235, 18)
+        Me.ALL_Prescription.Name = "ALL_Prescription"
+        Me.ALL_Prescription.Size = New System.Drawing.Size(174, 44)
+        Me.ALL_Prescription.TabIndex = 8
+        Me.ALL_Prescription.Text = "ALL Prescription"
+        '
+        'SEARCHBTN
+        '
+        Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SEARCHBTN.Appearance.Options.UseFont = True
+        Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SEARCHBTN.Location = New System.Drawing.Point(572, 17)
+        Me.SEARCHBTN.Name = "SEARCHBTN"
+        Me.SEARCHBTN.Size = New System.Drawing.Size(100, 44)
+        Me.SEARCHBTN.TabIndex = 4
+        Me.SEARCHBTN.Text = "Search"
+        '
+        'EXITBTN
+        '
+        Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EXITBTN.Appearance.Options.UseFont = True
+        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EXITBTN.Location = New System.Drawing.Point(11, 17)
+        Me.EXITBTN.Name = "EXITBTN"
+        Me.EXITBTN.Size = New System.Drawing.Size(41, 44)
+        Me.EXITBTN.TabIndex = 7
+        Me.EXITBTN.Text = "Exit"
+        '
+        'BTN_FOLOWUP
+        '
+        Me.BTN_FOLOWUP.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_FOLOWUP.Appearance.Options.UseFont = True
+        Me.BTN_FOLOWUP.ImageOptions.Image = CType(resources.GetObject("BTN_FOLOWUP.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(62, 18)
+        Me.BTN_FOLOWUP.Name = "BTN_FOLOWUP"
+        Me.BTN_FOLOWUP.Size = New System.Drawing.Size(167, 44)
+        Me.BTN_FOLOWUP.TabIndex = 6
+        Me.BTN_FOLOWUP.Text = "Folow up Card"
+        '
+        'BTN_PRESCRIPTION
+        '
+        Me.BTN_PRESCRIPTION.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_PRESCRIPTION.Appearance.ForeColor = System.Drawing.Color.Purple
+        Me.BTN_PRESCRIPTION.Appearance.Options.UseFont = True
+        Me.BTN_PRESCRIPTION.Appearance.Options.UseForeColor = True
+        Me.BTN_PRESCRIPTION.ImageOptions.Image = CType(resources.GetObject("BTN_PRESCRIPTION.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PRESCRIPTION.Location = New System.Drawing.Point(415, 17)
+        Me.BTN_PRESCRIPTION.Name = "BTN_PRESCRIPTION"
+        Me.BTN_PRESCRIPTION.Size = New System.Drawing.Size(151, 44)
+        Me.BTN_PRESCRIPTION.TabIndex = 5
+        Me.BTN_PRESCRIPTION.Text = "Prescription"
+        '
+        'DELETBTN
+        '
+        Me.DELETBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DELETBTN.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.DELETBTN.Appearance.Options.UseFont = True
+        Me.DELETBTN.Appearance.Options.UseForeColor = True
+        Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.DELETBTN.Location = New System.Drawing.Point(679, 18)
+        Me.DELETBTN.Name = "DELETBTN"
+        Me.DELETBTN.Size = New System.Drawing.Size(107, 44)
+        Me.DELETBTN.TabIndex = 3
+        Me.DELETBTN.Text = "Delet"
+        '
+        'EDITBTN
+        '
+        Me.EDITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EDITBTN.Appearance.ForeColor = System.Drawing.Color.SteelBlue
+        Me.EDITBTN.Appearance.Options.UseFont = True
+        Me.EDITBTN.Appearance.Options.UseForeColor = True
+        Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EDITBTN.Location = New System.Drawing.Point(794, 17)
+        Me.EDITBTN.Name = "EDITBTN"
+        Me.EDITBTN.Size = New System.Drawing.Size(104, 44)
+        Me.EDITBTN.TabIndex = 2
+        Me.EDITBTN.Text = "Edit"
+        '
+        'SAVEBTN
+        '
+        Me.SAVEBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SAVEBTN.Appearance.ForeColor = System.Drawing.Color.DarkRed
+        Me.SAVEBTN.Appearance.Options.UseFont = True
+        Me.SAVEBTN.Appearance.Options.UseForeColor = True
+        Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SAVEBTN.Location = New System.Drawing.Point(907, 17)
+        Me.SAVEBTN.Name = "SAVEBTN"
+        Me.SAVEBTN.Size = New System.Drawing.Size(100, 44)
+        Me.SAVEBTN.TabIndex = 0
+        Me.SAVEBTN.Text = "Save"
+        '
+        'NEWBTN
+        '
+        Me.NEWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NEWBTN.Appearance.ForeColor = System.Drawing.Color.LimeGreen
+        Me.NEWBTN.Appearance.Options.UseFont = True
+        Me.NEWBTN.Appearance.Options.UseForeColor = True
+        Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.NEWBTN.Location = New System.Drawing.Point(1014, 18)
+        Me.NEWBTN.Name = "NEWBTN"
+        Me.NEWBTN.Size = New System.Drawing.Size(90, 44)
+        Me.NEWBTN.TabIndex = 1
+        Me.NEWBTN.Text = "New"
+        '
+        'T_CHANG
+        '
+        '
+        'BTN_BABY
+        '
+        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_BABY.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.BTN_BABY.Appearance.Options.UseFont = True
+        Me.BTN_BABY.Appearance.Options.UseForeColor = True
+        Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_baby_64
+        Me.BTN_BABY.Location = New System.Drawing.Point(1052, 19)
+        Me.BTN_BABY.Name = "BTN_BABY"
+        Me.BTN_BABY.Size = New System.Drawing.Size(64, 66)
+        Me.BTN_BABY.TabIndex = 87
+        Me.BTN_BABY.Text = "BABY IS COME"
         '
         'FOLLOWUPFRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(8, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1125, 540)
+        Me.ClientSize = New System.Drawing.Size(1125, 600)
+        Me.Controls.Add(Me.BTN_BABY)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.TXT_RH)
@@ -1908,8 +2538,9 @@ Partial Class FOLLOWUPFRM
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TXT_CODE)
+        Me.Controls.Add(Me.GRBTN)
         Me.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "FOLLOWUPFRM"
         Me.ShowIcon = False
@@ -1917,6 +2548,9 @@ Partial Class FOLLOWUPFRM
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FOLLOW UP CARD"
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage5.ResumeLayout(False)
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
@@ -1924,19 +2558,8 @@ Partial Class FOLLOWUPFRM
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel4.ResumeLayout(False)
-        Me.TableLayoutPanel4.PerformLayout()
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.TabPage3.PerformLayout()
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel6.PerformLayout()
@@ -1944,9 +2567,27 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel7.PerformLayout()
         Me.TableLayoutPanel8.ResumeLayout(False)
         Me.TableLayoutPanel8.PerformLayout()
-        Me.TabPage5.ResumeLayout(False)
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.TableLayoutPanel4.PerformLayout()
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox18.ResumeLayout(False)
+        Me.GroupBox18.PerformLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GRBTN.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2039,7 +2680,7 @@ Partial Class FOLLOWUPFRM
     Friend WithEvents TXT_4D As TextBox
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents TXT_FETAL As TextBox
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_4D As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BTN_FETAL As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
@@ -2082,6 +2723,58 @@ Partial Class FOLLOWUPFRM
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents GroupBox7 As GroupBox
-    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_OBSTETRIC As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_OBSTETRIC As TextBox
+    Friend WithEvents TXT_DATE_TODAY As DateTimePicker
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TXT_CODE_COMPLAIONT As TextBox
+    Friend WithEvents BTN_COMPLAIONT As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TXT_COMPLAIONT As ComboBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents TXT_CODE100 As TextBox
+    Friend WithEvents TXT_CODE_GOR3A As TextBox
+    Friend WithEvents TXT_CODE_PHARM As TextBox
+    Friend WithEvents TXT_GOR3A As ComboBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents TXT_NO3 As TextBox
+    Friend WithEvents TXT_PHARM As ComboBox
+    Friend WithEvents BTN_PHARM As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Label57 As Label
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_DATE_LASTVISET As DateTimePicker
+    Friend WithEvents GroupBox18 As GroupBox
+    Friend WithEvents DataGridView4 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_DATE_LASTVISET1 As DateTimePicker
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents TXT_DATE_TODAY1 As DateTimePicker
+    Friend WithEvents GRBTN As GroupBox
+    Friend WithEvents ALL_Prescription As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SEARCHBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_FOLOWUP As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_PRESCRIPTION As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DELETBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents EDITBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SAVEBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents NEWBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents T_CHANG As Timer
+    Friend WithEvents BTN_BABY As DevExpress.XtraEditors.SimpleButton
 End Class

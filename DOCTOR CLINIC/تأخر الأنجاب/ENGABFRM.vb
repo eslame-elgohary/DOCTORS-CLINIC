@@ -3,7 +3,6 @@
         Me.Close()
 
     End Sub
-
     Sub CALCDATE()
         Dim DATEDAY As Date
         Dim DATELAST As Date

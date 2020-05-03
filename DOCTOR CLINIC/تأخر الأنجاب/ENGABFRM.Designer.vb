@@ -42,26 +42,27 @@ Partial Class ENGABFRM
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton17 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.SimpleButton17 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton11 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.DateTimePicker8 = New System.Windows.Forms.DateTimePicker()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.TextBox51 = New System.Windows.Forms.TextBox()
         Me.TextBox52 = New System.Windows.Forms.TextBox()
-        Me.SimpleButton11 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton10 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox50 = New System.Windows.Forms.TextBox()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.DateTimePicker7 = New System.Windows.Forms.DateTimePicker()
@@ -69,15 +70,18 @@ Partial Class ENGABFRM
         Me.TextBox47 = New System.Windows.Forms.TextBox()
         Me.TextBox48 = New System.Windows.Forms.TextBox()
         Me.TextBox49 = New System.Windows.Forms.TextBox()
-        Me.SimpleButton10 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.TextBox45 = New System.Windows.Forms.TextBox()
         Me.TextBox43 = New System.Windows.Forms.TextBox()
         Me.TextBox42 = New System.Windows.Forms.TextBox()
-        Me.SimpleButton9 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
@@ -144,7 +148,27 @@ Partial Class ENGABFRM
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.GroupBox24 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.GroupBox25 = New System.Windows.Forms.GroupBox()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.TXT_FDATE1 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXT_DATE_VISITNEW1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.TXT_DATE_VISITLAST1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.GroupBox21 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.GroupBox22 = New System.Windows.Forms.GroupBox()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
         Me.TXT_FDATE = New System.Windows.Forms.Label()
         Me.BTN_PHARM = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_CODE100 = New System.Windows.Forms.TextBox()
@@ -162,7 +186,16 @@ Partial Class ENGABFRM
         Me.TXT_DATE_VISITLAST = New System.Windows.Forms.DateTimePicker()
         Me.TXT_CODE_PHARM = New System.Windows.Forms.TextBox()
         Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SimpleButton15 = New DevExpress.XtraEditors.SimpleButton()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
@@ -185,29 +218,8 @@ Partial Class ENGABFRM
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.GroupBox22 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.GroupBox24 = New System.Windows.Forms.GroupBox()
-        Me.TXT_FDATE1 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXT_DATE_VISITNEW1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.TXT_DATE_VISITLAST1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.GroupBox25 = New System.Windows.Forms.GroupBox()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
         Me.TabPage4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -234,14 +246,16 @@ Partial Class ENGABFRM
         Me.GroupBox5.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage5.SuspendLayout()
-        Me.GroupBox21.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox22.SuspendLayout()
-        Me.GroupBox23.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox25.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox21.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
+        Me.GroupBox22.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabPage4
@@ -438,40 +452,50 @@ Partial Class ENGABFRM
         '
         'GroupBox19
         '
+        Me.GroupBox19.Controls.Add(Me.SimpleButton17)
         Me.GroupBox19.Controls.Add(Me.TextBox20)
         Me.GroupBox19.Controls.Add(Me.Label13)
         Me.GroupBox19.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox19.Controls.Add(Me.Label14)
         Me.GroupBox19.Controls.Add(Me.TextBox21)
         Me.GroupBox19.Controls.Add(Me.TextBox22)
-        Me.GroupBox19.Controls.Add(Me.SimpleButton17)
         Me.GroupBox19.Controls.Add(Me.Label15)
         Me.GroupBox19.Controls.Add(Me.Label21)
-        Me.GroupBox19.ForeColor = System.Drawing.Color.Green
-        Me.GroupBox19.Location = New System.Drawing.Point(483, 175)
+        Me.GroupBox19.ForeColor = System.Drawing.Color.Indigo
+        Me.GroupBox19.Location = New System.Drawing.Point(592, 235)
         Me.GroupBox19.Name = "GroupBox19"
-        Me.GroupBox19.Size = New System.Drawing.Size(344, 102)
+        Me.GroupBox19.Size = New System.Drawing.Size(590, 211)
         Me.GroupBox19.TabIndex = 98
         Me.GroupBox19.TabStop = False
-        Me.GroupBox19.Text = "HSG"
+        Me.GroupBox19.Text = "Hystroscopy"
+        '
+        'SimpleButton17
+        '
+        Me.SimpleButton17.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton17.Appearance.Options.UseFont = True
+        Me.SimpleButton17.ImageOptions.Image = CType(resources.GetObject("SimpleButton17.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton17.Location = New System.Drawing.Point(541, 22)
+        Me.SimpleButton17.Name = "SimpleButton17"
+        Me.SimpleButton17.Size = New System.Drawing.Size(41, 170)
+        Me.SimpleButton17.TabIndex = 101
         '
         'TextBox20
         '
         Me.TextBox20.BackColor = System.Drawing.Color.White
         Me.TextBox20.Enabled = False
         Me.TextBox20.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(232, 14)
+        Me.TextBox20.Location = New System.Drawing.Point(392, 30)
         Me.TextBox20.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox20.Multiline = True
         Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(105, 25)
+        Me.TextBox20.Size = New System.Drawing.Size(137, 25)
         Me.TextBox20.TabIndex = 95
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.Color.Green
-        Me.Label13.Location = New System.Drawing.Point(184, 17)
+        Me.Label13.ForeColor = System.Drawing.Color.Indigo
+        Me.Label13.Location = New System.Drawing.Point(321, 33)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -483,18 +507,18 @@ Partial Class ENGABFRM
         'DateTimePicker3
         '
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker3.Location = New System.Drawing.Point(64, 15)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(89, 35)
         Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.DateTimePicker3.Size = New System.Drawing.Size(116, 27)
+        Me.DateTimePicker3.Size = New System.Drawing.Size(195, 27)
         Me.DateTimePicker3.TabIndex = 92
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.ForeColor = System.Drawing.Color.Green
-        Me.Label14.Location = New System.Drawing.Point(9, 18)
+        Me.Label14.ForeColor = System.Drawing.Color.Indigo
+        Me.Label14.Location = New System.Drawing.Point(23, 36)
         Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -508,11 +532,11 @@ Partial Class ENGABFRM
         Me.TextBox21.BackColor = System.Drawing.Color.White
         Me.TextBox21.Enabled = False
         Me.TextBox21.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox21.Location = New System.Drawing.Point(64, 72)
+        Me.TextBox21.Location = New System.Drawing.Point(91, 135)
         Me.TextBox21.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox21.Multiline = True
         Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox21.Size = New System.Drawing.Size(438, 57)
         Me.TextBox21.TabIndex = 89
         '
         'TextBox22
@@ -520,85 +544,85 @@ Partial Class ENGABFRM
         Me.TextBox22.BackColor = System.Drawing.Color.White
         Me.TextBox22.Enabled = False
         Me.TextBox22.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox22.Location = New System.Drawing.Point(64, 44)
+        Me.TextBox22.Location = New System.Drawing.Point(91, 68)
         Me.TextBox22.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox22.Multiline = True
         Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox22.Size = New System.Drawing.Size(438, 57)
         Me.TextBox22.TabIndex = 68
-        '
-        'SimpleButton17
-        '
-        Me.SimpleButton17.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton17.Appearance.Options.UseFont = True
-        Me.SimpleButton17.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_uterus_40
-        Me.SimpleButton17.Location = New System.Drawing.Point(282, 43)
-        Me.SimpleButton17.Name = "SimpleButton17"
-        Me.SimpleButton17.Size = New System.Drawing.Size(56, 54)
-        Me.SimpleButton17.TabIndex = 88
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.ForeColor = System.Drawing.Color.Green
-        Me.Label15.Location = New System.Drawing.Point(6, 47)
+        Me.Label15.ForeColor = System.Drawing.Color.Indigo
+        Me.Label15.Location = New System.Drawing.Point(10, 80)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label15.Size = New System.Drawing.Size(74, 19)
+        Me.Label15.Size = New System.Drawing.Size(72, 19)
         Me.Label15.TabIndex = 96
-        Me.Label15.Text = "Uterus :"
+        Me.Label15.Text = "Cervix :"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.ForeColor = System.Drawing.Color.Green
-        Me.Label21.Location = New System.Drawing.Point(16, 73)
+        Me.Label21.ForeColor = System.Drawing.Color.Indigo
+        Me.Label21.Location = New System.Drawing.Point(11, 158)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label21.Size = New System.Drawing.Size(64, 19)
+        Me.Label21.Size = New System.Drawing.Size(71, 19)
         Me.Label21.TabIndex = 97
-        Me.Label21.Text = "Tubes:"
+        Me.Label21.Text = "Cavity :"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'GroupBox20
         '
+        Me.GroupBox20.Controls.Add(Me.SimpleButton11)
         Me.GroupBox20.Controls.Add(Me.TextBox44)
         Me.GroupBox20.Controls.Add(Me.Label50)
         Me.GroupBox20.Controls.Add(Me.DateTimePicker8)
         Me.GroupBox20.Controls.Add(Me.Label51)
         Me.GroupBox20.Controls.Add(Me.TextBox51)
         Me.GroupBox20.Controls.Add(Me.TextBox52)
-        Me.GroupBox20.Controls.Add(Me.SimpleButton11)
         Me.GroupBox20.Controls.Add(Me.Label52)
         Me.GroupBox20.Controls.Add(Me.Label53)
         Me.GroupBox20.ForeColor = System.Drawing.Color.Green
-        Me.GroupBox20.Location = New System.Drawing.Point(501, 32)
+        Me.GroupBox20.Location = New System.Drawing.Point(592, 6)
         Me.GroupBox20.Name = "GroupBox20"
-        Me.GroupBox20.Size = New System.Drawing.Size(344, 102)
+        Me.GroupBox20.Size = New System.Drawing.Size(590, 223)
         Me.GroupBox20.TabIndex = 97
         Me.GroupBox20.TabStop = False
         Me.GroupBox20.Text = "HSG"
+        '
+        'SimpleButton11
+        '
+        Me.SimpleButton11.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton11.Appearance.Options.UseFont = True
+        Me.SimpleButton11.ImageOptions.Image = CType(resources.GetObject("SimpleButton11.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton11.Location = New System.Drawing.Point(541, 22)
+        Me.SimpleButton11.Name = "SimpleButton11"
+        Me.SimpleButton11.Size = New System.Drawing.Size(41, 188)
+        Me.SimpleButton11.TabIndex = 101
         '
         'TextBox44
         '
         Me.TextBox44.BackColor = System.Drawing.Color.White
         Me.TextBox44.Enabled = False
         Me.TextBox44.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox44.Location = New System.Drawing.Point(232, 14)
+        Me.TextBox44.Location = New System.Drawing.Point(392, 30)
         Me.TextBox44.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox44.Multiline = True
         Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.Size = New System.Drawing.Size(105, 25)
+        Me.TextBox44.Size = New System.Drawing.Size(137, 25)
         Me.TextBox44.TabIndex = 95
         '
         'Label50
         '
         Me.Label50.AutoSize = True
         Me.Label50.ForeColor = System.Drawing.Color.Green
-        Me.Label50.Location = New System.Drawing.Point(184, 17)
+        Me.Label50.Location = New System.Drawing.Point(321, 33)
         Me.Label50.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label50.Name = "Label50"
         Me.Label50.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -610,18 +634,18 @@ Partial Class ENGABFRM
         'DateTimePicker8
         '
         Me.DateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker8.Location = New System.Drawing.Point(64, 15)
+        Me.DateTimePicker8.Location = New System.Drawing.Point(89, 35)
         Me.DateTimePicker8.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DateTimePicker8.Name = "DateTimePicker8"
         Me.DateTimePicker8.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.DateTimePicker8.Size = New System.Drawing.Size(116, 27)
+        Me.DateTimePicker8.Size = New System.Drawing.Size(195, 27)
         Me.DateTimePicker8.TabIndex = 92
         '
         'Label51
         '
         Me.Label51.AutoSize = True
         Me.Label51.ForeColor = System.Drawing.Color.Green
-        Me.Label51.Location = New System.Drawing.Point(9, 18)
+        Me.Label51.Location = New System.Drawing.Point(23, 36)
         Me.Label51.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label51.Name = "Label51"
         Me.Label51.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -635,11 +659,11 @@ Partial Class ENGABFRM
         Me.TextBox51.BackColor = System.Drawing.Color.White
         Me.TextBox51.Enabled = False
         Me.TextBox51.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox51.Location = New System.Drawing.Point(64, 72)
+        Me.TextBox51.Location = New System.Drawing.Point(91, 135)
         Me.TextBox51.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox51.Multiline = True
         Me.TextBox51.Name = "TextBox51"
-        Me.TextBox51.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox51.Size = New System.Drawing.Size(438, 67)
         Me.TextBox51.TabIndex = 89
         '
         'TextBox52
@@ -647,28 +671,18 @@ Partial Class ENGABFRM
         Me.TextBox52.BackColor = System.Drawing.Color.White
         Me.TextBox52.Enabled = False
         Me.TextBox52.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox52.Location = New System.Drawing.Point(64, 44)
+        Me.TextBox52.Location = New System.Drawing.Point(91, 68)
         Me.TextBox52.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox52.Multiline = True
         Me.TextBox52.Name = "TextBox52"
-        Me.TextBox52.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox52.Size = New System.Drawing.Size(438, 57)
         Me.TextBox52.TabIndex = 68
-        '
-        'SimpleButton11
-        '
-        Me.SimpleButton11.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton11.Appearance.Options.UseFont = True
-        Me.SimpleButton11.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_uterus_40
-        Me.SimpleButton11.Location = New System.Drawing.Point(282, 43)
-        Me.SimpleButton11.Name = "SimpleButton11"
-        Me.SimpleButton11.Size = New System.Drawing.Size(56, 54)
-        Me.SimpleButton11.TabIndex = 88
         '
         'Label52
         '
         Me.Label52.AutoSize = True
         Me.Label52.ForeColor = System.Drawing.Color.Green
-        Me.Label52.Location = New System.Drawing.Point(6, 47)
+        Me.Label52.Location = New System.Drawing.Point(10, 80)
         Me.Label52.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label52.Name = "Label52"
         Me.Label52.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -681,7 +695,7 @@ Partial Class ENGABFRM
         '
         Me.Label53.AutoSize = True
         Me.Label53.ForeColor = System.Drawing.Color.Green
-        Me.Label53.Location = New System.Drawing.Point(16, 73)
+        Me.Label53.Location = New System.Drawing.Point(19, 158)
         Me.Label53.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label53.Name = "Label53"
         Me.Label53.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -692,6 +706,7 @@ Partial Class ENGABFRM
         '
         'GroupBox18
         '
+        Me.GroupBox18.Controls.Add(Me.SimpleButton10)
         Me.GroupBox18.Controls.Add(Me.TextBox50)
         Me.GroupBox18.Controls.Add(Me.Label46)
         Me.GroupBox18.Controls.Add(Me.DateTimePicker7)
@@ -699,35 +714,44 @@ Partial Class ENGABFRM
         Me.GroupBox18.Controls.Add(Me.TextBox47)
         Me.GroupBox18.Controls.Add(Me.TextBox48)
         Me.GroupBox18.Controls.Add(Me.TextBox49)
-        Me.GroupBox18.Controls.Add(Me.SimpleButton10)
         Me.GroupBox18.Controls.Add(Me.Label47)
         Me.GroupBox18.Controls.Add(Me.Label48)
         Me.GroupBox18.Controls.Add(Me.Label49)
         Me.GroupBox18.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.GroupBox18.Location = New System.Drawing.Point(14, 134)
+        Me.GroupBox18.Location = New System.Drawing.Point(9, 235)
         Me.GroupBox18.Name = "GroupBox18"
-        Me.GroupBox18.Size = New System.Drawing.Size(344, 143)
+        Me.GroupBox18.Size = New System.Drawing.Size(569, 211)
         Me.GroupBox18.TabIndex = 94
         Me.GroupBox18.TabStop = False
         Me.GroupBox18.Text = "Laparoscopy"
+        '
+        'SimpleButton10
+        '
+        Me.SimpleButton10.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton10.Appearance.Options.UseFont = True
+        Me.SimpleButton10.ImageOptions.Image = CType(resources.GetObject("SimpleButton10.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton10.Location = New System.Drawing.Point(514, 17)
+        Me.SimpleButton10.Name = "SimpleButton10"
+        Me.SimpleButton10.Size = New System.Drawing.Size(41, 188)
+        Me.SimpleButton10.TabIndex = 100
         '
         'TextBox50
         '
         Me.TextBox50.BackColor = System.Drawing.Color.White
         Me.TextBox50.Enabled = False
         Me.TextBox50.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox50.Location = New System.Drawing.Point(232, 16)
+        Me.TextBox50.Location = New System.Drawing.Point(355, 19)
         Me.TextBox50.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox50.Multiline = True
         Me.TextBox50.Name = "TextBox50"
-        Me.TextBox50.Size = New System.Drawing.Size(105, 25)
+        Me.TextBox50.Size = New System.Drawing.Size(140, 25)
         Me.TextBox50.TabIndex = 95
         '
         'Label46
         '
         Me.Label46.AutoSize = True
         Me.Label46.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label46.Location = New System.Drawing.Point(184, 21)
+        Me.Label46.Location = New System.Drawing.Point(286, 21)
         Me.Label46.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label46.Name = "Label46"
         Me.Label46.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -739,18 +763,18 @@ Partial Class ENGABFRM
         'DateTimePicker7
         '
         Me.DateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker7.Location = New System.Drawing.Point(64, 19)
+        Me.DateTimePicker7.Location = New System.Drawing.Point(96, 17)
         Me.DateTimePicker7.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DateTimePicker7.Name = "DateTimePicker7"
         Me.DateTimePicker7.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.DateTimePicker7.Size = New System.Drawing.Size(116, 27)
+        Me.DateTimePicker7.Size = New System.Drawing.Size(168, 27)
         Me.DateTimePicker7.TabIndex = 92
         '
         'Label45
         '
         Me.Label45.AutoSize = True
         Me.Label45.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label45.Location = New System.Drawing.Point(9, 22)
+        Me.Label45.Location = New System.Drawing.Point(32, 23)
         Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label45.Name = "Label45"
         Me.Label45.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -764,11 +788,11 @@ Partial Class ENGABFRM
         Me.TextBox47.BackColor = System.Drawing.Color.White
         Me.TextBox47.Enabled = False
         Me.TextBox47.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox47.Location = New System.Drawing.Point(64, 105)
+        Me.TextBox47.Location = New System.Drawing.Point(96, 155)
         Me.TextBox47.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox47.Multiline = True
         Me.TextBox47.Name = "TextBox47"
-        Me.TextBox47.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox47.Size = New System.Drawing.Size(399, 50)
         Me.TextBox47.TabIndex = 90
         '
         'TextBox48
@@ -776,11 +800,11 @@ Partial Class ENGABFRM
         Me.TextBox48.BackColor = System.Drawing.Color.White
         Me.TextBox48.Enabled = False
         Me.TextBox48.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox48.Location = New System.Drawing.Point(64, 76)
+        Me.TextBox48.Location = New System.Drawing.Point(96, 104)
         Me.TextBox48.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox48.Multiline = True
         Me.TextBox48.Name = "TextBox48"
-        Me.TextBox48.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox48.Size = New System.Drawing.Size(399, 45)
         Me.TextBox48.TabIndex = 89
         '
         'TextBox49
@@ -788,28 +812,18 @@ Partial Class ENGABFRM
         Me.TextBox49.BackColor = System.Drawing.Color.White
         Me.TextBox49.Enabled = False
         Me.TextBox49.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox49.Location = New System.Drawing.Point(64, 48)
+        Me.TextBox49.Location = New System.Drawing.Point(96, 50)
         Me.TextBox49.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox49.Multiline = True
         Me.TextBox49.Name = "TextBox49"
-        Me.TextBox49.Size = New System.Drawing.Size(214, 25)
+        Me.TextBox49.Size = New System.Drawing.Size(399, 48)
         Me.TextBox49.TabIndex = 68
-        '
-        'SimpleButton10
-        '
-        Me.SimpleButton10.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton10.Appearance.Options.UseFont = True
-        Me.SimpleButton10.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_palm_scan_40
-        Me.SimpleButton10.Location = New System.Drawing.Point(282, 47)
-        Me.SimpleButton10.Name = "SimpleButton10"
-        Me.SimpleButton10.Size = New System.Drawing.Size(56, 83)
-        Me.SimpleButton10.TabIndex = 88
         '
         'Label47
         '
         Me.Label47.AutoSize = True
         Me.Label47.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label47.Location = New System.Drawing.Point(6, 51)
+        Me.Label47.Location = New System.Drawing.Point(17, 68)
         Me.Label47.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label47.Name = "Label47"
         Me.Label47.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -822,7 +836,7 @@ Partial Class ENGABFRM
         '
         Me.Label48.AutoSize = True
         Me.Label48.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label48.Location = New System.Drawing.Point(16, 77)
+        Me.Label48.Location = New System.Drawing.Point(27, 118)
         Me.Label48.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label48.Name = "Label48"
         Me.Label48.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -835,7 +849,7 @@ Partial Class ENGABFRM
         '
         Me.Label49.AutoSize = True
         Me.Label49.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label49.Location = New System.Drawing.Point(2, 106)
+        Me.Label49.Location = New System.Drawing.Point(10, 173)
         Me.Label49.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label49.Name = "Label49"
         Me.Label49.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -846,72 +860,120 @@ Partial Class ENGABFRM
         '
         'GroupBox15
         '
+        Me.GroupBox15.Controls.Add(Me.SimpleButton9)
+        Me.GroupBox15.Controls.Add(Me.TextBox30)
+        Me.GroupBox15.Controls.Add(Me.Label31)
+        Me.GroupBox15.Controls.Add(Me.DateTimePicker5)
+        Me.GroupBox15.Controls.Add(Me.Label32)
         Me.GroupBox15.Controls.Add(Me.TextBox45)
         Me.GroupBox15.Controls.Add(Me.TextBox43)
         Me.GroupBox15.Controls.Add(Me.TextBox42)
-        Me.GroupBox15.Controls.Add(Me.SimpleButton9)
         Me.GroupBox15.Controls.Add(Me.Label54)
         Me.GroupBox15.Controls.Add(Me.Label55)
         Me.GroupBox15.Controls.Add(Me.Label56)
         Me.GroupBox15.ForeColor = System.Drawing.Color.DeepPink
         Me.GroupBox15.Location = New System.Drawing.Point(9, 6)
         Me.GroupBox15.Name = "GroupBox15"
-        Me.GroupBox15.Size = New System.Drawing.Size(266, 122)
+        Me.GroupBox15.Size = New System.Drawing.Size(569, 223)
         Me.GroupBox15.TabIndex = 90
         Me.GroupBox15.TabStop = False
         Me.GroupBox15.Text = "4D"
-        '
-        'TextBox45
-        '
-        Me.TextBox45.BackColor = System.Drawing.Color.White
-        Me.TextBox45.Enabled = False
-        Me.TextBox45.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox45.Location = New System.Drawing.Point(64, 85)
-        Me.TextBox45.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox45.Multiline = True
-        Me.TextBox45.Name = "TextBox45"
-        Me.TextBox45.Size = New System.Drawing.Size(136, 25)
-        Me.TextBox45.TabIndex = 91
-        '
-        'TextBox43
-        '
-        Me.TextBox43.BackColor = System.Drawing.Color.White
-        Me.TextBox43.Enabled = False
-        Me.TextBox43.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox43.Location = New System.Drawing.Point(64, 53)
-        Me.TextBox43.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox43.Multiline = True
-        Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.Size = New System.Drawing.Size(136, 25)
-        Me.TextBox43.TabIndex = 89
-        '
-        'TextBox42
-        '
-        Me.TextBox42.BackColor = System.Drawing.Color.White
-        Me.TextBox42.Enabled = False
-        Me.TextBox42.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox42.Location = New System.Drawing.Point(64, 22)
-        Me.TextBox42.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox42.Multiline = True
-        Me.TextBox42.Name = "TextBox42"
-        Me.TextBox42.Size = New System.Drawing.Size(136, 25)
-        Me.TextBox42.TabIndex = 68
         '
         'SimpleButton9
         '
         Me.SimpleButton9.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton9.Appearance.Options.UseFont = True
-        Me.SimpleButton9.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_x_ray_39
-        Me.SimpleButton9.Location = New System.Drawing.Point(205, 20)
+        Me.SimpleButton9.ImageOptions.Image = CType(resources.GetObject("SimpleButton9.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton9.Location = New System.Drawing.Point(514, 29)
         Me.SimpleButton9.Name = "SimpleButton9"
-        Me.SimpleButton9.Size = New System.Drawing.Size(52, 91)
-        Me.SimpleButton9.TabIndex = 88
+        Me.SimpleButton9.Size = New System.Drawing.Size(41, 188)
+        Me.SimpleButton9.TabIndex = 99
+        '
+        'TextBox30
+        '
+        Me.TextBox30.BackColor = System.Drawing.Color.White
+        Me.TextBox30.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox30.Location = New System.Drawing.Point(355, 30)
+        Me.TextBox30.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox30.Multiline = True
+        Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.Size = New System.Drawing.Size(140, 25)
+        Me.TextBox30.TabIndex = 95
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label31.Location = New System.Drawing.Point(286, 32)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label31.Size = New System.Drawing.Size(64, 19)
+        Me.Label31.TabIndex = 94
+        Me.Label31.Text = "Place :"
+        Me.Label31.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'DateTimePicker5
+        '
+        Me.DateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker5.Location = New System.Drawing.Point(96, 29)
+        Me.DateTimePicker5.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DateTimePicker5.Name = "DateTimePicker5"
+        Me.DateTimePicker5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.DateTimePicker5.Size = New System.Drawing.Size(168, 27)
+        Me.DateTimePicker5.TabIndex = 92
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.ForeColor = System.Drawing.Color.DeepPink
+        Me.Label32.Location = New System.Drawing.Point(32, 28)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label32.Name = "Label32"
+        Me.Label32.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label32.Size = New System.Drawing.Size(59, 19)
+        Me.Label32.TabIndex = 93
+        Me.Label32.Text = "Date :"
+        Me.Label32.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'TextBox45
+        '
+        Me.TextBox45.BackColor = System.Drawing.Color.White
+        Me.TextBox45.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox45.Location = New System.Drawing.Point(96, 172)
+        Me.TextBox45.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox45.Multiline = True
+        Me.TextBox45.Name = "TextBox45"
+        Me.TextBox45.Size = New System.Drawing.Size(399, 45)
+        Me.TextBox45.TabIndex = 91
+        '
+        'TextBox43
+        '
+        Me.TextBox43.BackColor = System.Drawing.Color.White
+        Me.TextBox43.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox43.Location = New System.Drawing.Point(96, 121)
+        Me.TextBox43.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox43.Multiline = True
+        Me.TextBox43.Name = "TextBox43"
+        Me.TextBox43.Size = New System.Drawing.Size(399, 45)
+        Me.TextBox43.TabIndex = 89
+        '
+        'TextBox42
+        '
+        Me.TextBox42.BackColor = System.Drawing.Color.White
+        Me.TextBox42.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox42.Location = New System.Drawing.Point(96, 64)
+        Me.TextBox42.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox42.Multiline = True
+        Me.TextBox42.Name = "TextBox42"
+        Me.TextBox42.Size = New System.Drawing.Size(399, 51)
+        Me.TextBox42.TabIndex = 68
         '
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label54.Location = New System.Drawing.Point(5, 26)
+        Me.Label54.ForeColor = System.Drawing.Color.DeepPink
+        Me.Label54.Location = New System.Drawing.Point(17, 80)
         Me.Label54.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label54.Name = "Label54"
         Me.Label54.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -923,8 +985,8 @@ Partial Class ENGABFRM
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label55.Location = New System.Drawing.Point(2, 56)
+        Me.Label55.ForeColor = System.Drawing.Color.DeepPink
+        Me.Label55.Location = New System.Drawing.Point(10, 136)
         Me.Label55.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label55.Name = "Label55"
         Me.Label55.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -936,8 +998,8 @@ Partial Class ENGABFRM
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label56.Location = New System.Drawing.Point(1, 90)
+        Me.Label56.ForeColor = System.Drawing.Color.DeepPink
+        Me.Label56.Location = New System.Drawing.Point(7, 182)
         Me.Label56.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label56.Name = "Label56"
         Me.Label56.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -974,7 +1036,7 @@ Partial Class ENGABFRM
         Me.GroupBox17.ForeColor = System.Drawing.Color.Purple
         Me.GroupBox17.Location = New System.Drawing.Point(7, 320)
         Me.GroupBox17.Name = "GroupBox17"
-        Me.GroupBox17.Size = New System.Drawing.Size(587, 82)
+        Me.GroupBox17.Size = New System.Drawing.Size(587, 157)
         Me.GroupBox17.TabIndex = 96
         Me.GroupBox17.TabStop = False
         Me.GroupBox17.Text = "History of hirsutism"
@@ -984,7 +1046,7 @@ Partial Class ENGABFRM
         Me.SimpleButton16.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton16.Appearance.Options.UseFont = True
         Me.SimpleButton16.ImageOptions.Image = CType(resources.GetObject("SimpleButton16.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton16.Location = New System.Drawing.Point(442, 26)
+        Me.SimpleButton16.Location = New System.Drawing.Point(537, 68)
         Me.SimpleButton16.Name = "SimpleButton16"
         Me.SimpleButton16.Size = New System.Drawing.Size(38, 41)
         Me.SimpleButton16.TabIndex = 89
@@ -998,7 +1060,7 @@ Partial Class ENGABFRM
         Me.TextBox19.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox19.Multiline = True
         Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(421, 55)
+        Me.TextBox19.Size = New System.Drawing.Size(522, 131)
         Me.TextBox19.TabIndex = 67
         '
         'GroupBox16
@@ -1008,7 +1070,7 @@ Partial Class ENGABFRM
         Me.GroupBox16.ForeColor = System.Drawing.Color.Purple
         Me.GroupBox16.Location = New System.Drawing.Point(623, 320)
         Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.Size = New System.Drawing.Size(559, 82)
+        Me.GroupBox16.Size = New System.Drawing.Size(559, 157)
         Me.GroupBox16.TabIndex = 94
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "History of IUI or ICSI "
@@ -1018,7 +1080,7 @@ Partial Class ENGABFRM
         Me.SimpleButton6.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton6.Appearance.Options.UseFont = True
         Me.SimpleButton6.ImageOptions.Image = CType(resources.GetObject("SimpleButton6.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton6.Location = New System.Drawing.Point(510, 26)
+        Me.SimpleButton6.Location = New System.Drawing.Point(510, 68)
         Me.SimpleButton6.Name = "SimpleButton6"
         Me.SimpleButton6.Size = New System.Drawing.Size(38, 41)
         Me.SimpleButton6.TabIndex = 91
@@ -1032,7 +1094,7 @@ Partial Class ENGABFRM
         Me.TextBox18.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox18.Multiline = True
         Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(496, 53)
+        Me.TextBox18.Size = New System.Drawing.Size(496, 131)
         Me.TextBox18.TabIndex = 68
         '
         'GroupBox11
@@ -1052,7 +1114,7 @@ Partial Class ENGABFRM
         Me.SimpleButton14.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton14.Appearance.Options.UseFont = True
         Me.SimpleButton14.ImageOptions.Image = CType(resources.GetObject("SimpleButton14.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton14.Location = New System.Drawing.Point(442, 25)
+        Me.SimpleButton14.Location = New System.Drawing.Point(537, 25)
         Me.SimpleButton14.Name = "SimpleButton14"
         Me.SimpleButton14.Size = New System.Drawing.Size(38, 41)
         Me.SimpleButton14.TabIndex = 89
@@ -1066,7 +1128,7 @@ Partial Class ENGABFRM
         Me.TextBox16.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox16.Multiline = True
         Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(421, 55)
+        Me.TextBox16.Size = New System.Drawing.Size(522, 55)
         Me.TextBox16.TabIndex = 67
         '
         'GroupBox10
@@ -1188,7 +1250,7 @@ Partial Class ENGABFRM
         Me.SimpleButton13.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton13.Appearance.Options.UseFont = True
         Me.SimpleButton13.ImageOptions.Image = CType(resources.GetObject("SimpleButton13.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton13.Location = New System.Drawing.Point(442, 26)
+        Me.SimpleButton13.Location = New System.Drawing.Point(537, 31)
         Me.SimpleButton13.Name = "SimpleButton13"
         Me.SimpleButton13.Size = New System.Drawing.Size(38, 41)
         Me.SimpleButton13.TabIndex = 89
@@ -1202,7 +1264,7 @@ Partial Class ENGABFRM
         Me.TextBox10.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox10.Multiline = True
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(421, 55)
+        Me.TextBox10.Size = New System.Drawing.Size(522, 55)
         Me.TextBox10.TabIndex = 67
         '
         'GroupBox2
@@ -1222,7 +1284,7 @@ Partial Class ENGABFRM
         Me.SimpleButton12.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton12.Appearance.Options.UseFont = True
         Me.SimpleButton12.ImageOptions.Image = CType(resources.GetObject("SimpleButton12.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton12.Location = New System.Drawing.Point(442, 24)
+        Me.SimpleButton12.Location = New System.Drawing.Point(537, 24)
         Me.SimpleButton12.Name = "SimpleButton12"
         Me.SimpleButton12.Size = New System.Drawing.Size(38, 41)
         Me.SimpleButton12.TabIndex = 89
@@ -1236,7 +1298,7 @@ Partial Class ENGABFRM
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(421, 55)
+        Me.TextBox7.Size = New System.Drawing.Size(522, 55)
         Me.TextBox7.TabIndex = 67
         '
         'GroupBox12
@@ -1256,7 +1318,7 @@ Partial Class ENGABFRM
         Me.SimpleButton8.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SimpleButton8.Appearance.Options.UseFont = True
         Me.SimpleButton8.ImageOptions.Image = CType(resources.GetObject("SimpleButton8.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton8.Location = New System.Drawing.Point(442, 25)
+        Me.SimpleButton8.Location = New System.Drawing.Point(537, 26)
         Me.SimpleButton8.Name = "SimpleButton8"
         Me.SimpleButton8.Size = New System.Drawing.Size(38, 41)
         Me.SimpleButton8.TabIndex = 89
@@ -1270,7 +1332,7 @@ Partial Class ENGABFRM
         Me.TextBox11.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TextBox11.Multiline = True
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(421, 55)
+        Me.TextBox11.Size = New System.Drawing.Size(522, 55)
         Me.TextBox11.TabIndex = 67
         '
         'GroupBox13
@@ -1713,6 +1775,175 @@ Partial Class ENGABFRM
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Visit"
         '
+        'GroupBox24
+        '
+        Me.GroupBox24.BackColor = System.Drawing.Color.PowderBlue
+        Me.GroupBox24.Controls.Add(Me.GroupBox14)
+        Me.GroupBox24.Controls.Add(Me.GroupBox25)
+        Me.GroupBox24.Controls.Add(Me.TXT_FDATE1)
+        Me.GroupBox24.Controls.Add(Me.DataGridView2)
+        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISITNEW1)
+        Me.GroupBox24.Controls.Add(Me.Label28)
+        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISITLAST1)
+        Me.GroupBox24.Controls.Add(Me.Label29)
+        Me.GroupBox24.ForeColor = System.Drawing.Color.Maroon
+        Me.GroupBox24.Location = New System.Drawing.Point(6, 265)
+        Me.GroupBox24.Name = "GroupBox24"
+        Me.GroupBox24.Size = New System.Drawing.Size(1181, 216)
+        Me.GroupBox24.TabIndex = 92
+        Me.GroupBox24.TabStop = False
+        Me.GroupBox24.Text = "Last Visit"
+        '
+        'GroupBox14
+        '
+        Me.GroupBox14.Controls.Add(Me.TextBox17)
+        Me.GroupBox14.ForeColor = System.Drawing.Color.Maroon
+        Me.GroupBox14.Location = New System.Drawing.Point(566, 13)
+        Me.GroupBox14.Name = "GroupBox14"
+        Me.GroupBox14.Size = New System.Drawing.Size(606, 104)
+        Me.GroupBox14.TabIndex = 103
+        Me.GroupBox14.TabStop = False
+        Me.GroupBox14.Text = "Ultra Sound"
+        '
+        'TextBox17
+        '
+        Me.TextBox17.BackColor = System.Drawing.Color.White
+        Me.TextBox17.Location = New System.Drawing.Point(5, 26)
+        Me.TextBox17.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox17.Multiline = True
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(592, 69)
+        Me.TextBox17.TabIndex = 99
+        Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GroupBox25
+        '
+        Me.GroupBox25.Controls.Add(Me.TextBox27)
+        Me.GroupBox25.ForeColor = System.Drawing.Color.Maroon
+        Me.GroupBox25.Location = New System.Drawing.Point(481, 114)
+        Me.GroupBox25.Name = "GroupBox25"
+        Me.GroupBox25.Size = New System.Drawing.Size(691, 96)
+        Me.GroupBox25.TabIndex = 102
+        Me.GroupBox25.TabStop = False
+        Me.GroupBox25.Text = "Recommendation"
+        '
+        'TextBox27
+        '
+        Me.TextBox27.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TextBox27.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
+        Me.TextBox27.BackColor = System.Drawing.Color.White
+        Me.TextBox27.Location = New System.Drawing.Point(5, 26)
+        Me.TextBox27.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox27.Multiline = True
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.Size = New System.Drawing.Size(677, 62)
+        Me.TextBox27.TabIndex = 99
+        Me.TextBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_FDATE1
+        '
+        Me.TXT_FDATE1.ForeColor = System.Drawing.Color.Maroon
+        Me.TXT_FDATE1.Location = New System.Drawing.Point(450, 17)
+        Me.TXT_FDATE1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.TXT_FDATE1.Name = "TXT_FDATE1"
+        Me.TXT_FDATE1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_FDATE1.Size = New System.Drawing.Size(103, 30)
+        Me.TXT_FDATE1.TabIndex = 97
+        Me.TXT_FDATE1.Text = "00000000"
+        Me.TXT_FDATE1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
+        Me.DataGridView2.Location = New System.Drawing.Point(5, 51)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(470, 159)
+        Me.DataGridView2.TabIndex = 91
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "CODE_DRUGS"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Visible = False
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Drugs"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "NO3"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Visible = False
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "dose"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "CODE_DOS"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
+        '
+        'TXT_DATE_VISITNEW1
+        '
+        Me.TXT_DATE_VISITNEW1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_VISITNEW1.Location = New System.Drawing.Point(68, 18)
+        Me.TXT_DATE_VISITNEW1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_VISITNEW1.Name = "TXT_DATE_VISITNEW1"
+        Me.TXT_DATE_VISITNEW1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_VISITNEW1.Size = New System.Drawing.Size(151, 27)
+        Me.TXT_DATE_VISITNEW1.TabIndex = 73
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.ForeColor = System.Drawing.Color.Maroon
+        Me.Label28.Location = New System.Drawing.Point(5, 24)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label28.Size = New System.Drawing.Size(59, 19)
+        Me.Label28.TabIndex = 74
+        Me.Label28.Text = "Date :"
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'TXT_DATE_VISITLAST1
+        '
+        Me.TXT_DATE_VISITLAST1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_VISITLAST1.Location = New System.Drawing.Point(288, 18)
+        Me.TXT_DATE_VISITLAST1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_VISITLAST1.Name = "TXT_DATE_VISITLAST1"
+        Me.TXT_DATE_VISITLAST1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_VISITLAST1.Size = New System.Drawing.Size(157, 27)
+        Me.TXT_DATE_VISITLAST1.TabIndex = 71
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.Color.Maroon
+        Me.Label29.Location = New System.Drawing.Point(225, 22)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label29.Size = New System.Drawing.Size(64, 19)
+        Me.Label29.TabIndex = 72
+        Me.Label29.Text = "L.M.P :"
+        '
         'GroupBox21
         '
         Me.GroupBox21.Controls.Add(Me.GroupBox23)
@@ -1737,6 +1968,50 @@ Partial Class ENGABFRM
         Me.GroupBox21.TabIndex = 91
         Me.GroupBox21.TabStop = False
         Me.GroupBox21.Text = "New Visit"
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.TextBox26)
+        Me.GroupBox23.Location = New System.Drawing.Point(816, 12)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(359, 120)
+        Me.GroupBox23.TabIndex = 101
+        Me.GroupBox23.TabStop = False
+        Me.GroupBox23.Text = "Ultra Sound"
+        '
+        'TextBox26
+        '
+        Me.TextBox26.BackColor = System.Drawing.Color.Aqua
+        Me.TextBox26.Location = New System.Drawing.Point(5, 26)
+        Me.TextBox26.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox26.Multiline = True
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.Size = New System.Drawing.Size(349, 88)
+        Me.TextBox26.TabIndex = 99
+        Me.TextBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GroupBox22
+        '
+        Me.GroupBox22.Controls.Add(Me.TextBox25)
+        Me.GroupBox22.Location = New System.Drawing.Point(484, 128)
+        Me.GroupBox22.Name = "GroupBox22"
+        Me.GroupBox22.Size = New System.Drawing.Size(691, 112)
+        Me.GroupBox22.TabIndex = 100
+        Me.GroupBox22.TabStop = False
+        Me.GroupBox22.Text = "Recommendation"
+        '
+        'TextBox25
+        '
+        Me.TextBox25.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TextBox25.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
+        Me.TextBox25.BackColor = System.Drawing.Color.Aqua
+        Me.TextBox25.Location = New System.Drawing.Point(5, 26)
+        Me.TextBox25.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox25.Multiline = True
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(677, 80)
+        Me.TextBox25.TabIndex = 99
+        Me.TextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TXT_FDATE
         '
@@ -1907,15 +2182,100 @@ Partial Class ENGABFRM
         Me.Label41.TabIndex = 72
         Me.Label41.Text = "L.M.P :"
         '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(4, 63)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label26.Size = New System.Drawing.Size(67, 19)
+        Me.Label26.TabIndex = 98
+        Me.Label26.Text = "Drugs :"
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'TabPage6
         '
         Me.TabPage6.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TabPage6.Controls.Add(Me.Label30)
+        Me.TabPage6.Controls.Add(Me.DataGridView4)
+        Me.TabPage6.Controls.Add(Me.SimpleButton15)
+        Me.TabPage6.Controls.Add(Me.TextBox28)
         Me.TabPage6.Location = New System.Drawing.Point(4, 31)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage6.Size = New System.Drawing.Size(1193, 487)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Plan"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(65, 21)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(129, 19)
+        Me.Label30.TabIndex = 3
+        Me.Label30.Text = "Name of Plan :"
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.AllowUserToAddRows = False
+        Me.DataGridView4.AllowUserToDeleteRows = False
+        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8, Me.Column9, Me.Column10})
+        Me.DataGridView4.Location = New System.Drawing.Point(3, 67)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.ReadOnly = True
+        Me.DataGridView4.Size = New System.Drawing.Size(1187, 417)
+        Me.DataGridView4.TabIndex = 2
+        '
+        'Column7
+        '
+        Me.Column7.FillWeight = 40.0!
+        Me.Column7.HeaderText = "DATE"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.FillWeight = 300.0!
+        Me.Column8.HeaderText = "NAME"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
+        'Column9
+        '
+        Me.Column9.FillWeight = 30.0!
+        Me.Column9.HeaderText = "-"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "CODE"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Visible = False
+        '
+        'SimpleButton15
+        '
+        Me.SimpleButton15.ImageOptions.Image = CType(resources.GetObject("SimpleButton15.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton15.Location = New System.Drawing.Point(684, 9)
+        Me.SimpleButton15.Name = "SimpleButton15"
+        Me.SimpleButton15.Size = New System.Drawing.Size(38, 42)
+        Me.SimpleButton15.TabIndex = 1
+        Me.SimpleButton15.Text = "SimpleButton15"
+        '
+        'TextBox28
+        '
+        Me.TextBox28.Location = New System.Drawing.Point(202, 10)
+        Me.TextBox28.Multiline = True
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(464, 43)
+        Me.TextBox28.TabIndex = 0
         '
         'TXT_PA_CODE
         '
@@ -2174,186 +2534,6 @@ Partial Class ENGABFRM
         Me.NEWBTN.TabIndex = 104
         Me.NEWBTN.Text = "New"
         '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(4, 63)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label26.Name = "Label26"
-        Me.Label26.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label26.Size = New System.Drawing.Size(67, 19)
-        Me.Label26.TabIndex = 98
-        Me.Label26.Text = "Drugs :"
-        Me.Label26.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'TextBox25
-        '
-        Me.TextBox25.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TextBox25.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
-        Me.TextBox25.BackColor = System.Drawing.Color.Aqua
-        Me.TextBox25.Location = New System.Drawing.Point(5, 26)
-        Me.TextBox25.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox25.Multiline = True
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(677, 80)
-        Me.TextBox25.TabIndex = 99
-        Me.TextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GroupBox22
-        '
-        Me.GroupBox22.Controls.Add(Me.TextBox25)
-        Me.GroupBox22.Location = New System.Drawing.Point(484, 128)
-        Me.GroupBox22.Name = "GroupBox22"
-        Me.GroupBox22.Size = New System.Drawing.Size(691, 112)
-        Me.GroupBox22.TabIndex = 100
-        Me.GroupBox22.TabStop = False
-        Me.GroupBox22.Text = "Recommendation"
-        '
-        'GroupBox23
-        '
-        Me.GroupBox23.Controls.Add(Me.TextBox26)
-        Me.GroupBox23.Location = New System.Drawing.Point(816, 12)
-        Me.GroupBox23.Name = "GroupBox23"
-        Me.GroupBox23.Size = New System.Drawing.Size(359, 120)
-        Me.GroupBox23.TabIndex = 101
-        Me.GroupBox23.TabStop = False
-        Me.GroupBox23.Text = "Ultra Sound"
-        '
-        'TextBox26
-        '
-        Me.TextBox26.BackColor = System.Drawing.Color.Aqua
-        Me.TextBox26.Location = New System.Drawing.Point(5, 26)
-        Me.TextBox26.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox26.Multiline = True
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(349, 88)
-        Me.TextBox26.TabIndex = 99
-        Me.TextBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GroupBox24
-        '
-        Me.GroupBox24.BackColor = System.Drawing.Color.PowderBlue
-        Me.GroupBox24.Controls.Add(Me.GroupBox14)
-        Me.GroupBox24.Controls.Add(Me.GroupBox25)
-        Me.GroupBox24.Controls.Add(Me.TXT_FDATE1)
-        Me.GroupBox24.Controls.Add(Me.DataGridView2)
-        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISITNEW1)
-        Me.GroupBox24.Controls.Add(Me.Label28)
-        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISITLAST1)
-        Me.GroupBox24.Controls.Add(Me.Label29)
-        Me.GroupBox24.ForeColor = System.Drawing.Color.Maroon
-        Me.GroupBox24.Location = New System.Drawing.Point(6, 265)
-        Me.GroupBox24.Name = "GroupBox24"
-        Me.GroupBox24.Size = New System.Drawing.Size(1181, 216)
-        Me.GroupBox24.TabIndex = 92
-        Me.GroupBox24.TabStop = False
-        Me.GroupBox24.Text = "Last Visit"
-        '
-        'TXT_FDATE1
-        '
-        Me.TXT_FDATE1.ForeColor = System.Drawing.Color.Maroon
-        Me.TXT_FDATE1.Location = New System.Drawing.Point(450, 17)
-        Me.TXT_FDATE1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.TXT_FDATE1.Name = "TXT_FDATE1"
-        Me.TXT_FDATE1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_FDATE1.Size = New System.Drawing.Size(103, 30)
-        Me.TXT_FDATE1.TabIndex = 97
-        Me.TXT_FDATE1.Text = "00000000"
-        Me.TXT_FDATE1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
-        Me.DataGridView2.Location = New System.Drawing.Point(5, 51)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(470, 159)
-        Me.DataGridView2.TabIndex = 91
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "CODE_DRUGS"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Visible = False
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Drugs"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.HeaderText = "NO3"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Visible = False
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "dose"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.HeaderText = "CODE_DOS"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Visible = False
-        '
-        'TXT_DATE_VISITNEW1
-        '
-        Me.TXT_DATE_VISITNEW1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_VISITNEW1.Location = New System.Drawing.Point(68, 18)
-        Me.TXT_DATE_VISITNEW1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_VISITNEW1.Name = "TXT_DATE_VISITNEW1"
-        Me.TXT_DATE_VISITNEW1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_VISITNEW1.Size = New System.Drawing.Size(151, 27)
-        Me.TXT_DATE_VISITNEW1.TabIndex = 73
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.ForeColor = System.Drawing.Color.Maroon
-        Me.Label28.Location = New System.Drawing.Point(5, 24)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label28.Size = New System.Drawing.Size(59, 19)
-        Me.Label28.TabIndex = 74
-        Me.Label28.Text = "Date :"
-        Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'TXT_DATE_VISITLAST1
-        '
-        Me.TXT_DATE_VISITLAST1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_VISITLAST1.Location = New System.Drawing.Point(288, 18)
-        Me.TXT_DATE_VISITLAST1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_VISITLAST1.Name = "TXT_DATE_VISITLAST1"
-        Me.TXT_DATE_VISITLAST1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_VISITLAST1.Size = New System.Drawing.Size(157, 27)
-        Me.TXT_DATE_VISITLAST1.TabIndex = 71
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.ForeColor = System.Drawing.Color.Maroon
-        Me.Label29.Location = New System.Drawing.Point(225, 22)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label29.Size = New System.Drawing.Size(64, 19)
-        Me.Label29.TabIndex = 72
-        Me.Label29.Text = "L.M.P :"
-        '
         'TextBox29
         '
         Me.TextBox29.BackColor = System.Drawing.Color.White
@@ -2378,57 +2558,11 @@ Partial Class ENGABFRM
         Me.Label27.TabIndex = 111
         Me.Label27.Text = "Complaint"
         '
-        'GroupBox14
-        '
-        Me.GroupBox14.Controls.Add(Me.TextBox17)
-        Me.GroupBox14.ForeColor = System.Drawing.Color.Maroon
-        Me.GroupBox14.Location = New System.Drawing.Point(566, 13)
-        Me.GroupBox14.Name = "GroupBox14"
-        Me.GroupBox14.Size = New System.Drawing.Size(606, 104)
-        Me.GroupBox14.TabIndex = 103
-        Me.GroupBox14.TabStop = False
-        Me.GroupBox14.Text = "Ultra Sound"
-        '
-        'TextBox17
-        '
-        Me.TextBox17.BackColor = System.Drawing.Color.White
-        Me.TextBox17.Location = New System.Drawing.Point(5, 26)
-        Me.TextBox17.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox17.Multiline = True
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(592, 69)
-        Me.TextBox17.TabIndex = 99
-        Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GroupBox25
-        '
-        Me.GroupBox25.Controls.Add(Me.TextBox27)
-        Me.GroupBox25.ForeColor = System.Drawing.Color.Maroon
-        Me.GroupBox25.Location = New System.Drawing.Point(481, 114)
-        Me.GroupBox25.Name = "GroupBox25"
-        Me.GroupBox25.Size = New System.Drawing.Size(691, 96)
-        Me.GroupBox25.TabIndex = 102
-        Me.GroupBox25.TabStop = False
-        Me.GroupBox25.Text = "Recommendation"
-        '
-        'TextBox27
-        '
-        Me.TextBox27.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TextBox27.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
-        Me.TextBox27.BackColor = System.Drawing.Color.White
-        Me.TextBox27.Location = New System.Drawing.Point(5, 26)
-        Me.TextBox27.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TextBox27.Multiline = True
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.Size = New System.Drawing.Size(677, 62)
-        Me.TextBox27.TabIndex = 99
-        Me.TextBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'ENGABFRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(8, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 658)
         Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.TextBox29)
@@ -2456,13 +2590,13 @@ Partial Class ENGABFRM
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TabControl1)
         Me.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "ENGABFRM"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ENGABFRM"
+        Me.Text = "INFERTILITY CARD"
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2508,20 +2642,23 @@ Partial Class ENGABFRM
         Me.GroupBox5.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage5.ResumeLayout(False)
-        Me.GroupBox21.ResumeLayout(False)
-        Me.GroupBox21.PerformLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox22.ResumeLayout(False)
-        Me.GroupBox22.PerformLayout()
-        Me.GroupBox23.ResumeLayout(False)
-        Me.GroupBox23.PerformLayout()
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox24.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout()
         Me.GroupBox25.ResumeLayout(False)
         Me.GroupBox25.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox21.ResumeLayout(False)
+        Me.GroupBox21.PerformLayout()
+        Me.GroupBox23.ResumeLayout(False)
+        Me.GroupBox23.PerformLayout()
+        Me.GroupBox22.ResumeLayout(False)
+        Me.GroupBox22.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2588,7 +2725,6 @@ Partial Class ENGABFRM
     Friend WithEvents TextBox45 As TextBox
     Friend WithEvents TextBox43 As TextBox
     Friend WithEvents TextBox42 As TextBox
-    Friend WithEvents SimpleButton9 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
@@ -2600,7 +2736,6 @@ Partial Class ENGABFRM
     Friend WithEvents TextBox47 As TextBox
     Friend WithEvents TextBox48 As TextBox
     Friend WithEvents TextBox49 As TextBox
-    Friend WithEvents SimpleButton10 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label47 As Label
     Friend WithEvents Label48 As Label
     Friend WithEvents Label49 As Label
@@ -2611,7 +2746,6 @@ Partial Class ENGABFRM
     Friend WithEvents Label51 As Label
     Friend WithEvents TextBox51 As TextBox
     Friend WithEvents TextBox52 As TextBox
-    Friend WithEvents SimpleButton11 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label52 As Label
     Friend WithEvents Label53 As Label
     Friend WithEvents GroupBox11 As GroupBox
@@ -2635,16 +2769,6 @@ Partial Class ENGABFRM
     Friend WithEvents SimpleButton13 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton12 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton8 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents GroupBox19 As GroupBox
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
-    Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox22 As TextBox
-    Friend WithEvents SimpleButton17 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label21 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label24 As Label
@@ -2711,4 +2835,29 @@ Partial Class ENGABFRM
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents GroupBox25 As GroupBox
     Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents DataGridView4 As DataGridView
+    Friend WithEvents SimpleButton15 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TextBox28 As TextBox
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewButtonColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Label30 As Label
+    Friend WithEvents SimpleButton10 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SimpleButton9 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TextBox30 As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents DateTimePicker5 As DateTimePicker
+    Friend WithEvents Label32 As Label
+    Friend WithEvents SimpleButton11 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents GroupBox19 As GroupBox
+    Friend WithEvents SimpleButton17 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents Label14 As Label
+    Friend WithEvents TextBox21 As TextBox
+    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label21 As Label
 End Class

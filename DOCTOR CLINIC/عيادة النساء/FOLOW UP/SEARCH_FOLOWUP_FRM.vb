@@ -11,7 +11,7 @@
     End Sub
     Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
         If DataGridView1(3, DataGridView1.CurrentRow.Index).Selected = True Then
-            FOLOUP.SHOW_DETA(DataGridView1.CurrentRow.Cells(0).Value)
+            FOLLOWUPFRM.SHOW_DETA(DataGridView1.CurrentRow.Cells(0).Value)
             Me.Close()
         End If
     End Sub

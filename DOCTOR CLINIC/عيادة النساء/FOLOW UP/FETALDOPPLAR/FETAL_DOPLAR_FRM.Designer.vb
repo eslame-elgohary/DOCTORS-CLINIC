@@ -25,6 +25,8 @@ Partial Class FETAL_DOPLAR_FRM
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FETAL_DOPLAR_FRM))
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_DATE = New System.Windows.Forms.DateTimePicker()
+        Me.LAB = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TXT_PA_NAME = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -37,12 +39,11 @@ Partial Class FETAL_DOPLAR_FRM
         Me.BTN_SAVE = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_NEW = New DevExpress.XtraEditors.SimpleButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BTN_DELET = New DevExpress.XtraEditors.SimpleButton()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.BTN_DELET = New DevExpress.XtraEditors.SimpleButton()
-        Me.TXT_DATE = New System.Windows.Forms.DateTimePicker()
-        Me.LAB = New System.Windows.Forms.Label()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -76,6 +77,25 @@ Partial Class FETAL_DOPLAR_FRM
         Me.GroupBox1.Size = New System.Drawing.Size(509, 169)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
+        '
+        'TXT_DATE
+        '
+        Me.TXT_DATE.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE.Location = New System.Drawing.Point(98, 48)
+        Me.TXT_DATE.Name = "TXT_DATE"
+        Me.TXT_DATE.Size = New System.Drawing.Size(147, 29)
+        Me.TXT_DATE.TabIndex = 24
+        '
+        'LAB
+        '
+        Me.LAB.AutoSize = True
+        Me.LAB.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LAB.Location = New System.Drawing.Point(27, 55)
+        Me.LAB.Name = "LAB"
+        Me.LAB.Size = New System.Drawing.Size(65, 19)
+        Me.LAB.TabIndex = 23
+        Me.LAB.Text = "DATE :"
         '
         'Label2
         '
@@ -196,7 +216,7 @@ Partial Class FETAL_DOPLAR_FRM
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.DataGridView1.Location = New System.Drawing.Point(13, 227)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -204,6 +224,17 @@ Partial Class FETAL_DOPLAR_FRM
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(488, 175)
         Me.DataGridView1.TabIndex = 16
+        '
+        'BTN_DELET
+        '
+        Me.BTN_DELET.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_DELET.Appearance.Options.UseFont = True
+        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_DELET.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_DELET.Location = New System.Drawing.Point(318, 178)
+        Me.BTN_DELET.Name = "BTN_DELET"
+        Me.BTN_DELET.Size = New System.Drawing.Size(87, 33)
+        Me.BTN_DELET.TabIndex = 20
+        Me.BTN_DELET.Text = "DELET"
         '
         'Column1
         '
@@ -228,35 +259,13 @@ Partial Class FETAL_DOPLAR_FRM
         Me.Column3.ReadOnly = True
         Me.Column3.Visible = False
         '
-        'BTN_DELET
+        'Column4
         '
-        Me.BTN_DELET.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_DELET.Appearance.Options.UseFont = True
-        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_DELET.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_DELET.Location = New System.Drawing.Point(318, 178)
-        Me.BTN_DELET.Name = "BTN_DELET"
-        Me.BTN_DELET.Size = New System.Drawing.Size(87, 33)
-        Me.BTN_DELET.TabIndex = 20
-        Me.BTN_DELET.Text = "DELET"
-        '
-        'TXT_DATE
-        '
-        Me.TXT_DATE.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE.Location = New System.Drawing.Point(98, 48)
-        Me.TXT_DATE.Name = "TXT_DATE"
-        Me.TXT_DATE.Size = New System.Drawing.Size(147, 29)
-        Me.TXT_DATE.TabIndex = 24
-        '
-        'LAB
-        '
-        Me.LAB.AutoSize = True
-        Me.LAB.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LAB.Location = New System.Drawing.Point(27, 55)
-        Me.LAB.Name = "LAB"
-        Me.LAB.Size = New System.Drawing.Size(65, 19)
-        Me.LAB.TabIndex = 23
-        Me.LAB.Text = "DATE :"
+        Me.Column4.DataPropertyName = "DATE_FETAL"
+        Me.Column4.FillWeight = 40.0!
+        Me.Column4.HeaderText = "Date"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'FETAL_DOPLAR_FRM
         '
@@ -300,9 +309,10 @@ Partial Class FETAL_DOPLAR_FRM
     Friend WithEvents BTN_DELET As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PA_NAME As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents TXT_DATE As DateTimePicker
+    Friend WithEvents LAB As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewButtonColumn
-    Friend WithEvents TXT_DATE As DateTimePicker
-    Friend WithEvents LAB As Label
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

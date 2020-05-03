@@ -20,7 +20,7 @@
 
     Private Sub BTN_NEW_Click(sender As Object, e As EventArgs) Handles BTN_NEW.Click
         TXT_CODE.Text = CODE_GENE("OBSTETRIC_HISTORY", "ID") + 1
-        TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
+        TXT_PA_CODE.Text = FOLLOWUPFRM.TXT_PA_CODE.Text
         TXT_NAME.Text = ""
         BTN_EDIT.Enabled = False
         BTN_DELET.Enabled = False
