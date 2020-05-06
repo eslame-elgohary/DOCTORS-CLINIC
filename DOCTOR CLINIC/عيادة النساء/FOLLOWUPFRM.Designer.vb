@@ -240,7 +240,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(11, 21)
+        Me.Label1.Location = New System.Drawing.Point(11, 23)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -252,7 +252,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_CODE.BackColor = System.Drawing.Color.White
         Me.TXT_CODE.Enabled = False
-        Me.TXT_CODE.Location = New System.Drawing.Point(76, 18)
+        Me.TXT_CODE.Location = New System.Drawing.Point(76, 20)
         Me.TXT_CODE.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_CODE.Name = "TXT_CODE"
         Me.TXT_CODE.Size = New System.Drawing.Size(57, 27)
@@ -298,7 +298,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_AGE.BackColor = System.Drawing.Color.White
         Me.TXT_AGE.Enabled = False
-        Me.TXT_AGE.Location = New System.Drawing.Point(532, 24)
+        Me.TXT_AGE.Location = New System.Drawing.Point(532, 22)
         Me.TXT_AGE.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_AGE.Name = "TXT_AGE"
         Me.TXT_AGE.Size = New System.Drawing.Size(57, 27)
@@ -309,7 +309,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(476, 27)
+        Me.Label4.Location = New System.Drawing.Point(476, 24)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -321,7 +321,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(600, 30)
+        Me.Label5.Location = New System.Drawing.Point(600, 24)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -333,7 +333,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_NAME2.BackColor = System.Drawing.Color.White
         Me.TXT_NAME2.Enabled = False
-        Me.TXT_NAME2.Location = New System.Drawing.Point(744, 27)
+        Me.TXT_NAME2.Location = New System.Drawing.Point(744, 22)
         Me.TXT_NAME2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_NAME2.Name = "TXT_NAME2"
         Me.TXT_NAME2.Size = New System.Drawing.Size(209, 27)
@@ -380,7 +380,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(552, 68)
+        Me.Label8.Location = New System.Drawing.Point(552, 64)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -426,7 +426,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(21, 61)
+        Me.Label6.Location = New System.Drawing.Point(21, 64)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -438,7 +438,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(914, 68)
+        Me.Label11.Location = New System.Drawing.Point(901, 64)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -450,10 +450,10 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_RH.BackColor = System.Drawing.Color.White
         Me.TXT_RH.Enabled = False
-        Me.TXT_RH.Location = New System.Drawing.Point(957, 60)
+        Me.TXT_RH.Location = New System.Drawing.Point(940, 60)
         Me.TXT_RH.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_RH.Name = "TXT_RH"
-        Me.TXT_RH.Size = New System.Drawing.Size(81, 27)
+        Me.TXT_RH.Size = New System.Drawing.Size(107, 27)
         Me.TXT_RH.TabIndex = 79
         Me.TXT_RH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -461,7 +461,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_ABO.BackColor = System.Drawing.Color.White
         Me.TXT_ABO.Enabled = False
-        Me.TXT_ABO.Location = New System.Drawing.Point(842, 60)
+        Me.TXT_ABO.Location = New System.Drawing.Point(838, 60)
         Me.TXT_ABO.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_ABO.Name = "TXT_ABO"
         Me.TXT_ABO.Size = New System.Drawing.Size(58, 27)
@@ -472,7 +472,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(783, 68)
+        Me.Label9.Location = New System.Drawing.Point(780, 64)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1383,7 +1383,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel5.ColumnCount = 3
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 826.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 830.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel6, 0, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel7, 1, 1)
         Me.TableLayoutPanel5.Controls.Add(Me.Label48, 1, 0)
@@ -1408,7 +1408,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel6.RowCount = 2
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(123, 103)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(121, 103)
         Me.TableLayoutPanel6.TabIndex = 99
         '
         'TXT_BP1
@@ -1419,7 +1419,7 @@ Partial Class FOLLOWUPFRM
         Me.TXT_BP1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_BP1.Multiline = True
         Me.TXT_BP1.Name = "TXT_BP1"
-        Me.TXT_BP1.Size = New System.Drawing.Size(119, 58)
+        Me.TXT_BP1.Size = New System.Drawing.Size(117, 58)
         Me.TXT_BP1.TabIndex = 97
         Me.TXT_BP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1428,12 +1428,12 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel7.ColumnCount = 1
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.TXT_W1, 0, 1)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(138, 37)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(136, 37)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 2
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(123, 103)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(121, 103)
         Me.TableLayoutPanel7.TabIndex = 98
         '
         'TXT_W1
@@ -1444,18 +1444,18 @@ Partial Class FOLLOWUPFRM
         Me.TXT_W1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_W1.Multiline = True
         Me.TXT_W1.Name = "TXT_W1"
-        Me.TXT_W1.Size = New System.Drawing.Size(119, 58)
+        Me.TXT_W1.Size = New System.Drawing.Size(117, 58)
         Me.TXT_W1.TabIndex = 97
         Me.TXT_W1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label48
         '
         Me.Label48.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label48.Location = New System.Drawing.Point(137, 3)
+        Me.Label48.Location = New System.Drawing.Point(135, 3)
         Me.Label48.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label48.Name = "Label48"
         Me.Label48.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label48.Size = New System.Drawing.Size(125, 28)
+        Me.Label48.Size = New System.Drawing.Size(123, 28)
         Me.Label48.TabIndex = 95
         Me.Label48.Text = "W"
         Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1467,7 +1467,7 @@ Partial Class FOLLOWUPFRM
         Me.Label49.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label49.Name = "Label49"
         Me.Label49.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label49.Size = New System.Drawing.Size(125, 28)
+        Me.Label49.Size = New System.Drawing.Size(123, 28)
         Me.Label49.TabIndex = 94
         Me.Label49.Text = "BP"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1483,7 +1483,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.06383!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191.0!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157.0!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161.0!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_PLACENTA1, 4, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_WEIGHT1, 1, 1)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_LIQOUR1, 2, 1)
@@ -1494,19 +1494,19 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel8.Controls.Add(Me.Label53, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.Label54, 0, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.TXT_WEEK1, 0, 1)
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(270, 37)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(266, 37)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 2
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.68966!))
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.31034!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(821, 103)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(825, 103)
         Me.TableLayoutPanel8.TabIndex = 87
         '
         'TXT_PLACENTA1
         '
         Me.TXT_PLACENTA1.BackColor = System.Drawing.Color.White
         Me.TXT_PLACENTA1.Enabled = False
-        Me.TXT_PLACENTA1.Location = New System.Drawing.Point(659, 51)
+        Me.TXT_PLACENTA1.Location = New System.Drawing.Point(660, 51)
         Me.TXT_PLACENTA1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_PLACENTA1.Multiline = True
         Me.TXT_PLACENTA1.Name = "TXT_PLACENTA1"
@@ -1519,7 +1519,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_WEIGHT1.BackColor = System.Drawing.Color.White
         Me.TXT_WEIGHT1.Enabled = False
-        Me.TXT_WEIGHT1.Location = New System.Drawing.Point(152, 51)
+        Me.TXT_WEIGHT1.Location = New System.Drawing.Point(153, 51)
         Me.TXT_WEIGHT1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_WEIGHT1.Multiline = True
         Me.TXT_WEIGHT1.Name = "TXT_WEIGHT1"
@@ -1531,7 +1531,7 @@ Partial Class FOLLOWUPFRM
         '
         Me.TXT_LIQOUR1.BackColor = System.Drawing.Color.White
         Me.TXT_LIQOUR1.Enabled = False
-        Me.TXT_LIQOUR1.Location = New System.Drawing.Point(307, 51)
+        Me.TXT_LIQOUR1.Location = New System.Drawing.Point(308, 51)
         Me.TXT_LIQOUR1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_LIQOUR1.Multiline = True
         Me.TXT_LIQOUR1.Name = "TXT_LIQOUR1"
@@ -1546,7 +1546,7 @@ Partial Class FOLLOWUPFRM
         Me.TXT_SEX1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_SEX1.FormattingEnabled = True
         Me.TXT_SEX1.Items.AddRange(New Object() {"undefined", "Male", "Femal"})
-        Me.TXT_SEX1.Location = New System.Drawing.Point(500, 51)
+        Me.TXT_SEX1.Location = New System.Drawing.Point(501, 51)
         Me.TXT_SEX1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_SEX1.Name = "TXT_SEX1"
         Me.TXT_SEX1.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1556,7 +1556,7 @@ Partial Class FOLLOWUPFRM
         'Label50
         '
         Me.Label50.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label50.Location = New System.Drawing.Point(659, 2)
+        Me.Label50.Location = New System.Drawing.Point(660, 2)
         Me.Label50.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label50.Name = "Label50"
         Me.Label50.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1568,7 +1568,7 @@ Partial Class FOLLOWUPFRM
         'Label51
         '
         Me.Label51.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label51.Location = New System.Drawing.Point(500, 2)
+        Me.Label51.Location = New System.Drawing.Point(501, 2)
         Me.Label51.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label51.Name = "Label51"
         Me.Label51.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1580,7 +1580,7 @@ Partial Class FOLLOWUPFRM
         'Label52
         '
         Me.Label52.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label52.Location = New System.Drawing.Point(307, 2)
+        Me.Label52.Location = New System.Drawing.Point(308, 2)
         Me.Label52.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label52.Name = "Label52"
         Me.Label52.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1592,7 +1592,7 @@ Partial Class FOLLOWUPFRM
         'Label53
         '
         Me.Label53.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label53.Location = New System.Drawing.Point(152, 2)
+        Me.Label53.Location = New System.Drawing.Point(153, 2)
         Me.Label53.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label53.Name = "Label53"
         Me.Label53.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1628,7 +1628,7 @@ Partial Class FOLLOWUPFRM
         'Label55
         '
         Me.Label55.ForeColor = System.Drawing.Color.LemonChiffon
-        Me.Label55.Location = New System.Drawing.Point(269, 3)
+        Me.Label55.Location = New System.Drawing.Point(265, 3)
         Me.Label55.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label55.Name = "Label55"
         Me.Label55.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1645,7 +1645,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.45055!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.54945!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 824.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 828.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel4, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label47, 1, 0)
@@ -1670,7 +1670,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel4.RowCount = 2
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(123, 92)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(121, 92)
         Me.TableLayoutPanel4.TabIndex = 99
         '
         'TXT_BP
@@ -1680,7 +1680,7 @@ Partial Class FOLLOWUPFRM
         Me.TXT_BP.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_BP.Multiline = True
         Me.TXT_BP.Name = "TXT_BP"
-        Me.TXT_BP.Size = New System.Drawing.Size(119, 48)
+        Me.TXT_BP.Size = New System.Drawing.Size(117, 48)
         Me.TXT_BP.TabIndex = 97
         Me.TXT_BP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1689,12 +1689,12 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel3.ColumnCount = 1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.TXT_W, 0, 1)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(138, 34)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(136, 34)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.33334!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(125, 92)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(123, 92)
         Me.TableLayoutPanel3.TabIndex = 98
         '
         'TXT_W
@@ -1704,18 +1704,18 @@ Partial Class FOLLOWUPFRM
         Me.TXT_W.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_W.Multiline = True
         Me.TXT_W.Name = "TXT_W"
-        Me.TXT_W.Size = New System.Drawing.Size(121, 48)
+        Me.TXT_W.Size = New System.Drawing.Size(119, 48)
         Me.TXT_W.TabIndex = 97
         Me.TXT_W.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label47
         '
         Me.Label47.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label47.Location = New System.Drawing.Point(137, 3)
+        Me.Label47.Location = New System.Drawing.Point(135, 3)
         Me.Label47.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label47.Name = "Label47"
         Me.Label47.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label47.Size = New System.Drawing.Size(127, 25)
+        Me.Label47.Size = New System.Drawing.Size(125, 25)
         Me.Label47.TabIndex = 95
         Me.Label47.Text = "W"
         Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1727,7 +1727,7 @@ Partial Class FOLLOWUPFRM
         Me.Label46.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label46.Name = "Label46"
         Me.Label46.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label46.Size = New System.Drawing.Size(125, 25)
+        Me.Label46.Size = New System.Drawing.Size(123, 25)
         Me.Label46.TabIndex = 94
         Me.Label46.Text = "BP"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1743,7 +1743,7 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.17057!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_PLACENTA, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_WIGHT, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_LIQPUR, 2, 1)
@@ -1754,18 +1754,18 @@ Partial Class FOLLOWUPFRM
         Me.TableLayoutPanel1.Controls.Add(Me.Label31, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label21, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TXT_WEEK, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(272, 34)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(268, 34)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.12644!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.87356!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(819, 92)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(823, 92)
         Me.TableLayoutPanel1.TabIndex = 87
         '
         'TXT_PLACENTA
         '
         Me.TXT_PLACENTA.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_PLACENTA.Location = New System.Drawing.Point(653, 47)
+        Me.TXT_PLACENTA.Location = New System.Drawing.Point(654, 47)
         Me.TXT_PLACENTA.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_PLACENTA.Multiline = True
         Me.TXT_PLACENTA.Name = "TXT_PLACENTA"
@@ -1787,7 +1787,7 @@ Partial Class FOLLOWUPFRM
         'TXT_LIQPUR
         '
         Me.TXT_LIQPUR.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_LIQPUR.Location = New System.Drawing.Point(302, 47)
+        Me.TXT_LIQPUR.Location = New System.Drawing.Point(303, 47)
         Me.TXT_LIQPUR.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_LIQPUR.Multiline = True
         Me.TXT_LIQPUR.Name = "TXT_LIQPUR"
@@ -1803,7 +1803,7 @@ Partial Class FOLLOWUPFRM
         Me.TXT_SEX.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_SEX.FormattingEnabled = True
         Me.TXT_SEX.Items.AddRange(New Object() {"undefined", "Male", "Femal", "Male & Femal", "Male  & Male ", "Femal & Femal"})
-        Me.TXT_SEX.Location = New System.Drawing.Point(494, 47)
+        Me.TXT_SEX.Location = New System.Drawing.Point(495, 47)
         Me.TXT_SEX.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_SEX.Name = "TXT_SEX"
         Me.TXT_SEX.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1813,7 +1813,7 @@ Partial Class FOLLOWUPFRM
         'Label37
         '
         Me.Label37.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label37.Location = New System.Drawing.Point(653, 2)
+        Me.Label37.Location = New System.Drawing.Point(654, 2)
         Me.Label37.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label37.Name = "Label37"
         Me.Label37.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1825,7 +1825,7 @@ Partial Class FOLLOWUPFRM
         'Label35
         '
         Me.Label35.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label35.Location = New System.Drawing.Point(494, 2)
+        Me.Label35.Location = New System.Drawing.Point(495, 2)
         Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label35.Name = "Label35"
         Me.Label35.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1837,7 +1837,7 @@ Partial Class FOLLOWUPFRM
         'Label33
         '
         Me.Label33.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label33.Location = New System.Drawing.Point(302, 2)
+        Me.Label33.Location = New System.Drawing.Point(303, 2)
         Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label33.Name = "Label33"
         Me.Label33.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -1884,7 +1884,7 @@ Partial Class FOLLOWUPFRM
         'Label45
         '
         Me.Label45.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label45.Location = New System.Drawing.Point(271, 3)
+        Me.Label45.Location = New System.Drawing.Point(267, 3)
         Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label45.Name = "Label45"
         Me.Label45.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2517,7 +2517,6 @@ Partial Class FOLLOWUPFRM
         Me.ClientSize = New System.Drawing.Size(1125, 600)
         Me.Controls.Add(Me.BTN_BABY)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.TXT_RH)
         Me.Controls.Add(Me.TXT_ABO)
         Me.Controls.Add(Me.Label9)
@@ -2539,6 +2538,7 @@ Partial Class FOLLOWUPFRM
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TXT_CODE)
         Me.Controls.Add(Me.GRBTN)
+        Me.Controls.Add(Me.Label11)
         Me.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)

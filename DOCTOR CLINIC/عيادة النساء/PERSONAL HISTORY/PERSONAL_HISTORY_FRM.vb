@@ -241,4 +241,13 @@
             TXT_NAME2.Text = DT.Rows(I).Item("PA_NAME2")
         Next
     End Sub
+
+    Private Sub PERSONAL_HISTORY_FRM_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.S AndAlso e.Control Then
+            BTN_SAVE_Click(sender, e)
+        End If
+        If e.KeyCode = Keys.E AndAlso e.Control Then
+            BTN_EDIT_Click(sender, e)
+        End If
+    End Sub
 End Class

@@ -67,6 +67,7 @@ Partial Class HOME
         Me.BT_MASROUF = New System.Windows.Forms.ToolStripMenuItem()
         Me.زيارةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_ZIARAFRM = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_HAGEZ_FRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.المبيعاتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_SALE_FATO = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_RESALE_FATO = New System.Windows.Forms.ToolStripMenuItem()
@@ -122,7 +123,7 @@ Partial Class HOME
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BTN_HAGEZ_FRM = New System.Windows.Forms.ToolStripMenuItem()
+        Me.INFERTILITYCARDCLOSEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -302,7 +303,7 @@ Partial Class HOME
         '
         'ReportingToolStripMenuItem
         '
-        Me.ReportingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FOLOWUPCARDCLOSEToolStripMenuItem})
+        Me.ReportingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FOLOWUPCARDCLOSEToolStripMenuItem, Me.INFERTILITYCARDCLOSEToolStripMenuItem})
         Me.ReportingToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ReportingToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ReportingToolStripMenuItem.Name = "ReportingToolStripMenuItem"
@@ -314,7 +315,7 @@ Partial Class HOME
         Me.FOLOWUPCARDCLOSEToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack
         Me.FOLOWUPCARDCLOSEToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.FOLOWUPCARDCLOSEToolStripMenuItem.Name = "FOLOWUPCARDCLOSEToolStripMenuItem"
-        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Size = New System.Drawing.Size(226, 22)
+        Me.FOLOWUPCARDCLOSEToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
         Me.FOLOWUPCARDCLOSEToolStripMenuItem.Text = "FOLOW UP CARD CLOSE"
         '
         'التكويداتToolStripMenuItem
@@ -441,8 +442,14 @@ Partial Class HOME
         'BTN_ZIARAFRM
         '
         Me.BTN_ZIARAFRM.Name = "BTN_ZIARAFRM"
-        Me.BTN_ZIARAFRM.Size = New System.Drawing.Size(152, 22)
+        Me.BTN_ZIARAFRM.Size = New System.Drawing.Size(137, 22)
         Me.BTN_ZIARAFRM.Text = "زيارة العيادة"
+        '
+        'BTN_HAGEZ_FRM
+        '
+        Me.BTN_HAGEZ_FRM.Name = "BTN_HAGEZ_FRM"
+        Me.BTN_HAGEZ_FRM.Size = New System.Drawing.Size(137, 22)
+        Me.BTN_HAGEZ_FRM.Text = "حجز العيادات"
         '
         'المبيعاتToolStripMenuItem
         '
@@ -493,13 +500,13 @@ Partial Class HOME
         'BT_ADDMONY_DOCTOR
         '
         Me.BT_ADDMONY_DOCTOR.Name = "BT_ADDMONY_DOCTOR"
-        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(152, 22)
+        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(141, 22)
         Me.BT_ADDMONY_DOCTOR.Text = "أيصال عيادات"
         '
         'BT_ADDMONY_MAML
         '
         Me.BT_ADDMONY_MAML.Name = "BT_ADDMONY_MAML"
-        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(152, 22)
+        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(141, 22)
         Me.BT_ADDMONY_MAML.Text = "أيصال معمل"
         '
         'أذنصرفنقديةToolStripMenuItem
@@ -831,11 +838,11 @@ Partial Class HOME
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
-        'BTN_HAGEZ_FRM
+        'INFERTILITYCARDCLOSEToolStripMenuItem
         '
-        Me.BTN_HAGEZ_FRM.Name = "BTN_HAGEZ_FRM"
-        Me.BTN_HAGEZ_FRM.Size = New System.Drawing.Size(152, 22)
-        Me.BTN_HAGEZ_FRM.Text = "حجز العيادات"
+        Me.INFERTILITYCARDCLOSEToolStripMenuItem.Name = "INFERTILITYCARDCLOSEToolStripMenuItem"
+        Me.INFERTILITYCARDCLOSEToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
+        Me.INFERTILITYCARDCLOSEToolStripMenuItem.Text = "INFERTILITY CARD CLOSE"
         '
         'HOME
         '
@@ -976,4 +983,5 @@ Partial Class HOME
     Friend WithEvents BT_WHATSAPP As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents BTN_HAGEZ_FRM As ToolStripMenuItem
+    Friend WithEvents INFERTILITYCARDCLOSEToolStripMenuItem As ToolStripMenuItem
 End Class

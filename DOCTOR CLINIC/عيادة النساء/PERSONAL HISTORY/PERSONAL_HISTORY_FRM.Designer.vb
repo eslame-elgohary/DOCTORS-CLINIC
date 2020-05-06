@@ -29,6 +29,10 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.BTN_SAVE = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_NEW = New DevExpress.XtraEditors.SimpleButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -51,10 +55,6 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_SEARCH = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -129,6 +129,36 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(488, 215)
         Me.DataGridView1.TabIndex = 7
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "CODE_PERS"
+        Me.Column1.HeaderText = "CODE"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "PA_NAME"
+        Me.Column2.HeaderText = "NAME"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "PA_NAME2"
+        Me.Column4.HeaderText = "HUSBAND NAME"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.FillWeight = 30.0!
+        Me.Column3.HeaderText = "-"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Visible = False
         '
         'GroupBox1
         '
@@ -355,36 +385,6 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.Label10.TabIndex = 14
         Me.Label10.Text = "SEARCH NAME :"
         '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "CODE_PERS"
-        Me.Column1.HeaderText = "CODE"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "PA_NAME"
-        Me.Column2.HeaderText = "NAME"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "PA_NAME2"
-        Me.Column4.HeaderText = "HUSBAND NAME"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.FillWeight = 30.0!
-        Me.Column3.HeaderText = "-"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Visible = False
-        '
         'PERSONAL_HISTORY_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
@@ -401,6 +401,7 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "PERSONAL_HISTORY_FRM"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
