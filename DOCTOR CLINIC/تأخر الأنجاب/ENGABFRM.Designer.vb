@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ENGABFRM
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,13 @@ Partial Class ENGABFRM
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ENGABFRM))
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TXT_CODE_TESTNAME = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.SimpleButton18 = New DevExpress.XtraEditors.SimpleButton()
-        Me.TEXT_RESULT_TEST = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.TXT_DATE_TEST = New System.Windows.Forms.DateTimePicker()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.TXT_TESTPLACE = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.TXT_TESTNAME = New System.Windows.Forms.ComboBox()
+        Me.ADD_TEST_BTN = New DevExpress.XtraEditors.SimpleButton()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.BTN_ADD_Hystroscopy = New DevExpress.XtraEditors.SimpleButton()
@@ -119,6 +105,18 @@ Partial Class ENGABFRM
         Me.BTN_F_ADD_SURGICAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TXT_M_MOTILITYSEMAN = New System.Windows.Forms.TextBox()
+        Me.TXT_M_ABNORMALSEMAN = New System.Windows.Forms.TextBox()
+        Me.BTN_ADD_M_SEMAN = New DevExpress.XtraEditors.SimpleButton()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TXT_M_SPERMSEMAN = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TXT_M_PLACSEMAN = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TXT_M_DATESEMAN = New System.Windows.Forms.DateTimePicker()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.BTN_ADD_M_SURGICAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_M_SURGICAL = New System.Windows.Forms.TextBox()
@@ -170,17 +168,10 @@ Partial Class ENGABFRM
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.TXT_CODE_PLAN = New System.Windows.Forms.TextBox()
-        Me.TXT_DATE_PLAN = New System.Windows.Forms.DateTimePicker()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BTN_ADD_PLAN = New DevExpress.XtraEditors.SimpleButton()
-        Me.TXT_NAME_PLAN = New System.Windows.Forms.TextBox()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
@@ -196,6 +187,9 @@ Partial Class ENGABFRM
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_DATE_MARRIED = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TXT_COMPLEAN = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.T_Change = New System.Windows.Forms.Timer(Me.components)
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_FOLOWUP = New DevExpress.XtraEditors.SimpleButton()
         Me.SEARCHBTN = New DevExpress.XtraEditors.SimpleButton()
@@ -203,20 +197,11 @@ Partial Class ENGABFRM
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.TXT_COMPLEAN = New System.Windows.Forms.TextBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.BTN_ADD_M_SEMAN = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TXT_M_SPERMSEMAN = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TXT_M_PLACSEMAN = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TXT_M_DATESEMAN = New System.Windows.Forms.DateTimePicker()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TXT_M_ABNORMALSEMAN = New System.Windows.Forms.TextBox()
-        Me.TXT_M_MOTILITYSEMAN = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -259,17 +244,8 @@ Partial Class ENGABFRM
         Me.TabPage4.BackColor = System.Drawing.Color.Thistle
         Me.TabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TabPage4.Controls.Add(Me.TXT_CODE_TESTNAME)
         Me.TabPage4.Controls.Add(Me.DataGridView1)
-        Me.TabPage4.Controls.Add(Me.SimpleButton18)
-        Me.TabPage4.Controls.Add(Me.TEXT_RESULT_TEST)
-        Me.TabPage4.Controls.Add(Me.Label25)
-        Me.TabPage4.Controls.Add(Me.TXT_DATE_TEST)
-        Me.TabPage4.Controls.Add(Me.Label24)
-        Me.TabPage4.Controls.Add(Me.TXT_TESTPLACE)
-        Me.TabPage4.Controls.Add(Me.Label23)
-        Me.TabPage4.Controls.Add(Me.Label22)
-        Me.TabPage4.Controls.Add(Me.TXT_TESTNAME)
+        Me.TabPage4.Controls.Add(Me.ADD_TEST_BTN)
         Me.TabPage4.Location = New System.Drawing.Point(4, 31)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -277,171 +253,37 @@ Partial Class ENGABFRM
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Investigations"
         '
-        'TXT_CODE_TESTNAME
-        '
-        Me.TXT_CODE_TESTNAME.BackColor = System.Drawing.Color.White
-        Me.TXT_CODE_TESTNAME.Enabled = False
-        Me.TXT_CODE_TESTNAME.Location = New System.Drawing.Point(132, 6)
-        Me.TXT_CODE_TESTNAME.Name = "TXT_CODE_TESTNAME"
-        Me.TXT_CODE_TESTNAME.Size = New System.Drawing.Size(42, 27)
-        Me.TXT_CODE_TESTNAME.TabIndex = 109
-        Me.TXT_CODE_TESTNAME.Visible = False
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
-        Me.DataGridView1.Location = New System.Drawing.Point(1, 63)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DataGridView1.Enabled = False
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.Location = New System.Drawing.Point(1, 6)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1190, 419)
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(1131, 471)
         Me.DataGridView1.TabIndex = 108
         '
-        'Column1
+        'ADD_TEST_BTN
         '
-        Me.Column1.HeaderText = "code"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.FillWeight = 40.0!
-        Me.Column2.HeaderText = "Place"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.FillWeight = 40.0!
-        Me.Column3.HeaderText = "Date"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Name Test"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Result"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.FillWeight = 30.0!
-        Me.Column6.HeaderText = "-"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'SimpleButton18
-        '
-        Me.SimpleButton18.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton18.Appearance.Options.UseFont = True
-        Me.SimpleButton18.ImageOptions.Image = CType(resources.GetObject("SimpleButton18.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton18.Location = New System.Drawing.Point(1074, 10)
-        Me.SimpleButton18.Name = "SimpleButton18"
-        Me.SimpleButton18.Size = New System.Drawing.Size(104, 41)
-        Me.SimpleButton18.TabIndex = 107
-        Me.SimpleButton18.Text = "Add"
-        '
-        'TEXT_RESULT_TEST
-        '
-        Me.TEXT_RESULT_TEST.BackColor = System.Drawing.Color.Aqua
-        Me.TEXT_RESULT_TEST.Location = New System.Drawing.Point(951, 18)
-        Me.TEXT_RESULT_TEST.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TEXT_RESULT_TEST.Name = "TEXT_RESULT_TEST"
-        Me.TEXT_RESULT_TEST.Size = New System.Drawing.Size(113, 27)
-        Me.TEXT_RESULT_TEST.TabIndex = 106
-        Me.TEXT_RESULT_TEST.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label25.Location = New System.Drawing.Point(880, 22)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label25.Size = New System.Drawing.Size(72, 19)
-        Me.Label25.TabIndex = 105
-        Me.Label25.Text = "Result :"
-        '
-        'TXT_DATE_TEST
-        '
-        Me.TXT_DATE_TEST.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_TEST.Location = New System.Drawing.Point(705, 16)
-        Me.TXT_DATE_TEST.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_TEST.Name = "TXT_DATE_TEST"
-        Me.TXT_DATE_TEST.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_TEST.Size = New System.Drawing.Size(171, 27)
-        Me.TXT_DATE_TEST.TabIndex = 103
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label24.Location = New System.Drawing.Point(646, 19)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label24.Size = New System.Drawing.Size(59, 19)
-        Me.Label24.TabIndex = 104
-        Me.Label24.Text = "Date :"
-        '
-        'TXT_TESTPLACE
-        '
-        Me.TXT_TESTPLACE.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_TESTPLACE.Location = New System.Drawing.Point(529, 17)
-        Me.TXT_TESTPLACE.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_TESTPLACE.Name = "TXT_TESTPLACE"
-        Me.TXT_TESTPLACE.Size = New System.Drawing.Size(113, 27)
-        Me.TXT_TESTPLACE.TabIndex = 98
-        Me.TXT_TESTPLACE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label23.Location = New System.Drawing.Point(465, 20)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label23.Size = New System.Drawing.Size(64, 19)
-        Me.Label23.TabIndex = 99
-        Me.Label23.Text = "Place :"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label22.Location = New System.Drawing.Point(3, 19)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label22.Size = New System.Drawing.Size(108, 19)
-        Me.Label22.TabIndex = 66
-        Me.Label22.Text = "Name Test :"
-        '
-        'TXT_TESTNAME
-        '
-        Me.TXT_TESTNAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_TESTNAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_TESTNAME.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_TESTNAME.FormattingEnabled = True
-        Me.TXT_TESTNAME.Location = New System.Drawing.Point(114, 16)
-        Me.TXT_TESTNAME.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_TESTNAME.Name = "TXT_TESTNAME"
-        Me.TXT_TESTNAME.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_TESTNAME.Size = New System.Drawing.Size(333, 27)
-        Me.TXT_TESTNAME.TabIndex = 65
+        Me.ADD_TEST_BTN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADD_TEST_BTN.Appearance.Options.UseFont = True
+        Me.ADD_TEST_BTN.ImageOptions.Image = CType(resources.GetObject("ADD_TEST_BTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.ADD_TEST_BTN.Location = New System.Drawing.Point(1138, 10)
+        Me.ADD_TEST_BTN.Name = "ADD_TEST_BTN"
+        Me.ADD_TEST_BTN.Size = New System.Drawing.Size(40, 467)
+        Me.ADD_TEST_BTN.TabIndex = 107
+        Me.ADD_TEST_BTN.Text = "Add"
         '
         'TabPage3
         '
@@ -1414,6 +1256,143 @@ Partial Class ENGABFRM
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "SEMEN ANALYSIS"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(14, 35)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label16.Size = New System.Drawing.Size(159, 19)
+        Me.Label16.TabIndex = 105
+        Me.Label16.Text = "Last Visit  >>>>>"
+        '
+        'TXT_M_MOTILITYSEMAN
+        '
+        Me.TXT_M_MOTILITYSEMAN.BackColor = System.Drawing.Color.White
+        Me.TXT_M_MOTILITYSEMAN.Enabled = False
+        Me.TXT_M_MOTILITYSEMAN.Location = New System.Drawing.Point(339, 77)
+        Me.TXT_M_MOTILITYSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_M_MOTILITYSEMAN.Name = "TXT_M_MOTILITYSEMAN"
+        Me.TXT_M_MOTILITYSEMAN.Size = New System.Drawing.Size(202, 27)
+        Me.TXT_M_MOTILITYSEMAN.TabIndex = 104
+        Me.TXT_M_MOTILITYSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_M_ABNORMALSEMAN
+        '
+        Me.TXT_M_ABNORMALSEMAN.BackColor = System.Drawing.Color.White
+        Me.TXT_M_ABNORMALSEMAN.Enabled = False
+        Me.TXT_M_ABNORMALSEMAN.Location = New System.Drawing.Point(702, 80)
+        Me.TXT_M_ABNORMALSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_M_ABNORMALSEMAN.Name = "TXT_M_ABNORMALSEMAN"
+        Me.TXT_M_ABNORMALSEMAN.Size = New System.Drawing.Size(378, 27)
+        Me.TXT_M_ABNORMALSEMAN.TabIndex = 103
+        Me.TXT_M_ABNORMALSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BTN_ADD_M_SEMAN
+        '
+        Me.BTN_ADD_M_SEMAN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_SEMAN.Appearance.Options.UseFont = True
+        Me.BTN_ADD_M_SEMAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SEMAN.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_M_SEMAN.Location = New System.Drawing.Point(1118, 14)
+        Me.BTN_ADD_M_SEMAN.Name = "BTN_ADD_M_SEMAN"
+        Me.BTN_ADD_M_SEMAN.Size = New System.Drawing.Size(38, 93)
+        Me.BTN_ADD_M_SEMAN.TabIndex = 102
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Green
+        Me.Label5.Location = New System.Drawing.Point(549, 83)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label5.Size = New System.Drawing.Size(150, 19)
+        Me.Label5.TabIndex = 99
+        Me.Label5.Text = "Abnormal forms :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Green
+        Me.Label8.Location = New System.Drawing.Point(256, 80)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label8.Size = New System.Drawing.Size(83, 19)
+        Me.Label8.TabIndex = 98
+        Me.Label8.Text = "motility :"
+        '
+        'TXT_M_SPERMSEMAN
+        '
+        Me.TXT_M_SPERMSEMAN.BackColor = System.Drawing.Color.White
+        Me.TXT_M_SPERMSEMAN.Enabled = False
+        Me.TXT_M_SPERMSEMAN.Location = New System.Drawing.Point(127, 76)
+        Me.TXT_M_SPERMSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_M_SPERMSEMAN.Name = "TXT_M_SPERMSEMAN"
+        Me.TXT_M_SPERMSEMAN.Size = New System.Drawing.Size(118, 27)
+        Me.TXT_M_SPERMSEMAN.TabIndex = 96
+        Me.TXT_M_SPERMSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Green
+        Me.Label10.Location = New System.Drawing.Point(5, 80)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label10.Size = New System.Drawing.Size(118, 19)
+        Me.Label10.TabIndex = 97
+        Me.Label10.Text = "No.of sperm :"
+        '
+        'TXT_M_PLACSEMAN
+        '
+        Me.TXT_M_PLACSEMAN.BackColor = System.Drawing.Color.White
+        Me.TXT_M_PLACSEMAN.Enabled = False
+        Me.TXT_M_PLACSEMAN.Location = New System.Drawing.Point(513, 32)
+        Me.TXT_M_PLACSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_M_PLACSEMAN.Name = "TXT_M_PLACSEMAN"
+        Me.TXT_M_PLACSEMAN.Size = New System.Drawing.Size(202, 27)
+        Me.TXT_M_PLACSEMAN.TabIndex = 93
+        Me.TXT_M_PLACSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.Green
+        Me.Label11.Location = New System.Drawing.Point(445, 35)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label11.Size = New System.Drawing.Size(64, 19)
+        Me.Label11.TabIndex = 94
+        Me.Label11.Text = "Place :"
+        '
+        'TXT_M_DATESEMAN
+        '
+        Me.TXT_M_DATESEMAN.Enabled = False
+        Me.TXT_M_DATESEMAN.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_M_DATESEMAN.Location = New System.Drawing.Point(242, 32)
+        Me.TXT_M_DATESEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_M_DATESEMAN.Name = "TXT_M_DATESEMAN"
+        Me.TXT_M_DATESEMAN.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_M_DATESEMAN.Size = New System.Drawing.Size(173, 27)
+        Me.TXT_M_DATESEMAN.TabIndex = 92
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.Green
+        Me.Label12.Location = New System.Drawing.Point(179, 35)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label12.Size = New System.Drawing.Size(59, 19)
+        Me.Label12.TabIndex = 95
+        Me.Label12.Text = "Date :"
+        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.BTN_ADD_M_SURGICAL)
@@ -1966,13 +1945,8 @@ Partial Class ENGABFRM
         'TabPage6
         '
         Me.TabPage6.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TabPage6.Controls.Add(Me.TXT_CODE_PLAN)
-        Me.TabPage6.Controls.Add(Me.TXT_DATE_PLAN)
-        Me.TabPage6.Controls.Add(Me.Label33)
-        Me.TabPage6.Controls.Add(Me.Label30)
         Me.TabPage6.Controls.Add(Me.DataGridView4)
         Me.TabPage6.Controls.Add(Me.BTN_ADD_PLAN)
-        Me.TabPage6.Controls.Add(Me.TXT_NAME_PLAN)
         Me.TabPage6.Location = New System.Drawing.Point(4, 31)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
@@ -1980,102 +1954,52 @@ Partial Class ENGABFRM
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Plan"
         '
-        'TXT_CODE_PLAN
-        '
-        Me.TXT_CODE_PLAN.BackColor = System.Drawing.Color.White
-        Me.TXT_CODE_PLAN.Enabled = False
-        Me.TXT_CODE_PLAN.Location = New System.Drawing.Point(433, 6)
-        Me.TXT_CODE_PLAN.Name = "TXT_CODE_PLAN"
-        Me.TXT_CODE_PLAN.Size = New System.Drawing.Size(42, 27)
-        Me.TXT_CODE_PLAN.TabIndex = 69
-        Me.TXT_CODE_PLAN.Visible = False
-        '
-        'TXT_DATE_PLAN
-        '
-        Me.TXT_DATE_PLAN.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_PLAN.Location = New System.Drawing.Point(115, 21)
-        Me.TXT_DATE_PLAN.Name = "TXT_DATE_PLAN"
-        Me.TXT_DATE_PLAN.Size = New System.Drawing.Size(154, 27)
-        Me.TXT_DATE_PLAN.TabIndex = 5
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(8, 23)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(101, 19)
-        Me.Label33.TabIndex = 4
-        Me.Label33.Text = "Date Step :"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(307, 23)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(129, 19)
-        Me.Label30.TabIndex = 3
-        Me.Label30.Text = "Name of Plan :"
-        '
         'DataGridView4
         '
         Me.DataGridView4.AllowUserToAddRows = False
         Me.DataGridView4.AllowUserToDeleteRows = False
+        Me.DataGridView4.AllowUserToResizeColumns = False
+        Me.DataGridView4.AllowUserToResizeRows = False
         Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8, Me.Column9, Me.Column10})
-        Me.DataGridView4.Location = New System.Drawing.Point(3, 67)
+        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8})
+        Me.DataGridView4.Enabled = False
+        Me.DataGridView4.EnableHeadersVisualStyles = False
+        Me.DataGridView4.Location = New System.Drawing.Point(3, 11)
+        Me.DataGridView4.MultiSelect = False
         Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.ReadOnly = True
-        Me.DataGridView4.Size = New System.Drawing.Size(1187, 417)
+        Me.DataGridView4.RowHeadersVisible = False
+        Me.DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView4.Size = New System.Drawing.Size(1136, 473)
         Me.DataGridView4.TabIndex = 2
         '
         'Column7
         '
+        Me.Column7.DataPropertyName = "DATE_PLAN_INFERT"
         Me.Column7.FillWeight = 40.0!
         Me.Column7.HeaderText = "DATE"
         Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
         '
         'Column8
         '
+        Me.Column8.DataPropertyName = "NAME_PLAN_INFERT"
         Me.Column8.FillWeight = 300.0!
         Me.Column8.HeaderText = "NAME"
         Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        '
-        'Column9
-        '
-        Me.Column9.FillWeight = 30.0!
-        Me.Column9.HeaderText = "-"
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "CODE"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Visible = False
         '
         'BTN_ADD_PLAN
         '
         Me.BTN_ADD_PLAN.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_ADD_PLAN.Appearance.Options.UseFont = True
         Me.BTN_ADD_PLAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_PLAN.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_PLAN.Location = New System.Drawing.Point(1000, 11)
+        Me.BTN_ADD_PLAN.Location = New System.Drawing.Point(1146, 11)
         Me.BTN_ADD_PLAN.Name = "BTN_ADD_PLAN"
-        Me.BTN_ADD_PLAN.Size = New System.Drawing.Size(172, 42)
+        Me.BTN_ADD_PLAN.Size = New System.Drawing.Size(41, 470)
         Me.BTN_ADD_PLAN.TabIndex = 1
         Me.BTN_ADD_PLAN.Text = "Addition Step"
-        '
-        'TXT_NAME_PLAN
-        '
-        Me.TXT_NAME_PLAN.Location = New System.Drawing.Point(450, 11)
-        Me.TXT_NAME_PLAN.Multiline = True
-        Me.TXT_NAME_PLAN.Name = "TXT_NAME_PLAN"
-        Me.TXT_NAME_PLAN.Size = New System.Drawing.Size(514, 43)
-        Me.TXT_NAME_PLAN.TabIndex = 0
         '
         'TXT_PA_CODE
         '
@@ -2249,6 +2173,32 @@ Partial Class ENGABFRM
         Me.Label6.TabIndex = 102
         Me.Label6.Text = "Married Since :"
         '
+        'TXT_COMPLEAN
+        '
+        Me.TXT_COMPLEAN.BackColor = System.Drawing.Color.White
+        Me.TXT_COMPLEAN.Enabled = False
+        Me.TXT_COMPLEAN.Location = New System.Drawing.Point(788, 13)
+        Me.TXT_COMPLEAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_COMPLEAN.Multiline = True
+        Me.TXT_COMPLEAN.Name = "TXT_COMPLEAN"
+        Me.TXT_COMPLEAN.Size = New System.Drawing.Size(409, 60)
+        Me.TXT_COMPLEAN.TabIndex = 110
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.ForeColor = System.Drawing.Color.White
+        Me.Label27.Location = New System.Drawing.Point(949, -2)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label27.Size = New System.Drawing.Size(92, 19)
+        Me.Label27.TabIndex = 111
+        Me.Label27.Text = "Complaint"
+        '
+        'T_Change
+        '
+        '
         'EXITBTN
         '
         Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2334,165 +2284,43 @@ Partial Class ENGABFRM
         Me.NEWBTN.TabIndex = 104
         Me.NEWBTN.Text = "New"
         '
-        'TXT_COMPLEAN
+        'Column1
         '
-        Me.TXT_COMPLEAN.BackColor = System.Drawing.Color.White
-        Me.TXT_COMPLEAN.Enabled = False
-        Me.TXT_COMPLEAN.Location = New System.Drawing.Point(788, 13)
-        Me.TXT_COMPLEAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_COMPLEAN.Multiline = True
-        Me.TXT_COMPLEAN.Name = "TXT_COMPLEAN"
-        Me.TXT_COMPLEAN.Size = New System.Drawing.Size(409, 60)
-        Me.TXT_COMPLEAN.TabIndex = 110
+        Me.Column1.DataPropertyName = "CODE_TEST_INFERT"
+        Me.Column1.HeaderText = "code"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
         '
-        'Label27
+        'Column2
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.ForeColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(949, -2)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label27.Size = New System.Drawing.Size(92, 19)
-        Me.Label27.TabIndex = 111
-        Me.Label27.Text = "Complaint"
+        Me.Column2.DataPropertyName = "NAME_PALCE_TEST_INFERT"
+        Me.Column2.FillWeight = 40.0!
+        Me.Column2.HeaderText = "Place"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
-        'BTN_ADD_M_SEMAN
+        'Column3
         '
-        Me.BTN_ADD_M_SEMAN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_M_SEMAN.Appearance.Options.UseFont = True
-        Me.BTN_ADD_M_SEMAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SEMAN.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_M_SEMAN.Location = New System.Drawing.Point(1118, 14)
-        Me.BTN_ADD_M_SEMAN.Name = "BTN_ADD_M_SEMAN"
-        Me.BTN_ADD_M_SEMAN.Size = New System.Drawing.Size(38, 93)
-        Me.BTN_ADD_M_SEMAN.TabIndex = 102
+        Me.Column3.DataPropertyName = "DATE_TEST_INFERT"
+        Me.Column3.FillWeight = 40.0!
+        Me.Column3.HeaderText = "Date"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
-        'Label5
+        'Column4
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.Green
-        Me.Label5.Location = New System.Drawing.Point(549, 83)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label5.Size = New System.Drawing.Size(150, 19)
-        Me.Label5.TabIndex = 99
-        Me.Label5.Text = "Abnormal forms :"
+        Me.Column4.DataPropertyName = "NAME_TEST_INFERT"
+        Me.Column4.HeaderText = "Name Test"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
-        'Label8
+        'Column5
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.Green
-        Me.Label8.Location = New System.Drawing.Point(256, 80)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label8.Size = New System.Drawing.Size(83, 19)
-        Me.Label8.TabIndex = 98
-        Me.Label8.Text = "motility :"
-        '
-        'TXT_M_SPERMSEMAN
-        '
-        Me.TXT_M_SPERMSEMAN.BackColor = System.Drawing.Color.White
-        Me.TXT_M_SPERMSEMAN.Enabled = False
-        Me.TXT_M_SPERMSEMAN.Location = New System.Drawing.Point(127, 76)
-        Me.TXT_M_SPERMSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_M_SPERMSEMAN.Name = "TXT_M_SPERMSEMAN"
-        Me.TXT_M_SPERMSEMAN.Size = New System.Drawing.Size(118, 27)
-        Me.TXT_M_SPERMSEMAN.TabIndex = 96
-        Me.TXT_M_SPERMSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.Green
-        Me.Label10.Location = New System.Drawing.Point(5, 80)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label10.Size = New System.Drawing.Size(118, 19)
-        Me.Label10.TabIndex = 97
-        Me.Label10.Text = "No.of sperm :"
-        '
-        'TXT_M_PLACSEMAN
-        '
-        Me.TXT_M_PLACSEMAN.BackColor = System.Drawing.Color.White
-        Me.TXT_M_PLACSEMAN.Enabled = False
-        Me.TXT_M_PLACSEMAN.Location = New System.Drawing.Point(513, 32)
-        Me.TXT_M_PLACSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_M_PLACSEMAN.Name = "TXT_M_PLACSEMAN"
-        Me.TXT_M_PLACSEMAN.Size = New System.Drawing.Size(202, 27)
-        Me.TXT_M_PLACSEMAN.TabIndex = 93
-        Me.TXT_M_PLACSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.Color.Green
-        Me.Label11.Location = New System.Drawing.Point(445, 35)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label11.Size = New System.Drawing.Size(64, 19)
-        Me.Label11.TabIndex = 94
-        Me.Label11.Text = "Place :"
-        '
-        'TXT_M_DATESEMAN
-        '
-        Me.TXT_M_DATESEMAN.Enabled = False
-        Me.TXT_M_DATESEMAN.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_M_DATESEMAN.Location = New System.Drawing.Point(242, 32)
-        Me.TXT_M_DATESEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_M_DATESEMAN.Name = "TXT_M_DATESEMAN"
-        Me.TXT_M_DATESEMAN.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_M_DATESEMAN.Size = New System.Drawing.Size(173, 27)
-        Me.TXT_M_DATESEMAN.TabIndex = 92
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.Green
-        Me.Label12.Location = New System.Drawing.Point(179, 35)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label12.Size = New System.Drawing.Size(59, 19)
-        Me.Label12.TabIndex = 95
-        Me.Label12.Text = "Date :"
-        '
-        'TXT_M_ABNORMALSEMAN
-        '
-        Me.TXT_M_ABNORMALSEMAN.BackColor = System.Drawing.Color.White
-        Me.TXT_M_ABNORMALSEMAN.Enabled = False
-        Me.TXT_M_ABNORMALSEMAN.Location = New System.Drawing.Point(702, 80)
-        Me.TXT_M_ABNORMALSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_M_ABNORMALSEMAN.Name = "TXT_M_ABNORMALSEMAN"
-        Me.TXT_M_ABNORMALSEMAN.Size = New System.Drawing.Size(378, 27)
-        Me.TXT_M_ABNORMALSEMAN.TabIndex = 103
-        Me.TXT_M_ABNORMALSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_M_MOTILITYSEMAN
-        '
-        Me.TXT_M_MOTILITYSEMAN.BackColor = System.Drawing.Color.White
-        Me.TXT_M_MOTILITYSEMAN.Enabled = False
-        Me.TXT_M_MOTILITYSEMAN.Location = New System.Drawing.Point(339, 77)
-        Me.TXT_M_MOTILITYSEMAN.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_M_MOTILITYSEMAN.Name = "TXT_M_MOTILITYSEMAN"
-        Me.TXT_M_MOTILITYSEMAN.Size = New System.Drawing.Size(202, 27)
-        Me.TXT_M_MOTILITYSEMAN.TabIndex = 104
-        Me.TXT_M_MOTILITYSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(14, 35)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label16.Size = New System.Drawing.Size(159, 19)
-        Me.Label16.TabIndex = 105
-        Me.Label16.Text = "Last Visit  >>>>>"
+        Me.Column5.DataPropertyName = "RESULT_TEST_INFERT"
+        Me.Column5.HeaderText = "Result"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'ENGABFRM
         '
@@ -2534,7 +2362,6 @@ Partial Class ENGABFRM
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "INFERTILITY CARD"
         Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.GroupBox19.ResumeLayout(False)
@@ -2592,7 +2419,6 @@ Partial Class ENGABFRM
         Me.GroupBox22.PerformLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -2680,22 +2506,8 @@ Partial Class ENGABFRM
     Friend WithEvents BTN_F_ADD_OBSTETRIC As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BTN_F_ADD_FAMILY As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BTN_F_ADD_MEDICAL As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Label25 As Label
-    Friend WithEvents TXT_DATE_TEST As DateTimePicker
-    Friend WithEvents Label24 As Label
-    Friend WithEvents TXT_TESTPLACE As TextBox
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents TXT_TESTNAME As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewButtonColumn
-    Friend WithEvents SimpleButton18 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents TEXT_RESULT_TEST As TextBox
+    Friend WithEvents ADD_TEST_BTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents GroupBox21 As GroupBox
     Friend WithEvents DataGridView3 As DataGridView
@@ -2748,12 +2560,6 @@ Partial Class ENGABFRM
     Friend WithEvents TXT_RECOMMENDATION2 As TextBox
     Friend WithEvents DataGridView4 As DataGridView
     Friend WithEvents BTN_ADD_PLAN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents TXT_NAME_PLAN As TextBox
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewButtonColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Label30 As Label
     Friend WithEvents BTN_ADD_LAPAROSCOPY As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BTN_ADD_4D As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PLACE_4D As TextBox
@@ -2776,10 +2582,6 @@ Partial Class ENGABFRM
     Friend WithEvents GroupBox26 As GroupBox
     Friend WithEvents BTN_ADD_M_DOPLER As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_M_DOPPLER As TextBox
-    Friend WithEvents TXT_DATE_PLAN As DateTimePicker
-    Friend WithEvents Label33 As Label
-    Friend WithEvents TXT_CODE_TESTNAME As TextBox
-    Friend WithEvents TXT_CODE_PLAN As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents TXT_M_MOTILITYSEMAN As TextBox
     Friend WithEvents TXT_M_ABNORMALSEMAN As TextBox
@@ -2792,4 +2594,12 @@ Partial Class ENGABFRM
     Friend WithEvents Label11 As Label
     Friend WithEvents TXT_M_DATESEMAN As DateTimePicker
     Friend WithEvents Label12 As Label
+    Friend WithEvents T_Change As Timer
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

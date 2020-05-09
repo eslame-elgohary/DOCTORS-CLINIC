@@ -81,6 +81,4 @@ Module CONNECTION
         ESCAPESQL = "'" & ESCAPESQL & "'"
         Return ESCAPESQL
     End Function
-
-
 End Module

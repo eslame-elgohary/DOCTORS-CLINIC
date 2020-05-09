@@ -646,10 +646,22 @@
     <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.Designer.vb">
+      <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.Designer.vb">
       <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
     </Compile>
     <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.Designer.vb">
+      <DependentUpon>PLAN_FRM_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
@@ -1078,8 +1090,14 @@
     <EmbeddedResource Include="تأخر الأنجاب\ENGABFRM.resx">
       <DependentUpon>ENGABFRM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.resx">
+      <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.resx">
       <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.resx">
+      <DependentUpon>PLAN_FRM_INFERTILITY.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
       <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>
@@ -1371,12 +1389,10 @@
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\SURGICAL\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GANI\" />
-    <Folder Include="تأخر الأنجاب\INVESTIGATIONS\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\" />
-    <Folder Include="تأخر الأنجاب\PLAN\" />
     <Folder Include="تأخر الأنجاب\PROCEDURES\4D\" />
     <Folder Include="تأخر الأنجاب\PROCEDURES\HSG\" />
     <Folder Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\" />

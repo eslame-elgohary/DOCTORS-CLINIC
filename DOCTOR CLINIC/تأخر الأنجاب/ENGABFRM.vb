@@ -50,6 +50,7 @@
         TXT_INFO.Text = ""
         TXT_COMPLEAN.Text = ""
         TXT_DATE_MARRIED.Value = Date.Today
+        T_Change.Enabled = False
         '====================================================
 
         TXT_DATE_VISITNEW.Text = Date.Today
@@ -107,6 +108,8 @@
             TXT_INFO.Text = DT.Rows(I).Item("INFO2_INFERT_HIS")
             TXT_NAME2.Text = DT.Rows(I).Item("PA_NAME2")
         Next
+        T_Change.Enabled = True
+
     End Sub
 
     Private Sub TXT_PA_CODE_TextChanged(sender As Object, e As EventArgs) Handles TXT_PA_CODE.TextChanged
@@ -122,5 +125,39 @@
             TXT_INFO.Text = DT.Rows(I).Item("INFO2_INFERT_HIS")
             TXT_NAME2.Text = DT.Rows(I).Item("PA_NAME2")
         Next
+        T_Change.Enabled = True
+
+    End Sub
+
+    Private Sub T_Change_Tick(sender As Object, e As EventArgs) Handles T_Change.Tick
+        '================ PLAN ========================
+        FILL_DGV(DataGridView4, "SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT ='TRUE' AND CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ")
+        '==================================================
+        '================ TESTER ========================
+        FILL_DGV(DataGridView1, "SELECT * FROM TEST_INFERT WHERE STAT_TEST_INFERT ='TRUE' AND CODE_PA_TEST_INFERT='" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ")
+        '==================================================
+
+    End Sub
+
+
+    Private Sub BTN_ADD_PLAN_Click(sender As Object, e As EventArgs) Handles BTN_ADD_PLAN.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            PLAN_FRM_INFERTILITY.ShowDialog()
+        End If
+
+    End Sub
+
+    Private Sub ADD_TEST_BTN_Click(sender As Object, e As EventArgs) Handles ADD_TEST_BTN.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            TEST_FRM_INFERTILITY.ShowDialog()
+        End If
     End Sub
 End Class
