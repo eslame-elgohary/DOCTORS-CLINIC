@@ -95,12 +95,27 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="interop.craxdrt">
       <HintPath>..\interop.craxdrt.dll</HintPath>
@@ -652,6 +667,12 @@
     <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.Designer.vb">
+      <DependentUpon>SEMAN_ANALYSIS_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.Designer.vb">
       <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
     </Compile>
@@ -662,6 +683,30 @@
       <DependentUpon>PLAN_FRM_INFERTILITY.vb</DependentUpon>
     </Compile>
     <Compile Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\4D\E4D_INFERILTY.Designer.vb">
+      <DependentUpon>E4D_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\4D\E4D_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HSG\HSG_INFERILTY.Designer.vb">
+      <DependentUpon>HSG_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HSG\HSG_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\HYSTROSCOPY_INFERILTY.Designer.vb">
+      <DependentUpon>HYSTROSCOPY_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\HYSTROSCOPY_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\LAPAROSCOPY_INFERILTY.Designer.vb">
+      <DependentUpon>LAPAROSCOPY_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\LAPAROSCOPY_INFERILTY.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
@@ -1093,11 +1138,26 @@
     <EmbeddedResource Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.resx">
       <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.resx">
+      <DependentUpon>SEMAN_ANALYSIS_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.resx">
       <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.resx">
       <DependentUpon>PLAN_FRM_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\4D\E4D_INFERILTY.resx">
+      <DependentUpon>E4D_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\HSG\HSG_INFERILTY.resx">
+      <DependentUpon>HSG_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\HYSTROSCOPY_INFERILTY.resx">
+      <DependentUpon>HYSTROSCOPY_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\LAPAROSCOPY_INFERILTY.resx">
+      <DependentUpon>LAPAROSCOPY_INFERILTY.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
       <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>
@@ -1391,12 +1451,7 @@
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GANI\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\" />
-    <Folder Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\" />
-    <Folder Include="تأخر الأنجاب\PROCEDURES\4D\" />
-    <Folder Include="تأخر الأنجاب\PROCEDURES\HSG\" />
-    <Folder Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\" />
-    <Folder Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\" />
     <Folder Include="تأخر الأنجاب\VISIT\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

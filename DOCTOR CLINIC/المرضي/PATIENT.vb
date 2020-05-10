@@ -161,7 +161,6 @@
                 If PA_NAME.Text = "" Then
                     PA_NAME.BackColor = Color.Red
                     PA_NAME.Select()
-
                     Exit Sub
                 End If
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============

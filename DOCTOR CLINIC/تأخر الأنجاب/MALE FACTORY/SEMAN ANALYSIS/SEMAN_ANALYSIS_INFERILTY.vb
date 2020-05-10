@@ -1,0 +1,3 @@
+﻿Public Class SEMAN_ANALYSIS_INFERILTY
+
+End Class

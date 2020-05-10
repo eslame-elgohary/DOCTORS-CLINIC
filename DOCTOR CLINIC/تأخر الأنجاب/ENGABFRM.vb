@@ -160,4 +160,54 @@
             TEST_FRM_INFERTILITY.ShowDialog()
         End If
     End Sub
+
+    Private Sub BTN_ADD_4D_Click(sender As Object, e As EventArgs) Handles BTN_ADD_4D.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            E4D_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_ADD_LAPAROSCOPY_Click(sender As Object, e As EventArgs) Handles BTN_ADD_LAPAROSCOPY.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            LAPAROSCOPY_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_ADD_HSG_Click(sender As Object, e As EventArgs) Handles BTN_ADD_HSG.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            HSG_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_ADD_Hystroscopy_Click(sender As Object, e As EventArgs) Handles BTN_ADD_Hystroscopy.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            HYSTROSCOPY_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_ADD_M_SEMAN_Click(sender As Object, e As EventArgs) Handles BTN_ADD_M_SEMAN.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
 End Class
