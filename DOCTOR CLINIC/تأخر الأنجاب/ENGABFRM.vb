@@ -62,6 +62,7 @@
         SAVEBTN.Enabled = True
         FILL_PATION()
         TXT_PA_NAME.Select()
+
     End Sub
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
 
@@ -208,6 +209,50 @@
             TXT_CERVIX_Hystroscopy.Text = ""
             TXT_CAVITY_Hystroscopy.Text = ""
         End If
+        '====================== MEDICAL FEMAL ========================
+        Dim DT4 As New DataTable
+        Dim DA4 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM MEDICAL_FEMAL_INFERTILTY WHERE STAT_MEDICAL_FEMAL_INFERTILTY ='TRUE' AND CODE_PA_MEDICAL_FEMAL_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA4.Fill(DT4)
+        If DT4.Rows.Count > 0 Then
+            For I = 0 To DT4.Rows.Count - 1
+                TXT_F_MEDICAL.Text = DT4.Rows(I).Item("NAME_MEDICAL_FEMAL_INFERTILTY")
+            Next
+        Else
+            TXT_F_MEDICAL.Text = ""
+        End If
+        '====================== FAMILY FEMAL ========================
+        Dim DT5 As New DataTable
+        Dim DA5 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM FAMILY_FEMAL_INFERTILTY WHERE STAT_FAMILY_FEMAL_INFERTILTY ='TRUE' AND CODE_PA_FAMILY_FEMAL_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA5.Fill(DT5)
+        If DT5.Rows.Count > 0 Then
+            For I = 0 To DT5.Rows.Count - 1
+                TXT_F_FAMILY.Text = DT5.Rows(I).Item("NAME_FAMILY_FEMAL_INFERTILTY")
+            Next
+        Else
+            TXT_F_FAMILY.Text = ""
+        End If
+        '====================== OBSTETRIC FEMAL ========================
+        Dim DT6 As New DataTable
+        Dim DA6 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM OBSTETRIC_FEMAL_INFERTILTY WHERE STAT_OBSTETRIC_FEMAL_INFERTILTY ='TRUE' AND CODE_PA_OBSTETRIC_FEMAL_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA6.Fill(DT6)
+        If DT6.Rows.Count > 0 Then
+            For I = 0 To DT6.Rows.Count - 1
+                TXT_F_OBSTETRIC.Text = DT6.Rows(I).Item("NAME_OBSTETRIC_FEMAL_INFERTILTY")
+            Next
+        Else
+            TXT_F_OBSTETRIC.Text = ""
+        End If
+        '====================== VAGINAL FEMAL ========================
+        Dim DT7 As New DataTable
+        Dim DA7 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM VAGINAL_FEMAL_INFERTILTY WHERE STAT_VAGINAL_FEMAL_INFERTILTY ='TRUE' AND CODE_PA_VAGINAL_FEMAL_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA7.Fill(DT7)
+        If DT7.Rows.Count > 0 Then
+            For I = 0 To DT7.Rows.Count - 1
+                TXT_F_VAGINAL.Text = DT7.Rows(I).Item("NAME_VAGINAL_FEMAL_INFERTILTY")
+            Next
+        Else
+            TXT_F_VAGINAL.Text = ""
+        End If
     End Sub
 
 
@@ -273,6 +318,106 @@
     End Sub
 
     Private Sub BTN_ADD_M_SEMAN_Click(sender As Object, e As EventArgs) Handles BTN_ADD_M_SEMAN.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_MEDICAL_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_MEDICAL.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            MEDICAL_FEMAL_INFERTILITY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_FAMILY_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_FAMILY.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            FAMILY_FEMAL_INFERTILITY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_OBSTETRIC_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_OBSTETRIC.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            OBSTETRIC_FEMAL_INFERTILITY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_VAGINAL_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_VAGINAL.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            VAGINAL_FEMAL_INFERTILITY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_HIRSUTISM_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_HIRSUTISM.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_SURGICAL_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_SURGICAL.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_MENSTRUAL_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_MENSTRUAL.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_CONTRACEPTION_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_CONTRACEPTION.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_WEIGHT_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_WEIGHT.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            SEMAN_ANALYSIS_INFERILTY.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub BTN_F_ADD_IUI_Click(sender As Object, e As EventArgs) Handles BTN_F_ADD_IUI.Click
         If TXT_PA_CODE.Text = "" Then
             MessageBox.Show("Please enter the patient's name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_PA_NAME.Select()

@@ -662,6 +662,30 @@
     <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\FAMILY_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>FAMILY_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\FAMILY_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\MEDICAL_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>MEDICAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\MEDICAL_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\OBSTETRIC_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>OBSTETRIC_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\OBSTETRIC_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\VAGINAL\VAGINAL_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>VAGINAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\VAGINAL\VAGINAL_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.Designer.vb">
       <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
     </Compile>
@@ -1136,6 +1160,18 @@
     <EmbeddedResource Include="تأخر الأنجاب\ENGABFRM.resx">
       <DependentUpon>ENGABFRM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\FAMILY_FEMAL_INFERTILITY.resx">
+      <DependentUpon>FAMILY_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\MEDICAL_FEMAL_INFERTILITY.resx">
+      <DependentUpon>MEDICAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\OBSTETRIC_FEMAL_INFERTILITY.resx">
+      <DependentUpon>OBSTETRIC_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\VAGINAL\VAGINAL_FEMAL_INFERTILITY.resx">
+      <DependentUpon>VAGINAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.resx">
       <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
     </EmbeddedResource>
@@ -1443,12 +1479,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\CONTRACEPTION\" />
-    <Folder Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\HIRSUTISM\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\IUI OR ICSI\" />
-    <Folder Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\MENSTRUAL\" />
-    <Folder Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\SURGICAL\" />
     <Folder Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GANI\" />
     <Folder Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\" />
