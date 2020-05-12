@@ -50,7 +50,7 @@
         TXT_INFO.Text = ""
         TXT_COMPLEAN.Text = ""
         TXT_DATE_MARRIED.Value = Date.Today
-        T_Change.Enabled = False
+        T_Change.Enabled = True
         '====================================================
 
         TXT_DATE_VISITNEW.Text = Date.Today
@@ -131,12 +131,83 @@
 
     Private Sub T_Change_Tick(sender As Object, e As EventArgs) Handles T_Change.Tick
         '================ PLAN ========================
-        FILL_DGV(DataGridView4, "SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT ='TRUE' AND CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ")
+        FILL_DGV(DataGridView4, "SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT ='TRUE' AND CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "' ORDER BY DATE_PLAN_INFERT DESC ")
         '==================================================
         '================ TESTER ========================
         FILL_DGV(DataGridView1, "SELECT * FROM TEST_INFERT WHERE STAT_TEST_INFERT ='TRUE' AND CODE_PA_TEST_INFERT='" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ")
         '==================================================
-
+        '================ 4d ========================
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM E4D_INFERT WHERE STAT_4D_INFERT ='TRUE' AND CODE_PA_4D_INFERT = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA.Fill(DT)
+        If DT.Rows.Count > 0 Then
+            For I = 0 To DT.Rows.Count - 1
+                TXT_DATE_4D.Value = DT.Rows(I).Item("DATE_4D_INFERT")
+                TXT_PLACE_4D.Text = DT.Rows(I).Item("PLACE_4D_INFERT")
+                TXT_UTRERUS_4D.Text = DT.Rows(I).Item("UTERUS_4D_INFERT")
+                TXT_OVARIES_4D.Text = DT.Rows(I).Item("OVARIES_4D_INFERT")
+                TXT_DOPPLER_4D.Text = DT.Rows(I).Item("DOPPLER_4D_INFERT")
+            Next
+        Else
+            TXT_DATE_4D.Value = Date.Today
+            TXT_PLACE_4D.Text = ""
+            TXT_UTRERUS_4D.Text = ""
+            TXT_OVARIES_4D.Text = ""
+            TXT_DOPPLER_4D.Text = ""
+        End If
+        '====================== LAPAROSCOPY ========================
+        Dim DT1 As New DataTable
+        Dim DA1 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM LAPAROSCOPY_INFERILTY WHERE STAT_LAPAROSCOPY_INFERILTY ='TRUE' AND CODE_PA_LAPAROSCOPY_INFERILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA1.Fill(DT1)
+        If DT1.Rows.Count > 0 Then
+            For I = 0 To DT1.Rows.Count - 1
+                TXT_DATE_LAPAROSCOPY.Value = DT1.Rows(I).Item("DATE_LAPAROSCOPY_INFERILTY")
+                TXT_PLACE_LAPAROSCOPY.Text = DT1.Rows(I).Item("PLACE_LAPAROSCOPY_INFERILTY")
+                TXT_UTERUS_LAPAROSCOPY.Text = DT1.Rows(I).Item("UTERUS_LAPAROSCOPY_INFERILTY")
+                TXT_OVARIES_LAPAROSCOPY.Text = DT1.Rows(I).Item("OVARIES_LAPAROSCOPY_INFERILTY")
+                TXT_TUBES_LAPAROSCOPY.Text = DT1.Rows(I).Item("TUBES_LAPAROSCOPY_INFERILTY")
+            Next
+        Else
+            TXT_DATE_LAPAROSCOPY.Value = Date.Today
+            TXT_PLACE_LAPAROSCOPY.Text = ""
+            TXT_UTERUS_LAPAROSCOPY.Text = ""
+            TXT_OVARIES_LAPAROSCOPY.Text = ""
+            TXT_TUBES_LAPAROSCOPY.Text = ""
+        End If
+        '====================== HSG ========================
+        Dim DT2 As New DataTable
+        Dim DA2 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM HSG_INFERILTY WHERE STAT_HSG_INFERILTY ='TRUE' AND CODE_PA_HSG_INFERILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA2.Fill(DT2)
+        If DT2.Rows.Count > 0 Then
+            For I = 0 To DT2.Rows.Count - 1
+                TXT_DATE_HSG.Value = DT2.Rows(I).Item("DATE_HSG_INFERILTY")
+                TXT_PLACE_HSG.Text = DT2.Rows(I).Item("PLACE_HSG_INFERILTY")
+                TXT_UTERUS_HSG.Text = DT2.Rows(I).Item("UTERUS_HSG_INFERILTY")
+                TXT_TUBES_HSG.Text = DT2.Rows(I).Item("TUBES_HSG_INFERILTY")
+            Next
+        Else
+            TXT_DATE_HSG.Value = Date.Today
+            TXT_PLACE_HSG.Text = ""
+            TXT_UTERUS_HSG.Text = ""
+            TXT_TUBES_HSG.Text = ""
+        End If
+        '====================== HSG ========================
+        Dim DT3 As New DataTable
+        Dim DA3 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM HYSTROSCOPY_INFERILTY WHERE STAT_HYSTROSCOPY_INFERILTY ='TRUE' AND CODE_PA_HYSTROSCOPY_INFERILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA3.Fill(DT3)
+        If DT3.Rows.Count > 0 Then
+            For I = 0 To DT3.Rows.Count - 1
+                TXT_DATE_Hystroscopy.Value = DT3.Rows(I).Item("DATE_HYSTROSCOPY_INFERILTY")
+                TXT_PLACE_Hystroscopy.Text = DT3.Rows(I).Item("PLACE_HYSTROSCOPY_INFERILTY")
+                TXT_CERVIX_Hystroscopy.Text = DT3.Rows(I).Item("CERVIX_HYSTROSCOPY_INFERILTY")
+                TXT_CAVITY_Hystroscopy.Text = DT3.Rows(I).Item("CAVITY_HYSTROSCOPY_INFERILTY")
+            Next
+        Else
+            TXT_DATE_Hystroscopy.Value = Date.Today
+            TXT_PLACE_Hystroscopy.Text = ""
+            TXT_CERVIX_Hystroscopy.Text = ""
+            TXT_CAVITY_Hystroscopy.Text = ""
+        End If
     End Sub
 
 

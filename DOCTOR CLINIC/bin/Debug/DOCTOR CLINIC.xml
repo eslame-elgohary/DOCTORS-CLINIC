@@ -102,6 +102,11 @@ DOCTOR CLINIC
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_fetus_42">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DOCTOR_CLINIC.My.Resources.Resources.icons8_level_1_32">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

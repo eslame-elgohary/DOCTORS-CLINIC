@@ -43,7 +43,7 @@
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
 
         If TXT_PLACE_4D.Text = "" Then
-            MessageBox.Show("يرجى أدخال مكان التحاليل ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("يرجى أدخال مكان الأشعة ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_PLACE_4D.Select()
             Exit Sub
         End If
@@ -72,7 +72,7 @@
     Private Sub BTN_EDIT_Click(sender As Object, e As EventArgs) Handles BTN_EDIT.Click
 
         If TXT_PLACE_4D.Text = "" Then
-            MessageBox.Show("يرجى أدخال مكان التحاليل ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("يرجى أدخال مكان الأشعة ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_PLACE_4D.Select()
             Exit Sub
         End If

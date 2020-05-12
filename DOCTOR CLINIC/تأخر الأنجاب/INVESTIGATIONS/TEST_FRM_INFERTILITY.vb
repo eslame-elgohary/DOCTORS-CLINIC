@@ -164,10 +164,4 @@
             SHOW_DETA(DataGridView1.CurrentRow.Cells(0).Value)
         End If
     End Sub
-    Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(2).Value = "عرض"
-            Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-        Next
-    End Sub
 End Class

@@ -29,7 +29,7 @@
         TXT_DATE_PLAN.Value = Date.Today
         TXT_NAME_PLAN.Text = ""
         TXT_NAME_PLAN.Select()
-        FILL_DGV(DataGridView1, "SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT ='TRUE' AND CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "'")
+        FILL_DGV(DataGridView1, "SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT ='TRUE' AND CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "'ORDER BY DATE_PLAN_INFERT DESC ")
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click

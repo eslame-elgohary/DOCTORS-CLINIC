@@ -31,8 +31,10 @@ Partial Class ENGABFRM
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ADD_TEST_BTN = New DevExpress.XtraEditors.SimpleButton()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_Hystroscopy = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PLACE_Hystroscopy = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TXT_DATE_Hystroscopy = New System.Windows.Forms.DateTimePicker()
@@ -42,6 +44,7 @@ Partial Class ENGABFRM
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_HSG = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PLACE_HSG = New System.Windows.Forms.TextBox()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.TXT_DATE_HSG = New System.Windows.Forms.DateTimePicker()
@@ -51,6 +54,7 @@ Partial Class ENGABFRM
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.GroupBox18 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_LAPAROSCOPY = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PLACE_LAPAROSCOPY = New System.Windows.Forms.TextBox()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.TXT_DATE_LAPAROSCOPY = New System.Windows.Forms.DateTimePicker()
@@ -62,6 +66,7 @@ Partial Class ENGABFRM
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_4D = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PLACE_4D = New System.Windows.Forms.TextBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.TXT_DATE_4D = New System.Windows.Forms.DateTimePicker()
@@ -74,30 +79,41 @@ Partial Class ENGABFRM
         Me.Label56 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox17 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_HIRSUTISM = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_HIRSUTISM = New System.Windows.Forms.TextBox()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_IUI = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_IUI = New System.Windows.Forms.TextBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_VAGINAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_VAGINAL = New System.Windows.Forms.TextBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_WEIGHT = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_WEIGHT = New System.Windows.Forms.TextBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_CONTRACEPTION = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_CONTRACPTION = New System.Windows.Forms.TextBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_MENSTRUAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_MENSTRUAL = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_OBSTETRIC = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_OBSTETRIC = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_FAMILY = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_FAMILY = New System.Windows.Forms.TextBox()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.BTN_F_ADD_MEDICAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_F_MEDICAL = New System.Windows.Forms.TextBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.TXT_F_SURGICAL = New System.Windows.Forms.TextBox()
+        Me.BTN_F_ADD_SURGICAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TXT_M_MOTILITYSEMAN = New System.Windows.Forms.TextBox()
         Me.TXT_M_ABNORMALSEMAN = New System.Windows.Forms.TextBox()
+        Me.BTN_ADD_M_SEMAN = New DevExpress.XtraEditors.SimpleButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TXT_M_SPERMSEMAN = New System.Windows.Forms.TextBox()
@@ -107,10 +123,13 @@ Partial Class ENGABFRM
         Me.TXT_M_DATESEMAN = New System.Windows.Forms.DateTimePicker()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_M_SURGICAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_M_SURGICAL = New System.Windows.Forms.TextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_M_MEDICAL = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_M_MEDICAL = New System.Windows.Forms.TextBox()
         Me.GroupBox26 = New System.Windows.Forms.GroupBox()
+        Me.BTN_ADD_M_DOPLER = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_M_DOPPLER = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
@@ -136,6 +155,7 @@ Partial Class ENGABFRM
         Me.GroupBox22 = New System.Windows.Forms.GroupBox()
         Me.TXT_RECOMMENDATION = New System.Windows.Forms.TextBox()
         Me.TXT_FDATE = New System.Windows.Forms.Label()
+        Me.BTN_PHARM = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_CODE100 = New System.Windows.Forms.TextBox()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -156,6 +176,7 @@ Partial Class ENGABFRM
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BTN_ADD_PLAN = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
@@ -174,6 +195,7 @@ Partial Class ENGABFRM
         Me.TXT_COMPLEAN = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.T_Change = New System.Windows.Forms.Timer(Me.components)
+        Me.BTN_BABY = New DevExpress.XtraEditors.SimpleButton()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_FOLOWUP = New DevExpress.XtraEditors.SimpleButton()
         Me.SEARCHBTN = New DevExpress.XtraEditors.SimpleButton()
@@ -181,27 +203,6 @@ Partial Class ENGABFRM
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_M_SEMAN = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_M_SURGICAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_M_MEDICAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_M_DOPLER = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_HIRSUTISM = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_IUI = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_VAGINAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_WEIGHT = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_CONTRACEPTION = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_MENSTRUAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_OBSTETRIC = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_FAMILY = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_MEDICAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_F_ADD_SURGICAL = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_Hystroscopy = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_HSG = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_LAPAROSCOPY = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_4D = New DevExpress.XtraEditors.SimpleButton()
-        Me.ADD_TEST_BTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_PHARM = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_ADD_PLAN = New DevExpress.XtraEditors.SimpleButton()
         Me.TabPage4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -312,6 +313,17 @@ Partial Class ENGABFRM
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         '
+        'ADD_TEST_BTN
+        '
+        Me.ADD_TEST_BTN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADD_TEST_BTN.Appearance.Options.UseFont = True
+        Me.ADD_TEST_BTN.ImageOptions.Image = CType(resources.GetObject("ADD_TEST_BTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.ADD_TEST_BTN.Location = New System.Drawing.Point(1138, 10)
+        Me.ADD_TEST_BTN.Name = "ADD_TEST_BTN"
+        Me.ADD_TEST_BTN.Size = New System.Drawing.Size(40, 467)
+        Me.ADD_TEST_BTN.TabIndex = 107
+        Me.ADD_TEST_BTN.Text = "Add"
+        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.Linen
@@ -346,6 +358,16 @@ Partial Class ENGABFRM
         Me.GroupBox19.TabStop = False
         Me.GroupBox19.Text = "Hystroscopy"
         '
+        'BTN_ADD_Hystroscopy
+        '
+        Me.BTN_ADD_Hystroscopy.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_Hystroscopy.Appearance.Options.UseFont = True
+        Me.BTN_ADD_Hystroscopy.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_Hystroscopy.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_Hystroscopy.Location = New System.Drawing.Point(541, 22)
+        Me.BTN_ADD_Hystroscopy.Name = "BTN_ADD_Hystroscopy"
+        Me.BTN_ADD_Hystroscopy.Size = New System.Drawing.Size(41, 170)
+        Me.BTN_ADD_Hystroscopy.TabIndex = 101
+        '
         'TXT_PLACE_Hystroscopy
         '
         Me.TXT_PLACE_Hystroscopy.BackColor = System.Drawing.Color.White
@@ -373,6 +395,7 @@ Partial Class ENGABFRM
         '
         'TXT_DATE_Hystroscopy
         '
+        Me.TXT_DATE_Hystroscopy.Enabled = False
         Me.TXT_DATE_Hystroscopy.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.TXT_DATE_Hystroscopy.Location = New System.Drawing.Point(89, 35)
         Me.TXT_DATE_Hystroscopy.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -463,6 +486,16 @@ Partial Class ENGABFRM
         Me.GroupBox20.TabStop = False
         Me.GroupBox20.Text = "HSG"
         '
+        'BTN_ADD_HSG
+        '
+        Me.BTN_ADD_HSG.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_HSG.Appearance.Options.UseFont = True
+        Me.BTN_ADD_HSG.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_HSG.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_HSG.Location = New System.Drawing.Point(541, 22)
+        Me.BTN_ADD_HSG.Name = "BTN_ADD_HSG"
+        Me.BTN_ADD_HSG.Size = New System.Drawing.Size(41, 188)
+        Me.BTN_ADD_HSG.TabIndex = 101
+        '
         'TXT_PLACE_HSG
         '
         Me.TXT_PLACE_HSG.BackColor = System.Drawing.Color.White
@@ -490,6 +523,7 @@ Partial Class ENGABFRM
         '
         'TXT_DATE_HSG
         '
+        Me.TXT_DATE_HSG.Enabled = False
         Me.TXT_DATE_HSG.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.TXT_DATE_HSG.Location = New System.Drawing.Point(89, 35)
         Me.TXT_DATE_HSG.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -582,6 +616,16 @@ Partial Class ENGABFRM
         Me.GroupBox18.TabStop = False
         Me.GroupBox18.Text = "Laparoscopy"
         '
+        'BTN_ADD_LAPAROSCOPY
+        '
+        Me.BTN_ADD_LAPAROSCOPY.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_LAPAROSCOPY.Appearance.Options.UseFont = True
+        Me.BTN_ADD_LAPAROSCOPY.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_LAPAROSCOPY.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_LAPAROSCOPY.Location = New System.Drawing.Point(514, 17)
+        Me.BTN_ADD_LAPAROSCOPY.Name = "BTN_ADD_LAPAROSCOPY"
+        Me.BTN_ADD_LAPAROSCOPY.Size = New System.Drawing.Size(41, 188)
+        Me.BTN_ADD_LAPAROSCOPY.TabIndex = 100
+        '
         'TXT_PLACE_LAPAROSCOPY
         '
         Me.TXT_PLACE_LAPAROSCOPY.BackColor = System.Drawing.Color.White
@@ -609,6 +653,7 @@ Partial Class ENGABFRM
         '
         'TXT_DATE_LAPAROSCOPY
         '
+        Me.TXT_DATE_LAPAROSCOPY.Enabled = False
         Me.TXT_DATE_LAPAROSCOPY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.TXT_DATE_LAPAROSCOPY.Location = New System.Drawing.Point(96, 17)
         Me.TXT_DATE_LAPAROSCOPY.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -726,9 +771,20 @@ Partial Class ENGABFRM
         Me.GroupBox15.TabStop = False
         Me.GroupBox15.Text = "4D"
         '
+        'BTN_ADD_4D
+        '
+        Me.BTN_ADD_4D.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_4D.Appearance.Options.UseFont = True
+        Me.BTN_ADD_4D.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_4D.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_4D.Location = New System.Drawing.Point(514, 29)
+        Me.BTN_ADD_4D.Name = "BTN_ADD_4D"
+        Me.BTN_ADD_4D.Size = New System.Drawing.Size(41, 188)
+        Me.BTN_ADD_4D.TabIndex = 99
+        '
         'TXT_PLACE_4D
         '
         Me.TXT_PLACE_4D.BackColor = System.Drawing.Color.White
+        Me.TXT_PLACE_4D.Enabled = False
         Me.TXT_PLACE_4D.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_PLACE_4D.Location = New System.Drawing.Point(355, 30)
         Me.TXT_PLACE_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -752,6 +808,7 @@ Partial Class ENGABFRM
         '
         'TXT_DATE_4D
         '
+        Me.TXT_DATE_4D.Enabled = False
         Me.TXT_DATE_4D.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.TXT_DATE_4D.Location = New System.Drawing.Point(96, 29)
         Me.TXT_DATE_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -776,6 +833,7 @@ Partial Class ENGABFRM
         'TXT_DOPPLER_4D
         '
         Me.TXT_DOPPLER_4D.BackColor = System.Drawing.Color.White
+        Me.TXT_DOPPLER_4D.Enabled = False
         Me.TXT_DOPPLER_4D.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_DOPPLER_4D.Location = New System.Drawing.Point(96, 172)
         Me.TXT_DOPPLER_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -787,6 +845,7 @@ Partial Class ENGABFRM
         'TXT_OVARIES_4D
         '
         Me.TXT_OVARIES_4D.BackColor = System.Drawing.Color.White
+        Me.TXT_OVARIES_4D.Enabled = False
         Me.TXT_OVARIES_4D.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_OVARIES_4D.Location = New System.Drawing.Point(96, 121)
         Me.TXT_OVARIES_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -798,6 +857,7 @@ Partial Class ENGABFRM
         'TXT_UTRERUS_4D
         '
         Me.TXT_UTRERUS_4D.BackColor = System.Drawing.Color.White
+        Me.TXT_UTRERUS_4D.Enabled = False
         Me.TXT_UTRERUS_4D.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_UTRERUS_4D.Location = New System.Drawing.Point(96, 64)
         Me.TXT_UTRERUS_4D.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -878,6 +938,16 @@ Partial Class ENGABFRM
         Me.GroupBox17.TabStop = False
         Me.GroupBox17.Text = "History of hirsutism"
         '
+        'BTN_F_ADD_HIRSUTISM
+        '
+        Me.BTN_F_ADD_HIRSUTISM.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_HIRSUTISM.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_HIRSUTISM.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_HIRSUTISM.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_HIRSUTISM.Location = New System.Drawing.Point(537, 20)
+        Me.BTN_F_ADD_HIRSUTISM.Name = "BTN_F_ADD_HIRSUTISM"
+        Me.BTN_F_ADD_HIRSUTISM.Size = New System.Drawing.Size(38, 131)
+        Me.BTN_F_ADD_HIRSUTISM.TabIndex = 89
+        '
         'TXT_F_HIRSUTISM
         '
         Me.TXT_F_HIRSUTISM.BackColor = System.Drawing.Color.White
@@ -901,6 +971,16 @@ Partial Class ENGABFRM
         Me.GroupBox16.TabIndex = 94
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "History of IUI or ICSI "
+        '
+        'BTN_F_ADD_IUI
+        '
+        Me.BTN_F_ADD_IUI.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_IUI.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_IUI.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_IUI.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_IUI.Location = New System.Drawing.Point(510, 20)
+        Me.BTN_F_ADD_IUI.Name = "BTN_F_ADD_IUI"
+        Me.BTN_F_ADD_IUI.Size = New System.Drawing.Size(38, 131)
+        Me.BTN_F_ADD_IUI.TabIndex = 91
         '
         'TXT_F_IUI
         '
@@ -926,6 +1006,16 @@ Partial Class ENGABFRM
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "History of recurrent vaginal discharge and pruritis"
         '
+        'BTN_F_ADD_VAGINAL
+        '
+        Me.BTN_F_ADD_VAGINAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_VAGINAL.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_VAGINAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_VAGINAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_VAGINAL.Location = New System.Drawing.Point(537, 19)
+        Me.BTN_F_ADD_VAGINAL.Name = "BTN_F_ADD_VAGINAL"
+        Me.BTN_F_ADD_VAGINAL.Size = New System.Drawing.Size(38, 57)
+        Me.BTN_F_ADD_VAGINAL.TabIndex = 89
+        '
         'TXT_F_VAGINAL
         '
         Me.TXT_F_VAGINAL.BackColor = System.Drawing.Color.White
@@ -949,6 +1039,16 @@ Partial Class ENGABFRM
         Me.GroupBox10.TabIndex = 90
         Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "History of weight gain"
+        '
+        'BTN_F_ADD_WEIGHT
+        '
+        Me.BTN_F_ADD_WEIGHT.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_WEIGHT.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_WEIGHT.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_WEIGHT.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_WEIGHT.Location = New System.Drawing.Point(509, 20)
+        Me.BTN_F_ADD_WEIGHT.Name = "BTN_F_ADD_WEIGHT"
+        Me.BTN_F_ADD_WEIGHT.Size = New System.Drawing.Size(38, 56)
+        Me.BTN_F_ADD_WEIGHT.TabIndex = 90
         '
         'TXT_F_WEIGHT
         '
@@ -974,6 +1074,16 @@ Partial Class ENGABFRM
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Contraception"
         '
+        'BTN_F_ADD_CONTRACEPTION
+        '
+        Me.BTN_F_ADD_CONTRACEPTION.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_CONTRACEPTION.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_CONTRACEPTION.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_CONTRACEPTION.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_CONTRACEPTION.Location = New System.Drawing.Point(509, 19)
+        Me.BTN_F_ADD_CONTRACEPTION.Name = "BTN_F_ADD_CONTRACEPTION"
+        Me.BTN_F_ADD_CONTRACEPTION.Size = New System.Drawing.Size(38, 54)
+        Me.BTN_F_ADD_CONTRACEPTION.TabIndex = 89
+        '
         'TXT_F_CONTRACPTION
         '
         Me.TXT_F_CONTRACPTION.BackColor = System.Drawing.Color.White
@@ -997,6 +1107,16 @@ Partial Class ENGABFRM
         Me.GroupBox7.TabIndex = 93
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Menstrual History:"
+        '
+        'BTN_F_ADD_MENSTRUAL
+        '
+        Me.BTN_F_ADD_MENSTRUAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_MENSTRUAL.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_MENSTRUAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_MENSTRUAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_MENSTRUAL.Location = New System.Drawing.Point(509, 20)
+        Me.BTN_F_ADD_MENSTRUAL.Name = "BTN_F_ADD_MENSTRUAL"
+        Me.BTN_F_ADD_MENSTRUAL.Size = New System.Drawing.Size(38, 53)
+        Me.BTN_F_ADD_MENSTRUAL.TabIndex = 89
         '
         'TXT_F_MENSTRUAL
         '
@@ -1022,6 +1142,16 @@ Partial Class ENGABFRM
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Obstetric History "
         '
+        'BTN_F_ADD_OBSTETRIC
+        '
+        Me.BTN_F_ADD_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_OBSTETRIC.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_OBSTETRIC.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_OBSTETRIC.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_OBSTETRIC.Location = New System.Drawing.Point(537, 18)
+        Me.BTN_F_ADD_OBSTETRIC.Name = "BTN_F_ADD_OBSTETRIC"
+        Me.BTN_F_ADD_OBSTETRIC.Size = New System.Drawing.Size(38, 54)
+        Me.BTN_F_ADD_OBSTETRIC.TabIndex = 89
+        '
         'TXT_F_OBSTETRIC
         '
         Me.TXT_F_OBSTETRIC.BackColor = System.Drawing.Color.White
@@ -1046,6 +1176,16 @@ Partial Class ENGABFRM
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Family History"
         '
+        'BTN_F_ADD_FAMILY
+        '
+        Me.BTN_F_ADD_FAMILY.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_FAMILY.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_FAMILY.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_FAMILY.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_FAMILY.Location = New System.Drawing.Point(537, 18)
+        Me.BTN_F_ADD_FAMILY.Name = "BTN_F_ADD_FAMILY"
+        Me.BTN_F_ADD_FAMILY.Size = New System.Drawing.Size(38, 55)
+        Me.BTN_F_ADD_FAMILY.TabIndex = 89
+        '
         'TXT_F_FAMILY
         '
         Me.TXT_F_FAMILY.BackColor = System.Drawing.Color.White
@@ -1069,6 +1209,16 @@ Partial Class ENGABFRM
         Me.GroupBox12.TabIndex = 90
         Me.GroupBox12.TabStop = False
         Me.GroupBox12.Text = "Medical History"
+        '
+        'BTN_F_ADD_MEDICAL
+        '
+        Me.BTN_F_ADD_MEDICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_MEDICAL.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_MEDICAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_MEDICAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_MEDICAL.Location = New System.Drawing.Point(537, 18)
+        Me.BTN_F_ADD_MEDICAL.Name = "BTN_F_ADD_MEDICAL"
+        Me.BTN_F_ADD_MEDICAL.Size = New System.Drawing.Size(38, 55)
+        Me.BTN_F_ADD_MEDICAL.TabIndex = 89
         '
         'TXT_F_MEDICAL
         '
@@ -1105,6 +1255,16 @@ Partial Class ENGABFRM
         Me.TXT_F_SURGICAL.Name = "TXT_F_SURGICAL"
         Me.TXT_F_SURGICAL.Size = New System.Drawing.Size(496, 53)
         Me.TXT_F_SURGICAL.TabIndex = 68
+        '
+        'BTN_F_ADD_SURGICAL
+        '
+        Me.BTN_F_ADD_SURGICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_SURGICAL.Appearance.Options.UseFont = True
+        Me.BTN_F_ADD_SURGICAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_SURGICAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_F_ADD_SURGICAL.Location = New System.Drawing.Point(509, 18)
+        Me.BTN_F_ADD_SURGICAL.Name = "BTN_F_ADD_SURGICAL"
+        Me.BTN_F_ADD_SURGICAL.Size = New System.Drawing.Size(38, 54)
+        Me.BTN_F_ADD_SURGICAL.TabIndex = 88
         '
         'TabPage1
         '
@@ -1176,6 +1336,16 @@ Partial Class ENGABFRM
         Me.TXT_M_ABNORMALSEMAN.Size = New System.Drawing.Size(378, 27)
         Me.TXT_M_ABNORMALSEMAN.TabIndex = 103
         Me.TXT_M_ABNORMALSEMAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BTN_ADD_M_SEMAN
+        '
+        Me.BTN_ADD_M_SEMAN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_SEMAN.Appearance.Options.UseFont = True
+        Me.BTN_ADD_M_SEMAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SEMAN.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_M_SEMAN.Location = New System.Drawing.Point(1118, 14)
+        Me.BTN_ADD_M_SEMAN.Name = "BTN_ADD_M_SEMAN"
+        Me.BTN_ADD_M_SEMAN.Size = New System.Drawing.Size(38, 93)
+        Me.BTN_ADD_M_SEMAN.TabIndex = 102
         '
         'Label5
         '
@@ -1282,6 +1452,16 @@ Partial Class ENGABFRM
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Surgical History"
         '
+        'BTN_ADD_M_SURGICAL
+        '
+        Me.BTN_ADD_M_SURGICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_SURGICAL.Appearance.Options.UseFont = True
+        Me.BTN_ADD_M_SURGICAL.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SURGICAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_M_SURGICAL.Location = New System.Drawing.Point(523, 22)
+        Me.BTN_ADD_M_SURGICAL.Name = "BTN_ADD_M_SURGICAL"
+        Me.BTN_ADD_M_SURGICAL.Size = New System.Drawing.Size(38, 83)
+        Me.BTN_ADD_M_SURGICAL.TabIndex = 90
+        '
         'TXT_M_SURGICAL
         '
         Me.TXT_M_SURGICAL.BackColor = System.Drawing.Color.White
@@ -1306,6 +1486,16 @@ Partial Class ENGABFRM
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Medical History"
         '
+        'BTN_ADD_M_MEDICAL
+        '
+        Me.BTN_ADD_M_MEDICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_MEDICAL.Appearance.Options.UseFont = True
+        Me.BTN_ADD_M_MEDICAL.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_MEDICAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_M_MEDICAL.Location = New System.Drawing.Point(535, 18)
+        Me.BTN_ADD_M_MEDICAL.Name = "BTN_ADD_M_MEDICAL"
+        Me.BTN_ADD_M_MEDICAL.Size = New System.Drawing.Size(38, 87)
+        Me.BTN_ADD_M_MEDICAL.TabIndex = 90
+        '
         'TXT_M_MEDICAL
         '
         Me.TXT_M_MEDICAL.BackColor = System.Drawing.Color.White
@@ -1329,6 +1519,16 @@ Partial Class ENGABFRM
         Me.GroupBox26.TabIndex = 91
         Me.GroupBox26.TabStop = False
         Me.GroupBox26.Text = "Scrotal Doppler"
+        '
+        'BTN_ADD_M_DOPLER
+        '
+        Me.BTN_ADD_M_DOPLER.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_DOPLER.Appearance.Options.UseFont = True
+        Me.BTN_ADD_M_DOPLER.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_DOPLER.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_M_DOPLER.Location = New System.Drawing.Point(535, 19)
+        Me.BTN_ADD_M_DOPLER.Name = "BTN_ADD_M_DOPLER"
+        Me.BTN_ADD_M_DOPLER.Size = New System.Drawing.Size(38, 41)
+        Me.BTN_ADD_M_DOPLER.TabIndex = 90
         '
         'TXT_M_DOPPLER
         '
@@ -1620,6 +1820,14 @@ Partial Class ENGABFRM
         Me.TXT_FDATE.Text = "00000000"
         Me.TXT_FDATE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'BTN_PHARM
+        '
+        Me.BTN_PHARM.ImageOptions.Image = CType(resources.GetObject("BTN_PHARM.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PHARM.Location = New System.Drawing.Point(761, 18)
+        Me.BTN_PHARM.Name = "BTN_PHARM"
+        Me.BTN_PHARM.Size = New System.Drawing.Size(38, 114)
+        Me.BTN_PHARM.TabIndex = 96
+        '
         'TXT_CODE100
         '
         Me.TXT_CODE100.BackColor = System.Drawing.Color.White
@@ -1831,6 +2039,17 @@ Partial Class ENGABFRM
         Me.Column8.HeaderText = "NAME"
         Me.Column8.Name = "Column8"
         '
+        'BTN_ADD_PLAN
+        '
+        Me.BTN_ADD_PLAN.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_PLAN.Appearance.Options.UseFont = True
+        Me.BTN_ADD_PLAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_PLAN.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_ADD_PLAN.Location = New System.Drawing.Point(1146, 11)
+        Me.BTN_ADD_PLAN.Name = "BTN_ADD_PLAN"
+        Me.BTN_ADD_PLAN.Size = New System.Drawing.Size(41, 470)
+        Me.BTN_ADD_PLAN.TabIndex = 1
+        Me.BTN_ADD_PLAN.Text = "Addition Step"
+        '
         'TXT_PA_CODE
         '
         Me.TXT_PA_CODE.BackColor = System.Drawing.Color.White
@@ -2029,12 +2248,25 @@ Partial Class ENGABFRM
         'T_Change
         '
         '
+        'BTN_BABY
+        '
+        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_BABY.Appearance.ForeColor = System.Drawing.Color.OrangeRed
+        Me.BTN_BABY.Appearance.Options.UseFont = True
+        Me.BTN_BABY.Appearance.Options.UseForeColor = True
+        Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_fetus_42
+        Me.BTN_BABY.Location = New System.Drawing.Point(1040, 611)
+        Me.BTN_BABY.Name = "BTN_BABY"
+        Me.BTN_BABY.Size = New System.Drawing.Size(143, 44)
+        Me.BTN_BABY.TabIndex = 112
+        Me.BTN_BABY.Text = "Pregnant"
+        '
         'EXITBTN
         '
         Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EXITBTN.Appearance.Options.UseFont = True
         Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EXITBTN.Location = New System.Drawing.Point(272, 606)
+        Me.EXITBTN.Location = New System.Drawing.Point(84, 612)
         Me.EXITBTN.Name = "EXITBTN"
         Me.EXITBTN.Size = New System.Drawing.Size(99, 44)
         Me.EXITBTN.TabIndex = 109
@@ -2045,7 +2277,7 @@ Partial Class ENGABFRM
         Me.BTN_FOLOWUP.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_FOLOWUP.Appearance.Options.UseFont = True
         Me.BTN_FOLOWUP.ImageOptions.Image = CType(resources.GetObject("BTN_FOLOWUP.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(385, 606)
+        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(197, 612)
         Me.BTN_FOLOWUP.Name = "BTN_FOLOWUP"
         Me.BTN_FOLOWUP.Size = New System.Drawing.Size(200, 44)
         Me.BTN_FOLOWUP.TabIndex = 108
@@ -2056,7 +2288,7 @@ Partial Class ENGABFRM
         Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SEARCHBTN.Appearance.Options.UseFont = True
         Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SEARCHBTN.Location = New System.Drawing.Point(598, 606)
+        Me.SEARCHBTN.Location = New System.Drawing.Point(410, 612)
         Me.SEARCHBTN.Name = "SEARCHBTN"
         Me.SEARCHBTN.Size = New System.Drawing.Size(99, 44)
         Me.SEARCHBTN.TabIndex = 107
@@ -2069,7 +2301,7 @@ Partial Class ENGABFRM
         Me.DELETBTN.Appearance.Options.UseFont = True
         Me.DELETBTN.Appearance.Options.UseForeColor = True
         Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.DELETBTN.Location = New System.Drawing.Point(714, 606)
+        Me.DELETBTN.Location = New System.Drawing.Point(526, 612)
         Me.DELETBTN.Name = "DELETBTN"
         Me.DELETBTN.Size = New System.Drawing.Size(99, 44)
         Me.DELETBTN.TabIndex = 106
@@ -2082,7 +2314,7 @@ Partial Class ENGABFRM
         Me.EDITBTN.Appearance.Options.UseFont = True
         Me.EDITBTN.Appearance.Options.UseForeColor = True
         Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EDITBTN.Location = New System.Drawing.Point(830, 606)
+        Me.EDITBTN.Location = New System.Drawing.Point(642, 612)
         Me.EDITBTN.Name = "EDITBTN"
         Me.EDITBTN.Size = New System.Drawing.Size(99, 44)
         Me.EDITBTN.TabIndex = 105
@@ -2095,7 +2327,7 @@ Partial Class ENGABFRM
         Me.SAVEBTN.Appearance.Options.UseFont = True
         Me.SAVEBTN.Appearance.Options.UseForeColor = True
         Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SAVEBTN.Location = New System.Drawing.Point(946, 606)
+        Me.SAVEBTN.Location = New System.Drawing.Point(758, 612)
         Me.SAVEBTN.Name = "SAVEBTN"
         Me.SAVEBTN.Size = New System.Drawing.Size(99, 44)
         Me.SAVEBTN.TabIndex = 103
@@ -2108,228 +2340,19 @@ Partial Class ENGABFRM
         Me.NEWBTN.Appearance.Options.UseFont = True
         Me.NEWBTN.Appearance.Options.UseForeColor = True
         Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.NEWBTN.Location = New System.Drawing.Point(1058, 606)
+        Me.NEWBTN.Location = New System.Drawing.Point(870, 612)
         Me.NEWBTN.Name = "NEWBTN"
         Me.NEWBTN.Size = New System.Drawing.Size(99, 44)
         Me.NEWBTN.TabIndex = 104
         Me.NEWBTN.Text = "New"
-        '
-        'BTN_ADD_M_SEMAN
-        '
-        Me.BTN_ADD_M_SEMAN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_M_SEMAN.Appearance.Options.UseFont = True
-        Me.BTN_ADD_M_SEMAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SEMAN.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_M_SEMAN.Location = New System.Drawing.Point(1118, 14)
-        Me.BTN_ADD_M_SEMAN.Name = "BTN_ADD_M_SEMAN"
-        Me.BTN_ADD_M_SEMAN.Size = New System.Drawing.Size(38, 93)
-        Me.BTN_ADD_M_SEMAN.TabIndex = 102
-        '
-        'BTN_ADD_M_SURGICAL
-        '
-        Me.BTN_ADD_M_SURGICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_M_SURGICAL.Appearance.Options.UseFont = True
-        Me.BTN_ADD_M_SURGICAL.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SURGICAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_M_SURGICAL.Location = New System.Drawing.Point(523, 22)
-        Me.BTN_ADD_M_SURGICAL.Name = "BTN_ADD_M_SURGICAL"
-        Me.BTN_ADD_M_SURGICAL.Size = New System.Drawing.Size(38, 83)
-        Me.BTN_ADD_M_SURGICAL.TabIndex = 90
-        '
-        'BTN_ADD_M_MEDICAL
-        '
-        Me.BTN_ADD_M_MEDICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_M_MEDICAL.Appearance.Options.UseFont = True
-        Me.BTN_ADD_M_MEDICAL.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_MEDICAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_M_MEDICAL.Location = New System.Drawing.Point(535, 18)
-        Me.BTN_ADD_M_MEDICAL.Name = "BTN_ADD_M_MEDICAL"
-        Me.BTN_ADD_M_MEDICAL.Size = New System.Drawing.Size(38, 87)
-        Me.BTN_ADD_M_MEDICAL.TabIndex = 90
-        '
-        'BTN_ADD_M_DOPLER
-        '
-        Me.BTN_ADD_M_DOPLER.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_M_DOPLER.Appearance.Options.UseFont = True
-        Me.BTN_ADD_M_DOPLER.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_DOPLER.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_M_DOPLER.Location = New System.Drawing.Point(535, 19)
-        Me.BTN_ADD_M_DOPLER.Name = "BTN_ADD_M_DOPLER"
-        Me.BTN_ADD_M_DOPLER.Size = New System.Drawing.Size(38, 41)
-        Me.BTN_ADD_M_DOPLER.TabIndex = 90
-        '
-        'BTN_F_ADD_HIRSUTISM
-        '
-        Me.BTN_F_ADD_HIRSUTISM.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_HIRSUTISM.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_HIRSUTISM.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_HIRSUTISM.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_HIRSUTISM.Location = New System.Drawing.Point(537, 20)
-        Me.BTN_F_ADD_HIRSUTISM.Name = "BTN_F_ADD_HIRSUTISM"
-        Me.BTN_F_ADD_HIRSUTISM.Size = New System.Drawing.Size(38, 131)
-        Me.BTN_F_ADD_HIRSUTISM.TabIndex = 89
-        '
-        'BTN_F_ADD_IUI
-        '
-        Me.BTN_F_ADD_IUI.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_IUI.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_IUI.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_IUI.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_IUI.Location = New System.Drawing.Point(510, 20)
-        Me.BTN_F_ADD_IUI.Name = "BTN_F_ADD_IUI"
-        Me.BTN_F_ADD_IUI.Size = New System.Drawing.Size(38, 131)
-        Me.BTN_F_ADD_IUI.TabIndex = 91
-        '
-        'BTN_F_ADD_VAGINAL
-        '
-        Me.BTN_F_ADD_VAGINAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_VAGINAL.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_VAGINAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_VAGINAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_VAGINAL.Location = New System.Drawing.Point(537, 19)
-        Me.BTN_F_ADD_VAGINAL.Name = "BTN_F_ADD_VAGINAL"
-        Me.BTN_F_ADD_VAGINAL.Size = New System.Drawing.Size(38, 57)
-        Me.BTN_F_ADD_VAGINAL.TabIndex = 89
-        '
-        'BTN_F_ADD_WEIGHT
-        '
-        Me.BTN_F_ADD_WEIGHT.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_WEIGHT.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_WEIGHT.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_WEIGHT.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_WEIGHT.Location = New System.Drawing.Point(509, 20)
-        Me.BTN_F_ADD_WEIGHT.Name = "BTN_F_ADD_WEIGHT"
-        Me.BTN_F_ADD_WEIGHT.Size = New System.Drawing.Size(38, 56)
-        Me.BTN_F_ADD_WEIGHT.TabIndex = 90
-        '
-        'BTN_F_ADD_CONTRACEPTION
-        '
-        Me.BTN_F_ADD_CONTRACEPTION.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_CONTRACEPTION.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_CONTRACEPTION.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_CONTRACEPTION.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_CONTRACEPTION.Location = New System.Drawing.Point(509, 19)
-        Me.BTN_F_ADD_CONTRACEPTION.Name = "BTN_F_ADD_CONTRACEPTION"
-        Me.BTN_F_ADD_CONTRACEPTION.Size = New System.Drawing.Size(38, 54)
-        Me.BTN_F_ADD_CONTRACEPTION.TabIndex = 89
-        '
-        'BTN_F_ADD_MENSTRUAL
-        '
-        Me.BTN_F_ADD_MENSTRUAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_MENSTRUAL.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_MENSTRUAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_MENSTRUAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_MENSTRUAL.Location = New System.Drawing.Point(509, 20)
-        Me.BTN_F_ADD_MENSTRUAL.Name = "BTN_F_ADD_MENSTRUAL"
-        Me.BTN_F_ADD_MENSTRUAL.Size = New System.Drawing.Size(38, 53)
-        Me.BTN_F_ADD_MENSTRUAL.TabIndex = 89
-        '
-        'BTN_F_ADD_OBSTETRIC
-        '
-        Me.BTN_F_ADD_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_OBSTETRIC.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_OBSTETRIC.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_OBSTETRIC.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_OBSTETRIC.Location = New System.Drawing.Point(537, 18)
-        Me.BTN_F_ADD_OBSTETRIC.Name = "BTN_F_ADD_OBSTETRIC"
-        Me.BTN_F_ADD_OBSTETRIC.Size = New System.Drawing.Size(38, 54)
-        Me.BTN_F_ADD_OBSTETRIC.TabIndex = 89
-        '
-        'BTN_F_ADD_FAMILY
-        '
-        Me.BTN_F_ADD_FAMILY.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_FAMILY.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_FAMILY.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_FAMILY.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_FAMILY.Location = New System.Drawing.Point(537, 18)
-        Me.BTN_F_ADD_FAMILY.Name = "BTN_F_ADD_FAMILY"
-        Me.BTN_F_ADD_FAMILY.Size = New System.Drawing.Size(38, 55)
-        Me.BTN_F_ADD_FAMILY.TabIndex = 89
-        '
-        'BTN_F_ADD_MEDICAL
-        '
-        Me.BTN_F_ADD_MEDICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_MEDICAL.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_MEDICAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_MEDICAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_MEDICAL.Location = New System.Drawing.Point(537, 18)
-        Me.BTN_F_ADD_MEDICAL.Name = "BTN_F_ADD_MEDICAL"
-        Me.BTN_F_ADD_MEDICAL.Size = New System.Drawing.Size(38, 55)
-        Me.BTN_F_ADD_MEDICAL.TabIndex = 89
-        '
-        'BTN_F_ADD_SURGICAL
-        '
-        Me.BTN_F_ADD_SURGICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_F_ADD_SURGICAL.Appearance.Options.UseFont = True
-        Me.BTN_F_ADD_SURGICAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_SURGICAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_F_ADD_SURGICAL.Location = New System.Drawing.Point(509, 18)
-        Me.BTN_F_ADD_SURGICAL.Name = "BTN_F_ADD_SURGICAL"
-        Me.BTN_F_ADD_SURGICAL.Size = New System.Drawing.Size(38, 54)
-        Me.BTN_F_ADD_SURGICAL.TabIndex = 88
-        '
-        'BTN_ADD_Hystroscopy
-        '
-        Me.BTN_ADD_Hystroscopy.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_Hystroscopy.Appearance.Options.UseFont = True
-        Me.BTN_ADD_Hystroscopy.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_Hystroscopy.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_Hystroscopy.Location = New System.Drawing.Point(541, 22)
-        Me.BTN_ADD_Hystroscopy.Name = "BTN_ADD_Hystroscopy"
-        Me.BTN_ADD_Hystroscopy.Size = New System.Drawing.Size(41, 170)
-        Me.BTN_ADD_Hystroscopy.TabIndex = 101
-        '
-        'BTN_ADD_HSG
-        '
-        Me.BTN_ADD_HSG.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_HSG.Appearance.Options.UseFont = True
-        Me.BTN_ADD_HSG.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_HSG.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_HSG.Location = New System.Drawing.Point(541, 22)
-        Me.BTN_ADD_HSG.Name = "BTN_ADD_HSG"
-        Me.BTN_ADD_HSG.Size = New System.Drawing.Size(41, 188)
-        Me.BTN_ADD_HSG.TabIndex = 101
-        '
-        'BTN_ADD_LAPAROSCOPY
-        '
-        Me.BTN_ADD_LAPAROSCOPY.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_LAPAROSCOPY.Appearance.Options.UseFont = True
-        Me.BTN_ADD_LAPAROSCOPY.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_LAPAROSCOPY.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_LAPAROSCOPY.Location = New System.Drawing.Point(514, 17)
-        Me.BTN_ADD_LAPAROSCOPY.Name = "BTN_ADD_LAPAROSCOPY"
-        Me.BTN_ADD_LAPAROSCOPY.Size = New System.Drawing.Size(41, 188)
-        Me.BTN_ADD_LAPAROSCOPY.TabIndex = 100
-        '
-        'BTN_ADD_4D
-        '
-        Me.BTN_ADD_4D.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_4D.Appearance.Options.UseFont = True
-        Me.BTN_ADD_4D.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_4D.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_4D.Location = New System.Drawing.Point(514, 29)
-        Me.BTN_ADD_4D.Name = "BTN_ADD_4D"
-        Me.BTN_ADD_4D.Size = New System.Drawing.Size(41, 188)
-        Me.BTN_ADD_4D.TabIndex = 99
-        '
-        'ADD_TEST_BTN
-        '
-        Me.ADD_TEST_BTN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ADD_TEST_BTN.Appearance.Options.UseFont = True
-        Me.ADD_TEST_BTN.ImageOptions.Image = CType(resources.GetObject("ADD_TEST_BTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.ADD_TEST_BTN.Location = New System.Drawing.Point(1138, 10)
-        Me.ADD_TEST_BTN.Name = "ADD_TEST_BTN"
-        Me.ADD_TEST_BTN.Size = New System.Drawing.Size(40, 467)
-        Me.ADD_TEST_BTN.TabIndex = 107
-        Me.ADD_TEST_BTN.Text = "Add"
-        '
-        'BTN_PHARM
-        '
-        Me.BTN_PHARM.ImageOptions.Image = CType(resources.GetObject("BTN_PHARM.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_PHARM.Location = New System.Drawing.Point(761, 18)
-        Me.BTN_PHARM.Name = "BTN_PHARM"
-        Me.BTN_PHARM.Size = New System.Drawing.Size(38, 114)
-        Me.BTN_PHARM.TabIndex = 96
-        '
-        'BTN_ADD_PLAN
-        '
-        Me.BTN_ADD_PLAN.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_ADD_PLAN.Appearance.Options.UseFont = True
-        Me.BTN_ADD_PLAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_PLAN.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_ADD_PLAN.Location = New System.Drawing.Point(1146, 11)
-        Me.BTN_ADD_PLAN.Name = "BTN_ADD_PLAN"
-        Me.BTN_ADD_PLAN.Size = New System.Drawing.Size(41, 470)
-        Me.BTN_ADD_PLAN.TabIndex = 1
-        Me.BTN_ADD_PLAN.Text = "Addition Step"
         '
         'ENGABFRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(8, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1200, 658)
+        Me.ClientSize = New System.Drawing.Size(1200, 669)
+        Me.Controls.Add(Me.BTN_BABY)
         Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.TXT_COMPLEAN)
         Me.Controls.Add(Me.EXITBTN)
@@ -2453,7 +2476,6 @@ Partial Class ENGABFRM
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents TXT_F_SURGICAL As TextBox
-    Friend WithEvents BTN_F_ADD_SURGICAL As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GroupBox12 As GroupBox
     Friend WithEvents TXT_F_MEDICAL As TextBox
     Friend WithEvents GroupBox3 As GroupBox
@@ -2499,17 +2521,7 @@ Partial Class ENGABFRM
     Friend WithEvents TXT_F_IUI As TextBox
     Friend WithEvents GroupBox17 As GroupBox
     Friend WithEvents TXT_F_HIRSUTISM As TextBox
-    Friend WithEvents BTN_F_ADD_HIRSUTISM As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_IUI As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_VAGINAL As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_WEIGHT As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_CONTRACEPTION As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_MENSTRUAL As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_OBSTETRIC As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_FAMILY As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_F_ADD_MEDICAL As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ADD_TEST_BTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents GroupBox21 As GroupBox
     Friend WithEvents DataGridView3 As DataGridView
@@ -2522,19 +2534,11 @@ Partial Class ENGABFRM
     Friend WithEvents Label42 As Label
     Friend WithEvents TXT_DATE_VISITLAST As DateTimePicker
     Friend WithEvents Label41 As Label
-    Friend WithEvents BTN_PHARM As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PHARM As ComboBox
     Friend WithEvents TXT_GOR3A As ComboBox
     Friend WithEvents TXT_CODE100 As TextBox
     Friend WithEvents TXT_NO3 As TextBox
     Friend WithEvents TXT_CODE_PHARM As TextBox
-    Friend WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_FOLOWUP As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SEARCHBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents DELETBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents EDITBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SAVEBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents NEWBTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TabPage6 As TabPage
     Friend WithEvents TXT_FDATE As Label
     Friend WithEvents Label26 As Label
@@ -2561,16 +2565,11 @@ Partial Class ENGABFRM
     Friend WithEvents GroupBox25 As GroupBox
     Friend WithEvents TXT_RECOMMENDATION2 As TextBox
     Friend WithEvents DataGridView4 As DataGridView
-    Friend WithEvents BTN_ADD_PLAN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_ADD_LAPAROSCOPY As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_ADD_4D As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PLACE_4D As TextBox
     Friend WithEvents Label31 As Label
     Friend WithEvents TXT_DATE_4D As DateTimePicker
     Friend WithEvents Label32 As Label
-    Friend WithEvents BTN_ADD_HSG As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GroupBox19 As GroupBox
-    Friend WithEvents BTN_ADD_Hystroscopy As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PLACE_Hystroscopy As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents TXT_DATE_Hystroscopy As DateTimePicker
@@ -2579,15 +2578,11 @@ Partial Class ENGABFRM
     Friend WithEvents TXT_CERVIX_Hystroscopy As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents BTN_ADD_M_SURGICAL As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_ADD_M_MEDICAL As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents GroupBox26 As GroupBox
-    Friend WithEvents BTN_ADD_M_DOPLER As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_M_DOPPLER As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents TXT_M_MOTILITYSEMAN As TextBox
     Friend WithEvents TXT_M_ABNORMALSEMAN As TextBox
-    Friend WithEvents BTN_ADD_M_SEMAN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents TXT_M_SPERMSEMAN As TextBox
@@ -2604,4 +2599,33 @@ Partial Class ENGABFRM
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Private WithEvents BTN_F_ADD_SURGICAL As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_HIRSUTISM As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_IUI As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_VAGINAL As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_WEIGHT As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_CONTRACEPTION As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_MENSTRUAL As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_OBSTETRIC As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_FAMILY As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_F_ADD_MEDICAL As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents ADD_TEST_BTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_PHARM As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_FOLOWUP As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents SEARCHBTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents DELETBTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents EDITBTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents SAVEBTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents NEWBTN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_PLAN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_LAPAROSCOPY As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_4D As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_HSG As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_Hystroscopy As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_M_SURGICAL As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_M_MEDICAL As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_M_DOPLER As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_ADD_M_SEMAN As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTN_BABY As DevExpress.XtraEditors.SimpleButton
 End Class
