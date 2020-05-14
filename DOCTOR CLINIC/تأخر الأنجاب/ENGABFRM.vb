@@ -319,6 +319,39 @@
         Else
             TXT_F_IUI.Text = ""
         End If
+        '====================== MEDICAL MALE ========================
+        Dim DT14 As New DataTable
+        Dim DA14 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM MEDICAL_MALE_INFERTILTY WHERE STAT_MEDICAL_MALE_INFERTILTY ='TRUE' AND CODE_PA_MEDICAL_MALE_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA14.Fill(DT14)
+        If DT14.Rows.Count > 0 Then
+            For I = 0 To DT14.Rows.Count - 1
+                TXT_M_MEDICAL.Text = DT14.Rows(I).Item("NAME_MEDICAL_MALE_INFERTILTY")
+            Next
+        Else
+            TXT_M_MEDICAL.Text = ""
+        End If
+        '====================== SURGICAL MALE ========================
+        Dim DT15 As New DataTable
+        Dim DA15 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM SURGICAL_MALE_INFERTILTY WHERE STAT_SURGICAL_MALE_INFERTILTY ='TRUE' AND CODE_PA_SURGICAL_MALE_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA15.Fill(DT15)
+        If DT15.Rows.Count > 0 Then
+            For I = 0 To DT15.Rows.Count - 1
+                TXT_M_SURGICAL.Text = DT15.Rows(I).Item("NAME_SURGICAL_MALE_INFERTILTY")
+            Next
+        Else
+            TXT_M_SURGICAL.Text = ""
+        End If
+        '====================== SCROTAL DOPPLER MALE ========================
+        Dim DT16 As New DataTable
+        Dim DA16 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM SCROTAL_DOPPLER_MALE_INFERTILTY WHERE STAT_SCROTAL_DOPPLER_MALE_INFERTILTY ='TRUE' AND CODE_PA_SCROTAL_DOPPLER_MALE_INFERTILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA16.Fill(DT16)
+        If DT16.Rows.Count > 0 Then
+            For I = 0 To DT16.Rows.Count - 1
+                TXT_M_DOPPLER.Text = DT16.Rows(I).Item("NAME_SCROTAL_DOPPLER_MALE_INFERTILTY")
+            Next
+        Else
+            TXT_M_DOPPLER.Text = ""
+        End If
     End Sub
 
 
@@ -490,7 +523,7 @@
             TXT_PA_NAME.Select()
             Exit Sub
         Else
-            ICSI_FEMAL_INFERTILITY.ShowDialog()
+            MEDICAL_MALE_INFERTILITY.ShowDialog()
         End If
     End Sub
 
@@ -500,7 +533,7 @@
             TXT_PA_NAME.Select()
             Exit Sub
         Else
-            ICSI_FEMAL_INFERTILITY.ShowDialog()
+            SURGICAL_MALE_INFERTILITY.ShowDialog()
         End If
     End Sub
 
@@ -510,7 +543,7 @@
             TXT_PA_NAME.Select()
             Exit Sub
         Else
-            ICSI_FEMAL_INFERTILITY.ShowDialog()
+            SCROTAL_DOPPLER_MALE_INFERTILITY.ShowDialog()
         End If
     End Sub
     Private Sub BTN_ADD_M_SEMAN_Click(sender As Object, e As EventArgs) Handles BTN_ADD_M_SEMAN.Click

@@ -4,8 +4,8 @@
     End Sub
 
     Private Sub NEWBABYFRMvb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TXT_NAME_PA.Text = FOLOUP.TXT_PA_NAME.Text
-        TXT_PA_CODE.Text = FOLOUP.TXT_PA_CODE.Text
+        TXT_NAME_PA.Text = FOLLOWUPFRM.TXT_PA_NAME.Text
+        TXT_PA_CODE.Text = FOLLOWUPFRM.TXT_PA_CODE.Text
         TXT_BABY_NO.Text = "1"
         TXT_DATE.Text = Date.Today
     End Sub

@@ -728,10 +728,28 @@
     <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\MEDICAL_MALE_INFERTILITY.Designer.vb">
+      <DependentUpon>MEDICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\MEDICAL_MALE_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\SCROTAL_DOPPLER_MALE_INFERTILITY.Designer.vb">
+      <DependentUpon>SCROTAL_DOPPLER_MALE_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\SCROTAL_DOPPLER_MALE_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.Designer.vb">
       <DependentUpon>SEMAN_ANALYSIS_INFERILTY.vb</DependentUpon>
     </Compile>
     <Compile Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\SURGICAL_MALE_INFERTILITY.Designer.vb">
+      <DependentUpon>SURGICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\SURGICAL_MALE_INFERTILITY.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.Designer.vb">
@@ -1229,8 +1247,17 @@
     <EmbeddedResource Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.resx">
       <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\MEDICAL_MALE_INFERTILITY.resx">
+      <DependentUpon>MEDICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\SCROTAL_DOPPLER_MALE_INFERTILITY.resx">
+      <DependentUpon>SCROTAL_DOPPLER_MALE_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.resx">
       <DependentUpon>SEMAN_ANALYSIS_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\SURGICAL_MALE_INFERTILITY.resx">
+      <DependentUpon>SURGICAL_MALE_INFERTILITY.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.resx">
       <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
@@ -1532,9 +1559,6 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\" />
-    <Folder Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\" />
-    <Folder Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\" />
     <Folder Include="تأخر الأنجاب\VISIT\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
