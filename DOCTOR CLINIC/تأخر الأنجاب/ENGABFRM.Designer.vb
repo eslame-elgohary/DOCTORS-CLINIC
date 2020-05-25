@@ -23,6 +23,7 @@ Partial Class ENGABFRM
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ENGABFRM))
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -115,22 +116,23 @@ Partial Class ENGABFRM
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.GroupBox24 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
-        Me.TXT_ULTRASOUND2 = New System.Windows.Forms.TextBox()
-        Me.GroupBox25 = New System.Windows.Forms.GroupBox()
-        Me.TXT_RECOMMENDATION2 = New System.Windows.Forms.TextBox()
-        Me.TXT_FDATE1 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXT_DATE_VISITNEW1 = New System.Windows.Forms.DateTimePicker()
+        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.TXT_ULTRASOUND2 = New System.Windows.Forms.TextBox()
+        Me.GroupBox25 = New System.Windows.Forms.GroupBox()
+        Me.TXT_RECOMMENDATION2 = New System.Windows.Forms.TextBox()
+        Me.TXT_FDATE1 = New System.Windows.Forms.Label()
+        Me.TXT_DATE_VISIT1 = New System.Windows.Forms.DateTimePicker()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.TXT_DATE_VISITLAST1 = New System.Windows.Forms.DateTimePicker()
+        Me.TXT_DATE_LMP1 = New System.Windows.Forms.DateTimePicker()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.GroupBox21 = New System.Windows.Forms.GroupBox()
+        Me.TXT_CODE_GOR3A = New System.Windows.Forms.TextBox()
         Me.GroupBox23 = New System.Windows.Forms.GroupBox()
         Me.TXT_ULTRASOUND = New System.Windows.Forms.TextBox()
         Me.GroupBox22 = New System.Windows.Forms.GroupBox()
@@ -143,12 +145,12 @@ Partial Class ENGABFRM
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXT_DATE_VISITNEW = New System.Windows.Forms.DateTimePicker()
-        Me.TXT_GOR3A = New System.Windows.Forms.ComboBox()
-        Me.TXT_PHARM = New System.Windows.Forms.ComboBox()
+        Me.TXT_DATE_VISIT = New System.Windows.Forms.DateTimePicker()
+        Me.TXT_NAME_GOR3A = New System.Windows.Forms.ComboBox()
+        Me.TXT_NAME_PHARM = New System.Windows.Forms.ComboBox()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.TXT_NO3 = New System.Windows.Forms.TextBox()
-        Me.TXT_DATE_VISITLAST = New System.Windows.Forms.DateTimePicker()
+        Me.TXT_NO3_PHARM = New System.Windows.Forms.TextBox()
+        Me.TXT_DATE_LMP = New System.Windows.Forms.DateTimePicker()
         Me.TXT_CODE_PHARM = New System.Windows.Forms.TextBox()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -229,9 +231,9 @@ Partial Class ENGABFRM
         Me.TabControl1.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox25.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox21.SuspendLayout()
         Me.GroupBox23.SuspendLayout()
         Me.GroupBox22.SuspendLayout()
@@ -1382,21 +1384,77 @@ Partial Class ENGABFRM
         'GroupBox24
         '
         Me.GroupBox24.BackColor = System.Drawing.Color.Teal
+        Me.GroupBox24.Controls.Add(Me.DataGridView2)
         Me.GroupBox24.Controls.Add(Me.GroupBox14)
         Me.GroupBox24.Controls.Add(Me.GroupBox25)
         Me.GroupBox24.Controls.Add(Me.TXT_FDATE1)
-        Me.GroupBox24.Controls.Add(Me.DataGridView2)
-        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISITNEW1)
+        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISIT1)
         Me.GroupBox24.Controls.Add(Me.Label28)
-        Me.GroupBox24.Controls.Add(Me.TXT_DATE_VISITLAST1)
+        Me.GroupBox24.Controls.Add(Me.TXT_DATE_LMP1)
         Me.GroupBox24.Controls.Add(Me.Label29)
         Me.GroupBox24.ForeColor = System.Drawing.Color.Snow
-        Me.GroupBox24.Location = New System.Drawing.Point(6, 265)
+        Me.GroupBox24.Location = New System.Drawing.Point(1, 265)
         Me.GroupBox24.Name = "GroupBox24"
-        Me.GroupBox24.Size = New System.Drawing.Size(1181, 216)
+        Me.GroupBox24.Size = New System.Drawing.Size(1186, 216)
         Me.GroupBox24.TabIndex = 92
         Me.GroupBox24.TabStop = False
         Me.GroupBox24.Text = "Last Visit"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
+        Me.DataGridView2.Enabled = False
+        Me.DataGridView2.Location = New System.Drawing.Point(5, 62)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.Size = New System.Drawing.Size(470, 140)
+        Me.DataGridView2.TabIndex = 104
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "CODE_DRUGS"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Visible = False
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "R_DT_PHARM"
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Drugs"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "R_DT_NO3"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "NO3"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Visible = False
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "R_DT_GOR3A"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "dose"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "R_DT_CODE2"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "CODE_DOS"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
         '
         'GroupBox14
         '
@@ -1412,6 +1470,7 @@ Partial Class ENGABFRM
         'TXT_ULTRASOUND2
         '
         Me.TXT_ULTRASOUND2.BackColor = System.Drawing.Color.White
+        Me.TXT_ULTRASOUND2.Enabled = False
         Me.TXT_ULTRASOUND2.Location = New System.Drawing.Point(5, 26)
         Me.TXT_ULTRASOUND2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_ULTRASOUND2.Multiline = True
@@ -1436,6 +1495,7 @@ Partial Class ENGABFRM
         Me.TXT_RECOMMENDATION2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_RECOMMENDATION2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
         Me.TXT_RECOMMENDATION2.BackColor = System.Drawing.Color.White
+        Me.TXT_RECOMMENDATION2.Enabled = False
         Me.TXT_RECOMMENDATION2.Location = New System.Drawing.Point(5, 26)
         Me.TXT_RECOMMENDATION2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.TXT_RECOMMENDATION2.Multiline = True
@@ -1456,62 +1516,16 @@ Partial Class ENGABFRM
         Me.TXT_FDATE1.Text = "00000000"
         Me.TXT_FDATE1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'DataGridView2
+        'TXT_DATE_VISIT1
         '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
-        Me.DataGridView2.Location = New System.Drawing.Point(5, 51)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(470, 159)
-        Me.DataGridView2.TabIndex = 91
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "CODE_DRUGS"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Visible = False
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Drugs"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.HeaderText = "NO3"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Visible = False
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "dose"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.HeaderText = "CODE_DOS"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Visible = False
-        '
-        'TXT_DATE_VISITNEW1
-        '
-        Me.TXT_DATE_VISITNEW1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_VISITNEW1.Location = New System.Drawing.Point(68, 18)
-        Me.TXT_DATE_VISITNEW1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_VISITNEW1.Name = "TXT_DATE_VISITNEW1"
-        Me.TXT_DATE_VISITNEW1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_VISITNEW1.Size = New System.Drawing.Size(151, 27)
-        Me.TXT_DATE_VISITNEW1.TabIndex = 73
+        Me.TXT_DATE_VISIT1.Enabled = False
+        Me.TXT_DATE_VISIT1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_VISIT1.Location = New System.Drawing.Point(68, 18)
+        Me.TXT_DATE_VISIT1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_VISIT1.Name = "TXT_DATE_VISIT1"
+        Me.TXT_DATE_VISIT1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_VISIT1.Size = New System.Drawing.Size(151, 27)
+        Me.TXT_DATE_VISIT1.TabIndex = 73
         '
         'Label28
         '
@@ -1526,15 +1540,16 @@ Partial Class ENGABFRM
         Me.Label28.Text = "Date :"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TXT_DATE_VISITLAST1
+        'TXT_DATE_LMP1
         '
-        Me.TXT_DATE_VISITLAST1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_VISITLAST1.Location = New System.Drawing.Point(288, 18)
-        Me.TXT_DATE_VISITLAST1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_VISITLAST1.Name = "TXT_DATE_VISITLAST1"
-        Me.TXT_DATE_VISITLAST1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_VISITLAST1.Size = New System.Drawing.Size(157, 27)
-        Me.TXT_DATE_VISITLAST1.TabIndex = 71
+        Me.TXT_DATE_LMP1.Enabled = False
+        Me.TXT_DATE_LMP1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_LMP1.Location = New System.Drawing.Point(288, 18)
+        Me.TXT_DATE_LMP1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_LMP1.Name = "TXT_DATE_LMP1"
+        Me.TXT_DATE_LMP1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_LMP1.Size = New System.Drawing.Size(157, 27)
+        Me.TXT_DATE_LMP1.TabIndex = 71
         '
         'Label29
         '
@@ -1550,18 +1565,19 @@ Partial Class ENGABFRM
         '
         'GroupBox21
         '
+        Me.GroupBox21.Controls.Add(Me.TXT_CODE_GOR3A)
         Me.GroupBox21.Controls.Add(Me.GroupBox23)
         Me.GroupBox21.Controls.Add(Me.GroupBox22)
         Me.GroupBox21.Controls.Add(Me.TXT_FDATE)
         Me.GroupBox21.Controls.Add(Me.BTN_PHARM)
         Me.GroupBox21.Controls.Add(Me.TXT_CODE100)
         Me.GroupBox21.Controls.Add(Me.DataGridView3)
-        Me.GroupBox21.Controls.Add(Me.TXT_DATE_VISITNEW)
-        Me.GroupBox21.Controls.Add(Me.TXT_GOR3A)
-        Me.GroupBox21.Controls.Add(Me.TXT_PHARM)
+        Me.GroupBox21.Controls.Add(Me.TXT_DATE_VISIT)
+        Me.GroupBox21.Controls.Add(Me.TXT_NAME_GOR3A)
+        Me.GroupBox21.Controls.Add(Me.TXT_NAME_PHARM)
         Me.GroupBox21.Controls.Add(Me.Label42)
-        Me.GroupBox21.Controls.Add(Me.TXT_NO3)
-        Me.GroupBox21.Controls.Add(Me.TXT_DATE_VISITLAST)
+        Me.GroupBox21.Controls.Add(Me.TXT_NO3_PHARM)
+        Me.GroupBox21.Controls.Add(Me.TXT_DATE_LMP)
         Me.GroupBox21.Controls.Add(Me.TXT_CODE_PHARM)
         Me.GroupBox21.Controls.Add(Me.Label41)
         Me.GroupBox21.Controls.Add(Me.Label26)
@@ -1572,6 +1588,16 @@ Partial Class ENGABFRM
         Me.GroupBox21.TabIndex = 91
         Me.GroupBox21.TabStop = False
         Me.GroupBox21.Text = "New Visit"
+        '
+        'TXT_CODE_GOR3A
+        '
+        Me.TXT_CODE_GOR3A.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE_GOR3A.Enabled = False
+        Me.TXT_CODE_GOR3A.Location = New System.Drawing.Point(622, 71)
+        Me.TXT_CODE_GOR3A.Name = "TXT_CODE_GOR3A"
+        Me.TXT_CODE_GOR3A.Size = New System.Drawing.Size(42, 27)
+        Me.TXT_CODE_GOR3A.TabIndex = 102
+        Me.TXT_CODE_GOR3A.Visible = False
         '
         'GroupBox23
         '
@@ -1637,7 +1663,6 @@ Partial Class ENGABFRM
         Me.TXT_CODE100.Name = "TXT_CODE100"
         Me.TXT_CODE100.Size = New System.Drawing.Size(42, 27)
         Me.TXT_CODE100.TabIndex = 94
-        Me.TXT_CODE100.Visible = False
         '
         'DataGridView3
         '
@@ -1686,41 +1711,41 @@ Partial Class ENGABFRM
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         Me.DataGridViewTextBoxColumn5.Visible = False
         '
-        'TXT_DATE_VISITNEW
+        'TXT_DATE_VISIT
         '
-        Me.TXT_DATE_VISITNEW.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_VISITNEW.Location = New System.Drawing.Point(68, 18)
-        Me.TXT_DATE_VISITNEW.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_VISITNEW.Name = "TXT_DATE_VISITNEW"
-        Me.TXT_DATE_VISITNEW.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_VISITNEW.Size = New System.Drawing.Size(151, 27)
-        Me.TXT_DATE_VISITNEW.TabIndex = 73
+        Me.TXT_DATE_VISIT.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_VISIT.Location = New System.Drawing.Point(68, 18)
+        Me.TXT_DATE_VISIT.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_VISIT.Name = "TXT_DATE_VISIT"
+        Me.TXT_DATE_VISIT.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_VISIT.Size = New System.Drawing.Size(151, 27)
+        Me.TXT_DATE_VISIT.TabIndex = 73
         '
-        'TXT_GOR3A
+        'TXT_NAME_GOR3A
         '
-        Me.TXT_GOR3A.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_GOR3A.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_GOR3A.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_GOR3A.FormattingEnabled = True
-        Me.TXT_GOR3A.Location = New System.Drawing.Point(477, 60)
-        Me.TXT_GOR3A.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_GOR3A.Name = "TXT_GOR3A"
-        Me.TXT_GOR3A.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_GOR3A.Size = New System.Drawing.Size(260, 27)
-        Me.TXT_GOR3A.TabIndex = 96
+        Me.TXT_NAME_GOR3A.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_NAME_GOR3A.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_NAME_GOR3A.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_NAME_GOR3A.FormattingEnabled = True
+        Me.TXT_NAME_GOR3A.Location = New System.Drawing.Point(477, 60)
+        Me.TXT_NAME_GOR3A.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_NAME_GOR3A.Name = "TXT_NAME_GOR3A"
+        Me.TXT_NAME_GOR3A.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_NAME_GOR3A.Size = New System.Drawing.Size(260, 27)
+        Me.TXT_NAME_GOR3A.TabIndex = 96
         '
-        'TXT_PHARM
+        'TXT_NAME_PHARM
         '
-        Me.TXT_PHARM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_PHARM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_PHARM.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_PHARM.FormattingEnabled = True
-        Me.TXT_PHARM.Location = New System.Drawing.Point(68, 60)
-        Me.TXT_PHARM.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_PHARM.Name = "TXT_PHARM"
-        Me.TXT_PHARM.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_PHARM.Size = New System.Drawing.Size(276, 27)
-        Me.TXT_PHARM.TabIndex = 91
+        Me.TXT_NAME_PHARM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_NAME_PHARM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_NAME_PHARM.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_NAME_PHARM.FormattingEnabled = True
+        Me.TXT_NAME_PHARM.Location = New System.Drawing.Point(68, 60)
+        Me.TXT_NAME_PHARM.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_NAME_PHARM.Name = "TXT_NAME_PHARM"
+        Me.TXT_NAME_PHARM.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_NAME_PHARM.Size = New System.Drawing.Size(276, 27)
+        Me.TXT_NAME_PHARM.TabIndex = 91
         '
         'Label42
         '
@@ -1735,26 +1760,26 @@ Partial Class ENGABFRM
         Me.Label42.Text = "Date :"
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TXT_NO3
+        'TXT_NO3_PHARM
         '
-        Me.TXT_NO3.BackColor = System.Drawing.Color.White
-        Me.TXT_NO3.Enabled = False
-        Me.TXT_NO3.Location = New System.Drawing.Point(348, 60)
-        Me.TXT_NO3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_NO3.Name = "TXT_NO3"
-        Me.TXT_NO3.Size = New System.Drawing.Size(125, 27)
-        Me.TXT_NO3.TabIndex = 92
-        Me.TXT_NO3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_NO3_PHARM.BackColor = System.Drawing.Color.White
+        Me.TXT_NO3_PHARM.Enabled = False
+        Me.TXT_NO3_PHARM.Location = New System.Drawing.Point(348, 60)
+        Me.TXT_NO3_PHARM.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_NO3_PHARM.Name = "TXT_NO3_PHARM"
+        Me.TXT_NO3_PHARM.Size = New System.Drawing.Size(125, 27)
+        Me.TXT_NO3_PHARM.TabIndex = 92
+        Me.TXT_NO3_PHARM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TXT_DATE_VISITLAST
+        'TXT_DATE_LMP
         '
-        Me.TXT_DATE_VISITLAST.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_VISITLAST.Location = New System.Drawing.Point(288, 18)
-        Me.TXT_DATE_VISITLAST.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_DATE_VISITLAST.Name = "TXT_DATE_VISITLAST"
-        Me.TXT_DATE_VISITLAST.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_DATE_VISITLAST.Size = New System.Drawing.Size(157, 27)
-        Me.TXT_DATE_VISITLAST.TabIndex = 71
+        Me.TXT_DATE_LMP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_LMP.Location = New System.Drawing.Point(288, 18)
+        Me.TXT_DATE_LMP.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_DATE_LMP.Name = "TXT_DATE_LMP"
+        Me.TXT_DATE_LMP.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_DATE_LMP.Size = New System.Drawing.Size(157, 27)
+        Me.TXT_DATE_LMP.TabIndex = 71
         '
         'TXT_CODE_PHARM
         '
@@ -2432,11 +2457,11 @@ Partial Class ENGABFRM
         Me.TabPage5.ResumeLayout(False)
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox24.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox14.PerformLayout()
         Me.GroupBox25.ResumeLayout(False)
         Me.GroupBox25.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox21.ResumeLayout(False)
         Me.GroupBox21.PerformLayout()
         Me.GroupBox23.ResumeLayout(False)
@@ -2531,14 +2556,14 @@ Partial Class ENGABFRM
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents TXT_DATE_VISITNEW As DateTimePicker
+    Friend WithEvents TXT_DATE_VISIT As DateTimePicker
     Friend WithEvents Label42 As Label
-    Friend WithEvents TXT_DATE_VISITLAST As DateTimePicker
+    Friend WithEvents TXT_DATE_LMP As DateTimePicker
     Friend WithEvents Label41 As Label
-    Friend WithEvents TXT_PHARM As ComboBox
-    Friend WithEvents TXT_GOR3A As ComboBox
+    Friend WithEvents TXT_NAME_PHARM As ComboBox
+    Friend WithEvents TXT_NAME_GOR3A As ComboBox
     Friend WithEvents TXT_CODE100 As TextBox
-    Friend WithEvents TXT_NO3 As TextBox
+    Friend WithEvents TXT_NO3_PHARM As TextBox
     Friend WithEvents TXT_CODE_PHARM As TextBox
     Friend WithEvents TabPage6 As TabPage
     Friend WithEvents TXT_FDATE As Label
@@ -2547,15 +2572,9 @@ Partial Class ENGABFRM
     Friend WithEvents TXT_RECOMMENDATION As TextBox
     Friend WithEvents GroupBox24 As GroupBox
     Friend WithEvents TXT_FDATE1 As Label
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents TXT_DATE_VISITNEW1 As DateTimePicker
+    Friend WithEvents TXT_DATE_VISIT1 As DateTimePicker
     Friend WithEvents Label28 As Label
-    Friend WithEvents TXT_DATE_VISITLAST1 As DateTimePicker
+    Friend WithEvents TXT_DATE_LMP1 As DateTimePicker
     Friend WithEvents Label29 As Label
     Friend WithEvents GroupBox23 As GroupBox
     Friend WithEvents TXT_ULTRASOUND As TextBox
@@ -2629,4 +2648,11 @@ Partial Class ENGABFRM
     Private WithEvents BTN_ADD_M_DOPLER As DevExpress.XtraEditors.SimpleButton
     Private WithEvents BTN_ADD_M_SEMAN As DevExpress.XtraEditors.SimpleButton
     Private WithEvents BTN_BABY As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TXT_CODE_GOR3A As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
 End Class

@@ -1988,14 +1988,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DOCTOR CLINIC.exe" size="12099584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DOCTOR CLINIC.exe" size="12119040">
       <assemblyIdentity name="DOCTOR CLINIC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>00vTUd5RsI+JsITzXwXg3uVChPFvQI6R0ECnFwMye2E=</dsig:DigestValue>
+        <dsig:DigestValue>Ejjd/8i+umRg7RZzM1JG7kNHbQhkkF9t8j0wkhXjBmk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
