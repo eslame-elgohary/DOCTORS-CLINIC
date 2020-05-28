@@ -39,7 +39,7 @@
                 TXT_CODE100.Text = CODE_GENE("R_DOCTOR", "ID") + 1
             End If
         End If
-            DELETBTN.Enabled = True
+        DELETBTN.Enabled = True
         EDITBTN.Enabled = True
         SAVEBTN.Enabled = False
 
@@ -296,7 +296,57 @@
     End Sub
 
     Private Sub BTN_FOLOWUP_Click(sender As Object, e As EventArgs) Handles BTN_FOLOWUP.Click
+        Dim DT As New DataTable
+        With DT
+            .Columns.Add("DATE_TEST_INFERT")
+            .Columns.Add("NAME_PALCE_TEST_INFERT")
+            .Columns.Add("NAME_TEST_INFERT")
+            .Columns.Add("RESULT_TEST_INFERT")
 
+            .Columns.Add("DATE_PLAN_INFERT")
+            .Columns.Add("NAME_PLAN_INFERT")
+
+        End With
+        For I = 0 To DataGridView1.Rows.Count - 1 And DataGridView4.Rows.Count - 1
+            DT.Rows.Add(DataGridView1.Rows(I).Cells(2).Value,
+             DataGridView1.Rows(I).Cells(1).Value,
+                        DataGridView1.Rows(I).Cells(3).Value,
+                        DataGridView1.Rows(I).Cells(4).Value,
+                        DataGridView4.Rows(I).Cells(0).Value,
+                        DataGridView4.Rows(I).Cells(1).Value)
+
+        Next
+
+        Dim REP As New ENGABREB
+        REP.SetDataSource(DT)
+        REP.SetParameterValue(0, TXT_M_MEDICAL.Text)
+        REP.SetParameterValue(1, TXT_M_DOPPLER.Text)
+        REP.SetParameterValue(2, TXT_M_SURGICAL.Text)
+        REP.SetParameterValue(3, TXT_M_DATESEMAN.Text)
+        REP.SetParameterValue(4, TXT_M_PLACSEMAN.Text)
+        REP.SetParameterValue(5, TXT_M_SPERMSEMAN.Text)
+        REP.SetParameterValue(6, TXT_M_MOTILITYSEMAN.Text)
+        REP.SetParameterValue(7, TXT_M_ABNORMALSEMAN.Text)
+        REP.SetParameterValue(8, TXT_PA_NAME.Text)
+        REP.SetParameterValue(9, TXT_AGE.Text)
+        REP.SetParameterValue(10, TXT_DATE_MARRIED.Text)
+        REP.SetParameterValue(11, TXT_NAME2.Text)
+        REP.SetParameterValue(12, TXT_AGE2.Text)
+        REP.SetParameterValue(13, TXT_INFO.Text)
+        REP.SetParameterValue(14, TXT_F_MEDICAL.Text)
+        REP.SetParameterValue(15, TXT_F_FAMILY.Text)
+        REP.SetParameterValue(16, TXT_F_OBSTETRIC.Text)
+        REP.SetParameterValue(17, TXT_F_VAGINAL.Text)
+        REP.SetParameterValue(18, TXT_F_HIRSUTISM.Text)
+        REP.SetParameterValue(19, TXT_F_SURGICAL.Text)
+        REP.SetParameterValue(20, TXT_F_MENSTRUAL.Text)
+        REP.SetParameterValue(21, TXT_F_CONTRACPTION.Text)
+        REP.SetParameterValue(22, TXT_F_WEIGHT.Text)
+        REP.SetParameterValue(23, TXT_F_IUI.Text)
+
+        Dim FRM As New REPFORALL
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
     End Sub
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click
         Me.Close()
@@ -370,6 +420,8 @@
             TXT_DATE_LMP1.Value = DT100.Rows(I).Item("DATE_LMP_INFERTILITY")
             TXT_DATE_VISIT1.Value = DT100.Rows(I).Item("DATE_VISET_INFERTILITY")
         Next
+        '================ VISET FOR PRINT ========================
+        'FILL_DGV(DataGridView5, "SELECT * FROM INFERTILITY_FOLLOWUP WHERE STAT_INFERTILITY ='True' AND CODE_PA_PERSONAL_INFERTILITY='" & TXT_PA_CODE.Text & "'")
 
     End Sub
 
@@ -391,6 +443,7 @@
     End Sub
 
     Private Sub T_Change_Tick(sender As Object, e As EventArgs) Handles T_Change.Tick
+        '============================
         TXT_CODE100.Text = CODE_GENE("R_DOCTOR", "ID") + 1
         '================ PLAN ========================
         FILL_DGV(DataGridView4, "SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT ='TRUE' AND CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "' ORDER BY DATE_PLAN_INFERT DESC ")
@@ -884,5 +937,9 @@
                 TXT_NAME_PHARM.Select()
             End If
         End If
+    End Sub
+
+    Private Sub BTN_BABY_Click(sender As Object, e As EventArgs) Handles BTN_BABY.Click
+
     End Sub
 End Class

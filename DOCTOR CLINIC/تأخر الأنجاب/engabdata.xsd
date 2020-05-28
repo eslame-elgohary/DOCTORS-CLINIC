@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="engabdata" targetNamespace="http://tempuri.org/engabdata.xsd" xmlns:mstns="http://tempuri.org/engabdata.xsd" xmlns="http://tempuri.org/engabdata.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="sqlconn1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconn1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DOCTOR_CLINIC.My.MySettings.GlobalReference.Default.sqlconn1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ENGAB_VVTableAdapter" GeneratorDataComponentClassName="ENGAB_VVTableAdapter" Name="ENGAB_VV" UserDataComponentName="ENGAB_VVTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.ENGAB_VV" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CODE_PLAN_INFERT, CODE_PA_PLAN_INFERT, DATE_PLAN_INFERT, NAME_PLAN_INFERT, STAT_PLAN_INFERT, CODE_TEST_INFERT, CODE_PA_TEST_INFERT, 
+                         DATE_TEST_INFERT, NAME_PALCE_TEST_INFERT, RESULT_TEST_INFERT, NAME_TEST_INFERT, STAT_TEST_INFERT
+FROM            ENGAB_VV</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODE_PLAN_INFERT" DataSetColumn="CODE_PLAN_INFERT" />
+              <Mapping SourceColumn="CODE_PA_PLAN_INFERT" DataSetColumn="CODE_PA_PLAN_INFERT" />
+              <Mapping SourceColumn="DATE_PLAN_INFERT" DataSetColumn="DATE_PLAN_INFERT" />
+              <Mapping SourceColumn="NAME_PLAN_INFERT" DataSetColumn="NAME_PLAN_INFERT" />
+              <Mapping SourceColumn="STAT_PLAN_INFERT" DataSetColumn="STAT_PLAN_INFERT" />
+              <Mapping SourceColumn="CODE_TEST_INFERT" DataSetColumn="CODE_TEST_INFERT" />
+              <Mapping SourceColumn="CODE_PA_TEST_INFERT" DataSetColumn="CODE_PA_TEST_INFERT" />
+              <Mapping SourceColumn="DATE_TEST_INFERT" DataSetColumn="DATE_TEST_INFERT" />
+              <Mapping SourceColumn="NAME_PALCE_TEST_INFERT" DataSetColumn="NAME_PALCE_TEST_INFERT" />
+              <Mapping SourceColumn="RESULT_TEST_INFERT" DataSetColumn="RESULT_TEST_INFERT" />
+              <Mapping SourceColumn="NAME_TEST_INFERT" DataSetColumn="NAME_TEST_INFERT" />
+              <Mapping SourceColumn="STAT_TEST_INFERT" DataSetColumn="STAT_TEST_INFERT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="engabdata" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="engabdata" msprop:Generator_UserDSName="engabdata">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ENGAB_VV" msprop:Generator_TableClassName="ENGAB_VVDataTable" msprop:Generator_TableVarName="tableENGAB_VV" msprop:Generator_TablePropName="ENGAB_VV" msprop:Generator_RowDeletingName="ENGAB_VVRowDeleting" msprop:Generator_RowChangingName="ENGAB_VVRowChanging" msprop:Generator_RowEvHandlerName="ENGAB_VVRowChangeEventHandler" msprop:Generator_RowDeletedName="ENGAB_VVRowDeleted" msprop:Generator_UserTableName="ENGAB_VV" msprop:Generator_RowChangedName="ENGAB_VVRowChanged" msprop:Generator_RowEvArgName="ENGAB_VVRowChangeEvent" msprop:Generator_RowClassName="ENGAB_VVRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE_PLAN_INFERT" msprop:Generator_ColumnVarNameInTable="columnCODE_PLAN_INFERT" msprop:Generator_ColumnPropNameInRow="CODE_PLAN_INFERT" msprop:Generator_ColumnPropNameInTable="CODE_PLAN_INFERTColumn" msprop:Generator_UserColumnName="CODE_PLAN_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_PA_PLAN_INFERT" msprop:Generator_ColumnVarNameInTable="columnCODE_PA_PLAN_INFERT" msprop:Generator_ColumnPropNameInRow="CODE_PA_PLAN_INFERT" msprop:Generator_ColumnPropNameInTable="CODE_PA_PLAN_INFERTColumn" msprop:Generator_UserColumnName="CODE_PA_PLAN_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATE_PLAN_INFERT" msprop:Generator_ColumnVarNameInTable="columnDATE_PLAN_INFERT" msprop:Generator_ColumnPropNameInRow="DATE_PLAN_INFERT" msprop:Generator_ColumnPropNameInTable="DATE_PLAN_INFERTColumn" msprop:Generator_UserColumnName="DATE_PLAN_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME_PLAN_INFERT" msprop:Generator_ColumnVarNameInTable="columnNAME_PLAN_INFERT" msprop:Generator_ColumnPropNameInRow="NAME_PLAN_INFERT" msprop:Generator_ColumnPropNameInTable="NAME_PLAN_INFERTColumn" msprop:Generator_UserColumnName="NAME_PLAN_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STAT_PLAN_INFERT" msprop:Generator_ColumnVarNameInTable="columnSTAT_PLAN_INFERT" msprop:Generator_ColumnPropNameInRow="STAT_PLAN_INFERT" msprop:Generator_ColumnPropNameInTable="STAT_PLAN_INFERTColumn" msprop:Generator_UserColumnName="STAT_PLAN_INFERT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CODE_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnCODE_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="CODE_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="CODE_TEST_INFERTColumn" msprop:Generator_UserColumnName="CODE_TEST_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE_PA_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnCODE_PA_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="CODE_PA_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="CODE_PA_TEST_INFERTColumn" msprop:Generator_UserColumnName="CODE_PA_TEST_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATE_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnDATE_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="DATE_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="DATE_TEST_INFERTColumn" msprop:Generator_UserColumnName="DATE_TEST_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME_PALCE_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnNAME_PALCE_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="NAME_PALCE_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="NAME_PALCE_TEST_INFERTColumn" msprop:Generator_UserColumnName="NAME_PALCE_TEST_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RESULT_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnRESULT_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="RESULT_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="RESULT_TEST_INFERTColumn" msprop:Generator_UserColumnName="RESULT_TEST_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnNAME_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="NAME_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="NAME_TEST_INFERTColumn" msprop:Generator_UserColumnName="NAME_TEST_INFERT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STAT_TEST_INFERT" msprop:Generator_ColumnVarNameInTable="columnSTAT_TEST_INFERT" msprop:Generator_ColumnPropNameInRow="STAT_TEST_INFERT" msprop:Generator_ColumnPropNameInTable="STAT_TEST_INFERTColumn" msprop:Generator_UserColumnName="STAT_TEST_INFERT" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

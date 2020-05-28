@@ -165,6 +165,11 @@
     </Compile>
     <Compile Include="ClassConvertNO.vb" />
     <Compile Include="CONNECTION.vb" />
+    <Compile Include="تأخر الأنجاب\engabdata.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>engabdata.xsd</DependentUpon>
+    </Compile>
     <Compile Include="تأخر الأنجاب\ENGABFRM.Designer.vb">
       <DependentUpon>ENGABFRM.vb</DependentUpon>
     </Compile>
@@ -661,6 +666,12 @@
     </Compile>
     <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\ENGABREB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENGABREB.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="تأخر الأنجاب\FEMALE FACTORY\CONTRACEPTION\CONTRACEPTION_FEMAL_INFERTILITY.Designer.vb">
       <DependentUpon>CONTRACEPTION_FEMAL_INFERTILITY.vb</DependentUpon>
@@ -1220,6 +1231,10 @@
     <EmbeddedResource Include="تأخر الأنجاب\ENGABFRM.resx">
       <DependentUpon>ENGABFRM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\ENGABREB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ENGABREB.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\CONTRACEPTION\CONTRACEPTION_FEMAL_INFERTILITY.resx">
       <DependentUpon>CONTRACEPTION_FEMAL_INFERTILITY.vb</DependentUpon>
     </EmbeddedResource>
@@ -1463,6 +1478,17 @@
     </None>
     <None Include="المرضي\الملف الطبي للمريض\HISTORY_REP_DATA.xss">
       <DependentUpon>HISTORY_REP_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="تأخر الأنجاب\engabdata.xsc">
+      <DependentUpon>engabdata.xsd</DependentUpon>
+    </None>
+    <None Include="تأخر الأنجاب\engabdata.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>engabdata.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="تأخر الأنجاب\engabdata.xss">
+      <DependentUpon>engabdata.xsd</DependentUpon>
     </None>
     <None Include="روشتة تحاليل\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
