@@ -24,7 +24,7 @@ Partial Class ENGABFRM
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ENGABFRM))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -197,6 +197,8 @@ Partial Class ENGABFRM
         Me.TXT_COMPLEAN = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.T_Change = New System.Windows.Forms.Timer(Me.components)
+        Me.BTNPLAN = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTNTEST = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_BABY = New DevExpress.XtraEditors.SimpleButton()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_FOLOWUP = New DevExpress.XtraEditors.SimpleButton()
@@ -1617,8 +1619,8 @@ Partial Class ENGABFRM
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "R_DT_PHARM"
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewTextBoxColumn7.HeaderText = "Drugs"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
@@ -1862,6 +1864,7 @@ Partial Class ENGABFRM
         Me.TXT_CODE100.Name = "TXT_CODE100"
         Me.TXT_CODE100.Size = New System.Drawing.Size(42, 27)
         Me.TXT_CODE100.TabIndex = 94
+        Me.TXT_CODE100.Visible = False
         '
         'DataGridView3
         '
@@ -2277,6 +2280,32 @@ Partial Class ENGABFRM
         '
         Me.T_Change.Enabled = True
         '
+        'BTNPLAN
+        '
+        Me.BTNPLAN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNPLAN.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BTNPLAN.Appearance.Options.UseFont = True
+        Me.BTNPLAN.Appearance.Options.UseForeColor = True
+        Me.BTNPLAN.ImageOptions.Image = CType(resources.GetObject("BTNPLAN.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTNPLAN.Location = New System.Drawing.Point(427, 613)
+        Me.BTNPLAN.Name = "BTNPLAN"
+        Me.BTNPLAN.Size = New System.Drawing.Size(102, 44)
+        Me.BTNPLAN.TabIndex = 114
+        Me.BTNPLAN.Text = "Plan"
+        '
+        'BTNTEST
+        '
+        Me.BTNTEST.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNTEST.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BTNTEST.Appearance.Options.UseFont = True
+        Me.BTNTEST.Appearance.Options.UseForeColor = True
+        Me.BTNTEST.ImageOptions.Image = CType(resources.GetObject("BTNTEST.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTNTEST.Location = New System.Drawing.Point(260, 613)
+        Me.BTNTEST.Name = "BTNTEST"
+        Me.BTNTEST.Size = New System.Drawing.Size(158, 44)
+        Me.BTNTEST.TabIndex = 113
+        Me.BTNTEST.Text = "Investigations"
+        '
         'BTN_BABY
         '
         Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2284,21 +2313,20 @@ Partial Class ENGABFRM
         Me.BTN_BABY.Appearance.Options.UseFont = True
         Me.BTN_BABY.Appearance.Options.UseForeColor = True
         Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_fetus_42
-        Me.BTN_BABY.Location = New System.Drawing.Point(1040, 611)
+        Me.BTN_BABY.Location = New System.Drawing.Point(1048, 611)
         Me.BTN_BABY.Name = "BTN_BABY"
         Me.BTN_BABY.Size = New System.Drawing.Size(143, 44)
         Me.BTN_BABY.TabIndex = 112
         Me.BTN_BABY.Text = "Pregnant"
-        Me.BTN_BABY.Visible = False
         '
         'EXITBTN
         '
         Me.EXITBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EXITBTN.Appearance.Options.UseFont = True
         Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EXITBTN.Location = New System.Drawing.Point(84, 612)
+        Me.EXITBTN.Location = New System.Drawing.Point(8, 612)
         Me.EXITBTN.Name = "EXITBTN"
-        Me.EXITBTN.Size = New System.Drawing.Size(99, 44)
+        Me.EXITBTN.Size = New System.Drawing.Size(40, 44)
         Me.EXITBTN.TabIndex = 109
         Me.EXITBTN.Text = "Exit"
         '
@@ -2307,7 +2335,7 @@ Partial Class ENGABFRM
         Me.BTN_FOLOWUP.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_FOLOWUP.Appearance.Options.UseFont = True
         Me.BTN_FOLOWUP.ImageOptions.Image = CType(resources.GetObject("BTN_FOLOWUP.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(197, 612)
+        Me.BTN_FOLOWUP.Location = New System.Drawing.Point(56, 612)
         Me.BTN_FOLOWUP.Name = "BTN_FOLOWUP"
         Me.BTN_FOLOWUP.Size = New System.Drawing.Size(200, 44)
         Me.BTN_FOLOWUP.TabIndex = 108
@@ -2318,7 +2346,7 @@ Partial Class ENGABFRM
         Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SEARCHBTN.Appearance.Options.UseFont = True
         Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SEARCHBTN.Location = New System.Drawing.Point(410, 612)
+        Me.SEARCHBTN.Location = New System.Drawing.Point(538, 613)
         Me.SEARCHBTN.Name = "SEARCHBTN"
         Me.SEARCHBTN.Size = New System.Drawing.Size(99, 44)
         Me.SEARCHBTN.TabIndex = 107
@@ -2331,9 +2359,9 @@ Partial Class ENGABFRM
         Me.DELETBTN.Appearance.Options.UseFont = True
         Me.DELETBTN.Appearance.Options.UseForeColor = True
         Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.DELETBTN.Location = New System.Drawing.Point(526, 612)
+        Me.DELETBTN.Location = New System.Drawing.Point(650, 613)
         Me.DELETBTN.Name = "DELETBTN"
-        Me.DELETBTN.Size = New System.Drawing.Size(99, 44)
+        Me.DELETBTN.Size = New System.Drawing.Size(95, 44)
         Me.DELETBTN.TabIndex = 106
         Me.DELETBTN.Text = "Delet"
         '
@@ -2344,9 +2372,9 @@ Partial Class ENGABFRM
         Me.EDITBTN.Appearance.Options.UseFont = True
         Me.EDITBTN.Appearance.Options.UseForeColor = True
         Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EDITBTN.Location = New System.Drawing.Point(642, 612)
+        Me.EDITBTN.Location = New System.Drawing.Point(758, 613)
         Me.EDITBTN.Name = "EDITBTN"
-        Me.EDITBTN.Size = New System.Drawing.Size(99, 44)
+        Me.EDITBTN.Size = New System.Drawing.Size(79, 44)
         Me.EDITBTN.TabIndex = 105
         Me.EDITBTN.Text = "Edit"
         '
@@ -2357,9 +2385,9 @@ Partial Class ENGABFRM
         Me.SAVEBTN.Appearance.Options.UseFont = True
         Me.SAVEBTN.Appearance.Options.UseForeColor = True
         Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SAVEBTN.Location = New System.Drawing.Point(758, 612)
+        Me.SAVEBTN.Location = New System.Drawing.Point(849, 611)
         Me.SAVEBTN.Name = "SAVEBTN"
-        Me.SAVEBTN.Size = New System.Drawing.Size(99, 44)
+        Me.SAVEBTN.Size = New System.Drawing.Size(93, 44)
         Me.SAVEBTN.TabIndex = 103
         Me.SAVEBTN.Text = "Save"
         '
@@ -2370,9 +2398,9 @@ Partial Class ENGABFRM
         Me.NEWBTN.Appearance.Options.UseFont = True
         Me.NEWBTN.Appearance.Options.UseForeColor = True
         Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.NEWBTN.Location = New System.Drawing.Point(870, 612)
+        Me.NEWBTN.Location = New System.Drawing.Point(953, 611)
         Me.NEWBTN.Name = "NEWBTN"
-        Me.NEWBTN.Size = New System.Drawing.Size(99, 44)
+        Me.NEWBTN.Size = New System.Drawing.Size(84, 44)
         Me.NEWBTN.TabIndex = 104
         Me.NEWBTN.Text = "New"
         '
@@ -2382,6 +2410,8 @@ Partial Class ENGABFRM
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(8, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 669)
+        Me.Controls.Add(Me.BTNPLAN)
+        Me.Controls.Add(Me.BTNTEST)
         Me.Controls.Add(Me.BTN_BABY)
         Me.Controls.Add(Me.Label27)
         Me.Controls.Add(Me.TXT_COMPLEAN)
@@ -2659,4 +2689,6 @@ Partial Class ENGABFRM
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Private WithEvents BTNTEST As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BTNPLAN As DevExpress.XtraEditors.SimpleButton
 End Class

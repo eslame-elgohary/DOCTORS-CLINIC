@@ -475,4 +475,13 @@
     Private Sub BTN_HAGEZ_FRM_Click(sender As Object, e As EventArgs) Handles BTN_HAGEZ_FRM.Click
         HAGEZ_PATEINT.ShowDialog()
     End Sub
+
+    Private Sub INFERTILITYCARDCLOSEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles INFERTILITYCARDCLOSEToolStripMenuItem.Click
+
+        Try
+            ROLES("S100", REP_ENGAB_CLOSE)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class

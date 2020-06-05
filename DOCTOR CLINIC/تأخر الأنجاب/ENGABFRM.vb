@@ -268,6 +268,7 @@
         Dim DR = DT.Rows(0)
 
         DR!STAT_INFERTILITY = False
+
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         '===================================================================================
@@ -296,29 +297,18 @@
     End Sub
 
     Private Sub BTN_FOLOWUP_Click(sender As Object, e As EventArgs) Handles BTN_FOLOWUP.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("يرجي أختيار أسم المريض", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        End If
+
         Dim DT As New DataTable
-        With DT
-            .Columns.Add("DATE_TEST_INFERT")
-            .Columns.Add("NAME_PALCE_TEST_INFERT")
-            .Columns.Add("NAME_TEST_INFERT")
-            .Columns.Add("RESULT_TEST_INFERT")
-
-            .Columns.Add("DATE_PLAN_INFERT")
-            .Columns.Add("NAME_PLAN_INFERT")
-
-        End With
-        For I = 0 To DataGridView1.Rows.Count - 1 And DataGridView4.Rows.Count - 1
-            DT.Rows.Add(DataGridView1.Rows(I).Cells(2).Value,
-             DataGridView1.Rows(I).Cells(1).Value,
-                        DataGridView1.Rows(I).Cells(3).Value,
-                        DataGridView1.Rows(I).Cells(4).Value,
-                        DataGridView4.Rows(I).Cells(0).Value,
-                        DataGridView4.Rows(I).Cells(1).Value)
-
-        Next
-
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM INFERTILITY_FOLLOWUP WHERE STAT_INFERTILITY = 'TRUE' AND CODE_PA_PERSONAL_INFERTILITY ='" & TXT_PA_CODE.Text & "' ", SqlConn)
+        DA.Fill(DT)
         Dim REP As New ENGABREB
         REP.SetDataSource(DT)
+
         REP.SetParameterValue(0, TXT_M_MEDICAL.Text)
         REP.SetParameterValue(1, TXT_M_DOPPLER.Text)
         REP.SetParameterValue(2, TXT_M_SURGICAL.Text)
@@ -941,5 +931,54 @@
 
     Private Sub BTN_BABY_Click(sender As Object, e As EventArgs) Handles BTN_BABY.Click
 
+    End Sub
+
+    Private Sub BTNPLAN_Click(sender As Object, e As EventArgs) Handles BTNPLAN.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("يرجي أختيار أسم المريض", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        End If
+
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PLAN_INFERT WHERE STAT_PLAN_INFERT='TRUE' AND CODE_PA_PLAN_INFERT ='" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA.Fill(DT)
+
+        Dim REP As New ENGABREB_PLAN
+        REP.SetDataSource(DT)
+
+        REP.SetParameterValue(0, TXT_PA_NAME.Text)
+        REP.SetParameterValue(1, TXT_AGE.Text)
+        REP.SetParameterValue(2, TXT_DATE_MARRIED.Text)
+        REP.SetParameterValue(3, TXT_NAME2.Text)
+        REP.SetParameterValue(4, TXT_AGE2.Text)
+        REP.SetParameterValue(5, TXT_INFO.Text)
+
+        Dim FRM As New REPFORALL
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
+    End Sub
+
+    Private Sub BTNTEST_Click(sender As Object, e As EventArgs) Handles BTNTEST.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("يرجي أختيار أسم المريض", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        End If
+
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM TEST_INFERT WHERE STAT_TEST_INFERT='TRUE' AND CODE_PA_TEST_INFERT ='" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA.Fill(DT)
+        Dim REP As New ENGABREB_TEST
+        REP.SetDataSource(DT)
+        REP.SetParameterValue(0, TXT_PA_NAME.Text)
+        REP.SetParameterValue(1, TXT_AGE.Text)
+        REP.SetParameterValue(2, TXT_DATE_MARRIED.Text)
+        REP.SetParameterValue(3, TXT_NAME2.Text)
+        REP.SetParameterValue(4, TXT_AGE2.Text)
+        REP.SetParameterValue(5, TXT_INFO.Text)
+        Dim FRM As New REPFORALL
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
     End Sub
 End Class

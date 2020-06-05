@@ -1,6 +1,6 @@
 ﻿Public Class SEARCH_ADD_MONY2
     Private Sub SEARCH_ADD_MONY2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FILL_DGV(DataGridView1, "SELECT * FROM ADD_MONY_DOCTOR,PATIENT WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE'")
+        FILL_DGV(DataGridView1, "SELECT * FROM ADD_MONY_DOCTOR,PATIENT WHERE PA_CODE = ADD_PA_CODE AND ADD_STAT='FALSE' ORDER BY ADD_MONY_DOCTOR.ID DESC")
         K1.SelectedIndex = 1
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded

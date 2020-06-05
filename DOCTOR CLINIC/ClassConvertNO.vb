@@ -26,8 +26,8 @@
     End Function
 
     Private Function Get_IntStr_A(ByRef S As String) As String
-        Try
-            Dim Result As String
+        'Try
+        Dim Result As String
             '=============================================
             'Chek If S >= 11 And <= 19
             If Val(S) >= 11 And Val(S) <= 19 Then
@@ -115,9 +115,9 @@
             Else : RR = Result
             End If
             Return RR
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
     End Function
 
     Private Function Get_ValuesBN_11_19_A(ByVal S As String) As String
