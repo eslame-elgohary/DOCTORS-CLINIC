@@ -497,7 +497,7 @@
             TXT_UTERUS_HSG.Text = ""
             TXT_TUBES_HSG.Text = ""
         End If
-        '====================== HSG ========================
+        '====================== Hystroscopy ========================
         Dim DT3 As New DataTable
         Dim DA3 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM HYSTROSCOPY_INFERILTY WHERE STAT_HYSTROSCOPY_INFERILTY ='TRUE' AND CODE_PA_HYSTROSCOPY_INFERILTY = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
         DA3.Fill(DT3)
@@ -930,7 +930,12 @@
     End Sub
 
     Private Sub BTN_BABY_Click(sender As Object, e As EventArgs) Handles BTN_BABY.Click
-
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("يرجي أختيار أسم المريض", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        End If
+        have_baby.ShowDialog()
     End Sub
 
     Private Sub BTNPLAN_Click(sender As Object, e As EventArgs) Handles BTNPLAN.Click

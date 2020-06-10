@@ -358,8 +358,9 @@
                     Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
                     DA1.Update(DT)
                 Next
-                '==========================================================================
+
                 '============================== أضافة تفاصيل للخزينة ========================
+
                 Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
                 DA2.Fill(DT)
                 Dim DR2 = DT.NewRow

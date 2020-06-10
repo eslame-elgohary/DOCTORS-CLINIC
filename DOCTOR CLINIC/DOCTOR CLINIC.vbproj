@@ -749,6 +749,12 @@
     <Compile Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GAIN\WEIGHT_GAIN_FEMAL_INFERTILITY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="تأخر الأنجاب\have_baby.Designer.vb">
+      <DependentUpon>have_baby.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\have_baby.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.Designer.vb">
       <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
     </Compile>
@@ -1294,6 +1300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GAIN\WEIGHT_GAIN_FEMAL_INFERTILITY.resx">
       <DependentUpon>WEIGHT_GAIN_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\have_baby.resx">
+      <DependentUpon>have_baby.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.resx">
       <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
