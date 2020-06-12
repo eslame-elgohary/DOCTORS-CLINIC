@@ -3,7 +3,9 @@
         FILL_PATION()
         T_CHANG.Enabled = False
         TXT_CODE2.Text = ""
+        TXT_PA_NAME.Text = ""
         TXT_PA_NAME.Select()
+
     End Sub
 
     Private Sub BTN_INFERTILITY_Click(sender As Object, e As EventArgs) Handles BTN_INFERTILITY.Click
@@ -43,6 +45,29 @@
         REP.SetParameterValue(21, TXT_F_CONTRACPTION.Text)
         REP.SetParameterValue(22, TXT_F_WEIGHT.Text)
         REP.SetParameterValue(23, TXT_F_IUI.Text)
+        '================== 4D ================================
+        REP.SetParameterValue(24, TXT_DATE_4D.Value)
+        REP.SetParameterValue(25, TXT_PLACE_4D.Text)
+        REP.SetParameterValue(26, TXT_UTRERUS_4D.Text)
+        REP.SetParameterValue(27, TXT_OVARIES_4D.Text)
+        REP.SetParameterValue(28, TXT_DOPPLER_4D.Text)
+        '================== Laparoscopy ================================
+        REP.SetParameterValue(29, TXT_DATE_LAPAROSCOPY.Value)
+        REP.SetParameterValue(30, TXT_PLACE_LAPAROSCOPY.Text)
+        REP.SetParameterValue(31, TXT_UTERUS_LAPAROSCOPY.Text)
+        REP.SetParameterValue(32, TXT_TUBES_LAPAROSCOPY.Text)
+        REP.SetParameterValue(33, TXT_OVARIES_LAPAROSCOPY.Text)
+        '================== HSG ================================
+        REP.SetParameterValue(34, TXT_DATE_HSG.Value)
+        REP.SetParameterValue(35, TXT_PLACE_HSG.Text)
+        REP.SetParameterValue(36, TXT_UTERUS_HSG.Text)
+        REP.SetParameterValue(37, TXT_TUBES_HSG.Text)
+        '================== Hystroscopy ================================
+        REP.SetParameterValue(38, TXT_DATE_Hystroscopy.Value)
+        REP.SetParameterValue(39, TXT_PLACE_Hystroscopy.Text)
+        REP.SetParameterValue(40, TXT_CERVIX_Hystroscopy.Text)
+        REP.SetParameterValue(41, TXT_CAVITY_Hystroscopy.Text)
+
 
         Dim FRM As New REPFORALL
         FRM.CrystalReportViewer1.ReportSource = REP

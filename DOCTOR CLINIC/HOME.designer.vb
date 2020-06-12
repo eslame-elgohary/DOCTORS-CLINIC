@@ -612,27 +612,26 @@ Partial Class HOME
         'REGBTN
         '
         Me.REGBTN.Name = "REGBTN"
-        Me.REGBTN.Size = New System.Drawing.Size(145, 22)
+        Me.REGBTN.Size = New System.Drawing.Size(152, 22)
         Me.REGBTN.Text = "التسجيل"
         Me.REGBTN.Visible = False
         '
         'BT_T3AKODAT
         '
         Me.BT_T3AKODAT.Name = "BT_T3AKODAT"
-        Me.BT_T3AKODAT.Size = New System.Drawing.Size(145, 22)
+        Me.BT_T3AKODAT.Size = New System.Drawing.Size(152, 22)
         Me.BT_T3AKODAT.Text = "التعاقدات = > K"
-        Me.BT_T3AKODAT.Visible = False
         '
         'HELPBTN
         '
         Me.HELPBTN.Name = "HELPBTN"
-        Me.HELPBTN.Size = New System.Drawing.Size(145, 22)
+        Me.HELPBTN.Size = New System.Drawing.Size(152, 22)
         Me.HELPBTN.Text = "مساعدة"
         '
         'MASSEGADMIN_BTN
         '
         Me.MASSEGADMIN_BTN.Name = "MASSEGADMIN_BTN"
-        Me.MASSEGADMIN_BTN.Size = New System.Drawing.Size(145, 22)
+        Me.MASSEGADMIN_BTN.Size = New System.Drawing.Size(152, 22)
         Me.MASSEGADMIN_BTN.Text = "رسالة الأدارة"
         '
         'ToolStripMenuItem1
@@ -645,13 +644,13 @@ Partial Class HOME
         'BTNBACKUP
         '
         Me.BTNBACKUP.Name = "BTNBACKUP"
-        Me.BTNBACKUP.Size = New System.Drawing.Size(119, 22)
+        Me.BTNBACKUP.Size = New System.Drawing.Size(152, 22)
         Me.BTNBACKUP.Text = "BACKUP"
         '
         'BTNNET
         '
         Me.BTNNET.Name = "BTNNET"
-        Me.BTNNET.Size = New System.Drawing.Size(119, 22)
+        Me.BTNNET.Size = New System.Drawing.Size(152, 22)
         Me.BTNNET.Text = "الأنترنت"
         '
         'BT_EXIT

@@ -1,5 +1,8 @@
 ﻿Public Class have_baby
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
+        If MessageBox.Show("هل انت متأكد ان المريضة حامل بالفعل ؟ ", "رسالة تنبية", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            Exit Sub
+        End If
         '===================================================================================================
         If TXT_RH.Text = "" Then
             MessageBox.Show("PLEASE ENTER RH FOR PATION ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -11,46 +14,25 @@
             TXT_ABO.Select()
             Exit Sub
         End If
-        '=======================================================================================
 
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter(" SELECT * FROM PERSONAL_HISTORY WHERE CODE_PA_PERS = '" & TXT_PA_CODE.Text & "' ", SqlConn)
-        DA.Fill(DT)
-        If DT.Rows.Count > 0 Then
-            MessageBox.Show("THE PERSONAL HISTORY IS NOT FOUND", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            Dim DR = DT.NewRow
-            DR!CODE_PERS = CODE_GENE("PERSONAL_HISTORY", "ID") + 1
-            DR!CODE_PA_PERS = TXT_PA_CODE.Text
-            DR!DATE_MARED_PERS = MARED_DEAT.Value
-            DR!LMP_PERS = LMP_DATE.Value
-            DR!EDP_PERS = EDD_DATE.Value
-            DR!RH_PERS = TXT_RH.Text
-            DR!ABO_PERS = TXT_ABO.Text
-            DR!STAT_PERS = True
-            DT.Rows.Add(DR)
-            Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-            DA.Update(DT)
-
-        End If
         '===================== PERSONAL INFERTILITY ==============================
         Dim DT1 As New DataTable
-        Dim DA1 As New SqlClient.SqlDataAdapter("INSERT INTO INFERTILITY_FOLLOWUP_TEMP SELECT * FROM INFERTILITY_FOLLOWUP WHERE CODE_PA_PERSONAL_INFERTILITY='" & TXT_PA_CODE.Text & "'", SqlConn)
+        Dim DA1 As New SqlClient.SqlDataAdapter(" INSERT INTO INFERTILITY_FOLLOWUP_TEMP SELECT * FROM INFERTILITY_FOLLOWUP WHERE CODE_PA_PERSONAL_INFERTILITY = '" & TXT_PA_CODE.Text & "' ", SqlConn)
         DA1.Fill(DT1)
         '=================================================
         Dim CMD_DEL1 As New SqlClient.SqlCommand
         CMD_DEL1.Connection = SqlConn
-        CMD_DEL1.CommandText = "DELETE FROM INTO INFERTILITY_FOLLOWUP WHERE CODE_PA_PERSONAL_INFERTILITY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL1.CommandText = "DELETE FROM INFERTILITY_FOLLOWUP WHERE CODE_PA_PERSONAL_INFERTILITY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL1.ExecuteNonQuery()
 
         '===================== PLAN ==============================
         Dim DT2 As New DataTable
-        Dim DA2 As New SqlClient.SqlDataAdapter("INSERT INTO PLAN_INFERT_TEMP SELECT * FROM PLAN_INFERT WHERE CODE_PA_PLAN_INFERT='" & TXT_PA_CODE.Text & "'", SqlConn)
+        Dim DA2 As New SqlClient.SqlDataAdapter("INSERT INTO PLAN_INFERT_TEMP SELECT * FROM PLAN_INFERT WHERE CODE_PA_PLAN_INFERT ='" & TXT_PA_CODE.Text & "'", SqlConn)
         DA2.Fill(DT2)
         '=================================================
         Dim CMD_DEL2 As New SqlClient.SqlCommand
         CMD_DEL2.Connection = SqlConn
-        CMD_DEL2.CommandText = "DELETE FROM INTO PLAN_INFERT WHERE CODE_PA_PLAN_INFERT ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL2.CommandText = "DELETE FROM PLAN_INFERT WHERE CODE_PA_PLAN_INFERT ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL2.ExecuteNonQuery()
 
         '===================== TESTER  ==============================
@@ -60,7 +42,7 @@
         '=================================================
         Dim CMD_DEL3 As New SqlClient.SqlCommand
         CMD_DEL3.Connection = SqlConn
-        CMD_DEL3.CommandText = "DELETE FROM INTO TEST_INFERT WHERE CODE_PA_TEST_INFERT ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL3.CommandText = "DELETE FROM  TEST_INFERT WHERE CODE_PA_TEST_INFERT ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL3.ExecuteNonQuery()
 
         '===================== 4d  ==============================
@@ -70,7 +52,7 @@
         '=================================================
         Dim CMD_DEL4 As New SqlClient.SqlCommand
         CMD_DEL4.Connection = SqlConn
-        CMD_DEL4.CommandText = "DELETE FROM INTO E4D_INFERT WHERE CODE_PA_4D_INFERT ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL4.CommandText = "DELETE FROM  E4D_INFERT WHERE CODE_PA_4D_INFERT ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL4.ExecuteNonQuery()
 
         '===================== LAPAROSCOPY  ==============================
@@ -80,7 +62,7 @@
         '=================================================
         Dim CMD_DEL5 As New SqlClient.SqlCommand
         CMD_DEL5.Connection = SqlConn
-        CMD_DEL5.CommandText = "DELETE FROM INTO LAPAROSCOPY_INFERILTY WHERE CODE_PA_LAPAROSCOPY_INFERILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL5.CommandText = "DELETE FROM  LAPAROSCOPY_INFERILTY WHERE CODE_PA_LAPAROSCOPY_INFERILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL5.ExecuteNonQuery()
 
         '===================== HSG  ==============================
@@ -90,7 +72,7 @@
         '=================================================
         Dim CMD_DEL6 As New SqlClient.SqlCommand
         CMD_DEL6.Connection = SqlConn
-        CMD_DEL6.CommandText = "DELETE FROM INTO HSG_INFERILTY WHERE CODE_PA_HSG_INFERILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL6.CommandText = "DELETE FROM  HSG_INFERILTY WHERE CODE_PA_HSG_INFERILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL6.ExecuteNonQuery()
 
         '===================== Hystroscopy  ==============================
@@ -100,7 +82,7 @@
         '=================================================
         Dim CMD_DEL7 As New SqlClient.SqlCommand
         CMD_DEL7.Connection = SqlConn
-        CMD_DEL7.CommandText = "DELETE FROM INTO HYSTROSCOPY_INFERILTY WHERE CODE_PA_HYSTROSCOPY_INFERILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL7.CommandText = "DELETE FROM  HYSTROSCOPY_INFERILTY WHERE CODE_PA_HYSTROSCOPY_INFERILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL7.ExecuteNonQuery()
         '===================== MEDICAL FEMAL  ==============================
         Dim DT8 As New DataTable
@@ -109,7 +91,7 @@
         '=================================================
         Dim CMD_DEL8 As New SqlClient.SqlCommand
         CMD_DEL8.Connection = SqlConn
-        CMD_DEL8.CommandText = "DELETE FROM INTO MEDICAL_FEMAL_INFERTILTY WHERE CODE_PA_MEDICAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL8.CommandText = "DELETE FROM  MEDICAL_FEMAL_INFERTILTY WHERE CODE_PA_MEDICAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL8.ExecuteNonQuery()
         '====================== FAMILY FEMAL ========================
         Dim DT9 As New DataTable
@@ -118,7 +100,7 @@
         '=================================================
         Dim CMD_DEL9 As New SqlClient.SqlCommand
         CMD_DEL9.Connection = SqlConn
-        CMD_DEL9.CommandText = "DELETE FROM INTO FAMILY_FEMAL_INFERTILTY WHERE CODE_PA_FAMILY_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL9.CommandText = "DELETE FROM  FAMILY_FEMAL_INFERTILTY WHERE CODE_PA_FAMILY_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL9.ExecuteNonQuery()
         '====================== OBSTETRIC FEMAL ========================
         Dim DT10 As New DataTable
@@ -127,7 +109,7 @@
         '=================================================
         Dim CMD_DEL10 As New SqlClient.SqlCommand
         CMD_DEL10.Connection = SqlConn
-        CMD_DEL10.CommandText = "DELETE FROM INTO OBSTETRIC_FEMAL_INFERTILTY WHERE CODE_PA_OBSTETRIC_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL10.CommandText = "DELETE FROM  OBSTETRIC_FEMAL_INFERTILTY WHERE CODE_PA_OBSTETRIC_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL10.ExecuteNonQuery()
         '====================== VAGINAL FEMAL ========================
         Dim DT11 As New DataTable
@@ -136,7 +118,7 @@
         '=================================================
         Dim CMD_DEL11 As New SqlClient.SqlCommand
         CMD_DEL11.Connection = SqlConn
-        CMD_DEL11.CommandText = "DELETE FROM INTO VAGINAL_FEMAL_INFERTILTY WHERE CODE_PA_VAGINAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL11.CommandText = "DELETE FROM  VAGINAL_FEMAL_INFERTILTY WHERE CODE_PA_VAGINAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL11.ExecuteNonQuery()
         '====================== HIRUTISM FEMAL ========================
         Dim DT12 As New DataTable
@@ -145,7 +127,7 @@
         '=================================================
         Dim CMD_DEL12 As New SqlClient.SqlCommand
         CMD_DEL12.Connection = SqlConn
-        CMD_DEL12.CommandText = "DELETE FROM INTO HIRUTISM_FEMAL_INFERTILTY WHERE CODE_PA_HIRUTISM_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL12.CommandText = "DELETE FROM  HIRUTISM_FEMAL_INFERTILTY WHERE CODE_PA_HIRUTISM_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL12.ExecuteNonQuery()
         '====================== SURGICAL FEMAL ========================
         Dim DT13 As New DataTable
@@ -154,7 +136,7 @@
         '=================================================
         Dim CMD_DEL13 As New SqlClient.SqlCommand
         CMD_DEL13.Connection = SqlConn
-        CMD_DEL13.CommandText = "DELETE FROM INTO SURGICAL_FEMAL_INFERTILTY WHERE CODE_PA_SURGICAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL13.CommandText = "DELETE FROM  SURGICAL_FEMAL_INFERTILTY WHERE CODE_PA_SURGICAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL13.ExecuteNonQuery()
         '====================== MENSTRUAL FEMAL ========================
         Dim DT14 As New DataTable
@@ -163,7 +145,7 @@
         '=================================================
         Dim CMD_DEL14 As New SqlClient.SqlCommand
         CMD_DEL14.Connection = SqlConn
-        CMD_DEL14.CommandText = "DELETE FROM INTO MENSTRUAL_FEMAL_INFERTILTY WHERE CODE_PA_MENSTRUAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL14.CommandText = "DELETE FROM  MENSTRUAL_FEMAL_INFERTILTY WHERE CODE_PA_MENSTRUAL_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL14.ExecuteNonQuery()
         '====================== CONTRACEPTION FEMAL ========================
         Dim DT15 As New DataTable
@@ -172,7 +154,7 @@
         '=================================================
         Dim CMD_DEL15 As New SqlClient.SqlCommand
         CMD_DEL15.Connection = SqlConn
-        CMD_DEL15.CommandText = "DELETE FROM INTO CONTRACEPTION_FEMAL_INFERTILTY WHERE CODE_PA_CONTRACEPTION_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL15.CommandText = "DELETE FROM  CONTRACEPTION_FEMAL_INFERTILTY WHERE CODE_PA_CONTRACEPTION_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL15.ExecuteNonQuery()
         '====================== WEIGHT GAIN FEMAL ========================
         Dim DT16 As New DataTable
@@ -181,7 +163,7 @@
         '=================================================
         Dim CMD_DEL16 As New SqlClient.SqlCommand
         CMD_DEL16.Connection = SqlConn
-        CMD_DEL16.CommandText = "DELETE FROM INTO WEIGHT_GAIN_FEMAL_INFERTILTY WHERE CODE_PA_WEIGHT_GAIN_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL16.CommandText = "DELETE FROM  WEIGHT_GAIN_FEMAL_INFERTILTY WHERE CODE_PA_WEIGHT_GAIN_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL16.ExecuteNonQuery()
         '====================== ICSI FEMAL ========================
         Dim DT17 As New DataTable
@@ -190,7 +172,7 @@
         '=================================================
         Dim CMD_DEL17 As New SqlClient.SqlCommand
         CMD_DEL17.Connection = SqlConn
-        CMD_DEL17.CommandText = "DELETE FROM INTO ICSI_FEMAL_INFERTILTY WHERE CODE_PA_ICSI_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL17.CommandText = "DELETE FROM  ICSI_FEMAL_INFERTILTY WHERE CODE_PA_ICSI_FEMAL_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL17.ExecuteNonQuery()
         '====================== MEDICAL MALE ========================
         Dim DT18 As New DataTable
@@ -199,7 +181,7 @@
         '=================================================
         Dim CMD_DEL18 As New SqlClient.SqlCommand
         CMD_DEL18.Connection = SqlConn
-        CMD_DEL18.CommandText = "DELETE FROM INTO MEDICAL_MALE_INFERTILTY WHERE CODE_PA_MEDICAL_MALE_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL18.CommandText = "DELETE FROM  MEDICAL_MALE_INFERTILTY WHERE CODE_PA_MEDICAL_MALE_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL18.ExecuteNonQuery()
         '====================== SURGICAL MALE ========================
         Dim DT19 As New DataTable
@@ -208,7 +190,7 @@
         '=================================================
         Dim CMD_DEL19 As New SqlClient.SqlCommand
         CMD_DEL19.Connection = SqlConn
-        CMD_DEL19.CommandText = "DELETE FROM INTO SURGICAL_MALE_INFERTILTY WHERE CODE_PA_SURGICAL_MALE_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL19.CommandText = "DELETE FROM  SURGICAL_MALE_INFERTILTY WHERE CODE_PA_SURGICAL_MALE_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL19.ExecuteNonQuery()
         '====================== SCROTAL DOPPLER MALE ========================
         Dim DT20 As New DataTable
@@ -217,7 +199,7 @@
         '=================================================
         Dim CMD_DEL20 As New SqlClient.SqlCommand
         CMD_DEL20.Connection = SqlConn
-        CMD_DEL20.CommandText = "DELETE FROM INTO SCROTAL_DOPPLER_MALE_INFERTILTY WHERE CODE_PA_SCROTAL_DOPPLER_MALE_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL20.CommandText = "DELETE FROM  SCROTAL_DOPPLER_MALE_INFERTILTY WHERE CODE_PA_SCROTAL_DOPPLER_MALE_INFERTILTY ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL20.ExecuteNonQuery()
         '====================== SEMAN ANALSES MALE ========================
         Dim DT21 As New DataTable
@@ -226,8 +208,36 @@
         '=================================================
         Dim CMD_DEL21 As New SqlClient.SqlCommand
         CMD_DEL21.Connection = SqlConn
-        CMD_DEL21.CommandText = "DELETE FROM INTO SEMAN WHERE CODE_PA_SEMAN ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL21.CommandText = "DELETE FROM  SEMAN WHERE CODE_PA_SEMAN ='" & TXT_PA_CODE.Text & "'"
         CMD_DEL21.ExecuteNonQuery()
+
+        '====================== INFERTILITY_HISTORY ========================
+        Dim DT22 As New DataTable
+        Dim DA22 As New SqlClient.SqlDataAdapter("INSERT INTO INFERTILITY_HISTORY_TEMP SELECT * FROM INFERTILITY_HISTORY WHERE PA_CODE_INFERT_HIS ='" & TXT_PA_CODE.Text & "'", SqlConn)
+        DA22.Fill(DT22)
+        '=================================================
+        Dim CMD_DEL22 As New SqlClient.SqlCommand
+        CMD_DEL22.Connection = SqlConn
+        CMD_DEL22.CommandText = "DELETE FROM  INFERTILITY_HISTORY WHERE PA_CODE_INFERT_HIS ='" & TXT_PA_CODE.Text & "'"
+        CMD_DEL22.ExecuteNonQuery()
+        '========================================================================================================
+
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter(" SELECT * FROM PERSONAL_HISTORY WHERE CODE_PA_PERS = '" & TXT_PA_CODE.Text & "' ", SqlConn)
+        DA.Fill(DT)
+        Dim DR = DT.NewRow
+        DR!CODE_PERS = CODE_GENE("PERSONAL_HISTORY", "ID") + 1
+        DR!CODE_PA_PERS = TXT_PA_CODE.Text
+        DR!DATE_MARED_PERS = MARED_DEAT.Value
+        DR!LMP_PERS = LMP_DATE.Value
+        DR!EDP_PERS = EDD_DATE.Value
+        DR!RH_PERS = TXT_RH.Text
+        DR!ABO_PERS = TXT_ABO.Text
+        DR!STAT_PERS = True
+        DT.Rows.Add(DR)
+        Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+        DA.Update(DT)
+
 
         MessageBox.Show("تم تأكيد الأنجاب بنجاح", "تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Me.Close()

@@ -43,12 +43,11 @@ Partial Class have_baby
         '
         'TXT_PA_CODE
         '
-        Me.TXT_PA_CODE.Location = New System.Drawing.Point(463, 2)
+        Me.TXT_PA_CODE.Location = New System.Drawing.Point(56, 11)
         Me.TXT_PA_CODE.Name = "TXT_PA_CODE"
         Me.TXT_PA_CODE.Size = New System.Drawing.Size(56, 27)
         Me.TXT_PA_CODE.TabIndex = 23
         Me.TXT_PA_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TXT_PA_CODE.Visible = False
         '
         'EXITBTN
         '
@@ -218,7 +217,7 @@ Partial Class have_baby
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(575, 252)
+        Me.ClientSize = New System.Drawing.Size(578, 255)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.MARED_DEAT)
         Me.Controls.Add(Me.Label9)

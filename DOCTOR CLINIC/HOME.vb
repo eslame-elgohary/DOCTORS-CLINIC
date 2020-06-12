@@ -8,7 +8,6 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         T_TIME.Text = TimeOfDay
         T_DATE.Text = Date.Today
-        'MASEGETXT.Text = My.Settings.MASEGADMIN
         ESLAME()
         MACHINBTN.Text = My.Computer.Name
         MASSEG()
@@ -225,11 +224,11 @@
     End Sub
 
     Private Sub BT_T3AKODAT_Click(sender As Object, e As EventArgs) Handles BT_T3AKODAT.Click
-        'Try
-        '    ROLES("K", T3AKODATFRM)
-        'Catch EX As Exception
+        Try
+            ROLES("K", T3AKODATFRM)
+        Catch EX As Exception
 
-        'End Try
+        End Try
 
     End Sub
 
@@ -444,7 +443,6 @@
     End Sub
 
     Private Sub INFERTILITYToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles INFERTILITYToolStripMenuItem.Click
-
         Try
             ROLES("S100", ENGABFRM)
         Catch EX As Exception

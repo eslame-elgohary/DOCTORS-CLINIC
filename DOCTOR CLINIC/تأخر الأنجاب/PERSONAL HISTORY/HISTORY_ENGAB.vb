@@ -87,7 +87,7 @@
                     DT.Rows.Add(DR)
                     Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                     DA.Update(DT)
-                    MessageBox.Show("THE PERSONAL HISTORY INFORMATION HAS BEEN SUCCESSFULLY SAVED", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("THE PERSONAL HISTORY INFORMATION HAS BEEN SUCCESSFULLY SAVED", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     BTN_NEW_Click(sender, e)
                 End If
             Else

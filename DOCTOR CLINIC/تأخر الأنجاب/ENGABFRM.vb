@@ -187,10 +187,19 @@
             Next
         End If
 
-
-
-        MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        NEWBTN_Click(sender, e)
+        If DataGridView3.Rows.Count > 0 Then
+            If MessageBox.Show("هل ترغب فى طباعة روشتة للمريض", "رسالة تأكيد", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+                BTN_PRESCRIPTION_Click(sender, e)
+                MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                NEWBTN_Click(sender, e)
+            Else
+                MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                NEWBTN_Click(sender, e)
+            End If
+        Else
+            MessageBox.Show("تمت عملية الحفظ بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            NEWBTN_Click(sender, e)
+        End If
 
     End Sub
 
@@ -333,6 +342,28 @@
         REP.SetParameterValue(21, TXT_F_CONTRACPTION.Text)
         REP.SetParameterValue(22, TXT_F_WEIGHT.Text)
         REP.SetParameterValue(23, TXT_F_IUI.Text)
+        '================== 4D ================================
+        REP.SetParameterValue(24, TXT_DATE_4D.Value)
+        REP.SetParameterValue(25, TXT_PLACE_4D.Text)
+        REP.SetParameterValue(26, TXT_UTRERUS_4D.Text)
+        REP.SetParameterValue(27, TXT_OVARIES_4D.Text)
+        REP.SetParameterValue(28, TXT_DOPPLER_4D.Text)
+        '================== Laparoscopy ================================
+        REP.SetParameterValue(29, TXT_DATE_LAPAROSCOPY.Value)
+        REP.SetParameterValue(30, TXT_PLACE_LAPAROSCOPY.Text)
+        REP.SetParameterValue(31, TXT_UTERUS_LAPAROSCOPY.Text)
+        REP.SetParameterValue(32, TXT_TUBES_LAPAROSCOPY.Text)
+        REP.SetParameterValue(33, TXT_OVARIES_LAPAROSCOPY.Text)
+        '================== HSG ================================
+        REP.SetParameterValue(34, TXT_DATE_HSG.Value)
+        REP.SetParameterValue(35, TXT_PLACE_HSG.Text)
+        REP.SetParameterValue(36, TXT_UTERUS_HSG.Text)
+        REP.SetParameterValue(37, TXT_TUBES_HSG.Text)
+        '================== Hystroscopy ================================
+        REP.SetParameterValue(38, TXT_DATE_Hystroscopy.Value)
+        REP.SetParameterValue(39, TXT_PLACE_Hystroscopy.Text)
+        REP.SetParameterValue(40, TXT_CERVIX_Hystroscopy.Text)
+        REP.SetParameterValue(41, TXT_CAVITY_Hystroscopy.Text)
 
         Dim FRM As New REPFORALL
         FRM.CrystalReportViewer1.ReportSource = REP
@@ -983,6 +1014,28 @@
         REP.SetParameterValue(4, TXT_AGE2.Text)
         REP.SetParameterValue(5, TXT_INFO.Text)
         Dim FRM As New REPFORALL
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
+    End Sub
+
+    Private Sub BTN_PRESCRIPTION_Click(sender As Object, e As EventArgs) Handles BTN_PRESCRIPTION.Click
+        Dim DT As New DataTable
+        With DT
+            .Columns.Add("R_CODE")
+            .Columns.Add("R_DATE")
+            .Columns.Add("PA_NAME")
+            .Columns.Add("R_DT_PHARM")
+            .Columns.Add("R_DT_NO3")
+            .Columns.Add("R_DT_GOR3A")
+        End With
+        For I As Integer = 0 To DataGridView3.Rows.Count - 1
+            If DataGridView3.Rows(I).Cells(0).Value <> Nothing Then
+                DT.Rows.Add(TXT_CODE100.Text, TXT_DATE_VISIT.Text, TXT_PA_NAME.Text, DataGridView3.Rows(I).Cells(1).Value, DataGridView3.Rows(I).Cells(2).Value, DataGridView3.Rows(I).Cells(4).Value)
+            End If
+        Next
+        Dim REP As New ROSHTA_ELAG_CRS2
+        REP.SetDataSource(DT)
+        Dim FRM As New REOSHTA_ELAG_REP
         FRM.CrystalReportViewer1.ReportSource = REP
         FRM.ShowDialog()
     End Sub

@@ -207,6 +207,7 @@ Partial Class ENGABFRM
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_PRESCRIPTION = New DevExpress.XtraEditors.SimpleButton()
         Me.TabPage4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
@@ -2287,7 +2288,7 @@ Partial Class ENGABFRM
         Me.BTNPLAN.Appearance.Options.UseFont = True
         Me.BTNPLAN.Appearance.Options.UseForeColor = True
         Me.BTNPLAN.ImageOptions.Image = CType(resources.GetObject("BTNPLAN.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTNPLAN.Location = New System.Drawing.Point(427, 613)
+        Me.BTNPLAN.Location = New System.Drawing.Point(412, 613)
         Me.BTNPLAN.Name = "BTNPLAN"
         Me.BTNPLAN.Size = New System.Drawing.Size(102, 44)
         Me.BTNPLAN.TabIndex = 114
@@ -2300,7 +2301,7 @@ Partial Class ENGABFRM
         Me.BTNTEST.Appearance.Options.UseFont = True
         Me.BTNTEST.Appearance.Options.UseForeColor = True
         Me.BTNTEST.ImageOptions.Image = CType(resources.GetObject("BTNTEST.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTNTEST.Location = New System.Drawing.Point(260, 613)
+        Me.BTNTEST.Location = New System.Drawing.Point(247, 613)
         Me.BTNTEST.Name = "BTNTEST"
         Me.BTNTEST.Size = New System.Drawing.Size(158, 44)
         Me.BTNTEST.TabIndex = 113
@@ -2313,9 +2314,9 @@ Partial Class ENGABFRM
         Me.BTN_BABY.Appearance.Options.UseFont = True
         Me.BTN_BABY.Appearance.Options.UseForeColor = True
         Me.BTN_BABY.ImageOptions.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_fetus_42
-        Me.BTN_BABY.Location = New System.Drawing.Point(1048, 611)
+        Me.BTN_BABY.Location = New System.Drawing.Point(1080, 611)
         Me.BTN_BABY.Name = "BTN_BABY"
-        Me.BTN_BABY.Size = New System.Drawing.Size(143, 44)
+        Me.BTN_BABY.Size = New System.Drawing.Size(111, 44)
         Me.BTN_BABY.TabIndex = 112
         Me.BTN_BABY.Text = "Pregnant"
         '
@@ -2337,7 +2338,7 @@ Partial Class ENGABFRM
         Me.BTN_FOLOWUP.ImageOptions.Image = CType(resources.GetObject("BTN_FOLOWUP.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_FOLOWUP.Location = New System.Drawing.Point(56, 612)
         Me.BTN_FOLOWUP.Name = "BTN_FOLOWUP"
-        Me.BTN_FOLOWUP.Size = New System.Drawing.Size(200, 44)
+        Me.BTN_FOLOWUP.Size = New System.Drawing.Size(184, 44)
         Me.BTN_FOLOWUP.TabIndex = 108
         Me.BTN_FOLOWUP.Text = "INFERTRTIY CARD"
         '
@@ -2346,9 +2347,9 @@ Partial Class ENGABFRM
         Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SEARCHBTN.Appearance.Options.UseFont = True
         Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SEARCHBTN.Location = New System.Drawing.Point(538, 613)
+        Me.SEARCHBTN.Location = New System.Drawing.Point(662, 613)
         Me.SEARCHBTN.Name = "SEARCHBTN"
-        Me.SEARCHBTN.Size = New System.Drawing.Size(99, 44)
+        Me.SEARCHBTN.Size = New System.Drawing.Size(40, 44)
         Me.SEARCHBTN.TabIndex = 107
         Me.SEARCHBTN.Text = "Search"
         '
@@ -2359,9 +2360,9 @@ Partial Class ENGABFRM
         Me.DELETBTN.Appearance.Options.UseFont = True
         Me.DELETBTN.Appearance.Options.UseForeColor = True
         Me.DELETBTN.ImageOptions.Image = CType(resources.GetObject("DELETBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.DELETBTN.Location = New System.Drawing.Point(650, 613)
+        Me.DELETBTN.Location = New System.Drawing.Point(712, 613)
         Me.DELETBTN.Name = "DELETBTN"
-        Me.DELETBTN.Size = New System.Drawing.Size(95, 44)
+        Me.DELETBTN.Size = New System.Drawing.Size(87, 44)
         Me.DELETBTN.TabIndex = 106
         Me.DELETBTN.Text = "Delet"
         '
@@ -2372,9 +2373,9 @@ Partial Class ENGABFRM
         Me.EDITBTN.Appearance.Options.UseFont = True
         Me.EDITBTN.Appearance.Options.UseForeColor = True
         Me.EDITBTN.ImageOptions.Image = CType(resources.GetObject("EDITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EDITBTN.Location = New System.Drawing.Point(758, 613)
+        Me.EDITBTN.Location = New System.Drawing.Point(812, 613)
         Me.EDITBTN.Name = "EDITBTN"
-        Me.EDITBTN.Size = New System.Drawing.Size(79, 44)
+        Me.EDITBTN.Size = New System.Drawing.Size(76, 44)
         Me.EDITBTN.TabIndex = 105
         Me.EDITBTN.Text = "Edit"
         '
@@ -2385,9 +2386,9 @@ Partial Class ENGABFRM
         Me.SAVEBTN.Appearance.Options.UseFont = True
         Me.SAVEBTN.Appearance.Options.UseForeColor = True
         Me.SAVEBTN.ImageOptions.Image = CType(resources.GetObject("SAVEBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.SAVEBTN.Location = New System.Drawing.Point(849, 611)
+        Me.SAVEBTN.Location = New System.Drawing.Point(896, 611)
         Me.SAVEBTN.Name = "SAVEBTN"
-        Me.SAVEBTN.Size = New System.Drawing.Size(93, 44)
+        Me.SAVEBTN.Size = New System.Drawing.Size(82, 44)
         Me.SAVEBTN.TabIndex = 103
         Me.SAVEBTN.Text = "Save"
         '
@@ -2398,11 +2399,24 @@ Partial Class ENGABFRM
         Me.NEWBTN.Appearance.Options.UseFont = True
         Me.NEWBTN.Appearance.Options.UseForeColor = True
         Me.NEWBTN.ImageOptions.Image = CType(resources.GetObject("NEWBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.NEWBTN.Location = New System.Drawing.Point(953, 611)
+        Me.NEWBTN.Location = New System.Drawing.Point(986, 611)
         Me.NEWBTN.Name = "NEWBTN"
         Me.NEWBTN.Size = New System.Drawing.Size(84, 44)
         Me.NEWBTN.TabIndex = 104
         Me.NEWBTN.Text = "New"
+        '
+        'BTN_PRESCRIPTION
+        '
+        Me.BTN_PRESCRIPTION.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_PRESCRIPTION.Appearance.ForeColor = System.Drawing.Color.Purple
+        Me.BTN_PRESCRIPTION.Appearance.Options.UseFont = True
+        Me.BTN_PRESCRIPTION.Appearance.Options.UseForeColor = True
+        Me.BTN_PRESCRIPTION.ImageOptions.Image = CType(resources.GetObject("BTN_PRESCRIPTION.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PRESCRIPTION.Location = New System.Drawing.Point(520, 613)
+        Me.BTN_PRESCRIPTION.Name = "BTN_PRESCRIPTION"
+        Me.BTN_PRESCRIPTION.Size = New System.Drawing.Size(130, 44)
+        Me.BTN_PRESCRIPTION.TabIndex = 115
+        Me.BTN_PRESCRIPTION.Text = "Prescription"
         '
         'ENGABFRM
         '
@@ -2410,6 +2424,7 @@ Partial Class ENGABFRM
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(8, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 669)
+        Me.Controls.Add(Me.BTN_PRESCRIPTION)
         Me.Controls.Add(Me.BTNPLAN)
         Me.Controls.Add(Me.BTNTEST)
         Me.Controls.Add(Me.BTN_BABY)
@@ -2691,4 +2706,5 @@ Partial Class ENGABFRM
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Private WithEvents BTNTEST As DevExpress.XtraEditors.SimpleButton
     Private WithEvents BTNPLAN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_PRESCRIPTION As DevExpress.XtraEditors.SimpleButton
 End Class

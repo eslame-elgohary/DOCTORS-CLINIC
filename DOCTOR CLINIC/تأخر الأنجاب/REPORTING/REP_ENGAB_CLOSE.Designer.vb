@@ -24,7 +24,7 @@ Partial Class REP_ENGAB_CLOSE
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(REP_ENGAB_CLOSE))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
@@ -638,7 +638,7 @@ Partial Class REP_ENGAB_CLOSE
         Me.TabPage2.Location = New System.Drawing.Point(4, 31)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1193, 487)
+        Me.TabPage2.Size = New System.Drawing.Size(284, 58)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Female Factory"
         '
@@ -993,7 +993,7 @@ Partial Class REP_ENGAB_CLOSE
         Me.TabPage3.Location = New System.Drawing.Point(4, 31)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1193, 487)
+        Me.TabPage3.Size = New System.Drawing.Size(284, 58)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Procedures"
         '
@@ -1573,7 +1573,7 @@ Partial Class REP_ENGAB_CLOSE
         Me.TabPage4.Location = New System.Drawing.Point(4, 31)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1193, 487)
+        Me.TabPage4.Size = New System.Drawing.Size(284, 58)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Investigations"
         '
@@ -1656,7 +1656,7 @@ Partial Class REP_ENGAB_CLOSE
         Me.TabPage5.Location = New System.Drawing.Point(4, 31)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1193, 487)
+        Me.TabPage5.Size = New System.Drawing.Size(284, 58)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Visit"
         '
@@ -1705,8 +1705,8 @@ Partial Class REP_ENGAB_CLOSE
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "R_DT_PHARM"
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn7.HeaderText = "Drugs"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
@@ -2112,7 +2112,7 @@ Partial Class REP_ENGAB_CLOSE
         Me.TabPage6.Location = New System.Drawing.Point(4, 31)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1193, 487)
+        Me.TabPage6.Size = New System.Drawing.Size(284, 58)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Plan"
         '
@@ -2235,7 +2235,7 @@ Partial Class REP_ENGAB_CLOSE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(574, 165)
+        Me.ClientSize = New System.Drawing.Size(574, 168)
         Me.Controls.Add(Me.TXT_COMPLEAN)
         Me.Controls.Add(Me.TXT_DATE_MARRIED)
         Me.Controls.Add(Me.TXT_INFO)

@@ -23,6 +23,12 @@ Partial Class HELPFRM
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label59 = New System.Windows.Forms.Label()
         Me.Label60 = New System.Windows.Forms.Label()
@@ -83,12 +89,6 @@ Partial Class HELPFRM
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -166,6 +166,60 @@ Partial Class HELPFRM
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "قائمة أختصارات البرنامج"
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Location = New System.Drawing.Point(19, 275)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(127, 21)
+        Me.Label64.TabIndex = 65
+        Me.Label64.Text = "أستلام نقدية معامل"
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Location = New System.Drawing.Point(146, 275)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(21, 21)
+        Me.Label65.TabIndex = 64
+        Me.Label65.Text = "="
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Location = New System.Drawing.Point(173, 275)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(27, 21)
+        Me.Label66.TabIndex = 63
+        Me.Label66.Text = "F7"
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Location = New System.Drawing.Point(12, 254)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(134, 21)
+        Me.Label61.TabIndex = 62
+        Me.Label61.Text = "أستلام نقدية عيادات"
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Location = New System.Drawing.Point(145, 254)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(21, 21)
+        Me.Label62.TabIndex = 61
+        Me.Label62.Text = "="
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Location = New System.Drawing.Point(172, 254)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(27, 21)
+        Me.Label63.TabIndex = 60
+        Me.Label63.Text = "F6"
         '
         'Label58
         '
@@ -251,11 +305,11 @@ Partial Class HELPFRM
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(802, 436)
+        Me.Label49.Location = New System.Drawing.Point(799, 436)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(70, 21)
+        Me.Label49.Size = New System.Drawing.Size(112, 21)
         Me.Label49.TabIndex = 50
-        Me.Label49.Text = "000000"
+        Me.Label49.Text = "تحويلات الخزينة"
         '
         'Label50
         '
@@ -715,60 +769,6 @@ Partial Class HELPFRM
         Me.Label1.Size = New System.Drawing.Size(21, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "A"
-        '
-        'Label61
-        '
-        Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(12, 254)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(134, 21)
-        Me.Label61.TabIndex = 62
-        Me.Label61.Text = "أستلام نقدية عيادات"
-        '
-        'Label62
-        '
-        Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(145, 254)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(21, 21)
-        Me.Label62.TabIndex = 61
-        Me.Label62.Text = "="
-        '
-        'Label63
-        '
-        Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(172, 254)
-        Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(27, 21)
-        Me.Label63.TabIndex = 60
-        Me.Label63.Text = "F6"
-        '
-        'Label64
-        '
-        Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(19, 275)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(127, 21)
-        Me.Label64.TabIndex = 65
-        Me.Label64.Text = "أستلام نقدية معامل"
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(146, 275)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(21, 21)
-        Me.Label65.TabIndex = 64
-        Me.Label65.Text = "="
-        '
-        'Label66
-        '
-        Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(173, 275)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(27, 21)
-        Me.Label66.TabIndex = 63
-        Me.Label66.Text = "F7"
         '
         'HELPFRM
         '
