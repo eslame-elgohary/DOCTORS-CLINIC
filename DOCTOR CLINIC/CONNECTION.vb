@@ -1,9 +1,8 @@
-﻿Imports MySql.Data.MySqlClient
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Module CONNECTION
     Public StrID As Integer
     Public SqlConn As New SqlClient.SqlConnection
-    Public SqlConn2 As New MySqlConnection
+    Public SqlConn2 As New SqlClient.SqlConnection
     '""""""""""""" الاتصال بالسيرفر """""""""""""""
     Public Sub open_connection()
         If SqlConn.State = 1 Then SqlConn.Close()
@@ -17,7 +16,7 @@ Module CONNECTION
     Public Sub open_connection2()
         If SqlConn2.State = 1 Then SqlConn2.Close()
         Try
-            SqlConn2 = New MySqlConnection("SERVER=127.0.0.1 ; DATABASE=DOCTORS_CLINIC; uid=root; password=xyz@1234; CharSet=utf8;")
+            SqlConn2 = New SqlConnection(My.Settings.sqlconn2)
             SqlConn2.Open()
         Catch ex As Exception
             MessageBox.Show(ex.Message.ToString)
@@ -44,6 +43,14 @@ Module CONNECTION
         DA.Fill(DT)
         DGV.AutoGenerateColumns = False
         DGV.DataSource = DT.DefaultView
+    End Sub
+    Public Sub FILL_DGV2(DGV2 As DataGridView, SQL As String)
+        DGV2.DataSource = ""
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter(SQL, SqlConn2)
+        DA.Fill(DT)
+        DGV2.AutoGenerateColumns = False
+        DGV2.DataSource = DT.DefaultView
     End Sub
     Public Function CODE_GENE2(TBLNAME, ID2_, DATE_) As Integer
         CODE_GENE2 = 0

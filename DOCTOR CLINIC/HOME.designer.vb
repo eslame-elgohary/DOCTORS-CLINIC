@@ -78,6 +78,7 @@ Partial Class HOME
         Me.BT_ADDMONY = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_ADDMONY_DOCTOR = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_ADDMONY_MAML = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_T3AQOD_ADD_MONY_DOC = New System.Windows.Forms.ToolStripMenuItem()
         Me.أذنصرفنقديةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_MASROF_DT = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_CONVERT_KHAZINA = New System.Windows.Forms.ToolStripMenuItem()
@@ -102,6 +103,10 @@ Partial Class HOME
         Me.BTNNET = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_EXIT = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.التعاقداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_ADD_T3AKODAT = New System.Windows.Forms.ToolStripMenuItem()
+        Me.أستلامنقديةمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تقريربالمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
@@ -116,10 +121,12 @@ Partial Class HOME
         Me.BT_ADDTHLEL_PATION = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.BTN_ADD_MONY_DOCT = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.BTL_CONVERTKHAZINA = New System.Windows.Forms.ToolStripButton()
-        Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
-        Me.BT_WHATSAPP = New System.Windows.Forms.ToolStripButton()
+        Me.inter_control = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -498,7 +505,7 @@ Partial Class HOME
         '
         'BT_ADDMONY
         '
-        Me.BT_ADDMONY.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY_DOCTOR, Me.BT_ADDMONY_MAML})
+        Me.BT_ADDMONY.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY_DOCTOR, Me.BT_ADDMONY_MAML, Me.BTN_T3AQOD_ADD_MONY_DOC})
         Me.BT_ADDMONY.Name = "BT_ADDMONY"
         Me.BT_ADDMONY.Size = New System.Drawing.Size(163, 22)
         Me.BT_ADDMONY.Text = "أذن استلام نقدية"
@@ -506,14 +513,20 @@ Partial Class HOME
         'BT_ADDMONY_DOCTOR
         '
         Me.BT_ADDMONY_DOCTOR.Name = "BT_ADDMONY_DOCTOR"
-        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(136, 22)
+        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(138, 22)
         Me.BT_ADDMONY_DOCTOR.Text = "أيصال عيادات"
         '
         'BT_ADDMONY_MAML
         '
         Me.BT_ADDMONY_MAML.Name = "BT_ADDMONY_MAML"
-        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(136, 22)
+        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(138, 22)
         Me.BT_ADDMONY_MAML.Text = "أيصال معمل"
+        '
+        'BTN_T3AQOD_ADD_MONY_DOC
+        '
+        Me.BTN_T3AQOD_ADD_MONY_DOC.Name = "BTN_T3AQOD_ADD_MONY_DOC"
+        Me.BTN_T3AQOD_ADD_MONY_DOC.Size = New System.Drawing.Size(138, 22)
+        Me.BTN_T3AQOD_ADD_MONY_DOC.Text = "أيصال تعاقدات"
         '
         'أذنصرفنقديةToolStripMenuItem
         '
@@ -612,26 +625,27 @@ Partial Class HOME
         'REGBTN
         '
         Me.REGBTN.Name = "REGBTN"
-        Me.REGBTN.Size = New System.Drawing.Size(152, 22)
+        Me.REGBTN.Size = New System.Drawing.Size(145, 22)
         Me.REGBTN.Text = "التسجيل"
         Me.REGBTN.Visible = False
         '
         'BT_T3AKODAT
         '
         Me.BT_T3AKODAT.Name = "BT_T3AKODAT"
-        Me.BT_T3AKODAT.Size = New System.Drawing.Size(152, 22)
+        Me.BT_T3AKODAT.Size = New System.Drawing.Size(145, 22)
         Me.BT_T3AKODAT.Text = "التعاقدات = > K"
+        Me.BT_T3AKODAT.Visible = False
         '
         'HELPBTN
         '
         Me.HELPBTN.Name = "HELPBTN"
-        Me.HELPBTN.Size = New System.Drawing.Size(152, 22)
+        Me.HELPBTN.Size = New System.Drawing.Size(145, 22)
         Me.HELPBTN.Text = "مساعدة"
         '
         'MASSEGADMIN_BTN
         '
         Me.MASSEGADMIN_BTN.Name = "MASSEGADMIN_BTN"
-        Me.MASSEGADMIN_BTN.Size = New System.Drawing.Size(152, 22)
+        Me.MASSEGADMIN_BTN.Size = New System.Drawing.Size(145, 22)
         Me.MASSEGADMIN_BTN.Text = "رسالة الأدارة"
         '
         'ToolStripMenuItem1
@@ -644,14 +658,15 @@ Partial Class HOME
         'BTNBACKUP
         '
         Me.BTNBACKUP.Name = "BTNBACKUP"
-        Me.BTNBACKUP.Size = New System.Drawing.Size(152, 22)
+        Me.BTNBACKUP.Size = New System.Drawing.Size(119, 22)
         Me.BTNBACKUP.Text = "BACKUP"
         '
         'BTNNET
         '
         Me.BTNNET.Name = "BTNNET"
-        Me.BTNNET.Size = New System.Drawing.Size(152, 22)
+        Me.BTNNET.Size = New System.Drawing.Size(119, 22)
         Me.BTNNET.Text = "الأنترنت"
+        Me.BTNNET.Visible = False
         '
         'BT_EXIT
         '
@@ -662,12 +677,37 @@ Partial Class HOME
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'التعاقداتToolStripMenuItem
+        '
+        Me.التعاقداتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_ADD_T3AKODAT, Me.أستلامنقديةمطالبةToolStripMenuItem, Me.تقريربالمطالبةToolStripMenuItem})
+        Me.التعاقداتToolStripMenuItem.Name = "التعاقداتToolStripMenuItem"
+        Me.التعاقداتToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
+        Me.التعاقداتToolStripMenuItem.Text = "التعاقدات"
+        '
+        'BTN_ADD_T3AKODAT
+        '
+        Me.BTN_ADD_T3AKODAT.Name = "BTN_ADD_T3AKODAT"
+        Me.BTN_ADD_T3AKODAT.Size = New System.Drawing.Size(161, 22)
+        Me.BTN_ADD_T3AKODAT.Text = "أضافة تعاقد"
+        '
+        'أستلامنقديةمطالبةToolStripMenuItem
+        '
+        Me.أستلامنقديةمطالبةToolStripMenuItem.Name = "أستلامنقديةمطالبةToolStripMenuItem"
+        Me.أستلامنقديةمطالبةToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.أستلامنقديةمطالبةToolStripMenuItem.Text = "أستلام نقدية مطالبة"
+        '
+        'تقريربالمطالبةToolStripMenuItem
+        '
+        Me.تقريربالمطالبةToolStripMenuItem.Name = "تقريربالمطالبةToolStripMenuItem"
+        Me.تقريربالمطالبةToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.تقريربالمطالبةToolStripMenuItem.Text = "تقرير بالمطالبة"
         '
         'ToolStripSeparator1
         '
@@ -714,7 +754,7 @@ Partial Class HOME
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.BackColor = System.Drawing.Color.LightBlue
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.BT_SMS, Me.ToolStripSeparator5, Me.BT_WHATSAPP, Me.ToolStripSeparator9, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.inter_control, Me.ToolStripSeparator9, Me.BT_SMS, Me.ToolStripSeparator5, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 49)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1350, 55)
@@ -766,6 +806,20 @@ Partial Class HOME
         Me.BTN_ADD_MONY_DOCT.Size = New System.Drawing.Size(121, 52)
         Me.BTN_ADD_MONY_DOCT.Text = "أيصال عيادات"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_credit_card_48
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(146, 52)
+        Me.ToolStripButton1.Text = "أيصال عيادات تعاقد"
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 55)
+        '
         'BTL_CONVERTKHAZINA
         '
         Me.BTL_CONVERTKHAZINA.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_currency_exchange_3383436
@@ -774,6 +828,20 @@ Partial Class HOME
         Me.BTL_CONVERTKHAZINA.Name = "BTL_CONVERTKHAZINA"
         Me.BTL_CONVERTKHAZINA.Size = New System.Drawing.Size(116, 52)
         Me.BTL_CONVERTKHAZINA.Text = "تحويل خزينة"
+        '
+        'inter_control
+        '
+        Me.inter_control.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.icons8_control_panel_48
+        Me.inter_control.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.inter_control.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.inter_control.Name = "inter_control"
+        Me.inter_control.Size = New System.Drawing.Size(119, 52)
+        Me.inter_control.Text = "النداء الداخلي"
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
         '
         'BT_SMS
         '
@@ -784,22 +852,6 @@ Partial Class HOME
         Me.BT_SMS.Name = "BT_SMS"
         Me.BT_SMS.Size = New System.Drawing.Size(84, 52)
         Me.BT_SMS.Text = "SMS"
-        '
-        'BT_WHATSAPP
-        '
-        Me.BT_WHATSAPP.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_whatsapp_986960
-        Me.BT_WHATSAPP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BT_WHATSAPP.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_WHATSAPP.Name = "BT_WHATSAPP"
-        Me.BT_WHATSAPP.Size = New System.Drawing.Size(95, 52)
-        Me.BT_WHATSAPP.Text = "الأنترنت"
-        Me.BT_WHATSAPP.Visible = False
-        '
-        'ToolStripSeparator9
-        '
-        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
-        Me.ToolStripSeparator9.Visible = False
         '
         'STB_EXIT
         '
@@ -979,8 +1031,15 @@ Partial Class HOME
     Friend WithEvents INFERTILITYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents REP_HAGEZ_PA As ToolStripMenuItem
     Friend WithEvents BTNNET As ToolStripMenuItem
-    Friend WithEvents BT_WHATSAPP As ToolStripButton
-    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents BTN_HAGEZ_FRM As ToolStripMenuItem
     Friend WithEvents INFERTILITYCARDCLOSEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BTN_T3AQOD_ADD_MONY_DOC As ToolStripMenuItem
+    Friend WithEvents التعاقداتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BTN_ADD_T3AKODAT As ToolStripMenuItem
+    Friend WithEvents أستلامنقديةمطالبةToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents تقريربالمطالبةToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
+    Friend WithEvents inter_control As ToolStripButton
+    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
 End Class

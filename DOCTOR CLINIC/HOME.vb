@@ -1,4 +1,6 @@
-﻿Public Class HOME
+﻿Imports System.ComponentModel
+
+Public Class HOME
     Private Sub HOME_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         open_connection()
         Timer1.Start()
@@ -109,7 +111,7 @@
             BT_USERS_DT_Click(sender, e)
         End If
         If e.KeyCode = Keys.K Then
-            BT_T3AKODAT_Click(sender, e)
+            BTN_ADD_T3AKODAT_Click(sender, e)
         End If
         If e.KeyCode = Keys.L Then
             BT_KHAZINA_Click(sender, e)
@@ -222,16 +224,6 @@
         End Try
 
     End Sub
-
-    Private Sub BT_T3AKODAT_Click(sender As Object, e As EventArgs) Handles BT_T3AKODAT.Click
-        Try
-            ROLES("K", T3AKODATFRM)
-        Catch EX As Exception
-
-        End Try
-
-    End Sub
-
     Private Sub BT_KHAZINA_Click(sender As Object, e As EventArgs) Handles BT_KHAZINA.Click
         Try
             ROLES("L", KHAZINAFRM)
@@ -453,23 +445,6 @@
     Private Sub REP_HAGEZ_PA_Click(sender As Object, e As EventArgs) Handles REP_HAGEZ_PA.Click
         REP_HAGEZ.ShowDialog()
     End Sub
-
-    Private Sub BTNNET_Click(sender As Object, e As EventArgs) Handles BTNNET.Click
-        Try
-            ROLES("U", NETFRM)
-        Catch EX As Exception
-
-        End Try
-    End Sub
-
-    Private Sub BT_WHATSAPP_Click(sender As Object, e As EventArgs) Handles BT_WHATSAPP.Click
-        Try
-            ROLES("U", NETFRM)
-        Catch EX As Exception
-
-        End Try
-    End Sub
-
     Private Sub BTN_HAGEZ_FRM_Click(sender As Object, e As EventArgs) Handles BTN_HAGEZ_FRM.Click
         HAGEZ_PATEINT.ShowDialog()
     End Sub
@@ -481,5 +456,34 @@
         Catch EX As Exception
 
         End Try
+    End Sub
+
+    Private Sub BTN_ADD_T3AKODAT_Click(sender As Object, e As EventArgs) Handles BTN_ADD_T3AKODAT.Click
+        'Try
+        '    ROLES("K", T3AKODATFRM)
+        'Catch EX As Exception
+
+        'End Try
+        T3AQOD.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Try
+            ROLES("M", ADD_DOCTOR_T3AQOD_MONY)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BTN_T3AQOD_ADD_MONY_DOC_Click(sender As Object, e As EventArgs) Handles BTN_T3AQOD_ADD_MONY_DOC.Click
+        Try
+            ROLES("M", ADD_DOCTOR_T3AQOD_MONY)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub inter_control_Click(sender As Object, e As EventArgs) Handles inter_control.Click
+        Process.Start("C:\Program Files (x86)\Acapela Group\Acapela Multimedia\academo.exe")
     End Sub
 End Class

@@ -13,7 +13,8 @@
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        ADD_CODE, ADD_DATE, ADD_TYPE, ADD_PA_CODE, PA_NAME, PA_TYPE, PA_AGE, CODE_KHAZINA, KHAZINA_NAME, ADD_TKHASOS_CODE, TAKH_NAME, 
-                         ADD_DOCTOR_CODE, DO_NAME, MID, CODE_ACTION, NAME_ACTION, PRICE_DOCE, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD
+                         ADD_DOCTOR_CODE, DO_NAME, MID, CODE_ACTION, NAME_ACTION, PRICE_DOCE, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD, 
+                         ADD_TYPE_MONY
 FROM            SEARCH_ADD_MONY_DOCTOR_V</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -43,6 +44,7 @@ FROM            SEARCH_ADD_MONY_DOCTOR_V</CommandText>
               <Mapping SourceColumn="ADD_SAFY" DataSetColumn="ADD_SAFY" />
               <Mapping SourceColumn="ADD_SAFY_AR" DataSetColumn="ADD_SAFY_AR" />
               <Mapping SourceColumn="ADD_USER_ADD" DataSetColumn="ADD_USER_ADD" />
+              <Mapping SourceColumn="ADD_TYPE_MONY" DataSetColumn="ADD_TYPE_MONY" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -54,7 +56,7 @@ FROM            SEARCH_ADD_MONY_DOCTOR_V</CommandText>
   <xs:element name="ADD_MONY_DATASET" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ADD_MONY_DATASET" msprop:Generator_UserDSName="ADD_MONY_DATASET">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_TableClassName="SEARCH_ADD_MONY_DOCTOR_VDataTable" msprop:Generator_TableVarName="tableSEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_RowChangedName="SEARCH_ADD_MONY_DOCTOR_VRowChanged" msprop:Generator_TablePropName="SEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_RowDeletingName="SEARCH_ADD_MONY_DOCTOR_VRowDeleting" msprop:Generator_RowChangingName="SEARCH_ADD_MONY_DOCTOR_VRowChanging" msprop:Generator_RowEvHandlerName="SEARCH_ADD_MONY_DOCTOR_VRowChangeEventHandler" msprop:Generator_RowDeletedName="SEARCH_ADD_MONY_DOCTOR_VRowDeleted" msprop:Generator_RowClassName="SEARCH_ADD_MONY_DOCTOR_VRow" msprop:Generator_UserTableName="SEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_RowEvArgName="SEARCH_ADD_MONY_DOCTOR_VRowChangeEvent">
+        <xs:element name="SEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_TableClassName="SEARCH_ADD_MONY_DOCTOR_VDataTable" msprop:Generator_TableVarName="tableSEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_TablePropName="SEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_RowDeletingName="SEARCH_ADD_MONY_DOCTOR_VRowDeleting" msprop:Generator_RowChangingName="SEARCH_ADD_MONY_DOCTOR_VRowChanging" msprop:Generator_RowEvHandlerName="SEARCH_ADD_MONY_DOCTOR_VRowChangeEventHandler" msprop:Generator_RowDeletedName="SEARCH_ADD_MONY_DOCTOR_VRowDeleted" msprop:Generator_UserTableName="SEARCH_ADD_MONY_DOCTOR_V" msprop:Generator_RowChangedName="SEARCH_ADD_MONY_DOCTOR_VRowChanged" msprop:Generator_RowEvArgName="SEARCH_ADD_MONY_DOCTOR_VRowChangeEvent" msprop:Generator_RowClassName="SEARCH_ADD_MONY_DOCTOR_VRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ADD_CODE" msprop:Generator_ColumnVarNameInTable="columnADD_CODE" msprop:Generator_ColumnPropNameInRow="ADD_CODE" msprop:Generator_ColumnPropNameInTable="ADD_CODEColumn" msprop:Generator_UserColumnName="ADD_CODE" minOccurs="0">
@@ -205,6 +207,13 @@ FROM            SEARCH_ADD_MONY_DOCTOR_V</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ADD_USER_ADD" msprop:Generator_ColumnVarNameInTable="columnADD_USER_ADD" msprop:Generator_ColumnPropNameInRow="ADD_USER_ADD" msprop:Generator_ColumnPropNameInTable="ADD_USER_ADDColumn" msprop:Generator_UserColumnName="ADD_USER_ADD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADD_TYPE_MONY" msprop:Generator_ColumnVarNameInTable="columnADD_TYPE_MONY" msprop:Generator_ColumnPropNameInRow="ADD_TYPE_MONY" msprop:Generator_ColumnPropNameInTable="ADD_TYPE_MONYColumn" msprop:Generator_UserColumnName="ADD_TYPE_MONY" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

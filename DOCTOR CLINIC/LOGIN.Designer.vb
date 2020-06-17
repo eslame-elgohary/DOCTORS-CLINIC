@@ -73,9 +73,9 @@ Partial Class LOGIN
         '
         'Label7
         '
-        Me.Label7.Location = New System.Drawing.Point(180, 357)
+        Me.Label7.Location = New System.Drawing.Point(139, 357)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(96, 21)
+        Me.Label7.Size = New System.Drawing.Size(137, 21)
         Me.Label7.TabIndex = 54
         Me.Label7.Text = "01112577838 / "
         '
@@ -83,7 +83,7 @@ Partial Class LOGIN
         '
         Me.Label6.Location = New System.Drawing.Point(281, 357)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 21)
+        Me.Label6.Size = New System.Drawing.Size(144, 21)
         Me.Label6.TabIndex = 53
         Me.Label6.Text = "01003587857"
         '
@@ -146,7 +146,7 @@ Partial Class LOGIN
         Me.Label5.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label5.Location = New System.Drawing.Point(315, 325)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(123, 21)
+        Me.Label5.Size = New System.Drawing.Size(126, 21)
         Me.Label5.TabIndex = 52
         Me.Label5.Text = "أ / اسلام الجوهرى"
         '
@@ -155,7 +155,7 @@ Partial Class LOGIN
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(115, 325)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(199, 21)
+        Me.Label4.Size = New System.Drawing.Size(194, 21)
         Me.Label4.TabIndex = 51
         Me.Label4.Text = "تم تصميم هذا البرنامج بمعرفة"
         '
@@ -178,7 +178,7 @@ Partial Class LOGIN
         Me.Label2.Location = New System.Drawing.Point(115, 209)
         Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 21)
+        Me.Label2.Size = New System.Drawing.Size(95, 21)
         Me.Label2.TabIndex = 49
         Me.Label2.Text = "الرقم السري :"
         '
@@ -189,7 +189,7 @@ Partial Class LOGIN
         Me.Label1.Location = New System.Drawing.Point(115, 158)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 21)
+        Me.Label1.Size = New System.Drawing.Size(104, 21)
         Me.Label1.TabIndex = 48
         Me.Label1.Text = "أسم المستخدم :"
         '

@@ -58,8 +58,15 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TXT_TYPEMONY = New System.Windows.Forms.ComboBox()
         Me.TXT_M = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ACTIVE_DOCTOR = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PRICE = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -84,11 +91,6 @@ Partial Class ADD_MONY_DOCTOR
         Me.USER_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -267,7 +269,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(391, 101)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(95, 21)
+        Me.Label16.Size = New System.Drawing.Size(90, 21)
         Me.Label16.TabIndex = 64
         Me.Label16.Text = "أسم الطبيب :"
         '
@@ -297,7 +299,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(711, 100)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(78, 21)
+        Me.Label12.Size = New System.Drawing.Size(79, 21)
         Me.Label12.TabIndex = 61
         Me.Label12.Text = "التخصص :"
         '
@@ -325,7 +327,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(212, 66)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 21)
+        Me.Label3.Size = New System.Drawing.Size(50, 21)
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "النوع :"
         '
@@ -354,7 +356,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(526, 65)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(100, 21)
+        Me.Label14.Size = New System.Drawing.Size(98, 21)
         Me.Label14.TabIndex = 55
         Me.Label14.Text = "أسم المريض :"
         '
@@ -383,7 +385,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(711, 66)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(98, 21)
+        Me.Label15.Size = New System.Drawing.Size(97, 21)
         Me.Label15.TabIndex = 52
         Me.Label15.Text = "كود المريض :"
         '
@@ -413,7 +415,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(235, 32)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 21)
+        Me.Label4.Size = New System.Drawing.Size(91, 21)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "أسم الخزينة :"
         '
@@ -430,7 +432,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(505, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 21)
+        Me.Label2.Size = New System.Drawing.Size(107, 21)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "تاريخ الأيصال :"
         '
@@ -449,7 +451,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(712, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 21)
+        Me.Label1.Size = New System.Drawing.Size(95, 21)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "رقم الايصال :"
         '
@@ -467,6 +469,8 @@ Partial Class ADD_MONY_DOCTOR
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.TXT_TYPEMONY)
         Me.GroupBox2.Controls.Add(Me.TXT_M)
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Controls.Add(Me.ACTIVE_DOCTOR)
@@ -487,6 +491,26 @@ Partial Class ADD_MONY_DOCTOR
         Me.GroupBox2.Size = New System.Drawing.Size(832, 276)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(173, 209)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(76, 21)
+        Me.Label7.TabIndex = 60
+        Me.Label7.Text = "نوع الدفع :"
+        '
+        'TXT_TYPEMONY
+        '
+        Me.TXT_TYPEMONY.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_TYPEMONY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_TYPEMONY.FormattingEnabled = True
+        Me.TXT_TYPEMONY.Items.AddRange(New Object() {"نقدي", "فيزا", "بريميوم كارد"})
+        Me.TXT_TYPEMONY.Location = New System.Drawing.Point(8, 205)
+        Me.TXT_TYPEMONY.Name = "TXT_TYPEMONY"
+        Me.TXT_TYPEMONY.Size = New System.Drawing.Size(163, 29)
+        Me.TXT_TYPEMONY.TabIndex = 59
         '
         'TXT_M
         '
@@ -511,199 +535,6 @@ Partial Class ADD_MONY_DOCTOR
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(815, 135)
         Me.DataGridView1.TabIndex = 57
-        '
-        'ACTIVE_DOCTOR
-        '
-        Me.ACTIVE_DOCTOR.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ACTIVE_DOCTOR.Appearance.Options.UseFont = True
-        Me.ACTIVE_DOCTOR.ImageOptions.Image = CType(resources.GetObject("ACTIVE_DOCTOR.ImageOptions.Image"), System.Drawing.Image)
-        Me.ACTIVE_DOCTOR.Location = New System.Drawing.Point(234, 20)
-        Me.ACTIVE_DOCTOR.Name = "ACTIVE_DOCTOR"
-        Me.ACTIVE_DOCTOR.Size = New System.Drawing.Size(42, 35)
-        Me.ACTIVE_DOCTOR.TabIndex = 56
-        '
-        'TXT_PRICE
-        '
-        Me.TXT_PRICE.BackColor = System.Drawing.Color.White
-        Me.TXT_PRICE.Enabled = False
-        Me.TXT_PRICE.Location = New System.Drawing.Point(295, 26)
-        Me.TXT_PRICE.Name = "TXT_PRICE"
-        Me.TXT_PRICE.Size = New System.Drawing.Size(99, 29)
-        Me.TXT_PRICE.TabIndex = 55
-        Me.TXT_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(400, 29)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(95, 21)
-        Me.Label11.TabIndex = 54
-        Me.Label11.Text = "قيمة الخدمة :"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(714, 28)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(87, 21)
-        Me.Label13.TabIndex = 53
-        Me.Label13.Text = "نوع الخدمة :"
-        '
-        'TXT_ACTION
-        '
-        Me.TXT_ACTION.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_ACTION.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_ACTION.FormattingEnabled = True
-        Me.TXT_ACTION.Location = New System.Drawing.Point(535, 25)
-        Me.TXT_ACTION.Name = "TXT_ACTION"
-        Me.TXT_ACTION.Size = New System.Drawing.Size(173, 29)
-        Me.TXT_ACTION.TabIndex = 52
-        '
-        'TXT_ACTION_CODE
-        '
-        Me.TXT_ACTION_CODE.BackColor = System.Drawing.Color.White
-        Me.TXT_ACTION_CODE.Enabled = False
-        Me.TXT_ACTION_CODE.Location = New System.Drawing.Point(505, 25)
-        Me.TXT_ACTION_CODE.Name = "TXT_ACTION_CODE"
-        Me.TXT_ACTION_CODE.Size = New System.Drawing.Size(21, 29)
-        Me.TXT_ACTION_CODE.TabIndex = 51
-        Me.TXT_ACTION_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TXT_ACTION_CODE.Visible = False
-        '
-        'SAFY_AR
-        '
-        Me.SAFY_AR.BackColor = System.Drawing.Color.White
-        Me.SAFY_AR.Enabled = False
-        Me.SAFY_AR.Location = New System.Drawing.Point(18, 241)
-        Me.SAFY_AR.Name = "SAFY_AR"
-        Me.SAFY_AR.Size = New System.Drawing.Size(785, 29)
-        Me.SAFY_AR.TabIndex = 49
-        Me.SAFY_AR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'SAFY
-        '
-        Me.SAFY.BackColor = System.Drawing.Color.White
-        Me.SAFY.Enabled = False
-        Me.SAFY.Location = New System.Drawing.Point(185, 206)
-        Me.SAFY.Name = "SAFY"
-        Me.SAFY.Size = New System.Drawing.Size(133, 29)
-        Me.SAFY.TabIndex = 46
-        Me.SAFY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(323, 209)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(68, 21)
-        Me.Label19.TabIndex = 48
-        Me.Label19.Text = "الصافي :"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(541, 209)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(61, 21)
-        Me.Label18.TabIndex = 47
-        Me.Label18.Text = "الخصم :"
-        '
-        'DISCOUNT
-        '
-        Me.DISCOUNT.BackColor = System.Drawing.Color.White
-        Me.DISCOUNT.Location = New System.Drawing.Point(410, 206)
-        Me.DISCOUNT.Name = "DISCOUNT"
-        Me.DISCOUNT.Size = New System.Drawing.Size(126, 29)
-        Me.DISCOUNT.TabIndex = 45
-        Me.DISCOUNT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(740, 209)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(71, 21)
-        Me.Label17.TabIndex = 43
-        Me.Label17.Text = "الأجمالي :"
-        '
-        'TOTAL
-        '
-        Me.TOTAL.BackColor = System.Drawing.Color.White
-        Me.TOTAL.Enabled = False
-        Me.TOTAL.Location = New System.Drawing.Point(609, 206)
-        Me.TOTAL.Name = "TOTAL"
-        Me.TOTAL.Size = New System.Drawing.Size(125, 29)
-        Me.TOTAL.TabIndex = 44
-        Me.TOTAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TIMEREDIT
-        '
-        '
-        'TIMERADD
-        '
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 492)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(855, 22)
-        Me.StatusStrip1.SizingGrip = False
-        Me.StatusStrip1.TabIndex = 34
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel4
-        '
-        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
-        Me.ToolStripStatusLabel4.Text = "الأضافة : "
-        '
-        'USER_ADD
-        '
-        Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
-        Me.USER_ADD.Text = "ToolStripStatusLabel1"
-        '
-        'DATE_ADD
-        '
-        Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
-        Me.DATE_ADD.Text = "ToolStripStatusLabel2"
-        '
-        'TIME_ADD
-        '
-        Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
-        Me.TIME_ADD.Text = "ToolStripStatusLabel3"
-        '
-        'EDITNAMEBT
-        '
-        Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
-        Me.EDITNAMEBT.Text = "التعديل : "
-        Me.EDITNAMEBT.Visible = False
-        '
-        'USER_EDIT
-        '
-        Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
-        Me.USER_EDIT.Text = "ToolStripStatusLabel6"
-        Me.USER_EDIT.Visible = False
-        '
-        'DATE_EDIT
-        '
-        Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
-        Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
-        Me.DATE_EDIT.Visible = False
-        '
-        'TIME_EDIT
-        '
-        Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
-        Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
-        Me.TIME_EDIT.Visible = False
         '
         'Column1
         '
@@ -739,6 +570,199 @@ Partial Class ADD_MONY_DOCTOR
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         Me.Column4.Visible = False
+        '
+        'ACTIVE_DOCTOR
+        '
+        Me.ACTIVE_DOCTOR.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ACTIVE_DOCTOR.Appearance.Options.UseFont = True
+        Me.ACTIVE_DOCTOR.ImageOptions.Image = CType(resources.GetObject("ACTIVE_DOCTOR.ImageOptions.Image"), System.Drawing.Image)
+        Me.ACTIVE_DOCTOR.Location = New System.Drawing.Point(234, 20)
+        Me.ACTIVE_DOCTOR.Name = "ACTIVE_DOCTOR"
+        Me.ACTIVE_DOCTOR.Size = New System.Drawing.Size(42, 35)
+        Me.ACTIVE_DOCTOR.TabIndex = 56
+        '
+        'TXT_PRICE
+        '
+        Me.TXT_PRICE.BackColor = System.Drawing.Color.White
+        Me.TXT_PRICE.Enabled = False
+        Me.TXT_PRICE.Location = New System.Drawing.Point(295, 26)
+        Me.TXT_PRICE.Name = "TXT_PRICE"
+        Me.TXT_PRICE.Size = New System.Drawing.Size(99, 29)
+        Me.TXT_PRICE.TabIndex = 55
+        Me.TXT_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(400, 29)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(89, 21)
+        Me.Label11.TabIndex = 54
+        Me.Label11.Text = "قيمة الخدمة :"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(714, 28)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(86, 21)
+        Me.Label13.TabIndex = 53
+        Me.Label13.Text = "نوع الخدمة :"
+        '
+        'TXT_ACTION
+        '
+        Me.TXT_ACTION.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_ACTION.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_ACTION.FormattingEnabled = True
+        Me.TXT_ACTION.Location = New System.Drawing.Point(535, 25)
+        Me.TXT_ACTION.Name = "TXT_ACTION"
+        Me.TXT_ACTION.Size = New System.Drawing.Size(173, 29)
+        Me.TXT_ACTION.TabIndex = 52
+        '
+        'TXT_ACTION_CODE
+        '
+        Me.TXT_ACTION_CODE.BackColor = System.Drawing.Color.White
+        Me.TXT_ACTION_CODE.Enabled = False
+        Me.TXT_ACTION_CODE.Location = New System.Drawing.Point(505, 25)
+        Me.TXT_ACTION_CODE.Name = "TXT_ACTION_CODE"
+        Me.TXT_ACTION_CODE.Size = New System.Drawing.Size(21, 29)
+        Me.TXT_ACTION_CODE.TabIndex = 51
+        Me.TXT_ACTION_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ACTION_CODE.Visible = False
+        '
+        'SAFY_AR
+        '
+        Me.SAFY_AR.BackColor = System.Drawing.Color.White
+        Me.SAFY_AR.Enabled = False
+        Me.SAFY_AR.Location = New System.Drawing.Point(9, 241)
+        Me.SAFY_AR.Name = "SAFY_AR"
+        Me.SAFY_AR.Size = New System.Drawing.Size(794, 29)
+        Me.SAFY_AR.TabIndex = 49
+        Me.SAFY_AR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'SAFY
+        '
+        Me.SAFY.BackColor = System.Drawing.Color.White
+        Me.SAFY.Enabled = False
+        Me.SAFY.Location = New System.Drawing.Point(262, 205)
+        Me.SAFY.Name = "SAFY"
+        Me.SAFY.Size = New System.Drawing.Size(117, 29)
+        Me.SAFY.TabIndex = 46
+        Me.SAFY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(385, 209)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(65, 21)
+        Me.Label19.TabIndex = 48
+        Me.Label19.Text = "الصافي :"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(562, 209)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(60, 21)
+        Me.Label18.TabIndex = 47
+        Me.Label18.Text = "الخصم :"
+        '
+        'DISCOUNT
+        '
+        Me.DISCOUNT.BackColor = System.Drawing.Color.White
+        Me.DISCOUNT.Location = New System.Drawing.Point(455, 206)
+        Me.DISCOUNT.Name = "DISCOUNT"
+        Me.DISCOUNT.Size = New System.Drawing.Size(105, 29)
+        Me.DISCOUNT.TabIndex = 45
+        Me.DISCOUNT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(740, 209)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(71, 21)
+        Me.Label17.TabIndex = 43
+        Me.Label17.Text = "الأجمالي :"
+        '
+        'TOTAL
+        '
+        Me.TOTAL.BackColor = System.Drawing.Color.White
+        Me.TOTAL.Enabled = False
+        Me.TOTAL.Location = New System.Drawing.Point(627, 206)
+        Me.TOTAL.Name = "TOTAL"
+        Me.TOTAL.Size = New System.Drawing.Size(107, 29)
+        Me.TOTAL.TabIndex = 44
+        Me.TOTAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TIMEREDIT
+        '
+        '
+        'TIMERADD
+        '
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 492)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(855, 22)
+        Me.StatusStrip1.SizingGrip = False
+        Me.StatusStrip1.TabIndex = 34
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel4
+        '
+        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Text = "الأضافة : "
+        '
+        'USER_ADD
+        '
+        Me.USER_ADD.Name = "USER_ADD"
+        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Text = "ToolStripStatusLabel1"
+        '
+        'DATE_ADD
+        '
+        Me.DATE_ADD.Name = "DATE_ADD"
+        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Text = "ToolStripStatusLabel2"
+        '
+        'TIME_ADD
+        '
+        Me.TIME_ADD.Name = "TIME_ADD"
+        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Text = "ToolStripStatusLabel3"
+        '
+        'EDITNAMEBT
+        '
+        Me.EDITNAMEBT.Name = "EDITNAMEBT"
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Text = "التعديل : "
+        Me.EDITNAMEBT.Visible = False
+        '
+        'USER_EDIT
+        '
+        Me.USER_EDIT.Name = "USER_EDIT"
+        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Text = "ToolStripStatusLabel6"
+        Me.USER_EDIT.Visible = False
+        '
+        'DATE_EDIT
+        '
+        Me.DATE_EDIT.Name = "DATE_EDIT"
+        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
+        Me.DATE_EDIT.Visible = False
+        '
+        'TIME_EDIT
+        '
+        Me.TIME_EDIT.Name = "TIME_EDIT"
+        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
+        Me.TIME_EDIT.Visible = False
         '
         'ADD_MONY_DOCTOR
         '
@@ -838,4 +862,6 @@ Partial Class ADD_MONY_DOCTOR
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewButtonColumn
+    Friend WithEvents TXT_TYPEMONY As ComboBox
+    Friend WithEvents Label7 As Label
 End Class

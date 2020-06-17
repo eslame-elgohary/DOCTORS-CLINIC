@@ -2,6 +2,7 @@
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         open_connection()
+        open_connection2()
         FILL_USERS()
         If My.Settings.SERIALUSER = "" Then
             ROWHA.ShowDialog()

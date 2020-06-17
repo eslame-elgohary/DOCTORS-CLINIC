@@ -327,6 +327,8 @@ Partial Public Class ADD_MONY_DATASET
         
         Private columnADD_USER_ADD As Global.System.Data.DataColumn
         
+        Private columnADD_TYPE_MONY As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -539,6 +541,14 @@ Partial Public Class ADD_MONY_DATASET
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ADD_TYPE_MONYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnADD_TYPE_MONY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -597,9 +607,10 @@ Partial Public Class ADD_MONY_DATASET
                     ByVal ADD_DIS As String,  _
                     ByVal ADD_SAFY As String,  _
                     ByVal ADD_SAFY_AR As String,  _
-                    ByVal ADD_USER_ADD As String) As SEARCH_ADD_MONY_DOCTOR_VRow
+                    ByVal ADD_USER_ADD As String,  _
+                    ByVal ADD_TYPE_MONY As String) As SEARCH_ADD_MONY_DOCTOR_VRow
             Dim rowSEARCH_ADD_MONY_DOCTOR_VRow As SEARCH_ADD_MONY_DOCTOR_VRow = CType(Me.NewRow,SEARCH_ADD_MONY_DOCTOR_VRow)
-            Dim columnValuesArray() As Object = New Object() {ADD_CODE, ADD_DATE, ADD_TYPE, ADD_PA_CODE, PA_NAME, PA_TYPE, PA_AGE, CODE_KHAZINA, KHAZINA_NAME, ADD_TKHASOS_CODE, TAKH_NAME, ADD_DOCTOR_CODE, DO_NAME, MID, CODE_ACTION, NAME_ACTION, PRICE_DOCE, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD}
+            Dim columnValuesArray() As Object = New Object() {ADD_CODE, ADD_DATE, ADD_TYPE, ADD_PA_CODE, PA_NAME, PA_TYPE, PA_AGE, CODE_KHAZINA, KHAZINA_NAME, ADD_TKHASOS_CODE, TAKH_NAME, ADD_DOCTOR_CODE, DO_NAME, MID, CODE_ACTION, NAME_ACTION, PRICE_DOCE, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD, ADD_TYPE_MONY}
             rowSEARCH_ADD_MONY_DOCTOR_VRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSEARCH_ADD_MONY_DOCTOR_VRow)
             Return rowSEARCH_ADD_MONY_DOCTOR_VRow
@@ -644,6 +655,7 @@ Partial Public Class ADD_MONY_DATASET
             Me.columnADD_SAFY = MyBase.Columns("ADD_SAFY")
             Me.columnADD_SAFY_AR = MyBase.Columns("ADD_SAFY_AR")
             Me.columnADD_USER_ADD = MyBase.Columns("ADD_USER_ADD")
+            Me.columnADD_TYPE_MONY = MyBase.Columns("ADD_TYPE_MONY")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -693,6 +705,8 @@ Partial Public Class ADD_MONY_DATASET
             MyBase.Columns.Add(Me.columnADD_SAFY_AR)
             Me.columnADD_USER_ADD = New Global.System.Data.DataColumn("ADD_USER_ADD", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnADD_USER_ADD)
+            Me.columnADD_TYPE_MONY = New Global.System.Data.DataColumn("ADD_TYPE_MONY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnADD_TYPE_MONY)
             Me.columnADD_CODE.MaxLength = 50
             Me.columnADD_DATE.MaxLength = 50
             Me.columnADD_TYPE.MaxLength = 50
@@ -715,6 +729,7 @@ Partial Public Class ADD_MONY_DATASET
             Me.columnADD_SAFY.MaxLength = 50
             Me.columnADD_SAFY_AR.MaxLength = 50
             Me.columnADD_USER_ADD.MaxLength = 50
+            Me.columnADD_TYPE_MONY.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1200,6 +1215,22 @@ Partial Public Class ADD_MONY_DATASET
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ADD_TYPE_MONY() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSEARCH_ADD_MONY_DOCTOR_V.ADD_TYPE_MONYColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ADD_TYPE_MONY' in table 'SEARCH_ADD_MONY_DOCTOR_V' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSEARCH_ADD_MONY_DOCTOR_V.ADD_TYPE_MONYColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsADD_CODENull() As Boolean
             Return Me.IsNull(Me.tableSEARCH_ADD_MONY_DOCTOR_V.ADD_CODEColumn)
         End Function
@@ -1461,6 +1492,18 @@ Partial Public Class ADD_MONY_DATASET
         Public Sub SetADD_USER_ADDNull()
             Me(Me.tableSEARCH_ADD_MONY_DOCTOR_V.ADD_USER_ADDColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsADD_TYPE_MONYNull() As Boolean
+            Return Me.IsNull(Me.tableSEARCH_ADD_MONY_DOCTOR_V.ADD_TYPE_MONYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetADD_TYPE_MONYNull()
+            Me(Me.tableSEARCH_ADD_MONY_DOCTOR_V.ADD_TYPE_MONYColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1651,6 +1694,7 @@ Namespace ADD_MONY_DATASETTableAdapters
             tableMapping.ColumnMappings.Add("ADD_SAFY", "ADD_SAFY")
             tableMapping.ColumnMappings.Add("ADD_SAFY_AR", "ADD_SAFY_AR")
             tableMapping.ColumnMappings.Add("ADD_USER_ADD", "ADD_USER_ADD")
+            tableMapping.ColumnMappings.Add("ADD_TYPE_MONY", "ADD_TYPE_MONY")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1668,10 +1712,10 @@ Namespace ADD_MONY_DATASETTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ADD_CODE, ADD_DATE, ADD_TYPE, ADD_PA_CODE, PA_NAME, PA_TYPE, PA_AGE"& _ 
-                ", CODE_KHAZINA, KHAZINA_NAME, ADD_TKHASOS_CODE, TAKH_NAME, "&Global.Microsoft.VisualBasic.ChrW(10)&"                    "& _ 
-                "     ADD_DOCTOR_CODE, DO_NAME, MID, CODE_ACTION, NAME_ACTION, PRICE_DOCE, ADD_TO"& _ 
-                "TAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            SEARCH_ADD_MON"& _ 
-                "Y_DOCTOR_V"
+                ", CODE_KHAZINA, KHAZINA_NAME, ADD_TKHASOS_CODE, TAKH_NAME, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
+                "      ADD_DOCTOR_CODE, DO_NAME, MID, CODE_ACTION, NAME_ACTION, PRICE_DOCE, ADD_T"& _ 
+                "OTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         A"& _ 
+                "DD_TYPE_MONY"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            SEARCH_ADD_MONY_DOCTOR_V"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
