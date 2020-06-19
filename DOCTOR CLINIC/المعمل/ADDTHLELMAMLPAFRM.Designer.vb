@@ -34,6 +34,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TH_PRICE_LAP = New System.Windows.Forms.TextBox()
         Me.TXT_M = New System.Windows.Forms.TextBox()
         Me.SAFY_AR = New System.Windows.Forms.TextBox()
         Me.SAFY = New System.Windows.Forms.TextBox()
@@ -49,6 +50,13 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.TH_NAME = New System.Windows.Forms.ComboBox()
         Me.TH_CODE = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column0 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -63,35 +71,32 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.TIM_CALC = New System.Windows.Forms.Timer(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.MAML_CODE = New System.Windows.Forms.TextBox()
         Me.MAML_NAME = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_AGE = New System.Windows.Forms.TextBox()
         Me.TXT_PA_TYPE = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
         Me.PA_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_DATE = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column0 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TH_PRICE_LAP = New System.Windows.Forms.TextBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GRBTN
@@ -233,6 +238,17 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.GroupBox2.TabIndex = 36
         Me.GroupBox2.TabStop = False
         '
+        'TH_PRICE_LAP
+        '
+        Me.TH_PRICE_LAP.BackColor = System.Drawing.Color.White
+        Me.TH_PRICE_LAP.Enabled = False
+        Me.TH_PRICE_LAP.Location = New System.Drawing.Point(18, 23)
+        Me.TH_PRICE_LAP.Name = "TH_PRICE_LAP"
+        Me.TH_PRICE_LAP.Size = New System.Drawing.Size(70, 29)
+        Me.TH_PRICE_LAP.TabIndex = 60
+        Me.TH_PRICE_LAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TH_PRICE_LAP.Visible = False
+        '
         'TXT_M
         '
         Me.TXT_M.BackColor = System.Drawing.Color.White
@@ -270,7 +286,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(323, 209)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(68, 21)
+        Me.Label19.Size = New System.Drawing.Size(65, 21)
         Me.Label19.TabIndex = 48
         Me.Label19.Text = "الصافي :"
         Me.Label19.Visible = False
@@ -280,7 +296,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(541, 209)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(61, 21)
+        Me.Label18.Size = New System.Drawing.Size(60, 21)
         Me.Label18.TabIndex = 47
         Me.Label18.Text = "الخصم :"
         Me.Label18.Visible = False
@@ -339,7 +355,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(253, 26)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 21)
+        Me.Label10.Size = New System.Drawing.Size(91, 21)
         Me.Label10.TabIndex = 37
         Me.Label10.Text = "قيمة التحليل :"
         '
@@ -348,7 +364,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(720, 28)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 21)
+        Me.Label9.Size = New System.Drawing.Size(89, 21)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "أسم التحليل :"
         '
@@ -386,269 +402,6 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(821, 134)
         Me.DataGridView1.TabIndex = 33
-        '
-        'TIMEREDIT
-        '
-        '
-        'TIMERADD
-        '
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 485)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(853, 22)
-        Me.StatusStrip1.SizingGrip = False
-        Me.StatusStrip1.TabIndex = 37
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel4
-        '
-        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
-        Me.ToolStripStatusLabel4.Text = "الأضافة : "
-        '
-        'USER_ADD
-        '
-        Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
-        Me.USER_ADD.Text = "ToolStripStatusLabel1"
-        '
-        'DATE_ADD
-        '
-        Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
-        Me.DATE_ADD.Text = "ToolStripStatusLabel2"
-        '
-        'TIME_ADD
-        '
-        Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
-        Me.TIME_ADD.Text = "ToolStripStatusLabel3"
-        '
-        'EDITNAMEBT
-        '
-        Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
-        Me.EDITNAMEBT.Text = "التعديل : "
-        Me.EDITNAMEBT.Visible = False
-        '
-        'USER_EDIT
-        '
-        Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
-        Me.USER_EDIT.Text = "ToolStripStatusLabel6"
-        Me.USER_EDIT.Visible = False
-        '
-        'DATE_EDIT
-        '
-        Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
-        Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
-        Me.DATE_EDIT.Visible = False
-        '
-        'TIME_EDIT
-        '
-        Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
-        Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
-        Me.TIME_EDIT.Visible = False
-        '
-        'TIM_CALC
-        '
-        Me.TIM_CALC.Enabled = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(132, 106)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(311, 21)
-        Me.Label4.TabIndex = 68
-        Me.Label4.Text = " السعر أسترشادى لأبلاغ المريض أذا اراد المعرفة"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.MAML_CODE)
-        Me.GroupBox1.Controls.Add(Me.MAML_NAME)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TXT_AGE)
-        Me.GroupBox1.Controls.Add(Me.TXT_PA_TYPE)
-        Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.PA_NAME)
-        Me.GroupBox1.Controls.Add(Me.PA_CODE)
-        Me.GroupBox1.Controls.Add(Me.TXT_DATE)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TXT_CODE)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Location = New System.Drawing.Point(11, -4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(831, 142)
-        Me.GroupBox1.TabIndex = 38
-        Me.GroupBox1.TabStop = False
-        '
-        'MAML_CODE
-        '
-        Me.MAML_CODE.BackColor = System.Drawing.Color.White
-        Me.MAML_CODE.Enabled = False
-        Me.MAML_CODE.Location = New System.Drawing.Point(478, 98)
-        Me.MAML_CODE.Name = "MAML_CODE"
-        Me.MAML_CODE.Size = New System.Drawing.Size(21, 29)
-        Me.MAML_CODE.TabIndex = 62
-        Me.MAML_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.MAML_CODE.Visible = False
-        '
-        'MAML_NAME
-        '
-        Me.MAML_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.MAML_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.MAML_NAME.FormattingEnabled = True
-        Me.MAML_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
-        Me.MAML_NAME.Location = New System.Drawing.Point(506, 98)
-        Me.MAML_NAME.Name = "MAML_NAME"
-        Me.MAML_NAME.Size = New System.Drawing.Size(200, 29)
-        Me.MAML_NAME.TabIndex = 60
-        '
-        'TXT_AGE
-        '
-        Me.TXT_AGE.BackColor = System.Drawing.Color.White
-        Me.TXT_AGE.Enabled = False
-        Me.TXT_AGE.Location = New System.Drawing.Point(32, 66)
-        Me.TXT_AGE.Name = "TXT_AGE"
-        Me.TXT_AGE.Size = New System.Drawing.Size(55, 29)
-        Me.TXT_AGE.TabIndex = 57
-        Me.TXT_AGE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_PA_TYPE
-        '
-        Me.TXT_PA_TYPE.BackColor = System.Drawing.Color.White
-        Me.TXT_PA_TYPE.Enabled = False
-        Me.TXT_PA_TYPE.Location = New System.Drawing.Point(151, 64)
-        Me.TXT_PA_TYPE.Name = "TXT_PA_TYPE"
-        Me.TXT_PA_TYPE.Size = New System.Drawing.Size(61, 29)
-        Me.TXT_PA_TYPE.TabIndex = 56
-        Me.TXT_PA_TYPE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'PA_NAME
-        '
-        Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.PA_NAME.FormattingEnabled = True
-        Me.PA_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
-        Me.PA_NAME.Location = New System.Drawing.Point(299, 63)
-        Me.PA_NAME.Name = "PA_NAME"
-        Me.PA_NAME.Size = New System.Drawing.Size(220, 29)
-        Me.PA_NAME.TabIndex = 54
-        '
-        'PA_CODE
-        '
-        Me.PA_CODE.BackColor = System.Drawing.Color.White
-        Me.PA_CODE.Enabled = False
-        Me.PA_CODE.Location = New System.Drawing.Point(628, 63)
-        Me.PA_CODE.Name = "PA_CODE"
-        Me.PA_CODE.Size = New System.Drawing.Size(78, 29)
-        Me.PA_CODE.TabIndex = 53
-        Me.PA_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_DATE
-        '
-        Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE.Location = New System.Drawing.Point(332, 29)
-        Me.TXT_DATE.Name = "TXT_DATE"
-        Me.TXT_DATE.Size = New System.Drawing.Size(167, 29)
-        Me.TXT_DATE.TabIndex = 11
-        '
-        'TXT_CODE
-        '
-        Me.TXT_CODE.BackColor = System.Drawing.Color.White
-        Me.TXT_CODE.Enabled = False
-        Me.TXT_CODE.Location = New System.Drawing.Point(618, 28)
-        Me.TXT_CODE.Name = "TXT_CODE"
-        Me.TXT_CODE.Size = New System.Drawing.Size(88, 29)
-        Me.TXT_CODE.TabIndex = 9
-        Me.TXT_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label7.Location = New System.Drawing.Point(264, 48)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 50)
-        Me.Label7.TabIndex = 67
-        Me.Label7.Text = "+"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(505, 32)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 21)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "تاريخ الأيصال :"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(527, 65)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(100, 21)
-        Me.Label14.TabIndex = 55
-        Me.Label14.Text = "أسم المريض :"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(93, 69)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 21)
-        Me.Label5.TabIndex = 59
-        Me.Label5.Text = "العمر :"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(218, 69)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 21)
-        Me.Label3.TabIndex = 58
-        Me.Label3.Text = "النوع :"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(712, 31)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 21)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "رقم الايصال :"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(711, 101)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 21)
-        Me.Label8.TabIndex = 70
-        Me.Label8.Text = "أسم المعمل :"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(710, 67)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 21)
-        Me.Label1.TabIndex = 69
-        Me.Label1.Text = "كود المريض :"
         '
         'Column7
         '
@@ -699,16 +452,285 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Column2.ReadOnly = True
         Me.Column2.Visible = False
         '
-        'TH_PRICE_LAP
+        'TIMEREDIT
         '
-        Me.TH_PRICE_LAP.BackColor = System.Drawing.Color.White
-        Me.TH_PRICE_LAP.Enabled = False
-        Me.TH_PRICE_LAP.Location = New System.Drawing.Point(18, 23)
-        Me.TH_PRICE_LAP.Name = "TH_PRICE_LAP"
-        Me.TH_PRICE_LAP.Size = New System.Drawing.Size(70, 29)
-        Me.TH_PRICE_LAP.TabIndex = 60
-        Me.TH_PRICE_LAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TH_PRICE_LAP.Visible = False
+        '
+        'TIMERADD
+        '
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 485)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(853, 22)
+        Me.StatusStrip1.SizingGrip = False
+        Me.StatusStrip1.TabIndex = 37
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel4
+        '
+        Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Text = "الأضافة : "
+        '
+        'USER_ADD
+        '
+        Me.USER_ADD.Name = "USER_ADD"
+        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Text = "ToolStripStatusLabel1"
+        '
+        'DATE_ADD
+        '
+        Me.DATE_ADD.Name = "DATE_ADD"
+        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Text = "ToolStripStatusLabel2"
+        '
+        'TIME_ADD
+        '
+        Me.TIME_ADD.Name = "TIME_ADD"
+        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Text = "ToolStripStatusLabel3"
+        '
+        'EDITNAMEBT
+        '
+        Me.EDITNAMEBT.Name = "EDITNAMEBT"
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Text = "التعديل : "
+        Me.EDITNAMEBT.Visible = False
+        '
+        'USER_EDIT
+        '
+        Me.USER_EDIT.Name = "USER_EDIT"
+        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Text = "ToolStripStatusLabel6"
+        Me.USER_EDIT.Visible = False
+        '
+        'DATE_EDIT
+        '
+        Me.DATE_EDIT.Name = "DATE_EDIT"
+        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
+        Me.DATE_EDIT.Visible = False
+        '
+        'TIME_EDIT
+        '
+        Me.TIME_EDIT.Name = "TIME_EDIT"
+        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
+        Me.TIME_EDIT.Visible = False
+        '
+        'TIM_CALC
+        '
+        Me.TIM_CALC.Enabled = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(132, 106)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(321, 21)
+        Me.Label4.TabIndex = 68
+        Me.Label4.Text = " السعر أسترشادى لأبلاغ المريض أذا اراد المعرفة"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.MAML_CODE)
+        Me.GroupBox1.Controls.Add(Me.MAML_NAME)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.TXT_AGE)
+        Me.GroupBox1.Controls.Add(Me.TXT_PA_TYPE)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.PA_NAME)
+        Me.GroupBox1.Controls.Add(Me.PA_CODE)
+        Me.GroupBox1.Controls.Add(Me.TXT_DATE)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.TXT_CODE)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, -4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(831, 142)
+        Me.GroupBox1.TabIndex = 38
+        Me.GroupBox1.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(711, 101)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(89, 21)
+        Me.Label8.TabIndex = 70
+        Me.Label8.Text = "أسم المعمل :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(710, 67)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(97, 21)
+        Me.Label1.TabIndex = 69
+        Me.Label1.Text = "كود المريض :"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(712, 31)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(95, 21)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "رقم الايصال :"
+        '
+        'MAML_CODE
+        '
+        Me.MAML_CODE.BackColor = System.Drawing.Color.White
+        Me.MAML_CODE.Enabled = False
+        Me.MAML_CODE.Location = New System.Drawing.Point(478, 98)
+        Me.MAML_CODE.Name = "MAML_CODE"
+        Me.MAML_CODE.Size = New System.Drawing.Size(21, 29)
+        Me.MAML_CODE.TabIndex = 62
+        Me.MAML_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.MAML_CODE.Visible = False
+        '
+        'MAML_NAME
+        '
+        Me.MAML_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.MAML_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.MAML_NAME.FormattingEnabled = True
+        Me.MAML_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
+        Me.MAML_NAME.Location = New System.Drawing.Point(506, 98)
+        Me.MAML_NAME.Name = "MAML_NAME"
+        Me.MAML_NAME.Size = New System.Drawing.Size(200, 29)
+        Me.MAML_NAME.TabIndex = 60
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(93, 69)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(52, 21)
+        Me.Label5.TabIndex = 59
+        Me.Label5.Text = "العمر :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(218, 69)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(50, 21)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "النوع :"
+        '
+        'TXT_AGE
+        '
+        Me.TXT_AGE.BackColor = System.Drawing.Color.White
+        Me.TXT_AGE.Enabled = False
+        Me.TXT_AGE.Location = New System.Drawing.Point(32, 66)
+        Me.TXT_AGE.Name = "TXT_AGE"
+        Me.TXT_AGE.Size = New System.Drawing.Size(55, 29)
+        Me.TXT_AGE.TabIndex = 57
+        Me.TXT_AGE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_PA_TYPE
+        '
+        Me.TXT_PA_TYPE.BackColor = System.Drawing.Color.White
+        Me.TXT_PA_TYPE.Enabled = False
+        Me.TXT_PA_TYPE.Location = New System.Drawing.Point(151, 64)
+        Me.TXT_PA_TYPE.Name = "TXT_PA_TYPE"
+        Me.TXT_PA_TYPE.Size = New System.Drawing.Size(61, 29)
+        Me.TXT_PA_TYPE.TabIndex = 56
+        Me.TXT_PA_TYPE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(527, 65)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(98, 21)
+        Me.Label14.TabIndex = 55
+        Me.Label14.Text = "أسم المريض :"
+        '
+        'PA_NAME
+        '
+        Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PA_NAME.DataSource = Me.PATION_BINDING
+        Me.PA_NAME.DisplayMember = "PA_NAME"
+        Me.PA_NAME.FormattingEnabled = True
+        Me.PA_NAME.Location = New System.Drawing.Point(299, 63)
+        Me.PA_NAME.Name = "PA_NAME"
+        Me.PA_NAME.Size = New System.Drawing.Size(220, 29)
+        Me.PA_NAME.TabIndex = 54
+        Me.PA_NAME.ValueMember = "PA_NAME"
+        '
+        'PA_CODE
+        '
+        Me.PA_CODE.BackColor = System.Drawing.Color.White
+        Me.PA_CODE.Enabled = False
+        Me.PA_CODE.Location = New System.Drawing.Point(628, 63)
+        Me.PA_CODE.Name = "PA_CODE"
+        Me.PA_CODE.Size = New System.Drawing.Size(78, 29)
+        Me.PA_CODE.TabIndex = 53
+        Me.PA_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_DATE
+        '
+        Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE.Location = New System.Drawing.Point(332, 29)
+        Me.TXT_DATE.Name = "TXT_DATE"
+        Me.TXT_DATE.Size = New System.Drawing.Size(167, 29)
+        Me.TXT_DATE.TabIndex = 11
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(505, 32)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(107, 21)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "تاريخ الأيصال :"
+        '
+        'TXT_CODE
+        '
+        Me.TXT_CODE.BackColor = System.Drawing.Color.White
+        Me.TXT_CODE.Enabled = False
+        Me.TXT_CODE.Location = New System.Drawing.Point(618, 28)
+        Me.TXT_CODE.Name = "TXT_CODE"
+        Me.TXT_CODE.Size = New System.Drawing.Size(88, 29)
+        Me.TXT_CODE.TabIndex = 9
+        Me.TXT_CODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label7.Location = New System.Drawing.Point(264, 48)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(48, 50)
+        Me.Label7.TabIndex = 67
+        Me.Label7.Text = "+"
+        '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT = TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
         'ADDTHLELMAMLPAFRM
         '
@@ -737,6 +759,8 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.StatusStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -805,4 +829,7 @@ Partial Class ADDTHLELMAMLPAFRM
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents TH_PRICE_LAP As TextBox
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

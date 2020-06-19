@@ -22,11 +22,9 @@ Partial Class PATIENT_REP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PATIENT_REP))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PA_NAME = New System.Windows.Forms.ComboBox()
-        Me.PA_CHEK = New System.Windows.Forms.CheckBox()
-        Me.PRINTBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,11 +37,19 @@ Partial Class PATIENT_REP
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PA_CHEK = New System.Windows.Forms.CheckBox()
+        Me.PRINTBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -58,35 +64,6 @@ Partial Class PATIENT_REP
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "طباعة كارت المرضي"
-        '
-        'PA_NAME
-        '
-        Me.PA_NAME.FormattingEnabled = True
-        Me.PA_NAME.Location = New System.Drawing.Point(495, 41)
-        Me.PA_NAME.Name = "PA_NAME"
-        Me.PA_NAME.Size = New System.Drawing.Size(270, 29)
-        Me.PA_NAME.TabIndex = 11
-        '
-        'PA_CHEK
-        '
-        Me.PA_CHEK.AutoSize = True
-        Me.PA_CHEK.Location = New System.Drawing.Point(771, 41)
-        Me.PA_CHEK.Name = "PA_CHEK"
-        Me.PA_CHEK.Size = New System.Drawing.Size(107, 25)
-        Me.PA_CHEK.TabIndex = 10
-        Me.PA_CHEK.Text = "مريض معين"
-        Me.PA_CHEK.UseVisualStyleBackColor = True
-        '
-        'PRINTBTN
-        '
-        Me.PRINTBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PRINTBTN.Appearance.Options.UseFont = True
-        Me.PRINTBTN.ImageOptions.Image = CType(resources.GetObject("PRINTBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.PRINTBTN.Location = New System.Drawing.Point(364, 32)
-        Me.PRINTBTN.Name = "PRINTBTN"
-        Me.PRINTBTN.Size = New System.Drawing.Size(96, 44)
-        Me.PRINTBTN.TabIndex = 9
-        Me.PRINTBTN.Text = "طباعة"
         '
         'DataGridView1
         '
@@ -178,6 +155,38 @@ Partial Class PATIENT_REP
         Me.Column11.Name = "Column11"
         Me.Column11.ReadOnly = True
         '
+        'PA_NAME
+        '
+        Me.PA_NAME.DataSource = Me.PATION_BINDING
+        Me.PA_NAME.DisplayMember = "PA_NAME"
+        Me.PA_NAME.FormattingEnabled = True
+        Me.PA_NAME.Location = New System.Drawing.Point(495, 41)
+        Me.PA_NAME.Name = "PA_NAME"
+        Me.PA_NAME.Size = New System.Drawing.Size(270, 29)
+        Me.PA_NAME.TabIndex = 11
+        Me.PA_NAME.ValueMember = "PA_NAME"
+        '
+        'PA_CHEK
+        '
+        Me.PA_CHEK.AutoSize = True
+        Me.PA_CHEK.Location = New System.Drawing.Point(771, 41)
+        Me.PA_CHEK.Name = "PA_CHEK"
+        Me.PA_CHEK.Size = New System.Drawing.Size(107, 25)
+        Me.PA_CHEK.TabIndex = 10
+        Me.PA_CHEK.Text = "مريض معين"
+        Me.PA_CHEK.UseVisualStyleBackColor = True
+        '
+        'PRINTBTN
+        '
+        Me.PRINTBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PRINTBTN.Appearance.Options.UseFont = True
+        Me.PRINTBTN.ImageOptions.Image = CType(resources.GetObject("PRINTBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.PRINTBTN.Location = New System.Drawing.Point(364, 32)
+        Me.PRINTBTN.Name = "PRINTBTN"
+        Me.PRINTBTN.Size = New System.Drawing.Size(96, 44)
+        Me.PRINTBTN.TabIndex = 9
+        Me.PRINTBTN.Text = "طباعة"
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.CrystalReportViewer1)
@@ -206,6 +215,22 @@ Partial Class PATIENT_REP
         Me.CrystalReportViewer1.TabIndex = 1
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.AllowNew = True
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'PATIENT_REP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -227,6 +252,8 @@ Partial Class PATIENT_REP
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -248,4 +275,7 @@ Partial Class PATIENT_REP
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

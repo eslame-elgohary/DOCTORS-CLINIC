@@ -22,87 +22,43 @@ Partial Class SEARCH_PATIENT
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SEARCH_PATIENT))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.SELECTORDER = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.PACODEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PANAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATELDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PAAGEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PANAME2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATEL2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PACODE2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PACODEDataGridViewTextBoxColumn, Me.PANAMEDataGridViewTextBoxColumn, Me.PATELDataGridViewTextBoxColumn, Me.PAAGEDataGridViewTextBoxColumn, Me.PANAME2DataGridViewTextBoxColumn, Me.PATEL2DataGridViewTextBoxColumn, Me.PACODE2DataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.PATION_BINDING
         Me.DataGridView1.Location = New System.Drawing.Point(12, 50)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(796, 365)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "PA_CODE"
-        Me.Column1.HeaderText = "كود المريض"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "PA_NAME"
-        Me.Column2.HeaderText = "أسم المريض"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "PA_TEL"
-        Me.Column3.FillWeight = 80.0!
-        Me.Column3.HeaderText = "تليفون المريض"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "PA_NAME2"
-        Me.Column4.HeaderText = "أحد الاقارب"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "PA_TEL2"
-        Me.Column5.FillWeight = 60.0!
-        Me.Column5.HeaderText = "تليفونه"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "PA_CODE2"
-        Me.Column6.FillWeight = 60.0!
-        Me.Column6.HeaderText = "رقم الملف"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.FillWeight = 50.0!
-        Me.Column7.HeaderText = "-"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
         '
         'SELECTORDER
         '
@@ -128,6 +84,70 @@ Partial Class SEARCH_PATIENT
         Me.EXITBTN.Size = New System.Drawing.Size(41, 30)
         Me.EXITBTN.TabIndex = 3
         '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT = TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
+        'PACODEDataGridViewTextBoxColumn
+        '
+        Me.PACODEDataGridViewTextBoxColumn.DataPropertyName = "PA_CODE"
+        Me.PACODEDataGridViewTextBoxColumn.HeaderText = "كود المريض"
+        Me.PACODEDataGridViewTextBoxColumn.Name = "PACODEDataGridViewTextBoxColumn"
+        Me.PACODEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PANAMEDataGridViewTextBoxColumn
+        '
+        Me.PANAMEDataGridViewTextBoxColumn.DataPropertyName = "PA_NAME"
+        Me.PANAMEDataGridViewTextBoxColumn.HeaderText = "أسم المريض"
+        Me.PANAMEDataGridViewTextBoxColumn.Name = "PANAMEDataGridViewTextBoxColumn"
+        Me.PANAMEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PATELDataGridViewTextBoxColumn
+        '
+        Me.PATELDataGridViewTextBoxColumn.DataPropertyName = "PA_TEL"
+        Me.PATELDataGridViewTextBoxColumn.HeaderText = "تليفون المريض"
+        Me.PATELDataGridViewTextBoxColumn.Name = "PATELDataGridViewTextBoxColumn"
+        Me.PATELDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PAAGEDataGridViewTextBoxColumn
+        '
+        Me.PAAGEDataGridViewTextBoxColumn.DataPropertyName = "PA_AGE"
+        Me.PAAGEDataGridViewTextBoxColumn.HeaderText = "عمر المريض"
+        Me.PAAGEDataGridViewTextBoxColumn.Name = "PAAGEDataGridViewTextBoxColumn"
+        Me.PAAGEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PANAME2DataGridViewTextBoxColumn
+        '
+        Me.PANAME2DataGridViewTextBoxColumn.DataPropertyName = "PA_NAME2"
+        Me.PANAME2DataGridViewTextBoxColumn.HeaderText = "أسم الزوج"
+        Me.PANAME2DataGridViewTextBoxColumn.Name = "PANAME2DataGridViewTextBoxColumn"
+        Me.PANAME2DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PATEL2DataGridViewTextBoxColumn
+        '
+        Me.PATEL2DataGridViewTextBoxColumn.DataPropertyName = "PA_TEL2"
+        Me.PATEL2DataGridViewTextBoxColumn.HeaderText = "تليفونه"
+        Me.PATEL2DataGridViewTextBoxColumn.Name = "PATEL2DataGridViewTextBoxColumn"
+        Me.PATEL2DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PACODE2DataGridViewTextBoxColumn
+        '
+        Me.PACODE2DataGridViewTextBoxColumn.DataPropertyName = "PA_CODE2"
+        Me.PACODE2DataGridViewTextBoxColumn.HeaderText = "رقم الملف"
+        Me.PACODE2DataGridViewTextBoxColumn.Name = "PACODE2DataGridViewTextBoxColumn"
+        Me.PACODE2DataGridViewTextBoxColumn.ReadOnly = True
+        '
         'SEARCH_PATIENT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -148,6 +168,8 @@ Partial Class SEARCH_PATIENT
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "بحث عن مريض"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -157,11 +179,14 @@ Partial Class SEARCH_PATIENT
     Friend WithEvents SELECTORDER As ComboBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewButtonColumn
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents PACODEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PANAMEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PATELDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PAAGEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PANAME2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PATEL2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PACODE2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -18,7 +18,7 @@
             DISCOUNT.Text = DR!ADD_DIS
             SAFY.Text = DR!ADD_SAFY
             SAFY_AR.Text = DR!ADD_SAFY_AR
-
+            TXT_TYPEMONY.Text = DR!ADD_TYPE_MONY
             USER_ADD.Text = DR!ADD_USER_ADD
             DATE_ADD.Text = DR!ADD_DATE_ADD
             TIME_ADD.Text = DR!ADD_TIME_ADD
@@ -75,7 +75,8 @@
         BAKY_ = Val(SAFY.Text) - Val(TXT_MONY.Text)
         TXT_BAKY.Text = Val(BAKY_)
 
-        If Val(TXT_MONY.Text) > 0 Then
+        If VAL(TXT_MONY.Text) > 0 Then
+
             SAFY_AR.Text = " دفع " & ARABIC.ConvertToArabic(TXT_MONY.Text) & "  ومتبقي  " & ARABIC.ConvertToArabic(TXT_BAKY.Text)
         Else
             SAFY_AR.Text = ""
@@ -132,6 +133,7 @@
         PA_NAME.Select()
         FILL_PATIENT()
         CALC()
+        TXT_TYPEMONY.SelectedIndex = 0
     End Sub
 
     Private Sub ADD_MONY_MAML_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -184,6 +186,7 @@
                     End If
                     DR!ADD_SAFY = SAFY.Text
                     DR!ADD_SAFY_AR = SAFY_AR.Text
+                    DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
                     DR!ADD_STAT = True
                     DR!ADD_USER_ADD = USER_ADD.Text
                     DR!ADD_DATE_ADD = DATE_ADD.Text
@@ -215,20 +218,58 @@
                     DA1.Update(DT)
                 Next
                 '============================== أضافة تفاصيل للخزينة ========================
-                Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
-                DA2.Fill(DT)
-                Dim DR2 = DT.NewRow
-                DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                DR2!KHAZINA_DATE = TXT_DATE.Text
-                DR2!CODE_DT = TXT_CODE.Text
-                DR2!CODE_DT2 = "2"
-                DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " المعمل "
-                DR2!KHAZINA_IN = TXT_MONY.Text
-                DR2!KHAZINA_OUT = "0"
-                DR2!STAT_KHAZINA = True
-                DT.Rows.Add(DR2)
-                Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                DA2.Update(DT)
+                If TXT_TYPEMONY.SelectedIndex = 0 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "2"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " المعمل "
+                    DR2!KHAZINA_IN = TXT_MONY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = TXT_TYPEMONY.Text
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+                If TXT_TYPEMONY.SelectedIndex = 1 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "2"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " المعمل "
+                    DR2!KHAZINA_IN = TXT_MONY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = TXT_TYPEMONY.Text
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+                If TXT_TYPEMONY.SelectedIndex = 2 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "2"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " المعمل "
+                    DR2!KHAZINA_IN = TXT_MONY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = TXT_TYPEMONY.Text
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+
                 '==========================================================================
                 Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
                 DA3.Fill(DT)
@@ -246,6 +287,16 @@
                 Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
                 DA3.Update(DT)
                 '==========================================================================
+                '======================= حذف التحاليل من شاشة المعمل ======================
+                Dim DT4 As New DataTable
+                Dim DA4 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION WHERE ADD_CODE = '" & TXT_CODE2.Text & "'", SqlConn)
+                DA4.Fill(DT4)
+                Dim DR4 = DT4.Rows(0)
+                DR4!STAT = False
+
+                Dim CMD4 As New SqlClient.SqlCommandBuilder(DA4)
+                DA4.Update(DT4)
+
                 PRINTBTN_Click(sender, e)
                 MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
@@ -302,6 +353,7 @@
                     End If
                     DR!ADD_SAFY = SAFY.Text
                     DR!ADD_SAFY_AR = SAFY_AR.Text
+                    DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
                     DR!ADD_STAT = True
                     DR!ADD_USER_EDIT = USER_EDIT.Text
                     DR!ADD_DATE_EDIT = DATE_EDIT.Text
@@ -341,20 +393,58 @@
                 CMD_DEL2.ExecuteNonQuery()
                 '==========================================================================
                 '============================== أضافة تفاصيل للخزينة ========================
-                Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
-                DA2.Fill(DT)
-                Dim DR2 = DT.NewRow
-                DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                DR2!KHAZINA_DATE = TXT_DATE.Text
-                DR2!CODE_DT = TXT_CODE.Text
-                DR2!CODE_DT2 = "2"
-                DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " المعمل "
-                DR2!KHAZINA_IN = TXT_MONY.Text
-                DR2!KHAZINA_OUT = "0"
-                DR2!STAT_KHAZINA = True
-                DT.Rows.Add(DR2)
-                Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                DA2.Update(DT)
+                If TXT_TYPEMONY.SelectedIndex = 0 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "2"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " المعمل "
+                    DR2!KHAZINA_IN = TXT_MONY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = TXT_TYPEMONY.Text
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+                If TXT_TYPEMONY.SelectedIndex = 1 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "2"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " المعمل "
+                    DR2!KHAZINA_IN = TXT_MONY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = TXT_TYPEMONY.Text
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+                If TXT_TYPEMONY.SelectedIndex = 2 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "2"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " المعمل "
+                    DR2!KHAZINA_IN = TXT_MONY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = TXT_TYPEMONY.Text
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+
                 '==========================================================================
                 Dim CMD_DEL3 As New SqlClient.SqlCommand
                 CMD_DEL3.Connection = SqlConn
@@ -444,6 +534,17 @@
                 Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
                 DA3.Update(DT3)
 
+                '====================== عودة لشاشة المعمل =========================
+                Dim DT4 As New DataTable
+                Dim DA4 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION WHERE ADD_CODE = '" & TXT_CODE2.Text & "'", SqlConn)
+                DA4.Fill(DT4)
+                Dim DR4 = DT4.Rows(0)
+
+                DR4!STAT = True
+
+                Dim CMD4 As New SqlClient.SqlCommandBuilder(DA4)
+                DA4.Update(DT4)
+
                 MessageBox.Show("تمت عملية حذف بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
                 CALC()
@@ -490,9 +591,10 @@
                     .Columns.Add("ADD_SAFY")
                     .Columns.Add("ADD_SAFY_AR")
                     .Columns.Add("ADD_USER_ADD")
+                    .Columns.Add("ADD_TYPE_MONY")
                 End With
                 For I As Integer = 0 To DataGridView1.Rows.Count - 1
-                    DT.Rows.Add(TXT_CODE.Text, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, MAML_NAME.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(4).Value, DataGridView1.Rows(I).Cells(5).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text)
+                    DT.Rows.Add(TXT_CODE.Text, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, MAML_NAME.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(4).Value, DataGridView1.Rows(I).Cells(5).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text, TXT_TYPEMONY.Text)
                 Next
 
                 Dim REP As New ADD_MONY_MAML_REP
@@ -714,4 +816,5 @@
     Private Sub TIM_CALC_Tick(sender As Object, e As EventArgs) Handles TIM_CALC.Tick
         CALC()
     End Sub
+
 End Class

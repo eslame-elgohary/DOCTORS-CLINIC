@@ -47,6 +47,8 @@ Partial Class ADD_MONY_DOCTOR
         Me.TXT_PA_TYPE = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.KHAZINA_CODE = New System.Windows.Forms.TextBox()
@@ -91,8 +93,11 @@ Partial Class ADD_MONY_DOCTOR
         Me.USER_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
@@ -364,11 +369,26 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PA_NAME.DataSource = Me.PATION_BINDING
+        Me.PA_NAME.DisplayMember = "PA_NAME"
         Me.PA_NAME.FormattingEnabled = True
         Me.PA_NAME.Location = New System.Drawing.Point(294, 63)
         Me.PA_NAME.Name = "PA_NAME"
         Me.PA_NAME.Size = New System.Drawing.Size(224, 29)
         Me.PA_NAME.TabIndex = 54
+        Me.PA_NAME.ValueMember = "PA_NAME"
+        '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.AllowNew = True
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PA_CODE
         '
@@ -764,6 +784,10 @@ Partial Class ADD_MONY_DOCTOR
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'ADD_MONY_DOCTOR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -787,6 +811,8 @@ Partial Class ADD_MONY_DOCTOR
         Me.GRBTN.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -864,4 +890,7 @@ Partial Class ADD_MONY_DOCTOR
     Friend WithEvents Column4 As DataGridViewButtonColumn
     Friend WithEvents TXT_TYPEMONY As ComboBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

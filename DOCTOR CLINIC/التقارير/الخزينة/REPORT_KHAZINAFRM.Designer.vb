@@ -24,6 +24,9 @@ Partial Class REPORT_KHAZINAFRM
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(REPORT_KHAZINAFRM))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GRU_CODE = New System.Windows.Forms.TextBox()
+        Me.CH_GRU = New System.Windows.Forms.CheckBox()
+        Me.GRU = New System.Windows.Forms.ComboBox()
         Me.KHAZINA_CODE = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DATE_END = New System.Windows.Forms.DateTimePicker()
@@ -34,8 +37,6 @@ Partial Class REPORT_KHAZINAFRM
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PREVIWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_CLOSE = New DevExpress.XtraEditors.SimpleButton()
-        Me.CH_GRU = New System.Windows.Forms.CheckBox()
-        Me.GRU = New System.Windows.Forms.ComboBox()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,7 +44,7 @@ Partial Class REPORT_KHAZINAFRM
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GRU_CODE = New System.Windows.Forms.TextBox()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,6 +67,35 @@ Partial Class REPORT_KHAZINAFRM
         Me.GroupBox1.Size = New System.Drawing.Size(558, 166)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'GRU_CODE
+        '
+        Me.GRU_CODE.Location = New System.Drawing.Point(6, 102)
+        Me.GRU_CODE.Name = "GRU_CODE"
+        Me.GRU_CODE.Size = New System.Drawing.Size(43, 29)
+        Me.GRU_CODE.TabIndex = 9
+        Me.GRU_CODE.Visible = False
+        '
+        'CH_GRU
+        '
+        Me.CH_GRU.AutoSize = True
+        Me.CH_GRU.Location = New System.Drawing.Point(450, 102)
+        Me.CH_GRU.Name = "CH_GRU"
+        Me.CH_GRU.Size = New System.Drawing.Size(89, 25)
+        Me.CH_GRU.TabIndex = 8
+        Me.CH_GRU.Text = "قسم معين"
+        Me.CH_GRU.UseVisualStyleBackColor = True
+        '
+        'GRU
+        '
+        Me.GRU.Enabled = False
+        Me.GRU.FormattingEnabled = True
+        Me.GRU.Items.AddRange(New Object() {"أستلام نقدية عيادة", "أستلام نقدية معمل", "مصروفات نقدية", "تحويلات نقدية", "تسويات نقدية"})
+        Me.GRU.Location = New System.Drawing.Point(55, 100)
+        Me.GRU.Name = "GRU"
+        Me.GRU.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GRU.Size = New System.Drawing.Size(389, 29)
+        Me.GRU.TabIndex = 7
         '
         'KHAZINA_CODE
         '
@@ -138,7 +168,7 @@ Partial Class REPORT_KHAZINAFRM
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column1})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column1, Me.Column8})
         Me.DataGridView1.Location = New System.Drawing.Point(-7, 252)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -166,27 +196,6 @@ Partial Class REPORT_KHAZINAFRM
         Me.BTN_CLOSE.Size = New System.Drawing.Size(105, 46)
         Me.BTN_CLOSE.TabIndex = 3
         Me.BTN_CLOSE.Text = "أغلاق"
-        '
-        'CH_GRU
-        '
-        Me.CH_GRU.AutoSize = True
-        Me.CH_GRU.Location = New System.Drawing.Point(450, 102)
-        Me.CH_GRU.Name = "CH_GRU"
-        Me.CH_GRU.Size = New System.Drawing.Size(89, 25)
-        Me.CH_GRU.TabIndex = 8
-        Me.CH_GRU.Text = "قسم معين"
-        Me.CH_GRU.UseVisualStyleBackColor = True
-        '
-        'GRU
-        '
-        Me.GRU.Enabled = False
-        Me.GRU.FormattingEnabled = True
-        Me.GRU.Items.AddRange(New Object() {"أستلام نقدية عيادة", "أستلام نقدية معمل", "مصروفات نقدية", "تحويلات نقدية", "تسويات نقدية"})
-        Me.GRU.Location = New System.Drawing.Point(55, 100)
-        Me.GRU.Name = "GRU"
-        Me.GRU.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GRU.Size = New System.Drawing.Size(389, 29)
-        Me.GRU.TabIndex = 7
         '
         'Column2
         '
@@ -237,19 +246,18 @@ Partial Class REPORT_KHAZINAFRM
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         '
-        'GRU_CODE
+        'Column8
         '
-        Me.GRU_CODE.Location = New System.Drawing.Point(6, 102)
-        Me.GRU_CODE.Name = "GRU_CODE"
-        Me.GRU_CODE.Size = New System.Drawing.Size(43, 29)
-        Me.GRU_CODE.TabIndex = 9
-        Me.GRU_CODE.Visible = False
+        Me.Column8.DataPropertyName = "MONY_TYPE"
+        Me.Column8.HeaderText = "typ"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'REPORT_KHAZINAFRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 234)
+        Me.ClientSize = New System.Drawing.Size(580, 236)
         Me.Controls.Add(Me.BTN_CLOSE)
         Me.Controls.Add(Me.PREVIWBTN)
         Me.Controls.Add(Me.DataGridView1)
@@ -284,6 +292,7 @@ Partial Class REPORT_KHAZINAFRM
     Friend WithEvents BTN_CLOSE As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents CH_GRU As CheckBox
     Friend WithEvents GRU As ComboBox
+    Friend WithEvents GRU_CODE As TextBox
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
@@ -291,5 +300,5 @@ Partial Class REPORT_KHAZINAFRM
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents GRU_CODE As TextBox
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

@@ -76,6 +76,8 @@
         End If
     End Sub
     Private Sub ADDTHLELMAMLPAFRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         NEWBTN_Click(sender, e)
     End Sub
 
@@ -106,8 +108,12 @@
         EDITBTN.Enabled = False
         DELETBTN.Enabled = False
         SAVEBTN.Enabled = True
+        '==================================
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
+        PA_NAME.Text = ""
         PA_NAME.Select()
-        FILL_PATIENT()
+
     End Sub
 
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click

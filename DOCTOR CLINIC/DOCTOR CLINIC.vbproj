@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\APP\DOCTORS\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\APP-AFTER-FAST\DOCTORS-17-6-020\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -182,10 +182,16 @@
     <Compile Include="التعاقدات\تعاقد\T3AQOD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\نقدية مطالبة\ADD_DOCTOR_T3AQOD_MONY.Designer.vb">
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.Designer.vb">
       <DependentUpon>ADD_DOCTOR_T3AQOD_MONY.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\نقدية مطالبة\ADD_DOCTOR_T3AQOD_MONY.vb">
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="تأخر الأنجاب\engabdata.Designer.vb">
@@ -1066,7 +1072,7 @@
     <EmbeddedResource Include="التعاقدات\تعاقد\T3AQOD.resx">
       <DependentUpon>T3AQOD.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\نقدية مطالبة\ADD_DOCTOR_T3AQOD_MONY.resx">
+    <EmbeddedResource Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.resx">
       <DependentUpon>ADD_DOCTOR_T3AQOD_MONY.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\lap to lap\LABTOLABCRS.rpt">
@@ -1107,6 +1113,9 @@
     <EmbeddedResource Include="التقارير\كشف حساب مريض\RASED_PATION_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RASED_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="الحجز\HAGEZ_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1663,7 +1672,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="التعاقدات\تقرير مطالبة\" />
-    <Folder Include="التعاقدات\نقدية تعاقد\" />
+    <Folder Include="التعاقدات\نقدية مطالبة\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

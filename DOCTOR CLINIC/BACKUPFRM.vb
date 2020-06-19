@@ -4,7 +4,7 @@ Public Class BACKUPFRM
     Dim cmd As SqlCommand
     Dim dread As SqlDataReader
     Private Sub BACKUPFRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cmbserver.Text = ".\SQLEXPRESS"
+        cmbserver.Text = "192.168.1.111,1433\SQLEXPRESS"
         connection()
         cmbdatabase.Text = "DOCTOR_CLINIC"
     End Sub

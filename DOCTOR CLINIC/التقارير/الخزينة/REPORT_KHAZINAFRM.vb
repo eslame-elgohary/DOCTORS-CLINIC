@@ -114,12 +114,11 @@
             .Columns.Add("KHAZINA_NAME_ACTION")
             .Columns.Add("KHAZINA_IN")
             .Columns.Add("KHAZINA_OUT")
-
-
+            .Columns.Add("MONY_TYPE")
         End With
         For I As Integer = 0 To DataGridView1.Rows.Count - 1
             If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
-                DT.Rows.Add(DataGridView1.Rows(I).Cells(0).Value, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, DataGridView1.Rows(I).Cells(4).Value, DataGridView1.Rows(I).Cells(5).Value)
+                DT.Rows.Add(DataGridView1.Rows(I).Cells(0).Value, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, DataGridView1.Rows(I).Cells(4).Value, DataGridView1.Rows(I).Cells(5).Value, DataGridView1.Rows(I).Cells(7).Value)
             End If
         Next
         Dim REP As New KHAZINA_CRS

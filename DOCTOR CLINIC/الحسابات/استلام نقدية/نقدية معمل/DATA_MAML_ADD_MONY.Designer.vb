@@ -323,6 +323,8 @@ Partial Public Class DATA_MAML_ADD_MONY
         
         Private columnMID As Global.System.Data.DataColumn
         
+        Private columnADD_TYPE_MONY As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -519,6 +521,14 @@ Partial Public Class DATA_MAML_ADD_MONY
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ADD_TYPE_MONYColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnADD_TYPE_MONY
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -575,9 +585,10 @@ Partial Public Class DATA_MAML_ADD_MONY
                     ByVal ADD_SAFY As String,  _
                     ByVal ADD_SAFY_AR As String,  _
                     ByVal ADD_USER_ADD As String,  _
-                    ByVal MID As String) As SEARCH_ADD_MONY_MAML_VRow
+                    ByVal MID As String,  _
+                    ByVal ADD_TYPE_MONY As String) As SEARCH_ADD_MONY_MAML_VRow
             Dim rowSEARCH_ADD_MONY_MAML_VRow As SEARCH_ADD_MONY_MAML_VRow = CType(Me.NewRow,SEARCH_ADD_MONY_MAML_VRow)
-            Dim columnValuesArray() As Object = New Object() {ADD_CODE, ADD_DATE, CODE_KHAZINA, KHAZINA_NAME, ADD_PA_CODE, PA_NAME, PA_AGE, PA_TYPE, ADD_MAML_CODE, NAME_MAML, CODE_THLEL, PRICE_THLEL, PRICELAP, NAME_THLEL, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD, MID}
+            Dim columnValuesArray() As Object = New Object() {ADD_CODE, ADD_DATE, CODE_KHAZINA, KHAZINA_NAME, ADD_PA_CODE, PA_NAME, PA_AGE, PA_TYPE, ADD_MAML_CODE, NAME_MAML, CODE_THLEL, PRICE_THLEL, PRICELAP, NAME_THLEL, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR, ADD_USER_ADD, MID, ADD_TYPE_MONY}
             rowSEARCH_ADD_MONY_MAML_VRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowSEARCH_ADD_MONY_MAML_VRow)
             Return rowSEARCH_ADD_MONY_MAML_VRow
@@ -620,6 +631,7 @@ Partial Public Class DATA_MAML_ADD_MONY
             Me.columnADD_SAFY_AR = MyBase.Columns("ADD_SAFY_AR")
             Me.columnADD_USER_ADD = MyBase.Columns("ADD_USER_ADD")
             Me.columnMID = MyBase.Columns("MID")
+            Me.columnADD_TYPE_MONY = MyBase.Columns("ADD_TYPE_MONY")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -665,6 +677,8 @@ Partial Public Class DATA_MAML_ADD_MONY
             MyBase.Columns.Add(Me.columnADD_USER_ADD)
             Me.columnMID = New Global.System.Data.DataColumn("MID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMID)
+            Me.columnADD_TYPE_MONY = New Global.System.Data.DataColumn("ADD_TYPE_MONY", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnADD_TYPE_MONY)
             Me.columnADD_CODE.MaxLength = 50
             Me.columnADD_DATE.MaxLength = 50
             Me.columnCODE_KHAZINA.MaxLength = 50
@@ -685,6 +699,7 @@ Partial Public Class DATA_MAML_ADD_MONY
             Me.columnADD_SAFY_AR.MaxLength = 50
             Me.columnADD_USER_ADD.MaxLength = 50
             Me.columnMID.MaxLength = 50
+            Me.columnADD_TYPE_MONY.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1132,6 +1147,22 @@ Partial Public Class DATA_MAML_ADD_MONY
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ADD_TYPE_MONY() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSEARCH_ADD_MONY_MAML_V.ADD_TYPE_MONYColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ADD_TYPE_MONY' in table 'SEARCH_ADD_MONY_MAML_V' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSEARCH_ADD_MONY_MAML_V.ADD_TYPE_MONYColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsADD_CODENull() As Boolean
             Return Me.IsNull(Me.tableSEARCH_ADD_MONY_MAML_V.ADD_CODEColumn)
         End Function
@@ -1369,6 +1400,18 @@ Partial Public Class DATA_MAML_ADD_MONY
         Public Sub SetMIDNull()
             Me(Me.tableSEARCH_ADD_MONY_MAML_V.MIDColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsADD_TYPE_MONYNull() As Boolean
+            Return Me.IsNull(Me.tableSEARCH_ADD_MONY_MAML_V.ADD_TYPE_MONYColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetADD_TYPE_MONYNull()
+            Me(Me.tableSEARCH_ADD_MONY_MAML_V.ADD_TYPE_MONYColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1557,6 +1600,7 @@ Namespace DATA_MAML_ADD_MONYTableAdapters
             tableMapping.ColumnMappings.Add("ADD_SAFY_AR", "ADD_SAFY_AR")
             tableMapping.ColumnMappings.Add("ADD_USER_ADD", "ADD_USER_ADD")
             tableMapping.ColumnMappings.Add("MID", "MID")
+            tableMapping.ColumnMappings.Add("ADD_TYPE_MONY", "ADD_TYPE_MONY")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1574,9 +1618,9 @@ Namespace DATA_MAML_ADD_MONYTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ADD_CODE, ADD_DATE, CODE_KHAZINA, KHAZINA_NAME, ADD_PA_CODE, PA_NAM"& _ 
-                "E, PA_AGE, PA_TYPE, ADD_MAML_CODE, NAME_MAML, CODE_THLEL, "&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
-                "    PRICE_THLEL, PRICELAP, NAME_THLEL, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_AR"& _ 
-                ", ADD_USER_ADD, MID"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            SEARCH_ADD_MONY_MAML_V"
+                "E, PA_AGE, PA_TYPE, ADD_MAML_CODE, NAME_MAML, CODE_THLEL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                    "& _ 
+                "     PRICE_THLEL, PRICELAP, NAME_THLEL, ADD_TOTAL, ADD_DIS, ADD_SAFY, ADD_SAFY_A"& _ 
+                "R, ADD_USER_ADD, MID, ADD_TYPE_MONY"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            SEARCH_ADD_MONY_MAML_V"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

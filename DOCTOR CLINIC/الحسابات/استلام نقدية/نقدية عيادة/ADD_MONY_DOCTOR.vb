@@ -28,12 +28,12 @@
 
 
             Dim DS As New DataSet
-                '=========== ربط تفاصيل الفاتورة =============
-                DA = New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_DOCTOR WHERE ADD_CODE = '" & CODE_ & "'", SqlConn)
-                DS = New DataSet
-                DA.Fill(DS)
-                DT = DS.Tables(0)
-                For I = 0 To DT.Rows.Count - 1
+            '=========== ربط تفاصيل الفاتورة =============
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_DOCTOR WHERE ADD_CODE = '" & CODE_ & "'", SqlConn)
+            DS = New DataSet
+            DA.Fill(DS)
+            DT = DS.Tables(0)
+            For I = 0 To DT.Rows.Count - 1
                 DataGridView1.Rows.Add()
                 DataGridView1.Rows(I).Cells(0).Value = DT.Rows(I).Item("CODE_ACTION")
                 DataGridView1.Rows(I).Cells(2).Value = DT.Rows(I).Item("NAME_ACTION")
@@ -70,8 +70,9 @@
         End If
     End Sub
     Private Sub ADD_MONY_DOCTOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         NEWBTN_Click(sender, e)
-
     End Sub
     Private Sub TIMERADD_Tick(sender As Object, e As EventArgs) Handles TIMERADD.Tick
         USER_ADD.Text = HOME.T_USERS.Text
@@ -121,11 +122,15 @@
         TIMEREDIT.Enabled = False
         TXT_M.Text = "1"
         FILL_KHAZINA_CODE()
-        PA_NAME.Select()
-        FILL_PATIENT()
+
         CALC()
         FILL_KHAZINA()
         TXT_TYPEMONY.SelectedIndex = 0
+        '=====================================================
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
+        PA_NAME.Text = ""
+        PA_NAME.Select()
     End Sub
     Sub FILL_KHAZINA_CODE()
         Dim DT As New DataTable
@@ -144,16 +149,6 @@
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             KHAZINA_NAME.Text = DT.Rows(I).Item("KHAZINA_NAME")
-        Next
-    End Sub
-    Sub FILL_PATIENT()
-        PA_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            PA_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
-
         Next
     End Sub
     Private Sub PA_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PA_NAME.SelectedIndexChanged
@@ -469,6 +464,7 @@
                     DR!ADD_DIS = DISCOUNT.Text
                     DR!ADD_SAFY = SAFY.Text
                     DR!ADD_SAFY_AR = SAFY_AR.Text
+                    DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
                     DR!ADD_STAT = True
                     DR!ADD_USER_EDIT = USER_EDIT.Text
                     DR!ADD_DATE_EDIT = DATE_EDIT.Text
@@ -505,20 +501,58 @@
                 CMD_DEL2.ExecuteNonQuery()
                 '============================== أضافة تفاصيل للخزينة ========================
                 '============================== أضافة تفاصيل للخزينة ========================
-                Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT = '" & TXT_CODE.Text & "' ", SqlConn)
-                DA2.Fill(DT)
-                Dim DR2 = DT.NewRow
-                DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                DR2!KHAZINA_DATE = TXT_DATE.Text
-                DR2!CODE_DT = TXT_CODE.Text
-                DR2!CODE_DT2 = "1"
-                DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
-                DR2!KHAZINA_IN = SAFY.Text
-                DR2!KHAZINA_OUT = "0"
-                DR2!STAT_KHAZINA = True
-                DT.Rows.Add(DR2)
-                Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                DA2.Update(DT)
+                If TXT_TYPEMONY.SelectedIndex = 0 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "1"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
+                    DR2!KHAZINA_IN = SAFY.Text
+                    DR2!MONY_TYPE = "نقدي"
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+
+                If TXT_TYPEMONY.SelectedIndex = 1 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "1"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
+                    DR2!KHAZINA_IN = SAFY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = "فيزا"
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+                If TXT_TYPEMONY.SelectedIndex = 2 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "1"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
+                    DR2!KHAZINA_IN = SAFY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = "بريميوم كارد"
+                    DR2!STAT_KHAZINA = True
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
 
                 '==========================================================================
 
@@ -732,4 +766,5 @@
         End If
         LASTCOMEFRM.ShowDialog()
     End Sub
+
 End Class

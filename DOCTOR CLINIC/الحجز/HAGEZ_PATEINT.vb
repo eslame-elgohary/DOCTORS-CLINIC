@@ -18,8 +18,6 @@
             USER_ADD.Text = DR!USER_ADD
             DATE_ADD.Text = DR!DATE_ADD
             TIME_ADD.Text = DR!TIME_ADD
-
-
             BTN_EDIT.Enabled = True
             BTN_SAVE.Enabled = False
             TIMEREDIT.Enabled = True
@@ -34,21 +32,26 @@
         For I = 0 To GroupBox1.Controls.Count - 1
             If TypeOf GroupBox1.Controls(I) Is ComboBox Then GroupBox1.Controls(I).Text = ""
         Next
-        FILL_PATIENT()
         TXT_DATE.Text = Date.Today
         BTN_EDIT.Enabled = False
         BTN_SAVE.Enabled = True
         TIMERADD.Enabled = True
         CODE_TIMER.Enabled = True
         TIMEREDIT.Enabled = False
-        TXT_NAME_PA.Select()
+
+        '=========================================
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
+        PA_NAME.Text = ""
+        PA_NAME.Select()
+        DataGridView1.Refresh()
 
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
-        If TXT_NAME_PA.Text = "" Then
+        If PA_NAME.Text = "" Then
             MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            TXT_NAME_PA.Select()
+            PA_NAME.Select()
             Exit Sub
         End If
         If TXT_TKHSOS.Text = "" Then
@@ -86,16 +89,15 @@
             DT.Rows.Add(DR)
             Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
             DA.Update(DT)
-
             MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
             BTN_NEW_Click(sender, e)
         End If
     End Sub
 
     Private Sub BTN_EDIT_Click(sender As Object, e As EventArgs) Handles BTN_EDIT.Click
-        If TXT_NAME_PA.Text = "" Then
+        If PA_NAME.Text = "" Then
             MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            TXT_NAME_PA.Select()
+            PA_NAME.Select()
             Exit Sub
         End If
         If TXT_TKHSOS.Text = "" Then
@@ -172,8 +174,9 @@
     End Sub
 
     Private Sub HAGEZ_PATEINT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         BTN_NEW_Click(sender, e)
-
     End Sub
 
     Private Sub ADD_PA_Click(sender As Object, e As EventArgs) Handles ADD_PA.Click
@@ -189,7 +192,6 @@
                 '=============================================================
             Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
             End If
         End If
     End Sub
@@ -213,14 +215,13 @@
         TIME_EDIT.Text = TimeOfDay
     End Sub
     Sub FILL_PATIENT()
-        TXT_NAME_PA.Items.Clear()
+        PA_NAME.Items.Clear()
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT PA_NAME,STAT FROM PATIENT WHERE STAT='TRUE'  ", SqlConn)
         DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_NAME_PA.Items.Add(DT.Rows(I).Item("PA_NAME"))
+        For Each r As DataRow In DT.Rows
+            PA_NAME.Items.Add(r("PA_NAME"))
         Next
-        FILL_TKHASOS()
     End Sub
     Sub FILL_TKHASOS()
         TXT_TKHSOS.Items.Clear()
@@ -243,9 +244,9 @@
             TXT_DOCTOR.Items.Add(DT.Rows(I).Item("DO_NAME"))
         Next
     End Sub
-    Private Sub TXT_NAME_PA_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_NAME_PA.SelectedIndexChanged
+    Private Sub TXT_NAME_PA_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PA_NAME.SelectedIndexChanged
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME='" & TXT_NAME_PA.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME='" & PA_NAME.Text & "'", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             TXT_CODE_PA.Text = DT.Rows(I).Item("PA_CODE")
@@ -253,6 +254,7 @@
             TXT_CODE2.Text = DT.Rows(I).Item("PA_TEL2")
 
         Next
+        FILL_TKHASOS()
     End Sub
 
     Private Sub TXT_CODE_PA_TextChanged(sender As Object, e As EventArgs) Handles TXT_CODE_PA.TextChanged
@@ -260,10 +262,11 @@
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE='" & TXT_CODE_PA.Text & "'", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
-            TXT_NAME_PA.Text = DT.Rows(I).Item("PA_NAME")
+            PA_NAME.Text = DT.Rows(I).Item("PA_NAME")
             TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
             TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
         Next
+        FILL_TKHASOS()
     End Sub
 
     Private Sub TXT_TKHSOS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_TKHSOS.SelectedIndexChanged
@@ -368,5 +371,10 @@
             TXT_CODE.Text = "1"
         End If
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Dim x As New Form2
+        x.Show()
     End Sub
 End Class

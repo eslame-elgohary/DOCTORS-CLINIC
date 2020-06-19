@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class HAGEZ_PATEINT
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class HAGEZ_PATEINT
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HAGEZ_PATEINT))
@@ -42,7 +42,9 @@ Partial Class HAGEZ_PATEINT
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_TKHSOS = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TXT_NAME_PA = New System.Windows.Forms.ComboBox()
+        Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.Label()
         Me.ADD_PA = New System.Windows.Forms.Label()
@@ -67,7 +69,10 @@ Partial Class HAGEZ_PATEINT
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.CODE_TIMER = New System.Windows.Forms.Timer(Me.components)
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,7 +96,7 @@ Partial Class HAGEZ_PATEINT
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.TXT_TKHSOS)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TXT_NAME_PA)
+        Me.GroupBox1.Controls.Add(Me.PA_NAME)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TXT_CODE)
         Me.GroupBox1.Controls.Add(Me.ADD_PA)
@@ -211,7 +216,7 @@ Partial Class HAGEZ_PATEINT
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(832, 75)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 21)
+        Me.Label4.Size = New System.Drawing.Size(61, 21)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "التاريخ :"
         '
@@ -241,7 +246,7 @@ Partial Class HAGEZ_PATEINT
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(205, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 21)
+        Me.Label3.Size = New System.Drawing.Size(90, 21)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "أسم الطبيب :"
         '
@@ -260,26 +265,41 @@ Partial Class HAGEZ_PATEINT
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(491, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 21)
+        Me.Label2.Size = New System.Drawing.Size(58, 21)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "العيادة :"
         '
-        'TXT_NAME_PA
+        'PA_NAME
         '
-        Me.TXT_NAME_PA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_NAME_PA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_NAME_PA.FormattingEnabled = True
-        Me.TXT_NAME_PA.Location = New System.Drawing.Point(578, 28)
-        Me.TXT_NAME_PA.Name = "TXT_NAME_PA"
-        Me.TXT_NAME_PA.Size = New System.Drawing.Size(248, 29)
-        Me.TXT_NAME_PA.TabIndex = 1
+        Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PA_NAME.DataSource = Me.PATION_BINDING
+        Me.PA_NAME.DisplayMember = "PA_NAME"
+        Me.PA_NAME.FormattingEnabled = True
+        Me.PA_NAME.Location = New System.Drawing.Point(578, 28)
+        Me.PA_NAME.Name = "PA_NAME"
+        Me.PA_NAME.Size = New System.Drawing.Size(248, 29)
+        Me.PA_NAME.TabIndex = 1
+        Me.PA_NAME.ValueMember = "PA_NAME"
+        '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.AllowNew = True
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(832, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 21)
+        Me.Label1.Size = New System.Drawing.Size(98, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "أسم المريض :"
         '
@@ -400,57 +420,61 @@ Partial Class HAGEZ_PATEINT
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
         'CODE_TIMER
         '
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
         'HAGEZ_PATEINT
         '
@@ -472,6 +496,8 @@ Partial Class HAGEZ_PATEINT
         Me.Text = "الحجز"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
@@ -481,7 +507,7 @@ Partial Class HAGEZ_PATEINT
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TXT_NAME_PA As ComboBox
+    Friend WithEvents PA_NAME As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TXT_DOCTOR As ComboBox
     Friend WithEvents Label3 As Label
@@ -523,4 +549,7 @@ Partial Class HAGEZ_PATEINT
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

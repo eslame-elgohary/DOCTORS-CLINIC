@@ -6,7 +6,6 @@ Public Class HOME
         Timer1.Start()
         T_DATE.Text = Date.Today
     End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         T_TIME.Text = TimeOfDay
         T_DATE.Text = Date.Today

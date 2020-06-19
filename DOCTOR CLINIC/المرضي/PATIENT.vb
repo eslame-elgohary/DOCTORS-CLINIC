@@ -65,31 +65,26 @@
         '""""""""""""""" الترقيم التلقائي """"""""""""""
         PA_CODE.Text = CODE_GENE("PATIENT", "ID") + 1
         '""""""""""""""""""""""""""""""
-
-
         EDITBTN.Enabled = False
         DELETBTN.Enabled = False
         SAVEBTN.Enabled = True
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         PA_NAME.Select()
-        PATION()
         PA_NAME.Text = ""
-
     End Sub
-    Sub PATION()
+    Sub FILL_PATIENT()
         PA_NAME.Items.Clear()
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT PA_NAME,STAT FROM PATIENT WHERE STAT = 'TRUE'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT PA_NAME,STAT FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
         DA.Fill(DT)
-        If DT.Rows.Count > 0 Then
-            For I = 0 To DT.Rows.Count - 1
-                PA_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
-
-            Next
-
-        End If
+        For Each r As DataRow In DT.Rows
+            PA_NAME.Items.Add(r("PA_NAME"))
+        Next
     End Sub
-
     Private Sub PATIENT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         NEWBTN_Click(sender, e)
     End Sub
 
@@ -125,14 +120,14 @@
         End If
     End Sub
 
-    Private Sub PA_OP_R1_KeyDown(sender As Object, e As KeyEventArgs)
+    Private Sub PA_OP_R1_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_OP_R1.KeyDown
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
             SendKeys.Send("{Tab}")
         End If
     End Sub
 
-    Private Sub PA_CHI_R1_KeyDown(sender As Object, e As KeyEventArgs)
+    Private Sub PA_CHI_R1_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_CHI_R1.KeyDown
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
             SendKeys.Send("{Tab}")
@@ -145,8 +140,38 @@
             SendKeys.Send("{Tab}")
         End If
     End Sub
-    Private Sub PA_NAME_TextChanged(sender As Object, e As EventArgs)
+    Private Sub PA_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PA_NAME.SelectedIndexChanged
         PA_NAME.BackColor = Color.White
+        Try
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME = '" & PA_NAME.Text & "'", SqlConn)
+            DA.Fill(DT)
+
+            Dim DR = DT.Rows(0)
+            PA_CODE.Text = DR!PA_CODE
+            PA_CODE2.Text = DR!PA_CODE2
+            PA_NAME.Text = DR!PA_NAME
+            PA_NAME2.Text = DR!PA_NAME2
+            PA_TEL.Text = DR!PA_TEL
+            PA_TEL2.Text = DR!PA_TEL2
+            PA_AGE.Text = DR!PA_AGE
+            PA_OP_R1.Checked = DR!PA_OP_R1
+            PA_OP.Text = DR!PA_OP
+            PA_CHI_R1.Checked = DR!PA_CHI_R1
+            PA_CHI.Text = DR!PA_CHI
+            PA_TYPE.Text = DR!PA_TYPE
+
+            DELETBTN.Enabled = True
+            EDITBTN.Enabled = True
+            SAVEBTN.Enabled = False
+            TIMEREDIT.Enabled = True
+            TIMERADD.Enabled = False
+            AUTOCHI.Checked = False
+            AUTOCHI.Visible = False
+
+        Catch ex As Exception
+
+        End Try
     End Sub
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
         Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
@@ -193,6 +218,7 @@
                     DA.Update(DT)
                     MessageBox.Show("تمت عملية حفظ بيانات المريض بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     NEWBTN_Click(sender, e)
+
                 End If
 
             Else
@@ -249,8 +275,6 @@
                     DA.Update(DT)
                     MessageBox.Show("تمت عملية تعديل بيانات المريض بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     NEWBTN_Click(sender, e)
-
-
                 End If
 
             Else
@@ -464,5 +488,6 @@
             e.SuppressKeyPress = True
             SendKeys.Send("{Tab}")
         End If
+
     End Sub
 End Class
