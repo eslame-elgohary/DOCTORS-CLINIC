@@ -22,6 +22,7 @@ Partial Class HISTORY_ENGAB
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HISTORY_ENGAB))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
@@ -53,8 +54,13 @@ Partial Class HISTORY_ENGAB
         Me.BTN_EDIT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_SAVE = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_NEW = New DevExpress.XtraEditors.SimpleButton()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -247,11 +253,14 @@ Partial Class HISTORY_ENGAB
         Me.TXT_NAME_PA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_NAME_PA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_NAME_PA.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_NAME_PA.DataSource = Me.BindingSource1
+        Me.TXT_NAME_PA.DisplayMember = "PA_NAME"
         Me.TXT_NAME_PA.FormattingEnabled = True
         Me.TXT_NAME_PA.Location = New System.Drawing.Point(233, 23)
         Me.TXT_NAME_PA.Name = "TXT_NAME_PA"
         Me.TXT_NAME_PA.Size = New System.Drawing.Size(301, 27)
         Me.TXT_NAME_PA.TabIndex = 1
+        Me.TXT_NAME_PA.ValueMember = "PA_NAME"
         '
         'TXT_CODE
         '
@@ -383,6 +392,22 @@ Partial Class HISTORY_ENGAB
         Me.BTN_NEW.TabIndex = 17
         Me.BTN_NEW.Text = "NEW"
         '
+        'BindingSource1
+        '
+        Me.BindingSource1.AllowNew = True
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "stat=true"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'HISTORY_ENGAB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
@@ -409,6 +434,8 @@ Partial Class HISTORY_ENGAB
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -444,4 +471,7 @@ Partial Class HISTORY_ENGAB
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewButtonColumn
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

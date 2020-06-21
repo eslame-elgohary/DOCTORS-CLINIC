@@ -90,20 +90,12 @@
         SAVEBTN.Enabled = True
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         TXT_NAME_PA.Select()
         TXT_D.Text = "0"
         TXT_KG.Text = "0"
         TXT_HRARA.Text = "0"
 
-    End Sub
-    Sub FILL_PATIENT()
-        TXT_NAME_PA.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_NAME_PA.Items.Add(DT.Rows(I).Item("PA_NAME"))
-        Next
     End Sub
     Private Sub TXT_NAME_PA_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_NAME_PA.SelectedIndexChanged
         Dim DT As New DataTable
@@ -456,7 +448,6 @@
 
     Private Sub ELAG_FRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NEWBTN_Click(sender, e)
-        FILL_PATIENT()
         FILL_PHARM()
         FILL_GOR3A()
         FILL_DOCTOR()

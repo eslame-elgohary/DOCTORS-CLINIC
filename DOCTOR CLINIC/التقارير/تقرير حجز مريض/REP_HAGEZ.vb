@@ -1,20 +1,12 @@
 ﻿Public Class REP_HAGEZ
     Private Sub REP_HAGEZ_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         TXT_START_DATE.Text = Date.Today
         TXT_END_DATE.Text = Date.Today
         TXT_PA_CODE.Text = ""
         TXT_PA_NAME.Text = ""
         CH_PA.Checked = False
-        FILL_PATION()
-    End Sub
-    Sub FILL_PATION()
-        TXT_PA_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT = 'TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For IA = 0 To DT.Rows.Count - 1
-            TXT_PA_NAME.Items.Add(DT.Rows(IA).Item("PA_NAME"))
-        Next
     End Sub
     Private Sub TXT_PA_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_PA_NAME.SelectedIndexChanged
         Dim DT As New DataTable

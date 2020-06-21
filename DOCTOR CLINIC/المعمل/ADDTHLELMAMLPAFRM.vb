@@ -145,6 +145,7 @@
                 DR!ADD_DATE = TXT_DATE.Text
                 DR!PA_CODE = PA_CODE.Text
                 DR!MAML_CODE = MAML_CODE.Text
+                '    DR!lastupdate = Guid.NewGuid
                 DR!STAT = True
                 DR!USER_ADD = USER_ADD.Text
                 DR!DATE_ADD = DATE_ADD.Text

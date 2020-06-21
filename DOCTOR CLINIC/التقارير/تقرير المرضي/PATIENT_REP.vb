@@ -36,8 +36,8 @@
     End Sub
 
     Private Sub PATIENT_REP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
-        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         FILL_DGV(DataGridView1, "SELECT * FROM PATIENT ORDER BY PA_CODE")
         PA_CHEK.Checked = False
         PA_NAME.Enabled = False

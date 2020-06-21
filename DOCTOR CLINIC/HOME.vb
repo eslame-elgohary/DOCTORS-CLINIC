@@ -483,6 +483,14 @@ Public Class HOME
     End Sub
 
     Private Sub inter_control_Click(sender As Object, e As EventArgs) Handles inter_control.Click
-        Process.Start("C:\Program Files (x86)\Acapela Group\Acapela Multimedia\academo.exe")
+        If IO.File.Exists("C:\Program Files (x86)\Acapela Group\Acapela Multimedia\academo.exe") Then
+            Process.Start("C:\Program Files (x86)\Acapela Group\Acapela Multimedia\academo.exe")
+        Else
+            MessageBox.Show("هذا الجهاز غير مؤهل للتشغيل ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+        test.ShowDialog()
     End Sub
 End Class

@@ -28,7 +28,10 @@
         For I = 0 To GroupBox1.Controls.Count - 1
             If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = ""
         Next
-
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         TXT_CODE.Text = CODE_GENE("PERSONAL_HISTORY", "ID") + 1
         TXT_NAME.Text = ""
         MARED_DEAT.Value = Date.Today
@@ -41,7 +44,7 @@
         BTN_DELET.Enabled = False
         BTN_SAVE.Enabled = True
         FILL_DGV(DataGridView1, "SELECT * FROM PERSONAL_HISTORY_V WHERE STAT_PERS ='TRUE' ORDER BY CODE_PERS")
-        FILL_PATION()
+
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
@@ -209,15 +212,6 @@
         DA = New SqlClient.SqlDataAdapter("SELECT * FROM PERSONAL_HISTORY_V WHERE STAT_PERS='TRUE' AND PA_NAME LIKE '%" & TXT_SEARCH.Text & "%'", SqlConn)
         DA.Fill(DT)
         DataGridView1.DataSource = DT.DefaultView
-    End Sub
-    Sub FILL_PATION()
-        TXT_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
-        Next
     End Sub
 
     Private Sub TXT_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_NAME.SelectedIndexChanged

@@ -62,6 +62,8 @@ Partial Class ADD_DOCTOR_T3AQOD_MONY
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TXT_TEL2 = New System.Windows.Forms.TextBox()
@@ -94,16 +96,14 @@ Partial Class ADD_DOCTOR_T3AQOD_MONY
         Me.USER_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GRBTN.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -503,6 +503,17 @@ Partial Class ADD_DOCTOR_T3AQOD_MONY
         Me.PA_NAME.TabIndex = 7
         Me.PA_NAME.ValueMember = "PA_NAME"
         '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT = TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -793,17 +804,6 @@ Partial Class ADD_DOCTOR_T3AQOD_MONY
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
-        'PATION_BINDING
-        '
-        Me.PATION_BINDING.DataMember = "PATIENT"
-        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
-        Me.PATION_BINDING.Filter = "STAT = TRUE"
-        '
-        'PATIENTDATA
-        '
-        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
-        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'PATIENTTableAdapter
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
@@ -829,12 +829,12 @@ Partial Class ADD_DOCTOR_T3AQOD_MONY
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GRBTN.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

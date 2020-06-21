@@ -82,13 +82,13 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.TXT_PA_TYPE = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PA_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_DATE = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -668,6 +668,17 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.PA_NAME.TabIndex = 54
         Me.PA_NAME.ValueMember = "PA_NAME"
         '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT = TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'PA_CODE
         '
         Me.PA_CODE.BackColor = System.Drawing.Color.White
@@ -716,17 +727,6 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label7.Size = New System.Drawing.Size(48, 50)
         Me.Label7.TabIndex = 67
         Me.Label7.Text = "+"
-        '
-        'PATION_BINDING
-        '
-        Me.PATION_BINDING.DataMember = "PATIENT"
-        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
-        Me.PATION_BINDING.Filter = "STAT = TRUE"
-        '
-        'PATIENTDATA
-        '
-        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
-        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PATIENTTableAdapter
         '

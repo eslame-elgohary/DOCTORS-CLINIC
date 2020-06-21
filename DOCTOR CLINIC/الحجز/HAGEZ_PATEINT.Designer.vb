@@ -25,6 +25,7 @@ Partial Class HAGEZ_PATEINT
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HAGEZ_PATEINT))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_ID = New System.Windows.Forms.TextBox()
         Me.TXT_CODE2 = New System.Windows.Forms.TextBox()
         Me.TXT_TEL = New System.Windows.Forms.TextBox()
         Me.BTN_NEW = New DevExpress.XtraEditors.SimpleButton()
@@ -49,6 +50,7 @@ Partial Class HAGEZ_PATEINT
         Me.TXT_CODE = New System.Windows.Forms.Label()
         Me.ADD_PA = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -79,6 +81,7 @@ Partial Class HAGEZ_PATEINT
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_ID)
         Me.GroupBox1.Controls.Add(Me.TXT_CODE2)
         Me.GroupBox1.Controls.Add(Me.TXT_TEL)
         Me.GroupBox1.Controls.Add(Me.BTN_NEW)
@@ -106,6 +109,14 @@ Partial Class HAGEZ_PATEINT
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'TXT_ID
+        '
+        Me.TXT_ID.Location = New System.Drawing.Point(894, 55)
+        Me.TXT_ID.Name = "TXT_ID"
+        Me.TXT_ID.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_ID.TabIndex = 75
+        Me.TXT_ID.Visible = False
+        '
         'TXT_CODE2
         '
         Me.TXT_CODE2.Location = New System.Drawing.Point(664, 18)
@@ -116,7 +127,7 @@ Partial Class HAGEZ_PATEINT
         '
         'TXT_TEL
         '
-        Me.TXT_TEL.Location = New System.Drawing.Point(626, 18)
+        Me.TXT_TEL.Location = New System.Drawing.Point(702, 12)
         Me.TXT_TEL.Name = "TXT_TEL"
         Me.TXT_TEL.Size = New System.Drawing.Size(32, 29)
         Me.TXT_TEL.TabIndex = 73
@@ -205,7 +216,7 @@ Partial Class HAGEZ_PATEINT
         '
         'TXT_CODE_PA
         '
-        Me.TXT_CODE_PA.Location = New System.Drawing.Point(586, 18)
+        Me.TXT_CODE_PA.Location = New System.Drawing.Point(755, 12)
         Me.TXT_CODE_PA.Name = "TXT_CODE_PA"
         Me.TXT_CODE_PA.Size = New System.Drawing.Size(32, 29)
         Me.TXT_CODE_PA.TabIndex = 1
@@ -307,9 +318,9 @@ Partial Class HAGEZ_PATEINT
         '
         Me.TXT_CODE.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_CODE.ForeColor = System.Drawing.Color.Green
-        Me.TXT_CODE.Location = New System.Drawing.Point(477, 63)
+        Me.TXT_CODE.Location = New System.Drawing.Point(467, 63)
         Me.TXT_CODE.Name = "TXT_CODE"
-        Me.TXT_CODE.Size = New System.Drawing.Size(108, 47)
+        Me.TXT_CODE.Size = New System.Drawing.Size(130, 47)
         Me.TXT_CODE.TabIndex = 1
         Me.TXT_CODE.Text = "100000"
         '
@@ -332,12 +343,20 @@ Partial Class HAGEZ_PATEINT
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 136)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(940, 328)
         Me.DataGridView1.TabIndex = 1
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "ID"
+        Me.Column9.HeaderText = "ID"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Visible = False
         '
         'Column1
         '
@@ -541,6 +560,10 @@ Partial Class HAGEZ_PATEINT
     Friend WithEvents CODE_TIMER As Timer
     Friend WithEvents TXT_CODE2 As TextBox
     Friend WithEvents TXT_TEL As TextBox
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -549,7 +572,5 @@ Partial Class HAGEZ_PATEINT
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents PATION_BINDING As BindingSource
-    Friend WithEvents PATIENTDATA As PATIENTDATA
-    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents TXT_ID As TextBox
 End Class

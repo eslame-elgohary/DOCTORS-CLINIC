@@ -107,6 +107,7 @@ Partial Class HOME
         Me.BTN_ADD_T3AKODAT = New System.Windows.Forms.ToolStripMenuItem()
         Me.أستلامنقديةمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تقريربالمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
@@ -677,7 +678,7 @@ Partial Class HOME
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.ToolStripMenuItem3})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
@@ -708,6 +709,13 @@ Partial Class HOME
         Me.تقريربالمطالبةToolStripMenuItem.Name = "تقريربالمطالبةToolStripMenuItem"
         Me.تقريربالمطالبةToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.تقريربالمطالبةToolStripMenuItem.Text = "تقرير بالمطالبة"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(55, 20)
+        Me.ToolStripMenuItem3.Text = "222222"
+        Me.ToolStripMenuItem3.Visible = False
         '
         'ToolStripSeparator1
         '
@@ -1042,4 +1050,5 @@ Partial Class HOME
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
     Friend WithEvents inter_control As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
 End Class

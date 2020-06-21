@@ -292,6 +292,7 @@
                 Dim DA4 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION WHERE ADD_CODE = '" & TXT_CODE2.Text & "'", SqlConn)
                 DA4.Fill(DT4)
                 Dim DR4 = DT4.Rows(0)
+                '  DR4!lastupdate = Guid.NewGuid
                 DR4!STAT = False
 
                 Dim CMD4 As New SqlClient.SqlCommandBuilder(DA4)

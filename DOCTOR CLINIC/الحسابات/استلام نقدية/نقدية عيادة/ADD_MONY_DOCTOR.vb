@@ -70,8 +70,6 @@
         End If
     End Sub
     Private Sub ADD_MONY_DOCTOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
-        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         NEWBTN_Click(sender, e)
     End Sub
     Private Sub TIMERADD_Tick(sender As Object, e As EventArgs) Handles TIMERADD.Tick

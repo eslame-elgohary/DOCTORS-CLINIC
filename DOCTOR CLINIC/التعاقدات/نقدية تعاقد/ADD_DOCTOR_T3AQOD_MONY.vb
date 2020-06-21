@@ -43,8 +43,6 @@
     End Sub
 
     Private Sub ADD_DOCTOR_T3AQOD_MONY_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
-        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         NEWBTN_Click(sender, e)
     End Sub
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
@@ -114,8 +112,8 @@
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             PA_CODE.Text = DT.Rows(I).Item("PA_CODE")
-            TXT_TEL1.Text = DT.Rows(I).Item("PA_AGE")
-            TXT_TEL2.Text = DT.Rows(I).Item("PA_TYPE")
+            TXT_TEL1.Text = DT.Rows(I).Item("PA_TEL")
+            TXT_TEL2.Text = DT.Rows(I).Item("PA_TEL2")
         Next
     End Sub
 

@@ -19,6 +19,8 @@
         End If
     End Sub
     Private Sub HISTORY_ENGAB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         BTN_NEW_Click(sender, e)
     End Sub
 
@@ -27,7 +29,8 @@
         For I = 0 To GroupBox1.Controls.Count - 1
             If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = ""
         Next
-
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         TXT_CODE.Text = CODE_GENE("INFERTILITY_HISTORY", "ID") + 1
         TXT_DATE_MARRIED.Value = Date.Today
         TXT_SEARCH.Text = ""
@@ -37,7 +40,6 @@
         BTN_DELET.Enabled = False
         BTN_SAVE.Enabled = True
         FILL_DGV(DataGridView1, "SELECT * FROM INFERTILITY_HISTORY_V WHERE STAT_INFERT_HIS ='TRUE' ORDER BY CODE_INFERT_HIS")
-        FILL_PATION()
         FILL_COMPLAINT()
         TXT_NAME_PA.Select()
         TXT_INFO2.SelectedIndex = 0
@@ -206,16 +208,6 @@
         DA.Fill(DT)
         DataGridView1.DataSource = DT.DefaultView
     End Sub
-    Sub FILL_PATION()
-        TXT_NAME_PA.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_NAME_PA.Items.Add(DT.Rows(I).Item("PA_NAME"))
-        Next
-    End Sub
-
     Private Sub TXT_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_NAME_PA.SelectedIndexChanged
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME='" & TXT_NAME_PA.Text & "'", SqlConn)

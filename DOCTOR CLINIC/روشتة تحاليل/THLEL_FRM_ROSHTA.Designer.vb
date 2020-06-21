@@ -25,6 +25,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(THLEL_FRM_ROSHTA))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_INFO2 = New System.Windows.Forms.ComboBox()
         Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.VIWERPATIN = New System.Windows.Forms.DataGridView()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -83,12 +84,16 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TXT_INFO2 = New System.Windows.Forms.ComboBox()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.VIWERPATIN, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GRBTN.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -125,6 +130,19 @@ Partial Class THLEL_FRM_ROSHTA
         Me.GroupBox1.Size = New System.Drawing.Size(907, 133)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
+        '
+        'TXT_INFO2
+        '
+        Me.TXT_INFO2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_INFO2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_INFO2.BackColor = System.Drawing.Color.White
+        Me.TXT_INFO2.FormattingEnabled = True
+        Me.TXT_INFO2.Location = New System.Drawing.Point(413, 93)
+        Me.TXT_INFO2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TXT_INFO2.Name = "TXT_INFO2"
+        Me.TXT_INFO2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TXT_INFO2.Size = New System.Drawing.Size(290, 29)
+        Me.TXT_INFO2.TabIndex = 66
         '
         'TXT_CODE2
         '
@@ -243,7 +261,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(706, 97)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(115, 21)
+        Me.Label12.Size = New System.Drawing.Size(114, 21)
         Me.Label12.TabIndex = 29
         Me.Label12.Text = "شكوي المريض :"
         '
@@ -312,7 +330,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(297, 95)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(100, 21)
+        Me.Label8.Size = New System.Drawing.Size(98, 21)
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "أسم التحاليل : "
         '
@@ -320,11 +338,14 @@ Partial Class THLEL_FRM_ROSHTA
         '
         Me.TXT_NAME_PA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_NAME_PA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_NAME_PA.DataSource = Me.BindingSource1
+        Me.TXT_NAME_PA.DisplayMember = "PA_NAME"
         Me.TXT_NAME_PA.FormattingEnabled = True
         Me.TXT_NAME_PA.Location = New System.Drawing.Point(406, 56)
         Me.TXT_NAME_PA.Name = "TXT_NAME_PA"
         Me.TXT_NAME_PA.Size = New System.Drawing.Size(203, 29)
         Me.TXT_NAME_PA.TabIndex = 14
+        Me.TXT_NAME_PA.ValueMember = "PA_NAME"
         '
         'Label7
         '
@@ -350,7 +371,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(350, 60)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 21)
+        Me.Label6.Size = New System.Drawing.Size(50, 21)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "النوع :"
         '
@@ -369,7 +390,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(615, 59)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 21)
+        Me.Label5.Size = New System.Drawing.Size(98, 21)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "أسم المريض :"
         '
@@ -378,7 +399,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(804, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 21)
+        Me.Label4.Size = New System.Drawing.Size(97, 21)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "كود المريض :"
         '
@@ -397,7 +418,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(302, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(144, 21)
+        Me.Label3.Size = New System.Drawing.Size(138, 21)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "أسم الطبيب المعالج :"
         '
@@ -406,7 +427,7 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(625, 21)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 21)
+        Me.Label2.Size = New System.Drawing.Size(61, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "التاريخ :"
         '
@@ -570,52 +591,52 @@ Partial Class THLEL_FRM_ROSHTA
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -653,18 +674,21 @@ Partial Class THLEL_FRM_ROSHTA
         Me.Column3.ReadOnly = True
         Me.Column3.Visible = False
         '
-        'TXT_INFO2
+        'BindingSource1
         '
-        Me.TXT_INFO2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_INFO2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_INFO2.BackColor = System.Drawing.Color.White
-        Me.TXT_INFO2.FormattingEnabled = True
-        Me.TXT_INFO2.Location = New System.Drawing.Point(413, 93)
-        Me.TXT_INFO2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.TXT_INFO2.Name = "TXT_INFO2"
-        Me.TXT_INFO2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TXT_INFO2.Size = New System.Drawing.Size(290, 29)
-        Me.TXT_INFO2.TabIndex = 66
+        Me.BindingSource1.AllowNew = True
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "stat =true"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
         'THLEL_FRM_ROSHTA
         '
@@ -692,6 +716,8 @@ Partial Class THLEL_FRM_ROSHTA
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -757,4 +783,7 @@ Partial Class THLEL_FRM_ROSHTA
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewButtonColumn
     Friend WithEvents TXT_INFO2 As ComboBox
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

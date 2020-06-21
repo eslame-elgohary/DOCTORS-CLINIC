@@ -22,6 +22,7 @@ Partial Class PERSONAL_HISTORY_FRM
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PERSONAL_HISTORY_FRM))
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_DELET = New DevExpress.XtraEditors.SimpleButton()
@@ -55,8 +56,13 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_SEARCH = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BTN_EXIT
@@ -246,11 +252,14 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.TXT_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_NAME.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_NAME.DataSource = Me.BindingSource1
+        Me.TXT_NAME.DisplayMember = "PA_NAME"
         Me.TXT_NAME.FormattingEnabled = True
         Me.TXT_NAME.Location = New System.Drawing.Point(249, 18)
         Me.TXT_NAME.Name = "TXT_NAME"
         Me.TXT_NAME.Size = New System.Drawing.Size(247, 27)
         Me.TXT_NAME.TabIndex = 14
+        Me.TXT_NAME.ValueMember = "PA_NAME"
         '
         'Label7
         '
@@ -385,6 +394,22 @@ Partial Class PERSONAL_HISTORY_FRM
         Me.Label10.TabIndex = 14
         Me.Label10.Text = "SEARCH NAME :"
         '
+        'BindingSource1
+        '
+        Me.BindingSource1.AllowNew = True
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "STAT = TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'PERSONAL_HISTORY_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
@@ -413,6 +438,8 @@ Partial Class PERSONAL_HISTORY_FRM
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -450,4 +477,7 @@ Partial Class PERSONAL_HISTORY_FRM
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewButtonColumn
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

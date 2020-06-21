@@ -3,12 +3,13 @@
 
         '=========== ربط رأس الفاتورة =============
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE CODE_H ='" & CODE_ & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE ID ='" & CODE_ & "'", SqlConn)
         DA.Fill(DT)
         If DT.Rows.Count = 0 Then
             MessageBox.Show("يرجى التأكد من رقم الحجز ", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim DR = DT.Rows(0)
+            TXT_ID.Text = DR!ID
             TXT_CODE.Text = DR!CODE_H
             TXT_DATE.Text = DR!DATE_H
             TXT_CODE_PA.Text = DR!CODE_PA_H
@@ -38,14 +39,13 @@
         TIMERADD.Enabled = True
         CODE_TIMER.Enabled = True
         TIMEREDIT.Enabled = False
-
+        TXT_ID.Text = CODE_GENE("HAGEZ_DOCTOR", "ID") + 1
         '=========================================
         PATIENTDATA.Clear()
         PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         PA_NAME.Text = ""
         PA_NAME.Select()
-        DataGridView1.Refresh()
-
+        FILL_TKHASOS()
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
@@ -67,6 +67,7 @@
         '================= تخزين بيانات الصنف في قاعدة البيانات =============
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM  HAGEZ_DOCTOR WHERE CODE_PA_H = '" & TXT_CODE_PA.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' AND CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  ", SqlConn)
+
         DA.Fill(DT)
         If DT.Rows.Count > 0 Then
             MessageBox.Show("يوجد حجز لنفس المريض اليوم ، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -78,7 +79,6 @@
             DR!CODE_DOC_H = TXT_DOCTOR_CODE.Text
             DR!CODE_TAKH_H = TXT_TKHASOS_CODE.Text
             DR!CH_DATE_H = CH_DATE.Checked
-
             DR!USER_ADD = USER_ADD.Text
             DR!DATE_ADD = DATE_ADD.Text
             DR!TIME_ADD = TIME_ADD.Text
@@ -89,7 +89,7 @@
             DT.Rows.Add(DR)
             Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
             DA.Update(DT)
-            MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
             BTN_NEW_Click(sender, e)
         End If
     End Sub
@@ -112,7 +112,7 @@
         End If
         '================= تخزين بيانات الصنف في قاعدة البيانات =============
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE ID = '" & TXT_ID.Text & "' ", SqlConn)
         DA.Fill(DT)
 
         Dim DR = DT.Rows(0)
@@ -134,7 +134,7 @@
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
 
-        MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح ورقم الحجز هو " & " ( " & TXT_CODE.Text & " ) ", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
         BTN_NEW_Click(sender, e)
 
 
@@ -174,8 +174,6 @@
     End Sub
 
     Private Sub HAGEZ_PATEINT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
-        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         BTN_NEW_Click(sender, e)
     End Sub
 
@@ -214,15 +212,6 @@
         DATE_EDIT.Text = Date.Today
         TIME_EDIT.Text = TimeOfDay
     End Sub
-    Sub FILL_PATIENT()
-        PA_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT PA_NAME,STAT FROM PATIENT WHERE STAT='TRUE'  ", SqlConn)
-        DA.Fill(DT)
-        For Each r As DataRow In DT.Rows
-            PA_NAME.Items.Add(r("PA_NAME"))
-        Next
-    End Sub
     Sub FILL_TKHASOS()
         TXT_TKHSOS.Items.Clear()
         Dim DT As New DataTable
@@ -254,19 +243,25 @@
             TXT_CODE2.Text = DT.Rows(I).Item("PA_TEL2")
 
         Next
-        FILL_TKHASOS()
     End Sub
 
     Private Sub TXT_CODE_PA_TextChanged(sender As Object, e As EventArgs) Handles TXT_CODE_PA.TextChanged
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE='" & TXT_CODE_PA.Text & "'", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            PA_NAME.Text = DT.Rows(I).Item("PA_NAME")
-            TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
-            TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
-        Next
-        FILL_TKHASOS()
+        Try
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE='" & TXT_CODE_PA.Text & "'", SqlConn)
+            DA.Fill(DT)
+            For I = 0 To DT.Rows.Count - 1
+                PA_NAME.Text = DT.Rows(I).Item("PA_NAME")
+                TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
+                TXT_CODE2.Text = DT.Rows(I).Item("PA_CODE2")
+            Next
+        Catch ex As Exception
+
+        End Try
+
+
+
+
     End Sub
 
     Private Sub TXT_TKHSOS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_TKHSOS.SelectedIndexChanged
@@ -321,13 +316,13 @@
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
         For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(4).Value = "عرض"
+            DataGridView1.Rows(I).Cells(5).Value = "عرض"
             Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
         Next
     End Sub
     Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
         For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(4, DataGridView1.CurrentRow.Index).Selected = True Then
+            If DataGridView1(5, DataGridView1.CurrentRow.Index).Selected = True Then
                 SHOW_DETA(DataGridView1.CurrentRow.Cells(0).Value)
             End If
         Next
@@ -371,10 +366,5 @@
             TXT_CODE.Text = "1"
         End If
 
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Dim x As New Form2
-        x.Show()
     End Sub
 End Class

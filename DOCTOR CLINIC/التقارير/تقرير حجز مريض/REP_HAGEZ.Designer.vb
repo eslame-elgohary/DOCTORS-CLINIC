@@ -22,6 +22,7 @@ Partial Class REP_HAGEZ
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(REP_HAGEZ))
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_PA_NAME = New System.Windows.Forms.ComboBox()
@@ -32,6 +33,11 @@ Partial Class REP_HAGEZ
         Me.TXT_START_DATE = New System.Windows.Forms.DateTimePicker()
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_VIWE = New DevExpress.XtraEditors.SimpleButton()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TXT_PA_CODE
@@ -46,12 +52,15 @@ Partial Class REP_HAGEZ
         '
         Me.TXT_PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_PA_NAME.DataSource = Me.BindingSource1
+        Me.TXT_PA_NAME.DisplayMember = "PA_NAME"
         Me.TXT_PA_NAME.Enabled = False
         Me.TXT_PA_NAME.FormattingEnabled = True
         Me.TXT_PA_NAME.Location = New System.Drawing.Point(172, 76)
         Me.TXT_PA_NAME.Name = "TXT_PA_NAME"
         Me.TXT_PA_NAME.Size = New System.Drawing.Size(351, 27)
         Me.TXT_PA_NAME.TabIndex = 17
+        Me.TXT_PA_NAME.ValueMember = "PA_NAME"
         '
         'CH_PA
         '
@@ -120,6 +129,22 @@ Partial Class REP_HAGEZ
         Me.BTN_VIWE.TabIndex = 18
         Me.BTN_VIWE.Text = "عرض"
         '
+        'BindingSource1
+        '
+        Me.BindingSource1.AllowNew = True
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'REP_HAGEZ
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
@@ -144,6 +169,8 @@ Partial Class REP_HAGEZ
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "تقرير حجز مريض"
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,4 +185,7 @@ Partial Class REP_HAGEZ
     Friend WithEvents Label1 As Label
     Friend WithEvents TXT_END_DATE As DateTimePicker
     Friend WithEvents TXT_START_DATE As DateTimePicker
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

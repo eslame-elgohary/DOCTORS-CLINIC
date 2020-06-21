@@ -35,6 +35,8 @@ Partial Class PATIENT
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PA_CHI_R1 = New System.Windows.Forms.CheckBox()
         Me.PA_OP_R1 = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -71,16 +73,14 @@ Partial Class PATIENT
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.AUTOPA = New System.Windows.Forms.Timer(Me.components)
-        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GRBTN
@@ -225,6 +225,8 @@ Partial Class PATIENT
         '
         'PA_NAME
         '
+        Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.PA_NAME.DataSource = Me.PATION_BINDING
         Me.PA_NAME.DisplayMember = "PA_NAME"
         Me.PA_NAME.FormattingEnabled = True
@@ -233,6 +235,18 @@ Partial Class PATIENT
         Me.PA_NAME.Size = New System.Drawing.Size(264, 29)
         Me.PA_NAME.TabIndex = 26
         Me.PA_NAME.ValueMember = "PA_NAME"
+        '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.AllowNew = True
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PA_CHI_R1
         '
@@ -530,18 +544,6 @@ Partial Class PATIENT
         'AUTOPA
         '
         '
-        'PATION_BINDING
-        '
-        Me.PATION_BINDING.AllowNew = True
-        Me.PATION_BINDING.DataMember = "PATIENT"
-        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
-        Me.PATION_BINDING.Filter = "STAT=TRUE"
-        '
-        'PATIENTDATA
-        '
-        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
-        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'PATIENTTableAdapter
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
@@ -568,14 +570,14 @@ Partial Class PATIENT
         Me.GRBTN.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

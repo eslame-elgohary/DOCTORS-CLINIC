@@ -69,8 +69,9 @@
 
         FILL_KHAZINA_CODE()
         PA_NAME.Select()
-        FILL_PATIENT()
         FILL_KHAZINA()
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
     End Sub
     Sub FILL_KHAZINA_CODE()
         Dim DT As New DataTable
@@ -412,17 +413,6 @@
             KHAZINA_NAME.Text = DT.Rows(I).Item("KHAZINA_NAME")
         Next
     End Sub
-    Sub FILL_PATIENT()
-        PA_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            PA_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
-
-        Next
-    End Sub
-
     Private Sub PA_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PA_NAME.SelectedIndexChanged
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME='" & PA_NAME.Text & "'", SqlConn)

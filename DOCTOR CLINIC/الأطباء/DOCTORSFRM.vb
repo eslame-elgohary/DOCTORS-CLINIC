@@ -143,30 +143,30 @@
 
                 '========= قيود الادخال =======================
                 If DO_NAME.Text = "" Then
-            MessageBox.Show("يرجى أدخال أسم الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DO_NAME.Select()
-            Exit Sub
-        End If
-        If DO_TKHSOS.Text = "" Then
-            MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DO_TKHSOS.Select()
-            Exit Sub
-        End If
-        If DO_TKHSOS_CODE.Text = "" Then
-            MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DO_TKHSOS.Select()
-            Exit Sub
-        End If
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            If DataGridView1.Rows(I).Cells(2).Value = "" Then
-                MessageBox.Show("يرجى التحقق من قيمة الخدمة ", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-        Next
-        '================= =======================================
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_NAME = '" & DO_NAME.Text & "'", SqlConn)
-        DA.Fill(DT)
+                    MessageBox.Show("يرجى أدخال أسم الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DO_NAME.Select()
+                    Exit Sub
+                End If
+                If DO_TKHSOS.Text = "" Then
+                    MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DO_TKHSOS.Select()
+                    Exit Sub
+                End If
+                If DO_TKHSOS_CODE.Text = "" Then
+                    MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DO_TKHSOS.Select()
+                    Exit Sub
+                End If
+                For I As Integer = 0 To DataGridView1.Rows.Count - 1
+                    If DataGridView1.Rows(I).Cells(2).Value = "" Then
+                        MessageBox.Show("يرجى التحقق من قيمة الخدمة ", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
+                    End If
+                Next
+                '================= =======================================
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_NAME = '" & DO_NAME.Text & "'", SqlConn)
+                DA.Fill(DT)
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("الطبيب موجود مسبقاً ، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Else
@@ -228,10 +228,10 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("B3").ToString = True Then
                 If MessageBox.Show("هل ترغب في حذف بيانات الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
-        '============================  كود الحفظ =====================
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_CODE = '" & DO_CODE.Text & "'  ", SqlConn)
-        DA.Fill(DT)
+                '============================  كود الحفظ =====================
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_CODE = '" & DO_CODE.Text & "'  ", SqlConn)
+                DA.Fill(DT)
                 If DT.Rows.Count = 0 Then
                     MessageBox.Show("الطبيب غير موجود يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Else
@@ -266,32 +266,32 @@
             If DT0.Rows(0).Item("B2").ToString = True Then
                 '========= قيود الادخال =======================
                 If DO_NAME.Text = "" Then
-            MessageBox.Show("يرجى أدخال أسم الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DO_NAME.Select()
-            Exit Sub
-        End If
-        If DO_TKHSOS.Text = "" Then
-            MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DO_TKHSOS.Select()
-            Exit Sub
-        End If
-        If DO_TKHSOS_CODE.Text = "" Then
-            MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            DO_TKHSOS.Select()
-            Exit Sub
-        End If
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            If DataGridView1.Rows(I).Cells(2).Value = "" Then
-                MessageBox.Show("يرجى التحقق من قيمة الخدمة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-        Next
-        '================= =======================================
-        If MessageBox.Show("هل ترغب في تعديل بيانات الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then Exit Sub
+                    MessageBox.Show("يرجى أدخال أسم الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DO_NAME.Select()
+                    Exit Sub
+                End If
+                If DO_TKHSOS.Text = "" Then
+                    MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DO_TKHSOS.Select()
+                    Exit Sub
+                End If
+                If DO_TKHSOS_CODE.Text = "" Then
+                    MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    DO_TKHSOS.Select()
+                    Exit Sub
+                End If
+                For I As Integer = 0 To DataGridView1.Rows.Count - 1
+                    If DataGridView1.Rows(I).Cells(2).Value = "" Then
+                        MessageBox.Show("يرجى التحقق من قيمة الخدمة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
+                    End If
+                Next
+                '================= =======================================
+                If MessageBox.Show("هل ترغب في تعديل بيانات الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then Exit Sub
 
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_CODE = '" & DO_CODE.Text & "'", SqlConn)
-        DA.Fill(DT)
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_CODE = '" & DO_CODE.Text & "'", SqlConn)
+                DA.Fill(DT)
 
                 If DT.Rows.Count = 0 Then
                     MessageBox.Show("الطبيب موجود مسبقاً ، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -360,28 +360,28 @@
             If DT0.Rows(0).Item("B4").ToString = True Then
                 '""""""""""""""""طباعة الفاتورة """"""""""""""
                 Dim DT As New DataTable
-        With DT
-            .Columns.Add("DO_CODE")
-            .Columns.Add("DO_NAME")
-            .Columns.Add("DO_TKHSOS")
-            .Columns.Add("DO_TEL")
-            .Columns.Add("DO_TEL2")
-            .Columns.Add("USER_ADD")
-            .Columns.Add("DOT_M")
-            .Columns.Add("DOT_NAME")
-            .Columns.Add("DOT_PA")
-            .Columns.Add("DOT_T3AKOD")
-            .Columns.Add("DOT_DOCTORS")
-        End With
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
-                DT.Rows.Add(DO_CODE.Text, DO_NAME.Text, DO_TKHSOS.Text, DO_TEL.Text, DO_TEL2.Text, USER_ADD.Text, DataGridView1.Rows(I).Cells(0).Value, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, DataGridView1.Rows(I).Cells(4).Value)
-            End If
-        Next
-        Dim REP As New DOCTORS_CRS
-        REP.SetDataSource(DT)
-        Dim FRM As New DOCTORS_PRINT
-        FRM.CrystalReportViewer1.ReportSource = REP
+                With DT
+                    .Columns.Add("DO_CODE")
+                    .Columns.Add("DO_NAME")
+                    .Columns.Add("DO_TKHSOS")
+                    .Columns.Add("DO_TEL")
+                    .Columns.Add("DO_TEL2")
+                    .Columns.Add("USER_ADD")
+                    .Columns.Add("DOT_M")
+                    .Columns.Add("DOT_NAME")
+                    .Columns.Add("DOT_PA")
+                    .Columns.Add("DOT_T3AKOD")
+                    .Columns.Add("DOT_DOCTORS")
+                End With
+                For I As Integer = 0 To DataGridView1.Rows.Count - 1
+                    If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
+                        DT.Rows.Add(DO_CODE.Text, DO_NAME.Text, DO_TKHSOS.Text, DO_TEL.Text, DO_TEL2.Text, USER_ADD.Text, DataGridView1.Rows(I).Cells(0).Value, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, DataGridView1.Rows(I).Cells(4).Value)
+                    End If
+                Next
+                Dim REP As New DOCTORS_CRS
+                REP.SetDataSource(DT)
+                Dim FRM As New DOCTORS_PRINT
+                FRM.CrystalReportViewer1.ReportSource = REP
                 FRM.ShowDialog()
 
             Else
@@ -448,6 +448,7 @@
             e.SuppressKeyPress = True
             SendKeys.Send("{Tab}")
         End If
+
     End Sub
 
     Private Sub DO_TKHSOS_KeyDown(sender As Object, e As KeyEventArgs) Handles DO_TKHSOS.KeyDown

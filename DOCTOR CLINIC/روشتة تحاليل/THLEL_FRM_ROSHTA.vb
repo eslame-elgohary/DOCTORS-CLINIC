@@ -65,15 +65,6 @@
         DATE_EDIT.Text = Date.Today
         TIME_EDIT.Text = TimeOfDay
     End Sub
-    Sub FILL_PATIENT()
-        TXT_NAME_PA.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT='TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_NAME_PA.Items.Add(DT.Rows(I).Item("PA_NAME"))
-        Next
-    End Sub
     Sub FILL_DOCTOR()
         TXT_DOCTOR.Items.Clear()
         Dim DT4 As New DataTable
@@ -152,19 +143,6 @@
             TXT_NAME_THLEL.Text = DT.Rows(I).Item("TAH_NAME")
         Next
     End Sub
-    'Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
-    '    For I As Integer = 0 To DataGridView1.Rows.Count - 1
-    '        DataGridView1.Rows(I).Cells(2).Value = "حذف"
-    '        Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
-    '    Next
-    'End Sub
-    'Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
-    '    For Each ROW As DataGridViewRow In DataGridView1.Rows
-    '        If DataGridView1(2, DataGridView1.CurrentRow.Index).Selected = True Then
-    '            DataGridView1.Rows.Remove(ROW)
-    '        End If
-    '    Next
-    'End Sub
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
@@ -185,6 +163,8 @@
         SAVEBTN.Enabled = True
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
         TXT_NAME_PA.Select()
 
     End Sub
@@ -449,7 +429,6 @@
 
     Private Sub THLEL_FRM_ROSHTA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NEWBTN_Click(sender, e)
-        FILL_PATIENT()
         FILL_DOCTOR()
         FILL_THLEL()
         Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "

@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\APP-AFTER-FAST\DOCTORS-17-6-020\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -170,6 +170,12 @@
     </Compile>
     <Compile Include="ClassConvertNO.vb" />
     <Compile Include="CONNECTION.vb" />
+    <Compile Include="LARBI\test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LARBI\test.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="التعاقدات\تعاقد\IMGV.Designer.vb">
       <DependentUpon>IMGV.vb</DependentUpon>
     </Compile>
@@ -1046,6 +1052,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HOME.resx">
       <DependentUpon>HOME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LARBI\test.resx">
+      <DependentUpon>test.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.vb</DependentUpon>
