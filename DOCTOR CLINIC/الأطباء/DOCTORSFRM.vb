@@ -176,7 +176,7 @@
                     DR!DO_TEL = DO_TEL2.Text
                     DR!DO_TEL2 = DO_TEL2.Text
                     DR!DO_TKHSOS = DO_TKHSOS.Text
-                    DR!DO_TKHSOS_CODE = DO_TKHSOS.Text
+                    DR!DO_TKHSOS_CODE = DO_TKHSOS_CODE.Text
                     DR!STAT = True
                     DR!USER_ADD = USER_ADD.Text
                     DR!DATE_ADD = DATE_ADD.Text
@@ -302,7 +302,7 @@
                     DR!DO_TEL = DO_TEL2.Text
                     DR!DO_TEL2 = DO_TEL2.Text
                     DR!DO_TKHSOS = DO_TKHSOS.Text
-                    DR!DO_TKHSOS_CODE = DO_TKHSOS.Text
+                    DR!DO_TKHSOS_CODE = DO_TKHSOS_CODE.Text
                     DR!STAT = True
                     DR!USER_ADD = USER_ADD.Text
                     DR!DATE_ADD = DATE_ADD.Text

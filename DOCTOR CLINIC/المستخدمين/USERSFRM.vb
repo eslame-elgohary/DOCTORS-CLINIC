@@ -187,7 +187,7 @@
                     DR2!Q23 = False
                     DR2!Q24 = False
 
-                    DR!S100!R = False
+                    DR!S100 = False
                     DR!S101 = False
                     DR2!S102 = False
                     DR2!S103 = False

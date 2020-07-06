@@ -73,13 +73,13 @@
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
-        TXT_CODE2.Text = ""
+        TXT_CODE2.Text = String.Empty
         '""""""""""""""" تنظيف الشاشة """""""""""""
         For I = 0 To GroupBox1.Controls.Count - 1
-            If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = ""
+            If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = String.Empty
         Next
         For I = 0 To GroupBox1.Controls.Count - 1
-            If TypeOf GroupBox1.Controls(I) Is ComboBox Then GroupBox1.Controls(I).Text = ""
+            If TypeOf GroupBox1.Controls(I) Is ComboBox Then GroupBox1.Controls(I).Text = String.Empty
         Next
         DataGridView1.Rows.Clear()
         '""""""""""""""" الترقيم التلقائي """"""""""""""
@@ -157,27 +157,27 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("P1").ToString = True Then
                 '========= قيود الادخال =======================
-                If TXT_NAME_PA.Text = "" Then
+                If TXT_NAME_PA.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_NAME_PA.Select()
                     Exit Sub
                 End If
-                If TXT_DOCTOR.Text = "" Then
+                If TXT_DOCTOR.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال الطبيب المعالج ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_DOCTOR.Select()
                     Exit Sub
                 End If
-                If TXT_HRARA.Text = "" Then
+                If TXT_HRARA.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال درجة حرارة المريض ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_HRARA.Select()
                     Exit Sub
                 End If
-                If TXT_D.Text = "" Then
+                If TXT_D.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال ضغط المريض ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_D.Select()
                     Exit Sub
                 End If
-                If TXT_KG.Text = "" Then
+                If TXT_KG.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال وزن المريض ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_KG.Select()
                     Exit Sub
@@ -254,27 +254,27 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("P2").ToString = True Then
                 '========= قيود الادخال =======================
-                If TXT_NAME_PA.Text = "" Then
+                If TXT_NAME_PA.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_NAME_PA.Select()
                     Exit Sub
                 End If
-                If TXT_DOCTOR.Text = "" Then
+                If TXT_DOCTOR.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال الطبيب المعالج ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_DOCTOR.Select()
                     Exit Sub
                 End If
-                If TXT_HRARA.Text = "" Then
+                If TXT_HRARA.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال درجة حرارة المريض ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_HRARA.Select()
                     Exit Sub
                 End If
-                If TXT_D.Text = "" Then
+                If TXT_D.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال ضغط المريض ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_D.Select()
                     Exit Sub
                 End If
-                If TXT_KG.Text = "" Then
+                If TXT_KG.Text = String.Empty Then
                     MessageBox.Show("برجاء ادخال وزن المريض ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     TXT_KG.Select()
                     Exit Sub
@@ -572,11 +572,11 @@
     End Sub
 
     Private Sub ACTIV_BTN_Click(sender As Object, e As EventArgs) Handles ACTIV_BTN.Click
-        If TXT_NAME_PHARM.Text = "" Then
+        If TXT_NAME_PHARM.Text = String.Empty Then
             MessageBox.Show("عفوا ليس هناك أدوية لاضافتها", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_NAME_PHARM.Select()
         Else
-            If TXT_NAME_GOR3A.Text = "" Then
+            If TXT_NAME_GOR3A.Text = String.Empty Then
                 MessageBox.Show("عفوا ليس هناك جرعة للأدوية المختارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 TXT_NAME_GOR3A.Select()
             Else
@@ -591,11 +591,11 @@
                 DataGridView1(3, BAR).Value = TXT_CODE_GOR3A.Text
                 DataGridView1(4, BAR).Value = TXT_NAME_GOR3A.Text
 
-                TXT_CODE_PHARM.Text = ""
-                TXT_NAME_PHARM.Text = ""
-                TXT_NO3_PHARM.Text = ""
-                TXT_CODE_GOR3A.Text = ""
-                TXT_NAME_GOR3A.Text = ""
+                TXT_CODE_PHARM.Text = String.Empty
+                TXT_NAME_PHARM.Text = String.Empty
+                TXT_NO3_PHARM.Text = String.Empty
+                TXT_CODE_GOR3A.Text = String.Empty
+                TXT_NAME_GOR3A.Text = String.Empty
 
                 TXT_NAME_PHARM.Select()
             End If

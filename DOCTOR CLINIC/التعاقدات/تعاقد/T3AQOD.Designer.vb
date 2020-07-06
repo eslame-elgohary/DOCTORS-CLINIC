@@ -89,13 +89,14 @@ Partial Class T3AQOD
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.BTN_PRINT = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_DELET = New DevExpress.XtraEditors.SimpleButton()
         Me.ADD_PHOTO = New DevExpress.XtraEditors.SimpleButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Column11 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BTN_BACK = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_GO = New DevExpress.XtraEditors.SimpleButton()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GRBTN.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -753,8 +754,8 @@ Partial Class T3AQOD
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.BTN_GO)
-        Me.TabPage3.Controls.Add(Me.BTN_BACK)
+        Me.TabPage3.Controls.Add(Me.BTN_PRINT)
+        Me.TabPage3.Controls.Add(Me.BTN_DELET)
         Me.TabPage3.Controls.Add(Me.ADD_PHOTO)
         Me.TabPage3.Controls.Add(Me.PictureBox1)
         Me.TabPage3.Controls.Add(Me.DataGridView2)
@@ -766,6 +767,32 @@ Partial Class T3AQOD
         Me.TabPage3.Text = "صورة العقد"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'BTN_PRINT
+        '
+        Me.BTN_PRINT.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_PRINT.Appearance.ForeColor = System.Drawing.Color.Black
+        Me.BTN_PRINT.Appearance.Options.UseFont = True
+        Me.BTN_PRINT.Appearance.Options.UseForeColor = True
+        Me.BTN_PRINT.ImageOptions.Image = CType(resources.GetObject("BTN_GO.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PRINT.Location = New System.Drawing.Point(603, 323)
+        Me.BTN_PRINT.Name = "BTN_PRINT"
+        Me.BTN_PRINT.Size = New System.Drawing.Size(140, 44)
+        Me.BTN_PRINT.TabIndex = 10
+        Me.BTN_PRINT.Text = "طباعة العقد"
+        '
+        'BTN_DELET
+        '
+        Me.BTN_DELET.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_DELET.Appearance.ForeColor = System.Drawing.Color.Black
+        Me.BTN_DELET.Appearance.Options.UseFont = True
+        Me.BTN_DELET.Appearance.Options.UseForeColor = True
+        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_BACK.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_DELET.Location = New System.Drawing.Point(445, 321)
+        Me.BTN_DELET.Name = "BTN_DELET"
+        Me.BTN_DELET.Size = New System.Drawing.Size(140, 44)
+        Me.BTN_DELET.TabIndex = 9
+        Me.BTN_DELET.Text = "حذف الصورة"
+        '
         'ADD_PHOTO
         '
         Me.ADD_PHOTO.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -773,7 +800,7 @@ Partial Class T3AQOD
         Me.ADD_PHOTO.Appearance.Options.UseFont = True
         Me.ADD_PHOTO.Appearance.Options.UseForeColor = True
         Me.ADD_PHOTO.ImageOptions.Image = CType(resources.GetObject("ADD_PHOTO.ImageOptions.Image"), System.Drawing.Image)
-        Me.ADD_PHOTO.Location = New System.Drawing.Point(410, 321)
+        Me.ADD_PHOTO.Location = New System.Drawing.Point(764, 321)
         Me.ADD_PHOTO.Name = "ADD_PHOTO"
         Me.ADD_PHOTO.Size = New System.Drawing.Size(146, 44)
         Me.ADD_PHOTO.TabIndex = 8
@@ -781,7 +808,7 @@ Partial Class T3AQOD
         '
         'PictureBox1
         '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Location = New System.Drawing.Point(310, 6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(618, 309)
@@ -792,10 +819,11 @@ Partial Class T3AQOD
         'DataGridView2
         '
         Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column12})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column11, Me.Column12, Me.Column13})
         Me.DataGridView2.Location = New System.Drawing.Point(9, 6)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -804,8 +832,8 @@ Partial Class T3AQOD
         '
         'Column11
         '
-        Me.Column11.DataPropertyName = "PIC"
-        Me.Column11.HeaderText = "PIC"
+        Me.Column11.DataPropertyName = "IMG"
+        Me.Column11.HeaderText = "صور العقد"
         Me.Column11.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.Column11.Name = "Column11"
         Me.Column11.ReadOnly = True
@@ -816,32 +844,15 @@ Partial Class T3AQOD
         Me.Column12.HeaderText = "URL"
         Me.Column12.Name = "Column12"
         Me.Column12.ReadOnly = True
+        Me.Column12.Visible = False
         '
-        'BTN_BACK
+        'Column13
         '
-        Me.BTN_BACK.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_BACK.Appearance.ForeColor = System.Drawing.Color.Black
-        Me.BTN_BACK.Appearance.Options.UseFont = True
-        Me.BTN_BACK.Appearance.Options.UseForeColor = True
-        Me.BTN_BACK.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image1"), System.Drawing.Image)
-        Me.BTN_BACK.Location = New System.Drawing.Point(596, 321)
-        Me.BTN_BACK.Name = "BTN_BACK"
-        Me.BTN_BACK.Size = New System.Drawing.Size(140, 44)
-        Me.BTN_BACK.TabIndex = 9
-        Me.BTN_BACK.Text = "الصورة السابقة"
-        '
-        'BTN_GO
-        '
-        Me.BTN_GO.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_GO.Appearance.ForeColor = System.Drawing.Color.Black
-        Me.BTN_GO.Appearance.Options.UseFont = True
-        Me.BTN_GO.Appearance.Options.UseForeColor = True
-        Me.BTN_GO.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_GO.Location = New System.Drawing.Point(214, 321)
-        Me.BTN_GO.Name = "BTN_GO"
-        Me.BTN_GO.Size = New System.Drawing.Size(140, 44)
-        Me.BTN_GO.TabIndex = 10
-        Me.BTN_GO.Text = "الصورة التالية"
+        Me.Column13.DataPropertyName = "CODE_T3AQOD"
+        Me.Column13.HeaderText = "CODE"
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Visible = False
         '
         'T3AQOD
         '
@@ -944,8 +955,9 @@ Partial Class T3AQOD
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ADD_PHOTO As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_PRINT As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BTN_DELET As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Column11 As DataGridViewImageColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents BTN_GO As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents BTN_BACK As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
 End Class

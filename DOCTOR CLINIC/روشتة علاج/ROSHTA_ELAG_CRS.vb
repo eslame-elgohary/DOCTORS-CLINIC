@@ -20,11 +20,11 @@ Imports System.ComponentModel
 
 Public Class ROSHTA_ELAG_CRS
     Inherits ReportClass
-    
+
     Public Sub New()
         MyBase.New
     End Sub
-    
+
     Public Overrides Property ResourceName() As String
         Get
             Return "ROSHTA_ELAG_CRS.rpt"
@@ -33,7 +33,7 @@ Public Class ROSHTA_ELAG_CRS
             'Do nothing
         End Set
     End Property
-    
+
     Public Overrides Property NewGenerator() As Boolean
         Get
             Return true
@@ -42,7 +42,7 @@ Public Class ROSHTA_ELAG_CRS
             'Do nothing
         End Set
     End Property
-    
+
     Public Overrides Property FullResourceName() As String
         Get
             Return "DOCTOR_CLINIC.ROSHTA_ELAG_CRS.rpt"
@@ -51,41 +51,41 @@ Public Class ROSHTA_ELAG_CRS
             'Do nothing
         End Set
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public ReadOnly Property Section1() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(0)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public ReadOnly Property Section2() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(1)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public ReadOnly Property Section3() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(2)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public ReadOnly Property Section4() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(3)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(4)
@@ -93,17 +93,17 @@ Public Class ROSHTA_ELAG_CRS
     End Property
 End Class
 
-<System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
+<System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")> _
 Public Class CachedROSHTA_ELAG_CRS
     Inherits Component
     Implements ICachedReport
-    
+
     Public Sub New()
         MyBase.New
     End Sub
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public Overridable Property IsCacheable() As Boolean Implements CrystalDecisions.ReportSource.ICachedReport.IsCacheable
         Get
             Return true
@@ -112,9 +112,9 @@ Public Class CachedROSHTA_ELAG_CRS
             '
         End Set
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public Overridable Property ShareDBLogonInfo() As Boolean Implements CrystalDecisions.ReportSource.ICachedReport.ShareDBLogonInfo
         Get
             Return false
@@ -123,9 +123,9 @@ Public Class CachedROSHTA_ELAG_CRS
             '
         End Set
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+
+    <Browsable(false), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
     Public Overridable Property CacheTimeOut() As System.TimeSpan Implements CrystalDecisions.ReportSource.ICachedReport.CacheTimeOut
         Get
             Return CachedReportConstants.DEFAULT_TIMEOUT
@@ -134,13 +134,13 @@ Public Class CachedROSHTA_ELAG_CRS
             '
         End Set
     End Property
-    
+
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
         Dim rpt As ROSHTA_ELAG_CRS = New ROSHTA_ELAG_CRS()
         rpt.Site = Me.Site
         Return rpt
     End Function
-    
+
     Public Overridable Function GetCustomizedCacheKey(ByVal request As RequestContext) As String Implements CrystalDecisions.ReportSource.ICachedReport.GetCustomizedCacheKey
         Dim key As [String] = Nothing
         '// The following is the code used to generate the default

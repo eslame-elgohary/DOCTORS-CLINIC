@@ -356,6 +356,8 @@ Partial Class ADD_MONY_MAML
         '
         'PA_NAME
         '
+        Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.PA_NAME.FormattingEnabled = True
         Me.PA_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
         Me.PA_NAME.Location = New System.Drawing.Point(299, 63)

@@ -1,13 +1,8 @@
 ﻿Public Class SEARCH_PATIENT
     Private Sub SEARCH_PATIENT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
-        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
-        'FILL_DGV(DataGridView1, "SELECT * FROM PATIENT WHERE STAT = 'TRUE' ORDER BY PA_CODE2")
-        'SELECTORDER.SelectedIndex = 0
+        FILL_DGV(DataGridView1, "SELECT * FROM PATIENT WHERE STAT = 'TRUE' ORDER BY PA_CODE2")
+        SELECTORDER.SelectedIndex = 0
         TextBox1.Select()
-        'PATIENTDATA.Clear()
-        'PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
-        'DataGridView1.Refresh()
     End Sub
 
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click
@@ -21,52 +16,46 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        If TextBox1.Text <> "" Then
-            PATION_BINDING.Filter = "PA_CODE like '%" & TextBox1.Text & "%' or PA_NAME like '%" & TextBox1.Text & "%' or PA_TEL like '%" & TextBox1.Text & "%' or PA_NAME2 like '%" & TextBox1.Text & "%' or PA_TEL2 like '%" & TextBox1.Text & "%'"
-        Else
-            PATION_BINDING.Filter = ""
+        If SELECTORDER.SelectedIndex = 0 Then
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter
+            DT.Clear()
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA.Fill(DT)
+            DataGridView1.DataSource = DT.DefaultView
         End If
-        DataGridView1.Refresh()
-        'If SELECTORDER.SelectedIndex = 0 Then
-        '    Dim DT As New DataTable
-        '    Dim DA As New SqlClient.SqlDataAdapter
-        '    DT.Clear()
-        '    DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
-        '    DA.Fill(DT)
-        '    DataGridView1.DataSource = DT.DefaultView
-        'End If
-        'If SELECTORDER.SelectedIndex = 1 Then
-        '    Dim DT As New DataTable
-        '    Dim DA As New SqlClient.SqlDataAdapter
-        '    DT.Clear()
-        '    DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_TEL LIKE '%" & TextBox1.Text & "%'", SqlConn)
-        '    DA.Fill(DT)
-        '    DataGridView1.DataSource = DT.DefaultView
-        'End If
-        'If SELECTORDER.SelectedIndex = 2 Then
-        '    Dim DT As New DataTable
-        '    Dim DA As New SqlClient.SqlDataAdapter
-        '    DT.Clear()
-        '    DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME2 LIKE '%" & TextBox1.Text & "%'", SqlConn)
-        '    DA.Fill(DT)
-        '    DataGridView1.DataSource = DT.DefaultView
-        'End If
-        'If SELECTORDER.SelectedIndex = 3 Then
-        '    Dim DT As New DataTable
-        '    Dim DA As New SqlClient.SqlDataAdapter
-        '    DT.Clear()
-        '    DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_TEL2 LIKE '%" & TextBox1.Text & "%'", SqlConn)
-        '    DA.Fill(DT)
-        '    DataGridView1.DataSource = DT.DefaultView
-        'End If
-        'If SELECTORDER.SelectedIndex = 4 Then
-        '    Dim DT As New DataTable
-        '    Dim DA As New SqlClient.SqlDataAdapter
-        '    DT.Clear()
-        '    DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE2 LIKE '%" & TextBox1.Text & "%'", SqlConn)
-        '    DA.Fill(DT)
-        '    DataGridView1.DataSource = DT.DefaultView
-        'End If
+        If SELECTORDER.SelectedIndex = 1 Then
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter
+            DT.Clear()
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_TEL LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA.Fill(DT)
+            DataGridView1.DataSource = DT.DefaultView
+        End If
+        If SELECTORDER.SelectedIndex = 2 Then
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter
+            DT.Clear()
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_NAME2 LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA.Fill(DT)
+            DataGridView1.DataSource = DT.DefaultView
+        End If
+        If SELECTORDER.SelectedIndex = 3 Then
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter
+            DT.Clear()
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_TEL2 LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA.Fill(DT)
+            DataGridView1.DataSource = DT.DefaultView
+        End If
+        If SELECTORDER.SelectedIndex = 4 Then
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter
+            DT.Clear()
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE2 LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA.Fill(DT)
+            DataGridView1.DataSource = DT.DefaultView
+        End If
     End Sub
     Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
         If DataGridView1(6, DataGridView1.CurrentRow.Index).Selected = True Then

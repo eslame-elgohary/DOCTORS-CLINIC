@@ -49,7 +49,7 @@
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
-        If PA_NAME.Text = "" Then
+        If TXT_CODE_PA.Text = "" Then
             MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
             PA_NAME.Select()
             Exit Sub
@@ -147,21 +147,23 @@
             Exit Sub
         End If
         Dim DT As New DataTable
-        With DT
-            .Columns.Add("DATE_H")
-            .Columns.Add("CODE_H")
-            .Columns.Add("PA_NAME")
-            .Columns.Add("DO_TKHSOS")
-            .Columns.Add("DO_NAME")
-            .Columns.Add("PA_TEL")
-            .Columns.Add("PA_CODE2")
+        'With DT
+        '    .Columns.Add("DATE_H")
+        '    .Columns.Add("CODE_H")
+        '    .Columns.Add("PA_NAME")
+        '    .Columns.Add("DO_TKHSOS")
+        '    .Columns.Add("DO_NAME")
+        '    .Columns.Add("PA_TEL")
+        '    .Columns.Add("PA_CODE2")
 
-        End With
-        For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
-                DT.Rows.Add(TXT_DATE.Text, DataGridView1.Rows(I).Cells(0).Value, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, DataGridView1.Rows(I).Cells(5).Value, DataGridView1.Rows(I).Cells(6).Value)
-            End If
-        Next
+        'End With
+        'For I As Integer = 0 To DataGridView1.Rows.Count - 1
+        '    If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
+        '        DT.Rows.Add(TXT_DATE.Text, DataGridView1.Rows(I).Cells(0).Value, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, DataGridView1.Rows(I).Cells(5).Value, DataGridView1.Rows(I).Cells(6).Value)
+        '    End If
+        'Next
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR,DOCTORS,PATIENT WHERE CODE_PA_H = PA_CODE AND CODE_DOC_H = DO_CODE AND CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY HAGEZ_DOCTOR.ID ", SqlConn)
+        DA.Fill(DT)
         Dim REP As New HAGEZ_CRS
         REP.SetDataSource(DT)
         Dim FRM As New HAGEZ_REP
@@ -241,11 +243,11 @@
             TXT_CODE_PA.Text = DT.Rows(I).Item("PA_CODE")
             TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
             TXT_CODE2.Text = DT.Rows(I).Item("PA_TEL2")
-
         Next
     End Sub
 
     Private Sub TXT_CODE_PA_TextChanged(sender As Object, e As EventArgs) Handles TXT_CODE_PA.TextChanged
+
         Try
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE='" & TXT_CODE_PA.Text & "'", SqlConn)
@@ -366,5 +368,9 @@
             TXT_CODE.Text = "1"
         End If
 
+    End Sub
+
+    Private Sub PA_NAME_TextChanged(sender As Object, e As EventArgs) Handles PA_NAME.TextChanged
+        TXT_CODE_PA.Text = ""
     End Sub
 End Class

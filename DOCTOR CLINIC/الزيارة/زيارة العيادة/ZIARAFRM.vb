@@ -93,7 +93,7 @@
         End If
         '===== اجراء تخزين اسم الوحدة ==========
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء الحجز' or TYPE_A ='تأكيد الحجز' ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء' or TYPE_A ='تأكيد' ", SqlConn)
         DA.Fill(DT)
 
         If DT.Rows.Count > 0 Then
@@ -105,7 +105,7 @@
             DR!CODE_TKH_H_A = TXT_TKHSOS_CODE.Text
             DR!CODE_DOC_H_A = TXT_DOC_CODE.Text
             DR!DATE_H_A = DATE_TODAY.Text
-            DR!TYPE_A = "تأكيد الحجز"
+            DR!TYPE_A = "تأكيد"
             DT.Rows.Add(DR)
             Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
             DA.Update(DT)
@@ -125,7 +125,7 @@
         End If
         '===== اجراء تخزين اسم الوحدة ==========
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء الحجز' or TYPE_A ='تأكيد الحجز' ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء' or TYPE_A ='تأكيد' ", SqlConn)
         DA.Fill(DT)
 
         If DT.Rows.Count > 0 Then
@@ -137,7 +137,7 @@
             DR!CODE_TKH_H_A = TXT_TKHSOS_CODE.Text
             DR!CODE_DOC_H_A = TXT_DOC_CODE.Text
             DR!DATE_H_A = DATE_TODAY.Text
-            DR!TYPE_A = "الغاء الحجز"
+            DR!TYPE_A = "الغاء"
             DT.Rows.Add(DR)
             Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
             DA.Update(DT)
@@ -161,7 +161,7 @@
         End If
         '===== اجراء تخزين اسم الوحدة ==========
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء الحجز' or TYPE_A ='تأكيد الحجز' ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR_DT WHERE CODE_PA_H_A = '" & TXT_PA_CODE.Text & "'AND DATE_H_A = '" & DATE_TODAY.Text & "' AND TYPE_A ='الغاء' or TYPE_A ='تأكيد' ", SqlConn)
         DA.Fill(DT)
         If DT.Rows.Count > 0 Then
             MessageBox.Show("المريض تم تأكيد حضورة من قبل", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)

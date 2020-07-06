@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,13 +27,12 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>false</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -175,6 +174,12 @@
     </Compile>
     <Compile Include="LARBI\test.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMGT3AQOD_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="التعاقدات\تعاقد\IMGV.Designer.vb">
       <DependentUpon>IMGV.vb</DependentUpon>
@@ -1074,6 +1079,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ROWHA.resx">
       <DependentUpon>ROWHA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IMGT3AQOD_CRS.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="التعاقدات\تعاقد\IMGV.resx">
       <DependentUpon>IMGV.vb</DependentUpon>

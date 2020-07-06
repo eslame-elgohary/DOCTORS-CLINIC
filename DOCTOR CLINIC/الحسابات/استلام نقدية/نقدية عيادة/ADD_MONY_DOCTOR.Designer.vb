@@ -523,8 +523,6 @@ Partial Class ADD_MONY_DOCTOR
         '
         'TXT_TYPEMONY
         '
-        Me.TXT_TYPEMONY.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_TYPEMONY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_TYPEMONY.FormattingEnabled = True
         Me.TXT_TYPEMONY.Items.AddRange(New Object() {"نقدي", "فيزا", "بريميوم كارد"})
         Me.TXT_TYPEMONY.Location = New System.Drawing.Point(8, 205)
