@@ -94,7 +94,6 @@ Partial Class ADD_MONY_MAML
         Me.USER_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.TIM_CALC = New System.Windows.Forms.Timer(Me.components)
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -797,10 +796,6 @@ Partial Class ADD_MONY_MAML
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
-        'TIM_CALC
-        '
-        Me.TIM_CALC.Enabled = True
-        '
         'ADD_MONY_MAML
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -889,7 +884,6 @@ Partial Class ADD_MONY_MAML
     Friend WithEvents TIME_EDIT As ToolStripStatusLabel
     Friend WithEvents Label6 As Label
     Friend WithEvents TXT_M As TextBox
-    Friend WithEvents TIM_CALC As Timer
     Friend WithEvents TXT_CODE2 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Column7 As DataGridViewTextBoxColumn

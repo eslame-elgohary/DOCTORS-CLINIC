@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PA_HESAP_FRM
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class PA_HESAP_FRM
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PA_HESAP_FRM))
         Me.START_DATE = New System.Windows.Forms.DateTimePicker()
         Me.END_DATE = New System.Windows.Forms.DateTimePicker()
@@ -32,6 +33,11 @@ Partial Class PA_HESAP_FRM
         Me.TXT_CODE = New System.Windows.Forms.TextBox()
         Me.BTN_PRENT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'START_DATE
@@ -55,7 +61,7 @@ Partial Class PA_HESAP_FRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(37, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 21)
+        Me.Label1.Size = New System.Drawing.Size(86, 21)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "بداية الفترة :"
         '
@@ -64,7 +70,7 @@ Partial Class PA_HESAP_FRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(360, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 21)
+        Me.Label2.Size = New System.Drawing.Size(87, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "نهاية الفترة :"
         '
@@ -73,7 +79,7 @@ Partial Class PA_HESAP_FRM
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(25, 69)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 21)
+        Me.Label3.Size = New System.Drawing.Size(98, 21)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "أسم المريض :"
         '
@@ -81,11 +87,14 @@ Partial Class PA_HESAP_FRM
         '
         Me.TXT_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_NAME.DataSource = Me.BindingSource1
+        Me.TXT_NAME.DisplayMember = "PA_NAME"
         Me.TXT_NAME.FormattingEnabled = True
         Me.TXT_NAME.Location = New System.Drawing.Point(131, 66)
         Me.TXT_NAME.Name = "TXT_NAME"
         Me.TXT_NAME.Size = New System.Drawing.Size(386, 29)
         Me.TXT_NAME.TabIndex = 6
+        Me.TXT_NAME.ValueMember = "PA_NAME"
         '
         'TXT_CODE
         '
@@ -117,6 +126,22 @@ Partial Class PA_HESAP_FRM
         Me.BTN_EXIT.TabIndex = 9
         Me.BTN_EXIT.Text = "أغلاق"
         '
+        'BindingSource1
+        '
+        Me.BindingSource1.AllowNew = True
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'PA_HESAP_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -141,6 +166,8 @@ Partial Class PA_HESAP_FRM
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "كشف حساب مريض معمل"
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -155,4 +182,7 @@ Partial Class PA_HESAP_FRM
     Friend WithEvents TXT_CODE As TextBox
     Friend WithEvents BTN_PRENT As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BTN_EXIT As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

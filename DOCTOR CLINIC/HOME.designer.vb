@@ -130,13 +130,11 @@ Partial Class HOME
         Me.BT_SMS = New System.Windows.Forms.ToolStripButton()
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -219,6 +217,7 @@ Partial Class HOME
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -232,6 +231,7 @@ Partial Class HOME
         '
         'Label9
         '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -245,6 +245,7 @@ Partial Class HOME
         '
         'MASEGETXT
         '
+        Me.MASEGETXT.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.MASEGETXT.BackColor = System.Drawing.Color.Transparent
         Me.MASEGETXT.Location = New System.Drawing.Point(507, 107)
         Me.MASEGETXT.Name = "MASEGETXT"
@@ -880,20 +881,11 @@ Partial Class HOME
         Me.BT_JOGOUT.Size = New System.Drawing.Size(50, 52)
         Me.BT_JOGOUT.Text = "تغيير المستخدم"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox2.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.karma_logo_02
-        Me.PictureBox2.Location = New System.Drawing.Point(58, 367)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(155, 189)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 72
-        Me.PictureBox2.TabStop = False
-        '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox1.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.Doctors_Pic
         Me.PictureBox1.Location = New System.Drawing.Point(0, 81)
@@ -909,7 +901,6 @@ Partial Class HOME
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1350, 730)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.MASEGETXT)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label9)
@@ -937,7 +928,6 @@ Partial Class HOME
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1032,7 +1022,6 @@ Partial Class HOME
     Friend WithEvents FffffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PERSONALHISTORYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PFOLOWUPToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ReportingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FOLOWUPCARDCLOSEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PERSONALHISTORYFORINFERTILITYToolStripMenuItem As ToolStripMenuItem

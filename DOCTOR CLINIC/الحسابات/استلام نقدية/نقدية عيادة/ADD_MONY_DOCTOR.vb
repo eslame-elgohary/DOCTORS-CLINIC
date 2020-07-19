@@ -404,9 +404,9 @@
                 '==========================================================================
                 PRINTBTN_Click(sender, e)
                 MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                'NEWBTN_Click(sender, e)
+                NEWBTN_Click(sender, e)
 
-                Me.Close()
+                ' Me.Close()
 
             Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -432,12 +432,11 @@
                     PA_NAME.Select()
                     Exit Sub
                 End If
-                'If TOTAL.Text < 1 Then
-                '    MessageBox.Show("برجاء ادخال الخدمة المطلوبة ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                '    TXT_ACTION.Select()
-                '    Exit Sub
-                'End If
-
+                If TXT_TYPEMONY.Text = "" Then
+                    MessageBox.Show("يرجى أختيار طريقة الدفع", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_TYPEMONY.Select()
+                    Exit Sub
+                End If
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
@@ -551,9 +550,9 @@
                 printedit()
                 ' PRINTBTN_Click(sender, e)
                 MessageBox.Show("تمت عملية تعديل بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                'NEWBTN_Click(sender, e)
+                NEWBTN_Click(sender, e)
                 'CALC()
-                Me.Close()
+                'Me.Close()
             Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -610,7 +609,6 @@
                 '==========================================================================
                 MessageBox.Show("تمت عملية حذف بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
-                CALC()
             Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 

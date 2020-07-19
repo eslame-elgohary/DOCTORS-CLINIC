@@ -64,6 +64,7 @@
         PA_CODE2.Text = ""
         '""""""""""""""" الترقيم التلقائي """"""""""""""
         PA_CODE.Text = CODE_GENE("PATIENT", "ID") + 1
+        PA_CODE2.Text = CODE_GENE("PATIENT", "ID") + 1
         '""""""""""""""""""""""""""""""
         EDITBTN.Enabled = False
         DELETBTN.Enabled = False
@@ -196,7 +197,7 @@
                 Else
                     Dim DR = DT.NewRow
                     DR!PA_CODE = PA_CODE.Text
-                    DR!PA_CODE2 = PA_CODE2.Text
+                    DR!PA_CODE2 = CODE_GENE("PATIENT", "ID") + 1
                     DR!PA_NAME = PA_NAME.Text
                     DR!PA_NAME2 = PA_NAME2.Text
                     DR!PA_TEL = PA_TEL.Text
@@ -227,7 +228,7 @@
     End Sub
 
     Private Sub SEARCHBTN_Click(sender As Object, e As EventArgs) Handles SEARCHBTN.Click
-        SEARCH_PATIENT.ShowDialog()
+        'SEARCH_PATIENT.ShowDialog()
     End Sub
 
     Private Sub EDITBTN_Click(sender As Object, e As EventArgs) Handles EDITBTN.Click
@@ -407,16 +408,14 @@
 
     Private Sub AUTOCHI_CheckedChanged(sender As Object, e As EventArgs) Handles AUTOCHI.CheckedChanged
         If AUTOCHI.Checked = True Then
-            AUTOPA.Enabled = True
             PA_CODE2.Enabled = False
         Else
-            AUTOPA.Enabled = False
             PA_CODE2.Enabled = True
         End If
     End Sub
 
-    Private Sub AUTOPA_Tick(sender As Object, e As EventArgs) Handles AUTOPA.Tick
-        PA_CODE2.Text = CODE_GENE("PATIENT", "ID") + 1
+    Private Sub AUTOPA_Tick(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub PA_OP_R1_CheckedChanged(sender As Object, e As EventArgs) Handles PA_OP_R1.CheckedChanged

@@ -22,6 +22,7 @@ Partial Class LABTOLAB_V
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LABTOLAB_V))
         Me.TXT_START_DATE = New System.Windows.Forms.DateTimePicker()
         Me.TXT_END_DATE = New System.Windows.Forms.DateTimePicker()
@@ -31,10 +32,15 @@ Partial Class LABTOLAB_V
         Me.CH_PA = New System.Windows.Forms.CheckBox()
         Me.TXT_MAML_NAME = New System.Windows.Forms.ComboBox()
         Me.TXT_PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.TXT_MAML_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_VIWE = New DevExpress.XtraEditors.SimpleButton()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TXT_START_DATE
@@ -58,7 +64,7 @@ Partial Class LABTOLAB_V
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(28, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 21)
+        Me.Label1.Size = New System.Drawing.Size(86, 21)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "بداية الفترة :"
         '
@@ -67,7 +73,7 @@ Partial Class LABTOLAB_V
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(284, 29)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 21)
+        Me.Label2.Size = New System.Drawing.Size(87, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "نهاية الفترة :"
         '
@@ -77,7 +83,7 @@ Partial Class LABTOLAB_V
         Me.CH_MAML.Location = New System.Drawing.Point(23, 93)
         Me.CH_MAML.Name = "CH_MAML"
         Me.CH_MAML.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_MAML.Size = New System.Drawing.Size(106, 25)
+        Me.CH_MAML.Size = New System.Drawing.Size(100, 25)
         Me.CH_MAML.TabIndex = 4
         Me.CH_MAML.Text = "أسم المعمل"
         Me.CH_MAML.UseVisualStyleBackColor = True
@@ -88,7 +94,7 @@ Partial Class LABTOLAB_V
         Me.CH_PA.Location = New System.Drawing.Point(14, 139)
         Me.CH_PA.Name = "CH_PA"
         Me.CH_PA.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_PA.Size = New System.Drawing.Size(111, 25)
+        Me.CH_PA.Size = New System.Drawing.Size(109, 25)
         Me.CH_PA.TabIndex = 5
         Me.CH_PA.Text = "أسم المريض"
         Me.CH_PA.UseVisualStyleBackColor = True
@@ -108,12 +114,27 @@ Partial Class LABTOLAB_V
         '
         Me.TXT_PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_PA_NAME.DataSource = Me.PATION_BINDING
+        Me.TXT_PA_NAME.DisplayMember = "PA_NAME"
         Me.TXT_PA_NAME.Enabled = False
         Me.TXT_PA_NAME.FormattingEnabled = True
         Me.TXT_PA_NAME.Location = New System.Drawing.Point(140, 139)
         Me.TXT_PA_NAME.Name = "TXT_PA_NAME"
         Me.TXT_PA_NAME.Size = New System.Drawing.Size(351, 29)
         Me.TXT_PA_NAME.TabIndex = 7
+        Me.TXT_PA_NAME.ValueMember = "PA_NAME"
+        '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.AllowNew = True
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TXT_MAML_CODE
         '
@@ -153,6 +174,10 @@ Partial Class LABTOLAB_V
         Me.BTN_VIWE.TabIndex = 8
         Me.BTN_VIWE.Text = "عرض"
         '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
         'LABTOLAB_V
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -178,7 +203,10 @@ Partial Class LABTOLAB_V
         Me.RightToLeftLayout = True
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LAB TO LAB"
+        CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +223,7 @@ Partial Class LABTOLAB_V
     Friend WithEvents BTN_EXIT As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_MAML_CODE As System.Windows.Forms.TextBox
     Friend WithEvents TXT_PA_CODE As System.Windows.Forms.TextBox
+    Friend WithEvents PATION_BINDING As BindingSource
+    Friend WithEvents PATIENTDATA As PATIENTDATA
+    Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
 End Class

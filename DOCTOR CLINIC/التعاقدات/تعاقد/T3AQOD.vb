@@ -87,5 +87,9 @@ Public Class T3AQOD
         FRM.ShowDialog()
 
     End Sub
+
+    Private Sub BTN_DELET_Click(sender As Object, e As EventArgs) Handles BTN_DELET.Click
+
+    End Sub
 End Class
 

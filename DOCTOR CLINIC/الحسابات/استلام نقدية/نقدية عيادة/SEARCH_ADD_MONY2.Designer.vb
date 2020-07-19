@@ -22,22 +22,28 @@ Partial Class SEARCH_ADD_MONY2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SEARCH_ADD_MONY2))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.K1 = New System.Windows.Forms.ComboBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.K1 = New System.Windows.Forms.ComboBox()
+        Me.ADD_DATE_VAL = New DevExpress.XtraEditors.SimpleButton()
+        Me.DATE_END = New System.Windows.Forms.DateTimePicker()
+        Me.DATE_START = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(239, 20)
+        Me.TextBox1.Location = New System.Drawing.Point(239, 55)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(390, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(349, 29)
         Me.TextBox1.TabIndex = 0
         '
         'DataGridView1
@@ -48,20 +54,11 @@ Partial Class SEARCH_ADD_MONY2
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column2, Me.Column5, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 56)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 97)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(731, 394)
+        Me.DataGridView1.Size = New System.Drawing.Size(731, 353)
         Me.DataGridView1.TabIndex = 2
-        '
-        'K1
-        '
-        Me.K1.FormattingEnabled = True
-        Me.K1.Items.AddRange(New Object() {"رقم الأيصال", "أسم المريض"})
-        Me.K1.Location = New System.Drawing.Point(39, 21)
-        Me.K1.Name = "K1"
-        Me.K1.Size = New System.Drawing.Size(181, 29)
-        Me.K1.TabIndex = 3
         '
         'Column1
         '
@@ -103,11 +100,70 @@ Partial Class SEARCH_ADD_MONY2
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
+        'K1
+        '
+        Me.K1.FormattingEnabled = True
+        Me.K1.Items.AddRange(New Object() {"رقم الأيصال", "أسم المريض"})
+        Me.K1.Location = New System.Drawing.Point(39, 56)
+        Me.K1.Name = "K1"
+        Me.K1.Size = New System.Drawing.Size(181, 29)
+        Me.K1.TabIndex = 3
+        '
+        'ADD_DATE_VAL
+        '
+        Me.ADD_DATE_VAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADD_DATE_VAL.Appearance.Options.UseFont = True
+        Me.ADD_DATE_VAL.ImageOptions.Image = CType(resources.GetObject("ADD_DATE_VAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.ADD_DATE_VAL.Location = New System.Drawing.Point(613, 11)
+        Me.ADD_DATE_VAL.Name = "ADD_DATE_VAL"
+        Me.ADD_DATE_VAL.Size = New System.Drawing.Size(133, 62)
+        Me.ADD_DATE_VAL.TabIndex = 16
+        Me.ADD_DATE_VAL.Text = "تأكيد الفترة"
+        '
+        'DATE_END
+        '
+        Me.DATE_END.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DATE_END.Location = New System.Drawing.Point(388, 11)
+        Me.DATE_END.Name = "DATE_END"
+        Me.DATE_END.Size = New System.Drawing.Size(200, 29)
+        Me.DATE_END.TabIndex = 15
+        '
+        'DATE_START
+        '
+        Me.DATE_START.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DATE_START.Location = New System.Drawing.Point(107, 14)
+        Me.DATE_START.Name = "DATE_START"
+        Me.DATE_START.Size = New System.Drawing.Size(200, 29)
+        Me.DATE_START.TabIndex = 14
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(325, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 21)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "حتي :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(25, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 21)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "الفترة من :"
+        '
         'SEARCH_ADD_MONY2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(755, 462)
+        Me.Controls.Add(Me.ADD_DATE_VAL)
+        Me.Controls.Add(Me.DATE_END)
+        Me.Controls.Add(Me.DATE_START)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.K1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox1)
@@ -135,4 +191,9 @@ Partial Class SEARCH_ADD_MONY2
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewButtonColumn
+    Friend WithEvents ADD_DATE_VAL As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DATE_END As DateTimePicker
+    Friend WithEvents DATE_START As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

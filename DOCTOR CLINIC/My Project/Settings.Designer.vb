@@ -92,46 +92,18 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;Initial Catalog=DOCTOR_CLINIC_DT;Persist Security Info=T"& _ 
-            "rue;User ID=sa;Password=xyz.1234")>  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString)>  _
         Public ReadOnly Property sqlconn2() As String
             Get
                 Return CType(Me("sqlconn2"),String)
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.111,1433\SQLEXPRESS;Initial Catalog=DOCTOR_CLINIC;Persist S"& _ 
-            "ecurity Info=True;User ID=sa;Password=xyz.1234")>  _
-        Public Property WALIDCALL() As String
-            Get
-                Return CType(Me("WALIDCALL"),String)
-            End Get
-            Set
-                Me("WALIDCALL") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQL2012;Initial Catalog=DOCTOR_CLINIC;Persist Security Info=True;Us"& _ 
-            "er ID=sa;Password=xyz.1234")>  _
-        Public Property MECAL() As String
-            Get
-                Return CType(Me("MECAL"),String)
-            End Get
-            Set
-                Me("MECAL") = value
-            End Set
-        End Property
-        
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=10.144.92.55,1433\SQLEXPRESS;Initial Catalog=DOCTOR_CLINIC;Persist Se"& _ 
-            "curity Info=True;User ID=sa;Password=xyz.1234")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.111,1433\SQLEXPRESS;Initial Catalog=DOCTOR_CLINIC;Persist S"& _ 
+            "ecurity Info=True;User ID=sa;Password=xyz.1234")>  _
         Public ReadOnly Property sqlconn1() As String
             Get
                 Return CType(Me("sqlconn1"),String)

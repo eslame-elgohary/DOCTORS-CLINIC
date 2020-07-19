@@ -1,10 +1,11 @@
 ﻿Public Class PA_HESAP_FRM
     Private Sub PA_HESAP_FRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         START_DATE.Value = Date.Today
         END_DATE.Value = Date.Today
         TXT_CODE.Text = ""
         TXT_NAME.Text = ""
-        FILL_PATION()
     End Sub
 
     Private Sub BTN_PRENT_Click(sender As Object, e As EventArgs) Handles BTN_PRENT.Click
@@ -33,15 +34,6 @@
 
     Private Sub BTN_EXIT_Click(sender As Object, e As EventArgs) Handles BTN_EXIT.Click
         Me.Close()
-    End Sub
-    Sub FILL_PATION()
-        TXT_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT", SqlConn)
-        DA.Fill(DT)
-        For I = 0 To DT.Rows.Count - 1
-            TXT_NAME.Items.Add(DT.Rows(I).Item("PA_NAME"))
-        Next
     End Sub
     Private Sub TXT_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_NAME.SelectedIndexChanged
         Dim DT As New DataTable

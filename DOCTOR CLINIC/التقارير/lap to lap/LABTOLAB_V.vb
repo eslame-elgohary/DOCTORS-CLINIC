@@ -5,6 +5,8 @@
     End Sub
 
     Private Sub LABTOLAB_V_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PATIENTDATA.PATIENT' table. You can move, or remove it, as needed.
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
         TXT_START_DATE.Text = Date.Today
         TXT_END_DATE.Text = Date.Today
         TXT_MAML_CODE.Text = ""
@@ -14,7 +16,7 @@
         CH_MAML.Checked = False
         CH_PA.Checked = False
         FILL_MAML()
-        FILL_PATION()
+        ' FILL_PATION()
     End Sub
     Sub FILL_MAML()
         TXT_MAML_NAME.Items.Clear()
@@ -26,15 +28,15 @@
         Next
 
     End Sub
-    Sub FILL_PATION()
-        TXT_PA_NAME.Items.Clear()
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT = 'TRUE' ", SqlConn)
-        DA.Fill(DT)
-        For IA = 0 To DT.Rows.Count - 1
-            TXT_PA_NAME.Items.Add(DT.Rows(IA).Item("PA_NAME"))
-        Next
-    End Sub
+    'Sub FILL_PATION()
+    '    TXT_PA_NAME.Items.Clear()
+    '    Dim DT As New DataTable
+    '    Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE STAT = 'TRUE' ", SqlConn)
+    '    DA.Fill(DT)
+    '    For IA = 0 To DT.Rows.Count - 1
+    '        TXT_PA_NAME.Items.Add(DT.Rows(IA).Item("PA_NAME"))
+    '    Next
+    'End Sub
 
     Private Sub TXT_MAML_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_MAML_NAME.SelectedIndexChanged
         Dim DT As New DataTable

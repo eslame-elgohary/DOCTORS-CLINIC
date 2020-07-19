@@ -1,4 +1,6 @@
-﻿Public Class FOLLOWUPFRM
+﻿Imports DevExpress.Xpo
+
+Public Class FOLLOWUPFRM
     Private Sub FOLLOWUPFRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NEWBTN_Click(sender, e)
     End Sub
@@ -164,12 +166,12 @@
                 FILL_DGV(DataGridView4, "SELECT * FROM PHARM_V WHERE R_STAT ='TRUE' AND R_DATE ='" & TXT_DATE_LASTVISET.Text & "' AND PA_CODE = '" & TXT_PA_CODE.Text & "'")
 
             End If
-            '=========================================================================================================
-            T_CHANG.Enabled = True
-            FILL_PHARM()
-            FILL_COMPLAINT()
+        '=========================================================================================================
+        FILL_PHARM()
+        FILL_COMPLAINT()
         FILL_GOR3A()
         TXT_DATE_LASTVISET1.Value = TXT_DATE_LASTVISET.Value
+        tchang()
     End Sub
         Private Sub TXT_PA_CODE_TextChanged(sender As Object, e As EventArgs) Handles TXT_PA_CODE.TextChanged
             Dim DT As New DataTable
@@ -186,24 +188,142 @@
                 TXT_RH.Text = DT.Rows(I).Item("RH_PERS")
                 TXT_ABO.Text = DT.Rows(I).Item("ABO_PERS")
             Next
-            T_CHANG.Enabled = False
-            FILL_PHARM()
-            FILL_COMPLAINT()
-            FILL_GOR3A()
-        End Sub
+        FILL_PHARM()
+        FILL_COMPLAINT()
+        FILL_GOR3A()
+        tchang()
+    End Sub
 
-        Private Sub BTN_OBSTETRIC_Click(sender As Object, e As EventArgs) Handles BTN_OBSTETRIC.Click
-            If TXT_PA_CODE.Text = "" Then
-                MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                TXT_PA_NAME.Select()
-                Exit Sub
-            Else
-                OBSTETRIC_HISTORY_FRM.ShowDialog()
-            End If
+    Private Sub BTN_OBSTETRIC_Click(sender As Object, e As EventArgs) Handles BTN_OBSTETRIC.Click
+        If TXT_PA_CODE.Text = "" Then
+            MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PA_NAME.Select()
+            Exit Sub
+        Else
+            OBSTETRIC_HISTORY_FRM.ShowDialog()
+        End If
 
-        End Sub
+    End Sub
 
-        Private Sub BTN_1ST_Click(sender As Object, e As EventArgs) Handles BTN_1ST.Click
+    Sub tchang()
+        '======================== 4D ===============================
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM E4D_HISTORY WHERE STAT_4D ='TRUE' AND PA_CODE_4D = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
+        DA.Fill(DT)
+        If DT.Rows.Count > 0 Then
+            For I = 0 To DT.Rows.Count - 1
+                TXT_4D.Text = DT.Rows(I).Item("NAME_4D") & " - DATE : " & DT.Rows(I).Item("DATE_4D")
+            Next
+        Else
+            TXT_4D.Text = ""
+        End If
+        '=========================== OBSTETRIC HISTORY=======================================
+        Dim DT1 As New DataTable
+        Dim DA1 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM OBSTETRIC_HISTORY WHERE STAT_OBSTETRIC ='TRUE' AND PA_CODE_OBSTETRIC = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA1.Fill(DT1)
+        If DT1.Rows.Count > 0 Then
+            For I = 0 To DT1.Rows.Count - 1
+                TXT_OBSTETRIC.Text = DT1.Rows(I).Item("NAME_OBSTETRIC")
+            Next
+        Else
+            TXT_OBSTETRIC.Text = ""
+        End If
+
+        '=========================== FETAL DOPPLER =======================================
+        Dim DT2 As New DataTable
+        Dim DA2 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM FETAL_HISTORY WHERE STAT_FETAL ='TRUE' AND PA_CODE_FETAL = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA2.Fill(DT2)
+        If DT2.Rows.Count > 0 Then
+            For I = 0 To DT2.Rows.Count - 1
+                TXT_FETAL.Text = DT2.Rows(I).Item("NAME_FETAL") & " - DATE : " & DT2.Rows(I).Item("DATE_FETAL")
+            Next
+        Else
+            TXT_FETAL.Text = ""
+        End If
+
+        '=================== 1st ====================================================
+        Dim DT3 As New DataTable
+        Dim DA3 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM ST1_TEST WHERE STAT_ST1 ='TRUE' AND CODE_PA_ST1 = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA3.Fill(DT3)
+        If DT3.Rows.Count > 0 Then
+            For I = 0 To DT3.Rows.Count - 1
+                st1_hb.Text = DT3.Rows(I).Item("HB_ST1")
+                st1_plt.Text = DT3.Rows(I).Item("PLT_ST1")
+                st1_pc.Text = DT3.Rows(I).Item("PC_ST1")
+                st1_hbac.Text = DT3.Rows(I).Item("HBA1C_ST1")
+                st1_tsh.Text = DT3.Rows(I).Item("TSH_ST1")
+                st1_toxo.Text = DT3.Rows(I).Item("TOXO_ST1")
+                st1_cmv.Text = DT3.Rows(I).Item("CMV_ST1")
+                st1_rbs.Text = DT3.Rows(I).Item("RBS_ST1")
+                st1_urine.Text = DT3.Rows(I).Item("URINE_ST1")
+            Next
+        Else
+            st1_hb.Text = ""
+            st1_plt.Text = ""
+            st1_pc.Text = ""
+            st1_hbac.Text = ""
+            st1_tsh.Text = ""
+            st1_toxo.Text = ""
+            st1_cmv.Text = ""
+            st1_rbs.Text = ""
+            st1_urine.Text = ""
+
+        End If
+        '================================ 2nd ============================================
+        Dim DT4 As New DataTable
+        Dim DA4 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM ND2_TEST WHERE STAT_ND2 ='TRUE' AND CODE_PA_ND2 = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA4.Fill(DT4)
+        If DT1.Rows.Count > 0 Then
+            For I = 0 To DT4.Rows.Count - 1
+                ND2_hb.Text = DT4.Rows(I).Item("HB_ND2")
+                ND2_plt.Text = DT4.Rows(I).Item("PLT_ND2")
+                ND2_pc.Text = DT4.Rows(I).Item("PC_ND2")
+                ND2_HOUR.Text = DT4.Rows(I).Item("HOUR_ND2")
+                ND2_TOTAL.Text = DT4.Rows(I).Item("TOTAL_ND2")
+                ND2_LONIZED.Text = DT4.Rows(I).Item("LONIZED_ND2")
+                ND2_TSH.Text = DT4.Rows(I).Item("TSH_ND2")
+                ND2_urine.Text = DT4.Rows(I).Item("URINE_ND2")
+            Next
+        Else
+            ND2_hb.Text = ""
+            ND2_plt.Text = ""
+            ND2_pc.Text = ""
+            ND2_HOUR.Text = ""
+            ND2_TOTAL.Text = ""
+            ND2_LONIZED.Text = ""
+            ND2_TSH.Text = ""
+            ND2_urine.Text = ""
+        End If
+        '================================ 3rd ============================================
+        Dim DT5 As New DataTable
+        Dim DA5 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM RD3_TEST WHERE STAT_RD3 ='TRUE' AND CODE_PA_RD3 = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
+        DA5.Fill(DT5)
+        If DT1.Rows.Count > 0 Then
+            For I = 0 To DT5.Rows.Count - 1
+                RD3_hb.Text = DT5.Rows(I).Item("HB_RD3")
+                RD3_plt.Text = DT5.Rows(I).Item("PLT_RD3")
+                RD3_pc.Text = DT5.Rows(I).Item("PC_RD3")
+                RD3_SGPT.Text = DT5.Rows(I).Item("SGPT_RD3")
+                RD3_CREAT.Text = DT5.Rows(I).Item("CREAT_RD3")
+                RD3_HOUR.Text = DT5.Rows(I).Item("HOUR_RD3")
+                RD3_TSH.Text = DT5.Rows(I).Item("TSH_RD3")
+                RD3_rbs.Text = DT5.Rows(I).Item("RBS_RD3")
+                RD3_urine.Text = DT5.Rows(I).Item("URINE_RD3")
+            Next
+        Else
+            RD3_hb.Text = ""
+            RD3_plt.Text = ""
+            RD3_pc.Text = ""
+            RD3_SGPT.Text = ""
+            RD3_CREAT.Text = ""
+            RD3_HOUR.Text = ""
+            RD3_TSH.Text = ""
+            RD3_rbs.Text = ""
+            RD3_urine.Text = ""
+        End If
+        TXT_CODE100.Text = CODE_GENE("R_DOCTOR", "ID") + 1
+    End Sub
+    Private Sub BTN_1ST_Click(sender As Object, e As EventArgs) Handles BTN_1ST.Click
             If TXT_PA_CODE.Text = "" Then
                 MessageBox.Show("PLEASE ENTER THE NAME PATIENT ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 TXT_PA_NAME.Select()
@@ -342,9 +462,8 @@
         End Sub
 
         Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
-            T_CHANG.Enabled = False
-            FILL_PATION()
-            TXT_4D.Text = ""
+        FILL_PATION()
+        TXT_4D.Text = ""
             TXT_OBSTETRIC.Text = ""
             TXT_FETAL.Text = ""
             TXT_PA_NAME.Text = ""
@@ -784,126 +903,11 @@
             Me.Close()
         End Sub
 
-        Private Sub T_CHANG_Tick(sender As Object, e As EventArgs) Handles T_CHANG.Tick
-            '======================== 4D ===============================
-            Dim DT As New DataTable
-            Dim DA As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM E4D_HISTORY WHERE STAT_4D ='TRUE' AND PA_CODE_4D = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC  ", SqlConn)
-            DA.Fill(DT)
-            If DT.Rows.Count > 0 Then
-                For I = 0 To DT.Rows.Count - 1
-                TXT_4D.Text = DT.Rows(I).Item("NAME_4D") & " - DATE : " & DT.Rows(I).Item("DATE_4D")
-            Next
-            Else
-                TXT_4D.Text = ""
-            End If
-            '=========================== OBSTETRIC HISTORY=======================================
-            Dim DT1 As New DataTable
-            Dim DA1 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM OBSTETRIC_HISTORY WHERE STAT_OBSTETRIC ='TRUE' AND PA_CODE_OBSTETRIC = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
-            DA1.Fill(DT1)
-            If DT1.Rows.Count > 0 Then
-                For I = 0 To DT1.Rows.Count - 1
-                    TXT_OBSTETRIC.Text = DT1.Rows(I).Item("NAME_OBSTETRIC")
-                Next
-            Else
-                TXT_OBSTETRIC.Text = ""
-            End If
+    Private Sub T_CHANG_Tick(sender As Object, e As EventArgs)
 
-            '=========================== FETAL DOPPLER =======================================
-            Dim DT2 As New DataTable
-            Dim DA2 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM FETAL_HISTORY WHERE STAT_FETAL ='TRUE' AND PA_CODE_FETAL = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
-            DA2.Fill(DT2)
-            If DT2.Rows.Count > 0 Then
-                For I = 0 To DT2.Rows.Count - 1
-                TXT_FETAL.Text = DT2.Rows(I).Item("NAME_FETAL") & " - DATE : " & DT2.Rows(I).Item("DATE_FETAL")
-            Next
-            Else
-                TXT_FETAL.Text = ""
-            End If
+    End Sub
 
-            '=================== 1st ====================================================
-            Dim DT3 As New DataTable
-            Dim DA3 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM ST1_TEST WHERE STAT_ST1 ='TRUE' AND CODE_PA_ST1 = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
-            DA3.Fill(DT3)
-            If DT3.Rows.Count > 0 Then
-                For I = 0 To DT3.Rows.Count - 1
-                    st1_hb.Text = DT3.Rows(I).Item("HB_ST1")
-                    st1_plt.Text = DT3.Rows(I).Item("PLT_ST1")
-                    st1_pc.Text = DT3.Rows(I).Item("PC_ST1")
-                    st1_hbac.Text = DT3.Rows(I).Item("HBA1C_ST1")
-                    st1_tsh.Text = DT3.Rows(I).Item("TSH_ST1")
-                    st1_toxo.Text = DT3.Rows(I).Item("TOXO_ST1")
-                    st1_cmv.Text = DT3.Rows(I).Item("CMV_ST1")
-                    st1_rbs.Text = DT3.Rows(I).Item("RBS_ST1")
-                    st1_urine.Text = DT3.Rows(I).Item("URINE_ST1")
-                Next
-            Else
-                st1_hb.Text = ""
-                st1_plt.Text = ""
-                st1_pc.Text = ""
-                st1_hbac.Text = ""
-                st1_tsh.Text = ""
-                st1_toxo.Text = ""
-                st1_cmv.Text = ""
-                st1_rbs.Text = ""
-                st1_urine.Text = ""
-
-            End If
-            '================================ 2nd ============================================
-            Dim DT4 As New DataTable
-            Dim DA4 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM ND2_TEST WHERE STAT_ND2 ='TRUE' AND CODE_PA_ND2 = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
-            DA4.Fill(DT4)
-            If DT1.Rows.Count > 0 Then
-                For I = 0 To DT4.Rows.Count - 1
-                    ND2_hb.Text = DT4.Rows(I).Item("HB_ND2")
-                    ND2_plt.Text = DT4.Rows(I).Item("PLT_ND2")
-                    ND2_pc.Text = DT4.Rows(I).Item("PC_ND2")
-                    ND2_HOUR.Text = DT4.Rows(I).Item("HOUR_ND2")
-                    ND2_TOTAL.Text = DT4.Rows(I).Item("TOTAL_ND2")
-                    ND2_LONIZED.Text = DT4.Rows(I).Item("LONIZED_ND2")
-                    ND2_TSH.Text = DT4.Rows(I).Item("TSH_ND2")
-                    ND2_urine.Text = DT4.Rows(I).Item("URINE_ND2")
-                Next
-            Else
-                ND2_hb.Text = ""
-                ND2_plt.Text = ""
-                ND2_pc.Text = ""
-                ND2_HOUR.Text = ""
-                ND2_TOTAL.Text = ""
-                ND2_LONIZED.Text = ""
-                ND2_TSH.Text = ""
-                ND2_urine.Text = ""
-            End If
-            '================================ 3rd ============================================
-            Dim DT5 As New DataTable
-            Dim DA5 As New SqlClient.SqlDataAdapter(" SELECT TOP 1 * FROM RD3_TEST WHERE STAT_RD3 ='TRUE' AND CODE_PA_RD3 = '" & TXT_PA_CODE.Text & "' ORDER BY ID DESC ", SqlConn)
-            DA5.Fill(DT5)
-            If DT1.Rows.Count > 0 Then
-                For I = 0 To DT5.Rows.Count - 1
-                    RD3_hb.Text = DT5.Rows(I).Item("HB_RD3")
-                    RD3_plt.Text = DT5.Rows(I).Item("PLT_RD3")
-                    RD3_pc.Text = DT5.Rows(I).Item("PC_RD3")
-                    RD3_SGPT.Text = DT5.Rows(I).Item("SGPT_RD3")
-                    RD3_CREAT.Text = DT5.Rows(I).Item("CREAT_RD3")
-                    RD3_HOUR.Text = DT5.Rows(I).Item("HOUR_RD3")
-                    RD3_TSH.Text = DT5.Rows(I).Item("TSH_RD3")
-                    RD3_rbs.Text = DT5.Rows(I).Item("RBS_RD3")
-                    RD3_urine.Text = DT5.Rows(I).Item("URINE_RD3")
-                Next
-            Else
-                RD3_hb.Text = ""
-                RD3_plt.Text = ""
-                RD3_pc.Text = ""
-                RD3_SGPT.Text = ""
-                RD3_CREAT.Text = ""
-                RD3_HOUR.Text = ""
-                RD3_TSH.Text = ""
-                RD3_rbs.Text = ""
-                RD3_urine.Text = ""
-            End If
-            TXT_CODE100.Text = CODE_GENE("R_DOCTOR", "ID") + 1
-        End Sub
-
-        Private Sub TXT_CODE_PHARM_TextChanged(sender As Object, e As EventArgs) Handles TXT_CODE_PHARM.TextChanged
+    Private Sub TXT_CODE_PHARM_TextChanged(sender As Object, e As EventArgs) Handles TXT_CODE_PHARM.TextChanged
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PHARM WHERE PH_CODE ='" & TXT_CODE_PHARM.Text & "' ", SqlConn)
             DA.Fill(DT)

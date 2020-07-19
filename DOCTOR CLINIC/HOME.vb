@@ -4,29 +4,24 @@ Public Class HOME
     Private Sub HOME_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         open_connection()
         Timer1.Start()
-        T_DATE.Text = Date.Today
+        ESLAME()
+        MASSEG()
+        MACHINBTN.Text = My.Computer.Name
+
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         T_TIME.Text = TimeOfDay
         T_DATE.Text = Date.Today
-        ESLAME()
-        MACHINBTN.Text = My.Computer.Name
-        MASSEG()
 
     End Sub
     Sub ESLAME()
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT TOP 1 REALY_NAME FROM ESLAME_LO WHERE MA='" & My.Computer.Name & "' ORDER BY ID DESC ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT TOP 1 REALY_NAME,CODE_USER FROM ESLAME_LO WHERE MA='" & My.Computer.Name & "' ORDER BY ID DESC ", SqlConn)
         DA.Fill(DT)
-        Dim SHOW_ As String = BindingContext(DT).Position
-        T_USERS.Text = DT.Rows(SHOW_).Item("REALY_NAME")
-
-        Dim DT1 As New DataTable
-        Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ESLAME WHERE REAL_NAME = '" & T_USERS.Text & "'", SqlConn)
-        DA1.Fill(DT1)
-        For S = 0 To DT1.Rows.Count - 1
-            CODE_USERBT.Text = DT1.Rows(S).Item("CODE_USER")
-        Next
+        If DT.Rows.Count > 0 Then
+            T_USERS.Text = DT.Rows(0).Item("REALY_NAME")
+            CODE_USERBT.Text = DT.Rows(0).Item("CODE_USER")
+        End If
 
     End Sub
     Sub MASSEG()
@@ -378,7 +373,7 @@ Public Class HOME
 
     Private Sub BTN_PA_DOF3A_Click(sender As Object, e As EventArgs) Handles BTN_PA_DOF3A.Click
         Try
-            ROLES("Q", DOF3A_PATION_FRM)
+            ROLES("M", DOF3A_PATION_FRM)
         Catch EX As Exception
 
         End Try

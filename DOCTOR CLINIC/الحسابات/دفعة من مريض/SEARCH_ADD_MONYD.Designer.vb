@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SEARCH_ADD_MONYD
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,30 @@ Partial Class SEARCH_ADD_MONYD
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SEARCH_ADD_MONYD))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.K1 = New System.Windows.Forms.ComboBox()
+        Me.ADD_DATE_VAL = New DevExpress.XtraEditors.SimpleButton()
+        Me.DATE_END = New System.Windows.Forms.DateTimePicker()
+        Me.DATE_START = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.K1 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(239, 20)
+        Me.TextBox1.Location = New System.Drawing.Point(239, 54)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(390, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(345, 29)
         Me.TextBox1.TabIndex = 0
         '
         'DataGridView1
@@ -48,11 +54,65 @@ Partial Class SEARCH_ADD_MONYD
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column2, Me.Column5, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 56)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 107)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(731, 394)
+        Me.DataGridView1.Size = New System.Drawing.Size(731, 343)
         Me.DataGridView1.TabIndex = 2
+        '
+        'K1
+        '
+        Me.K1.FormattingEnabled = True
+        Me.K1.Items.AddRange(New Object() {"رقم الأيصال", "أسم المريض"})
+        Me.K1.Location = New System.Drawing.Point(39, 55)
+        Me.K1.Name = "K1"
+        Me.K1.Size = New System.Drawing.Size(181, 29)
+        Me.K1.TabIndex = 3
+        '
+        'ADD_DATE_VAL
+        '
+        Me.ADD_DATE_VAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADD_DATE_VAL.Appearance.Options.UseFont = True
+        Me.ADD_DATE_VAL.ImageOptions.Image = CType(resources.GetObject("ADD_DATE_VAL.ImageOptions.Image"), System.Drawing.Image)
+        Me.ADD_DATE_VAL.Location = New System.Drawing.Point(609, 12)
+        Me.ADD_DATE_VAL.Name = "ADD_DATE_VAL"
+        Me.ADD_DATE_VAL.Size = New System.Drawing.Size(133, 62)
+        Me.ADD_DATE_VAL.TabIndex = 21
+        Me.ADD_DATE_VAL.Text = "تأكيد الفترة"
+        '
+        'DATE_END
+        '
+        Me.DATE_END.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DATE_END.Location = New System.Drawing.Point(384, 12)
+        Me.DATE_END.Name = "DATE_END"
+        Me.DATE_END.Size = New System.Drawing.Size(200, 29)
+        Me.DATE_END.TabIndex = 20
+        '
+        'DATE_START
+        '
+        Me.DATE_START.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DATE_START.Location = New System.Drawing.Point(103, 15)
+        Me.DATE_START.Name = "DATE_START"
+        Me.DATE_START.Size = New System.Drawing.Size(200, 29)
+        Me.DATE_START.TabIndex = 19
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(321, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 21)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "حتي :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(21, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 21)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "الفترة من :"
         '
         'Column1
         '
@@ -79,7 +139,7 @@ Partial Class SEARCH_ADD_MONYD
         '
         'Column5
         '
-        Me.Column5.DataPropertyName = "ADD_SAFY"
+        Me.Column5.DataPropertyName = "SAFY_MAML"
         Me.Column5.FillWeight = 60.0!
         Me.Column5.HeaderText = "المبلغ"
         Me.Column5.Name = "Column5"
@@ -94,20 +154,16 @@ Partial Class SEARCH_ADD_MONYD
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
-        'K1
-        '
-        Me.K1.FormattingEnabled = True
-        Me.K1.Items.AddRange(New Object() {"رقم الأيصال", "أسم المريض"})
-        Me.K1.Location = New System.Drawing.Point(39, 21)
-        Me.K1.Name = "K1"
-        Me.K1.Size = New System.Drawing.Size(181, 29)
-        Me.K1.TabIndex = 3
-        '
         'SEARCH_ADD_MONYD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(755, 462)
+        Me.Controls.Add(Me.ADD_DATE_VAL)
+        Me.Controls.Add(Me.DATE_END)
+        Me.Controls.Add(Me.DATE_START)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.K1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox1)
@@ -130,6 +186,11 @@ Partial Class SEARCH_ADD_MONYD
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents K1 As ComboBox
+    Friend WithEvents ADD_DATE_VAL As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DATE_END As DateTimePicker
+    Friend WithEvents DATE_START As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn

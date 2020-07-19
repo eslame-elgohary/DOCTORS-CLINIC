@@ -72,7 +72,6 @@ Partial Class PATIENT
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
-        Me.AUTOPA = New System.Windows.Forms.Timer(Me.components)
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -541,9 +540,6 @@ Partial Class PATIENT
         'TIMEREDIT
         '
         '
-        'AUTOPA
-        '
-        '
         'PATIENTTableAdapter
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
@@ -626,7 +622,6 @@ Partial Class PATIENT
     Friend WithEvents PA_TYPE As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents AUTOCHI As CheckBox
-    Friend WithEvents AUTOPA As Timer
     Friend WithEvents PA_OP_R1 As CheckBox
     Friend WithEvents PA_CHI_R1 As CheckBox
     Friend WithEvents PA_NAME As ComboBox

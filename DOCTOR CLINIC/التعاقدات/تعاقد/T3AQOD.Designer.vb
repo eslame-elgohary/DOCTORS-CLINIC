@@ -773,7 +773,7 @@ Partial Class T3AQOD
         Me.BTN_PRINT.Appearance.ForeColor = System.Drawing.Color.Black
         Me.BTN_PRINT.Appearance.Options.UseFont = True
         Me.BTN_PRINT.Appearance.Options.UseForeColor = True
-        Me.BTN_PRINT.ImageOptions.Image = CType(resources.GetObject("BTN_GO.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PRINT.ImageOptions.Image = CType(resources.GetObject("BTN_PRINT.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_PRINT.Location = New System.Drawing.Point(603, 323)
         Me.BTN_PRINT.Name = "BTN_PRINT"
         Me.BTN_PRINT.Size = New System.Drawing.Size(140, 44)
@@ -786,7 +786,7 @@ Partial Class T3AQOD
         Me.BTN_DELET.Appearance.ForeColor = System.Drawing.Color.Black
         Me.BTN_DELET.Appearance.Options.UseFont = True
         Me.BTN_DELET.Appearance.Options.UseForeColor = True
-        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_BACK.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_DELET.ImageOptions.Image = CType(resources.GetObject("BTN_DELET.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_DELET.Location = New System.Drawing.Point(445, 321)
         Me.BTN_DELET.Name = "BTN_DELET"
         Me.BTN_DELET.Size = New System.Drawing.Size(140, 44)

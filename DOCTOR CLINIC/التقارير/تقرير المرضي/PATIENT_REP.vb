@@ -30,8 +30,9 @@
         Next
         Dim REP As New PATIENT_CRS_ALL
         REP.SetDataSource(DT)
-
-        Me.CrystalReportViewer1.ReportSource = REP
+        Dim frm As New REPFORALL
+        frm.CrystalReportViewer1.ReportSource = REP
+        frm.ShowDialog()
 
     End Sub
 

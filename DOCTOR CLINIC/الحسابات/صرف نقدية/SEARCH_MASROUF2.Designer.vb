@@ -30,6 +30,10 @@ Partial Class SEARCH_MASROUF2
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,7 +41,7 @@ Partial Class SEARCH_MASROUF2
         '
         Me.SELECTORDER.FormattingEnabled = True
         Me.SELECTORDER.Items.AddRange(New Object() {"رقم الأذن", "نوع الصرف"})
-        Me.SELECTORDER.Location = New System.Drawing.Point(12, 12)
+        Me.SELECTORDER.Location = New System.Drawing.Point(12, 52)
         Me.SELECTORDER.Name = "SELECTORDER"
         Me.SELECTORDER.Size = New System.Drawing.Size(176, 29)
         Me.SELECTORDER.TabIndex = 0
@@ -50,10 +54,10 @@ Partial Class SEARCH_MASROUF2
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column6, Me.Column2, Me.Column7})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 57)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 102)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(613, 411)
+        Me.DataGridView1.Size = New System.Drawing.Size(613, 366)
         Me.DataGridView1.TabIndex = 1
         '
         'Column1
@@ -96,16 +100,54 @@ Partial Class SEARCH_MASROUF2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(206, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(206, 52)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(387, 29)
         Me.TextBox1.TabIndex = 2
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(378, 9)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker2.TabIndex = 10
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(97, 12)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker1.TabIndex = 9
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(315, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 21)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "حتي :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(15, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 21)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "الفترة من :"
         '
         'SEARCH_MASROUF2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(634, 480)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.SELECTORDER)
@@ -133,4 +175,8 @@ Partial Class SEARCH_MASROUF2
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewButtonColumn
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

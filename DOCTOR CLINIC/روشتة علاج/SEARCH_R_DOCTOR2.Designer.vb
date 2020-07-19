@@ -30,6 +30,10 @@ Partial Class SEARCH_R_DOCTOR2
         Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.K1 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,10 +45,10 @@ Partial Class SEARCH_R_DOCTOR2
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 47)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 77)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(882, 364)
+        Me.DataGridView1.Size = New System.Drawing.Size(882, 334)
         Me.DataGridView1.TabIndex = 0
         '
         'Column1
@@ -87,7 +91,7 @@ Partial Class SEARCH_R_DOCTOR2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(270, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(269, 42)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(418, 29)
         Me.TextBox1.TabIndex = 1
@@ -96,16 +100,54 @@ Partial Class SEARCH_R_DOCTOR2
         '
         Me.K1.FormattingEnabled = True
         Me.K1.Items.AddRange(New Object() {"رقم الروشتة", "أسم المريض"})
-        Me.K1.Location = New System.Drawing.Point(67, 12)
+        Me.K1.Location = New System.Drawing.Point(66, 42)
         Me.K1.Name = "K1"
         Me.K1.Size = New System.Drawing.Size(151, 29)
         Me.K1.TabIndex = 2
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(416, 4)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker2.TabIndex = 10
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(135, 7)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 29)
+        Me.DateTimePicker1.TabIndex = 9
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(353, 11)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 21)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "حتي :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(53, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 21)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "الفترة من :"
         '
         'SEARCH_R_DOCTOR2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(906, 423)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.K1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
@@ -133,4 +175,8 @@ Partial Class SEARCH_R_DOCTOR2
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewButtonColumn
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class
