@@ -24,6 +24,8 @@ Partial Class ZIARA2020
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ZIARA2020))
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.P_HAGEZ = New System.Windows.Forms.Panel()
@@ -51,6 +53,10 @@ Partial Class ZIARA2020
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.P_CHANG = New System.Windows.Forms.Panel()
+        Me.TXT_NAME1_INFO = New System.Windows.Forms.TextBox()
+        Me.TXT_NAME1_COLOR = New System.Windows.Forms.TextBox()
+        Me.TXT_NAME2_INFO = New System.Windows.Forms.TextBox()
+        Me.TXT_NAME2_COLOR = New System.Windows.Forms.TextBox()
         Me.TXT_NAME2_ADRRES = New System.Windows.Forms.TextBox()
         Me.TXT_NAME2_PRICE = New System.Windows.Forms.TextBox()
         Me.TXT_NAME2_ACTION = New System.Windows.Forms.TextBox()
@@ -106,21 +112,26 @@ Partial Class ZIARA2020
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.TXT_INFO_H_DATAGRID = New System.Windows.Forms.TextBox()
+        Me.TXT_ID_H = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TXT_NUM_H = New System.Windows.Forms.Label()
+        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.P_CALL = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.P_NOTCOME = New System.Windows.Forms.Panel()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.P_DELET = New System.Windows.Forms.Panel()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.P_TAGEL = New System.Windows.Forms.Panel()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.P_M = New System.Windows.Forms.Panel()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.P_FREE = New System.Windows.Forms.Panel()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.P_END = New System.Windows.Forms.Panel()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.REFRESH_BTN = New DevExpress.XtraEditors.SimpleButton()
         Me.DATE_NAME = New System.Windows.Forms.Label()
         Me.DOC_NAME = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -134,16 +145,18 @@ Partial Class ZIARA2020
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.DG2 = New System.Windows.Forms.DataGridView()
+        Me.DG3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
+        Me.REFRESH_BTN_P3 = New DevExpress.XtraEditors.SimpleButton()
+        Me.DATE_NAME_P3 = New System.Windows.Forms.Label()
+        Me.DOC_NAME_P3 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
+        Me.DG2 = New System.Windows.Forms.DataGridView()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.P_HAGEZ.SuspendLayout()
@@ -157,17 +170,18 @@ Partial Class ZIARA2020
         Me.TabPage3.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        Me.Panel10.SuspendLayout()
+        Me.P_CALL.SuspendLayout()
+        Me.P_NOTCOME.SuspendLayout()
+        Me.P_DELET.SuspendLayout()
+        Me.P_TAGEL.SuspendLayout()
+        Me.P_M.SuspendLayout()
+        Me.P_FREE.SuspendLayout()
+        Me.P_END.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DG2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DG3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
+        CType(Me.DG2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -456,6 +470,10 @@ Partial Class ZIARA2020
         'P_CHANG
         '
         Me.P_CHANG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.P_CHANG.Controls.Add(Me.TXT_NAME1_INFO)
+        Me.P_CHANG.Controls.Add(Me.TXT_NAME1_COLOR)
+        Me.P_CHANG.Controls.Add(Me.TXT_NAME2_INFO)
+        Me.P_CHANG.Controls.Add(Me.TXT_NAME2_COLOR)
         Me.P_CHANG.Controls.Add(Me.TXT_NAME2_ADRRES)
         Me.P_CHANG.Controls.Add(Me.TXT_NAME2_PRICE)
         Me.P_CHANG.Controls.Add(Me.TXT_NAME2_ACTION)
@@ -480,6 +498,38 @@ Partial Class ZIARA2020
         Me.P_CHANG.Size = New System.Drawing.Size(729, 103)
         Me.P_CHANG.TabIndex = 120
         Me.P_CHANG.Visible = False
+        '
+        'TXT_NAME1_INFO
+        '
+        Me.TXT_NAME1_INFO.Location = New System.Drawing.Point(106, 23)
+        Me.TXT_NAME1_INFO.Name = "TXT_NAME1_INFO"
+        Me.TXT_NAME1_INFO.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_NAME1_INFO.TabIndex = 137
+        Me.TXT_NAME1_INFO.Visible = False
+        '
+        'TXT_NAME1_COLOR
+        '
+        Me.TXT_NAME1_COLOR.Location = New System.Drawing.Point(144, 25)
+        Me.TXT_NAME1_COLOR.Name = "TXT_NAME1_COLOR"
+        Me.TXT_NAME1_COLOR.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_NAME1_COLOR.TabIndex = 136
+        Me.TXT_NAME1_COLOR.Visible = False
+        '
+        'TXT_NAME2_INFO
+        '
+        Me.TXT_NAME2_INFO.Location = New System.Drawing.Point(106, 69)
+        Me.TXT_NAME2_INFO.Name = "TXT_NAME2_INFO"
+        Me.TXT_NAME2_INFO.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_NAME2_INFO.TabIndex = 135
+        Me.TXT_NAME2_INFO.Visible = False
+        '
+        'TXT_NAME2_COLOR
+        '
+        Me.TXT_NAME2_COLOR.Location = New System.Drawing.Point(144, 71)
+        Me.TXT_NAME2_COLOR.Name = "TXT_NAME2_COLOR"
+        Me.TXT_NAME2_COLOR.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_NAME2_COLOR.TabIndex = 134
+        Me.TXT_NAME2_COLOR.Visible = False
         '
         'TXT_NAME2_ADRRES
         '
@@ -1006,15 +1056,19 @@ Partial Class ZIARA2020
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.TXT_INFO_H_DATAGRID)
+        Me.Panel2.Controls.Add(Me.TXT_ID_H)
+        Me.Panel2.Controls.Add(Me.Label31)
+        Me.Panel2.Controls.Add(Me.TXT_NUM_H)
         Me.Panel2.Controls.Add(Me.SimpleButton3)
-        Me.Panel2.Controls.Add(Me.Panel7)
-        Me.Panel2.Controls.Add(Me.Panel6)
-        Me.Panel2.Controls.Add(Me.Panel5)
-        Me.Panel2.Controls.Add(Me.Panel4)
-        Me.Panel2.Controls.Add(Me.Panel8)
-        Me.Panel2.Controls.Add(Me.Panel9)
-        Me.Panel2.Controls.Add(Me.Panel10)
-        Me.Panel2.Controls.Add(Me.SimpleButton1)
+        Me.Panel2.Controls.Add(Me.P_CALL)
+        Me.Panel2.Controls.Add(Me.P_NOTCOME)
+        Me.Panel2.Controls.Add(Me.P_DELET)
+        Me.Panel2.Controls.Add(Me.P_TAGEL)
+        Me.Panel2.Controls.Add(Me.P_M)
+        Me.Panel2.Controls.Add(Me.P_FREE)
+        Me.Panel2.Controls.Add(Me.P_END)
+        Me.Panel2.Controls.Add(Me.REFRESH_BTN)
         Me.Panel2.Controls.Add(Me.DATE_NAME)
         Me.Panel2.Controls.Add(Me.DOC_NAME)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -1024,17 +1078,65 @@ Partial Class ZIARA2020
         Me.Panel2.Size = New System.Drawing.Size(1001, 72)
         Me.Panel2.TabIndex = 0
         '
-        'Panel7
+        'TXT_INFO_H_DATAGRID
         '
-        Me.Panel7.BackColor = System.Drawing.Color.Aqua
-        Me.Panel7.Controls.Add(Me.Label7)
-        Me.Panel7.Location = New System.Drawing.Point(394, 37)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(68, 29)
-        Me.Panel7.TabIndex = 122
+        Me.TXT_INFO_H_DATAGRID.Location = New System.Drawing.Point(469, 2)
+        Me.TXT_INFO_H_DATAGRID.Name = "TXT_INFO_H_DATAGRID"
+        Me.TXT_INFO_H_DATAGRID.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_INFO_H_DATAGRID.TabIndex = 127
+        Me.TXT_INFO_H_DATAGRID.Visible = False
+        '
+        'TXT_ID_H
+        '
+        Me.TXT_ID_H.Location = New System.Drawing.Point(415, 3)
+        Me.TXT_ID_H.Name = "TXT_ID_H"
+        Me.TXT_ID_H.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_ID_H.TabIndex = 126
+        Me.TXT_ID_H.Visible = False
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(269, -1)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(118, 21)
+        Me.Label31.TabIndex = 125
+        Me.Label31.Text = "رقم الحجز المحدد"
+        '
+        'TXT_NUM_H
+        '
+        Me.TXT_NUM_H.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_NUM_H.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.TXT_NUM_H.Location = New System.Drawing.Point(269, 11)
+        Me.TXT_NUM_H.Name = "TXT_NUM_H"
+        Me.TXT_NUM_H.Size = New System.Drawing.Size(104, 59)
+        Me.TXT_NUM_H.TabIndex = 124
+        Me.TXT_NUM_H.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'SimpleButton3
+        '
+        Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SimpleButton3.Appearance.Options.UseFont = True
+        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton3.Location = New System.Drawing.Point(127, 7)
+        Me.SimpleButton3.Name = "SimpleButton3"
+        Me.SimpleButton3.Size = New System.Drawing.Size(104, 59)
+        Me.SimpleButton3.TabIndex = 123
+        Me.SimpleButton3.Text = "طباعة"
+        Me.SimpleButton3.Visible = False
+        '
+        'P_CALL
+        '
+        Me.P_CALL.BackColor = System.Drawing.Color.Aqua
+        Me.P_CALL.Controls.Add(Me.Label7)
+        Me.P_CALL.Location = New System.Drawing.Point(402, 37)
+        Me.P_CALL.Name = "P_CALL"
+        Me.P_CALL.Size = New System.Drawing.Size(68, 29)
+        Me.P_CALL.TabIndex = 122
         '
         'Label7
         '
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label7.Location = New System.Drawing.Point(0, 0)
         Me.Label7.Name = "Label7"
@@ -1043,17 +1145,18 @@ Partial Class ZIARA2020
         Me.Label7.Text = "الأتصال"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel6
+        'P_NOTCOME
         '
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.Controls.Add(Me.Label30)
-        Me.Panel6.Location = New System.Drawing.Point(476, 37)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(65, 29)
-        Me.Panel6.TabIndex = 121
+        Me.P_NOTCOME.BackColor = System.Drawing.Color.White
+        Me.P_NOTCOME.Controls.Add(Me.Label30)
+        Me.P_NOTCOME.Location = New System.Drawing.Point(484, 37)
+        Me.P_NOTCOME.Name = "P_NOTCOME"
+        Me.P_NOTCOME.Size = New System.Drawing.Size(65, 29)
+        Me.P_NOTCOME.TabIndex = 121
         '
         'Label30
         '
+        Me.Label30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label30.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label30.Location = New System.Drawing.Point(0, 0)
         Me.Label30.Name = "Label30"
@@ -1062,15 +1165,15 @@ Partial Class ZIARA2020
         Me.Label30.Text = "لم يحضر"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel5
+        'P_DELET
         '
-        Me.Panel5.BackColor = System.Drawing.Color.Red
-        Me.Panel5.Controls.Add(Me.Label28)
-        Me.Panel5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel5.Location = New System.Drawing.Point(557, 37)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(51, 29)
-        Me.Panel5.TabIndex = 120
+        Me.P_DELET.BackColor = System.Drawing.Color.Red
+        Me.P_DELET.Controls.Add(Me.Label28)
+        Me.P_DELET.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.P_DELET.Location = New System.Drawing.Point(565, 37)
+        Me.P_DELET.Name = "P_DELET"
+        Me.P_DELET.Size = New System.Drawing.Size(51, 29)
+        Me.P_DELET.TabIndex = 120
         '
         'Label28
         '
@@ -1082,15 +1185,15 @@ Partial Class ZIARA2020
         Me.Label28.Text = "الغاء"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel4
+        'P_TAGEL
         '
-        Me.Panel4.BackColor = System.Drawing.Color.LightGreen
-        Me.Panel4.Controls.Add(Me.Label29)
-        Me.Panel4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel4.Location = New System.Drawing.Point(624, 37)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(52, 29)
-        Me.Panel4.TabIndex = 119
+        Me.P_TAGEL.BackColor = System.Drawing.Color.LightGreen
+        Me.P_TAGEL.Controls.Add(Me.Label29)
+        Me.P_TAGEL.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.P_TAGEL.Location = New System.Drawing.Point(632, 37)
+        Me.P_TAGEL.Name = "P_TAGEL"
+        Me.P_TAGEL.Size = New System.Drawing.Size(52, 29)
+        Me.P_TAGEL.TabIndex = 119
         '
         'Label29
         '
@@ -1102,15 +1205,15 @@ Partial Class ZIARA2020
         Me.Label29.Text = "مؤجل"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel8
+        'P_M
         '
-        Me.Panel8.BackColor = System.Drawing.Color.Yellow
-        Me.Panel8.Controls.Add(Me.Label19)
-        Me.Panel8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel8.Location = New System.Drawing.Point(947, 37)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(37, 29)
-        Me.Panel8.TabIndex = 116
+        Me.P_M.BackColor = System.Drawing.Color.Yellow
+        Me.P_M.Controls.Add(Me.Label19)
+        Me.P_M.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.P_M.Location = New System.Drawing.Point(955, 37)
+        Me.P_M.Name = "P_M"
+        Me.P_M.Size = New System.Drawing.Size(37, 29)
+        Me.P_M.TabIndex = 116
         '
         'Label19
         '
@@ -1122,15 +1225,15 @@ Partial Class ZIARA2020
         Me.Label19.Text = "م"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel9
+        'P_FREE
         '
-        Me.Panel9.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.Panel9.Controls.Add(Me.Label27)
-        Me.Panel9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel9.Location = New System.Drawing.Point(696, 37)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(60, 29)
-        Me.Panel9.TabIndex = 118
+        Me.P_FREE.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.P_FREE.Controls.Add(Me.Label27)
+        Me.P_FREE.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.P_FREE.Location = New System.Drawing.Point(704, 37)
+        Me.P_FREE.Name = "P_FREE"
+        Me.P_FREE.Size = New System.Drawing.Size(60, 29)
+        Me.P_FREE.TabIndex = 118
         '
         'Label27
         '
@@ -1142,15 +1245,15 @@ Partial Class ZIARA2020
         Me.Label27.Text = "مجانا"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel10
+        'P_END
         '
-        Me.Panel10.BackColor = System.Drawing.Color.Yellow
-        Me.Panel10.Controls.Add(Me.Label26)
-        Me.Panel10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel10.Location = New System.Drawing.Point(775, 37)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(154, 29)
-        Me.Panel10.TabIndex = 117
+        Me.P_END.BackColor = System.Drawing.Color.Yellow
+        Me.P_END.Controls.Add(Me.Label26)
+        Me.P_END.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.P_END.Location = New System.Drawing.Point(783, 37)
+        Me.P_END.Name = "P_END"
+        Me.P_END.Size = New System.Drawing.Size(154, 29)
+        Me.P_END.TabIndex = 117
         '
         'Label26
         '
@@ -1162,16 +1265,16 @@ Partial Class ZIARA2020
         Me.Label26.Text = "تم التحصيل و الكشف"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'SimpleButton1
+        'REFRESH_BTN
         '
-        Me.SimpleButton1.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton1.Appearance.Options.UseFont = True
-        Me.SimpleButton1.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton1.Location = New System.Drawing.Point(31, 7)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(119, 59)
-        Me.SimpleButton1.TabIndex = 3
-        Me.SimpleButton1.Text = "تحديث"
+        Me.REFRESH_BTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.REFRESH_BTN.Appearance.Options.UseFont = True
+        Me.REFRESH_BTN.ImageOptions.SvgImage = CType(resources.GetObject("REFRESH_BTN.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.REFRESH_BTN.Location = New System.Drawing.Point(8, 7)
+        Me.REFRESH_BTN.Name = "REFRESH_BTN"
+        Me.REFRESH_BTN.Size = New System.Drawing.Size(109, 59)
+        Me.REFRESH_BTN.TabIndex = 3
+        Me.REFRESH_BTN.Text = "تحديث"
         '
         'DATE_NAME
         '
@@ -1205,6 +1308,12 @@ Partial Class ZIARA2020
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column8, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.DataGridView1.EnableHeadersVisualStyles = False
@@ -1213,8 +1322,18 @@ Partial Class ZIARA2020
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.HotTrack
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(998, 379)
         Me.DataGridView1.TabIndex = 1
@@ -1245,6 +1364,7 @@ Partial Class ZIARA2020
         'Column3
         '
         Me.Column3.DataPropertyName = "PA_TEL"
+        Me.Column3.FillWeight = 60.0!
         Me.Column3.HeaderText = "رقم التليفون"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
@@ -1282,6 +1402,7 @@ Partial Class ZIARA2020
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.DG3)
         Me.TabPage2.Controls.Add(Me.Panel11)
         Me.TabPage2.Controls.Add(Me.DG2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 33)
@@ -1292,9 +1413,88 @@ Partial Class ZIARA2020
         Me.TabPage2.Text = "الأحصائيات"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'PATIENTTableAdapter
+        'DG3
         '
-        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        Me.DG3.AllowUserToAddRows = False
+        Me.DG3.AllowUserToDeleteRows = False
+        Me.DG3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DG3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DG3.BackgroundColor = System.Drawing.SystemColors.InactiveCaption
+        Me.DG3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DG3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DG3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
+        Me.DG3.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DG3.Location = New System.Drawing.Point(19, 53)
+        Me.DG3.Name = "DG3"
+        Me.DG3.ReadOnly = True
+        Me.DG3.RowHeadersVisible = False
+        Me.DG3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DG3.Size = New System.Drawing.Size(399, 407)
+        Me.DG3.TabIndex = 3
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "NAME"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "حالة المرضي"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "COLOR"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "العدد"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.REFRESH_BTN_P3)
+        Me.Panel11.Controls.Add(Me.DATE_NAME_P3)
+        Me.Panel11.Controls.Add(Me.DOC_NAME_P3)
+        Me.Panel11.Controls.Add(Me.Label39)
+        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel11.Location = New System.Drawing.Point(3, 3)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(1001, 50)
+        Me.Panel11.TabIndex = 2
+        '
+        'REFRESH_BTN_P3
+        '
+        Me.REFRESH_BTN_P3.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.REFRESH_BTN_P3.Appearance.Options.UseFont = True
+        Me.REFRESH_BTN_P3.ImageOptions.SvgImage = CType(resources.GetObject("REFRESH_BTN_P3.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.REFRESH_BTN_P3.Location = New System.Drawing.Point(386, 3)
+        Me.REFRESH_BTN_P3.Name = "REFRESH_BTN_P3"
+        Me.REFRESH_BTN_P3.Size = New System.Drawing.Size(119, 39)
+        Me.REFRESH_BTN_P3.TabIndex = 3
+        Me.REFRESH_BTN_P3.Text = "تحديث"
+        '
+        'DATE_NAME_P3
+        '
+        Me.DATE_NAME_P3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DATE_NAME_P3.Location = New System.Drawing.Point(530, 13)
+        Me.DATE_NAME_P3.Name = "DATE_NAME_P3"
+        Me.DATE_NAME_P3.Size = New System.Drawing.Size(104, 21)
+        Me.DATE_NAME_P3.TabIndex = 2
+        Me.DATE_NAME_P3.Text = "01/01/2020"
+        '
+        'DOC_NAME_P3
+        '
+        Me.DOC_NAME_P3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DOC_NAME_P3.Location = New System.Drawing.Point(640, 13)
+        Me.DOC_NAME_P3.Name = "DOC_NAME_P3"
+        Me.DOC_NAME_P3.Size = New System.Drawing.Size(237, 21)
+        Me.DOC_NAME_P3.TabIndex = 1
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(883, 13)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(95, 21)
+        Me.Label39.TabIndex = 0
+        Me.Label39.Text = "أسم الطبيب :"
         '
         'DG2
         '
@@ -1307,87 +1507,32 @@ Partial Class ZIARA2020
         Me.DG2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DG2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column10})
         Me.DG2.GridColor = System.Drawing.SystemColors.ActiveCaption
-        Me.DG2.Location = New System.Drawing.Point(3, 51)
+        Me.DG2.Location = New System.Drawing.Point(442, 51)
         Me.DG2.Name = "DG2"
         Me.DG2.ReadOnly = True
         Me.DG2.RowHeadersVisible = False
-        Me.DG2.Size = New System.Drawing.Size(1001, 407)
+        Me.DG2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DG2.Size = New System.Drawing.Size(562, 407)
         Me.DG2.TabIndex = 1
         '
-        'Panel11
+        'PATIENTTableAdapter
         '
-        Me.Panel11.Controls.Add(Me.SimpleButton2)
-        Me.Panel11.Controls.Add(Me.Label37)
-        Me.Panel11.Controls.Add(Me.Label38)
-        Me.Panel11.Controls.Add(Me.Label39)
-        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel11.Location = New System.Drawing.Point(3, 3)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(1001, 50)
-        Me.Panel11.TabIndex = 2
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton2.Appearance.Options.UseFont = True
-        Me.SimpleButton2.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton2.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.SimpleButton2.Location = New System.Drawing.Point(386, 3)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(119, 39)
-        Me.SimpleButton2.TabIndex = 3
-        Me.SimpleButton2.Text = "تحديث"
-        '
-        'Label37
-        '
-        Me.Label37.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label37.Location = New System.Drawing.Point(530, 7)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(104, 21)
-        Me.Label37.TabIndex = 2
-        Me.Label37.Text = "01/01/2020"
-        '
-        'Label38
-        '
-        Me.Label38.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label38.Location = New System.Drawing.Point(640, 7)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(237, 21)
-        Me.Label38.TabIndex = 1
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(883, 7)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(95, 21)
-        Me.Label39.TabIndex = 0
-        Me.Label39.Text = "أسم الطبيب :"
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
         'Column9
         '
-        Me.Column9.DataPropertyName = "DOT_NAME"
+        Me.Column9.DataPropertyName = "ACTION"
         Me.Column9.HeaderText = "الأجراء"
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
         '
         'Column10
         '
-        Me.Column10.DataPropertyName = "h_count"
+        Me.Column10.DataPropertyName = "COUNT_ACTION"
         Me.Column10.FillWeight = 50.0!
         Me.Column10.HeaderText = "عدد المرضي"
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
-        '
-        'SimpleButton3
-        '
-        Me.SimpleButton3.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SimpleButton3.Appearance.Options.UseFont = True
-        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(177, 7)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(119, 59)
-        Me.SimpleButton3.TabIndex = 123
-        Me.SimpleButton3.Text = "طباعة"
         '
         'ZIARA2020
         '
@@ -1429,18 +1574,19 @@ Partial Class ZIARA2020
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel10.ResumeLayout(False)
+        Me.P_CALL.ResumeLayout(False)
+        Me.P_NOTCOME.ResumeLayout(False)
+        Me.P_DELET.ResumeLayout(False)
+        Me.P_TAGEL.ResumeLayout(False)
+        Me.P_M.ResumeLayout(False)
+        Me.P_FREE.ResumeLayout(False)
+        Me.P_END.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DG2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DG3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.DG2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1529,6 +1675,35 @@ Partial Class ZIARA2020
     Friend WithEvents TXT_NAME1_PRICE As TextBox
     Friend WithEvents TXT_NAME1_ACTION As TextBox
     Friend WithEvents TXT_NAME1_CODE As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents DATE_NAME As Label
+    Friend WithEvents DOC_NAME As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents REFRESH_BTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents P_CALL As Panel
+    Friend WithEvents Label7 As Label
+    Friend WithEvents P_NOTCOME As Panel
+    Friend WithEvents Label30 As Label
+    Friend WithEvents P_DELET As Panel
+    Friend WithEvents Label28 As Label
+    Friend WithEvents P_TAGEL As Panel
+    Friend WithEvents Label29 As Label
+    Friend WithEvents P_M As Panel
+    Friend WithEvents Label19 As Label
+    Friend WithEvents P_FREE As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents P_END As Panel
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents REFRESH_BTN_P3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DATE_NAME_P3 As Label
+    Friend WithEvents DOC_NAME_P3 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents DG2 As DataGridView
+    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TXT_NUM_H As Label
+    Friend WithEvents TXT_ID_H As TextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -1537,32 +1712,14 @@ Partial Class ZIARA2020
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents DATE_NAME As Label
-    Friend WithEvents DOC_NAME As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents DG2 As DataGridView
+    Friend WithEvents TXT_INFO_H_DATAGRID As TextBox
+    Friend WithEvents DG3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_NAME1_INFO As TextBox
+    Friend WithEvents TXT_NAME1_COLOR As TextBox
+    Friend WithEvents TXT_NAME2_INFO As TextBox
+    Friend WithEvents TXT_NAME2_COLOR As TextBox
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
 End Class

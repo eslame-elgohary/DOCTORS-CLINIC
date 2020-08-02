@@ -14,7 +14,10 @@
         End If
         DOC_NAME.Text = TXT_DOCTOR.Text
         DATE_NAME.Text = TXT_DATE.Text
+        DOC_NAME_P3.Text = TXT_DOCTOR.Text
+        DATE_NAME_P3.Text = TXT_DATE.Text
         P_HAGEZ.Visible = True
+
         Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
 
         NEWBTN_Click(sender, e)
@@ -322,6 +325,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         DR!ADD_USER = HOME.T_USERS.Text
         DR!DATE_ADD_USER = Date.Now
         DR!STAT_COLORE = "0"
+        DR!INFO_STAT = " "
         DT.Rows.Add(DR)
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
@@ -380,13 +384,23 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح لرقم الحجز  " & ">>>> " & TXT_CODE2.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        '==================== تنظيف الشاشة =================================
+        PA_NAME2.Text = ""
+        TXT_TEL2.Text = ""
+        TXT_ACTION2.Text = ""
+        TXT_ACTION_PRIC2.Text = ""
+        TXT_ADRRES2.Text = ""
+        TXT_FILL2.Text = ""
+        TXT_ID.Text = ""
+        TXT_CODE2.Text = ""
         NEWBTN_Click(sender, e)
     End Sub
 
     Private Sub HAGEZ1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles HAGEZ1.SelectedIndexChanged
         Dim F As String
         F = "SELECT        dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.ID, dbo.HAGEZ.PA_CODE, dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_CODE AS Expr1, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, 
-                         dbo.HAGEZ.ACTION, dbo.HAGEZ.PRICE_ACTION, dbo.HAGEZ.ADRRES
+                         dbo.HAGEZ.ACTION, dbo.HAGEZ.PRICE_ACTION, dbo.HAGEZ.ADRRES, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT
 FROM            dbo.HAGEZ INNER JOIN
                          dbo.PATIENT ON dbo.HAGEZ.PA_CODE = dbo.PATIENT.PA_CODE
 WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' AND CODE_HAGEZ='" & HAGEZ1.Text & "' "
@@ -401,13 +415,15 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_NAME1_ACTION.Text = DT.Rows(I).Item("ACTION")
             TXT_NAME1_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
             TXT_NAME1_ADRRES.Text = DT.Rows(I).Item("ADRRES")
+            TXT_NAME1_COLOR.Text = DT.Rows(I).Item("STAT_COLORE")
+            TXT_NAME1_INFO.Text = DT.Rows(I).Item("INFO_STAT")
         Next
     End Sub
 
     Private Sub HAGEZ2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles HAGEZ2.SelectedIndexChanged
         Dim F As String
         F = "SELECT        dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.ID, dbo.HAGEZ.PA_CODE, dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_CODE AS Expr1, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, 
-                         dbo.HAGEZ.ACTION, dbo.HAGEZ.PRICE_ACTION, dbo.HAGEZ.ADRRES
+                         dbo.HAGEZ.ACTION, dbo.HAGEZ.PRICE_ACTION, dbo.HAGEZ.ADRRES, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT
 FROM            dbo.HAGEZ INNER JOIN
                          dbo.PATIENT ON dbo.HAGEZ.PA_CODE = dbo.PATIENT.PA_CODE
 WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' AND CODE_HAGEZ='" & HAGEZ2.Text & "' "
@@ -422,6 +438,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_NAME2_ACTION.Text = DT.Rows(I).Item("ACTION")
             TXT_NAME2_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
             TXT_NAME2_ADRRES.Text = DT.Rows(I).Item("ADRRES")
+            TXT_NAME2_COLOR.Text = DT.Rows(I).Item("STAT_COLORE")
+            TXT_NAME2_INFO.Text = DT.Rows(I).Item("INFO_STAT")
         Next
     End Sub
 
@@ -448,6 +466,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         DR!ACTION = TXT_NAME2_ACTION.Text
         DR!PRICE_ACTION = TXT_NAME2_PRICE.Text
         DR!ADRRES = TXT_NAME2_ADRRES.Text
+        DR!STAT_COLORE = TXT_NAME2_COLOR.Text
+        DR!INFO_STAT = TXT_NAME2_INFO.Text
         Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
         DA.Update(DT)
         '============================ تعديل الاسم الثاني ========================
@@ -459,10 +479,34 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         DR1!ACTION = TXT_NAME1_ACTION.Text
         DR1!PRICE_ACTION = TXT_NAME1_PRICE.Text
         DR1!ADRRES = TXT_NAME1_ADRRES.Text
+        DR1!STAT_COLORE = TXT_NAME1_COLOR.Text
+        DR1!INFO_STAT = TXT_NAME1_INFO.Text
         Dim SAVE1 As New SqlClient.SqlCommandBuilder(DA1)
         DA1.Update(DT1)
 
         MessageBox.Show("تمت عملية التبديل بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        '============================ تنظيف الشاشة ===============================
+        HAGEZ2.Text = ""
+        TXT_NAME2.Text = ""
+        TXT_HAGEZ2_ID.Text = ""
+        TXT_NAME2_CODE.Text = ""
+        TXT_NAME2_ACTION.Text = ""
+        TXT_NAME2_PRICE.Text = ""
+        TXT_NAME2_ADRRES.Text = ""
+        TXT_NAME2_COLOR.Text = ""
+        TXT_NAME2_INFO.Text = ""
+
+        HAGEZ1.Text = ""
+        TXT_NAME1.Text = ""
+        TXT_HAGEZ1_ID.Text = ""
+        TXT_NAME1_CODE.Text = ""
+        TXT_NAME1_ACTION.Text = ""
+        TXT_NAME1_PRICE.Text = ""
+        TXT_NAME1_ADRRES.Text = ""
+        TXT_NAME1_COLOR.Text = ""
+        TXT_NAME1_INFO.Text = ""
+
         NEWBTN_Click(sender, e)
 
     End Sub
@@ -471,7 +515,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         PATIENT.ShowDialog()
     End Sub
 
-    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
+    Private Sub REFRESH_BTN_Click(sender As Object, e As EventArgs) Handles REFRESH_BTN.Click
         '====================== DATAGRIDVIEW ================
         Dim ESO As String
         ESO = " SELECT        dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_TEL, dbo.PATIENT.PA_CODE2, dbo.HAGEZ.ACTION, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.ID, dbo.HAGEZ.ADRRES, 
@@ -480,6 +524,248 @@ FROM            dbo.PATIENT INNER JOIN
                          dbo.HAGEZ ON dbo.PATIENT.PA_CODE = dbo.HAGEZ.PA_CODE 
 WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ORDER BY ID"
         FILL_DGV(DataGridView1, ESO)
+
+        For Each r As DataGridViewRow In DataGridView1.Rows
+            Select Case r.Cells.Item(7).Value
+                Case "1" 'المريض حضر
+                    r.Cells.Item(1).Style.BackColor = P_M.BackColor
+                Case "2" ' تم الكشف
+                    r.DefaultCellStyle.BackColor = P_END.BackColor
+                Case "3" 'مجانا 
+                    r.DefaultCellStyle.BackColor = P_FREE.BackColor
+                Case "4" ' المريض طلب التأجيل
+                    r.DefaultCellStyle.BackColor = P_TAGEL.BackColor
+                Case "5" ' الألغاء
+                    r.DefaultCellStyle.BackColor = P_DELET.BackColor
+                Case "0" ' لم يحضر
+                    r.Cells.Item(1).Style.BackColor = P_NOTCOME.BackColor
+                    r.Cells.Item(2).Style.BackColor = P_NOTCOME.BackColor
+                    r.Cells.Item(3).Style.BackColor = P_NOTCOME.BackColor
+                    r.Cells.Item(4).Style.BackColor = P_NOTCOME.BackColor
+                    r.Cells.Item(5).Style.BackColor = P_NOTCOME.BackColor
+                Case Else
+
+            End Select
+
+            Select Case r.Cells.Item(6).Value
+                Case " "
+                    ' الاتصال
+                    r.Cells.Item(6).Style.BackColor = P_NOTCOME.BackColor
+                Case Else
+                    r.Cells.Item(6).Style.BackColor = P_CALL.BackColor
+            End Select
+        Next
+
+        DataGridView1_Click(sender, e)
+    End Sub
+    Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
+        If DataGridView1.SelectedRows.Count > 0 Then
+            For Each r As DataGridViewRow In DataGridView1.SelectedRows
+                TXT_ID_H.Text = r.Cells.Item(0).Value
+                TXT_NUM_H.Text = r.Cells.Item(1).Value
+                TXT_INFO_H_DATAGRID.Text = r.Cells.Item(6).Value
+            Next
+        Else
+            TXT_ID_H.Text = ""
+            TXT_NUM_H.Text = ""
+            TXT_INFO_H_DATAGRID.Text = ""
+        End If
     End Sub
 
+    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " حضر ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!STAT_COLORE = "1"
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+
+                REFRESH_BTN_Click(sender, e)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " يرغب فى التأجيل ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                'For Each r As DataGridViewRow In DataGridView1.SelectedRows
+                '    r.DefaultCellStyle.BackColor = P_TAGEL.BackColor
+                'Next
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!STAT_COLORE = "4"
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                REFRESH_BTN_Click(sender, e)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub REFRESH_BTN_P3_Click(sender As Object, e As EventArgs) Handles REFRESH_BTN_P3.Click
+        Dim KARMA As String
+        KARMA = "SELECT        TOP (100) PERCENT TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, COUNT(ACTION) AS COUNT_ACTION, ACTION, STAT_COLORE
+        FROM            dbo.HAGEZ
+        GROUP BY TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, ACTION, STAT_COLORE
+        HAVING        (NOT (ACTION IS NULL)) AND (DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (STAT_COLORE = '2')"
+
+        FILL_DGV(DG2, KARMA)
+
+        Dim KARMA3 As String
+        KARMA3 = "SELECT        TOP (100) PERCENT dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, COUNT(dbo.HAGEZ.STAT_COLORE) AS COLOR, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
+FROM            dbo.HAGEZ INNER JOIN
+                         dbo.HAGEZ_COLOR ON dbo.HAGEZ.STAT_COLORE = dbo.HAGEZ_COLOR.COLOR
+GROUP BY dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
+HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "')"
+        FILL_DGV(DG3, KARMA3)
+    End Sub
+
+    Private Sub Label27_Click(sender As Object, e As EventArgs) Handles Label27.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " مجانا ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                'For Each r As DataGridViewRow In DataGridView1.SelectedRows
+                '    r.DefaultCellStyle.BackColor = P_FREE.BackColor
+                'Next
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!STAT_COLORE = "3"
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                REFRESH_BTN_Click(sender, e)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub Label28_Click(sender As Object, e As EventArgs) Handles Label28.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " يرغب فى الألغاء ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                'For Each r As DataGridViewRow In DataGridView1.SelectedRows
+                '    r.DefaultCellStyle.BackColor = P_DELET.BackColor
+                'Next
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!STAT_COLORE = "5"
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                REFRESH_BTN_Click(sender, e)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " لم يحضر الى العيادة ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                'For Each r As DataGridViewRow In DataGridView1.SelectedRows
+                '    r.DefaultCellStyle.BackColor = P_NOTCOME.BackColor
+                'Next
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!STAT_COLORE = "0"
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                REFRESH_BTN_Click(sender, e)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " تم الأتصال به الأن ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!INFO_STAT = TXT_INFO_H_DATAGRID.Text & " , " & Date.Now
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                REFRESH_BTN_Click(sender, e)
+
+            End If
+        End If
+    End Sub
+
+    Private Sub Label26_Click(sender As Object, e As EventArgs) Handles Label26.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+
+            If DataGridView1.SelectedRows.Count > 0 Then
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " سيقوم بالدفع ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                Dim DT As New DataTable
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!STAT_COLORE = "2"
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                REFRESH_BTN_Click(sender, e)
+            End If
+        End If
+        If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+        Try
+            ROLES("M", ADD_MONY_DOCTOR)
+        Catch EX As Exception
+
+        End Try
+    End Sub
 End Class

@@ -306,29 +306,29 @@
                 DA.Fill(DT)
 
                 Dim DR = DT.NewRow
-                    DR!ADD_CODE = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
-                    DR!ADD_DATE = TXT_DATE.Text
-                    DR!ADD_TYPE = "العيادات"
-                    DR!CODE_KHAZINA = KHAZINA_CODE.Text
-                    DR!ADD_PA_CODE = PA_CODE.Text
-                    DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
-                    DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
-                    DR!ADD_TOTAL = TOTAL.Text
-                    DR!ADD_DIS = DISCOUNT.Text
-                    DR!ADD_SAFY = SAFY.Text
-                    DR!ADD_SAFY_AR = SAFY_AR.Text
-                    DR!ADD_STAT = True
-                    DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
-                    DR!ADD_USER_ADD = USER_ADD.Text
-                    DR!ADD_DATE_ADD = DATE_ADD.Text
-                    DR!ADD_TIME_ADD = TIME_ADD.Text
-                    DR!ADD_USER_EDIT = "0"
-                    DR!ADD_DATE_EDIT = "0"
-                    DR!ADD_TIME_EDIT = "0"
+                DR!ADD_CODE = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
+                DR!ADD_DATE = TXT_DATE.Text
+                DR!ADD_TYPE = "العيادات"
+                DR!CODE_KHAZINA = KHAZINA_CODE.Text
+                DR!ADD_PA_CODE = PA_CODE.Text
+                DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
+                DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
+                DR!ADD_TOTAL = TOTAL.Text
+                DR!ADD_DIS = DISCOUNT.Text
+                DR!ADD_SAFY = SAFY.Text
+                DR!ADD_SAFY_AR = SAFY_AR.Text
+                DR!ADD_STAT = True
+                DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
+                DR!ADD_USER_ADD = USER_ADD.Text
+                DR!ADD_DATE_ADD = DATE_ADD.Text
+                DR!ADD_TIME_ADD = TIME_ADD.Text
+                DR!ADD_USER_EDIT = "0"
+                DR!ADD_DATE_EDIT = "0"
+                DR!ADD_TIME_EDIT = "0"
 
-                    DT.Rows.Add(DR)
-                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                    DA.Update(DT)
+                DT.Rows.Add(DR)
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
 
                 '============================== أضافة تفاصيل الايصال ========================
                 Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_DOCTOR", SqlConn)
@@ -400,6 +400,8 @@
                     Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
                     DA2.Update(DT)
                 End If
+
+                '===================== اضافة تفاصيل الحجز ==============================
 
                 '==========================================================================
                 PRINTBTN_Click(sender, e)

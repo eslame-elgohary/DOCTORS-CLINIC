@@ -320,12 +320,20 @@ Public Class HOME
     End Sub
 
     Private Sub BTN_ZIARAFRM_Click(sender As Object, e As EventArgs) Handles BTN_ZIARAFRM.Click
-        'HAGEZ_PATEINT.ShowDialog()
-        h2020hagez.ShowDialog()
+        Try
+            ROLES("M", ZIARA2020)
+        Catch EX As Exception
+
+        End Try
     End Sub
 
     Private Sub STB_SALSE_Click(sender As Object, e As EventArgs) Handles STB_SALSE.Click
-        'h2020hagez.ShowDialog()
+        'Try
+        '    ROLES("M", ZIARA2020)
+        'Catch EX As Exception
+
+        'End Try
+
         ZIARA2020.ShowDialog()
     End Sub
 

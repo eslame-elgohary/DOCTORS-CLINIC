@@ -431,4 +431,12 @@ HAVING      (NOT (dbo.HAGEZ_DOCTOR.DOT_NAME IS NULL))"
         REFRESHHAGEZ()
         COLOR_STAT()
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub DG2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DG2.CellContentClick
+
+    End Sub
 End Class
