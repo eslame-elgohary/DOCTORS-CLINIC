@@ -46,6 +46,7 @@
         PA_NAME.Text = ""
         PA_NAME.Select()
         FILL_TKHASOS()
+        TXT_ACTION.Items.Clear()
     End Sub
 
     Private Sub BTN_SAVE_Click(sender As Object, e As EventArgs) Handles BTN_SAVE.Click
@@ -78,6 +79,7 @@
             DR!CODE_PA_H = TXT_CODE_PA.Text
             DR!CODE_DOC_H = TXT_DOCTOR_CODE.Text
             DR!CODE_TAKH_H = TXT_TKHASOS_CODE.Text
+            DR!DOT_NAME = TXT_ACTION.Text
             DR!CH_DATE_H = CH_DATE.Checked
             DR!USER_ADD = USER_ADD.Text
             DR!DATE_ADD = DATE_ADD.Text
@@ -122,7 +124,7 @@
         DR!CODE_DOC_H = TXT_DOCTOR_CODE.Text
         DR!CODE_TAKH_H = TXT_TKHASOS_CODE.Text
         DR!CH_DATE_H = CH_DATE.Checked
-
+        DR!DOT_NAME = TXT_ACTION.Text
         DR!USER_ADD = USER_ADD.Text
         DR!DATE_ADD = DATE_ADD.Text
         DR!TIME_ADD = TIME_ADD.Text
@@ -261,9 +263,6 @@
 
         End Try
 
-
-
-
     End Sub
 
     Private Sub TXT_TKHSOS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_TKHSOS.SelectedIndexChanged
@@ -273,6 +272,7 @@
         For I = 0 To DT.Rows.Count - 1
             TXT_TKHASOS_CODE.Text = DT.Rows(I).Item("TAKH_CODE")
         Next
+        TXT_ACTION.Items.Clear()
         FILL_DOCTOR()
     End Sub
 
@@ -284,7 +284,15 @@
             TXT_TKHSOS.Text = DT.Rows(I).Item("TAKH_NAME")
         Next
     End Sub
-
+    Sub ACTION_DOCTORS()
+        TXT_ACTION.Items.Clear()
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORSDT WHERE DO_CODE = '" & TXT_DOCTOR_CODE.Text & "'", SqlConn)
+        DA.Fill(DT)
+        For I = 0 To DT.Rows.Count - 1
+            TXT_ACTION.Items.Add(DT.Rows(I).Item("DOT_NAME"))
+        Next
+    End Sub
     Private Sub TXT_DOCTOR_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_DOCTOR.SelectedIndexChanged
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE  DO_NAME='" & TXT_DOCTOR.Text & "'", SqlConn)
@@ -306,6 +314,7 @@
         End If
 
         '""""""""""""""""""""""""""""""
+        ACTION_DOCTORS()
     End Sub
 
     Private Sub TXT_DOCTOR_CODE_TextChanged(sender As Object, e As EventArgs) Handles TXT_DOCTOR_CODE.TextChanged
@@ -318,13 +327,13 @@
     End Sub
     Private Sub DataGridView1_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DataGridView1.RowsAdded
         For I As Integer = 0 To DataGridView1.Rows.Count - 1
-            DataGridView1.Rows(I).Cells(5).Value = "عرض"
+            DataGridView1.Rows(I).Cells(6).Value = "عرض"
             Dim ROW As DataGridViewRow = DataGridView1.Rows(I)
         Next
     End Sub
     Private Sub DataGridView1_Click(sender As Object, e As EventArgs) Handles DataGridView1.Click
         For Each ROW As DataGridViewRow In DataGridView1.Rows
-            If DataGridView1(5, DataGridView1.CurrentRow.Index).Selected = True Then
+            If DataGridView1(6, DataGridView1.CurrentRow.Index).Selected = True Then
                 SHOW_DETA(DataGridView1.CurrentRow.Cells(0).Value)
             End If
         Next
@@ -358,15 +367,15 @@
     End Sub
 
     Private Sub CODE_TIMER_Tick(sender As Object, e As EventArgs) Handles CODE_TIMER.Tick
-        Dim DT00 As New DataTable
-        Dim DA00 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY ID ", SqlConn)
-        DA00.Fill(DT00)
-        If DT00.Rows.Count <> 0 Then
-            Dim I0 = DT00.Rows.Count - 1
-            TXT_CODE.Text = Val(DT00.Rows(I0).Item("CODE_H")) + 1
-        Else
-            TXT_CODE.Text = "1"
-        End If
+        'Dim DT00 As New DataTable
+        'Dim DA00 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ_DOCTOR WHERE CODE_DOC_H = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_H = '" & TXT_DATE.Text & "' ORDER BY ID ", SqlConn)
+        'DA00.Fill(DT00)
+        'If DT00.Rows.Count <> 0 Then
+        '    Dim I0 = DT00.Rows.Count - 1
+        '    TXT_CODE.Text = Val(DT00.Rows(I0).Item("CODE_H")) + 1
+        'Else
+        '    TXT_CODE.Text = "1"
+        'End If
 
     End Sub
 

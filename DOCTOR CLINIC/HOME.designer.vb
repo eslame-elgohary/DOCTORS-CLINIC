@@ -727,6 +727,7 @@ Partial Class HOME
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 55)
+        Me.ToolStripSeparator4.Visible = False
         '
         'ToolStripSeparator6
         '
@@ -776,8 +777,8 @@ Partial Class HOME
         Me.STB_SALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.STB_SALSE.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.STB_SALSE.Name = "STB_SALSE"
-        Me.STB_SALSE.Size = New System.Drawing.Size(84, 52)
-        Me.STB_SALSE.Text = "زيارة"
+        Me.STB_SALSE.Size = New System.Drawing.Size(101, 52)
+        Me.STB_SALSE.Text = "الحجوزات"
         '
         'STB_RESALSE
         '
@@ -787,6 +788,7 @@ Partial Class HOME
         Me.STB_RESALSE.Name = "STB_RESALSE"
         Me.STB_RESALSE.Size = New System.Drawing.Size(79, 52)
         Me.STB_RESALSE.Text = "حجز"
+        Me.STB_RESALSE.Visible = False
         '
         'BT_ADDTHLEL_PATION
         '

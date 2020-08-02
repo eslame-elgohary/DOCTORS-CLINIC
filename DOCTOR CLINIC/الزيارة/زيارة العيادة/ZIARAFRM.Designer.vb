@@ -24,6 +24,7 @@ Partial Class ZIARAFRM
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ZIARAFRM))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.SEARCH_BTN = New DevExpress.XtraEditors.SimpleButton()
         Me.CALL_BTN = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_CALL_INFO = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -54,7 +55,8 @@ Partial Class ZIARAFRM
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SEARCH_BTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -91,6 +93,17 @@ Partial Class ZIARAFRM
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'SEARCH_BTN
+        '
+        Me.SEARCH_BTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SEARCH_BTN.Appearance.Options.UseFont = True
+        Me.SEARCH_BTN.ImageOptions.Image = CType(resources.GetObject("SEARCH_BTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.SEARCH_BTN.Location = New System.Drawing.Point(114, 133)
+        Me.SEARCH_BTN.Name = "SEARCH_BTN"
+        Me.SEARCH_BTN.Size = New System.Drawing.Size(195, 49)
+        Me.SEARCH_BTN.TabIndex = 23
+        Me.SEARCH_BTN.Text = "عرض حالة المريض"
+        '
         'CALL_BTN
         '
         Me.CALL_BTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -119,7 +132,7 @@ Partial Class ZIARAFRM
         Me.Label7.ForeColor = System.Drawing.Color.Red
         Me.Label7.Location = New System.Drawing.Point(19, 65)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(486, 21)
+        Me.Label7.Size = New System.Drawing.Size(485, 21)
         Me.Label7.TabIndex = 20
         Me.Label7.Text = "* ملحوظة : لن يتم ظهور أسم المريض أذا كان التاريخ مختلف عن تاريخ الحجز"
         '
@@ -136,7 +149,7 @@ Partial Class ZIARAFRM
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(696, 57)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(84, 21)
+        Me.Label6.Size = New System.Drawing.Size(85, 21)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "تاريخ اليوم :"
         '
@@ -215,7 +228,7 @@ Partial Class ZIARAFRM
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(1050, 56)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(65, 21)
+        Me.Label5.Size = New System.Drawing.Size(62, 21)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "الطبيب :"
         '
@@ -233,7 +246,7 @@ Partial Class ZIARAFRM
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(271, 23)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 21)
+        Me.Label4.Size = New System.Drawing.Size(58, 21)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "العيادة :"
         '
@@ -268,7 +281,7 @@ Partial Class ZIARAFRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(692, 24)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 21)
+        Me.Label2.Size = New System.Drawing.Size(91, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "رقم التليفون :"
         '
@@ -286,7 +299,7 @@ Partial Class ZIARAFRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(1051, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 21)
+        Me.Label1.Size = New System.Drawing.Size(98, 21)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "أسم المريض :"
         '
@@ -316,7 +329,7 @@ Partial Class ZIARAFRM
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DataGridView1.Location = New System.Drawing.Point(13, 209)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -356,7 +369,7 @@ Partial Class ZIARAFRM
         'Column5
         '
         Me.Column5.DataPropertyName = "TYPE_A"
-        Me.Column5.HeaderText = "تأكيد الحضور"
+        Me.Column5.HeaderText = "الأجراء"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         '
@@ -369,16 +382,17 @@ Partial Class ZIARAFRM
         Me.Column6.ReadOnly = True
         Me.Column6.Visible = False
         '
-        'SEARCH_BTN
+        'Column7
         '
-        Me.SEARCH_BTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SEARCH_BTN.Appearance.Options.UseFont = True
-        Me.SEARCH_BTN.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SEARCH_BTN.Location = New System.Drawing.Point(114, 133)
-        Me.SEARCH_BTN.Name = "SEARCH_BTN"
-        Me.SEARCH_BTN.Size = New System.Drawing.Size(195, 49)
-        Me.SEARCH_BTN.TabIndex = 23
-        Me.SEARCH_BTN.Text = "عرض حالة المريض"
+        Me.Column7.HeaderText = "رقم الملف"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "ملاحظات"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'ZIARAFRM
         '
@@ -427,13 +441,15 @@ Partial Class ZIARAFRM
     Friend WithEvents DATE_TODAY As DateTimePicker
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents CALL_BTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TXT_CALL_INFO As ComboBox
+    Friend WithEvents SEARCH_BTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents CALL_BTN As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents TXT_CALL_INFO As ComboBox
-    Friend WithEvents SEARCH_BTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

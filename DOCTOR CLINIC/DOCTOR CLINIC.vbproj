@@ -95,25 +95,20 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\CrystalReports.ReportSource.13.0.4000\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -124,10 +119,12 @@
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -141,6 +138,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
@@ -207,10 +205,28 @@
     <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="الحجز و الزيارة\2020hagez.Designer.vb">
+      <DependentUpon>2020hagez.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\2020hagez.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\ZIARA2020.Designer.vb">
+      <DependentUpon>ZIARA2020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\ZIARA2020.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="الحجز\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="الحجز\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.Designer.vb">
+      <DependentUpon>HAGEZ_ZIARA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="تأخر الأنجاب\engabdata.Designer.vb">
@@ -1125,6 +1141,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RASED_PATION_CRS.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\2020hagez.resx">
+      <DependentUpon>2020hagez.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\ZIARA2020.resx">
+      <DependentUpon>ZIARA2020.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="الحجز\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
@@ -1256,6 +1278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="الحجز\HAGEZ_PATEINT.resx">
       <DependentUpon>HAGEZ_PATEINT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.resx">
+      <DependentUpon>HAGEZ_ZIARA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="الزيارة\زيارة العيادة\ZIARAFRM.resx">
       <DependentUpon>ZIARAFRM.vb</DependentUpon>
@@ -1643,6 +1668,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="67520_doctor.ico" />
+    <None Include="Resources\icons8-search-64.png" />
     <None Include="Resources\icons8-control-panel-48.png" />
     <None Include="Resources\icons8-credit-card-48.png" />
     <None Include="Resources\icons8-fetus-42.png" />

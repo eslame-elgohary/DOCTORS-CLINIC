@@ -320,11 +320,13 @@ Public Class HOME
     End Sub
 
     Private Sub BTN_ZIARAFRM_Click(sender As Object, e As EventArgs) Handles BTN_ZIARAFRM.Click
-        ZIARAFRM.ShowDialog()
+        'HAGEZ_PATEINT.ShowDialog()
+        h2020hagez.ShowDialog()
     End Sub
 
     Private Sub STB_SALSE_Click(sender As Object, e As EventArgs) Handles STB_SALSE.Click
-        ZIARAFRM.ShowDialog()
+        'h2020hagez.ShowDialog()
+        ZIARA2020.ShowDialog()
     End Sub
 
     Private Sub HELPBTN_Click(sender As Object, e As EventArgs) Handles HELPBTN.Click
