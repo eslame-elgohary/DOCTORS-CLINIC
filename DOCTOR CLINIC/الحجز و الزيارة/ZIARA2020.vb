@@ -2,13 +2,13 @@
 
     Private Sub BTN_TAKED_Click(sender As Object, e As EventArgs) Handles BTN_TAKED.Click
         If TXT_TKHASOS_CODE.Text = "" Then
-            MessageBox.Show("يرجى أختيار العيادة")
+            MessageBox.Show("يرجى أختيار العيادة", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_TKHSOS.Select()
             Exit Sub
         End If
 
         If TXT_DOCTOR_CODE.Text = "" Then
-            MessageBox.Show("يرجى أختيار الطبيب ")
+            MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_DOCTOR.Select()
             Exit Sub
         End If
@@ -79,13 +79,15 @@
         EDITBTN.Visible = True
         CH_TEL.Checked = True
         CH_TEL.Visible = True
+        CH_TEL_AQAREP.Checked = True
+        CH_TEL_AQAREP.Visible = True
         SAVEBTN.Visible = True
         BTN_CHANG.Visible = True
         BTN_TAKED.Visible = True
         P_CHANG.Visible = False
         GroupBox1.Enabled = True
-        ACTION_DOCTORS()
         TRQEM_AUTO()
+        ACTION_DOCTORS()
         '======================== تنظيف الشاشة ==============================
         PA_NAME.Text = ""
         PA_NAME.Select()
@@ -94,14 +96,15 @@
         TXT_ACTION_PRIC.Text = ""
         TXT_ADRRES.Text = ""
         TXT_FILL.Text = ""
+        TXT_TEL_AQAREP.Text = ""
         '====================== DATAGRIDVIEW ================
-        Dim ESO As String
-        ESO = " SELECT        dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_TEL, dbo.PATIENT.PA_CODE2, dbo.HAGEZ.ACTION, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.ID, dbo.HAGEZ.ADRRES, 
-                         dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT
-FROM            dbo.PATIENT INNER JOIN
-                         dbo.HAGEZ ON dbo.PATIENT.PA_CODE = dbo.HAGEZ.PA_CODE 
-WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ORDER BY ID"
-        FILL_DGV(DataGridView1, ESO)
+        '        Dim ESO As String
+        '        ESO = " SELECT        dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_TEL, dbo.PATIENT.PA_CODE2, dbo.HAGEZ.ACTION, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.ID, dbo.HAGEZ.ADRRES, 
+        '                         dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT
+        'FROM            dbo.PATIENT INNER JOIN
+        '                         dbo.HAGEZ ON dbo.PATIENT.PA_CODE = dbo.HAGEZ.PA_CODE 
+        'WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ORDER BY ID"
+        '        FILL_DGV(DataGridView1, ESO)
     End Sub
     Sub TRQEM_AUTO()
         '""""""""""""""" الترقيم التلقائي """"""""""""""
@@ -150,6 +153,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TRQEM_AUTO()
             ACTION_DOCTORS2()
         End If
+        DOC_NAME.Text = TXT_DOCTOR.Text
+        DOC_NAME_P3.Text = TXT_DOCTOR.Text
     End Sub
 
     Private Sub CH_DATE_CheckedChanged(sender As Object, e As EventArgs) Handles CH_DATE.CheckedChanged
@@ -179,6 +184,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_CODE_PA.Text = DT.Rows(I).Item("PA_CODE")
             TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
             TXT_FILL.Text = DT.Rows(I).Item("PA_CODE2")
+            TXT_TEL_AQAREP.Text = DT.Rows(I).Item("PA_TEL2")
         Next
     End Sub
 
@@ -237,12 +243,15 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         TXT_ACTION_PRIC.Text = ""
         TXT_ADRRES.Text = ""
         TXT_FILL.Text = ""
+        TXT_TEL_AQAREP.Text = ""
         '============================================================
         BTN_CHANG.Visible = False
         G_EDIT.Visible = True
         EDITBTN.Visible = False
         CH_TEL2.Checked = True
         CH_TEL2.Visible = True
+        CH_TEL_AQAREP2.Checked = True
+        CH_TEL_AQAREP2.Visible = True
         GroupBox1.Enabled = False
         SAVEBTN.Visible = False
         ACTION_DOCTORS2()
@@ -257,6 +266,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         TXT_FILL2.Text = ""
         TXT_ID.Text = ""
         TXT_CODE2.Text = ""
+        TXT_TEL_AQAREP2.Text = ""
         PATINT_FILL()
     End Sub
     Sub PATINT_FILL()
@@ -311,26 +321,91 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         TRQEM_AUTO()
 
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND DATE_HAGEZ='" & TXT_DATE.Text & "' AND PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
         DA.Fill(DT)
-        Dim DR = DT.NewRow
-        DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
-        DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
-        DR!DATE_HAGEZ = TXT_DATE.Text
-        DR!PA_CODE = TXT_CODE_PA.Text
-        DR!ACTION = TXT_ACTION.Text
-        DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
-        DR!ADRRES = TXT_ADRRES.Text
-        DR!CODE_HAGEZ = TXT_CODE.Text
-        DR!ADD_USER = HOME.T_USERS.Text
-        DR!DATE_ADD_USER = Date.Now
-        DR!STAT_COLORE = "0"
-        DR!INFO_STAT = " "
-        DT.Rows.Add(DR)
-        Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-        DA.Update(DT)
-        MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        NEWBTN_Click(sender, e)
+        If DT.Rows.Count > 0 Then
+            MessageBox.Show("يوجد حجز اخر لهذا المريض فى نفس اليوم لنفس الطبيب يرجي التأكد", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            PA_NAME.Select()
+            Exit Sub
+        Else
+            If CH_TEL.Checked = False Or CH_TEL_AQAREP.Checked = False Then
+                If MessageBox.Show("هل ترغب فى تعديل رقم الهاتف للمريض", "أنتبة", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then
+
+                    Dim DR = DT.NewRow
+                    DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                    DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                    DR!DATE_HAGEZ = TXT_DATE.Text
+                    DR!PA_CODE = TXT_CODE_PA.Text
+                    DR!ACTION = TXT_ACTION.Text
+                    DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                    DR!ADRRES = TXT_ADRRES.Text
+                    DR!CODE_HAGEZ = TXT_CODE.Text
+                    DR!ADD_USER = HOME.T_USERS.Text
+                    DR!DATE_ADD_USER = Date.Now
+                    DR!STAT_COLORE = "0"
+                    DR!INFO_STAT = " "
+                    DT.Rows.Add(DR)
+                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                    DA.Update(DT)
+
+                    MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    NEWBTN_Click(sender, e)
+                Else
+                    Dim DR = DT.NewRow
+                    DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                    DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                    DR!DATE_HAGEZ = TXT_DATE.Text
+                    DR!PA_CODE = TXT_CODE_PA.Text
+                    DR!ACTION = TXT_ACTION.Text
+                    DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                    DR!ADRRES = TXT_ADRRES.Text
+                    DR!CODE_HAGEZ = TXT_CODE.Text
+                    DR!ADD_USER = HOME.T_USERS.Text
+                    DR!DATE_ADD_USER = Date.Now
+                    DR!STAT_COLORE = "0"
+                    DR!INFO_STAT = " "
+                    DT.Rows.Add(DR)
+                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                    DA.Update(DT)
+
+                    '==================================================================
+
+                    Dim DT2 As New DataTable
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
+                    DA2.Fill(DT2)
+                    Dim DR2 = DT2.Rows(0)
+                    DR2!PA_TEL = TXT_TEL.Text
+                    DR2!PA_TEL2 = TXT_TEL_AQAREP.Text
+                    Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT2)
+
+                    MessageBox.Show("تمت عملية حفظ بيانات الحجز وتعديل رقم الهاتف بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    NEWBTN_Click(sender, e)
+                End If
+            Else
+
+                Dim DR = DT.NewRow
+                DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                DR!DATE_HAGEZ = TXT_DATE.Text
+                DR!PA_CODE = TXT_CODE_PA.Text
+                DR!ACTION = TXT_ACTION.Text
+                DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                DR!ADRRES = TXT_ADRRES.Text
+                DR!CODE_HAGEZ = TXT_CODE.Text
+                DR!ADD_USER = HOME.T_USERS.Text
+                DR!DATE_ADD_USER = Date.Now
+                DR!STAT_COLORE = "0"
+                DR!INFO_STAT = " "
+                DT.Rows.Add(DR)
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+
+                MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                NEWBTN_Click(sender, e)
+            End If
+        End If
+
     End Sub
 
     Private Sub PA_NAME2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PA_NAME2.SelectedIndexChanged
@@ -341,6 +416,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_CODE_PA2.Text = DT.Rows(I).Item("PA_CODE")
             TXT_TEL2.Text = DT.Rows(I).Item("PA_TEL")
             TXT_FILL2.Text = DT.Rows(I).Item("PA_CODE2")
+            TXT_TEL_AQAREP2.Text = DT.Rows(I).Item("PA_TEL2")
         Next
         Dim DT1 As New DataTable
         Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE PA_CODE ='" & TXT_CODE_PA2.Text & "' AND DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ", SqlConn)
@@ -366,24 +442,79 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_ACTION2.Select()
             Exit Sub
         End If
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID.Text & "'", SqlConn)
-        DA.Fill(DT)
-        Dim DR = DT.Rows(0)
-        DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
-        DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
-        DR!DATE_HAGEZ = TXT_DATE.Text
-        DR!PA_CODE = TXT_CODE_PA2.Text
-        DR!ACTION = TXT_ACTION2.Text
-        DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
-        DR!ADRRES = TXT_ADRRES2.Text
-        DR!CODE_HAGEZ = TXT_CODE2.Text
-        DR!EDIT_USER = HOME.T_USERS.Text
-        DR!DATE_EDIT_USER = Date.Now
+        If CH_TEL2.Checked = False Or CH_TEL_AQAREP2.Checked = False Then
+            If MessageBox.Show("هل ترغب فى تعديل رقم الهاتف للمريض", "أنتبة", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then
 
-        Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-        DA.Update(DT)
-        MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح لرقم الحجز  " & ">>>> " & TXT_CODE2.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID.Text & "'", SqlConn)
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                DR!DATE_HAGEZ = TXT_DATE.Text
+                DR!PA_CODE = TXT_CODE_PA2.Text
+                DR!ACTION = TXT_ACTION2.Text
+                DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
+                DR!ADRRES = TXT_ADRRES2.Text
+                DR!CODE_HAGEZ = TXT_CODE2.Text
+                DR!EDIT_USER = HOME.T_USERS.Text
+                DR!DATE_EDIT_USER = Date.Now
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+                MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح لرقم الحجز  " & ">>>> " & TXT_CODE2.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID.Text & "'", SqlConn)
+                DA.Fill(DT)
+                Dim DR = DT.Rows(0)
+                DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                DR!DATE_HAGEZ = TXT_DATE.Text
+                DR!PA_CODE = TXT_CODE_PA2.Text
+                DR!ACTION = TXT_ACTION2.Text
+                DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
+                DR!ADRRES = TXT_ADRRES2.Text
+                DR!CODE_HAGEZ = TXT_CODE2.Text
+                DR!EDIT_USER = HOME.T_USERS.Text
+                DR!DATE_EDIT_USER = Date.Now
+
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
+
+                Dim DT2 As New DataTable
+                Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE = '" & TXT_CODE_PA2.Text & "' ", SqlConn)
+                DA2.Fill(DT2)
+                Dim DR2 = DT2.Rows(0)
+                DR2!PA_TEL = TXT_TEL2.Text
+                DR2!PA_TEL2 = TXT_TEL_AQAREP2.Text
+                Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
+                DA2.Update(DT2)
+
+                MessageBox.Show("تمت عملية تعديل بيانات الحجز وتعديل رقم الهاتف بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            End If
+        Else
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID.Text & "'", SqlConn)
+            DA.Fill(DT)
+            Dim DR = DT.Rows(0)
+            DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+            DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+            DR!DATE_HAGEZ = TXT_DATE.Text
+            DR!PA_CODE = TXT_CODE_PA2.Text
+            DR!ACTION = TXT_ACTION2.Text
+            DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
+            DR!ADRRES = TXT_ADRRES2.Text
+            DR!CODE_HAGEZ = TXT_CODE2.Text
+            DR!EDIT_USER = HOME.T_USERS.Text
+            DR!DATE_EDIT_USER = Date.Now
+
+            Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+            DA.Update(DT)
+            MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح لرقم الحجز  " & ">>>> " & TXT_CODE2.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        End If
 
         '==================== تنظيف الشاشة =================================
         PA_NAME2.Text = ""
@@ -624,11 +755,19 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
     Private Sub REFRESH_BTN_P3_Click(sender As Object, e As EventArgs) Handles REFRESH_BTN_P3.Click
         Dim KARMA As String
-        KARMA = "SELECT        TOP (100) PERCENT TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, COUNT(ACTION) AS COUNT_ACTION, ACTION, STAT_COLORE
-        FROM            dbo.HAGEZ
-        GROUP BY TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, ACTION, STAT_COLORE
-        HAVING        (NOT (ACTION IS NULL)) AND (DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (STAT_COLORE = '2')"
+        'KARMA = "SELECT        TOP (100) PERCENT TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, COUNT(ACTION) AS COUNT_ACTION, ACTION, STAT_COLORE
+        'FROM            dbo.HAGEZ
+        'GROUP BY TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, ACTION, STAT_COLORE
+        'HAVING        (NOT (ACTION IS NULL)) AND (DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (STAT_COLORE = '2')"
 
+        KARMA = "SELECT        TOP (100) PERCENT dbo.ADD_MONY_DOCTOR.ADD_DATE, dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) 
+                         AS COUNT_ACTION_NAME, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION
+FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
+                         dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE
+GROUP BY dbo.ADD_MONY_DOCTOR.ADD_DATE, dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DOCTOR.ADD_STAT
+HAVING        (dbo.ADD_MONY_DOCTOR.ADD_DATE = '" & TXT_DATE.Text & "') AND (dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.ADD_MONY_DOCTOR.ADD_STAT = 'TRUE') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) 
+                         IS NULL))
+ORDER BY COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) "
         FILL_DGV(DG2, KARMA)
 
         Dim KARMA3 As String
@@ -731,11 +870,11 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
                 Dim DT As New DataTable
                 DA.Fill(DT)
                 Dim DR = DT.Rows(0)
-                DR!INFO_STAT = TXT_INFO_H_DATAGRID.Text & " , " & Date.Now
+                DR!INFO_STAT = TXT_INFO_H_DATAGRID.Text & " , " & TXT_CALL_WITH.Text & Date.Now.ToShortTimeString
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
                 REFRESH_BTN_Click(sender, e)
-
+                TXT_CALL_WITH.Text = ""
             End If
         End If
     End Sub
@@ -762,10 +901,130 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
         End If
         If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
 
+
         Try
             ROLES("M", ADD_MONY_DOCTOR)
         Catch EX As Exception
 
         End Try
+    End Sub
+
+    Private Sub PRINT_BTN_Click(sender As Object, e As EventArgs) Handles PRINT_BTN.Click
+
+        If TXT_PRINT.Text = "" Then
+            MessageBox.Show("يرجى أختيار المطلوب طباعتة", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_PRINT.Select()
+            Exit Sub
+        ElseIf TXT_PRINT.SelectedIndex = 0 Then
+
+            If TXT_DOCTOR_CODE.Text = "" Then
+                MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            Dim H As String
+            H = " SELECT  * FROM HAGEZ_DT WHERE STAT_COLORE ='4'  AND DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "'  "
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter(H, SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New MALGHE_HAGEZ2
+            REP.SetDataSource(DT)
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+
+
+        ElseIf TXT_PRINT.SelectedIndex = 1 Then
+            Dim H As String
+            H = " SELECT  * FROM HAGEZ_MONY WHERE STAT_COLORE ='2'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "'  "
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter(H, SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New MALGHE_HAGEZ
+            REP.SetDataSource(DT)
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+
+
+        ElseIf TXT_PRINT.SelectedIndex = 2 Then
+
+            If TXT_DOCTOR_CODE.Text = "" Then
+                MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+
+            Dim H As String
+            H = " SELECT  * FROM HAGEZ_MONY WHERE STAT_COLORE ='2'  AND DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "'  "
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter(H, SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New MALGHE_HAGEZ
+            REP.SetDataSource(DT)
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+
+        ElseIf TXT_PRINT.SelectedIndex = 3 Then
+
+            If TXT_DOCTOR_CODE.Text = "" Then
+                MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            Dim H As String
+            H = " SELECT  * FROM HAGEZ_DT WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "'  "
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter(H, SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New MALGHE_HAGEZ3
+            REP.SetDataSource(DT)
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+
+        End If
+    End Sub
+
+    Private Sub TXT_DATE_ValueChanged(sender As Object, e As EventArgs) Handles TXT_DATE.ValueChanged
+        DATE_NAME.Text = TXT_DATE.Text
+        DATE_NAME_P3.Text = TXT_DATE.Text
+    End Sub
+
+    Private Sub BTN_CALL_COUNT_Click(sender As Object, e As EventArgs) Handles BTN_CALL_COUNT.Click
+        If TXT_ID_H.Text = "" Then
+            MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        Else
+            MessageBox.Show(TXT_INFO_H_DATAGRID.Text)
+        End If
+
+    End Sub
+
+    Private Sub CH_TEL_AQAREP_CheckedChanged(sender As Object, e As EventArgs) Handles CH_TEL_AQAREP.CheckedChanged
+        If CH_TEL_AQAREP.Checked = True Then
+            TXT_TEL_AQAREP.Enabled = False
+            TXT_TEL_AQAREP.BackColor = Color.White
+        Else
+            TXT_TEL_AQAREP.Enabled = True
+            TXT_TEL_AQAREP.BackColor = Color.Aqua
+            CH_TEL_AQAREP.Visible = False
+        End If
+    End Sub
+
+    Private Sub CH_TEL_AQAREP2_CheckedChanged(sender As Object, e As EventArgs) Handles CH_TEL_AQAREP2.CheckedChanged
+        If CH_TEL_AQAREP2.Checked = True Then
+            TXT_TEL_AQAREP2.Enabled = False
+            TXT_TEL_AQAREP2.BackColor = Color.White
+        Else
+            TXT_TEL_AQAREP2.Enabled = True
+            TXT_TEL_AQAREP2.BackColor = Color.Aqua
+            CH_TEL_AQAREP2.Visible = False
+        End If
     End Sub
 End Class

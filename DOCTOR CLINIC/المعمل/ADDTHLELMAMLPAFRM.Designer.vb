@@ -286,7 +286,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(323, 209)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(65, 21)
+        Me.Label19.Size = New System.Drawing.Size(68, 21)
         Me.Label19.TabIndex = 48
         Me.Label19.Text = "الصافي :"
         Me.Label19.Visible = False
@@ -296,7 +296,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(541, 209)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(60, 21)
+        Me.Label18.Size = New System.Drawing.Size(61, 21)
         Me.Label18.TabIndex = 47
         Me.Label18.Text = "الخصم :"
         Me.Label18.Visible = False
@@ -355,7 +355,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(253, 26)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(91, 21)
+        Me.Label10.Size = New System.Drawing.Size(96, 21)
         Me.Label10.TabIndex = 37
         Me.Label10.Text = "قيمة التحليل :"
         '
@@ -364,7 +364,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(720, 28)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(89, 21)
+        Me.Label9.Size = New System.Drawing.Size(92, 21)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "أسم التحليل :"
         '
@@ -372,6 +372,7 @@ Partial Class ADDTHLELMAMLPAFRM
         '
         Me.TH_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TH_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TH_NAME.BackColor = System.Drawing.Color.Aqua
         Me.TH_NAME.FormattingEnabled = True
         Me.TH_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
         Me.TH_NAME.Location = New System.Drawing.Point(489, 25)
@@ -471,52 +472,52 @@ Partial Class ADDTHLELMAMLPAFRM
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -530,7 +531,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label4.ForeColor = System.Drawing.Color.Red
         Me.Label4.Location = New System.Drawing.Point(132, 106)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(321, 21)
+        Me.Label4.Size = New System.Drawing.Size(311, 21)
         Me.Label4.TabIndex = 68
         Me.Label4.Text = " السعر أسترشادى لأبلاغ المريض أذا اراد المعرفة"
         '
@@ -564,7 +565,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(711, 101)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 21)
+        Me.Label8.Size = New System.Drawing.Size(95, 21)
         Me.Label8.TabIndex = 70
         Me.Label8.Text = "أسم المعمل :"
         '
@@ -573,7 +574,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(710, 67)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 21)
+        Me.Label1.Size = New System.Drawing.Size(98, 21)
         Me.Label1.TabIndex = 69
         Me.Label1.Text = "كود المريض :"
         '
@@ -582,7 +583,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(712, 31)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 21)
+        Me.Label6.Size = New System.Drawing.Size(94, 21)
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "رقم الايصال :"
         '
@@ -601,6 +602,7 @@ Partial Class ADDTHLELMAMLPAFRM
         '
         Me.MAML_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.MAML_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.MAML_NAME.BackColor = System.Drawing.Color.Aqua
         Me.MAML_NAME.FormattingEnabled = True
         Me.MAML_NAME.Items.AddRange(New Object() {"معمل", "عيادة"})
         Me.MAML_NAME.Location = New System.Drawing.Point(506, 98)
@@ -622,7 +624,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(218, 69)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(50, 21)
+        Me.Label3.Size = New System.Drawing.Size(49, 21)
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "النوع :"
         '
@@ -651,7 +653,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(527, 65)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 21)
+        Me.Label14.Size = New System.Drawing.Size(100, 21)
         Me.Label14.TabIndex = 55
         Me.Label14.Text = "أسم المريض :"
         '
@@ -659,6 +661,7 @@ Partial Class ADDTHLELMAMLPAFRM
         '
         Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PA_NAME.BackColor = System.Drawing.Color.Aqua
         Me.PA_NAME.DataSource = Me.PATION_BINDING
         Me.PA_NAME.DisplayMember = "PA_NAME"
         Me.PA_NAME.FormattingEnabled = True
@@ -702,7 +705,7 @@ Partial Class ADDTHLELMAMLPAFRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(505, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 21)
+        Me.Label2.Size = New System.Drawing.Size(102, 21)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "تاريخ الأيصال :"
         '

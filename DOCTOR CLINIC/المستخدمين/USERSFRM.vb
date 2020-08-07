@@ -88,122 +88,119 @@
                     DR2!A2 = False
                     DR2!A3 = False
                     DR2!A4 = False
-
                     DR2!B = False
                     DR2!B1 = False
                     DR2!B2 = False
                     DR2!B3 = False
                     DR2!B4 = False
-
                     DR2!C = False
                     DR2!C1 = False
                     DR2!C2 = False
                     DR2!C3 = False
-
                     DR2!D = False
                     DR2!D1 = False
                     DR2!D2 = False
                     DR2!D3 = False
-
+                    DR2!A = False
+                    DR2!A1 = False
+                    DR2!A2 = False
+                    DR2!A3 = False
+                    DR2!A4 = False
+                    DR2!B = False
+                    DR2!B1 = False
+                    DR2!B2 = False
+                    DR2!B3 = False
+                    DR2!B4 = False
+                    DR2!C = False
+                    DR2!C1 = False
+                    DR2!C2 = False
+                    DR2!C3 = False
+                    DR2!D = False
+                    DR2!D1 = False
+                    DR2!D2 = False
+                    DR2!D3 = False
                     DR2!E0 = False
                     DR2!E1 = False
                     DR2!E2 = False
                     DR2!E3 = False
-
                     DR2!F = False
                     DR2!F1 = False
                     DR2!F2 = False
                     DR2!F3 = False
-
                     DR2!G = False
                     DR2!G1 = False
                     DR2!G2 = False
                     DR2!G3 = False
-
                     DR2!H = False
                     DR2!H1 = False
                     DR2!H2 = False
                     DR2!H3 = False
-
                     DR2!I = False
                     DR2!I1 = False
                     DR2!I2 = False
                     DR2!I3 = False
-
                     DR2!J = False
                     DR2!J1 = False
-
-                    DR2!K = False
-                    DR2!K1 = False
-                    DR2!K2 = False
-                    DR2!K3 = False
-                    DR2!K4 = False
-
+                    DR2!k = False
+                    DR2!k1 = False
+                    DR2!k2 = False
+                    DR2!k3 = False
+                    DR2!k4 = False
                     DR2!L = False
                     DR2!L1 = False
                     DR2!L2 = False
                     DR2!L3 = False
-
                     DR2!M = False
                     DR2!M1 = False
                     DR2!M2 = False
                     DR2!M3 = False
                     DR2!M4 = False
-
                     DR2!N = False
                     DR2!N1 = False
                     DR2!N2 = False
                     DR2!N3 = False
-
                     DR2!O = False
                     DR2!O1 = False
                     DR2!O2 = False
                     DR2!O3 = False
                     DR2!O4 = False
-
-                    DR2!P = False
-                    DR2!P1 = False
-                    DR2!P2 = False
-                    DR2!P3 = False
-                    DR2!P4 = False
-
-                    DR2!Q = False
-                    DR2!Q1 = False
-                    DR2!Q2 = False
-                    DR2!Q3 = False
-                    DR2!Q4 = False
-
-                    DR2!R = False
-                    DR2!R1 = False
-                    DR2!R2 = False
-                    DR2!R3 = False
-                    DR2!R4 = False
-
-                    DR!UP = False
-
                     DR2!Q20 = False
                     DR2!Q21 = False
                     DR2!Q22 = False
                     DR2!Q23 = False
                     DR2!Q24 = False
-
-                    DR!S100 = False
-                    DR!S101 = False
+                    DR2!P = False
+                    DR2!P1 = False
+                    DR2!P2 = False
+                    DR2!P3 = False
+                    DR2!P4 = False
+                    DR2!Q = False
+                    DR2!Q1 = False
+                    DR2!Q2 = False
+                    DR2!Q3 = False
+                    DR2!Q4 = False
+                    DR2!R = False
+                    DR2!R1 = False
+                    DR2!R2 = False
+                    DR2!R3 = False
+                    DR2!R4 = False
+                    DR2!UP = False
+                    DR2!S100 = False
+                    DR2!S101 = False
                     DR2!S102 = False
                     DR2!S103 = False
                     DR2!S104 = False
-
                     DR2!M100 = False
                     DR2!M101 = False
                     DR2!M102 = False
                     DR2!M103 = False
-
                     DR2!N100 = False
                     DR2!N101 = False
                     DR2!N102 = False
                     DR2!N103 = False
-
                     DR2!U = False
+
+
 
 
                     DT2.Rows.Add(DR2)
@@ -315,7 +312,7 @@
             Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-        End If
+            End If
         End If
     End Sub
 

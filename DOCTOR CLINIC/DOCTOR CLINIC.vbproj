@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP10\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP18\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>28</ApplicationRevision>
+    <ApplicationRevision>36</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -210,6 +210,34 @@
     </Compile>
     <Compile Include="الحجز و الزيارة\2020hagez.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\HAGEZ_DT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAGEZ_DT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\HAGEZ_MONY.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAGEZ_MONY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\MALGHE_HAGEZ3.vb">
+      <DependentUpon>MALGHE_HAGEZ3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\MALGHE_HAGEZ2.vb">
+      <DependentUpon>MALGHE_HAGEZ2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\MALGHE_HAGEZ.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MALGHE_HAGEZ.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="الحجز و الزيارة\ZIARA2020.Designer.vb">
       <DependentUpon>ZIARA2020.vb</DependentUpon>
@@ -1144,6 +1172,18 @@
     <EmbeddedResource Include="الحجز و الزيارة\2020hagez.resx">
       <DependentUpon>2020hagez.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\MALGHE_HAGEZ3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MALGHE_HAGEZ3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\MALGHE_HAGEZ2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MALGHE_HAGEZ2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\MALGHE_HAGEZ.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MALGHE_HAGEZ.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="الحجز و الزيارة\ZIARA2020.resx">
       <DependentUpon>ZIARA2020.vb</DependentUpon>
     </EmbeddedResource>
@@ -1509,6 +1549,28 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="الحجز و الزيارة\HAGEZ_DT.xsc">
+      <DependentUpon>HAGEZ_DT.xsd</DependentUpon>
+    </None>
+    <None Include="الحجز و الزيارة\HAGEZ_DT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HAGEZ_DT.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحجز و الزيارة\HAGEZ_DT.xss">
+      <DependentUpon>HAGEZ_DT.xsd</DependentUpon>
+    </None>
+    <None Include="الحجز و الزيارة\HAGEZ_MONY.xsc">
+      <DependentUpon>HAGEZ_MONY.xsd</DependentUpon>
+    </None>
+    <None Include="الحجز و الزيارة\HAGEZ_MONY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HAGEZ_MONY.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحجز و الزيارة\HAGEZ_MONY.xss">
+      <DependentUpon>HAGEZ_MONY.xsd</DependentUpon>
+    </None>
     <None Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DATASET.xsc">
       <DependentUpon>ADD_MONY_DATASET.xsd</DependentUpon>
     </None>

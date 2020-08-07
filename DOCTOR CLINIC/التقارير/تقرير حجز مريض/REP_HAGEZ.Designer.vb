@@ -26,6 +26,8 @@ Partial Class REP_HAGEZ
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(REP_HAGEZ))
         Me.TXT_PA_CODE = New System.Windows.Forms.TextBox()
         Me.TXT_PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.CH_PA = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,8 +35,6 @@ Partial Class REP_HAGEZ
         Me.TXT_START_DATE = New System.Windows.Forms.DateTimePicker()
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_VIWE = New DevExpress.XtraEditors.SimpleButton()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +61,18 @@ Partial Class REP_HAGEZ
         Me.TXT_PA_NAME.Size = New System.Drawing.Size(351, 27)
         Me.TXT_PA_NAME.TabIndex = 17
         Me.TXT_PA_NAME.ValueMember = "PA_NAME"
+        '
+        'BindingSource1
+        '
+        Me.BindingSource1.AllowNew = True
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "STAT=TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CH_PA
         '
@@ -129,18 +141,6 @@ Partial Class REP_HAGEZ
         Me.BTN_VIWE.TabIndex = 18
         Me.BTN_VIWE.Text = "عرض"
         '
-        'BindingSource1
-        '
-        Me.BindingSource1.AllowNew = True
-        Me.BindingSource1.DataMember = "PATIENT"
-        Me.BindingSource1.DataSource = Me.PATIENTDATA
-        Me.BindingSource1.Filter = "STAT=TRUE"
-        '
-        'PATIENTDATA
-        '
-        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
-        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'PATIENTTableAdapter
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
@@ -150,6 +150,7 @@ Partial Class REP_HAGEZ
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(619, 219)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TXT_PA_CODE)
         Me.Controls.Add(Me.BTN_EXIT)
         Me.Controls.Add(Me.BTN_VIWE)

@@ -33,7 +33,7 @@
     End Sub
 
     Private Sub BTN_EXIT_Click(sender As Object, e As EventArgs) Handles BTN_EXIT.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
     Private Sub TXT_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_NAME.SelectedIndexChanged
         Dim DT As New DataTable

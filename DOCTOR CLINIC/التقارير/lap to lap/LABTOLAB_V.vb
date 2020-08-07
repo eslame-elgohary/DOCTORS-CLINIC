@@ -1,7 +1,7 @@
 ﻿Public Class LABTOLAB_V
 
     Private Sub BTN_EXIT_Click(sender As Object, e As EventArgs) Handles BTN_EXIT.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub LABTOLAB_V_Load(sender As Object, e As EventArgs) Handles MyBase.Load

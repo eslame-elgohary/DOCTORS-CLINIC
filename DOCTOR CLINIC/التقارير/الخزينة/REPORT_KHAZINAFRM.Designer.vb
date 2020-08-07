@@ -35,8 +35,6 @@ Partial Class REPORT_KHAZINAFRM
         Me.SELECT_KHAZINA = New System.Windows.Forms.CheckBox()
         Me.KHAZINA_NAME = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PREVIWBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.BTN_CLOSE = New DevExpress.XtraEditors.SimpleButton()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,6 +43,8 @@ Partial Class REPORT_KHAZINAFRM
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PREVIWBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.BTN_CLOSE = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,7 +81,7 @@ Partial Class REPORT_KHAZINAFRM
         Me.CH_GRU.AutoSize = True
         Me.CH_GRU.Location = New System.Drawing.Point(450, 102)
         Me.CH_GRU.Name = "CH_GRU"
-        Me.CH_GRU.Size = New System.Drawing.Size(89, 25)
+        Me.CH_GRU.Size = New System.Drawing.Size(97, 25)
         Me.CH_GRU.TabIndex = 8
         Me.CH_GRU.Text = "قسم معين"
         Me.CH_GRU.UseVisualStyleBackColor = True
@@ -111,7 +111,7 @@ Partial Class REPORT_KHAZINAFRM
         Me.Label2.Location = New System.Drawing.Point(186, 30)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label2.Size = New System.Drawing.Size(82, 21)
+        Me.Label2.Size = New System.Drawing.Size(80, 21)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "حتى تاريخ :"
         '
@@ -130,7 +130,7 @@ Partial Class REPORT_KHAZINAFRM
         Me.Label1.Location = New System.Drawing.Point(463, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(74, 21)
+        Me.Label1.Size = New System.Drawing.Size(73, 21)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "من تاريخ :"
         '
@@ -148,7 +148,7 @@ Partial Class REPORT_KHAZINAFRM
         Me.SELECT_KHAZINA.AutoSize = True
         Me.SELECT_KHAZINA.Location = New System.Drawing.Point(450, 63)
         Me.SELECT_KHAZINA.Name = "SELECT_KHAZINA"
-        Me.SELECT_KHAZINA.Size = New System.Drawing.Size(102, 25)
+        Me.SELECT_KHAZINA.Size = New System.Drawing.Size(104, 25)
         Me.SELECT_KHAZINA.TabIndex = 1
         Me.SELECT_KHAZINA.Text = "خزينة معينة"
         Me.SELECT_KHAZINA.UseVisualStyleBackColor = True
@@ -174,28 +174,6 @@ Partial Class REPORT_KHAZINAFRM
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(695, 201)
         Me.DataGridView1.TabIndex = 1
-        '
-        'PREVIWBTN
-        '
-        Me.PREVIWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PREVIWBTN.Appearance.Options.UseFont = True
-        Me.PREVIWBTN.ImageOptions.Image = CType(resources.GetObject("PREVIWBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.PREVIWBTN.Location = New System.Drawing.Point(24, 174)
-        Me.PREVIWBTN.Name = "PREVIWBTN"
-        Me.PREVIWBTN.Size = New System.Drawing.Size(134, 46)
-        Me.PREVIWBTN.TabIndex = 2
-        Me.PREVIWBTN.Text = "عرض"
-        '
-        'BTN_CLOSE
-        '
-        Me.BTN_CLOSE.Appearance.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTN_CLOSE.Appearance.Options.UseFont = True
-        Me.BTN_CLOSE.ImageOptions.Image = CType(resources.GetObject("BTN_CLOSE.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_CLOSE.Location = New System.Drawing.Point(465, 174)
-        Me.BTN_CLOSE.Name = "BTN_CLOSE"
-        Me.BTN_CLOSE.Size = New System.Drawing.Size(105, 46)
-        Me.BTN_CLOSE.TabIndex = 3
-        Me.BTN_CLOSE.Text = "أغلاق"
         '
         'Column2
         '
@@ -253,11 +231,34 @@ Partial Class REPORT_KHAZINAFRM
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
         '
+        'PREVIWBTN
+        '
+        Me.PREVIWBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PREVIWBTN.Appearance.Options.UseFont = True
+        Me.PREVIWBTN.ImageOptions.Image = CType(resources.GetObject("PREVIWBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.PREVIWBTN.Location = New System.Drawing.Point(24, 174)
+        Me.PREVIWBTN.Name = "PREVIWBTN"
+        Me.PREVIWBTN.Size = New System.Drawing.Size(134, 46)
+        Me.PREVIWBTN.TabIndex = 2
+        Me.PREVIWBTN.Text = "عرض"
+        '
+        'BTN_CLOSE
+        '
+        Me.BTN_CLOSE.Appearance.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_CLOSE.Appearance.Options.UseFont = True
+        Me.BTN_CLOSE.ImageOptions.Image = CType(resources.GetObject("BTN_CLOSE.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_CLOSE.Location = New System.Drawing.Point(465, 174)
+        Me.BTN_CLOSE.Name = "BTN_CLOSE"
+        Me.BTN_CLOSE.Size = New System.Drawing.Size(105, 46)
+        Me.BTN_CLOSE.TabIndex = 3
+        Me.BTN_CLOSE.Text = "أغلاق"
+        '
         'REPORT_KHAZINAFRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(580, 236)
+        Me.ControlBox = False
         Me.Controls.Add(Me.BTN_CLOSE)
         Me.Controls.Add(Me.PREVIWBTN)
         Me.Controls.Add(Me.DataGridView1)

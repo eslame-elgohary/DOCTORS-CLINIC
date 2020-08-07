@@ -34,6 +34,8 @@ Partial Class DOF3A_PATION_FRM
         Me.TXT_RASED = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.KHAZINA_CODE = New System.Windows.Forms.TextBox()
@@ -62,14 +64,12 @@ Partial Class DOF3A_PATION_FRM
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        Me.GRBTN.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GRBTN.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -135,13 +135,13 @@ Partial Class DOF3A_PATION_FRM
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(727, 112)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(53, 21)
+        Me.Label18.Size = New System.Drawing.Size(55, 21)
         Me.Label18.TabIndex = 60
         Me.Label18.Text = "المبلغ :"
         '
         'TXT_MONY
         '
-        Me.TXT_MONY.BackColor = System.Drawing.Color.White
+        Me.TXT_MONY.BackColor = System.Drawing.Color.Aqua
         Me.TXT_MONY.Location = New System.Drawing.Point(596, 109)
         Me.TXT_MONY.Name = "TXT_MONY"
         Me.TXT_MONY.Size = New System.Drawing.Size(126, 29)
@@ -153,7 +153,7 @@ Partial Class DOF3A_PATION_FRM
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(163, 66)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 21)
+        Me.Label3.Size = New System.Drawing.Size(62, 21)
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "الرصيد :"
         '
@@ -172,7 +172,7 @@ Partial Class DOF3A_PATION_FRM
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(526, 65)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 21)
+        Me.Label14.Size = New System.Drawing.Size(100, 21)
         Me.Label14.TabIndex = 55
         Me.Label14.Text = "أسم المريض :"
         '
@@ -180,6 +180,7 @@ Partial Class DOF3A_PATION_FRM
         '
         Me.PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.PA_NAME.BackColor = System.Drawing.Color.Aqua
         Me.PA_NAME.DataSource = Me.BindingSource1
         Me.PA_NAME.DisplayMember = "PA_NAME"
         Me.PA_NAME.FormattingEnabled = True
@@ -188,6 +189,17 @@ Partial Class DOF3A_PATION_FRM
         Me.PA_NAME.Size = New System.Drawing.Size(283, 29)
         Me.PA_NAME.TabIndex = 54
         Me.PA_NAME.ValueMember = "PA_NAME"
+        '
+        'BindingSource1
+        '
+        Me.BindingSource1.DataMember = "PATIENT"
+        Me.BindingSource1.DataSource = Me.PATIENTDATA
+        Me.BindingSource1.Filter = "STAT =TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PA_CODE
         '
@@ -204,7 +216,7 @@ Partial Class DOF3A_PATION_FRM
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(711, 66)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(97, 21)
+        Me.Label15.Size = New System.Drawing.Size(98, 21)
         Me.Label15.TabIndex = 52
         Me.Label15.Text = "كود المريض :"
         '
@@ -234,7 +246,7 @@ Partial Class DOF3A_PATION_FRM
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(235, 32)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(91, 21)
+        Me.Label4.Size = New System.Drawing.Size(92, 21)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "أسم الخزينة :"
         '
@@ -251,7 +263,7 @@ Partial Class DOF3A_PATION_FRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(505, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 21)
+        Me.Label2.Size = New System.Drawing.Size(102, 21)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "تاريخ الأيصال :"
         '
@@ -270,7 +282,7 @@ Partial Class DOF3A_PATION_FRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(712, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 21)
+        Me.Label1.Size = New System.Drawing.Size(94, 21)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "رقم الايصال :"
         '
@@ -386,52 +398,52 @@ Partial Class DOF3A_PATION_FRM
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -440,17 +452,6 @@ Partial Class DOF3A_PATION_FRM
         '
         'TIMEREDIT
         '
-        '
-        'BindingSource1
-        '
-        Me.BindingSource1.DataMember = "PATIENT"
-        Me.BindingSource1.DataSource = Me.PATIENTDATA
-        Me.BindingSource1.Filter = "STAT =TRUE"
-        '
-        'PATIENTDATA
-        '
-        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
-        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PATIENTTableAdapter
         '
@@ -476,11 +477,11 @@ Partial Class DOF3A_PATION_FRM
         Me.Text = "دفعة من مريض معمل"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GRBTN.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -123,6 +123,7 @@ Partial Class HESAP_DOCTORSFRM
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(535, 213)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TXT_DOC_CODE)
         Me.Controls.Add(Me.BTN_EXIT)

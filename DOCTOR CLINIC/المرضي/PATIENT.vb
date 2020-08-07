@@ -197,7 +197,7 @@
                 Else
                     Dim DR = DT.NewRow
                     DR!PA_CODE = PA_CODE.Text
-                    DR!PA_CODE2 = CODE_GENE("PATIENT", "ID") + 1
+                    DR!PA_CODE2 = PA_CODE2.Text
                     DR!PA_NAME = PA_NAME.Text
                     DR!PA_NAME2 = PA_NAME2.Text
                     DR!PA_TEL = PA_TEL.Text

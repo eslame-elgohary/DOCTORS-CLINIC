@@ -64,7 +64,7 @@ Partial Class LABTOLAB_V
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(28, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 21)
+        Me.Label1.Size = New System.Drawing.Size(88, 21)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "بداية الفترة :"
         '
@@ -73,7 +73,7 @@ Partial Class LABTOLAB_V
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(284, 29)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 21)
+        Me.Label2.Size = New System.Drawing.Size(88, 21)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "نهاية الفترة :"
         '
@@ -83,7 +83,7 @@ Partial Class LABTOLAB_V
         Me.CH_MAML.Location = New System.Drawing.Point(23, 93)
         Me.CH_MAML.Name = "CH_MAML"
         Me.CH_MAML.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_MAML.Size = New System.Drawing.Size(100, 25)
+        Me.CH_MAML.Size = New System.Drawing.Size(106, 25)
         Me.CH_MAML.TabIndex = 4
         Me.CH_MAML.Text = "أسم المعمل"
         Me.CH_MAML.UseVisualStyleBackColor = True
@@ -94,7 +94,7 @@ Partial Class LABTOLAB_V
         Me.CH_PA.Location = New System.Drawing.Point(14, 139)
         Me.CH_PA.Name = "CH_PA"
         Me.CH_PA.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_PA.Size = New System.Drawing.Size(109, 25)
+        Me.CH_PA.Size = New System.Drawing.Size(111, 25)
         Me.CH_PA.TabIndex = 5
         Me.CH_PA.Text = "أسم المريض"
         Me.CH_PA.UseVisualStyleBackColor = True
@@ -183,6 +183,7 @@ Partial Class LABTOLAB_V
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(535, 265)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TXT_PA_CODE)
         Me.Controls.Add(Me.TXT_MAML_CODE)
         Me.Controls.Add(Me.BTN_EXIT)

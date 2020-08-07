@@ -103,7 +103,7 @@
     End Sub
 
     Private Sub BTN_CLOSE_Click(sender As Object, e As EventArgs) Handles BTN_CLOSE.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
     Private Sub PREVIWBTN_Click(sender As Object, e As EventArgs) Handles PREVIWBTN.Click
         Dim DT As New DataTable

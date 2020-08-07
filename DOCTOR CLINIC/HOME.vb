@@ -328,13 +328,12 @@ Public Class HOME
     End Sub
 
     Private Sub STB_SALSE_Click(sender As Object, e As EventArgs) Handles STB_SALSE.Click
-        'Try
-        '    ROLES("M", ZIARA2020)
-        'Catch EX As Exception
+        Try
+            ROLES("M", ZIARA2020)
+        Catch EX As Exception
 
-        'End Try
+        End Try
 
-        ZIARA2020.ShowDialog()
     End Sub
 
     Private Sub HELPBTN_Click(sender As Object, e As EventArgs) Handles HELPBTN.Click
