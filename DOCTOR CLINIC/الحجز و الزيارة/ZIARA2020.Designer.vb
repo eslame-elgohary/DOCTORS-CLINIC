@@ -118,6 +118,7 @@ Partial Class ZIARA2020
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TXT_PA_CODE_H = New System.Windows.Forms.TextBox()
         Me.BTN_CALL_COUNT = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_CALL_WITH = New System.Windows.Forms.TextBox()
         Me.TXT_PRINT = New System.Windows.Forms.ComboBox()
@@ -153,11 +154,13 @@ Partial Class ZIARA2020
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DG3 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.BTN_PRINT_END_DAY = New DevExpress.XtraEditors.SimpleButton()
         Me.REFRESH_BTN_P3 = New DevExpress.XtraEditors.SimpleButton()
         Me.DATE_NAME_P3 = New System.Windows.Forms.Label()
         Me.DOC_NAME_P3 = New System.Windows.Forms.Label()
@@ -166,6 +169,9 @@ Partial Class ZIARA2020
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.TXT_MAML_RASED = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.P_HAGEZ.SuspendLayout()
@@ -191,6 +197,7 @@ Partial Class ZIARA2020
         CType(Me.DG3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         CType(Me.DG2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -482,6 +489,7 @@ Partial Class ZIARA2020
         Me.TXT_ACTION2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_ACTION2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_ACTION2.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_ACTION2.Enabled = False
         Me.TXT_ACTION2.FormattingEnabled = True
         Me.TXT_ACTION2.Location = New System.Drawing.Point(367, 64)
         Me.TXT_ACTION2.Name = "TXT_ACTION2"
@@ -949,6 +957,7 @@ Partial Class ZIARA2020
         Me.TXT_ACTION.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_ACTION.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_ACTION.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_ACTION.Enabled = False
         Me.TXT_ACTION.FormattingEnabled = True
         Me.TXT_ACTION.Location = New System.Drawing.Point(367, 64)
         Me.TXT_ACTION.Name = "TXT_ACTION"
@@ -1129,6 +1138,7 @@ Partial Class ZIARA2020
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.TXT_PA_CODE_H)
         Me.Panel2.Controls.Add(Me.BTN_CALL_COUNT)
         Me.Panel2.Controls.Add(Me.TXT_CALL_WITH)
         Me.Panel2.Controls.Add(Me.TXT_PRINT)
@@ -1153,6 +1163,14 @@ Partial Class ZIARA2020
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1001, 72)
         Me.Panel2.TabIndex = 0
+        '
+        'TXT_PA_CODE_H
+        '
+        Me.TXT_PA_CODE_H.Location = New System.Drawing.Point(420, 3)
+        Me.TXT_PA_CODE_H.Name = "TXT_PA_CODE_H"
+        Me.TXT_PA_CODE_H.Size = New System.Drawing.Size(32, 29)
+        Me.TXT_PA_CODE_H.TabIndex = 131
+        Me.TXT_PA_CODE_H.Visible = False
         '
         'BTN_CALL_COUNT
         '
@@ -1191,7 +1209,7 @@ Partial Class ZIARA2020
         '
         'TXT_ID_H
         '
-        Me.TXT_ID_H.Location = New System.Drawing.Point(415, 3)
+        Me.TXT_ID_H.Location = New System.Drawing.Point(494, 1)
         Me.TXT_ID_H.Name = "TXT_ID_H"
         Me.TXT_ID_H.Size = New System.Drawing.Size(32, 29)
         Me.TXT_ID_H.TabIndex = 126
@@ -1418,7 +1436,7 @@ Partial Class ZIARA2020
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column8, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column8, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column11})
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(0, 72)
         Me.DataGridView1.MultiSelect = False
@@ -1503,8 +1521,18 @@ Partial Class ZIARA2020
         Me.Column7.ReadOnly = True
         Me.Column7.Visible = False
         '
+        'Column11
+        '
+        Me.Column11.DataPropertyName = "PA_CODE"
+        Me.Column11.HeaderText = "CODE_PA"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.Visible = False
+        '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.TXT_MAML_RASED)
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
         Me.TabPage2.Controls.Add(Me.DG3)
         Me.TabPage2.Controls.Add(Me.Panel11)
         Me.TabPage2.Controls.Add(Me.DG2)
@@ -1552,6 +1580,7 @@ Partial Class ZIARA2020
         '
         'Panel11
         '
+        Me.Panel11.Controls.Add(Me.BTN_PRINT_END_DAY)
         Me.Panel11.Controls.Add(Me.REFRESH_BTN_P3)
         Me.Panel11.Controls.Add(Me.DATE_NAME_P3)
         Me.Panel11.Controls.Add(Me.DOC_NAME_P3)
@@ -1561,6 +1590,17 @@ Partial Class ZIARA2020
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(1001, 50)
         Me.Panel11.TabIndex = 2
+        '
+        'BTN_PRINT_END_DAY
+        '
+        Me.BTN_PRINT_END_DAY.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_PRINT_END_DAY.Appearance.Options.UseFont = True
+        Me.BTN_PRINT_END_DAY.ImageOptions.Image = CType(resources.GetObject("BTN_PRINT_END_DAY.ImageOptions.Image"), System.Drawing.Image)
+        Me.BTN_PRINT_END_DAY.Location = New System.Drawing.Point(16, 8)
+        Me.BTN_PRINT_END_DAY.Name = "BTN_PRINT_END_DAY"
+        Me.BTN_PRINT_END_DAY.Size = New System.Drawing.Size(149, 34)
+        Me.BTN_PRINT_END_DAY.TabIndex = 124
+        Me.BTN_PRINT_END_DAY.Text = "طباعة"
         '
         'REFRESH_BTN_P3
         '
@@ -1627,7 +1667,7 @@ Partial Class ZIARA2020
         '
         'Column10
         '
-        Me.Column10.DataPropertyName = "COUNT_ACTION_NAME"
+        Me.Column10.DataPropertyName = "count_action"
         Me.Column10.FillWeight = 50.0!
         Me.Column10.HeaderText = "عدد المرضي"
         Me.Column10.Name = "Column10"
@@ -1636,6 +1676,41 @@ Partial Class ZIARA2020
         'PATIENTTableAdapter
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
+        'TXT_MAML_RASED
+        '
+        Me.TXT_MAML_RASED.Location = New System.Drawing.Point(509, 195)
+        Me.TXT_MAML_RASED.Name = "TXT_MAML_RASED"
+        Me.TXT_MAML_RASED.Size = New System.Drawing.Size(100, 29)
+        Me.TXT_MAML_RASED.TabIndex = 5
+        Me.TXT_MAML_RASED.Visible = False
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column12})
+        Me.DataGridView2.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView2.Location = New System.Drawing.Point(490, 153)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(143, 36)
+        Me.DataGridView2.TabIndex = 4
+        Me.DataGridView2.Visible = False
+        '
+        'Column12
+        '
+        Me.Column12.DataPropertyName = "KHAZINA_IN"
+        Me.Column12.HeaderText = "الفلوس للمعمل"
+        Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
         '
         'ZIARA2020
         '
@@ -1686,10 +1761,12 @@ Partial Class ZIARA2020
         Me.P_END.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         CType(Me.DG3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.DG2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1807,14 +1884,6 @@ Partial Class ZIARA2020
     Friend WithEvents Label31 As Label
     Friend WithEvents TXT_NUM_H As Label
     Friend WithEvents TXT_ID_H As TextBox
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents TXT_INFO_H_DATAGRID As TextBox
     Friend WithEvents DG3 As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
@@ -1823,8 +1892,6 @@ Partial Class ZIARA2020
     Friend WithEvents TXT_NAME1_COLOR As TextBox
     Friend WithEvents TXT_NAME2_INFO As TextBox
     Friend WithEvents TXT_NAME2_COLOR As TextBox
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents TXT_PRINT As ComboBox
     Friend WithEvents TXT_CALL_WITH As TextBox
     Friend WithEvents BTN_CALL_COUNT As DevExpress.XtraEditors.SimpleButton
@@ -1834,4 +1901,20 @@ Partial Class ZIARA2020
     Friend WithEvents Label25 As Label
     Friend WithEvents TXT_TEL_AQAREP As TextBox
     Friend WithEvents CH_TEL_AQAREP As CheckBox
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_PA_CODE_H As TextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents BTN_PRINT_END_DAY As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TXT_MAML_RASED As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
 End Class

@@ -1,5 +1,7 @@
 ﻿Public Class ADD_MONY_DOCTOR
     Dim ARABIC As New ClassConvertNO
+
+
     Sub SHOW_DETA(CODE_)
         DataGridView1.Rows.Clear()
         '=========== ربط رأس الفاتورة =============
@@ -49,7 +51,6 @@
             CALC()
         End If
     End Sub
-
     Sub CALC()
         '==== انشاء العملية الحسابية =======
         Dim TOTAL_ As Double
@@ -67,7 +68,19 @@
         End If
     End Sub
     Private Sub ADD_MONY_DOCTOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        '  If ZIARA2020.ShowDialog Then
+
         NEWBTN_Click(sender, e)
+
+            TXT_DATE.Text = ZIARA2020.TXT_DATE.Text
+            PA_CODE.Text = ZIARA2020.TXT_PA_CODE_H.Text
+            TA_CODE_TKHASOS.Text = ZIARA2020.TXT_TKHASOS_CODE.Text
+            CODE_DOCTOR.Text = ZIARA2020.TXT_DOCTOR_CODE.Text
+
+        'Else
+        '    NEWBTN_Click(sender, e)
+        'End If
     End Sub
     Private Sub TIMERADD_Tick(sender As Object, e As EventArgs) Handles TIMERADD.Tick
         USER_ADD.Text = HOME.T_USERS.Text
@@ -126,6 +139,66 @@
         PA_NAME.Text = ""
         PA_NAME.Select()
         TXT_TYPEMONY.SelectedIndex = 0
+    End Sub
+    Sub SHOW_DETA2(CODE2_)
+
+        '""""""""""""""" تنظيف الشاشة """""""""""""
+        For I = 0 To GroupBox1.Controls.Count - 1
+            If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = ""
+        Next
+        For I = 0 To GroupBox1.Controls.Count - 1
+            If TypeOf GroupBox1.Controls(I) Is ComboBox Then GroupBox1.Controls(I).Text = ""
+        Next
+        For I = 0 To GroupBox2.Controls.Count - 1
+            If TypeOf GroupBox2.Controls(I) Is TextBox Then GroupBox2.Controls(I).Text = ""
+        Next
+        For I = 0 To GroupBox2.Controls.Count - 1
+            If TypeOf GroupBox2.Controls(I) Is ComboBox Then GroupBox2.Controls(I).Text = ""
+        Next
+        DataGridView1.Rows.Clear()
+        TA_TKHASOS.Items.Clear()
+        TXT_DOCTOR.Items.Clear()
+        TXT_ACTION.Items.Clear()
+        '""""""""""""""" الترقيم التلقائي """"""""""""""
+        TXT_CODE.Text = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
+        '""""""""""""""""""""""""""""""
+        EDITBTN.Enabled = False
+        DELETBTN.Enabled = False
+        SAVEBTN.Enabled = True
+        TIMERADD.Enabled = True
+        TIMEREDIT.Enabled = False
+        PRINTBTN.Enabled = True
+        TXT_M.Text = "1"
+        FILL_KHAZINA_CODE()
+        CALC()
+        FILL_KHAZINA()
+        '=====================================================
+        PATIENTDATA.Clear()
+        PATIENTTableAdapter.Fill(PATIENTDATA.PATIENT)
+        PA_NAME.Text = ""
+        PA_NAME.Select()
+        TXT_TYPEMONY.SelectedIndex = 0
+
+        '=========== ربط رأس الفاتورة =============
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID ='" & CODE2_ & "'", SqlConn)
+        DA.Fill(DT)
+        If DT.Rows.Count = 0 Then
+            MessageBox.Show("يرجى التأكد من تحديد أسم المريض الصحيح", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Dim DR = DT.Rows(0)
+
+            TXT_DATE.Text = DR!DATE_HAGEZ
+
+            PA_CODE.Text = DR!PA_CODE
+
+            TA_CODE_TKHASOS.Text = DR!TKHASOS_CODE
+
+            CODE_DOCTOR.Text = DR!DOCTORS_CODE
+
+
+
+        End If
     End Sub
     Sub FILL_KHAZINA_CODE()
         Dim DT As New DataTable
@@ -300,6 +373,31 @@
                     TXT_TYPEMONY.Select()
                     Exit Sub
                 End If
+                If DataGridView1.Rows.Count < 1 Then
+                    MessageBox.Show("يرجى أختيار الأجراء المطلوب", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_ACTION.Select()
+                    Exit Sub
+                End If
+                '================= التخزين فى الحجز ========================================
+                Dim REEM As String
+                REEM = "SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & CODE_DOCTOR.Text & "'  AND PA_CODE = '" & PA_CODE.Text & "' AND DATE_HAGEZ = '" & TXT_DATE.Text & "'"
+                Dim DTE As New DataTable
+                Dim DAE As New SqlClient.SqlDataAdapter(REEM, SqlConn)
+                DAE.Fill(DTE)
+                If DTE.Rows.Count = 0 Then
+                    MessageBox.Show("الأنتباه ان تاريخ الأيصال نفس تاريخ الحجز للمريض")
+                    TXT_DATE.Select()
+                    Exit Sub
+                Else
+                    For I = 0 To DataGridView1.Rows.Count - 1
+                        Dim DRE = DTE.Rows(0)
+                        DRE!ACTION = DataGridView1.Rows(I).Cells(2).Value
+
+                        Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
+                        DAE.Update(DTE)
+                    Next
+                End If
+
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
@@ -438,6 +536,30 @@
                     MessageBox.Show("يرجى أختيار طريقة الدفع", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     TXT_TYPEMONY.Select()
                     Exit Sub
+                End If
+                If DataGridView1.Rows.Count < 1 Then
+                    MessageBox.Show("يرجى أختيار الأجراء المطلوب", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_ACTION.Select()
+                    Exit Sub
+                End If
+                '================= التخزين فى الحجز ========================================
+                Dim REEM As String
+                REEM = "SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & CODE_DOCTOR.Text & "'  AND PA_CODE = '" & PA_CODE.Text & "' AND DATE_HAGEZ = '" & TXT_DATE.Text & "'"
+                Dim DTE As New DataTable
+                Dim DAE As New SqlClient.SqlDataAdapter(REEM, SqlConn)
+                DAE.Fill(DTE)
+                If DTE.Rows.Count = 0 Then
+                    MessageBox.Show("الأنتباه ان تاريخ الأيصال نفس تاريخ الحجز للمريض")
+                    TXT_DATE.Select()
+                    Exit Sub
+                Else
+                    For I = 0 To DataGridView1.Rows.Count - 1
+                        Dim DRE = DTE.Rows(0)
+                        DRE!ACTION = DataGridView1.Rows(I).Cells(2).Value
+
+                        Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
+                        DAE.Update(DTE)
+                    Next
                 End If
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable

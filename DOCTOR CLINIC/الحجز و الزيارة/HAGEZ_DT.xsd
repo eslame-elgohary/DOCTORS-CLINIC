@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.HAGEZ_DT" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        TKHASOS_CODE, TAKH_NAME, DOCTORS_CODE, DO_NAME, DATE_HAGEZ, PA_CODE, PA_NAME, PA_TEL, ADRRES, CODE_HAGEZ, STAT_COLORE, ACTION, PRICE_ACTION, INFO_STAT, PA_CODE2
+                    <CommandText>SELECT        TKHASOS_CODE, TAKH_NAME, DOCTORS_CODE, DO_NAME, DATE_HAGEZ, PA_CODE, PA_NAME, PA_TEL, ADRRES, CODE_HAGEZ, STAT_COLORE, ACTION, PRICE_ACTION, INFO_STAT, PA_CODE2, ID
 FROM            HAGEZ_DT</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -35,6 +35,7 @@ FROM            HAGEZ_DT</CommandText>
               <Mapping SourceColumn="PRICE_ACTION" DataSetColumn="PRICE_ACTION" />
               <Mapping SourceColumn="INFO_STAT" DataSetColumn="INFO_STAT" />
               <Mapping SourceColumn="PA_CODE2" DataSetColumn="PA_CODE2" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -46,7 +47,7 @@ FROM            HAGEZ_DT</CommandText>
   <xs:element name="HAGEZ_DT" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HAGEZ_DT" msprop:Generator_UserDSName="HAGEZ_DT">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="HAGEZ_DT" msprop:Generator_TableClassName="HAGEZ_DTDataTable" msprop:Generator_TableVarName="tableHAGEZ_DT" msprop:Generator_RowChangedName="HAGEZ_DTRowChanged" msprop:Generator_TablePropName="_HAGEZ_DT" msprop:Generator_RowDeletingName="HAGEZ_DTRowDeleting" msprop:Generator_RowChangingName="HAGEZ_DTRowChanging" msprop:Generator_RowEvHandlerName="HAGEZ_DTRowChangeEventHandler" msprop:Generator_RowDeletedName="HAGEZ_DTRowDeleted" msprop:Generator_RowClassName="HAGEZ_DTRow" msprop:Generator_UserTableName="HAGEZ_DT" msprop:Generator_RowEvArgName="HAGEZ_DTRowChangeEvent">
+        <xs:element name="HAGEZ_DT" msprop:Generator_TableClassName="HAGEZ_DTDataTable" msprop:Generator_TableVarName="tableHAGEZ_DT" msprop:Generator_TablePropName="_HAGEZ_DT" msprop:Generator_RowDeletingName="HAGEZ_DTRowDeleting" msprop:Generator_RowChangingName="HAGEZ_DTRowChanging" msprop:Generator_RowEvHandlerName="HAGEZ_DTRowChangeEventHandler" msprop:Generator_RowDeletedName="HAGEZ_DTRowDeleted" msprop:Generator_UserTableName="HAGEZ_DT" msprop:Generator_RowChangedName="HAGEZ_DTRowChanged" msprop:Generator_RowEvArgName="HAGEZ_DTRowChangeEvent" msprop:Generator_RowClassName="HAGEZ_DTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TKHASOS_CODE" msprop:Generator_ColumnVarNameInTable="columnTKHASOS_CODE" msprop:Generator_ColumnPropNameInRow="TKHASOS_CODE" msprop:Generator_ColumnPropNameInTable="TKHASOS_CODEColumn" msprop:Generator_UserColumnName="TKHASOS_CODE" minOccurs="0">
@@ -148,10 +149,15 @@ FROM            HAGEZ_DT</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:HAGEZ_DT" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

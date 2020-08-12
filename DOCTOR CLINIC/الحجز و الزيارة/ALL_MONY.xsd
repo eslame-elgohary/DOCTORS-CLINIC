@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ALL_MONY" targetNamespace="http://tempuri.org/ALL_MONY.xsd" xmlns:mstns="http://tempuri.org/ALL_MONY.xsd" xmlns="http://tempuri.org/ALL_MONY.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="sqlconn1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconn1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DOCTOR_CLINIC.My.MySettings.GlobalReference.Default.sqlconn1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BADR_VTableAdapter" GeneratorDataComponentClassName="BADR_VTableAdapter" Name="BADR_V" UserDataComponentName="BADR_VTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.BADR_V" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BADR_V.*
+FROM            BADR_V</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DOCTORS_CODE" DataSetColumn="DOCTORS_CODE" />
+              <Mapping SourceColumn="DO_NAME" DataSetColumn="DO_NAME" />
+              <Mapping SourceColumn="DATE_HAGEZ" DataSetColumn="DATE_HAGEZ" />
+              <Mapping SourceColumn="COUNT_ACTION" DataSetColumn="COUNT_ACTION" />
+              <Mapping SourceColumn="ADD_STAT" DataSetColumn="ADD_STAT" />
+              <Mapping SourceColumn="NAME_ACTION" DataSetColumn="NAME_ACTION" />
+              <Mapping SourceColumn="PRICE_DOCE" DataSetColumn="PRICE_DOCE" />
+              <Mapping SourceColumn="DOT_PA" DataSetColumn="DOT_PA" />
+              <Mapping SourceColumn="DOT_DOCTORS" DataSetColumn="DOT_DOCTORS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ALL_MONY" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ALL_MONY" msprop:Generator_UserDSName="ALL_MONY">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BADR_V" msprop:Generator_TableClassName="BADR_VDataTable" msprop:Generator_TableVarName="tableBADR_V" msprop:Generator_TablePropName="BADR_V" msprop:Generator_RowDeletingName="BADR_VRowDeleting" msprop:Generator_RowChangingName="BADR_VRowChanging" msprop:Generator_RowEvHandlerName="BADR_VRowChangeEventHandler" msprop:Generator_RowDeletedName="BADR_VRowDeleted" msprop:Generator_UserTableName="BADR_V" msprop:Generator_RowChangedName="BADR_VRowChanged" msprop:Generator_RowEvArgName="BADR_VRowChangeEvent" msprop:Generator_RowClassName="BADR_VRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DOCTORS_CODE" msprop:Generator_ColumnVarNameInTable="columnDOCTORS_CODE" msprop:Generator_ColumnPropNameInRow="DOCTORS_CODE" msprop:Generator_ColumnPropNameInTable="DOCTORS_CODEColumn" msprop:Generator_UserColumnName="DOCTORS_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_NAME" msprop:Generator_ColumnVarNameInTable="columnDO_NAME" msprop:Generator_ColumnPropNameInRow="DO_NAME" msprop:Generator_ColumnPropNameInTable="DO_NAMEColumn" msprop:Generator_UserColumnName="DO_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATE_HAGEZ" msprop:Generator_ColumnVarNameInTable="columnDATE_HAGEZ" msprop:Generator_ColumnPropNameInRow="DATE_HAGEZ" msprop:Generator_ColumnPropNameInTable="DATE_HAGEZColumn" msprop:Generator_UserColumnName="DATE_HAGEZ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="COUNT_ACTION" msprop:Generator_ColumnVarNameInTable="columnCOUNT_ACTION" msprop:Generator_ColumnPropNameInRow="COUNT_ACTION" msprop:Generator_ColumnPropNameInTable="COUNT_ACTIONColumn" msprop:Generator_UserColumnName="COUNT_ACTION" type="xs:int" minOccurs="0" />
+              <xs:element name="ADD_STAT" msprop:Generator_ColumnVarNameInTable="columnADD_STAT" msprop:Generator_ColumnPropNameInRow="ADD_STAT" msprop:Generator_ColumnPropNameInTable="ADD_STATColumn" msprop:Generator_UserColumnName="ADD_STAT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NAME_ACTION" msprop:Generator_ColumnVarNameInTable="columnNAME_ACTION" msprop:Generator_ColumnPropNameInRow="NAME_ACTION" msprop:Generator_ColumnPropNameInTable="NAME_ACTIONColumn" msprop:Generator_UserColumnName="NAME_ACTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRICE_DOCE" msprop:Generator_ColumnVarNameInTable="columnPRICE_DOCE" msprop:Generator_ColumnPropNameInRow="PRICE_DOCE" msprop:Generator_ColumnPropNameInTable="PRICE_DOCEColumn" msprop:Generator_UserColumnName="PRICE_DOCE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_PA" msprop:Generator_ColumnVarNameInTable="columnDOT_PA" msprop:Generator_ColumnPropNameInRow="DOT_PA" msprop:Generator_ColumnPropNameInTable="DOT_PAColumn" msprop:Generator_UserColumnName="DOT_PA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_DOCTORS" msprop:Generator_ColumnVarNameInTable="columnDOT_DOCTORS" msprop:Generator_ColumnPropNameInRow="DOT_DOCTORS" msprop:Generator_ColumnPropNameInTable="DOT_DOCTORSColumn" msprop:Generator_UserColumnName="DOT_DOCTORS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

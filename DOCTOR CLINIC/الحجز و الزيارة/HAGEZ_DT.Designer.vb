@@ -313,6 +313,8 @@ Partial Public Class HAGEZ_DT
         
         Private columnPA_CODE2 As Global.System.Data.DataColumn
         
+        Private columnID As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -469,6 +471,14 @@ Partial Public Class HAGEZ_DT
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -505,12 +515,34 @@ Partial Public Class HAGEZ_DT
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddHAGEZ_DTRow(ByVal TKHASOS_CODE As String, ByVal TAKH_NAME As String, ByVal DOCTORS_CODE As String, ByVal DO_NAME As String, ByVal DATE_HAGEZ As Date, ByVal PA_CODE As String, ByVal PA_NAME As String, ByVal PA_TEL As String, ByVal ADRRES As String, ByVal CODE_HAGEZ As String, ByVal STAT_COLORE As String, ByVal ACTION As String, ByVal PRICE_ACTION As String, ByVal INFO_STAT As String, ByVal PA_CODE2 As String) As HAGEZ_DTRow
+        Public Overloads Function AddHAGEZ_DTRow( _
+                    ByVal TKHASOS_CODE As String,  _
+                    ByVal TAKH_NAME As String,  _
+                    ByVal DOCTORS_CODE As String,  _
+                    ByVal DO_NAME As String,  _
+                    ByVal DATE_HAGEZ As Date,  _
+                    ByVal PA_CODE As String,  _
+                    ByVal PA_NAME As String,  _
+                    ByVal PA_TEL As String,  _
+                    ByVal ADRRES As String,  _
+                    ByVal CODE_HAGEZ As String,  _
+                    ByVal STAT_COLORE As String,  _
+                    ByVal ACTION As String,  _
+                    ByVal PRICE_ACTION As String,  _
+                    ByVal INFO_STAT As String,  _
+                    ByVal PA_CODE2 As String,  _
+                    ByVal ID As Integer) As HAGEZ_DTRow
             Dim rowHAGEZ_DTRow As HAGEZ_DTRow = CType(Me.NewRow,HAGEZ_DTRow)
-            Dim columnValuesArray() As Object = New Object() {TKHASOS_CODE, TAKH_NAME, DOCTORS_CODE, DO_NAME, DATE_HAGEZ, PA_CODE, PA_NAME, PA_TEL, ADRRES, CODE_HAGEZ, STAT_COLORE, ACTION, PRICE_ACTION, INFO_STAT, PA_CODE2}
+            Dim columnValuesArray() As Object = New Object() {TKHASOS_CODE, TAKH_NAME, DOCTORS_CODE, DO_NAME, DATE_HAGEZ, PA_CODE, PA_NAME, PA_TEL, ADRRES, CODE_HAGEZ, STAT_COLORE, ACTION, PRICE_ACTION, INFO_STAT, PA_CODE2, ID}
             rowHAGEZ_DTRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowHAGEZ_DTRow)
             Return rowHAGEZ_DTRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByID(ByVal ID As Integer) As HAGEZ_DTRow
+            Return CType(Me.Rows.Find(New Object() {ID}),HAGEZ_DTRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -545,6 +577,7 @@ Partial Public Class HAGEZ_DT
             Me.columnPRICE_ACTION = MyBase.Columns("PRICE_ACTION")
             Me.columnINFO_STAT = MyBase.Columns("INFO_STAT")
             Me.columnPA_CODE2 = MyBase.Columns("PA_CODE2")
+            Me.columnID = MyBase.Columns("ID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -580,6 +613,9 @@ Partial Public Class HAGEZ_DT
             MyBase.Columns.Add(Me.columnINFO_STAT)
             Me.columnPA_CODE2 = New Global.System.Data.DataColumn("PA_CODE2", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPA_CODE2)
+            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnTKHASOS_CODE.MaxLength = 50
             Me.columnTAKH_NAME.MaxLength = 50
             Me.columnDOCTORS_CODE.MaxLength = 50
@@ -594,6 +630,8 @@ Partial Public Class HAGEZ_DT
             Me.columnPRICE_ACTION.MaxLength = 50
             Me.columnINFO_STAT.MaxLength = 2147483647
             Me.columnPA_CODE2.MaxLength = 50
+            Me.columnID.AllowDBNull = false
+            Me.columnID.Unique = true
             Me.ExtendedProperties.Add("Generator_TablePropName", "_HAGEZ_DT")
             Me.ExtendedProperties.Add("Generator_UserTableName", "HAGEZ_DT")
         End Sub
@@ -967,6 +1005,17 @@ Partial Public Class HAGEZ_DT
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ID() As Integer
+            Get
+                Return CType(Me(Me.tableHAGEZ_DT.IDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableHAGEZ_DT.IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsTKHASOS_CODENull() As Boolean
             Return Me.IsNull(Me.tableHAGEZ_DT.TKHASOS_CODEColumn)
         End Function
@@ -1327,6 +1376,7 @@ Namespace HAGEZ_DTTableAdapters
             tableMapping.ColumnMappings.Add("PRICE_ACTION", "PRICE_ACTION")
             tableMapping.ColumnMappings.Add("INFO_STAT", "INFO_STAT")
             tableMapping.ColumnMappings.Add("PA_CODE2", "PA_CODE2")
+            tableMapping.ColumnMappings.Add("ID", "ID")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1345,7 +1395,7 @@ Namespace HAGEZ_DTTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        TKHASOS_CODE, TAKH_NAME, DOCTORS_CODE, DO_NAME, DATE_HAGEZ, PA_CODE"& _ 
                 ", PA_NAME, PA_TEL, ADRRES, CODE_HAGEZ, STAT_COLORE, ACTION, PRICE_ACTION, INFO_S"& _ 
-                "TAT, PA_CODE2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            HAGEZ_DT"
+                "TAT, PA_CODE2, ID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            HAGEZ_DT"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

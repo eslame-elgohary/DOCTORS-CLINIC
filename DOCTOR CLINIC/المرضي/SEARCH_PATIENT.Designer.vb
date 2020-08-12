@@ -25,12 +25,6 @@ Partial Class SEARCH_PATIENT
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SEARCH_PATIENT))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.SELECTORDER = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
-        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.PACODEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PANAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PATELDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,6 +32,12 @@ Partial Class SEARCH_PATIENT
         Me.PANAME2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PATEL2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PACODE2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.SELECTORDER = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,45 +59,6 @@ Partial Class SEARCH_PATIENT
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(796, 365)
         Me.DataGridView1.TabIndex = 0
-        '
-        'SELECTORDER
-        '
-        Me.SELECTORDER.FormattingEnabled = True
-        Me.SELECTORDER.Items.AddRange(New Object() {"أسم المريض", "تليفون المريض", "أحد الاقارب", "تليفون أحد الاقارب", "رقم الملف بالعيادة"})
-        Me.SELECTORDER.Location = New System.Drawing.Point(15, 11)
-        Me.SELECTORDER.Name = "SELECTORDER"
-        Me.SELECTORDER.Size = New System.Drawing.Size(233, 29)
-        Me.SELECTORDER.TabIndex = 1
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(266, 11)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(303, 29)
-        Me.TextBox1.TabIndex = 2
-        '
-        'EXITBTN
-        '
-        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
-        Me.EXITBTN.Location = New System.Drawing.Point(767, 12)
-        Me.EXITBTN.Name = "EXITBTN"
-        Me.EXITBTN.Size = New System.Drawing.Size(41, 30)
-        Me.EXITBTN.TabIndex = 3
-        '
-        'PATION_BINDING
-        '
-        Me.PATION_BINDING.DataMember = "PATIENT"
-        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
-        Me.PATION_BINDING.Filter = "STAT = TRUE"
-        '
-        'PATIENTDATA
-        '
-        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
-        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PATIENTTableAdapter
-        '
-        Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
         'PACODEDataGridViewTextBoxColumn
         '
@@ -148,6 +109,45 @@ Partial Class SEARCH_PATIENT
         Me.PACODE2DataGridViewTextBoxColumn.Name = "PACODE2DataGridViewTextBoxColumn"
         Me.PACODE2DataGridViewTextBoxColumn.ReadOnly = True
         '
+        'PATION_BINDING
+        '
+        Me.PATION_BINDING.DataMember = "PATIENT"
+        Me.PATION_BINDING.DataSource = Me.PATIENTDATA
+        Me.PATION_BINDING.Filter = "STAT = TRUE"
+        '
+        'PATIENTDATA
+        '
+        Me.PATIENTDATA.DataSetName = "PATIENTDATA"
+        Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(266, 11)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(303, 29)
+        Me.TextBox1.TabIndex = 2
+        '
+        'EXITBTN
+        '
+        Me.EXITBTN.ImageOptions.Image = CType(resources.GetObject("EXITBTN.ImageOptions.Image"), System.Drawing.Image)
+        Me.EXITBTN.Location = New System.Drawing.Point(767, 12)
+        Me.EXITBTN.Name = "EXITBTN"
+        Me.EXITBTN.Size = New System.Drawing.Size(41, 30)
+        Me.EXITBTN.TabIndex = 3
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
+        '
+        'SELECTORDER
+        '
+        Me.SELECTORDER.FormattingEnabled = True
+        Me.SELECTORDER.Items.AddRange(New Object() {"أسم المريض", "تليفون المريض", "أحد الاقارب", "تليفون أحد الاقارب", "رقم الملف بالعيادة"})
+        Me.SELECTORDER.Location = New System.Drawing.Point(15, 11)
+        Me.SELECTORDER.Name = "SELECTORDER"
+        Me.SELECTORDER.Size = New System.Drawing.Size(233, 29)
+        Me.SELECTORDER.TabIndex = 1
+        '
         'SEARCH_PATIENT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -176,7 +176,6 @@ Partial Class SEARCH_PATIENT
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents SELECTORDER As ComboBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents EXITBTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents PATION_BINDING As BindingSource
@@ -189,4 +188,5 @@ Partial Class SEARCH_PATIENT
     Friend WithEvents PANAME2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PATEL2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PACODE2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SELECTORDER As ComboBox
 End Class

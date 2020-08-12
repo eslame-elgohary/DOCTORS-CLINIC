@@ -297,7 +297,7 @@ Public Class HOME
 
     Private Sub BT_RESALE_FATO_Click(sender As Object, e As EventArgs) Handles BT_RESALE_FATO.Click
         Try
-            ROLES("R", THLEL_FRM_ROSHTA)
+            ROLES("Q", THLEL_FRM_ROSHTA)
         Catch EX As Exception
 
         End Try
@@ -333,7 +333,7 @@ Public Class HOME
         Catch EX As Exception
 
         End Try
-
+        'ZIARA2020.ShowDialog()
     End Sub
 
     Private Sub HELPBTN_Click(sender As Object, e As EventArgs) Handles HELPBTN.Click
@@ -496,5 +496,12 @@ Public Class HOME
 
     Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
         test.ShowDialog()
+    End Sub
+
+    Private Sub BT_AMLIAT_Click(sender As Object, e As EventArgs) Handles BT_AMLIAT.Click
+        AMLIAT_FRM.ShowDialog()
+    End Sub
+    Private Sub BT_REP_AMLIAT_CLICK(SENDER As Object, E As EventArgs) Handles BT_AMLIAT.Click
+
     End Sub
 End Class

@@ -55,6 +55,7 @@
         TIMEREDIT.Enabled = False
         AUTOCHI.Visible = True
         AUTOCHI.Checked = True
+        PA_CODE2.Enabled = False
         '""""""""""""""" تنظيف الشاشة """""""""""""
         For I = 0 To GroupBox1.Controls.Count - 1
             If TypeOf GroupBox1.Controls(I) Is TextBox Then GroupBox1.Controls(I).Text = ""
@@ -88,7 +89,7 @@
     End Sub
 
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub PA_TEL_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_TEL.KeyDown
@@ -127,13 +128,6 @@
     End Sub
 
     Private Sub PA_CHI_R1_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_CHI_R1.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            e.SuppressKeyPress = True
-            SendKeys.Send("{Tab}")
-        End If
-    End Sub
-
-    Private Sub PA_CODE2_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_CODE2.KeyDown
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
             SendKeys.Send("{Tab}")
@@ -195,6 +189,9 @@
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("المريض موجود مسبقاً ، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Else
+
+                    PA_CODE.Text = CODE_GENE("PATIENT", "ID") + 1
+
                     Dim DR = DT.NewRow
                     DR!PA_CODE = PA_CODE.Text
                     DR!PA_CODE2 = PA_CODE2.Text
@@ -409,15 +406,12 @@
     Private Sub AUTOCHI_CheckedChanged(sender As Object, e As EventArgs) Handles AUTOCHI.CheckedChanged
         If AUTOCHI.Checked = True Then
             PA_CODE2.Enabled = False
+            AUTOCHI.Visible = True
         Else
             PA_CODE2.Enabled = True
+            AUTOCHI.Visible = False
         End If
     End Sub
-
-    Private Sub AUTOPA_Tick(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub PA_OP_R1_CheckedChanged(sender As Object, e As EventArgs) Handles PA_OP_R1.CheckedChanged
         If PA_OP_R1.Checked = True Then
             PA_OP.Visible = False
@@ -486,5 +480,42 @@
             SendKeys.Send("{Tab}")
         End If
 
+    End Sub
+
+    Private Sub PA_CODE2_KeyDown(sender As Object, e As KeyEventArgs) Handles PA_CODE2.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If MessageBox.Show("هل ترغب فى البحث عن رقم الملف ؟", "أنتبه", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE2 = '" & PA_CODE2.Text & "'", SqlConn)
+                DA.Fill(DT)
+
+                Dim DR = DT.Rows(0)
+                PA_CODE.Text = DR!PA_CODE
+                PA_CODE2.Text = DR!PA_CODE2
+                PA_NAME.Text = DR!PA_NAME
+                PA_NAME2.Text = DR!PA_NAME2
+                PA_TEL.Text = DR!PA_TEL
+                PA_TEL2.Text = DR!PA_TEL2
+                PA_AGE.Text = DR!PA_AGE
+                PA_OP_R1.Checked = DR!PA_OP_R1
+                PA_OP.Text = DR!PA_OP
+                PA_CHI_R1.Checked = DR!PA_CHI_R1
+                PA_CHI.Text = DR!PA_CHI
+                PA_TYPE.Text = DR!PA_TYPE
+
+                DELETBTN.Enabled = True
+                EDITBTN.Enabled = True
+                SAVEBTN.Enabled = False
+                TIMEREDIT.Enabled = True
+                TIMERADD.Enabled = False
+                AUTOCHI.Checked = False
+                AUTOCHI.Visible = False
+            Else
+                Exit Sub
+                e.SuppressKeyPress = True
+                SendKeys.Send("{Tab}")
+            End If
+
+        End If
     End Sub
 End Class

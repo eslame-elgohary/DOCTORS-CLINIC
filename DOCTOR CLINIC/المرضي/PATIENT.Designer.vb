@@ -42,8 +42,8 @@ Partial Class PATIENT
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PA_TYPE = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.AUTOCHI = New System.Windows.Forms.CheckBox()
         Me.PA_CODE2 = New System.Windows.Forms.TextBox()
+        Me.AUTOCHI = New System.Windows.Forms.CheckBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PA_CHI = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -136,6 +136,7 @@ Partial Class PATIENT
         '
         Me.SEARCHBTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SEARCHBTN.Appearance.Options.UseFont = True
+        Me.SEARCHBTN.Enabled = False
         Me.SEARCHBTN.ImageOptions.Image = CType(resources.GetObject("SEARCHBTN.ImageOptions.Image"), System.Drawing.Image)
         Me.SEARCHBTN.Location = New System.Drawing.Point(300, 20)
         Me.SEARCHBTN.Name = "SEARCHBTN"
@@ -210,11 +211,11 @@ Partial Class PATIENT
         Me.GroupBox1.Controls.Add(Me.PA_CODE)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.PA_NAME2)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.PA_TEL2)
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(842, 254)
@@ -253,7 +254,7 @@ Partial Class PATIENT
         Me.PA_CHI_R1.Location = New System.Drawing.Point(641, 202)
         Me.PA_CHI_R1.Name = "PA_CHI_R1"
         Me.PA_CHI_R1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PA_CHI_R1.Size = New System.Drawing.Size(123, 25)
+        Me.PA_CHI_R1.Size = New System.Drawing.Size(129, 25)
         Me.PA_CHI_R1.TabIndex = 25
         Me.PA_CHI_R1.Text = "هل يوجد اطفال"
         Me.PA_CHI_R1.UseVisualStyleBackColor = True
@@ -264,7 +265,7 @@ Partial Class PATIENT
         Me.PA_OP_R1.Location = New System.Drawing.Point(641, 128)
         Me.PA_OP_R1.Name = "PA_OP_R1"
         Me.PA_OP_R1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PA_OP_R1.Size = New System.Drawing.Size(171, 25)
+        Me.PA_OP_R1.Size = New System.Drawing.Size(178, 25)
         Me.PA_OP_R1.TabIndex = 21
         Me.PA_OP_R1.Text = "هل يوجد عمليات سابقة"
         Me.PA_OP_R1.UseVisualStyleBackColor = True
@@ -274,7 +275,7 @@ Partial Class PATIENT
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(116, 72)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(58, 21)
+        Me.Label12.Size = New System.Drawing.Size(60, 21)
         Me.Label12.TabIndex = 24
         Me.Label12.Text = "الجنس :"
         '
@@ -289,8 +290,8 @@ Partial Class PATIENT
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.AUTOCHI)
         Me.GroupBox3.Controls.Add(Me.PA_CODE2)
+        Me.GroupBox3.Controls.Add(Me.AUTOCHI)
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.PA_CHI)
         Me.GroupBox3.Controls.Add(Me.Label9)
@@ -300,24 +301,24 @@ Partial Class PATIENT
         Me.GroupBox3.TabIndex = 21
         Me.GroupBox3.TabStop = False
         '
+        'PA_CODE2
+        '
+        Me.PA_CODE2.Location = New System.Drawing.Point(27, 17)
+        Me.PA_CODE2.Name = "PA_CODE2"
+        Me.PA_CODE2.Size = New System.Drawing.Size(109, 29)
+        Me.PA_CODE2.TabIndex = 26
+        Me.PA_CODE2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'AUTOCHI
         '
         Me.AUTOCHI.AutoSize = True
         Me.AUTOCHI.Checked = True
         Me.AUTOCHI.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.AUTOCHI.Location = New System.Drawing.Point(11, 24)
+        Me.AUTOCHI.Location = New System.Drawing.Point(6, 24)
         Me.AUTOCHI.Name = "AUTOCHI"
         Me.AUTOCHI.Size = New System.Drawing.Size(15, 14)
         Me.AUTOCHI.TabIndex = 3
         Me.AUTOCHI.UseVisualStyleBackColor = True
-        '
-        'PA_CODE2
-        '
-        Me.PA_CODE2.Location = New System.Drawing.Point(37, 18)
-        Me.PA_CODE2.Name = "PA_CODE2"
-        Me.PA_CODE2.Size = New System.Drawing.Size(97, 29)
-        Me.PA_CODE2.TabIndex = 24
-        Me.PA_CODE2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
         '
@@ -325,7 +326,7 @@ Partial Class PATIENT
         Me.Label11.ForeColor = System.Drawing.Color.DarkOrange
         Me.Label11.Location = New System.Drawing.Point(131, 21)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(180, 21)
+        Me.Label11.Size = New System.Drawing.Size(187, 21)
         Me.Label11.TabIndex = 25
         Me.Label11.Text = "رقم ملف المريض بالعيادة : "
         '
@@ -342,7 +343,7 @@ Partial Class PATIENT
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(518, 20)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(58, 21)
+        Me.Label9.Size = New System.Drawing.Size(63, 21)
         Me.Label9.TabIndex = 19
         Me.Label9.Text = "عددهم :"
         '
@@ -359,7 +360,7 @@ Partial Class PATIENT
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(572, 71)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 21)
+        Me.Label5.Size = New System.Drawing.Size(89, 21)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "أحد الأقارب :"
         '
@@ -376,7 +377,7 @@ Partial Class PATIENT
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(543, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 21)
+        Me.Label2.Size = New System.Drawing.Size(100, 21)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "أسم المريض :"
         '
@@ -395,7 +396,7 @@ Partial Class PATIENT
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(737, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 21)
+        Me.Label1.Size = New System.Drawing.Size(98, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "كود المريض :"
         '
@@ -404,7 +405,7 @@ Partial Class PATIENT
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(738, 72)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 21)
+        Me.Label4.Size = New System.Drawing.Size(99, 21)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "عمر المريض :"
         '
@@ -423,7 +424,7 @@ Partial Class PATIENT
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(485, 34)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 21)
+        Me.Label8.Size = New System.Drawing.Size(63, 21)
         Me.Label8.TabIndex = 19
         Me.Label8.Text = "أذكرها  :"
         Me.Label8.Visible = False
@@ -443,7 +444,7 @@ Partial Class PATIENT
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(155, 29)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 21)
+        Me.Label3.Size = New System.Drawing.Size(116, 21)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "تليفون المريض :"
         '
@@ -460,7 +461,7 @@ Partial Class PATIENT
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(317, 70)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 21)
+        Me.Label6.Size = New System.Drawing.Size(62, 21)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "تليفونة :"
         '
@@ -485,52 +486,52 @@ Partial Class PATIENT
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -617,7 +618,6 @@ Partial Class PATIENT
     Friend WithEvents TIME_EDIT As ToolStripStatusLabel
     Friend WithEvents TIMERADD As Timer
     Friend WithEvents TIMEREDIT As Timer
-    Friend WithEvents PA_CODE2 As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents PA_TYPE As ComboBox
     Friend WithEvents Label12 As Label
@@ -628,4 +628,5 @@ Partial Class PATIENT
     Friend WithEvents PATION_BINDING As BindingSource
     Friend WithEvents PATIENTDATA As PATIENTDATA
     Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents PA_CODE2 As TextBox
 End Class

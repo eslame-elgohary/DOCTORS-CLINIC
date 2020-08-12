@@ -97,14 +97,8 @@
         TXT_ADRRES.Text = ""
         TXT_FILL.Text = ""
         TXT_TEL_AQAREP.Text = ""
-        '====================== DATAGRIDVIEW ================
-        '        Dim ESO As String
-        '        ESO = " SELECT        dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_TEL, dbo.PATIENT.PA_CODE2, dbo.HAGEZ.ACTION, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.ID, dbo.HAGEZ.ADRRES, 
-        '                         dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT
-        'FROM            dbo.PATIENT INNER JOIN
-        '                         dbo.HAGEZ ON dbo.PATIENT.PA_CODE = dbo.HAGEZ.PA_CODE 
-        'WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ORDER BY ID"
-        '        FILL_DGV(DataGridView1, ESO)
+        '======================================
+
     End Sub
     Sub TRQEM_AUTO()
         '""""""""""""""" الترقيم التلقائي """"""""""""""
@@ -169,7 +163,7 @@
 
     Private Sub TXT_ACTION_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_ACTION.SelectedIndexChanged
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORSDT WHERE DOT_NAME = '" & TXT_ACTION.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORSDT WHERE DOT_NAME = '" & TXT_ACTION.Text & "' AND DO_CODE = '" & TXT_DOCTOR_CODE.Text & "'", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             TXT_ACTION_PRIC.Text = DT.Rows(I).Item("DOT_PA")
@@ -255,7 +249,6 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         GroupBox1.Enabled = False
         SAVEBTN.Visible = False
         ACTION_DOCTORS2()
-
         '======================== تنظيف الشاشة ==============================
         PA_NAME2.Text = ""
         PA_NAME2.Select()
@@ -288,7 +281,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
     Private Sub TXT_ACTION2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_ACTION2.SelectedIndexChanged
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORSDT WHERE DOT_NAME = '" & TXT_ACTION2.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORSDT WHERE DOT_NAME = '" & TXT_ACTION2.Text & "' AND DO_CODE = '" & TXT_DOCTOR_CODE.Text & "'", SqlConn)
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             TXT_ACTION_PRIC2.Text = DT.Rows(I).Item("DOT_PA")
@@ -313,11 +306,11 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             Exit Sub
         End If
 
-        If TXT_ACTION_PRIC.Text = "" Then
-            MessageBox.Show("يرجى أختيار الأجراء المطلوب ")
-            TXT_ACTION.Select()
-            Exit Sub
-        End If
+        'If TXT_ACTION_PRIC.Text = "" Then
+        '    MessageBox.Show("يرجى أختيار الأجراء المطلوب ")
+        '    TXT_ACTION.Select()
+        '    Exit Sub
+        'End If
         TRQEM_AUTO()
 
         Dim DT As New DataTable
@@ -336,8 +329,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                     DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
                     DR!DATE_HAGEZ = TXT_DATE.Text
                     DR!PA_CODE = TXT_CODE_PA.Text
-                    DR!ACTION = TXT_ACTION.Text
-                    DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                    ' DR!ACTION = TXT_ACTION.Text
+                    ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
                     DR!ADRRES = TXT_ADRRES.Text
                     DR!CODE_HAGEZ = TXT_CODE.Text
                     DR!ADD_USER = HOME.T_USERS.Text
@@ -356,8 +349,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                     DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
                     DR!DATE_HAGEZ = TXT_DATE.Text
                     DR!PA_CODE = TXT_CODE_PA.Text
-                    DR!ACTION = TXT_ACTION.Text
-                    DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                    '  DR!ACTION = TXT_ACTION.Text
+                    ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
                     DR!ADRRES = TXT_ADRRES.Text
                     DR!CODE_HAGEZ = TXT_CODE.Text
                     DR!ADD_USER = HOME.T_USERS.Text
@@ -389,8 +382,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
                 DR!DATE_HAGEZ = TXT_DATE.Text
                 DR!PA_CODE = TXT_CODE_PA.Text
-                DR!ACTION = TXT_ACTION.Text
-                DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                '  DR!ACTION = TXT_ACTION.Text
+                ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
                 DR!ADRRES = TXT_ADRRES.Text
                 DR!CODE_HAGEZ = TXT_CODE.Text
                 DR!ADD_USER = HOME.T_USERS.Text
@@ -437,11 +430,11 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             Exit Sub
         End If
 
-        If TXT_ACTION_PRIC2.Text = "" Then
-            MessageBox.Show("يرجى أختيار الأجراء المطلوب ")
-            TXT_ACTION2.Select()
-            Exit Sub
-        End If
+        'If TXT_ACTION_PRIC2.Text = "" Then
+        '    MessageBox.Show("يرجى أختيار الأجراء المطلوب ")
+        '    TXT_ACTION2.Select()
+        '    Exit Sub
+        'End If
         If CH_TEL2.Checked = False Or CH_TEL_AQAREP2.Checked = False Then
             If MessageBox.Show("هل ترغب فى تعديل رقم الهاتف للمريض", "أنتبة", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then
 
@@ -453,8 +446,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
                 DR!DATE_HAGEZ = TXT_DATE.Text
                 DR!PA_CODE = TXT_CODE_PA2.Text
-                DR!ACTION = TXT_ACTION2.Text
-                DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
+                ' DR!ACTION = TXT_ACTION2.Text
+                ' DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
                 DR!ADRRES = TXT_ADRRES2.Text
                 DR!CODE_HAGEZ = TXT_CODE2.Text
                 DR!EDIT_USER = HOME.T_USERS.Text
@@ -472,8 +465,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
                 DR!DATE_HAGEZ = TXT_DATE.Text
                 DR!PA_CODE = TXT_CODE_PA2.Text
-                DR!ACTION = TXT_ACTION2.Text
-                DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
+                '  DR!ACTION = TXT_ACTION2.Text
+                ' DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
                 DR!ADRRES = TXT_ADRRES2.Text
                 DR!CODE_HAGEZ = TXT_CODE2.Text
                 DR!EDIT_USER = HOME.T_USERS.Text
@@ -491,8 +484,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
                 DA2.Update(DT2)
 
-                MessageBox.Show("تمت عملية تعديل بيانات الحجز وتعديل رقم الهاتف بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+                MessageBox.Show("تمت عملية تعديل بيانات الحجز بنجاح لرقم الحجز  " & ">>>> " & TXT_CODE2.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Else
             Dim DT As New DataTable
@@ -503,8 +495,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
             DR!DATE_HAGEZ = TXT_DATE.Text
             DR!PA_CODE = TXT_CODE_PA2.Text
-            DR!ACTION = TXT_ACTION2.Text
-            DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
+            ' DR!ACTION = TXT_ACTION2.Text
+            '  DR!PRICE_ACTION = TXT_ACTION_PRIC2.Text
             DR!ADRRES = TXT_ADRRES2.Text
             DR!CODE_HAGEZ = TXT_CODE2.Text
             DR!EDIT_USER = HOME.T_USERS.Text
@@ -543,8 +535,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_NAME1.Text = DT.Rows(I).Item("PA_NAME")
             TXT_HAGEZ1_ID.Text = DT.Rows(I).Item("ID")
             TXT_NAME1_CODE.Text = DT.Rows(I).Item("PA_CODE")
-            TXT_NAME1_ACTION.Text = DT.Rows(I).Item("ACTION")
-            TXT_NAME1_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
+            ' TXT_NAME1_ACTION.Text = DT.Rows(I).Item("ACTION")
+            ' TXT_NAME1_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
             TXT_NAME1_ADRRES.Text = DT.Rows(I).Item("ADRRES")
             TXT_NAME1_COLOR.Text = DT.Rows(I).Item("STAT_COLORE")
             TXT_NAME1_INFO.Text = DT.Rows(I).Item("INFO_STAT")
@@ -566,8 +558,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_NAME2.Text = DT.Rows(I).Item("PA_NAME")
             TXT_HAGEZ2_ID.Text = DT.Rows(I).Item("ID")
             TXT_NAME2_CODE.Text = DT.Rows(I).Item("PA_CODE")
-            TXT_NAME2_ACTION.Text = DT.Rows(I).Item("ACTION")
-            TXT_NAME2_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
+            ' TXT_NAME2_ACTION.Text = DT.Rows(I).Item("ACTION")
+            ' TXT_NAME2_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
             TXT_NAME2_ADRRES.Text = DT.Rows(I).Item("ADRRES")
             TXT_NAME2_COLOR.Text = DT.Rows(I).Item("STAT_COLORE")
             TXT_NAME2_INFO.Text = DT.Rows(I).Item("INFO_STAT")
@@ -647,10 +639,11 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
     End Sub
 
     Private Sub REFRESH_BTN_Click(sender As Object, e As EventArgs) Handles REFRESH_BTN.Click
+
         '====================== DATAGRIDVIEW ================
         Dim ESO As String
         ESO = " SELECT        dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_TEL, dbo.PATIENT.PA_CODE2, dbo.HAGEZ.ACTION, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.ID, dbo.HAGEZ.ADRRES, 
-                         dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT
+                         dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT, dbo.HAGEZ.PA_CODE 
 FROM            dbo.PATIENT INNER JOIN
                          dbo.HAGEZ ON dbo.PATIENT.PA_CODE = dbo.HAGEZ.PA_CODE 
 WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ORDER BY ID"
@@ -695,6 +688,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 TXT_ID_H.Text = r.Cells.Item(0).Value
                 TXT_NUM_H.Text = r.Cells.Item(1).Value
                 TXT_INFO_H_DATAGRID.Text = r.Cells.Item(6).Value
+                TXT_PA_CODE_H.Text = r.Cells.Item(8).Value
             Next
         Else
             TXT_ID_H.Text = ""
@@ -760,18 +754,31 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         'GROUP BY TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, ACTION, STAT_COLORE
         'HAVING        (NOT (ACTION IS NULL)) AND (DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (STAT_COLORE = '2')"
 
-        KARMA = "SELECT        TOP (100) PERCENT dbo.ADD_MONY_DOCTOR.ADD_DATE, dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) 
-                         AS COUNT_ACTION_NAME, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION
-FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
-                         dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE
-GROUP BY dbo.ADD_MONY_DOCTOR.ADD_DATE, dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DOCTOR.ADD_STAT
-HAVING        (dbo.ADD_MONY_DOCTOR.ADD_DATE = '" & TXT_DATE.Text & "') AND (dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.ADD_MONY_DOCTOR.ADD_STAT = 'TRUE') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) 
-                         IS NULL))
-ORDER BY COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) "
+        'KARMA = "SELECT        TOP (100) PERCENT dbo.ADD_MONY_DOCTOR.ADD_DATE, dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) 
+        '                         AS COUNT_ACTION_NAME, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION
+        'FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
+        '                         dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE
+        'GROUP BY dbo.ADD_MONY_DOCTOR.ADD_DATE, dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DOCTOR.ADD_STAT
+        'HAVING        (dbo.ADD_MONY_DOCTOR.ADD_DATE = '" & TXT_DATE.Text & "') AND (dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.ADD_MONY_DOCTOR.ADD_STAT = 'TRUE') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) 
+        '                         IS NULL))
+        'ORDER BY COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) "
+
+
+
+        KARMA = "SELECT        dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) AS count_action, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.HAGEZ.DOCTORS_CODE, 
+                                 dbo.ADD_MONY_DOCTOR.ADD_STAT
+        FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
+                                 dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE INNER JOIN
+                                 dbo.HAGEZ ON dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.HAGEZ.DATE_HAGEZ AND dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = dbo.HAGEZ.DOCTORS_CODE AND 
+                                 dbo.ADD_MONY_DOCTOR.ADD_PA_CODE = dbo.HAGEZ.PA_CODE
+        GROUP BY dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.HAGEZ.DOCTORS_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT
+        HAVING        (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.HAGEZ.DATE_HAGEZ = CONVERT(DATETIME, '" & TXT_DATE.Text & "', 102)) AND (dbo.ADD_MONY_DOCTOR.ADD_STAT='True') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) IS NULL))"
+
+
         FILL_DGV(DG2, KARMA)
 
         Dim KARMA3 As String
-        KARMA3 = "SELECT        TOP (100) PERCENT dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, COUNT(dbo.HAGEZ.STAT_COLORE) AS COLOR, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
+        KARMA3 = "SELECT      dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, COUNT(dbo.HAGEZ.STAT_COLORE) AS COLOR, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
 FROM            dbo.HAGEZ INNER JOIN
                          dbo.HAGEZ_COLOR ON dbo.HAGEZ.STAT_COLORE = dbo.HAGEZ_COLOR.COLOR
 GROUP BY dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
@@ -799,9 +806,19 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
-                REFRESH_BTN_Click(sender, e)
 
             End If
+            '   If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+
+            Try
+                ROLES("M", ADD_MONY_DOCTOR)
+            Catch EX As Exception
+
+            End Try
+
+
+            REFRESH_BTN_Click(sender, e)
         End If
     End Sub
 
@@ -848,6 +865,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
                 DA.Fill(DT)
                 Dim DR = DT.Rows(0)
                 DR!STAT_COLORE = "0"
+                DR!ACTION = ""
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
@@ -860,6 +878,10 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
         If TXT_ID_H.Text = "" Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        ElseIf TXT_CALL_WITH.Text = "" Then
+            MessageBox.Show("يرجى كتابة ما تم اثناء الاتصال", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXT_CALL_WITH.Select()
             Exit Sub
         Else
 
@@ -896,17 +918,19 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
-                REFRESH_BTN_Click(sender, e)
+
             End If
+            'If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+            Try
+                ROLES("M", ADD_MONY_DOCTOR)
+            Catch EX As Exception
+
+            End Try
+
+            REFRESH_BTN_Click(sender, e)
         End If
-        If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
 
-
-        Try
-            ROLES("M", ADD_MONY_DOCTOR)
-        Catch EX As Exception
-
-        End Try
     End Sub
 
     Private Sub PRINT_BTN_Click(sender As Object, e As EventArgs) Handles PRINT_BTN.Click
@@ -923,7 +947,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
             End If
 
             Dim H As String
-            H = " SELECT  * FROM HAGEZ_DT WHERE STAT_COLORE ='4'  AND DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "'  "
+            H = " SELECT  * FROM HAGEZ_DT WHERE STAT_COLORE ='4'  AND DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "' ORDER BY ID "
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter(H, SqlConn)
             DA.Fill(DT)
@@ -977,7 +1001,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
             End If
 
             Dim H As String
-            H = " SELECT  * FROM HAGEZ_DT WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "'  "
+            H = " SELECT  * FROM HAGEZ_DT WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "'  AND DATE_HAGEZ = '" & TXT_DATE.Text & "' ORDER BY ID "
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter(H, SqlConn)
             DA.Fill(DT)
@@ -1026,5 +1050,31 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
             TXT_TEL_AQAREP2.BackColor = Color.Aqua
             CH_TEL_AQAREP2.Visible = False
         End If
+    End Sub
+
+    Private Sub BTN_PRINT_END_DAY_Click(sender As Object, e As EventArgs) Handles BTN_PRINT_END_DAY.Click
+
+        FILL_DGV(DataGridView2, "SELECT * FROM KHAZINA_RASED_V WHERE STAT_KHAZINA='TRUE' AND CODE_DT2 = '2' AND KHAZINA_DATE ='" & TXT_DATE.Text & "'")
+
+        Dim TOTAL_ As Double
+
+        For I = 0 To DataGridView2.Rows.Count - 1
+            TOTAL_ = Val(TOTAL_) + Val(DataGridView2.Rows(I).Cells(0).Value)
+        Next
+
+        TXT_MAML_RASED.Text = Val(TOTAL_)
+
+        Dim DT As New DataTable
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM BADR_V WHERE DATE_HAGEZ='" & TXT_DATE.Text & "'", SqlConn)
+        DA.Fill(DT)
+
+        Dim REP As New MALGHE_HAGEZ4
+        REP.SetDataSource(DT)
+        REP.SetParameterValue(0, TXT_MAML_RASED.Text)
+        Dim FRM As New REPFORALL
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
+
+
     End Sub
 End Class

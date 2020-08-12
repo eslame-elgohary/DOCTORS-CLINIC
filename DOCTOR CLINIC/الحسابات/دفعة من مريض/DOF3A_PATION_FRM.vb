@@ -162,6 +162,7 @@
                 DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " دفعة من مريض "
                 DR2!KHAZINA_IN = TXT_MONY.Text
                 DR2!KHAZINA_OUT = "0"
+                DR2!MONY_TYPE = "نقدي"
                 DR2!STAT_KHAZINA = True
                 DT.Rows.Add(DR2)
                 Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
@@ -258,6 +259,8 @@
                 DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " دفعة من مريض "
                 DR2!KHAZINA_IN = TXT_MONY.Text
                 DR2!KHAZINA_OUT = "0"
+                DR2!MONY_TYPE = "نقدي"
+                DR2!STAT_KHAZINA = True
                 DR2!STAT_KHAZINA = True
                 DT.Rows.Add(DR2)
                 Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)

@@ -178,7 +178,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("R1").ToString = True Then
+            If DT0.Rows(0).Item("Q1").ToString = True Then
                 '========= قيود الادخال =======================
                 If TXT_NAME_PA.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -250,7 +250,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("R2").ToString = True Then
+            If DT0.Rows(0).Item("Q2").ToString = True Then
                 '========= قيود الادخال =======================
                 If TXT_NAME_PA.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -328,7 +328,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("R3").ToString = True Then
+            If DT0.Rows(0).Item("Q3").ToString = True Then
                 '========= قيود الادخال =======================
                 If TXT_NAME_PA.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -393,7 +393,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("R4").ToString = True Then
+            If DT0.Rows(0).Item("Q4").ToString = True Then
                 '===========================================================
 
                 Dim DT As New DataTable

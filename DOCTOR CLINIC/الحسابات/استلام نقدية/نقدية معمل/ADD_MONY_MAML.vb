@@ -76,7 +76,7 @@
         BAKY_ = Val(SAFY.Text) - Val(TXT_MONY.Text)
         TXT_BAKY.Text = Val(BAKY_)
 
-        If VAL(TXT_MONY.Text) > 0 Then
+        If Val(TXT_MONY.Text) > 0 Then
 
             SAFY_AR.Text = " دفع " & ARABIC.ConvertToArabic(TXT_MONY.Text) & "  ومتبقي  " & ARABIC.ConvertToArabic(TXT_BAKY.Text)
         Else
@@ -135,6 +135,7 @@
         FILL_PATIENT()
         CALC()
         TXT_TYPEMONY.SelectedIndex = 0
+        TXT_MONY.Text = ""
     End Sub
 
     Private Sub ADD_MONY_MAML_Load(sender As Object, e As EventArgs) Handles MyBase.Load
