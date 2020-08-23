@@ -1,13 +1,12 @@
 ﻿Public Class ZIARA2020
-
     Private Sub BTN_TAKED_Click(sender As Object, e As EventArgs) Handles BTN_TAKED.Click
-        If TXT_TKHASOS_CODE.Text = "" Then
+        If TXT_TKHASOS_CODE.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار العيادة", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_TKHSOS.Select()
             Exit Sub
         End If
 
-        If TXT_DOCTOR_CODE.Text = "" Then
+        If TXT_DOCTOR_CODE.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_DOCTOR.Select()
             Exit Sub
@@ -30,6 +29,7 @@
     Sub FRIST_OPEN()
         P_HAGEZ.Visible = False
         TXT_DATE.Value = Date.Today
+
         P_HAGEZ.Visible = False
         CH_DATE.Visible = True
         CH_DATE.Checked = True
@@ -45,8 +45,8 @@
         Next
     End Sub
     Sub FILL_DOCTOR()
-        TXT_DOCTOR.Text = ""
-        TXT_DOCTOR_CODE.Text = ""
+        TXT_DOCTOR.Text = String.Empty
+        TXT_DOCTOR_CODE.Text = String.Empty
         TXT_DOCTOR.Items.Clear()
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE STAT='TRUE' AND DO_TKHSOS_CODE = '" & TXT_TKHASOS_CODE.Text & "' ", SqlConn)
@@ -89,14 +89,14 @@
         TRQEM_AUTO()
         ACTION_DOCTORS()
         '======================== تنظيف الشاشة ==============================
-        PA_NAME.Text = ""
+        PA_NAME.Text = String.Empty
         PA_NAME.Select()
-        TXT_TEL.Text = ""
-        TXT_ACTION.Text = ""
-        TXT_ACTION_PRIC.Text = ""
-        TXT_ADRRES.Text = ""
-        TXT_FILL.Text = ""
-        TXT_TEL_AQAREP.Text = ""
+        TXT_TEL.Text = String.Empty
+        TXT_ACTION.Text = String.Empty
+        TXT_ACTION_PRIC.Text = String.Empty
+        TXT_ADRRES.Text = String.Empty
+        TXT_FILL.Text = String.Empty
+        TXT_TEL_AQAREP.Text = String.Empty
         '======================================
 
     End Sub
@@ -195,12 +195,12 @@
 
     Private Sub BTN_CHANG_Click(sender As Object, e As EventArgs) Handles BTN_CHANG.Click
         '=====================================================================
-        PA_NAME.Text = ""
-        TXT_TEL.Text = ""
-        TXT_ACTION.Text = ""
-        TXT_ACTION_PRIC.Text = ""
-        TXT_ADRRES.Text = ""
-        TXT_FILL.Text = ""
+        PA_NAME.Text = String.Empty
+        TXT_TEL.Text = String.Empty
+        TXT_ACTION.Text = String.Empty
+        TXT_ACTION_PRIC.Text = String.Empty
+        TXT_ADRRES.Text = String.Empty
+        TXT_FILL.Text = String.Empty
         '============================================================
         EDITBTN.Visible = False
         GroupBox1.Enabled = False
@@ -231,13 +231,13 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
     Private Sub EDITBTN_Click(sender As Object, e As EventArgs) Handles EDITBTN.Click
         '=====================================================================
-        PA_NAME.Text = ""
-        TXT_TEL.Text = ""
-        TXT_ACTION.Text = ""
-        TXT_ACTION_PRIC.Text = ""
-        TXT_ADRRES.Text = ""
-        TXT_FILL.Text = ""
-        TXT_TEL_AQAREP.Text = ""
+        PA_NAME.Text = String.Empty
+        TXT_TEL.Text = String.Empty
+        TXT_ACTION.Text = String.Empty
+        TXT_ACTION_PRIC.Text = String.Empty
+        TXT_ADRRES.Text = String.Empty
+        TXT_FILL.Text = String.Empty
+        TXT_TEL_AQAREP.Text = String.Empty
         '============================================================
         BTN_CHANG.Visible = False
         G_EDIT.Visible = True
@@ -250,16 +250,16 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         SAVEBTN.Visible = False
         ACTION_DOCTORS2()
         '======================== تنظيف الشاشة ==============================
-        PA_NAME2.Text = ""
+        PA_NAME2.Text = String.Empty
         PA_NAME2.Select()
-        TXT_TEL2.Text = ""
-        TXT_ACTION2.Text = ""
-        TXT_ACTION_PRIC2.Text = ""
-        TXT_ADRRES2.Text = ""
-        TXT_FILL2.Text = ""
-        TXT_ID.Text = ""
-        TXT_CODE2.Text = ""
-        TXT_TEL_AQAREP2.Text = ""
+        TXT_TEL2.Text = String.Empty
+        TXT_ACTION2.Text = String.Empty
+        TXT_ACTION_PRIC2.Text = String.Empty
+        TXT_ADRRES2.Text = String.Empty
+        TXT_FILL2.Text = String.Empty
+        TXT_ID.Text = String.Empty
+        TXT_CODE2.Text = String.Empty
+        TXT_TEL_AQAREP2.Text = String.Empty
         PATINT_FILL()
     End Sub
     Sub PATINT_FILL()
@@ -300,18 +300,18 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
     End Sub
 
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
-        If TXT_CODE_PA.Text = "" Then
+
+        If TXT_DATE.Value < Date.Today Then
+            MessageBox.Show("لا يمكن الحجز لمريض بتاريخ سابق")
+            TXT_DATE.Select()
+            Exit Sub
+        End If
+
+        If TXT_CODE_PA.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار أسم المريض ")
             PA_NAME.Select()
             Exit Sub
         End If
-
-        'If TXT_ACTION_PRIC.Text = "" Then
-        '    MessageBox.Show("يرجى أختيار الأجراء المطلوب ")
-        '    TXT_ACTION.Select()
-        '    Exit Sub
-        'End If
-        TRQEM_AUTO()
 
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND DATE_HAGEZ='" & TXT_DATE.Text & "' AND PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
@@ -323,7 +323,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         Else
             If CH_TEL.Checked = False Or CH_TEL_AQAREP.Checked = False Then
                 If MessageBox.Show("هل ترغب فى تعديل رقم الهاتف للمريض", "أنتبة", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then
-
+                    TRQEM_AUTO()
                     Dim DR = DT.NewRow
                     DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
                     DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
@@ -344,6 +344,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                     MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     NEWBTN_Click(sender, e)
                 Else
+                    TRQEM_AUTO()
                     Dim DR = DT.NewRow
                     DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
                     DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
@@ -376,7 +377,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                     NEWBTN_Click(sender, e)
                 End If
             Else
-
+                TRQEM_AUTO()
                 Dim DR = DT.NewRow
                 DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
                 DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
@@ -424,7 +425,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
     End Sub
 
     Private Sub G_EDITBTN_Click(sender As Object, e As EventArgs) Handles G_EDITBTN.Click
-        If TXT_CODE_PA2.Text = "" Then
+        If TXT_CODE_PA2.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار أسم المريض ")
             PA_NAME2.Select()
             Exit Sub
@@ -509,14 +510,14 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         End If
 
         '==================== تنظيف الشاشة =================================
-        PA_NAME2.Text = ""
-        TXT_TEL2.Text = ""
-        TXT_ACTION2.Text = ""
-        TXT_ACTION_PRIC2.Text = ""
-        TXT_ADRRES2.Text = ""
-        TXT_FILL2.Text = ""
-        TXT_ID.Text = ""
-        TXT_CODE2.Text = ""
+        PA_NAME2.Text = String.Empty
+        TXT_TEL2.Text = String.Empty
+        TXT_ACTION2.Text = String.Empty
+        TXT_ACTION_PRIC2.Text = String.Empty
+        TXT_ADRRES2.Text = String.Empty
+        TXT_FILL2.Text = String.Empty
+        TXT_ID.Text = String.Empty
+        TXT_CODE2.Text = String.Empty
         NEWBTN_Click(sender, e)
     End Sub
 
@@ -535,8 +536,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_NAME1.Text = DT.Rows(I).Item("PA_NAME")
             TXT_HAGEZ1_ID.Text = DT.Rows(I).Item("ID")
             TXT_NAME1_CODE.Text = DT.Rows(I).Item("PA_CODE")
-            ' TXT_NAME1_ACTION.Text = DT.Rows(I).Item("ACTION")
-            ' TXT_NAME1_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
+            TXT_NAME1_ACTION.Text = DT.Rows(I).Item("ACTION")
+            TXT_NAME1_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
             TXT_NAME1_ADRRES.Text = DT.Rows(I).Item("ADRRES")
             TXT_NAME1_COLOR.Text = DT.Rows(I).Item("STAT_COLORE")
             TXT_NAME1_INFO.Text = DT.Rows(I).Item("INFO_STAT")
@@ -558,8 +559,8 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_NAME2.Text = DT.Rows(I).Item("PA_NAME")
             TXT_HAGEZ2_ID.Text = DT.Rows(I).Item("ID")
             TXT_NAME2_CODE.Text = DT.Rows(I).Item("PA_CODE")
-            ' TXT_NAME2_ACTION.Text = DT.Rows(I).Item("ACTION")
-            ' TXT_NAME2_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
+            TXT_NAME2_ACTION.Text = DT.Rows(I).Item("ACTION")
+            TXT_NAME2_PRICE.Text = DT.Rows(I).Item("PRICE_ACTION")
             TXT_NAME2_ADRRES.Text = DT.Rows(I).Item("ADRRES")
             TXT_NAME2_COLOR.Text = DT.Rows(I).Item("STAT_COLORE")
             TXT_NAME2_INFO.Text = DT.Rows(I).Item("INFO_STAT")
@@ -568,13 +569,13 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
     Private Sub BTN_XCHANG_Click(sender As Object, e As EventArgs) Handles BTN_XCHANG.Click
 
-        If TXT_HAGEZ1_ID.Text = "" Then
+        If TXT_HAGEZ1_ID.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار أسم المريض ")
             HAGEZ1.Select()
             Exit Sub
         End If
 
-        If TXT_HAGEZ2_ID.Text = "" Then
+        If TXT_HAGEZ2_ID.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار أسم المريض ")
             HAGEZ2.Select()
             Exit Sub
@@ -610,25 +611,25 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         MessageBox.Show("تمت عملية التبديل بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         '============================ تنظيف الشاشة ===============================
-        HAGEZ2.Text = ""
-        TXT_NAME2.Text = ""
-        TXT_HAGEZ2_ID.Text = ""
-        TXT_NAME2_CODE.Text = ""
-        TXT_NAME2_ACTION.Text = ""
-        TXT_NAME2_PRICE.Text = ""
-        TXT_NAME2_ADRRES.Text = ""
-        TXT_NAME2_COLOR.Text = ""
-        TXT_NAME2_INFO.Text = ""
+        HAGEZ2.Text = String.Empty
+        TXT_NAME2.Text = String.Empty
+        TXT_HAGEZ2_ID.Text = String.Empty
+        TXT_NAME2_CODE.Text = String.Empty
+        TXT_NAME2_ACTION.Text = String.Empty
+        TXT_NAME2_PRICE.Text = String.Empty
+        TXT_NAME2_ADRRES.Text = String.Empty
+        TXT_NAME2_COLOR.Text = String.Empty
+        TXT_NAME2_INFO.Text = String.Empty
 
-        HAGEZ1.Text = ""
-        TXT_NAME1.Text = ""
-        TXT_HAGEZ1_ID.Text = ""
-        TXT_NAME1_CODE.Text = ""
-        TXT_NAME1_ACTION.Text = ""
-        TXT_NAME1_PRICE.Text = ""
-        TXT_NAME1_ADRRES.Text = ""
-        TXT_NAME1_COLOR.Text = ""
-        TXT_NAME1_INFO.Text = ""
+        HAGEZ1.Text = String.Empty
+        TXT_NAME1.Text = String.Empty
+        TXT_HAGEZ1_ID.Text = String.Empty
+        TXT_NAME1_CODE.Text = String.Empty
+        TXT_NAME1_ACTION.Text = String.Empty
+        TXT_NAME1_PRICE.Text = String.Empty
+        TXT_NAME1_ADRRES.Text = String.Empty
+        TXT_NAME1_COLOR.Text = String.Empty
+        TXT_NAME1_INFO.Text = String.Empty
 
         NEWBTN_Click(sender, e)
 
@@ -691,14 +692,14 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 TXT_PA_CODE_H.Text = r.Cells.Item(8).Value
             Next
         Else
-            TXT_ID_H.Text = ""
-            TXT_NUM_H.Text = ""
-            TXT_INFO_H_DATAGRID.Text = ""
+            TXT_ID_H.Text = String.Empty
+            TXT_NUM_H.Text = String.Empty
+            TXT_INFO_H_DATAGRID.Text = String.Empty
         End If
     End Sub
 
     Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -722,7 +723,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
     End Sub
 
     Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -766,28 +767,33 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
 
         KARMA = "SELECT        dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) AS count_action, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.HAGEZ.DOCTORS_CODE, 
-                                 dbo.ADD_MONY_DOCTOR.ADD_STAT
-        FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
-                                 dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE INNER JOIN
-                                 dbo.HAGEZ ON dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.HAGEZ.DATE_HAGEZ AND dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = dbo.HAGEZ.DOCTORS_CODE AND 
-                                 dbo.ADD_MONY_DOCTOR.ADD_PA_CODE = dbo.HAGEZ.PA_CODE
-        GROUP BY dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.HAGEZ.DOCTORS_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT
-        HAVING        (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.HAGEZ.DATE_HAGEZ = CONVERT(DATETIME, '" & TXT_DATE.Text & "', 102)) AND (dbo.ADD_MONY_DOCTOR.ADD_STAT='True') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) IS NULL))"
+                                         dbo.ADD_MONY_DOCTOR.ADD_STAT
+                FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
+                                         dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE INNER JOIN
+                                         dbo.HAGEZ ON dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.HAGEZ.DATE_HAGEZ AND dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = dbo.HAGEZ.DOCTORS_CODE AND 
+                                         dbo.ADD_MONY_DOCTOR.ADD_PA_CODE = dbo.HAGEZ.PA_CODE
+                GROUP BY dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.HAGEZ.DOCTORS_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT
+                HAVING        (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.HAGEZ.DATE_HAGEZ = CONVERT(DATETIME, '" & TXT_DATE.Text & "', 102)) AND (dbo.ADD_MONY_DOCTOR.ADD_STAT='True') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) IS NULL))"
 
 
         FILL_DGV(DG2, KARMA)
+        Dim ES As String
+        ES = "SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND ADD_TYPE='أسترداد عيادات' "
+        FILL_DGV(DGES, ES)
 
         Dim KARMA3 As String
         KARMA3 = "SELECT      dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, COUNT(dbo.HAGEZ.STAT_COLORE) AS COLOR, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
-FROM            dbo.HAGEZ INNER JOIN
-                         dbo.HAGEZ_COLOR ON dbo.HAGEZ.STAT_COLORE = dbo.HAGEZ_COLOR.COLOR
-GROUP BY dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
-HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "')"
+        FROM            dbo.HAGEZ INNER JOIN
+                                 dbo.HAGEZ_COLOR ON dbo.HAGEZ.STAT_COLORE = dbo.HAGEZ_COLOR.COLOR
+        GROUP BY dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ_COLOR.NAME
+        HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_HAGEZ = '" & TXT_DATE.Text & "') AND (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "')"
         FILL_DGV(DG3, KARMA3)
+
+
     End Sub
 
     Private Sub Label27_Click(sender As Object, e As EventArgs) Handles Label27.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -823,7 +829,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
     End Sub
 
     Private Sub Label28_Click(sender As Object, e As EventArgs) Handles Label28.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -849,7 +855,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
     End Sub
 
     Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -865,7 +871,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
                 DA.Fill(DT)
                 Dim DR = DT.Rows(0)
                 DR!STAT_COLORE = "0"
-                DR!ACTION = ""
+                DR!ACTION = String.Empty
 
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
@@ -876,10 +882,10 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
-        ElseIf TXT_CALL_WITH.Text = "" Then
+        ElseIf TXT_CALL_WITH.Text = String.Empty Then
             MessageBox.Show("يرجى كتابة ما تم اثناء الاتصال", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_CALL_WITH.Select()
             Exit Sub
@@ -896,13 +902,13 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
                 REFRESH_BTN_Click(sender, e)
-                TXT_CALL_WITH.Text = ""
+                TXT_CALL_WITH.Text = String.Empty
             End If
         End If
     End Sub
 
     Private Sub Label26_Click(sender As Object, e As EventArgs) Handles Label26.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -935,13 +941,13 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
 
     Private Sub PRINT_BTN_Click(sender As Object, e As EventArgs) Handles PRINT_BTN.Click
 
-        If TXT_PRINT.Text = "" Then
+        If TXT_PRINT.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المطلوب طباعتة", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_PRINT.Select()
             Exit Sub
         ElseIf TXT_PRINT.SelectedIndex = 0 Then
 
-            If TXT_DOCTOR_CODE.Text = "" Then
+            If TXT_DOCTOR_CODE.Text = String.Empty Then
                 MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
             End If
@@ -975,7 +981,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
 
         ElseIf TXT_PRINT.SelectedIndex = 2 Then
 
-            If TXT_DOCTOR_CODE.Text = "" Then
+            If TXT_DOCTOR_CODE.Text = String.Empty Then
                 MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
             End If
@@ -995,7 +1001,7 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
 
         ElseIf TXT_PRINT.SelectedIndex = 3 Then
 
-            If TXT_DOCTOR_CODE.Text = "" Then
+            If TXT_DOCTOR_CODE.Text = String.Empty Then
                 MessageBox.Show("يرجى أختيار الطبيب ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Exit Sub
             End If
@@ -1018,10 +1024,11 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
     Private Sub TXT_DATE_ValueChanged(sender As Object, e As EventArgs) Handles TXT_DATE.ValueChanged
         DATE_NAME.Text = TXT_DATE.Text
         DATE_NAME_P3.Text = TXT_DATE.Text
+        P_HAGEZ.Visible = False
     End Sub
 
     Private Sub BTN_CALL_COUNT_Click(sender As Object, e As EventArgs) Handles BTN_CALL_COUNT.Click
-        If TXT_ID_H.Text = "" Then
+        If TXT_ID_H.Text = String.Empty Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
@@ -1053,28 +1060,61 @@ HAVING        (NOT (COUNT(dbo.HAGEZ.STAT_COLORE) IS NULL)) AND (dbo.HAGEZ.DATE_H
     End Sub
 
     Private Sub BTN_PRINT_END_DAY_Click(sender As Object, e As EventArgs) Handles BTN_PRINT_END_DAY.Click
+        Dim DTPAS As New DataTable
+        Dim DAPASS As New SqlClient.SqlDataAdapter("SELECT * FROM ESS ", SqlConn)
+        DAPASS.Fill(DTPAS)
+        Dim DRPASS = DTPAS.Rows(0)
+        TXT_PASS2.Text = DRPASS!PASS
 
-        FILL_DGV(DataGridView2, "SELECT * FROM KHAZINA_RASED_V WHERE STAT_KHAZINA='TRUE' AND CODE_DT2 = '2' AND KHAZINA_DATE ='" & TXT_DATE.Text & "'")
+        If TXT_PASS2.Text = TXT_PASS.Text Then
+            FILL_DGV(DataGridView2, "SELECT * FROM KHAZINA_RASED_V WHERE STAT_KHAZINA='TRUE' AND CODE_DT2 = '2' AND KHAZINA_DATE ='" & TXT_DATE.Text & "'")
 
-        Dim TOTAL_ As Double
+            Dim TOTAL_ As Double
 
-        For I = 0 To DataGridView2.Rows.Count - 1
-            TOTAL_ = Val(TOTAL_) + Val(DataGridView2.Rows(I).Cells(0).Value)
-        Next
+            For I = 0 To DataGridView2.Rows.Count - 1
+                TOTAL_ = Val(TOTAL_) + Val(DataGridView2.Rows(I).Cells(0).Value)
+            Next
+            TXT_MAML_RASED.Text = Val(TOTAL_)
 
-        TXT_MAML_RASED.Text = Val(TOTAL_)
+            TOTAL_MAML.Text = Val(TXT_MAML_RASED.Text)
 
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM BADR_V WHERE DATE_HAGEZ='" & TXT_DATE.Text & "'", SqlConn)
-        DA.Fill(DT)
+            FILL_DGV(DataGridView3, "SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "'")
 
-        Dim REP As New MALGHE_HAGEZ4
-        REP.SetDataSource(DT)
-        REP.SetParameterValue(0, TXT_MAML_RASED.Text)
-        Dim FRM As New REPFORALL
-        FRM.CrystalReportViewer1.ReportSource = REP
-        FRM.ShowDialog()
+            Dim TOTAL2_ As Double
 
+            For I2 = 0 To DataGridView3.Rows.Count - 1
+                TOTAL2_ = Val(TOTAL2_) + Val(DataGridView3.Rows(I2).Cells(1).Value)
+            Next
+
+            TXT_MASROUF_RASED.Text = Val(TOTAL2_)
+
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM BADR_V WHERE DATE_HAGEZ='" & TXT_DATE.Text & "'AND ADD_STAT = 'TRUE'", SqlConn)
+            DA.Fill(DT)
+
+            Dim DT1 As New DataTable
+            Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "'", SqlConn)
+            DA1.Fill(DT1)
+
+            Dim DT2 As New DataTable
+            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM estr WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_TYPE='أسترداد عيادات'", SqlConn)
+            DA2.Fill(DT2)
+
+            Dim REP1 As New MALGHE_HAGEZ4
+            REP1.SetDataSource(DT)
+            REP1.Subreports(0).SetDataSource(DT1)
+            REP1.Subreports(1).SetDataSource(DT2)
+            REP1.SetParameterValue(0, TOTAL_MAML.Text)
+            REP1.SetParameterValue(1, TXT_MASROUF_RASED.Text)
+
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP1
+            FRM.ShowDialog()
+            TXT_PASS.Text = ""
+        Else
+            MessageBox.Show("من فضلك أدخل الرقم السري بشكل صحيح لعرض التقرير")
+            TXT_PASS.Select()
+        End If
 
     End Sub
 End Class

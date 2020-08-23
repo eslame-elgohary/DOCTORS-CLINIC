@@ -95,6 +95,8 @@
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("اسم الخزينة موجود مسبقا", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
+                    TXT_CODE.Text = CODE_GENE("KHAZINA", "ID") + 1
+
                     Dim DR = DT.NewRow
                     DR!KHAZINA_CODE = TXT_CODE.Text
                     DR!KHAZINA_NAME = TXT_NAME.Text

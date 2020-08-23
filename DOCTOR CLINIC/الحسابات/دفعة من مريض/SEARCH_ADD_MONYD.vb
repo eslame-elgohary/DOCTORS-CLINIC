@@ -1,6 +1,6 @@
 ﻿Public Class SEARCH_ADD_MONYD
     Private Sub SEARCH_ADD_MONYD_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FILL_DGV(DataGridView1, "SELECT * FROM DOF3AT_PATIONT WHERE STAT='TRUE' AND ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' ORDER BY ID DESC")
+        FILL_DGV(DataGridView1, "SELECT * FROM  DOF3AT_PATION_V WHERE ADD_STAT='TRUE'AND ADD_TYPE='دفعات' AND ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' ORDER BY ID DESC")
         K1.SelectedIndex = 1
         DATE_START.Value = Date.Today
         DATE_END.Value = Date.Today
@@ -23,7 +23,7 @@
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter
             DT.Clear()
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM DOF3AT_PATIONT WHERE STAT='TRUE' AND  ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' AND ADD_CODE LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM  DOF3AT_PATION_V WHERE ADD_STAT='TRUE'AND ADD_TYPE='دفعات' AND  ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' AND ADD_CODE LIKE '%" & TextBox1.Text & "%'", SqlConn)
             DA.Fill(DT)
             DataGridView1.DataSource = DT.DefaultView
         End If
@@ -31,13 +31,13 @@
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter
             DT.Clear()
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM DOF3AT_PATIONT WHERE STAT='TRUE'  AND ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' AND PA_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM  DOF3AT_PATION_V WHERE ADD_STAT='TRUE'AND ADD_TYPE='دفعات' AND ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' AND PA_NAME LIKE '%" & TextBox1.Text & "%'", SqlConn)
             DA.Fill(DT)
             DataGridView1.DataSource = DT.DefaultView
         End If
     End Sub
 
     Private Sub ADD_DATE_VAL_Click(sender As Object, e As EventArgs) Handles ADD_DATE_VAL.Click
-        FILL_DGV(DataGridView1, "SELECT * FROM DOF3AT_PATIONT WHERE STAT='TRUE' AND ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' ORDER BY ID DESC")
+        FILL_DGV(DataGridView1, "SELECT * FROM DOF3AT_PATION_V WHERE ADD_STAT='TRUE'AND ADD_TYPE='دفعات' AND ADD_DATE > = '" & DATE_START.Text & "' AND ADD_DATE < = '" & DATE_END.Text & "' ORDER BY ID DESC")
     End Sub
 End Class

@@ -176,6 +176,9 @@
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("يوجد أيصال أخر لهذا المصروف اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Else
+                    '""""""""""""""" الترقيم التلقائي """"""""""""""
+                    TXT_CODE.Text = CODE_GENE("OUT_MASROUF", "ID") + 1
+                    '""""""""""""""""""""""""""""""
                     Dim DR = DT.NewRow
                     DR!OUT_CODE = TXT_CODE.Text
                     DR!OUT_DATE = TXT_DATE.Text

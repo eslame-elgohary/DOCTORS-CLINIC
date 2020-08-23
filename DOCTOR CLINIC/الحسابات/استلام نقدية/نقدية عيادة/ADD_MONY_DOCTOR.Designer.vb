@@ -139,6 +139,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.PRINTBTN.Size = New System.Drawing.Size(96, 44)
         Me.PRINTBTN.TabIndex = 6
         Me.PRINTBTN.Text = "طباعة"
+        Me.PRINTBTN.Visible = False
         '
         'UNDOBTN
         '
@@ -152,6 +153,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.UNDOBTN.Size = New System.Drawing.Size(106, 44)
         Me.UNDOBTN.TabIndex = 5
         Me.UNDOBTN.Text = "الأرشيف"
+        Me.UNDOBTN.Visible = False
         '
         'SEARCHBTN
         '
@@ -163,6 +165,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.SEARCHBTN.Size = New System.Drawing.Size(96, 44)
         Me.SEARCHBTN.TabIndex = 4
         Me.SEARCHBTN.Text = "بحث"
+        Me.SEARCHBTN.Visible = False
         '
         'DELETBTN
         '
@@ -176,6 +179,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.DELETBTN.Size = New System.Drawing.Size(96, 44)
         Me.DELETBTN.TabIndex = 3
         Me.DELETBTN.Text = "حذف"
+        Me.DELETBTN.Visible = False
         '
         'EDITBTN
         '
@@ -189,6 +193,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.EDITBTN.Size = New System.Drawing.Size(96, 44)
         Me.EDITBTN.TabIndex = 2
         Me.EDITBTN.Text = "تعديل"
+        Me.EDITBTN.Visible = False
         '
         'SAVEBTN
         '

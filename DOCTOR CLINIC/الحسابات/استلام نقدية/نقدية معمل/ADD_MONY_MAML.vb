@@ -190,6 +190,9 @@
                         MessageBox.Show("يوجد أيصال أخر لهذا المريض اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Exit Sub
                     Else
+                        '""""""""""""""" الترقيم التلقائي """"""""""""""
+                        TXT_CODE.Text = CODE_GENE("ADD_MONY_MAML", "ID") + 1
+                        '""""""""""""""""""""""""""""""
                         Dim DR = DT.NewRow
                         DR!ADD_CODE = TXT_CODE.Text
                         DR!ADD_CODE2 = TXT_CODE2.Text

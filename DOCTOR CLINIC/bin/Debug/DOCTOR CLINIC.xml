@@ -182,6 +182,136 @@ DOCTOR CLINIC
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:DOCTOR_CLINIC.masrouf_v">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_v.MASROUF_DT_VDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_v.MASROUF_DT_VRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_v.MASROUF_DT_VRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_vTableAdapters.MASROUF_DT_VTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.UpdateUpdatedRows(DOCTOR_CLINIC.masrouf_v,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.UpdateInsertedRows(DOCTOR_CLINIC.masrouf_v,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.UpdateDeletedRows(DOCTOR_CLINIC.masrouf_v,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.UpdateAll(DOCTOR_CLINIC.masrouf_v)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.masrouf_vTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOC">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOC.MASROUF_DT2_VDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOC.MASROUF_DT2_VRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOC.MASROUF_DT2_VRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.MASROUF_DT2_VTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.UpdateUpdatedRows(DOCTOR_CLINIC.MASROUF2DOC,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.UpdateInsertedRows(DOCTOR_CLINIC.MASROUF2DOC,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.UpdateDeletedRows(DOCTOR_CLINIC.MASROUF2DOC,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.UpdateAll(DOCTOR_CLINIC.MASROUF2DOC)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.MASROUF2DOCTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:DOCTOR_CLINIC.ALL_MONY">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -243,6 +373,71 @@ Update Order Option
 </summary>
 </member>
 <member name="T:DOCTOR_CLINIC.ALL_MONYTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdad">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdad.estrDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdad.estrRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdad.estrRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdadTableAdapters.estrTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.UpdateUpdatedRows(DOCTOR_CLINIC.estrdad,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.UpdateInsertedRows(DOCTOR_CLINIC.estrdad,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.UpdateDeletedRows(DOCTOR_CLINIC.estrdad,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.UpdateAll(DOCTOR_CLINIC.estrdad)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:DOCTOR_CLINIC.estrdadTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

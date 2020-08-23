@@ -9,26 +9,45 @@
     End Sub
 
     Private Sub BTN_PRENT_Click(sender As Object, e As EventArgs) Handles BTN_PRENT.Click
-        If TXT_CODE.Text = "" Then
-            MessageBox.Show("يرجى ادخال اسم المريض", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            TXT_NAME.Select()
-            Exit Sub
+        If CH_PA.Checked = True Then
+
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New RASED_PATION_CRS
+            REP.SetDataSource(DT)
+
+            REP.SetParameterValue(0, START_DATE.Text)
+            REP.SetParameterValue(1, END_DATE.Text)
+
+
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
+
+        Else
+
+            If TXT_CODE.Text = "" Then
+                MessageBox.Show("يرجى ادخال اسم المريض", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                TXT_NAME.Select()
+                Exit Sub
+            End If
+            '========================================================================
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE PA_CODE = '" & TXT_CODE.Text & "' and ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
+            DA.Fill(DT)
+
+            Dim REP As New RASED_PATION_CRS
+            REP.SetDataSource(DT)
+            REP.SetParameterValue(0, START_DATE.Text)
+            REP.SetParameterValue(1, END_DATE.Text)
+
+
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
         End If
-        '========================================================================
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE PA_CODE = '" & TXT_CODE.Text & "' and ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
-        DA.Fill(DT)
-
-        Dim REP As New RASED_PATION_CRS
-        REP.SetDataSource(DT)
-        REP.SetParameterValue(2, TXT_NAME.Text)
-        REP.SetParameterValue(0, START_DATE.Text)
-        REP.SetParameterValue(1, END_DATE.Text)
-
-
-        Dim FRM As New REPFORALL
-        FRM.CrystalReportViewer1.ReportSource = REP
-        FRM.ShowDialog()
 
     End Sub
 
@@ -42,5 +61,15 @@
         For I = 0 To DT.Rows.Count - 1
             TXT_CODE.Text = DT.Rows(I).Item("PA_CODE")
         Next
+    End Sub
+
+    Private Sub CH_PA_CheckedChanged(sender As Object, e As EventArgs) Handles CH_PA.CheckedChanged
+        If CH_PA.Checked = False Then
+            TXT_NAME.Enabled = True
+        Else
+            TXT_NAME.Enabled = False
+            TXT_NAME.Text = ""
+            TXT_CODE.Text = ""
+        End If
     End Sub
 End Class

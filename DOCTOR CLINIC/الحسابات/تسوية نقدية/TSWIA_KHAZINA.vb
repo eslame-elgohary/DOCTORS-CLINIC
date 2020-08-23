@@ -139,6 +139,9 @@
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("يوجد تسوية أخر بنفس اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
+                    '""""""""""""""" الترقيم التلقائي """"""""""""""
+                    TXT_CODE.Text = CODE_GENE("INKHAZINA", "ID") + 1
+                    '""""""""""""""""""""""""""""""
                     Dim DR = DT.NewRow
                     DR!INCODE = TXT_CODE.Text
                     DR!INDATE = TXT_DATE.Text

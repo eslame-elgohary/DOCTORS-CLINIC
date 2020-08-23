@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP30\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP35\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>48</ApplicationRevision>
+    <ApplicationRevision>55</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -181,6 +181,35 @@
     <Compile Include="LARBI\test.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="أتعاب طبيب\ATAB_DOCTORS.Designer.vb">
+      <DependentUpon>ATAB_DOCTORS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="أتعاب طبيب\ATAB_DOCTORS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.Designer.vb">
+      <DependentUpon>SEARCH_ATAB_DOCTORS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\MASROUF_REP.Designer.vb">
+      <DependentUpon>MASROUF_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\MASROUF_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\MASROUF_REP_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MASROUF_REP_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\masrouf_v.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masrouf_v.xsd</DependentUpon>
+    </Compile>
     <Compile Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,6 +234,29 @@
     <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP.Designer.vb">
+      <DependentUpon>ATABDOC_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP_CRS2.vb">
+      <DependentUpon>ATABDOC_REP_CRS2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP_CRS.vb">
+      <DependentUpon>ATABDOC_REP_CRS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="التقارير\تقرير اتعاب طبيب\MASROUF2DOC.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MASROUF2DOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="الحجز و الزيارة\2020hagez.Designer.vb">
       <DependentUpon>2020hagez.vb</DependentUpon>
     </Compile>
@@ -215,6 +267,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\estrdad.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>estrdad.xsd</DependentUpon>
     </Compile>
     <Compile Include="الحجز و الزيارة\HAGEZ_DT.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -261,6 +318,18 @@
     </Compile>
     <Compile Include="الحجز\Form2.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.Designer.vb">
+      <DependentUpon>ADD_MONY2_DOCTOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_REP.vb">
+      <DependentUpon>ADD_MONY2_REP.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.Designer.vb">
       <DependentUpon>HAGEZ_ZIARA.vb</DependentUpon>
@@ -348,7 +417,7 @@
     <Compile Include="التقارير\lap to lap\LABTOLAB_V.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التقارير\الخزينة\KHAZINA_CRS.vb">
+    <Compile Include="التقارير\المصروفات\KHAZINA_CRS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KHAZINA_CRS.rpt</DependentUpon>
@@ -1134,6 +1203,12 @@
     <EmbeddedResource Include="ROWHA.resx">
       <DependentUpon>ROWHA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="أتعاب طبيب\ATAB_DOCTORS.resx">
+      <DependentUpon>ATAB_DOCTORS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.resx">
+      <DependentUpon>SEARCH_ATAB_DOCTORS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>IMGT3AQOD_CRS.vb</LastGenOutput>
@@ -1154,12 +1229,30 @@
     <EmbeddedResource Include="التقارير\lap to lap\LABTOLAB_V.resx">
       <DependentUpon>LABTOLAB_V.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التقارير\الخزينة\KHAZINA_CRS.rpt">
+    <EmbeddedResource Include="التقارير\المصروفات\KHAZINA_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>KHAZINA_CRS.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\الخزينة\REPORT_KHAZINAFRM.resx">
       <DependentUpon>REPORT_KHAZINAFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\المصروفات\MASROUF_REP.resx">
+      <DependentUpon>MASROUF_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\المصروفات\MASROUF_REP_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MASROUF_REP_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP.resx">
+      <DependentUpon>ATABDOC_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP_CRS2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ATABDOC_REP_CRS2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ATABDOC_REP_CRS.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\تقرير المرضي\PATIENT_CRS_ALL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1217,6 +1310,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="الحجز\HAGEZ_REP.resx">
       <DependentUpon>HAGEZ_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.resx">
+      <DependentUpon>ADD_MONY2_DOCTOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_REP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ADD_MONY2_REP.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\LASTCOMEFRM.resx">
       <DependentUpon>LASTCOMEFRM.vb</DependentUpon>
@@ -1573,6 +1673,28 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="التقارير\المصروفات\masrouf_v.xsc">
+      <DependentUpon>masrouf_v.xsd</DependentUpon>
+    </None>
+    <None Include="التقارير\المصروفات\masrouf_v.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masrouf_v.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="التقارير\المصروفات\masrouf_v.xss">
+      <DependentUpon>masrouf_v.xsd</DependentUpon>
+    </None>
+    <None Include="التقارير\تقرير اتعاب طبيب\MASROUF2DOC.xsc">
+      <DependentUpon>MASROUF2DOC.xsd</DependentUpon>
+    </None>
+    <None Include="التقارير\تقرير اتعاب طبيب\MASROUF2DOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MASROUF2DOC.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="التقارير\تقرير اتعاب طبيب\MASROUF2DOC.xss">
+      <DependentUpon>MASROUF2DOC.xsd</DependentUpon>
+    </None>
     <None Include="الحجز و الزيارة\ALL_MONY.xsc">
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
     </None>
@@ -1583,6 +1705,17 @@
     </None>
     <None Include="الحجز و الزيارة\ALL_MONY.xss">
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
+    </None>
+    <None Include="الحجز و الزيارة\estrdad.xsc">
+      <DependentUpon>estrdad.xsd</DependentUpon>
+    </None>
+    <None Include="الحجز و الزيارة\estrdad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>estrdad.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحجز و الزيارة\estrdad.xss">
+      <DependentUpon>estrdad.xsd</DependentUpon>
     </None>
     <None Include="الحجز و الزيارة\HAGEZ_DT.xsc">
       <DependentUpon>HAGEZ_DT.xsd</DependentUpon>
@@ -1740,6 +1873,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
@@ -1796,6 +1930,7 @@
   <ItemGroup>
     <Folder Include="التعاقدات\تقرير مطالبة\" />
     <Folder Include="التعاقدات\نقدية مطالبة\" />
+    <Folder Include="التقارير\الارباح و الخسائر\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

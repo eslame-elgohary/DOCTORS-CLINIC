@@ -131,6 +131,7 @@
         Dim DT As New DataTable
         Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM INFERTILITY_FOLLOWUP", SqlConn)
         DA.Fill(DT)
+        TXT_CODE.Text = CODE_GENE("INFERTILITY_FOLLOWUP", "ID") + 1
         Dim DR = DT.NewRow
         DR!CODE_INFER_FOLLOW = TXT_CODE.Text
         DR!CODE_PA_PERSONAL_INFERTILITY = TXT_PA_CODE.Text

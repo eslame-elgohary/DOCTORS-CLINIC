@@ -104,8 +104,8 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim cmd As New SqlClient.SqlCommand()
         cmd.Connection = SqlConn
-        For i As Integer = 2 To 10000
-            cmd.CommandText = "insert into test (code,name) values(" & i & "," & (New Random).NextDouble & ")"
+        For i As Integer = 1 To 7448
+            cmd.CommandText = "insert into PATIENT (ID) values(" & i & "," & (New Random).NextDouble & ")"
             cmd.ExecuteNonQuery()
         Next
         MsgBox("termine")

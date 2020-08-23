@@ -320,7 +320,7 @@ Partial Class ENGABFRM
         '
         'ADD_TEST_BTN
         '
-        Me.ADD_TEST_BTN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ADD_TEST_BTN.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.ADD_TEST_BTN.Appearance.Options.UseFont = True
         Me.ADD_TEST_BTN.ImageOptions.Image = CType(resources.GetObject("ADD_TEST_BTN.ImageOptions.Image"), System.Drawing.Image)
         Me.ADD_TEST_BTN.Location = New System.Drawing.Point(1138, 10)
@@ -365,7 +365,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_Hystroscopy
         '
-        Me.BTN_ADD_Hystroscopy.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_Hystroscopy.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_Hystroscopy.Appearance.Options.UseFont = True
         Me.BTN_ADD_Hystroscopy.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_Hystroscopy.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_Hystroscopy.Location = New System.Drawing.Point(541, 22)
@@ -493,7 +493,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_HSG
         '
-        Me.BTN_ADD_HSG.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_HSG.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_HSG.Appearance.Options.UseFont = True
         Me.BTN_ADD_HSG.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_HSG.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_HSG.Location = New System.Drawing.Point(541, 22)
@@ -623,7 +623,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_LAPAROSCOPY
         '
-        Me.BTN_ADD_LAPAROSCOPY.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_LAPAROSCOPY.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_LAPAROSCOPY.Appearance.Options.UseFont = True
         Me.BTN_ADD_LAPAROSCOPY.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_LAPAROSCOPY.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_LAPAROSCOPY.Location = New System.Drawing.Point(514, 17)
@@ -778,7 +778,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_4D
         '
-        Me.BTN_ADD_4D.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_4D.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_4D.Appearance.Options.UseFont = True
         Me.BTN_ADD_4D.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_4D.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_4D.Location = New System.Drawing.Point(514, 29)
@@ -945,7 +945,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_HIRSUTISM
         '
-        Me.BTN_F_ADD_HIRSUTISM.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_HIRSUTISM.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_HIRSUTISM.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_HIRSUTISM.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_HIRSUTISM.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_HIRSUTISM.Location = New System.Drawing.Point(537, 20)
@@ -979,7 +979,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_IUI
         '
-        Me.BTN_F_ADD_IUI.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_IUI.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_IUI.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_IUI.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_IUI.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_IUI.Location = New System.Drawing.Point(510, 20)
@@ -1013,7 +1013,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_VAGINAL
         '
-        Me.BTN_F_ADD_VAGINAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_VAGINAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_VAGINAL.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_VAGINAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_VAGINAL.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_VAGINAL.Location = New System.Drawing.Point(537, 19)
@@ -1047,7 +1047,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_WEIGHT
         '
-        Me.BTN_F_ADD_WEIGHT.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_WEIGHT.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_WEIGHT.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_WEIGHT.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_WEIGHT.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_WEIGHT.Location = New System.Drawing.Point(509, 20)
@@ -1081,7 +1081,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_CONTRACEPTION
         '
-        Me.BTN_F_ADD_CONTRACEPTION.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_CONTRACEPTION.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_CONTRACEPTION.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_CONTRACEPTION.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_CONTRACEPTION.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_CONTRACEPTION.Location = New System.Drawing.Point(509, 19)
@@ -1115,7 +1115,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_MENSTRUAL
         '
-        Me.BTN_F_ADD_MENSTRUAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_MENSTRUAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_MENSTRUAL.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_MENSTRUAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_MENSTRUAL.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_MENSTRUAL.Location = New System.Drawing.Point(509, 20)
@@ -1149,7 +1149,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_OBSTETRIC
         '
-        Me.BTN_F_ADD_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_OBSTETRIC.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_OBSTETRIC.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_OBSTETRIC.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_OBSTETRIC.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_OBSTETRIC.Location = New System.Drawing.Point(537, 18)
@@ -1183,7 +1183,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_FAMILY
         '
-        Me.BTN_F_ADD_FAMILY.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_FAMILY.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_FAMILY.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_FAMILY.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_FAMILY.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_FAMILY.Location = New System.Drawing.Point(537, 18)
@@ -1217,7 +1217,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_MEDICAL
         '
-        Me.BTN_F_ADD_MEDICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_MEDICAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_MEDICAL.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_MEDICAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_MEDICAL.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_MEDICAL.Location = New System.Drawing.Point(537, 18)
@@ -1263,7 +1263,7 @@ Partial Class ENGABFRM
         '
         'BTN_F_ADD_SURGICAL
         '
-        Me.BTN_F_ADD_SURGICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_F_ADD_SURGICAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_F_ADD_SURGICAL.Appearance.Options.UseFont = True
         Me.BTN_F_ADD_SURGICAL.ImageOptions.Image = CType(resources.GetObject("BTN_F_ADD_SURGICAL.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_F_ADD_SURGICAL.Location = New System.Drawing.Point(509, 18)
@@ -1344,7 +1344,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_M_SEMAN
         '
-        Me.BTN_ADD_M_SEMAN.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_SEMAN.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_M_SEMAN.Appearance.Options.UseFont = True
         Me.BTN_ADD_M_SEMAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SEMAN.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_M_SEMAN.Location = New System.Drawing.Point(1118, 14)
@@ -1459,7 +1459,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_M_SURGICAL
         '
-        Me.BTN_ADD_M_SURGICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_SURGICAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_M_SURGICAL.Appearance.Options.UseFont = True
         Me.BTN_ADD_M_SURGICAL.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_SURGICAL.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_M_SURGICAL.Location = New System.Drawing.Point(523, 22)
@@ -1493,7 +1493,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_M_MEDICAL
         '
-        Me.BTN_ADD_M_MEDICAL.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_MEDICAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_M_MEDICAL.Appearance.Options.UseFont = True
         Me.BTN_ADD_M_MEDICAL.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_MEDICAL.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_M_MEDICAL.Location = New System.Drawing.Point(535, 18)
@@ -1527,7 +1527,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_M_DOPLER
         '
-        Me.BTN_ADD_M_DOPLER.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_M_DOPLER.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_M_DOPLER.Appearance.Options.UseFont = True
         Me.BTN_ADD_M_DOPLER.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_M_DOPLER.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_M_DOPLER.Location = New System.Drawing.Point(535, 19)
@@ -2073,7 +2073,7 @@ Partial Class ENGABFRM
         '
         'BTN_ADD_PLAN
         '
-        Me.BTN_ADD_PLAN.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_ADD_PLAN.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.BTN_ADD_PLAN.Appearance.Options.UseFont = True
         Me.BTN_ADD_PLAN.ImageOptions.Image = CType(resources.GetObject("BTN_ADD_PLAN.ImageOptions.Image"), System.Drawing.Image)
         Me.BTN_ADD_PLAN.Location = New System.Drawing.Point(1146, 11)
@@ -2309,7 +2309,7 @@ Partial Class ENGABFRM
         '
         'BTN_BABY
         '
-        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTN_BABY.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTN_BABY.Appearance.ForeColor = System.Drawing.Color.OrangeRed
         Me.BTN_BABY.Appearance.Options.UseFont = True
         Me.BTN_BABY.Appearance.Options.UseForeColor = True

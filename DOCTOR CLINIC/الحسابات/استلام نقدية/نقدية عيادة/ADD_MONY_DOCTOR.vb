@@ -398,13 +398,20 @@
                     Next
                 End If
 
+
+
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
+
                 Dim DT As New DataTable
-                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR ", SqlConn)
                 DA.Fill(DT)
 
+                '""""""""""""""" الترقيم التلقائي """"""""""""""
+                TXT_CODE.Text = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
+                '""""""""""""""""""""""""""""""
+
                 Dim DR = DT.NewRow
-                DR!ADD_CODE = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
+                DR!ADD_CODE = TXT_CODE.Text
                 DR!ADD_DATE = TXT_DATE.Text
                 DR!ADD_TYPE = "العيادات"
                 DR!CODE_KHAZINA = KHAZINA_CODE.Text

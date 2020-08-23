@@ -197,6 +197,9 @@
                 If DT.Rows.Count > 0 Then
                     TXT_CODE.Text = Val(TXT_CODE.Text) + 1
                 Else
+                    '""""""""""""""" الترقيم التلقائي """"""""""""""
+                    TXT_CODE.Text = CODE_GENE("R_T_DOCTOR", "ID") + 1
+                    '""""""""""""""""""""""""""""""
                     Dim DR = DT.NewRow
                     DR!R_T_CODE = TXT_CODE.Text
                     DR!R_T_DATE = TXT_DATE.Text

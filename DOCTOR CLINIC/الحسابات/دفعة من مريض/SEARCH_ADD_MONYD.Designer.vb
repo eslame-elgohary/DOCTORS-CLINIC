@@ -101,7 +101,7 @@ Partial Class SEARCH_ADD_MONYD
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(321, 19)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 21)
+        Me.Label2.Size = New System.Drawing.Size(45, 21)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "حتي :"
         '
@@ -110,7 +110,7 @@ Partial Class SEARCH_ADD_MONYD
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(21, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 21)
+        Me.Label1.Size = New System.Drawing.Size(78, 21)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "الفترة من :"
         '
@@ -139,7 +139,7 @@ Partial Class SEARCH_ADD_MONYD
         '
         'Column5
         '
-        Me.Column5.DataPropertyName = "SAFY_MAML"
+        Me.Column5.DataPropertyName = "ADD_SAFY"
         Me.Column5.FillWeight = 60.0!
         Me.Column5.HeaderText = "المبلغ"
         Me.Column5.Name = "Column5"

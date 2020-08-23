@@ -224,6 +224,9 @@
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("يوجد تحويل أخر بنفس اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
+                    '""""""""""""""" الترقيم التلقائي """"""""""""""
+                    TXT_CODE.Text = CODE_GENE("CONVERT_KHAZINA", "ID") + 1
+                    '""""""""""""""""""""""""""""""
                     Dim DR = DT.NewRow
                     DR!CON_CODE = TXT_CODE.Text
                     DR!CON_DATE = TXT_DATE.Text

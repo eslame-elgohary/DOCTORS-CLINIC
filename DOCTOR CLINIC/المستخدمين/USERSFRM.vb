@@ -67,6 +67,7 @@
                 If DT.Rows.Count > 0 Then
                     MessageBox.Show("اسم المستخدم موجود مسبقا", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
+                    TXT_CODE.Text = CODE_GENE("ESLAME", "ID") + 1
                     Dim DR = DT.NewRow
                     DR!CODE_USER = TXT_CODE.Text
                     DR!NAME_USER = TXT_USER.Text

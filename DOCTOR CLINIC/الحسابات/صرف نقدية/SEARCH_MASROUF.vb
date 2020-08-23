@@ -1,6 +1,6 @@
 ﻿Public Class SEARCH_MASROUF
     Private Sub SEARCH_MASROUF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FILL_DGV(DataGridView1, "SELECT * FROM OUT_MASROUF WHERE OUT_STAT = 'TRUE' ORDER BY ID DESC")
+        FILL_DGV(DataGridView1, "SELECT * FROM OUT_MASROUF WHERE OUT_STAT = 'TRUE'AND OUT_TYPE = 'مصروفات' ORDER BY ID DESC")
         SELECTORDER.SelectedIndex = 0
         TextBox1.Select()
     End Sub
@@ -22,7 +22,7 @@
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter
             DT.Clear()
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM OUT_MASROUF WHERE OUT_CODE LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM OUT_MASROUF WHERE OUT_STAT = 'TRUE'AND OUT_TYPE = 'مصروفات' AND OUT_CODE LIKE '%" & TextBox1.Text & "%'", SqlConn)
             DA.Fill(DT)
             DataGridView1.DataSource = DT.DefaultView
         End If
@@ -30,7 +30,7 @@
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter
             DT.Clear()
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM OUT_MASROUF WHERE OUT_TYPE LIKE '%" & TextBox1.Text & "%'", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM OUT_MASROUF WHERE OUT_STAT = 'TRUE'AND OUT_TYPE = 'مصروفات' AND OUT_TYPE LIKE '%" & TextBox1.Text & "%'", SqlConn)
             DA.Fill(DT)
             DataGridView1.DataSource = DT.DefaultView
         End If

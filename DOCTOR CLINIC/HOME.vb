@@ -333,7 +333,7 @@ Public Class HOME
         Catch EX As Exception
 
         End Try
-        'ZIARA2020.ShowDialog()
+        '  ZIARA2020.ShowDialog()
     End Sub
 
     Private Sub HELPBTN_Click(sender As Object, e As EventArgs) Handles HELPBTN.Click
@@ -449,7 +449,7 @@ Public Class HOME
         REP_HAGEZ.ShowDialog()
     End Sub
     Private Sub BTN_HAGEZ_FRM_Click(sender As Object, e As EventArgs) Handles BTN_HAGEZ_FRM.Click
-        HAGEZ_PATEINT.ShowDialog()
+        'HAGEZ_PATEINT.ShowDialog()
     End Sub
 
     Private Sub INFERTILITYCARDCLOSEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles INFERTILITYCARDCLOSEToolStripMenuItem.Click
@@ -503,5 +503,26 @@ Public Class HOME
     End Sub
     Private Sub BT_REP_AMLIAT_CLICK(SENDER As Object, E As EventArgs) Handles BT_AMLIAT.Click
 
+    End Sub
+
+    Private Sub أتعابطبيبToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles أتعابطبيبToolStripMenuItem.Click
+        ATAB_DOCTORS.ShowDialog()
+    End Sub
+
+    Private Sub تقريرتفصيليللمصروفاتToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تقريرتفصيليللمصروفاتToolStripMenuItem.Click
+        MASROUF_REP.ShowDialog()
+    End Sub
+
+    Private Sub تقريرأتعابطبيبToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تقريرأتعابطبيبToolStripMenuItem.Click
+        ATABDOC_REP.ShowDialog()
+    End Sub
+
+    Private Sub أستردادنقديةعياداتToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles أستردادنقديةعياداتToolStripMenuItem.Click
+        Try
+            ROLES("M", ADD_MONY2_DOCTOR)
+        Catch ex As Exception
+
+        End Try
+        'ADD_MONY2_DOCTOR.ShowDialog()
     End Sub
 End Class

@@ -28,7 +28,6 @@ Partial Class PA_HESAP_FRM
         Me.END_DATE = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_NAME = New System.Windows.Forms.ComboBox()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
@@ -36,6 +35,7 @@ Partial Class PA_HESAP_FRM
         Me.BTN_PRENT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.CH_PA = New System.Windows.Forms.CheckBox()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -74,15 +74,6 @@ Partial Class PA_HESAP_FRM
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "نهاية الفترة :"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 69)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 21)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "أسم المريض :"
-        '
         'TXT_NAME
         '
         Me.TXT_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
@@ -90,9 +81,9 @@ Partial Class PA_HESAP_FRM
         Me.TXT_NAME.DataSource = Me.BindingSource1
         Me.TXT_NAME.DisplayMember = "PA_NAME"
         Me.TXT_NAME.FormattingEnabled = True
-        Me.TXT_NAME.Location = New System.Drawing.Point(131, 66)
+        Me.TXT_NAME.Location = New System.Drawing.Point(141, 66)
         Me.TXT_NAME.Name = "TXT_NAME"
-        Me.TXT_NAME.Size = New System.Drawing.Size(386, 29)
+        Me.TXT_NAME.Size = New System.Drawing.Size(376, 29)
         Me.TXT_NAME.TabIndex = 6
         Me.TXT_NAME.ValueMember = "PA_NAME"
         '
@@ -142,17 +133,31 @@ Partial Class PA_HESAP_FRM
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
+        'CH_PA
+        '
+        Me.CH_PA.AutoSize = True
+        Me.CH_PA.Checked = True
+        Me.CH_PA.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CH_PA.Location = New System.Drawing.Point(12, 68)
+        Me.CH_PA.Name = "CH_PA"
+        Me.CH_PA.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.CH_PA.Size = New System.Drawing.Size(123, 25)
+        Me.CH_PA.TabIndex = 10
+        Me.CH_PA.Text = "أسم المريض : "
+        Me.CH_PA.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CH_PA.UseVisualStyleBackColor = True
+        '
         'PA_HESAP_FRM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(645, 186)
         Me.ControlBox = False
+        Me.Controls.Add(Me.CH_PA)
         Me.Controls.Add(Me.BTN_EXIT)
         Me.Controls.Add(Me.BTN_PRENT)
         Me.Controls.Add(Me.TXT_CODE)
         Me.Controls.Add(Me.TXT_NAME)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.END_DATE)
@@ -178,7 +183,6 @@ Partial Class PA_HESAP_FRM
     Friend WithEvents END_DATE As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents TXT_NAME As ComboBox
     Friend WithEvents TXT_CODE As TextBox
     Friend WithEvents BTN_PRENT As DevExpress.XtraEditors.SimpleButton
@@ -186,4 +190,5 @@ Partial Class PA_HESAP_FRM
     Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents PATIENTDATA As PATIENTDATA
     Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents CH_PA As CheckBox
 End Class

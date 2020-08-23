@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="masrouf_v" targetNamespace="http://tempuri.org/masrouf_v.xsd" xmlns:mstns="http://tempuri.org/masrouf_v.xsd" xmlns="http://tempuri.org/masrouf_v.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="sqlconn1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sqlconn1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DOCTOR_CLINIC.My.MySettings.GlobalReference.Default.sqlconn1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MASROUF_DT_VTableAdapter" GeneratorDataComponentClassName="MASROUF_DT_VTableAdapter" Name="MASROUF_DT_V" UserDataComponentName="MASROUF_DT_VTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.MASROUF_DT_V" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OUT_CODE, OUT_DATE, OUT_SAFY, OUT_STAT, CODE_ACTION, NAME_ACTION, PRICE_ACTION, MID, INFO_ACTION
+FROM            MASROUF_DT_V</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OUT_CODE" DataSetColumn="OUT_CODE" />
+              <Mapping SourceColumn="OUT_SAFY" DataSetColumn="OUT_SAFY" />
+              <Mapping SourceColumn="OUT_STAT" DataSetColumn="OUT_STAT" />
+              <Mapping SourceColumn="CODE_ACTION" DataSetColumn="CODE_ACTION" />
+              <Mapping SourceColumn="NAME_ACTION" DataSetColumn="NAME_ACTION" />
+              <Mapping SourceColumn="PRICE_ACTION" DataSetColumn="PRICE_ACTION" />
+              <Mapping SourceColumn="MID" DataSetColumn="MID" />
+              <Mapping SourceColumn="INFO_ACTION" DataSetColumn="INFO_ACTION" />
+              <Mapping SourceColumn="OUT_DATE" DataSetColumn="OUT_DATE1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="masrouf_v" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="masrouf_v" msprop:Generator_UserDSName="masrouf_v">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MASROUF_DT_V" msprop:Generator_TableClassName="MASROUF_DT_VDataTable" msprop:Generator_TableVarName="tableMASROUF_DT_V" msprop:Generator_RowChangedName="MASROUF_DT_VRowChanged" msprop:Generator_TablePropName="MASROUF_DT_V" msprop:Generator_RowDeletingName="MASROUF_DT_VRowDeleting" msprop:Generator_RowChangingName="MASROUF_DT_VRowChanging" msprop:Generator_RowEvHandlerName="MASROUF_DT_VRowChangeEventHandler" msprop:Generator_RowDeletedName="MASROUF_DT_VRowDeleted" msprop:Generator_RowClassName="MASROUF_DT_VRow" msprop:Generator_UserTableName="MASROUF_DT_V" msprop:Generator_RowEvArgName="MASROUF_DT_VRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OUT_CODE" msprop:Generator_ColumnVarNameInTable="columnOUT_CODE" msprop:Generator_ColumnPropNameInRow="OUT_CODE" msprop:Generator_ColumnPropNameInTable="OUT_CODEColumn" msprop:Generator_UserColumnName="OUT_CODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OUT_DATE" msprop:Generator_ColumnVarNameInTable="columnOUT_DATE" msprop:Generator_ColumnPropNameInRow="OUT_DATE" msprop:Generator_ColumnPropNameInTable="OUT_DATEColumn" msprop:Generator_UserColumnName="OUT_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OUT_SAFY" msprop:Generator_ColumnVarNameInTable="columnOUT_SAFY" msprop:Generator_ColumnPropNameInRow="OUT_SAFY" msprop:Generator_ColumnPropNameInTable="OUT_SAFYColumn" msprop:Generator_UserColumnName="OUT_SAFY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OUT_STAT" msprop:Generator_ColumnVarNameInTable="columnOUT_STAT" msprop:Generator_ColumnPropNameInRow="OUT_STAT" msprop:Generator_ColumnPropNameInTable="OUT_STATColumn" msprop:Generator_UserColumnName="OUT_STAT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CODE_ACTION" msprop:Generator_ColumnVarNameInTable="columnCODE_ACTION" msprop:Generator_ColumnPropNameInRow="CODE_ACTION" msprop:Generator_ColumnPropNameInTable="CODE_ACTIONColumn" msprop:Generator_UserColumnName="CODE_ACTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME_ACTION" msprop:Generator_ColumnVarNameInTable="columnNAME_ACTION" msprop:Generator_ColumnPropNameInRow="NAME_ACTION" msprop:Generator_ColumnPropNameInTable="NAME_ACTIONColumn" msprop:Generator_UserColumnName="NAME_ACTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRICE_ACTION" msprop:Generator_ColumnVarNameInTable="columnPRICE_ACTION" msprop:Generator_ColumnPropNameInRow="PRICE_ACTION" msprop:Generator_ColumnPropNameInTable="PRICE_ACTIONColumn" msprop:Generator_UserColumnName="PRICE_ACTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MID" msprop:Generator_ColumnVarNameInTable="columnMID" msprop:Generator_ColumnPropNameInRow="MID" msprop:Generator_ColumnPropNameInTable="MIDColumn" msprop:Generator_UserColumnName="MID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INFO_ACTION" msprop:Generator_ColumnVarNameInTable="columnINFO_ACTION" msprop:Generator_ColumnPropNameInRow="INFO_ACTION" msprop:Generator_ColumnPropNameInTable="INFO_ACTIONColumn" msprop:Generator_UserColumnName="INFO_ACTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OUT_DATE1" msdata:Caption="OUT_DATE" msprop:Generator_ColumnVarNameInTable="columnOUT_DATE1" msprop:Generator_ColumnPropNameInRow="OUT_DATE1" msprop:Generator_ColumnPropNameInTable="OUT_DATE1Column" msprop:Generator_UserColumnName="OUT_DATE1" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -140,6 +140,9 @@
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION ", SqlConn)
                 DA.Fill(DT)
+                '""""""""""""""" الترقيم التلقائي """"""""""""""
+                TXT_CODE.Text = CODE_GENE("ADD_THLEL_PATION", "ID") + 1
+                '""""""""""""""""""""""""""""""
                 Dim DR = DT.NewRow
                 DR!ADD_CODE = TXT_CODE.Text
                 DR!ADD_DATE = TXT_DATE.Text
