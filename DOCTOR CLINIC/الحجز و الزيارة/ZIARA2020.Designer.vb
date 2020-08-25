@@ -24,8 +24,8 @@ Partial Class ZIARA2020
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ZIARA2020))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.P_HAGEZ = New System.Windows.Forms.Panel()
@@ -156,6 +156,7 @@ Partial Class ZIARA2020
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DGES = New System.Windows.Forms.DataGridView()
         Me.TOTAL_MAML = New System.Windows.Forms.TextBox()
         Me.TXT_PASS2 = New System.Windows.Forms.TextBox()
         Me.TXT_MASROUF_RASED = New System.Windows.Forms.TextBox()
@@ -179,7 +180,7 @@ Partial Class ZIARA2020
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.DGES = New System.Windows.Forms.DataGridView()
+        Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -207,12 +208,12 @@ Partial Class ZIARA2020
         Me.P_END.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.DGES, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DG3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         CType(Me.DG2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGES, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -227,7 +228,7 @@ Partial Class ZIARA2020
         Me.TabControl1.RightToLeftLayout = True
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.ShowToolTips = True
-        Me.TabControl1.Size = New System.Drawing.Size(1015, 497)
+        Me.TabControl1.Size = New System.Drawing.Size(1015, 611)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -238,7 +239,7 @@ Partial Class ZIARA2020
         Me.TabPage1.Location = New System.Drawing.Point(4, 33)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1007, 460)
+        Me.TabPage1.Size = New System.Drawing.Size(1007, 574)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "الحجز"
         '
@@ -254,7 +255,7 @@ Partial Class ZIARA2020
         Me.P_HAGEZ.Dock = System.Windows.Forms.DockStyle.Fill
         Me.P_HAGEZ.Location = New System.Drawing.Point(264, 3)
         Me.P_HAGEZ.Name = "P_HAGEZ"
-        Me.P_HAGEZ.Size = New System.Drawing.Size(740, 454)
+        Me.P_HAGEZ.Size = New System.Drawing.Size(740, 568)
         Me.P_HAGEZ.TabIndex = 1
         Me.P_HAGEZ.Visible = False
         '
@@ -325,7 +326,7 @@ Partial Class ZIARA2020
         Me.G_EDIT.Controls.Add(Me.TXT_ACTION2)
         Me.G_EDIT.Controls.Add(Me.Label24)
         Me.G_EDIT.Controls.Add(Me.TXT_CODE2)
-        Me.G_EDIT.Location = New System.Drawing.Point(6, 248)
+        Me.G_EDIT.Location = New System.Drawing.Point(6, 283)
         Me.G_EDIT.Name = "G_EDIT"
         Me.G_EDIT.Size = New System.Drawing.Size(729, 201)
         Me.G_EDIT.TabIndex = 122
@@ -557,7 +558,7 @@ Partial Class ZIARA2020
         Me.P_CHANG.Controls.Add(Me.Label3)
         Me.P_CHANG.Controls.Add(Me.Label4)
         Me.P_CHANG.Controls.Add(Me.BTN_XCHANG)
-        Me.P_CHANG.Location = New System.Drawing.Point(6, 268)
+        Me.P_CHANG.Location = New System.Drawing.Point(6, 303)
         Me.P_CHANG.Name = "P_CHANG"
         Me.P_CHANG.Size = New System.Drawing.Size(729, 103)
         Me.P_CHANG.TabIndex = 120
@@ -1017,7 +1018,7 @@ Partial Class ZIARA2020
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(261, 454)
+        Me.Panel1.Size = New System.Drawing.Size(261, 568)
         Me.Panel1.TabIndex = 0
         '
         'EXITBTN
@@ -1136,7 +1137,7 @@ Partial Class ZIARA2020
         Me.TabPage3.Location = New System.Drawing.Point(4, 33)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1007, 460)
+        Me.TabPage3.Size = New System.Drawing.Size(1007, 574)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "الحضور والألغاء"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1148,7 +1149,7 @@ Partial Class ZIARA2020
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(3, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1001, 454)
+        Me.Panel3.Size = New System.Drawing.Size(1001, 568)
         Me.Panel3.TabIndex = 2
         '
         'Panel2
@@ -1444,12 +1445,12 @@ Partial Class ZIARA2020
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column8, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column11})
         Me.DataGridView1.EnableHeadersVisualStyles = False
@@ -1458,12 +1459,12 @@ Partial Class ZIARA2020
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control
@@ -1471,7 +1472,7 @@ Partial Class ZIARA2020
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent
         Me.DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.HotTrack
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(998, 379)
+        Me.DataGridView1.Size = New System.Drawing.Size(998, 491)
         Me.DataGridView1.TabIndex = 1
         '
         'Column1
@@ -1559,10 +1560,29 @@ Partial Class ZIARA2020
         Me.TabPage2.Location = New System.Drawing.Point(4, 33)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1007, 460)
+        Me.TabPage2.Size = New System.Drawing.Size(1007, 574)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "الأحصائيات"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'DGES
+        '
+        Me.DGES.AllowUserToAddRows = False
+        Me.DGES.AllowUserToDeleteRows = False
+        Me.DGES.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGES.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DGES.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.DGES.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGES.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column19, Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18})
+        Me.DGES.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.DGES.Location = New System.Drawing.Point(8, 303)
+        Me.DGES.Name = "DGES"
+        Me.DGES.ReadOnly = True
+        Me.DGES.RowHeadersVisible = False
+        Me.DGES.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGES.Size = New System.Drawing.Size(993, 268)
+        Me.DGES.TabIndex = 130
         '
         'TOTAL_MAML
         '
@@ -1800,24 +1820,12 @@ Partial Class ZIARA2020
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
-        'DGES
+        'Column19
         '
-        Me.DGES.AllowUserToAddRows = False
-        Me.DGES.AllowUserToDeleteRows = False
-        Me.DGES.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DGES.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DGES.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.DGES.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGES.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18})
-        Me.DGES.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.DGES.Location = New System.Drawing.Point(8, 303)
-        Me.DGES.Name = "DGES"
-        Me.DGES.ReadOnly = True
-        Me.DGES.RowHeadersVisible = False
-        Me.DGES.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGES.Size = New System.Drawing.Size(993, 161)
-        Me.DGES.TabIndex = 130
+        Me.Column19.DataPropertyName = "PA_NAME"
+        Me.Column19.HeaderText = "أسم المريض"
+        Me.Column19.Name = "Column19"
+        Me.Column19.ReadOnly = True
         '
         'Column14
         '
@@ -1863,7 +1871,7 @@ Partial Class ZIARA2020
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(1015, 497)
+        Me.ClientSize = New System.Drawing.Size(1015, 611)
         Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1908,13 +1916,13 @@ Partial Class ZIARA2020
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.DGES, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DG3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.DG2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGES, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2073,6 +2081,7 @@ Partial Class ZIARA2020
     Friend WithEvents TXT_PASS2 As TextBox
     Friend WithEvents TOTAL_MAML As TextBox
     Friend WithEvents DGES As DataGridView
+    Friend WithEvents Column19 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn

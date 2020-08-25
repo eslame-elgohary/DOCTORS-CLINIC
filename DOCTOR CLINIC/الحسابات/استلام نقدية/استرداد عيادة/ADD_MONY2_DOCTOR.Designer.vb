@@ -34,6 +34,8 @@ Partial Class ADD_MONY2_DOCTOR
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_DAY2 = New System.Windows.Forms.Label()
+        Me.TXT_DAY = New System.Windows.Forms.Label()
         Me.LAST_COME = New DevExpress.XtraEditors.SimpleButton()
         Me.CODE_DOCTOR = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -60,6 +62,7 @@ Partial Class ADD_MONY2_DOCTOR
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TXT_INFO = New System.Windows.Forms.TextBox()
         Me.TXT_M = New System.Windows.Forms.TextBox()
@@ -96,8 +99,6 @@ Partial Class ADD_MONY2_DOCTOR
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
-        Me.TXT_DAY = New System.Windows.Forms.Label()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,6 +228,7 @@ Partial Class ADD_MONY2_DOCTOR
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_DAY2)
         Me.GroupBox1.Controls.Add(Me.TXT_DAY)
         Me.GroupBox1.Controls.Add(Me.LAST_COME)
         Me.GroupBox1.Controls.Add(Me.CODE_DOCTOR)
@@ -256,6 +258,26 @@ Partial Class ADD_MONY2_DOCTOR
         Me.GroupBox1.Size = New System.Drawing.Size(831, 142)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
+        '
+        'TXT_DAY2
+        '
+        Me.TXT_DAY2.AutoSize = True
+        Me.TXT_DAY2.Location = New System.Drawing.Point(15, 107)
+        Me.TXT_DAY2.Name = "TXT_DAY2"
+        Me.TXT_DAY2.Size = New System.Drawing.Size(18, 21)
+        Me.TXT_DAY2.TabIndex = 68
+        Me.TXT_DAY2.Text = "2"
+        Me.TXT_DAY2.Visible = False
+        '
+        'TXT_DAY
+        '
+        Me.TXT_DAY.AutoSize = True
+        Me.TXT_DAY.Location = New System.Drawing.Point(80, 108)
+        Me.TXT_DAY.Name = "TXT_DAY"
+        Me.TXT_DAY.Size = New System.Drawing.Size(59, 21)
+        Me.TXT_DAY.TabIndex = 67
+        Me.TXT_DAY.Text = "0000000"
+        Me.TXT_DAY.Visible = False
         '
         'LAST_COME
         '
@@ -532,6 +554,16 @@ Partial Class ADD_MONY2_DOCTOR
         Me.GroupBox2.Size = New System.Drawing.Size(832, 276)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
+        '
+        'TXT_DATE_TODAY
+        '
+        Me.TXT_DATE_TODAY.Enabled = False
+        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(249, 143)
+        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
+        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(167, 29)
+        Me.TXT_DATE_TODAY.TabIndex = 67
+        Me.TXT_DATE_TODAY.Visible = False
         '
         'Label8
         '
@@ -835,26 +867,6 @@ Partial Class ADD_MONY2_DOCTOR
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
-        'TXT_DATE_TODAY
-        '
-        Me.TXT_DATE_TODAY.Enabled = False
-        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(249, 143)
-        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
-        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(167, 29)
-        Me.TXT_DATE_TODAY.TabIndex = 67
-        Me.TXT_DATE_TODAY.Visible = False
-        '
-        'TXT_DAY
-        '
-        Me.TXT_DAY.AutoSize = True
-        Me.TXT_DAY.Location = New System.Drawing.Point(60, 108)
-        Me.TXT_DAY.Name = "TXT_DAY"
-        Me.TXT_DAY.Size = New System.Drawing.Size(59, 21)
-        Me.TXT_DAY.TabIndex = 67
-        Me.TXT_DAY.Text = "0000000"
-        Me.TXT_DAY.Visible = False
-        '
         'ADD_MONY2_DOCTOR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -964,4 +976,5 @@ Partial Class ADD_MONY2_DOCTOR
     Friend WithEvents TXT_INFO As TextBox
     Friend WithEvents TXT_DATE_TODAY As DateTimePicker
     Friend WithEvents TXT_DAY As Label
+    Friend WithEvents TXT_DAY2 As Label
 End Class

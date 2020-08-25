@@ -82,6 +82,7 @@ Partial Class HOME
         Me.أذنصرفنقديةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_MASROF_DT = New System.Windows.Forms.ToolStripMenuItem()
         Me.أتعابطبيبToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.أستردادنقديةعياداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_CONVERT_KHAZINA = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_TSWIA = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_PA_DOF3A = New System.Windows.Forms.ToolStripMenuItem()
@@ -136,7 +137,6 @@ Partial Class HOME
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.أستردادنقديةعياداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -536,6 +536,7 @@ Partial Class HOME
         Me.BTN_T3AQOD_ADD_MONY_DOC.Name = "BTN_T3AQOD_ADD_MONY_DOC"
         Me.BTN_T3AQOD_ADD_MONY_DOC.Size = New System.Drawing.Size(152, 22)
         Me.BTN_T3AQOD_ADD_MONY_DOC.Text = "أيصال تعاقدات"
+        Me.BTN_T3AQOD_ADD_MONY_DOC.Visible = False
         '
         'أذنصرفنقديةToolStripMenuItem
         '
@@ -555,6 +556,12 @@ Partial Class HOME
         Me.أتعابطبيبToolStripMenuItem.Name = "أتعابطبيبToolStripMenuItem"
         Me.أتعابطبيبToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.أتعابطبيبToolStripMenuItem.Text = "أتعاب طبيب"
+        '
+        'أستردادنقديةعياداتToolStripMenuItem
+        '
+        Me.أستردادنقديةعياداتToolStripMenuItem.Name = "أستردادنقديةعياداتToolStripMenuItem"
+        Me.أستردادنقديةعياداتToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.أستردادنقديةعياداتToolStripMenuItem.Text = "أسترداد نقدية عيادات"
         '
         'BT_CONVERT_KHAZINA
         '
@@ -712,6 +719,7 @@ Partial Class HOME
         Me.التعاقداتToolStripMenuItem.Name = "التعاقداتToolStripMenuItem"
         Me.التعاقداتToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.التعاقداتToolStripMenuItem.Text = "التعاقدات"
+        Me.التعاقداتToolStripMenuItem.Visible = False
         '
         'BTN_ADD_T3AKODAT
         '
@@ -864,11 +872,13 @@ Partial Class HOME
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(155, 52)
         Me.ToolStripButton1.Text = "أيصال عيادات تعاقد"
+        Me.ToolStripButton1.Visible = False
         '
         'ToolStripSeparator10
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 55)
+        Me.ToolStripSeparator10.Visible = False
         '
         'BTL_CONVERTKHAZINA
         '
@@ -935,12 +945,6 @@ Partial Class HOME
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'أستردادنقديةعياداتToolStripMenuItem
-        '
-        Me.أستردادنقديةعياداتToolStripMenuItem.Name = "أستردادنقديةعياداتToolStripMenuItem"
-        Me.أستردادنقديةعياداتToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
-        Me.أستردادنقديةعياداتToolStripMenuItem.Text = "أسترداد نقدية عيادات"
         '
         'HOME
         '

@@ -778,7 +778,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
         FILL_DGV(DG2, KARMA)
         Dim ES As String
-        ES = "SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND ADD_TYPE='أسترداد عيادات' "
+        ES = "SELECT * FROM estr WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND ADD_TYPE='أسترداد عيادات' "
         FILL_DGV(DGES, ES)
 
         Dim KARMA3 As String

@@ -136,6 +136,7 @@
         SAVEBTN.Enabled = True
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
+        TXT_DAY2.Text = 2
         'PRINTBTN.Enabled = True
         'TXT_M.Text = "1"
         'FILL_KHAZINA_CODE()
@@ -364,7 +365,7 @@
 
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
         '====================حفظ العيادة=============================
-
+        DATEF()
         Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
         Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
         Dim DS0 As New DataSet
@@ -373,8 +374,8 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("M2").ToString = True Then
                 If DT0.Rows(0).Item("M3").ToString = False Then
-                    If TXT_DAY.Text < "2" Then
-                        MessageBox.Show("لايمكن استرداد مر عليه اكثر من يوم", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    If Val(TXT_DAY.Text) >= Val(TXT_DAY2.Text) Then
+                        MessageBox.Show("لا يمكن استرداد مر عليه اكثر من يوم", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         TXT_CODE.Select()
                         Exit Sub
                     End If
@@ -382,10 +383,10 @@
 
                 '========= قيود الادخال =======================
                 If PA_NAME.Text = "" Then
-                        MessageBox.Show("برجاء ادخال رقم أيصال الاسترداد", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        TXT_CODE.Select()
-                        Exit Sub
-                    End If
+                    MessageBox.Show("برجاء ادخال رقم أيصال الاسترداد", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_CODE.Select()
+                    Exit Sub
+                End If
 
                 If SAFY.Text < 1 Then
                     MessageBox.Show("لايمكن أسترداد أيصال بدون قيمة", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -395,128 +396,128 @@
 
 
                 If TXT_INFO.Text = "" Then
-                        MessageBox.Show("يرجى ادخال سبب الأسترداد", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        TXT_INFO.Select()
-                        Exit Sub
-                    End If
-                    '================= التخزين فى الحجز ========================================
-                    Dim REEM As String
-                    REEM = "SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & CODE_DOCTOR.Text & "'  AND PA_CODE = '" & PA_CODE.Text & "' AND DATE_HAGEZ = '" & TXT_DATE.Text & "'"
-                    Dim DTE As New DataTable
-                    Dim DAE As New SqlClient.SqlDataAdapter(REEM, SqlConn)
-                    DAE.Fill(DTE)
-                    If DTE.Rows.Count = 0 Then
-                        MessageBox.Show("الأنتباه ان تاريخ الأيصال نفس تاريخ الحجز للمريض")
-                        TXT_DATE.Select()
-                        Exit Sub
-                    Else
-                        For I = 0 To DataGridView1.Rows.Count - 1
-                            Dim DRE = DTE.Rows(0)
-                            DRE!ACTION = ""
-                            DRE!STAT_COLORE = "0"
-
-                            Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
-                            DAE.Update(DTE)
-                        Next
-                    End If
-                    '================= تخزين بيانات الصنف في قاعدة البيانات =============
-                    Dim DT As New DataTable
-                    Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
-                    DA.Fill(DT)
-                    If DT.Rows.Count = 0 Then
-                        MessageBox.Show("يوجد أيصال أخر لهذا المريض اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    Else
-                        Dim DR = DT.Rows(0)
-                        DR!ADD_CODE = TXT_CODE.Text
-                        DR!ADD_DATE = TXT_DATE.Text
-                        DR!ADD_TYPE = "أسترداد عيادات"
-                        DR!CODE_KHAZINA = KHAZINA_CODE.Text
-                        DR!ADD_PA_CODE = PA_CODE.Text
-                        DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
-                        DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
-                        DR!ADD_TOTAL = TOTAL.Text
-                        DR!ADD_DIS = DISCOUNT.Text
-                        DR!ADD_SAFY = SAFY.Text
-                        DR!ADD_SAFY_AR = SAFY_AR.Text
-                        DR!ADD_INFO = TXT_INFO.Text
-                        DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
-                        DR!ADD_STAT = False
-                        DR!ADD_USER_EDIT = USER_EDIT.Text
-                        DR!ADD_DATE_EDIT = DATE_EDIT.Text
-                        DR!ADD_TIME_EDIT = TIME_EDIT.Text
-
-                        Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                        DA.Update(DT)
-                    End If
-
-                    '=====================================حذف التفاصيل من الخزينة ========================
-                    Dim CMD_DEL2 As New SqlClient.SqlCommand
-                    CMD_DEL2.Connection = SqlConn
-                    CMD_DEL2.CommandText = "DELETE FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'"
-                    CMD_DEL2.ExecuteNonQuery()
-                    '============================== أضافة تفاصيل للخزينة ========================
-                    If TXT_TYPEMONY.SelectedIndex = 0 Then
-                        Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'", SqlConn)
-                        DA2.Fill(DT)
-                        Dim DR2 = DT.NewRow
-                        DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                        DR2!KHAZINA_DATE = TXT_DATE.Text
-                        DR2!CODE_DT = TXT_CODE.Text
-                        DR2!CODE_DT2 = "1"
-                        DR2!KHAZINA_NAME_ACTION = "أيصال أسترداد نقدية رقم " & TXT_CODE.Text & " العيادات "
-                        DR2!KHAZINA_IN = "0"
-                        DR2!MONY_TYPE = "نقدي"
-                        DR2!KHAZINA_OUT = SAFY.Text
-                        DR2!STAT_KHAZINA = False
-                        DT.Rows.Add(DR2)
-                        Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                        DA2.Update(DT)
-                    End If
-
-                    If TXT_TYPEMONY.SelectedIndex = 1 Then
-                        Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'", SqlConn)
-                        DA2.Fill(DT)
-                        Dim DR2 = DT.NewRow
-                        DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                        DR2!KHAZINA_DATE = TXT_DATE.Text
-                        DR2!CODE_DT = TXT_CODE.Text
-                        DR2!CODE_DT2 = "1"
-                        DR2!KHAZINA_NAME_ACTION = "أيصال أسترداد نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
-                        DR2!KHAZINA_IN = SAFY.Text
-                        DR2!KHAZINA_OUT = "0"
-                        DR2!MONY_TYPE = "فيزا"
-                        DR2!STAT_KHAZINA = False
-
-                        Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                        DA2.Update(DT)
-                    End If
-                    If TXT_TYPEMONY.SelectedIndex = 2 Then
-                        Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'", SqlConn)
-                        DA2.Fill(DT)
-                        Dim DR2 = DT.NewRow
-                        DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                        DR2!KHAZINA_DATE = TXT_DATE.Text
-                        DR2!CODE_DT = TXT_CODE.Text
-                        DR2!CODE_DT2 = "1"
-                        DR2!KHAZINA_NAME_ACTION = "أيصال أسترداد نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
-                        DR2!KHAZINA_IN = SAFY.Text
-                        DR2!KHAZINA_OUT = "0"
-                        DR2!MONY_TYPE = "بريميوم كارد"
-                        DR2!STAT_KHAZINA = False
-
-                        Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                        DA2.Update(DT)
-                    End If
-
-                    '==========================================================================
-                    printedit()
-                    ' PRINTBTN_Click(sender, e)
-                    MessageBox.Show("تمت عملية أستردادالأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    NEWBTN_Click(sender, e)
-                    'CALC()
-                    'Me.Close()
-
+                    MessageBox.Show("يرجى ادخال سبب الأسترداد", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_INFO.Select()
+                    Exit Sub
+                End If
+                '================= التخزين فى الحجز ========================================
+                Dim REEM As String
+                REEM = "SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & CODE_DOCTOR.Text & "'  AND PA_CODE = '" & PA_CODE.Text & "' AND DATE_HAGEZ = '" & TXT_DATE.Text & "'"
+                Dim DTE As New DataTable
+                Dim DAE As New SqlClient.SqlDataAdapter(REEM, SqlConn)
+                DAE.Fill(DTE)
+                If DTE.Rows.Count = 0 Then
+                    MessageBox.Show("الأنتباه ان تاريخ الأيصال نفس تاريخ الحجز للمريض")
+                    TXT_DATE.Select()
+                    Exit Sub
                 Else
+                    For I = 0 To DataGridView1.Rows.Count - 1
+                        Dim DRE = DTE.Rows(0)
+                        DRE!ACTION = ""
+                        DRE!STAT_COLORE = "0"
+
+                        Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
+                        DAE.Update(DTE)
+                    Next
+                End If
+                '================= تخزين بيانات الصنف في قاعدة البيانات =============
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
+                DA.Fill(DT)
+                If DT.Rows.Count = 0 Then
+                    MessageBox.Show("يوجد أيصال أخر لهذا المريض اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Else
+                    Dim DR = DT.Rows(0)
+                    DR!ADD_CODE = TXT_CODE.Text
+                    DR!ADD_DATE = TXT_DATE.Text
+                    DR!ADD_TYPE = "أسترداد عيادات"
+                    DR!CODE_KHAZINA = KHAZINA_CODE.Text
+                    DR!ADD_PA_CODE = PA_CODE.Text
+                    DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
+                    DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
+                    DR!ADD_TOTAL = TOTAL.Text
+                    DR!ADD_DIS = DISCOUNT.Text
+                    DR!ADD_SAFY = SAFY.Text
+                    DR!ADD_SAFY_AR = SAFY_AR.Text
+                    DR!ADD_INFO = TXT_INFO.Text
+                    DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
+                    DR!ADD_STAT = False
+                    DR!ADD_USER_EDIT = USER_EDIT.Text
+                    DR!ADD_DATE_EDIT = DATE_EDIT.Text
+                    DR!ADD_TIME_EDIT = TIME_EDIT.Text
+
+                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                    DA.Update(DT)
+                End If
+
+                '=====================================حذف التفاصيل من الخزينة ========================
+                Dim CMD_DEL2 As New SqlClient.SqlCommand
+                CMD_DEL2.Connection = SqlConn
+                CMD_DEL2.CommandText = "DELETE FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'"
+                CMD_DEL2.ExecuteNonQuery()
+                '============================== أضافة تفاصيل للخزينة ========================
+                If TXT_TYPEMONY.SelectedIndex = 0 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "1"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أسترداد نقدية رقم " & TXT_CODE.Text & " العيادات "
+                    DR2!KHAZINA_IN = "0"
+                    DR2!MONY_TYPE = "نقدي"
+                    DR2!KHAZINA_OUT = SAFY.Text
+                    DR2!STAT_KHAZINA = False
+                    DT.Rows.Add(DR2)
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+
+                If TXT_TYPEMONY.SelectedIndex = 1 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "1"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أسترداد نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
+                    DR2!KHAZINA_IN = SAFY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = "فيزا"
+                    DR2!STAT_KHAZINA = False
+
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+                If TXT_TYPEMONY.SelectedIndex = 2 Then
+                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '1'", SqlConn)
+                    DA2.Fill(DT)
+                    Dim DR2 = DT.NewRow
+                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                    DR2!KHAZINA_DATE = TXT_DATE.Text
+                    DR2!CODE_DT = TXT_CODE.Text
+                    DR2!CODE_DT2 = "1"
+                    DR2!KHAZINA_NAME_ACTION = "أيصال أسترداد نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
+                    DR2!KHAZINA_IN = SAFY.Text
+                    DR2!KHAZINA_OUT = "0"
+                    DR2!MONY_TYPE = "بريميوم كارد"
+                    DR2!STAT_KHAZINA = False
+
+                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                    DA2.Update(DT)
+                End If
+
+                '==========================================================================
+                printedit()
+                ' PRINTBTN_Click(sender, e)
+                MessageBox.Show("تمت عملية أستردادالأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                NEWBTN_Click(sender, e)
+                'CALC()
+                'Me.Close()
+
+            Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             End If
@@ -984,7 +985,7 @@
                     TIMEREDIT.Enabled = True
                     TIMERADD.Enabled = False
                     CALC()
-                    DATEF()
+
                 End If
 
             Catch ex As Exception
@@ -996,5 +997,4 @@
 
 
     End Sub
-
 End Class

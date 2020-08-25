@@ -50,7 +50,6 @@ Partial Class DOCTORSFRM
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -72,6 +71,7 @@ Partial Class DOCTORSFRM
         Me.DO_CODE = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -91,52 +91,52 @@ Partial Class DOCTORSFRM
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(50, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(53, 17)
         Me.ToolStripStatusLabel4.Text = "الأضافة : "
         '
         'USER_ADD
         '
         Me.USER_ADD.Name = "USER_ADD"
-        Me.USER_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.USER_ADD.Size = New System.Drawing.Size(119, 17)
         Me.USER_ADD.Text = "ToolStripStatusLabel1"
         '
         'DATE_ADD
         '
         Me.DATE_ADD.Name = "DATE_ADD"
-        Me.DATE_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_ADD.Size = New System.Drawing.Size(119, 17)
         Me.DATE_ADD.Text = "ToolStripStatusLabel2"
         '
         'TIME_ADD
         '
         Me.TIME_ADD.Name = "TIME_ADD"
-        Me.TIME_ADD.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_ADD.Size = New System.Drawing.Size(119, 17)
         Me.TIME_ADD.Text = "ToolStripStatusLabel3"
         '
         'EDITNAMEBT
         '
         Me.EDITNAMEBT.Name = "EDITNAMEBT"
-        Me.EDITNAMEBT.Size = New System.Drawing.Size(47, 17)
+        Me.EDITNAMEBT.Size = New System.Drawing.Size(52, 17)
         Me.EDITNAMEBT.Text = "التعديل : "
         Me.EDITNAMEBT.Visible = False
         '
         'USER_EDIT
         '
         Me.USER_EDIT.Name = "USER_EDIT"
-        Me.USER_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.USER_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.USER_EDIT.Text = "ToolStripStatusLabel6"
         Me.USER_EDIT.Visible = False
         '
         'DATE_EDIT
         '
         Me.DATE_EDIT.Name = "DATE_EDIT"
-        Me.DATE_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.DATE_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.DATE_EDIT.Text = "ToolStripStatusLabel1"
         Me.DATE_EDIT.Visible = False
         '
         'TIME_EDIT
         '
         Me.TIME_EDIT.Name = "TIME_EDIT"
-        Me.TIME_EDIT.Size = New System.Drawing.Size(121, 17)
+        Me.TIME_EDIT.Size = New System.Drawing.Size(119, 17)
         Me.TIME_EDIT.Text = "ToolStripStatusLabel2"
         Me.TIME_EDIT.Visible = False
         '
@@ -266,7 +266,6 @@ Partial Class DOCTORSFRM
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
@@ -283,6 +282,7 @@ Partial Class DOCTORSFRM
         Me.GroupBox1.Controls.Add(Me.DO_CODE)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 6)
         Me.GroupBox1.Name = "GroupBox1"
@@ -314,7 +314,7 @@ Partial Class DOCTORSFRM
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(59, 126)
+        Me.TextBox4.Location = New System.Drawing.Point(59, 129)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(60, 29)
         Me.TextBox4.TabIndex = 19
@@ -323,32 +323,23 @@ Partial Class DOCTORSFRM
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(122, 129)
+        Me.Label9.Location = New System.Drawing.Point(122, 133)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 21)
+        Me.Label9.Size = New System.Drawing.Size(97, 21)
         Me.Label9.TabIndex = 31
         Me.Label9.Text = "مبلغ الطبيب :"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(220, 126)
+        Me.TextBox3.Location = New System.Drawing.Point(220, 129)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(60, 29)
         Me.TextBox3.TabIndex = 18
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(286, 129)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(88, 21)
-        Me.Label8.TabIndex = 29
-        Me.Label8.Text = "مبلغ التعاقد :"
-        '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(387, 126)
+        Me.TextBox2.Location = New System.Drawing.Point(387, 129)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(67, 29)
         Me.TextBox2.TabIndex = 17
@@ -357,9 +348,9 @@ Partial Class DOCTORSFRM
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(458, 129)
+        Me.Label7.Location = New System.Drawing.Point(458, 133)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 21)
+        Me.Label7.Size = New System.Drawing.Size(95, 21)
         Me.Label7.TabIndex = 27
         Me.Label7.Text = "قيمة الخدمة :"
         '
@@ -374,9 +365,9 @@ Partial Class DOCTORSFRM
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(719, 134)
+        Me.Label6.Location = New System.Drawing.Point(719, 133)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 21)
+        Me.Label6.Size = New System.Drawing.Size(91, 21)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "أسم الخدمة :"
         '
@@ -423,7 +414,7 @@ Partial Class DOCTORSFRM
         'Column4
         '
         Me.Column4.FillWeight = 50.0!
-        Me.Column4.HeaderText = "مبلغ التعاقدات"
+        Me.Column4.HeaderText = "مبلغ الخامات"
         Me.Column4.Name = "Column4"
         '
         'Column5
@@ -463,7 +454,7 @@ Partial Class DOCTORSFRM
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(318, 84)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(131, 21)
+        Me.Label5.Size = New System.Drawing.Size(136, 21)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "تليفون أخر للطبيب :"
         '
@@ -472,7 +463,7 @@ Partial Class DOCTORSFRM
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(166, 38)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 21)
+        Me.Label3.Size = New System.Drawing.Size(120, 21)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "تخصص الطبيب :"
         '
@@ -489,7 +480,7 @@ Partial Class DOCTORSFRM
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(553, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 21)
+        Me.Label2.Size = New System.Drawing.Size(95, 21)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "أسم الطبيب :"
         '
@@ -508,7 +499,7 @@ Partial Class DOCTORSFRM
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(738, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.Size = New System.Drawing.Size(93, 21)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "كود الطبيب :"
         '
@@ -517,9 +508,18 @@ Partial Class DOCTORSFRM
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(723, 81)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 21)
+        Me.Label4.Size = New System.Drawing.Size(111, 21)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "تليفون الطبيب :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(283, 133)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(100, 21)
+        Me.Label8.TabIndex = 29
+        Me.Label8.Text = "مبلغ الخامات :"
         '
         'DOCTORSFRM
         '

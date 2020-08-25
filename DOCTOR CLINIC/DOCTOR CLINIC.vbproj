@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP35\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP38\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>55</ApplicationRevision>
+    <ApplicationRevision>58</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -268,7 +268,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
     </Compile>
-    <Compile Include="الحجز و الزيارة\estrdad.Designer.vb">
+    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>estrdad.xsd</DependentUpon>
@@ -330,6 +330,12 @@
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="الحسابات\نقدية معمل اسنان\MAMLASNANFRM.Designer.vb">
+      <DependentUpon>MAMLASNANFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\نقدية معمل اسنان\MAMLASNANFRM.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.Designer.vb">
       <DependentUpon>HAGEZ_ZIARA.vb</DependentUpon>
@@ -1434,6 +1440,9 @@
     <EmbeddedResource Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.resx">
       <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\نقدية معمل اسنان\MAMLASNANFRM.resx">
+      <DependentUpon>MAMLASNANFRM.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="الخزينة\KHAZINAFRM.resx">
       <DependentUpon>KHAZINAFRM.vb</DependentUpon>
     </EmbeddedResource>
@@ -1706,15 +1715,15 @@
     <None Include="الحجز و الزيارة\ALL_MONY.xss">
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
     </None>
-    <None Include="الحجز و الزيارة\estrdad.xsc">
+    <None Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.xsc">
       <DependentUpon>estrdad.xsd</DependentUpon>
     </None>
-    <None Include="الحجز و الزيارة\estrdad.xsd">
+    <None Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>estrdad.Designer.vb</LastGenOutput>
     </None>
-    <None Include="الحجز و الزيارة\estrdad.xss">
+    <None Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.xss">
       <DependentUpon>estrdad.xsd</DependentUpon>
     </None>
     <None Include="الحجز و الزيارة\HAGEZ_DT.xsc">

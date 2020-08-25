@@ -165,7 +165,6 @@ Partial Class ADD_MONY_DOCTOR
         Me.SEARCHBTN.Size = New System.Drawing.Size(96, 44)
         Me.SEARCHBTN.TabIndex = 4
         Me.SEARCHBTN.Text = "بحث"
-        Me.SEARCHBTN.Visible = False
         '
         'DELETBTN
         '
