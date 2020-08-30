@@ -15,6 +15,7 @@
             DO_TEL2.Text = DR!DO_TEL2
             DO_TKHSOS.Text = DR!DO_TKHSOS
             DO_TKHSOS_CODE.Text = DR!DO_TKHSOS_CODE
+            TXT_TYPE_HISMONY.Text = DR!DO_TYPEYMONY
             USER_ADD.Text = DR!USER_ADD
             DATE_ADD.Text = DR!DATE_ADD
             TIME_ADD.Text = DR!TIME_ADD
@@ -85,6 +86,7 @@
         '""""""""""""""" الترقيم التلقائي """"""""""""""
         DO_CODE.Text = CODE_GENE("DOCTORS", "ID") + 1
         TextBox0.Text = "1"
+        TXT_TYPE_HISMONY.SelectedIndex = -1
         '""""""""""""""""""""""""""""""
         EDITBTN.Enabled = False
         DELETBTN.Enabled = False
@@ -147,14 +149,14 @@
                     DO_NAME.Select()
                     Exit Sub
                 End If
-                If DO_TKHSOS.Text = "" Then
+                If DO_TKHSOS_CODE.Text = "" Then
                     MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     DO_TKHSOS.Select()
                     Exit Sub
                 End If
-                If DO_TKHSOS_CODE.Text = "" Then
-                    MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    DO_TKHSOS.Select()
+                If TXT_TYPE_HISMONY.SelectedIndex = -1 Then
+                    MessageBox.Show("يرجي أختيار نوع التعامل مع الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_TYPE_HISMONY.Select()
                     Exit Sub
                 End If
                 For I As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -177,6 +179,7 @@
                     DR!DO_TEL2 = DO_TEL2.Text
                     DR!DO_TKHSOS = DO_TKHSOS.Text
                     DR!DO_TKHSOS_CODE = DO_TKHSOS_CODE.Text
+                    DR!DO_TYPEYMONY = TXT_TYPE_HISMONY.Text
                     DR!STAT = True
                     DR!USER_ADD = USER_ADD.Text
                     DR!DATE_ADD = DATE_ADD.Text
@@ -270,14 +273,14 @@
                     DO_NAME.Select()
                     Exit Sub
                 End If
-                If DO_TKHSOS.Text = "" Then
+                If DO_TKHSOS_CODE.Text = "" Then
                     MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     DO_TKHSOS.Select()
                     Exit Sub
                 End If
-                If DO_TKHSOS_CODE.Text = "" Then
-                    MessageBox.Show("يرجى أدخال تخصص الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    DO_TKHSOS.Select()
+                If TXT_TYPE_HISMONY.SelectedIndex = -1 Then
+                    MessageBox.Show("يرجي أختيار نوع التعامل مع الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_TYPE_HISMONY.Select()
                     Exit Sub
                 End If
                 For I As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -286,6 +289,8 @@
                         Exit Sub
                     End If
                 Next
+
+
                 '================= =======================================
                 If MessageBox.Show("هل ترغب في تعديل بيانات الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then Exit Sub
 
@@ -303,6 +308,7 @@
                     DR!DO_TEL2 = DO_TEL2.Text
                     DR!DO_TKHSOS = DO_TKHSOS.Text
                     DR!DO_TKHSOS_CODE = DO_TKHSOS_CODE.Text
+                    DR!DO_TYPEYMONY = TXT_TYPE_HISMONY.Text
                     DR!STAT = True
                     DR!USER_ADD = USER_ADD.Text
                     DR!DATE_ADD = DATE_ADD.Text
@@ -499,5 +505,6 @@
             SendKeys.Send("{Tab}")
         End If
     End Sub
+
 
 End Class

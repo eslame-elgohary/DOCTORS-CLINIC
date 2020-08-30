@@ -88,4 +88,17 @@ Module CONNECTION
         ESCAPESQL = "'" & ESCAPESQL & "'"
         Return ESCAPESQL
     End Function
+
+
+    Public Function PressOnlyNumeric(ByVal intKeyValue As System.Windows.Forms.KeyPressEventArgs) ' Integer
+        Dim chKiy As Char
+        chKiy = intKeyValue.KeyChar
+        If Not (Char.IsDigit(chKiy) Or chKiy = "." Or Char.IsControl(chKiy)) Then
+            MsgBox("غير مسموح بإدخال الحرف .. فضلاً إدخل أرقام فقط", MsgBoxStyle.MsgBoxRight + MsgBoxStyle.Critical, "إدخال خاطئ")
+            intKeyValue.Handled = True ' إلغاء الحرف المضغوط
+        End If
+        Return chKiy
+
+    End Function
+
 End Module

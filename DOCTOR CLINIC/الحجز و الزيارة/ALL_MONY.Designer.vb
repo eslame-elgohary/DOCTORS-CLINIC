@@ -301,6 +301,8 @@ Partial Public Class ALL_MONY
         
         Private columnDOT_DOCTORS As Global.System.Data.DataColumn
         
+        Private columnDOT_T3AKOD As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -409,6 +411,14 @@ Partial Public Class ALL_MONY
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property DOT_T3AKODColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDOT_T3AKOD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -445,9 +455,9 @@ Partial Public Class ALL_MONY
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddBADR_VRow(ByVal DOCTORS_CODE As String, ByVal DO_NAME As String, ByVal DATE_HAGEZ As Date, ByVal COUNT_ACTION As Integer, ByVal ADD_STAT As Boolean, ByVal NAME_ACTION As String, ByVal PRICE_DOCE As String, ByVal DOT_PA As String, ByVal DOT_DOCTORS As String) As BADR_VRow
+        Public Overloads Function AddBADR_VRow(ByVal DOCTORS_CODE As String, ByVal DO_NAME As String, ByVal DATE_HAGEZ As Date, ByVal COUNT_ACTION As Integer, ByVal ADD_STAT As Boolean, ByVal NAME_ACTION As String, ByVal PRICE_DOCE As String, ByVal DOT_PA As String, ByVal DOT_DOCTORS As String, ByVal DOT_T3AKOD As String) As BADR_VRow
             Dim rowBADR_VRow As BADR_VRow = CType(Me.NewRow,BADR_VRow)
-            Dim columnValuesArray() As Object = New Object() {DOCTORS_CODE, DO_NAME, DATE_HAGEZ, COUNT_ACTION, ADD_STAT, NAME_ACTION, PRICE_DOCE, DOT_PA, DOT_DOCTORS}
+            Dim columnValuesArray() As Object = New Object() {DOCTORS_CODE, DO_NAME, DATE_HAGEZ, COUNT_ACTION, ADD_STAT, NAME_ACTION, PRICE_DOCE, DOT_PA, DOT_DOCTORS, DOT_T3AKOD}
             rowBADR_VRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowBADR_VRow)
             Return rowBADR_VRow
@@ -479,6 +489,7 @@ Partial Public Class ALL_MONY
             Me.columnPRICE_DOCE = MyBase.Columns("PRICE_DOCE")
             Me.columnDOT_PA = MyBase.Columns("DOT_PA")
             Me.columnDOT_DOCTORS = MyBase.Columns("DOT_DOCTORS")
+            Me.columnDOT_T3AKOD = MyBase.Columns("DOT_T3AKOD")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -502,12 +513,15 @@ Partial Public Class ALL_MONY
             MyBase.Columns.Add(Me.columnDOT_PA)
             Me.columnDOT_DOCTORS = New Global.System.Data.DataColumn("DOT_DOCTORS", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDOT_DOCTORS)
+            Me.columnDOT_T3AKOD = New Global.System.Data.DataColumn("DOT_T3AKOD", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDOT_T3AKOD)
             Me.columnDOCTORS_CODE.MaxLength = 50
             Me.columnDO_NAME.MaxLength = 50
             Me.columnNAME_ACTION.MaxLength = 50
             Me.columnPRICE_DOCE.MaxLength = 50
             Me.columnDOT_PA.MaxLength = 50
             Me.columnDOT_DOCTORS.MaxLength = 50
+            Me.columnDOT_T3AKOD.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -789,6 +803,21 @@ Partial Public Class ALL_MONY
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property DOT_T3AKOD() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBADR_V.DOT_T3AKODColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DOT_T3AKOD' in table 'BADR_V' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBADR_V.DOT_T3AKODColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsDOCTORS_CODENull() As Boolean
             Return Me.IsNull(Me.tableBADR_V.DOCTORS_CODEColumn)
         End Function
@@ -893,6 +922,18 @@ Partial Public Class ALL_MONY
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetDOT_DOCTORSNull()
             Me(Me.tableBADR_V.DOT_DOCTORSColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDOT_T3AKODNull() As Boolean
+            Return Me.IsNull(Me.tableBADR_V.DOT_T3AKODColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDOT_T3AKODNull()
+            Me(Me.tableBADR_V.DOT_T3AKODColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1071,6 +1112,7 @@ Namespace ALL_MONYTableAdapters
             tableMapping.ColumnMappings.Add("PRICE_DOCE", "PRICE_DOCE")
             tableMapping.ColumnMappings.Add("DOT_PA", "DOT_PA")
             tableMapping.ColumnMappings.Add("DOT_DOCTORS", "DOT_DOCTORS")
+            tableMapping.ColumnMappings.Add("DOT_T3AKOD", "DOT_T3AKOD")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         

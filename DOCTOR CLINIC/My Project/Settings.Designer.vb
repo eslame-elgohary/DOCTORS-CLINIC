@@ -103,8 +103,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.111,1433\SQLEXPRESS;Initial Catalog=DOCTOR_CLINIC;Persist S"& _ 
-            "ecurity Info=True;User ID=sa;Password=xyz.1234")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=10.144.92.55,1433\SQLEXPRESS;Initial Catalog=DOCTOR_CLINIC;Persist Se"& _ 
+            "curity Info=True;User ID=sa;Password=xyz.1234")>  _
         Public ReadOnly Property sqlconn1() As String
             Get
                 Return CType(Me("sqlconn1"),String)

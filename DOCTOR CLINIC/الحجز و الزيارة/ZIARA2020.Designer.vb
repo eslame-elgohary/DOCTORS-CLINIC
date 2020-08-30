@@ -104,6 +104,9 @@ Partial Class ZIARA2020
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ADD_PA = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TXT_DAY2 = New System.Windows.Forms.Label()
+        Me.TXT_DAY = New System.Windows.Forms.Label()
+        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_TAKED = New DevExpress.XtraEditors.SimpleButton()
         Me.CH_DATE = New System.Windows.Forms.CheckBox()
@@ -157,6 +160,12 @@ Partial Class ZIARA2020
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DGES = New System.Windows.Forms.DataGridView()
+        Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TOTAL_MAML = New System.Windows.Forms.TextBox()
         Me.TXT_PASS2 = New System.Windows.Forms.TextBox()
         Me.TXT_MASROUF_RASED = New System.Windows.Forms.TextBox()
@@ -180,12 +189,9 @@ Partial Class ZIARA2020
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXT_HUSBEND = New System.Windows.Forms.TextBox()
+        Me.TXT_HUSBEND2 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.P_HAGEZ.SuspendLayout()
@@ -305,6 +311,8 @@ Partial Class ZIARA2020
         '
         'G_EDIT
         '
+        Me.G_EDIT.Controls.Add(Me.TXT_HUSBEND2)
+        Me.G_EDIT.Controls.Add(Me.Label33)
         Me.G_EDIT.Controls.Add(Me.Label32)
         Me.G_EDIT.Controls.Add(Me.TXT_TEL_AQAREP2)
         Me.G_EDIT.Controls.Add(Me.CH_TEL_AQAREP2)
@@ -490,6 +498,7 @@ Partial Class ZIARA2020
         Me.TXT_ACTION_PRIC2.Name = "TXT_ACTION_PRIC2"
         Me.TXT_ACTION_PRIC2.Size = New System.Drawing.Size(195, 29)
         Me.TXT_ACTION_PRIC2.TabIndex = 110
+        Me.TXT_ACTION_PRIC2.Visible = False
         '
         'Label23
         '
@@ -499,6 +508,7 @@ Partial Class ZIARA2020
         Me.Label23.Size = New System.Drawing.Size(91, 21)
         Me.Label23.TabIndex = 109
         Me.Label23.Text = "قيمة الأجراء :"
+        Me.Label23.Visible = False
         '
         'TXT_ACTION2
         '
@@ -511,6 +521,7 @@ Partial Class ZIARA2020
         Me.TXT_ACTION2.Name = "TXT_ACTION2"
         Me.TXT_ACTION2.Size = New System.Drawing.Size(248, 29)
         Me.TXT_ACTION2.TabIndex = 107
+        Me.TXT_ACTION2.Visible = False
         '
         'Label24
         '
@@ -520,6 +531,7 @@ Partial Class ZIARA2020
         Me.Label24.Size = New System.Drawing.Size(57, 21)
         Me.Label24.TabIndex = 106
         Me.Label24.Text = "الأجراء :"
+        Me.Label24.Visible = False
         '
         'TXT_CODE2
         '
@@ -765,6 +777,7 @@ Partial Class ZIARA2020
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_HUSBEND)
         Me.GroupBox1.Controls.Add(Me.Label25)
         Me.GroupBox1.Controls.Add(Me.TXT_TEL_AQAREP)
         Me.GroupBox1.Controls.Add(Me.CH_TEL_AQAREP)
@@ -954,19 +967,20 @@ Partial Class ZIARA2020
         '
         Me.TXT_ACTION_PRIC.BackColor = System.Drawing.Color.White
         Me.TXT_ACTION_PRIC.Enabled = False
-        Me.TXT_ACTION_PRIC.Location = New System.Drawing.Point(41, 67)
+        Me.TXT_ACTION_PRIC.Location = New System.Drawing.Point(40, 64)
         Me.TXT_ACTION_PRIC.Name = "TXT_ACTION_PRIC"
         Me.TXT_ACTION_PRIC.Size = New System.Drawing.Size(195, 29)
         Me.TXT_ACTION_PRIC.TabIndex = 110
+        Me.TXT_ACTION_PRIC.Visible = False
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(242, 70)
+        Me.Label13.Location = New System.Drawing.Point(598, 67)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(91, 21)
+        Me.Label13.Size = New System.Drawing.Size(119, 21)
         Me.Label13.TabIndex = 109
-        Me.Label13.Text = "قيمة الأجراء :"
+        Me.Label13.Text = "أسم أحد الاقارب :"
         '
         'TXT_ACTION
         '
@@ -979,6 +993,7 @@ Partial Class ZIARA2020
         Me.TXT_ACTION.Name = "TXT_ACTION"
         Me.TXT_ACTION.Size = New System.Drawing.Size(248, 29)
         Me.TXT_ACTION.TabIndex = 107
+        Me.TXT_ACTION.Visible = False
         '
         'Label10
         '
@@ -988,6 +1003,7 @@ Partial Class ZIARA2020
         Me.Label10.Size = New System.Drawing.Size(57, 21)
         Me.Label10.TabIndex = 106
         Me.Label10.Text = "الأجراء :"
+        Me.Label10.Visible = False
         '
         'ADD_PA
         '
@@ -1004,6 +1020,9 @@ Partial Class ZIARA2020
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Panel1.Controls.Add(Me.TXT_DAY2)
+        Me.Panel1.Controls.Add(Me.TXT_DAY)
+        Me.Panel1.Controls.Add(Me.TXT_DATE_TODAY)
         Me.Panel1.Controls.Add(Me.EXITBTN)
         Me.Panel1.Controls.Add(Me.BTN_TAKED)
         Me.Panel1.Controls.Add(Me.CH_DATE)
@@ -1020,6 +1039,38 @@ Partial Class ZIARA2020
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(261, 568)
         Me.Panel1.TabIndex = 0
+        '
+        'TXT_DAY2
+        '
+        Me.TXT_DAY2.AutoSize = True
+        Me.TXT_DAY2.Location = New System.Drawing.Point(57, 361)
+        Me.TXT_DAY2.Name = "TXT_DAY2"
+        Me.TXT_DAY2.Size = New System.Drawing.Size(18, 21)
+        Me.TXT_DAY2.TabIndex = 122
+        Me.TXT_DAY2.Text = "2"
+        Me.TXT_DAY2.Visible = False
+        '
+        'TXT_DAY
+        '
+        Me.TXT_DAY.AutoSize = True
+        Me.TXT_DAY.Location = New System.Drawing.Point(122, 362)
+        Me.TXT_DAY.Name = "TXT_DAY"
+        Me.TXT_DAY.Size = New System.Drawing.Size(59, 21)
+        Me.TXT_DAY.TabIndex = 121
+        Me.TXT_DAY.Text = "0000000"
+        Me.TXT_DAY.Visible = False
+        '
+        'TXT_DATE_TODAY
+        '
+        Me.TXT_DATE_TODAY.CalendarMonthBackground = System.Drawing.Color.White
+        Me.TXT_DATE_TODAY.Enabled = False
+        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(40, 329)
+        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
+        Me.TXT_DATE_TODAY.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(184, 29)
+        Me.TXT_DATE_TODAY.TabIndex = 120
+        Me.TXT_DATE_TODAY.Visible = False
         '
         'EXITBTN
         '
@@ -1584,6 +1635,52 @@ Partial Class ZIARA2020
         Me.DGES.Size = New System.Drawing.Size(993, 268)
         Me.DGES.TabIndex = 130
         '
+        'Column19
+        '
+        Me.Column19.DataPropertyName = "PA_NAME"
+        Me.Column19.HeaderText = "أسم المريض"
+        Me.Column19.Name = "Column19"
+        Me.Column19.ReadOnly = True
+        '
+        'Column14
+        '
+        Me.Column14.DataPropertyName = "ADD_SAFY"
+        Me.Column14.FillWeight = 40.0!
+        Me.Column14.HeaderText = "مبلغ الاسترداد"
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
+        '
+        'Column15
+        '
+        Me.Column15.DataPropertyName = "ADD_INFO"
+        Me.Column15.HeaderText = "سبب الأسترداد"
+        Me.Column15.Name = "Column15"
+        Me.Column15.ReadOnly = True
+        '
+        'Column16
+        '
+        Me.Column16.DataPropertyName = "ADD_USER_EDIT"
+        Me.Column16.FillWeight = 40.0!
+        Me.Column16.HeaderText = "القائم بالأسترداد"
+        Me.Column16.Name = "Column16"
+        Me.Column16.ReadOnly = True
+        '
+        'Column17
+        '
+        Me.Column17.DataPropertyName = "ADD_DATE_EDIT"
+        Me.Column17.FillWeight = 40.0!
+        Me.Column17.HeaderText = "تاريخ الاسترداد"
+        Me.Column17.Name = "Column17"
+        Me.Column17.ReadOnly = True
+        '
+        'Column18
+        '
+        Me.Column18.DataPropertyName = "ADD_TIME_EDIT"
+        Me.Column18.FillWeight = 40.0!
+        Me.Column18.HeaderText = "وقت الاسترداد"
+        Me.Column18.Name = "Column18"
+        Me.Column18.ReadOnly = True
+        '
         'TOTAL_MAML
         '
         Me.TOTAL_MAML.Location = New System.Drawing.Point(541, 230)
@@ -1820,51 +1917,32 @@ Partial Class ZIARA2020
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
-        'Column19
+        'TXT_HUSBEND
         '
-        Me.Column19.DataPropertyName = "PA_NAME"
-        Me.Column19.HeaderText = "أسم المريض"
-        Me.Column19.Name = "Column19"
-        Me.Column19.ReadOnly = True
+        Me.TXT_HUSBEND.BackColor = System.Drawing.Color.White
+        Me.TXT_HUSBEND.Enabled = False
+        Me.TXT_HUSBEND.Location = New System.Drawing.Point(312, 64)
+        Me.TXT_HUSBEND.Name = "TXT_HUSBEND"
+        Me.TXT_HUSBEND.Size = New System.Drawing.Size(282, 29)
+        Me.TXT_HUSBEND.TabIndex = 118
         '
-        'Column14
+        'TXT_HUSBEND2
         '
-        Me.Column14.DataPropertyName = "ADD_SAFY"
-        Me.Column14.FillWeight = 40.0!
-        Me.Column14.HeaderText = "مبلغ الاسترداد"
-        Me.Column14.Name = "Column14"
-        Me.Column14.ReadOnly = True
+        Me.TXT_HUSBEND2.BackColor = System.Drawing.Color.White
+        Me.TXT_HUSBEND2.Enabled = False
+        Me.TXT_HUSBEND2.Location = New System.Drawing.Point(319, 63)
+        Me.TXT_HUSBEND2.Name = "TXT_HUSBEND2"
+        Me.TXT_HUSBEND2.Size = New System.Drawing.Size(282, 29)
+        Me.TXT_HUSBEND2.TabIndex = 124
         '
-        'Column15
+        'Label33
         '
-        Me.Column15.DataPropertyName = "ADD_INFO"
-        Me.Column15.HeaderText = "سبب الأسترداد"
-        Me.Column15.Name = "Column15"
-        Me.Column15.ReadOnly = True
-        '
-        'Column16
-        '
-        Me.Column16.DataPropertyName = "ADD_USER_EDIT"
-        Me.Column16.FillWeight = 40.0!
-        Me.Column16.HeaderText = "القائم بالأسترداد"
-        Me.Column16.Name = "Column16"
-        Me.Column16.ReadOnly = True
-        '
-        'Column17
-        '
-        Me.Column17.DataPropertyName = "ADD_DATE_EDIT"
-        Me.Column17.FillWeight = 40.0!
-        Me.Column17.HeaderText = "تاريخ الاسترداد"
-        Me.Column17.Name = "Column17"
-        Me.Column17.ReadOnly = True
-        '
-        'Column18
-        '
-        Me.Column18.DataPropertyName = "ADD_TIME_EDIT"
-        Me.Column18.FillWeight = 40.0!
-        Me.Column18.HeaderText = "وقت الاسترداد"
-        Me.Column18.Name = "Column18"
-        Me.Column18.ReadOnly = True
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(605, 66)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(119, 21)
+        Me.Label33.TabIndex = 123
+        Me.Label33.Text = "أسم أحد الاقارب :"
         '
         'ZIARA2020
         '
@@ -2087,4 +2165,10 @@ Partial Class ZIARA2020
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents Column17 As DataGridViewTextBoxColumn
     Friend WithEvents Column18 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_DATE_TODAY As DateTimePicker
+    Friend WithEvents TXT_DAY2 As Label
+    Friend WithEvents TXT_DAY As Label
+    Friend WithEvents TXT_HUSBEND As TextBox
+    Friend WithEvents TXT_HUSBEND2 As TextBox
+    Friend WithEvents Label33 As Label
 End Class

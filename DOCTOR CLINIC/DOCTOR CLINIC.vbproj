@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP38\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP430\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>58</ApplicationRevision>
+    <ApplicationRevision>64</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -187,6 +187,12 @@
     <Compile Include="أتعاب طبيب\ATAB_DOCTORS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="أتعاب طبيب\MALGHE_HAGEZ_ATAB.vb">
+      <DependentUpon>MALGHE_HAGEZ_ATAB.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.Designer.vb">
       <DependentUpon>SEARCH_ATAB_DOCTORS.vb</DependentUpon>
     </Compile>
@@ -268,7 +274,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
     </Compile>
-    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.Designer.vb">
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\estrdad.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>estrdad.xsd</DependentUpon>
@@ -319,13 +325,13 @@
     <Compile Include="الحجز\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.Designer.vb">
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.Designer.vb">
       <DependentUpon>ADD_MONY2_DOCTOR.vb</DependentUpon>
     </Compile>
-    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.vb">
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_REP.vb">
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\ADD_MONY2_REP.vb">
       <DependentUpon>ADD_MONY2_REP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
@@ -827,16 +833,16 @@
     <Compile Include="المستخدمين\USERSLAHFRM.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="المعمل\ADDTHLELMAMLPAFRM.Designer.vb">
+    <Compile Include="الحسابات\استلام نقدية\ادخال تحاليل المريض\ADDTHLELMAMLPAFRM.Designer.vb">
       <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
     </Compile>
-    <Compile Include="المعمل\ADDTHLELMAMLPAFRM.vb">
+    <Compile Include="الحسابات\استلام نقدية\ادخال تحاليل المريض\ADDTHLELMAMLPAFRM.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="المعمل\SEARCHPRICETHLELFRM.Designer.vb">
+    <Compile Include="الحسابات\استلام نقدية\ادخال تحاليل المريض\SEARCHPRICETHLELFRM.Designer.vb">
       <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
     </Compile>
-    <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
+    <Compile Include="الحسابات\استلام نقدية\ادخال تحاليل المريض\SEARCHPRICETHLELFRM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="تأخر الأنجاب\ENGABREB_TEST.vb">
@@ -1080,22 +1086,22 @@
     <Compile Include="روشتة علاج\SEARCH_R_DOCTOR.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الحسابات\صرف نقدية\SARF_MASRUF_FRM.Designer.vb">
+    <Compile Include="الحسابات\صرف نقدية\مصروفات\SARF_MASRUF_FRM.Designer.vb">
       <DependentUpon>SARF_MASRUF_FRM.vb</DependentUpon>
     </Compile>
-    <Compile Include="الحسابات\صرف نقدية\SARF_MASRUF_FRM.vb">
+    <Compile Include="الحسابات\صرف نقدية\مصروفات\SARF_MASRUF_FRM.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF2.Designer.vb">
+    <Compile Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF2.Designer.vb">
       <DependentUpon>SEARCH_MASROUF2.vb</DependentUpon>
     </Compile>
-    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF2.vb">
+    <Compile Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF.Designer.vb">
+    <Compile Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF.Designer.vb">
       <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
     </Compile>
-    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF.vb">
+    <Compile Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="عيادة النساء\FOLLOWUPFRM.Designer.vb">
@@ -1212,6 +1218,10 @@
     <EmbeddedResource Include="أتعاب طبيب\ATAB_DOCTORS.resx">
       <DependentUpon>ATAB_DOCTORS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="أتعاب طبيب\MALGHE_HAGEZ_ATAB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MALGHE_HAGEZ_ATAB.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.resx">
       <DependentUpon>SEARCH_ATAB_DOCTORS.vb</DependentUpon>
     </EmbeddedResource>
@@ -1317,10 +1327,10 @@
     <EmbeddedResource Include="الحجز\HAGEZ_REP.resx">
       <DependentUpon>HAGEZ_REP.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.resx">
+    <EmbeddedResource Include="الحسابات\صرف نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.resx">
       <DependentUpon>ADD_MONY2_DOCTOR.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الحسابات\استلام نقدية\استرداد عيادة\ADD_MONY2_REP.rpt">
+    <EmbeddedResource Include="الحسابات\صرف نقدية\استرداد عيادة\ADD_MONY2_REP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ADD_MONY2_REP.vb</LastGenOutput>
     </EmbeddedResource>
@@ -1487,10 +1497,10 @@
     <EmbeddedResource Include="المستخدمين\USERSLAHFRM.resx">
       <DependentUpon>USERSLAHFRM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="المعمل\ADDTHLELMAMLPAFRM.resx">
+    <EmbeddedResource Include="الحسابات\استلام نقدية\ادخال تحاليل المريض\ADDTHLELMAMLPAFRM.resx">
       <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="المعمل\SEARCHPRICETHLELFRM.resx">
+    <EmbeddedResource Include="الحسابات\استلام نقدية\ادخال تحاليل المريض\SEARCHPRICETHLELFRM.resx">
       <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="تأخر الأنجاب\ENGABFRM.resx">
@@ -1616,13 +1626,13 @@
     <EmbeddedResource Include="روشتة علاج\SEARCH_R_DOCTOR.resx">
       <DependentUpon>SEARCH_R_DOCTOR.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الحسابات\صرف نقدية\SARF_MASRUF_FRM.resx">
+    <EmbeddedResource Include="الحسابات\صرف نقدية\مصروفات\SARF_MASRUF_FRM.resx">
       <DependentUpon>SARF_MASRUF_FRM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الحسابات\صرف نقدية\SEARCH_MASROUF2.resx">
+    <EmbeddedResource Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF2.resx">
       <DependentUpon>SEARCH_MASROUF2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="الحسابات\صرف نقدية\SEARCH_MASROUF.resx">
+    <EmbeddedResource Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF.resx">
       <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLLOWUPFRM.resx">
@@ -1715,15 +1725,15 @@
     <None Include="الحجز و الزيارة\ALL_MONY.xss">
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
     </None>
-    <None Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.xsc">
+    <None Include="الحسابات\صرف نقدية\استرداد عيادة\estrdad.xsc">
       <DependentUpon>estrdad.xsd</DependentUpon>
     </None>
-    <None Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.xsd">
+    <None Include="الحسابات\صرف نقدية\استرداد عيادة\estrdad.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>estrdad.Designer.vb</LastGenOutput>
     </None>
-    <None Include="الحسابات\استلام نقدية\استرداد عيادة\estrdad.xss">
+    <None Include="الحسابات\صرف نقدية\استرداد عيادة\estrdad.xss">
       <DependentUpon>estrdad.xsd</DependentUpon>
     </None>
     <None Include="الحجز و الزيارة\HAGEZ_DT.xsc">
@@ -1908,6 +1918,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="67520_doctor.ico" />
+    <None Include="Resources\iconfinder_Dental_-_Tooth_-_Dentist_-_Dentistry_04_2185086.png" />
     <None Include="Resources\icons8-search-64.png" />
     <None Include="Resources\icons8-control-panel-48.png" />
     <None Include="Resources\icons8-credit-card-48.png" />

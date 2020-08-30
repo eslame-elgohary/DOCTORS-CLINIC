@@ -86,6 +86,7 @@
         TXT_CODE.Text = CODE_GENE("OUT_MASROUF", "ID") + 1
         '""""""""""""""""""""""""""""""
         FILL_DOCTOR()
+        TXT_TYPEMONY.Text = ""
         TXT_DATE.Text = Date.Today
         ACTIVE_DOCTOR_Click(sender, e)
     End Sub
@@ -96,8 +97,12 @@
         DA.Fill(DT)
         For I = 0 To DT.Rows.Count - 1
             TXT_DOCTOR_CODE.Text = DT.Rows(I).Item("DO_CODE")
+            TXT_TYPEMONY.Text = DT.Rows(I).Item("DO_TYPEYMONY")
         Next
         ' ACTIVE_DOCTOR_Click(sender, e)
+        If TXT_TYPEMONY.Text = "يومي" Then
+
+        End If
     End Sub
 
     Private Sub ATAB_DOCTORS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -152,6 +157,7 @@
                     TXT_DOCTOR.Select()
                     Exit Sub
                 End If
+
                 Dim REEMDT As New DataTable
                 Dim REEMDA As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE KHAZINA_DATE='" & TXT_DATE.Text & "' AND CODE_DT2='" & TXT_DOCTOR.Text & "'", SqlConn)
                 REEMDA.Fill(REEMDT)
@@ -316,8 +322,8 @@
                     Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
                     DA2.Update(DT)
 
-                    '==========================================================================
-                    PRINTBTN_Click(sender, e)
+                '==========================================================================
+                PRINTBTN_Click(sender, e)
                 MessageBox.Show("تمت عملية تعديل بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
                 End If
@@ -333,6 +339,23 @@
     End Sub
 
     Private Sub PRINTBTN_Click(sender As Object, e As EventArgs) Handles PRINTBTN.Click
+        Dim DT As New DataTable
+        Dim KARMA As String
+        KARMA = "SELECT * FROM BADR_V WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND ADD_STAT='TRUE' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "'"
+        Dim DA As New SqlClient.SqlDataAdapter(KARMA, SqlConn)
+        DA.Fill(DT)
+
+        Dim REP As New MALGHE_HAGEZ_ATAB
+        REP.SetDataSource(DT)
+        Dim FRM As New REPFORALL
+        FRM.CrystalReportViewer1.ReportSource = REP
+        FRM.ShowDialog()
+
+
+
+
+
+
 
     End Sub
 End Class

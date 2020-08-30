@@ -403,117 +403,230 @@
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
 
                 Dim DT As New DataTable
-                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR ", SqlConn)
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DOCTOR WHERE ADD_DATE = '" & TXT_DATE.Text & "' AND ADD_DOCTOR_CODE = '" & CODE_DOCTOR.Text & "' AND ADD_PA_CODE = '" & PA_CODE.Text & "' AND ADD_STAT='TRUE' ", SqlConn)
                 DA.Fill(DT)
+                If DT.Rows.Count > 0 Then
+                    If MessageBox.Show("المريض له أيصال فى نفس اليوم لنفس الطبيب ، هل ترغب فى الأستمرار ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.No Then
+                        PA_NAME.Select()
+                        Exit Sub
+                    Else
 
-                '""""""""""""""" الترقيم التلقائي """"""""""""""
-                TXT_CODE.Text = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
-                '""""""""""""""""""""""""""""""
+                        '""""""""""""""" الترقيم التلقائي """"""""""""""
+                        TXT_CODE.Text = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
+                        '""""""""""""""""""""""""""""""
 
-                Dim DR = DT.NewRow
-                DR!ADD_CODE = TXT_CODE.Text
-                DR!ADD_DATE = TXT_DATE.Text
-                DR!ADD_TYPE = "العيادات"
-                DR!CODE_KHAZINA = KHAZINA_CODE.Text
-                DR!ADD_PA_CODE = PA_CODE.Text
-                DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
-                DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
-                DR!ADD_TOTAL = TOTAL.Text
-                DR!ADD_DIS = DISCOUNT.Text
-                DR!ADD_SAFY = SAFY.Text
-                DR!ADD_SAFY_AR = SAFY_AR.Text
-                DR!ADD_STAT = True
-                DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
-                DR!ADD_USER_ADD = USER_ADD.Text
-                DR!ADD_DATE_ADD = DATE_ADD.Text
-                DR!ADD_TIME_ADD = TIME_ADD.Text
-                DR!ADD_USER_EDIT = "0"
-                DR!ADD_DATE_EDIT = "0"
-                DR!ADD_TIME_EDIT = "0"
+                        Dim DR = DT.NewRow
+                        DR!ADD_CODE = TXT_CODE.Text
+                        DR!ADD_DATE = TXT_DATE.Text
+                        DR!ADD_TYPE = "العيادات"
+                        DR!CODE_KHAZINA = KHAZINA_CODE.Text
+                        DR!ADD_PA_CODE = PA_CODE.Text
+                        DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
+                        DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
+                        DR!ADD_TOTAL = TOTAL.Text
+                        DR!ADD_DIS = DISCOUNT.Text
+                        DR!ADD_SAFY = SAFY.Text
+                        DR!ADD_SAFY_AR = SAFY_AR.Text
+                        DR!ADD_STAT = True
+                        DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
+                        DR!ADD_USER_ADD = USER_ADD.Text
+                        DR!ADD_DATE_ADD = DATE_ADD.Text
+                        DR!ADD_TIME_ADD = TIME_ADD.Text
+                        DR!ADD_USER_EDIT = "0"
+                        DR!ADD_DATE_EDIT = "0"
+                        DR!ADD_TIME_EDIT = "0"
 
-                DT.Rows.Add(DR)
-                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                DA.Update(DT)
+                        DT.Rows.Add(DR)
+                        Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                        DA.Update(DT)
 
-                '============================== أضافة تفاصيل الايصال ========================
-                Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_DOCTOR", SqlConn)
-                DA1.Fill(DT)
-                For I = 0 To DataGridView1.Rows.Count - 1
-                    Dim DR1 = DT.NewRow
-                    DR1!ADD_CODE = TXT_CODE.Text
-                    DR1!ADD_DATE = TXT_DATE.Text
-                    DR1!CODE_ACTION = DataGridView1.Rows(I).Cells(0).Value
-                    DR1!NAME_ACTION = DataGridView1.Rows(I).Cells(2).Value
-                    DR1!PRICE_DOCE = DataGridView1.Rows(I).Cells(3).Value
-                    DR1!MID = DataGridView1.Rows(I).Cells(1).Value
-                    DR1!STAT_DT = True
-                    DT.Rows.Add(DR1)
-                    Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
-                    DA1.Update(DT)
-                Next
+                        '============================== أضافة تفاصيل الايصال ========================
+                        Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_DOCTOR", SqlConn)
+                        DA1.Fill(DT)
+                        For I = 0 To DataGridView1.Rows.Count - 1
+                            Dim DR1 = DT.NewRow
+                            DR1!ADD_CODE = TXT_CODE.Text
+                            DR1!ADD_DATE = TXT_DATE.Text
+                            DR1!CODE_ACTION = DataGridView1.Rows(I).Cells(0).Value
+                            DR1!NAME_ACTION = DataGridView1.Rows(I).Cells(2).Value
+                            DR1!PRICE_DOCE = DataGridView1.Rows(I).Cells(3).Value
+                            DR1!MID = DataGridView1.Rows(I).Cells(1).Value
+                            DR1!STAT_DT = True
+                            DT.Rows.Add(DR1)
+                            Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
+                            DA1.Update(DT)
+                        Next
 
-                '============================== أضافة تفاصيل للخزينة ========================
-                If TXT_TYPEMONY.SelectedIndex = 0 Then
-                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
-                    DA2.Fill(DT)
-                    Dim DR2 = DT.NewRow
-                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                    DR2!KHAZINA_DATE = TXT_DATE.Text
-                    DR2!CODE_DT = TXT_CODE.Text
-                    DR2!CODE_DT2 = "1"
-                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
-                    DR2!KHAZINA_IN = SAFY.Text
-                    DR2!MONY_TYPE = "نقدي"
-                    DR2!KHAZINA_OUT = "0"
-                    DR2!STAT_KHAZINA = True
-                    DT.Rows.Add(DR2)
-                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                    DA2.Update(DT)
+                        '============================== أضافة تفاصيل للخزينة ========================
+                        If TXT_TYPEMONY.SelectedIndex = 0 Then
+                            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                            DA2.Fill(DT)
+                            Dim DR2 = DT.NewRow
+                            DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                            DR2!KHAZINA_DATE = TXT_DATE.Text
+                            DR2!CODE_DT = TXT_CODE.Text
+                            DR2!CODE_DT2 = "1"
+                            DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
+                            DR2!KHAZINA_IN = SAFY.Text
+                            DR2!MONY_TYPE = "نقدي"
+                            DR2!KHAZINA_OUT = "0"
+                            DR2!STAT_KHAZINA = True
+                            DT.Rows.Add(DR2)
+                            Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                            DA2.Update(DT)
+                        End If
+
+                        If TXT_TYPEMONY.SelectedIndex = 1 Then
+                            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                            DA2.Fill(DT)
+                            Dim DR2 = DT.NewRow
+                            DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                            DR2!KHAZINA_DATE = TXT_DATE.Text
+                            DR2!CODE_DT = TXT_CODE.Text
+                            DR2!CODE_DT2 = "1"
+                            DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
+                            DR2!KHAZINA_IN = SAFY.Text
+                            DR2!KHAZINA_OUT = "0"
+                            DR2!MONY_TYPE = "فيزا"
+                            DR2!STAT_KHAZINA = True
+                            DT.Rows.Add(DR2)
+                            Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                            DA2.Update(DT)
+                        End If
+                        If TXT_TYPEMONY.SelectedIndex = 2 Then
+                            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                            DA2.Fill(DT)
+                            Dim DR2 = DT.NewRow
+                            DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                            DR2!KHAZINA_DATE = TXT_DATE.Text
+                            DR2!CODE_DT = TXT_CODE.Text
+                            DR2!CODE_DT2 = "1"
+                            DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
+                            DR2!KHAZINA_IN = SAFY.Text
+                            DR2!KHAZINA_OUT = "0"
+                            DR2!MONY_TYPE = "بريميوم كارد"
+                            DR2!STAT_KHAZINA = True
+                            DT.Rows.Add(DR2)
+                            Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                            DA2.Update(DT)
+                        End If
+
+                        PRINTBTN_Click(sender, e)
+
+                        MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                        NEWBTN_Click(sender, e)
+
+                    End If
+                Else
+
+                    '""""""""""""""" الترقيم التلقائي """"""""""""""
+                    TXT_CODE.Text = CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1
+                    '""""""""""""""""""""""""""""""
+
+                    Dim DR = DT.NewRow
+                    DR!ADD_CODE = TXT_CODE.Text
+                    DR!ADD_DATE = TXT_DATE.Text
+                    DR!ADD_TYPE = "العيادات"
+                    DR!CODE_KHAZINA = KHAZINA_CODE.Text
+                    DR!ADD_PA_CODE = PA_CODE.Text
+                    DR!ADD_TKHASOS_CODE = TA_CODE_TKHASOS.Text
+                    DR!ADD_DOCTOR_CODE = CODE_DOCTOR.Text
+                    DR!ADD_TOTAL = TOTAL.Text
+                    DR!ADD_DIS = DISCOUNT.Text
+                    DR!ADD_SAFY = SAFY.Text
+                    DR!ADD_SAFY_AR = SAFY_AR.Text
+                    DR!ADD_STAT = True
+                    DR!ADD_TYPE_MONY = TXT_TYPEMONY.Text
+                    DR!ADD_USER_ADD = USER_ADD.Text
+                    DR!ADD_DATE_ADD = DATE_ADD.Text
+                    DR!ADD_TIME_ADD = TIME_ADD.Text
+                    DR!ADD_USER_EDIT = "0"
+                    DR!ADD_DATE_EDIT = "0"
+                    DR!ADD_TIME_EDIT = "0"
+
+                    DT.Rows.Add(DR)
+                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                    DA.Update(DT)
+
+                    '============================== أضافة تفاصيل الايصال ========================
+                    Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_DOCTOR", SqlConn)
+                    DA1.Fill(DT)
+                    For I = 0 To DataGridView1.Rows.Count - 1
+                        Dim DR1 = DT.NewRow
+                        DR1!ADD_CODE = TXT_CODE.Text
+                        DR1!ADD_DATE = TXT_DATE.Text
+                        DR1!CODE_ACTION = DataGridView1.Rows(I).Cells(0).Value
+                        DR1!NAME_ACTION = DataGridView1.Rows(I).Cells(2).Value
+                        DR1!PRICE_DOCE = DataGridView1.Rows(I).Cells(3).Value
+                        DR1!MID = DataGridView1.Rows(I).Cells(1).Value
+                        DR1!STAT_DT = True
+                        DT.Rows.Add(DR1)
+                        Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
+                        DA1.Update(DT)
+                    Next
+
+                    '============================== أضافة تفاصيل للخزينة ========================
+                    If TXT_TYPEMONY.SelectedIndex = 0 Then
+                        Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                        DA2.Fill(DT)
+                        Dim DR2 = DT.NewRow
+                        DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                        DR2!KHAZINA_DATE = TXT_DATE.Text
+                        DR2!CODE_DT = TXT_CODE.Text
+                        DR2!CODE_DT2 = "1"
+                        DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
+                        DR2!KHAZINA_IN = SAFY.Text
+                        DR2!MONY_TYPE = "نقدي"
+                        DR2!KHAZINA_OUT = "0"
+                        DR2!STAT_KHAZINA = True
+                        DT.Rows.Add(DR2)
+                        Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                        DA2.Update(DT)
+                    End If
+
+                    If TXT_TYPEMONY.SelectedIndex = 1 Then
+                        Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                        DA2.Fill(DT)
+                        Dim DR2 = DT.NewRow
+                        DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                        DR2!KHAZINA_DATE = TXT_DATE.Text
+                        DR2!CODE_DT = TXT_CODE.Text
+                        DR2!CODE_DT2 = "1"
+                        DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
+                        DR2!KHAZINA_IN = SAFY.Text
+                        DR2!KHAZINA_OUT = "0"
+                        DR2!MONY_TYPE = "فيزا"
+                        DR2!STAT_KHAZINA = True
+                        DT.Rows.Add(DR2)
+                        Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                        DA2.Update(DT)
+                    End If
+                    If TXT_TYPEMONY.SelectedIndex = 2 Then
+                        Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
+                        DA2.Fill(DT)
+                        Dim DR2 = DT.NewRow
+                        DR2!KHAZINA_CODE = KHAZINA_CODE.Text
+                        DR2!KHAZINA_DATE = TXT_DATE.Text
+                        DR2!CODE_DT = TXT_CODE.Text
+                        DR2!CODE_DT2 = "1"
+                        DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
+                        DR2!KHAZINA_IN = SAFY.Text
+                        DR2!KHAZINA_OUT = "0"
+                        DR2!MONY_TYPE = "بريميوم كارد"
+                        DR2!STAT_KHAZINA = True
+                        DT.Rows.Add(DR2)
+                        Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
+                        DA2.Update(DT)
+                    End If
+
+                    PRINTBTN_Click(sender, e)
+
+                    MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    NEWBTN_Click(sender, e)
+
                 End If
-
-                If TXT_TYPEMONY.SelectedIndex = 1 Then
-                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
-                    DA2.Fill(DT)
-                    Dim DR2 = DT.NewRow
-                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                    DR2!KHAZINA_DATE = TXT_DATE.Text
-                    DR2!CODE_DT = TXT_CODE.Text
-                    DR2!CODE_DT2 = "1"
-                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
-                    DR2!KHAZINA_IN = SAFY.Text
-                    DR2!KHAZINA_OUT = "0"
-                    DR2!MONY_TYPE = "فيزا"
-                    DR2!STAT_KHAZINA = True
-                    DT.Rows.Add(DR2)
-                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                    DA2.Update(DT)
-                End If
-                If TXT_TYPEMONY.SelectedIndex = 2 Then
-                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT", SqlConn)
-                    DA2.Fill(DT)
-                    Dim DR2 = DT.NewRow
-                    DR2!KHAZINA_CODE = KHAZINA_CODE.Text
-                    DR2!KHAZINA_DATE = TXT_DATE.Text
-                    DR2!CODE_DT = TXT_CODE.Text
-                    DR2!CODE_DT2 = "1"
-                    DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
-                    DR2!KHAZINA_IN = SAFY.Text
-                    DR2!KHAZINA_OUT = "0"
-                    DR2!MONY_TYPE = "بريميوم كارد"
-                    DR2!STAT_KHAZINA = True
-                    DT.Rows.Add(DR2)
-                    Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
-                    DA2.Update(DT)
-                End If
-
-                '===================== اضافة تفاصيل الحجز ==============================
-
-                '==========================================================================
-                PRINTBTN_Click(sender, e)
-                MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                NEWBTN_Click(sender, e)
-
-                ' Me.Close()
 
             Else
                 MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -764,92 +877,96 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("M4").ToString = True Then
                 '===========================================================
+                'Dim DT As New DataTable
+                'With DT
+                '    .Columns.Add("ADD_CODE")
+                '    .Columns.Add("ADD_DATE")
+                '    .Columns.Add("ADD_PA_CODE")
+                '    .Columns.Add("PA_NAME")
+                '    .Columns.Add("PA_TYPE")
+                '    .Columns.Add("PA_AGE")
+                '    .Columns.Add("KHAZINA_NAME")
+                '    .Columns.Add("TAKH_NAME")
+                '    .Columns.Add("DO_NAME")
+                '    .Columns.Add("MID")
+                '    .Columns.Add("NAME_ACTION")
+                '    .Columns.Add("PRICE_DOCE")
+                '    .Columns.Add("ADD_TOTAL")
+                '    .Columns.Add("ADD_DIS")
+                '    .Columns.Add("ADD_SAFY")
+                '    .Columns.Add("ADD_SAFY_AR")
+                '    .Columns.Add("ADD_USER_ADD")
+                '    .Columns.Add("ADD_TYPE_MONY")
+                'End With
+                'For I As Integer = 0 To DataGridView1.Rows.Count - 1
+                '    If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
+                '        DT.Rows.Add(CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, TA_TKHASOS.Text, TXT_DOCTOR.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text, TXT_TYPEMONY.Text)
+                '    End If
+                'Next
 
                 Dim DT As New DataTable
-                With DT
-                    .Columns.Add("ADD_CODE")
-                    .Columns.Add("ADD_DATE")
-                    .Columns.Add("ADD_PA_CODE")
-                    .Columns.Add("PA_NAME")
-                    .Columns.Add("PA_TYPE")
-                    .Columns.Add("PA_AGE")
-                    .Columns.Add("KHAZINA_NAME")
-                    .Columns.Add("TAKH_NAME")
-                    .Columns.Add("DO_NAME")
-                    .Columns.Add("MID")
-                    .Columns.Add("NAME_ACTION")
-                    .Columns.Add("PRICE_DOCE")
-                    .Columns.Add("ADD_TOTAL")
-                    .Columns.Add("ADD_DIS")
-                    .Columns.Add("ADD_SAFY")
-                    .Columns.Add("ADD_SAFY_AR")
-                    .Columns.Add("ADD_USER_ADD")
-                    .Columns.Add("ADD_TYPE_MONY")
-                End With
-                For I As Integer = 0 To DataGridView1.Rows.Count - 1
-                    If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
-                        DT.Rows.Add(CODE_GENE("ADD_MONY_DOCTOR", "ID") + 1, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, TA_TKHASOS.Text, TXT_DOCTOR.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text, TXT_TYPEMONY.Text)
-                    End If
-                Next
-                Dim REP As New ADD_MONY_REP
-                REP.SetDataSource(DT)
-                Dim FRM As New ADD_MONY_CRS
-                FRM.CrystalReportViewer1.ReportSource = REP
-                FRM.ShowDialog()
-                '=============================================================
-            Else
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM SEARCH_ADD_MONY_DOCTOR_V WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
+                DA.Fill(DT)
+                    Dim REP As New ADD_MONY_REP
+                    REP.SetDataSource(DT)
+                    Dim FRM As New ADD_MONY_CRS
+                    FRM.CrystalReportViewer1.ReportSource = REP
+                    FRM.ShowDialog()
+
+                    '=============================================================
+                    Else
                 MessageBox.Show("عفوا ليس لديك صلاحية للطباعة برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             End If
         End If
     End Sub
     Sub printedit()
-        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
-        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
-        Dim DS0 As New DataSet
-        ADP0.Fill(DS0)
-        Dim DT0 = DS0.Tables(0)
-        If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("M4").ToString = True Then
-                '===========================================================
+        'Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        'Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        'Dim DS0 As New DataSet
+        'ADP0.Fill(DS0)
+        'Dim DT0 = DS0.Tables(0)
+        'If DT0.Rows.Count > 0 Then
+        '    If DT0.Rows(0).Item("M4").ToString = True Then
+        '        '===========================================================
 
-                Dim DT As New DataTable
-                With DT
-                    .Columns.Add("ADD_CODE")
-                    .Columns.Add("ADD_DATE")
-                    .Columns.Add("ADD_PA_CODE")
-                    .Columns.Add("PA_NAME")
-                    .Columns.Add("PA_TYPE")
-                    .Columns.Add("PA_AGE")
-                    .Columns.Add("KHAZINA_NAME")
-                    .Columns.Add("TAKH_NAME")
-                    .Columns.Add("DO_NAME")
-                    .Columns.Add("MID")
-                    .Columns.Add("NAME_ACTION")
-                    .Columns.Add("PRICE_DOCE")
-                    .Columns.Add("ADD_TOTAL")
-                    .Columns.Add("ADD_DIS")
-                    .Columns.Add("ADD_SAFY")
-                    .Columns.Add("ADD_SAFY_AR")
-                    .Columns.Add("ADD_USER_ADD")
-                    .Columns.Add("ADD_TYPE_MONY")
-                End With
-                For I As Integer = 0 To DataGridView1.Rows.Count - 1
-                    If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
-                        DT.Rows.Add(TXT_CODE.Text, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, TA_TKHASOS.Text, TXT_DOCTOR.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text, TXT_TYPEMONY.Text)
-                    End If
-                Next
-                Dim REP As New ADD_MONY_REP
-                REP.SetDataSource(DT)
-                Dim FRM As New ADD_MONY_CRS
-                FRM.CrystalReportViewer1.ReportSource = REP
-                FRM.ShowDialog()
-                '=============================================================
-            Else
-                MessageBox.Show("عفوا ليس لديك صلاحية للطباعة برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '        Dim DT As New DataTable
+        '        With DT
+        '            .Columns.Add("ADD_CODE")
+        '            .Columns.Add("ADD_DATE")
+        '            .Columns.Add("ADD_PA_CODE")
+        '            .Columns.Add("PA_NAME")
+        '            .Columns.Add("PA_TYPE")
+        '            .Columns.Add("PA_AGE")
+        '            .Columns.Add("KHAZINA_NAME")
+        '            .Columns.Add("TAKH_NAME")
+        '            .Columns.Add("DO_NAME")
+        '            .Columns.Add("MID")
+        '            .Columns.Add("NAME_ACTION")
+        '            .Columns.Add("PRICE_DOCE")
+        '            .Columns.Add("ADD_TOTAL")
+        '            .Columns.Add("ADD_DIS")
+        '            .Columns.Add("ADD_SAFY")
+        '            .Columns.Add("ADD_SAFY_AR")
+        '            .Columns.Add("ADD_USER_ADD")
+        '            .Columns.Add("ADD_TYPE_MONY")
+        '        End With
+        '        For I As Integer = 0 To DataGridView1.Rows.Count - 1
+        '            If DataGridView1.Rows(I).Cells(0).Value <> Nothing Then
+        '                DT.Rows.Add(TXT_CODE.Text, TXT_DATE.Text, PA_CODE.Text, PA_NAME.Text, TXT_PA_TYPE.Text, TXT_AGE.Text, KHAZINA_NAME.Text, TA_TKHASOS.Text, TXT_DOCTOR.Text, DataGridView1.Rows(I).Cells(1).Value, DataGridView1.Rows(I).Cells(2).Value, DataGridView1.Rows(I).Cells(3).Value, TOTAL.Text, DISCOUNT.Text, SAFY.Text, SAFY_AR.Text, USER_ADD.Text, TXT_TYPEMONY.Text)
+        '            End If
+        '        Next
+        '        Dim REP As New ADD_MONY_REP
+        '        REP.SetDataSource(DT)
+        '        Dim FRM As New ADD_MONY_CRS
+        '        FRM.CrystalReportViewer1.ReportSource = REP
+        '        FRM.ShowDialog()
+        '        '=============================================================
+        '    Else
+        '        MessageBox.Show("عفوا ليس لديك صلاحية للطباعة برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-            End If
-        End If
+        '    End If
+        'End If
     End Sub
 
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click

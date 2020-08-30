@@ -522,19 +522,19 @@ Partial Class HOME
         'BT_ADDMONY_DOCTOR
         '
         Me.BT_ADDMONY_DOCTOR.Name = "BT_ADDMONY_DOCTOR"
-        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(152, 22)
+        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(147, 22)
         Me.BT_ADDMONY_DOCTOR.Text = "أيصال عيادات"
         '
         'BT_ADDMONY_MAML
         '
         Me.BT_ADDMONY_MAML.Name = "BT_ADDMONY_MAML"
-        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(152, 22)
+        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(147, 22)
         Me.BT_ADDMONY_MAML.Text = "أيصال معمل"
         '
         'BTN_T3AQOD_ADD_MONY_DOC
         '
         Me.BTN_T3AQOD_ADD_MONY_DOC.Name = "BTN_T3AQOD_ADD_MONY_DOC"
-        Me.BTN_T3AQOD_ADD_MONY_DOC.Size = New System.Drawing.Size(152, 22)
+        Me.BTN_T3AQOD_ADD_MONY_DOC.Size = New System.Drawing.Size(147, 22)
         Me.BTN_T3AQOD_ADD_MONY_DOC.Text = "أيصال تعاقدات"
         Me.BTN_T3AQOD_ADD_MONY_DOC.Visible = False
         '
@@ -829,12 +829,12 @@ Partial Class HOME
         '
         'STB_RESALSE
         '
-        Me.STB_RESALSE.Image = CType(resources.GetObject("STB_RESALSE.Image"), System.Drawing.Image)
+        Me.STB_RESALSE.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_Dental___Tooth___Dentist___Dentistry_04_2185086
         Me.STB_RESALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.STB_RESALSE.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.STB_RESALSE.Name = "STB_RESALSE"
-        Me.STB_RESALSE.Size = New System.Drawing.Size(78, 52)
-        Me.STB_RESALSE.Text = "حجز"
+        Me.STB_RESALSE.Size = New System.Drawing.Size(123, 52)
+        Me.STB_RESALSE.Text = "عيادة الأسنان"
         Me.STB_RESALSE.Visible = False
         '
         'BT_ADDTHLEL_PATION

@@ -57,13 +57,14 @@
 
     End Sub
     Private Sub MONY1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MONY1.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub KHAZINA1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles KHAZINA1.SelectedIndexChanged

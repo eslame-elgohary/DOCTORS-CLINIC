@@ -134,6 +134,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property iconfinder_Dental___Tooth___Dentist___Dentistry_04_2185086() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("iconfinder_Dental_-_Tooth_-_Dentist_-_Dentistry_04_2185086", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property iconfinder_Microscope_lab_laboratory_scientific_biology_science_roscopes_5875829() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("iconfinder_Microscope-lab-laboratory-scientific-biology-science-roscopes_5875829", resourceCulture)

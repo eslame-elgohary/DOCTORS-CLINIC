@@ -60,6 +60,10 @@ Partial Class ATAB_DOCTORS
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.TXT_TYPEMONY = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TXT_DATE2 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -93,7 +97,7 @@ Partial Class ATAB_DOCTORS
         '
         Me.TXT_DATE.Checked = False
         Me.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE.Location = New System.Drawing.Point(261, 8)
+        Me.TXT_DATE.Location = New System.Drawing.Point(292, 8)
         Me.TXT_DATE.Name = "TXT_DATE"
         Me.TXT_DATE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.TXT_DATE.Size = New System.Drawing.Size(173, 29)
@@ -103,11 +107,11 @@ Partial Class ATAB_DOCTORS
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(198, 11)
+        Me.Label1.Location = New System.Drawing.Point(213, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 21)
+        Me.Label1.Size = New System.Drawing.Size(73, 21)
         Me.Label1.TabIndex = 16
-        Me.Label1.Text = "التاريخ :"
+        Me.Label1.Text = "من تاريخ :"
         '
         'DataGridView1
         '
@@ -125,7 +129,7 @@ Partial Class ATAB_DOCTORS
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(723, 260)
+        Me.DataGridView1.Size = New System.Drawing.Size(856, 260)
         Me.DataGridView1.TabIndex = 17
         '
         'Column9
@@ -184,7 +188,7 @@ Partial Class ATAB_DOCTORS
         Me.SAFY_AR.Enabled = False
         Me.SAFY_AR.Location = New System.Drawing.Point(266, 350)
         Me.SAFY_AR.Name = "SAFY_AR"
-        Me.SAFY_AR.Size = New System.Drawing.Size(469, 29)
+        Me.SAFY_AR.Size = New System.Drawing.Size(602, 29)
         Me.SAFY_AR.TabIndex = 137
         Me.SAFY_AR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -192,7 +196,7 @@ Partial Class ATAB_DOCTORS
         '
         Me.KHAZINA_CODE.BackColor = System.Drawing.Color.White
         Me.KHAZINA_CODE.Enabled = False
-        Me.KHAZINA_CODE.Location = New System.Drawing.Point(534, 3)
+        Me.KHAZINA_CODE.Location = New System.Drawing.Point(679, 38)
         Me.KHAZINA_CODE.Name = "KHAZINA_CODE"
         Me.KHAZINA_CODE.Size = New System.Drawing.Size(23, 29)
         Me.KHAZINA_CODE.TabIndex = 142
@@ -203,16 +207,16 @@ Partial Class ATAB_DOCTORS
         '
         Me.KHAZINA_NAME.BackColor = System.Drawing.Color.White
         Me.KHAZINA_NAME.Enabled = False
-        Me.KHAZINA_NAME.Location = New System.Drawing.Point(538, 8)
+        Me.KHAZINA_NAME.Location = New System.Drawing.Point(683, 43)
         Me.KHAZINA_NAME.Name = "KHAZINA_NAME"
-        Me.KHAZINA_NAME.Size = New System.Drawing.Size(197, 29)
+        Me.KHAZINA_NAME.Size = New System.Drawing.Size(185, 29)
         Me.KHAZINA_NAME.TabIndex = 141
         Me.KHAZINA_NAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(440, 12)
+        Me.Label4.Location = New System.Drawing.Point(585, 46)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(92, 21)
         Me.Label4.TabIndex = 140
@@ -248,7 +252,7 @@ Partial Class ATAB_DOCTORS
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 432)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(739, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(880, 22)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 143
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -381,12 +385,56 @@ Partial Class ATAB_DOCTORS
         Me.SAVEBTN.TabIndex = 132
         Me.SAVEBTN.Text = "حفظ"
         '
+        'TXT_TYPEMONY
+        '
+        Me.TXT_TYPEMONY.BackColor = System.Drawing.Color.White
+        Me.TXT_TYPEMONY.Enabled = False
+        Me.TXT_TYPEMONY.Location = New System.Drawing.Point(492, 43)
+        Me.TXT_TYPEMONY.Name = "TXT_TYPEMONY"
+        Me.TXT_TYPEMONY.Size = New System.Drawing.Size(87, 29)
+        Me.TXT_TYPEMONY.TabIndex = 148
+        Me.TXT_TYPEMONY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(395, 49)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(91, 21)
+        Me.Label6.TabIndex = 147
+        Me.Label6.Text = "نوع التعامل :"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(491, 9)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(80, 21)
+        Me.Label7.TabIndex = 150
+        Me.Label7.Text = "حتى تاريخ :"
+        '
+        'TXT_DATE2
+        '
+        Me.TXT_DATE2.Checked = False
+        Me.TXT_DATE2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE2.Location = New System.Drawing.Point(577, 5)
+        Me.TXT_DATE2.Name = "TXT_DATE2"
+        Me.TXT_DATE2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TXT_DATE2.Size = New System.Drawing.Size(173, 29)
+        Me.TXT_DATE2.TabIndex = 149
+        Me.TXT_DATE2.Value = New Date(2020, 4, 1, 0, 0, 0, 0)
+        Me.TXT_DATE2.Visible = False
+        '
         'ATAB_DOCTORS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(739, 454)
+        Me.ClientSize = New System.Drawing.Size(880, 454)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TXT_DATE2)
+        Me.Controls.Add(Me.TXT_TYPEMONY)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PRINTBTN)
         Me.Controls.Add(Me.SEARCHBTN)
         Me.Controls.Add(Me.EDITBTN)
@@ -464,4 +512,8 @@ Partial Class ATAB_DOCTORS
     Friend WithEvents EDITBTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SEARCHBTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents PRINTBTN As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TXT_TYPEMONY As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TXT_DATE2 As DateTimePicker
 End Class

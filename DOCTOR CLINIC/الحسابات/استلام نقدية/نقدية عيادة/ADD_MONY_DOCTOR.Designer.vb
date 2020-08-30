@@ -542,7 +542,7 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.TXT_M.BackColor = System.Drawing.Color.White
         Me.TXT_M.Enabled = False
-        Me.TXT_M.Location = New System.Drawing.Point(170, 21)
+        Me.TXT_M.Location = New System.Drawing.Point(461, 21)
         Me.TXT_M.Name = "TXT_M"
         Me.TXT_M.Size = New System.Drawing.Size(21, 29)
         Me.TXT_M.TabIndex = 58
@@ -602,7 +602,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.ACTIVE_DOCTOR.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ACTIVE_DOCTOR.Appearance.Options.UseFont = True
         Me.ACTIVE_DOCTOR.ImageOptions.Image = CType(resources.GetObject("ACTIVE_DOCTOR.ImageOptions.Image"), System.Drawing.Image)
-        Me.ACTIVE_DOCTOR.Location = New System.Drawing.Point(234, 20)
+        Me.ACTIVE_DOCTOR.Location = New System.Drawing.Point(301, 20)
         Me.ACTIVE_DOCTOR.Name = "ACTIVE_DOCTOR"
         Me.ACTIVE_DOCTOR.Size = New System.Drawing.Size(42, 35)
         Me.ACTIVE_DOCTOR.TabIndex = 56
@@ -611,16 +611,16 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.TXT_PRICE.BackColor = System.Drawing.Color.White
         Me.TXT_PRICE.Enabled = False
-        Me.TXT_PRICE.Location = New System.Drawing.Point(295, 26)
+        Me.TXT_PRICE.Location = New System.Drawing.Point(357, 26)
         Me.TXT_PRICE.Name = "TXT_PRICE"
-        Me.TXT_PRICE.Size = New System.Drawing.Size(99, 29)
+        Me.TXT_PRICE.Size = New System.Drawing.Size(90, 29)
         Me.TXT_PRICE.TabIndex = 55
         Me.TXT_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(400, 29)
+        Me.Label11.Location = New System.Drawing.Point(453, 29)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(95, 21)
         Me.Label11.TabIndex = 54
@@ -629,7 +629,7 @@ Partial Class ADD_MONY_DOCTOR
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(714, 28)
+        Me.Label13.Location = New System.Drawing.Point(734, 28)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(87, 21)
         Me.Label13.TabIndex = 53
@@ -641,7 +641,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.TXT_ACTION.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.TXT_ACTION.BackColor = System.Drawing.Color.Aqua
         Me.TXT_ACTION.FormattingEnabled = True
-        Me.TXT_ACTION.Location = New System.Drawing.Point(535, 25)
+        Me.TXT_ACTION.Location = New System.Drawing.Point(555, 25)
         Me.TXT_ACTION.Name = "TXT_ACTION"
         Me.TXT_ACTION.Size = New System.Drawing.Size(173, 29)
         Me.TXT_ACTION.TabIndex = 52
@@ -650,7 +650,7 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.TXT_ACTION_CODE.BackColor = System.Drawing.Color.White
         Me.TXT_ACTION_CODE.Enabled = False
-        Me.TXT_ACTION_CODE.Location = New System.Drawing.Point(505, 25)
+        Me.TXT_ACTION_CODE.Location = New System.Drawing.Point(525, 25)
         Me.TXT_ACTION_CODE.Name = "TXT_ACTION_CODE"
         Me.TXT_ACTION_CODE.Size = New System.Drawing.Size(21, 29)
         Me.TXT_ACTION_CODE.TabIndex = 51

@@ -45,6 +45,8 @@ Partial Class DOCTORSFRM
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_TYPE_HISMONY = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox0 = New System.Windows.Forms.TextBox()
         Me.ACEPT = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -261,6 +263,8 @@ Partial Class DOCTORSFRM
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_TYPE_HISMONY)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.TextBox0)
         Me.GroupBox1.Controls.Add(Me.ACEPT)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
@@ -290,6 +294,26 @@ Partial Class DOCTORSFRM
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "بيانات الأطباء"
+        '
+        'TXT_TYPE_HISMONY
+        '
+        Me.TXT_TYPE_HISMONY.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.TXT_TYPE_HISMONY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_TYPE_HISMONY.FormattingEnabled = True
+        Me.TXT_TYPE_HISMONY.Items.AddRange(New Object() {"يومي", "أسبوعي", "شهري"})
+        Me.TXT_TYPE_HISMONY.Location = New System.Drawing.Point(11, 76)
+        Me.TXT_TYPE_HISMONY.Name = "TXT_TYPE_HISMONY"
+        Me.TXT_TYPE_HISMONY.Size = New System.Drawing.Size(104, 29)
+        Me.TXT_TYPE_HISMONY.TabIndex = 34
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(120, 79)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(91, 21)
+        Me.Label10.TabIndex = 35
+        Me.Label10.Text = "نوع التعامل :"
         '
         'TextBox0
         '
@@ -435,24 +459,24 @@ Partial Class DOCTORSFRM
         '
         'DO_TEL
         '
-        Me.DO_TEL.Location = New System.Drawing.Point(481, 78)
+        Me.DO_TEL.Location = New System.Drawing.Point(534, 78)
         Me.DO_TEL.Name = "DO_TEL"
-        Me.DO_TEL.Size = New System.Drawing.Size(235, 29)
+        Me.DO_TEL.Size = New System.Drawing.Size(188, 29)
         Me.DO_TEL.TabIndex = 14
         Me.DO_TEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'DO_TEL2
         '
-        Me.DO_TEL2.Location = New System.Drawing.Point(13, 78)
+        Me.DO_TEL2.Location = New System.Drawing.Point(216, 75)
         Me.DO_TEL2.Name = "DO_TEL2"
-        Me.DO_TEL2.Size = New System.Drawing.Size(299, 29)
+        Me.DO_TEL2.Size = New System.Drawing.Size(176, 29)
         Me.DO_TEL2.TabIndex = 15
         Me.DO_TEL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(318, 84)
+        Me.Label5.Location = New System.Drawing.Point(394, 81)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(136, 21)
         Me.Label5.TabIndex = 19
@@ -597,4 +621,6 @@ Partial Class DOCTORSFRM
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents TXT_TYPE_HISMONY As ComboBox
+    Friend WithEvents Label10 As Label
 End Class

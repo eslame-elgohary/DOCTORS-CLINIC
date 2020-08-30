@@ -304,7 +304,10 @@ Public Class HOME
     End Sub
 
     Private Sub STB_RESALSE_Click(sender As Object, e As EventArgs) Handles STB_RESALSE.Click
-        HAGEZ_PATEINT.ShowDialog()
+        'HAGEZ_PATEINT.ShowDialog()
+
+        MAMLASNANFRM.ShowDialog()
+
     End Sub
 
     Private Sub BTNBACKUP_Click(sender As Object, e As EventArgs) Handles BTNBACKUP.Click

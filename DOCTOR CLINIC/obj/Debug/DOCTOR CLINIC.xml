@@ -57,6 +57,11 @@ DOCTOR CLINIC
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:DOCTOR_CLINIC.My.Resources.Resources.iconfinder_Dental___Tooth___Dentist___Dentistry_04_2185086">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DOCTOR_CLINIC.My.Resources.Resources.iconfinder_Microscope_lab_laboratory_scientific_biology_science_roscopes_5875829">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

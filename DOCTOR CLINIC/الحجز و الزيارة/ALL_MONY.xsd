@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BADR_VTableAdapter" GeneratorDataComponentClassName="BADR_VTableAdapter" Name="BADR_V" UserDataComponentName="BADR_VTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.BADR_V" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="sqlconn1 (MySettings)" DbObjectName="DOCTOR_CLINIC.dbo.BADR_V" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        BADR_V.*
@@ -29,6 +29,7 @@ FROM            BADR_V</CommandText>
               <Mapping SourceColumn="PRICE_DOCE" DataSetColumn="PRICE_DOCE" />
               <Mapping SourceColumn="DOT_PA" DataSetColumn="DOT_PA" />
               <Mapping SourceColumn="DOT_DOCTORS" DataSetColumn="DOT_DOCTORS" />
+              <Mapping SourceColumn="DOT_T3AKOD" DataSetColumn="DOT_T3AKOD" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -40,7 +41,7 @@ FROM            BADR_V</CommandText>
   <xs:element name="ALL_MONY" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ALL_MONY" msprop:Generator_UserDSName="ALL_MONY">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BADR_V" msprop:Generator_TableClassName="BADR_VDataTable" msprop:Generator_TableVarName="tableBADR_V" msprop:Generator_RowChangedName="BADR_VRowChanged" msprop:Generator_TablePropName="BADR_V" msprop:Generator_RowDeletingName="BADR_VRowDeleting" msprop:Generator_RowChangingName="BADR_VRowChanging" msprop:Generator_RowEvHandlerName="BADR_VRowChangeEventHandler" msprop:Generator_RowDeletedName="BADR_VRowDeleted" msprop:Generator_RowClassName="BADR_VRow" msprop:Generator_UserTableName="BADR_V" msprop:Generator_RowEvArgName="BADR_VRowChangeEvent">
+        <xs:element name="BADR_V" msprop:Generator_TableClassName="BADR_VDataTable" msprop:Generator_TableVarName="tableBADR_V" msprop:Generator_TablePropName="BADR_V" msprop:Generator_RowDeletingName="BADR_VRowDeleting" msprop:Generator_RowChangingName="BADR_VRowChanging" msprop:Generator_RowEvHandlerName="BADR_VRowChangeEventHandler" msprop:Generator_RowDeletedName="BADR_VRowDeleted" msprop:Generator_UserTableName="BADR_V" msprop:Generator_RowChangedName="BADR_VRowChanged" msprop:Generator_RowEvArgName="BADR_VRowChangeEvent" msprop:Generator_RowClassName="BADR_VRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DOCTORS_CODE" msprop:Generator_ColumnVarNameInTable="columnDOCTORS_CODE" msprop:Generator_ColumnPropNameInRow="DOCTORS_CODE" msprop:Generator_ColumnPropNameInTable="DOCTORS_CODEColumn" msprop:Generator_UserColumnName="DOCTORS_CODE" minOccurs="0">
@@ -82,6 +83,13 @@ FROM            BADR_V</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="DOT_DOCTORS" msprop:Generator_ColumnVarNameInTable="columnDOT_DOCTORS" msprop:Generator_ColumnPropNameInRow="DOT_DOCTORS" msprop:Generator_ColumnPropNameInTable="DOT_DOCTORSColumn" msprop:Generator_UserColumnName="DOT_DOCTORS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOT_T3AKOD" msprop:Generator_ColumnVarNameInTable="columnDOT_T3AKOD" msprop:Generator_ColumnPropNameInRow="DOT_T3AKOD" msprop:Generator_ColumnPropNameInTable="DOT_T3AKODColumn" msprop:Generator_UserColumnName="DOT_T3AKOD" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

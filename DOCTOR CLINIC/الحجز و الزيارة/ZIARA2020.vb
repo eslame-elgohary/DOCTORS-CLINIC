@@ -74,6 +74,16 @@
         Next
     End Sub
 
+    Sub DATEF()
+        Dim DATEDAY As Date
+        Dim DATELAST As Date
+        Dim FDATE As Integer
+        DATEDAY = TXT_DATE_TODAY.Value
+        DATELAST = TXT_DATE.Value
+        FDATE = DateDiff(DateInterval.Day, DATELAST, DATEDAY)
+        TXT_DAY.Text = FDATE
+    End Sub
+
     Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
         G_EDIT.Visible = False
         EDITBTN.Visible = True
@@ -97,6 +107,7 @@
         TXT_ADRRES.Text = String.Empty
         TXT_FILL.Text = String.Empty
         TXT_TEL_AQAREP.Text = String.Empty
+        TXT_HUSBEND.Text = String.Empty
         '======================================
 
     End Sub
@@ -179,6 +190,7 @@
             TXT_TEL.Text = DT.Rows(I).Item("PA_TEL")
             TXT_FILL.Text = DT.Rows(I).Item("PA_CODE2")
             TXT_TEL_AQAREP.Text = DT.Rows(I).Item("PA_TEL2")
+            TXT_HUSBEND.Text = DT.Rows(I).Item("PA_NAME2")
         Next
     End Sub
 
@@ -201,6 +213,7 @@
         TXT_ACTION_PRIC.Text = String.Empty
         TXT_ADRRES.Text = String.Empty
         TXT_FILL.Text = String.Empty
+        TXT_HUSBEND.Text = String.Empty
         '============================================================
         EDITBTN.Visible = False
         GroupBox1.Enabled = False
@@ -238,6 +251,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         TXT_ADRRES.Text = String.Empty
         TXT_FILL.Text = String.Empty
         TXT_TEL_AQAREP.Text = String.Empty
+        TXT_HUSBEND.Text = String.Empty
         '============================================================
         BTN_CHANG.Visible = False
         G_EDIT.Visible = True
@@ -260,6 +274,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         TXT_ID.Text = String.Empty
         TXT_CODE2.Text = String.Empty
         TXT_TEL_AQAREP2.Text = String.Empty
+        TXT_HUSBEND2.Text = String.Empty
         PATINT_FILL()
     End Sub
     Sub PATINT_FILL()
@@ -300,106 +315,118 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
     End Sub
 
     Private Sub SAVEBTN_Click(sender As Object, e As EventArgs) Handles SAVEBTN.Click
+        DATEF()
+        Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
+        Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
+        Dim DS0 As New DataSet
+        ADP0.Fill(DS0)
+        Dim DT0 = DS0.Tables(0)
+        If DT0.Rows.Count > 0 Then
+            If DT0.Rows(0).Item("M1").ToString = True Then
+                If DT0.Rows(0).Item("M3").ToString = False Then
+                    If Val(TXT_DAY.Text) >= Val(TXT_DAY2.Text) Then
+                        MessageBox.Show("لا يمكن الحجز لمريض بتاريخ سابق")
+                        TXT_DATE.Select()
+                        Exit Sub
+                    End If
+                End If
+                If TXT_CODE_PA.Text = String.Empty Then
+                    MessageBox.Show("يرجى أختيار أسم المريض ")
+                    PA_NAME.Select()
+                    Exit Sub
+                End If
 
-        If TXT_DATE.Value < Date.Today Then
-            MessageBox.Show("لا يمكن الحجز لمريض بتاريخ سابق")
-            TXT_DATE.Select()
-            Exit Sub
-        End If
-
-        If TXT_CODE_PA.Text = String.Empty Then
-            MessageBox.Show("يرجى أختيار أسم المريض ")
-            PA_NAME.Select()
-            Exit Sub
-        End If
-
-        Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND DATE_HAGEZ='" & TXT_DATE.Text & "' AND PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
-        DA.Fill(DT)
-        If DT.Rows.Count > 0 Then
-            MessageBox.Show("يوجد حجز اخر لهذا المريض فى نفس اليوم لنفس الطبيب يرجي التأكد", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            PA_NAME.Select()
-            Exit Sub
-        Else
-            If CH_TEL.Checked = False Or CH_TEL_AQAREP.Checked = False Then
-                If MessageBox.Show("هل ترغب فى تعديل رقم الهاتف للمريض", "أنتبة", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then
-                    TRQEM_AUTO()
-                    Dim DR = DT.NewRow
-                    DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
-                    DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
-                    DR!DATE_HAGEZ = TXT_DATE.Text
-                    DR!PA_CODE = TXT_CODE_PA.Text
-                    ' DR!ACTION = TXT_ACTION.Text
-                    ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
-                    DR!ADRRES = TXT_ADRRES.Text
-                    DR!CODE_HAGEZ = TXT_CODE.Text
-                    DR!ADD_USER = HOME.T_USERS.Text
-                    DR!DATE_ADD_USER = Date.Now
-                    DR!STAT_COLORE = "0"
-                    DR!INFO_STAT = " "
-                    DT.Rows.Add(DR)
-                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                    DA.Update(DT)
-
-                    MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    NEWBTN_Click(sender, e)
+                Dim DT As New DataTable
+                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND DATE_HAGEZ='" & TXT_DATE.Text & "' AND PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
+                DA.Fill(DT)
+                If DT.Rows.Count > 0 Then
+                    MessageBox.Show("يوجد حجز اخر لهذا المريض فى نفس اليوم لنفس الطبيب يرجي التأكد", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    PA_NAME.Select()
+                    Exit Sub
                 Else
-                    TRQEM_AUTO()
-                    Dim DR = DT.NewRow
-                    DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
-                    DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
-                    DR!DATE_HAGEZ = TXT_DATE.Text
-                    DR!PA_CODE = TXT_CODE_PA.Text
-                    '  DR!ACTION = TXT_ACTION.Text
-                    ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
-                    DR!ADRRES = TXT_ADRRES.Text
-                    DR!CODE_HAGEZ = TXT_CODE.Text
-                    DR!ADD_USER = HOME.T_USERS.Text
-                    DR!DATE_ADD_USER = Date.Now
-                    DR!STAT_COLORE = "0"
-                    DR!INFO_STAT = " "
-                    DT.Rows.Add(DR)
-                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                    DA.Update(DT)
+                    If CH_TEL.Checked = False Or CH_TEL_AQAREP.Checked = False Then
+                        If MessageBox.Show("هل ترغب فى تعديل رقم الهاتف للمريض", "أنتبة", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then
+                            TRQEM_AUTO()
+                            Dim DR = DT.NewRow
+                            DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                            DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                            DR!DATE_HAGEZ = TXT_DATE.Text
+                            DR!PA_CODE = TXT_CODE_PA.Text
+                            ' DR!ACTION = TXT_ACTION.Text
+                            ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                            DR!ADRRES = TXT_ADRRES.Text
+                            DR!CODE_HAGEZ = TXT_CODE.Text
+                            DR!ADD_USER = HOME.T_USERS.Text
+                            DR!DATE_ADD_USER = Date.Now
+                            DR!STAT_COLORE = "0"
+                            DR!INFO_STAT = " "
+                            DT.Rows.Add(DR)
+                            Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                            DA.Update(DT)
 
-                    '==================================================================
+                            MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            NEWBTN_Click(sender, e)
+                        Else
+                            TRQEM_AUTO()
+                            Dim DR = DT.NewRow
+                            DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                            DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                            DR!DATE_HAGEZ = TXT_DATE.Text
+                            DR!PA_CODE = TXT_CODE_PA.Text
+                            '  DR!ACTION = TXT_ACTION.Text
+                            ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                            DR!ADRRES = TXT_ADRRES.Text
+                            DR!CODE_HAGEZ = TXT_CODE.Text
+                            DR!ADD_USER = HOME.T_USERS.Text
+                            DR!DATE_ADD_USER = Date.Now
+                            DR!STAT_COLORE = "0"
+                            DR!INFO_STAT = " "
+                            DT.Rows.Add(DR)
+                            Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                            DA.Update(DT)
 
-                    Dim DT2 As New DataTable
-                    Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
-                    DA2.Fill(DT2)
-                    Dim DR2 = DT2.Rows(0)
-                    DR2!PA_TEL = TXT_TEL.Text
-                    DR2!PA_TEL2 = TXT_TEL_AQAREP.Text
-                    Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
-                    DA2.Update(DT2)
+                            '==================================================================
 
-                    MessageBox.Show("تمت عملية حفظ بيانات الحجز وتعديل رقم الهاتف بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    NEWBTN_Click(sender, e)
+                            Dim DT2 As New DataTable
+                            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT WHERE PA_CODE = '" & TXT_CODE_PA.Text & "' ", SqlConn)
+                            DA2.Fill(DT2)
+                            Dim DR2 = DT2.Rows(0)
+                            DR2!PA_TEL = TXT_TEL.Text
+                            DR2!PA_TEL2 = TXT_TEL_AQAREP.Text
+                            Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
+                            DA2.Update(DT2)
+
+                            MessageBox.Show("تمت عملية حفظ بيانات الحجز وتعديل رقم الهاتف بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            NEWBTN_Click(sender, e)
+                        End If
+                    Else
+                        TRQEM_AUTO()
+                        Dim DR = DT.NewRow
+                        DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
+                        DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
+                        DR!DATE_HAGEZ = TXT_DATE.Text
+                        DR!PA_CODE = TXT_CODE_PA.Text
+                        '  DR!ACTION = TXT_ACTION.Text
+                        ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
+                        DR!ADRRES = TXT_ADRRES.Text
+                        DR!CODE_HAGEZ = TXT_CODE.Text
+                        DR!ADD_USER = HOME.T_USERS.Text
+                        DR!DATE_ADD_USER = Date.Now
+                        DR!STAT_COLORE = "0"
+                        DR!INFO_STAT = " "
+                        DT.Rows.Add(DR)
+                        Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                        DA.Update(DT)
+
+                        MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        NEWBTN_Click(sender, e)
+                    End If
                 End If
             Else
-                TRQEM_AUTO()
-                Dim DR = DT.NewRow
-                DR!TKHASOS_CODE = TXT_TKHASOS_CODE.Text
-                DR!DOCTORS_CODE = TXT_DOCTOR_CODE.Text
-                DR!DATE_HAGEZ = TXT_DATE.Text
-                DR!PA_CODE = TXT_CODE_PA.Text
-                '  DR!ACTION = TXT_ACTION.Text
-                ' DR!PRICE_ACTION = TXT_ACTION_PRIC.Text
-                DR!ADRRES = TXT_ADRRES.Text
-                DR!CODE_HAGEZ = TXT_CODE.Text
-                DR!ADD_USER = HOME.T_USERS.Text
-                DR!DATE_ADD_USER = Date.Now
-                DR!STAT_COLORE = "0"
-                DR!INFO_STAT = " "
-                DT.Rows.Add(DR)
-                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                DA.Update(DT)
+                MessageBox.Show("عفوا ليس لديك صلاحية برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-                MessageBox.Show("تمت عملية حفظ بيانات الحجز بنجاح ورقم الحجز هو " & ">>>> " & TXT_CODE.Text, "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                NEWBTN_Click(sender, e)
             End If
         End If
-
     End Sub
 
     Private Sub PA_NAME2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PA_NAME2.SelectedIndexChanged
@@ -411,6 +438,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             TXT_TEL2.Text = DT.Rows(I).Item("PA_TEL")
             TXT_FILL2.Text = DT.Rows(I).Item("PA_CODE2")
             TXT_TEL_AQAREP2.Text = DT.Rows(I).Item("PA_TEL2")
+            TXT_HUSBEND2.Text = DT.Rows(I).Item("PA_NAME2")
         Next
         Dim DT1 As New DataTable
         Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE PA_CODE ='" & TXT_CODE_PA2.Text & "' AND DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.Text & "' ", SqlConn)
