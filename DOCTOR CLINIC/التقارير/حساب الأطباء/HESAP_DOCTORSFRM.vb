@@ -38,7 +38,7 @@
         End If
         '========================================================================
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PRICE_DOC_V WHERE ADD_DOCTOR_CODE = '" & TXT_DOC_CODE.Text & "' and ADD_DATE > ='" & TXT_START_DATE.Text & "' AND ADD_DATE < ='" & TXT_END_DATE.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PRICE_DOC_V WHERE ADD_DOCTOR_CODE = '" & TXT_DOC_CODE.Text & "' and ADD_DATE > ='" & TXT_START_DATE.Text & "' AND ADD_DATE < ='" & TXT_END_DATE.Text & "' AND ADD_STAT='TRUE'", SqlConn)
         DA.Fill(DT)
 
         Dim REP As New DOCTOR_HESAP

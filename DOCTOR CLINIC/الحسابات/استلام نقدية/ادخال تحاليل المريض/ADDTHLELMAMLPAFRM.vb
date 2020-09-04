@@ -283,18 +283,6 @@
                 Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                 DA.Update(DT)
 
-                '=========================================DETELS==========================================
-                Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_THLEL_PATION_DT WHERE ADD_THLEL='" & TXT_CODE.Text & "'  ", SqlConn)
-                DA1.Fill(DT)
-                For I = 0 To DataGridView1.Rows.Count - 1
-                    Dim DR1 = DT.Rows(0)
-
-                    DR1!STAT_DT = False
-
-                    Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
-                    DA1.Update(DT)
-                Next
-
                 MessageBox.Show("تمت عملية حذف بيانات التحاليل بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
 

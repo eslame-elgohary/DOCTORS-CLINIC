@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP430\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP49\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
-    <ApplicationRevision>64</ApplicationRevision>
+    <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
+    <ApplicationRevision>72</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -179,6 +180,12 @@
       <DependentUpon>test.vb</DependentUpon>
     </Compile>
     <Compile Include="LARBI\test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UPDATEFRM.Designer.vb">
+      <DependentUpon>UPDATEFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UPDATEFRM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="أتعاب طبيب\ATAB_DOCTORS.Designer.vb">
@@ -337,6 +344,23 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="الحسابات\فاتورة رسمية\FATORA_RS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FATORA_RS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\فاتورة رسمية\FATO_RS_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FATO_RS_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحسابات\فاتورة رسمية\SEARCH_FATO_RS.Designer.vb">
+      <DependentUpon>SEARCH_FATO_RS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\فاتورة رسمية\SEARCH_FATO_RS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="الحسابات\نقدية معمل اسنان\MAMLASNANFRM.Designer.vb">
       <DependentUpon>MAMLASNANFRM.vb</DependentUpon>
     </Compile>
@@ -353,6 +377,12 @@
       <DependentUpon>AMLIAT_FRM.vb</DependentUpon>
     </Compile>
     <Compile Include="العمليات\AMLIAT_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\فاتورة رسمية\FATO_AMLIAT_FRM.Designer.vb">
+      <DependentUpon>FATO_AMLIAT_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\فاتورة رسمية\FATO_AMLIAT_FRM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="تأخر الأنجاب\engabdata.Designer.vb">
@@ -1215,6 +1245,9 @@
     <EmbeddedResource Include="ROWHA.resx">
       <DependentUpon>ROWHA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UPDATEFRM.resx">
+      <DependentUpon>UPDATEFRM.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="أتعاب طبيب\ATAB_DOCTORS.resx">
       <DependentUpon>ATAB_DOCTORS.vb</DependentUpon>
     </EmbeddedResource>
@@ -1450,6 +1483,13 @@
     <EmbeddedResource Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.resx">
       <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\فاتورة رسمية\FATO_RS_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FATO_RS_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\فاتورة رسمية\SEARCH_FATO_RS.resx">
+      <DependentUpon>SEARCH_FATO_RS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\نقدية معمل اسنان\MAMLASNANFRM.resx">
       <DependentUpon>MAMLASNANFRM.vb</DependentUpon>
     </EmbeddedResource>
@@ -1467,6 +1507,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="العمليات\AMLIAT_FRM.resx">
       <DependentUpon>AMLIAT_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\فاتورة رسمية\FATO_AMLIAT_FRM.resx">
+      <DependentUpon>FATO_AMLIAT_FRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="المرضي\PATIENT.resx">
       <DependentUpon>PATIENT.vb</DependentUpon>
@@ -1812,6 +1855,17 @@
     </None>
     <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xss">
       <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="الحسابات\فاتورة رسمية\FATORA_RS.xsc">
+      <DependentUpon>FATORA_RS.xsd</DependentUpon>
+    </None>
+    <None Include="الحسابات\فاتورة رسمية\FATORA_RS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FATORA_RS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحسابات\فاتورة رسمية\FATORA_RS.xss">
+      <DependentUpon>FATORA_RS.xsd</DependentUpon>
     </None>
     <None Include="المرضي\PATIENTDATA.xsc">
       <DependentUpon>PATIENTDATA.xsd</DependentUpon>

@@ -57,6 +57,12 @@ Partial Class SARF_MASRUF_FRM
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_M = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ACTIVE_DOCTOR = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_PRICE = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -71,12 +77,9 @@ Partial Class SARF_MASRUF_FRM
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TOTAL = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.TXT_DAY2 = New System.Windows.Forms.Label()
+        Me.TXT_DAY = New System.Windows.Forms.Label()
+        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GRBTN.SuspendLayout()
@@ -306,6 +309,7 @@ Partial Class SARF_MASRUF_FRM
         Me.DELETBTN.Size = New System.Drawing.Size(96, 44)
         Me.DELETBTN.TabIndex = 3
         Me.DELETBTN.Text = "حذف"
+        Me.DELETBTN.Visible = False
         '
         'EDITBTN
         '
@@ -348,6 +352,9 @@ Partial Class SARF_MASRUF_FRM
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TXT_DAY2)
+        Me.GroupBox2.Controls.Add(Me.TXT_DAY)
+        Me.GroupBox2.Controls.Add(Me.TXT_DATE_TODAY)
         Me.GroupBox2.Controls.Add(Me.TXT_INFO_ACTION)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.TXT_M)
@@ -413,6 +420,47 @@ Partial Class SARF_MASRUF_FRM
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(815, 135)
         Me.DataGridView1.TabIndex = 57
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "كود الخدمة"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.FillWeight = 30.0!
+        Me.Column2.HeaderText = "م"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "أسم المصروف"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 60.0!
+        Me.Column4.HeaderText = "قيمة المصروف"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "تفاصيل"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.FillWeight = 25.0!
+        Me.Column6.HeaderText = "-"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
         '
         'ACTIVE_DOCTOR
         '
@@ -554,46 +602,35 @@ Partial Class SARF_MASRUF_FRM
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "+"
         '
-        'Column1
+        'TXT_DAY2
         '
-        Me.Column1.HeaderText = "كود الخدمة"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
+        Me.TXT_DAY2.AutoSize = True
+        Me.TXT_DAY2.Location = New System.Drawing.Point(216, 122)
+        Me.TXT_DAY2.Name = "TXT_DAY2"
+        Me.TXT_DAY2.Size = New System.Drawing.Size(18, 21)
+        Me.TXT_DAY2.TabIndex = 71
+        Me.TXT_DAY2.Text = "2"
+        Me.TXT_DAY2.Visible = False
         '
-        'Column2
+        'TXT_DAY
         '
-        Me.Column2.FillWeight = 30.0!
-        Me.Column2.HeaderText = "م"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
+        Me.TXT_DAY.AutoSize = True
+        Me.TXT_DAY.Location = New System.Drawing.Point(281, 123)
+        Me.TXT_DAY.Name = "TXT_DAY"
+        Me.TXT_DAY.Size = New System.Drawing.Size(59, 21)
+        Me.TXT_DAY.TabIndex = 69
+        Me.TXT_DAY.Text = "0000000"
+        Me.TXT_DAY.Visible = False
         '
-        'Column3
+        'TXT_DATE_TODAY
         '
-        Me.Column3.HeaderText = "أسم المصروف"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.FillWeight = 60.0!
-        Me.Column4.HeaderText = "قيمة المصروف"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "تفاصيل"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.FillWeight = 25.0!
-        Me.Column6.HeaderText = "-"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
+        Me.TXT_DATE_TODAY.Enabled = False
+        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(450, 158)
+        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
+        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(167, 29)
+        Me.TXT_DATE_TODAY.TabIndex = 70
+        Me.TXT_DATE_TODAY.Visible = False
         '
         'SARF_MASRUF_FRM
         '
@@ -681,4 +718,7 @@ Partial Class SARF_MASRUF_FRM
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewButtonColumn
+    Friend WithEvents TXT_DAY2 As Label
+    Friend WithEvents TXT_DAY As Label
+    Friend WithEvents TXT_DATE_TODAY As DateTimePicker
 End Class

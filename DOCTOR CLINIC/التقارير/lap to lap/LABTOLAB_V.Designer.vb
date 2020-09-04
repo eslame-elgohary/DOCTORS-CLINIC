@@ -80,6 +80,7 @@ Partial Class LABTOLAB_V
         'CH_MAML
         '
         Me.CH_MAML.AutoSize = True
+        Me.CH_MAML.Enabled = False
         Me.CH_MAML.Location = New System.Drawing.Point(23, 93)
         Me.CH_MAML.Name = "CH_MAML"
         Me.CH_MAML.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -91,6 +92,7 @@ Partial Class LABTOLAB_V
         'CH_PA
         '
         Me.CH_PA.AutoSize = True
+        Me.CH_PA.Enabled = False
         Me.CH_PA.Location = New System.Drawing.Point(14, 139)
         Me.CH_PA.Name = "CH_PA"
         Me.CH_PA.RightToLeft = System.Windows.Forms.RightToLeft.No

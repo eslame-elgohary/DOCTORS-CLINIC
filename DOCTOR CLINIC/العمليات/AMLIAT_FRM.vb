@@ -1,7 +1,6 @@
 ﻿Public Class AMLIAT_FRM
     Private Sub AMLIAT_FRM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
-
+        NEWBTN_Click(sender, e)
     End Sub
 
     Private Sub TXT_PA_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_PA_NAME.SelectedIndexChanged
@@ -16,5 +15,14 @@
 
     Private Sub EXITBTN_Click(sender As Object, e As EventArgs) Handles EXITBTN.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub ACTIVE_DOCTOR_Click(sender As Object, e As EventArgs) Handles ACTIVE_DOCTOR.Click
+
+    End Sub
+
+    Private Sub NEWBTN_Click(sender As Object, e As EventArgs) Handles NEWBTN.Click
+        Me.PATIENTTableAdapter.Fill(Me.PATIENTDATA.PATIENT)
+
     End Sub
 End Class

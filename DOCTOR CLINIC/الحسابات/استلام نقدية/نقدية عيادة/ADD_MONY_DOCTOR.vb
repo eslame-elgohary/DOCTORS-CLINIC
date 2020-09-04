@@ -42,12 +42,13 @@
                 TXT_M.Text = Val(DataGridView1.Rows(I).Cells(1).Value) + 1
             Next
 
-            DELETBTN.Enabled = True
-            EDITBTN.Enabled = True
+            'DELETBTN.Enabled = True
+            'EDITBTN.Enabled = True
             SAVEBTN.Enabled = False
             TIMEREDIT.Enabled = True
             TIMERADD.Enabled = False
-            PRINTBTN.Enabled = False
+            ACTIVE_DOCTOR.Enabled = False
+            DataGridView1.Enabled = False
             CALC()
         End If
     End Sub
@@ -129,6 +130,8 @@
         TIMERADD.Enabled = True
         TIMEREDIT.Enabled = False
         PRINTBTN.Enabled = True
+        ACTIVE_DOCTOR.Enabled = True
+        DataGridView1.Enabled = True
         TXT_M.Text = "1"
         FILL_KHAZINA_CODE()
         CALC()
@@ -392,7 +395,7 @@
                     For I = 0 To DataGridView1.Rows.Count - 1
                         Dim DRE = DTE.Rows(0)
                         DRE!ACTION = DataGridView1.Rows(I).Cells(2).Value
-
+                        DRE!STAT_COLORE = "2"
                         Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
                         DAE.Update(DTE)
                     Next

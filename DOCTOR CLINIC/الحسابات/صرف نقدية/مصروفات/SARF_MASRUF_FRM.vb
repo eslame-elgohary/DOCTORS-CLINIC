@@ -245,10 +245,19 @@
             End If
         End If
     End Sub
+    Sub DATEF()
+        Dim DATEDAY As Date
+        Dim DATELAST As Date
+        Dim FDATE As Integer
+        DATEDAY = TXT_DATE_TODAY.Value
+        DATELAST = TXT_DATE.Value
+        FDATE = DateDiff(DateInterval.Day, DATELAST, DATEDAY)
+        TXT_DAY.Text = FDATE
+    End Sub
 
     Private Sub EDITBTN_Click(sender As Object, e As EventArgs) Handles EDITBTN.Click
         '====================حفظ العيادة=============================
-
+        DATEF()
         Dim SQL0 = "SELECT* FROM ESLAME_SLAH WHERE CODE1 ='" & (HOME.CODE_USERBT.Text) & "' "
         Dim ADP0 As New SqlClient.SqlDataAdapter(SQL0, SqlConn)
         Dim DS0 As New DataSet
@@ -261,6 +270,11 @@
                 If TOTAL.Text < 1 Then
                     MessageBox.Show("برجاء ادخال المصروفات المراد حفظها ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     TXT_ACTION.Select()
+                    Exit Sub
+                End If
+                If Val(TXT_DAY.Text) >= Val(TXT_DAY2.Text) Then
+                    MessageBox.Show("لا يمكن تعديل ايصال مصروفات مر عليه اكثر من يوم", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_CODE.Select()
                     Exit Sub
                 End If
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
@@ -409,7 +423,7 @@
     End Sub
 
     Private Sub ACTIVE_DOCTOR_Click(sender As Object, e As EventArgs) Handles ACTIVE_DOCTOR.Click
-        If TXT_ACTION.SelectedIndex < 0 Then
+        If TXT_ACTION_CODE.Text = "" Then
             MessageBox.Show("برجاء ادخال نوع المصروف ؟ ", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_ACTION.Select()
             Exit Sub
@@ -446,6 +460,7 @@
         TXT_ACTION.Text = ""
         TXT_ACTION_CODE.Text = ""
         TXT_PRICE.Text = ""
+        TXT_INFO_ACTION.Text = ""
         For QS = 0 To DataGridView1.Rows.Count - 1
             TXT_M.Text = Val(DataGridView1.Rows(QS).Cells(1).Value) + 1
         Next
@@ -483,15 +498,15 @@
         End If
     End Sub
     Private Sub TXT_PRICE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_PRICE.KeyPress
-        'If Char.IsControl(e.KeyChar) = False Then
-        '    If Char.IsDigit(e.KeyChar) Then
-        '    Else
-        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
-        '        e.Handled = True
-        '    End If
-        'End If
+        If Char.IsControl(e.KeyChar) = False Then
+            If Char.IsDigit(e.KeyChar) Then
+            Else
+                MsgBox("من فضلك ادخل رقم صحيح فقط")
+                e.Handled = True
+            End If
+        End If
 
-        PressOnlyNumeric(e)   ' إدخال أرقام فقط
+        'PressOnlyNumeric(e)   ' إدخال أرقام فقط
 
     End Sub
 

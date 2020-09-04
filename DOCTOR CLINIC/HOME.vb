@@ -336,7 +336,7 @@ Public Class HOME
         Catch EX As Exception
 
         End Try
-        '  ZIARA2020.ShowDialog()
+        'ZIARA2020.ShowDialog()
     End Sub
 
     Private Sub HELPBTN_Click(sender As Object, e As EventArgs) Handles HELPBTN.Click
@@ -527,5 +527,9 @@ Public Class HOME
 
         End Try
         'ADD_MONY2_DOCTOR.ShowDialog()
+    End Sub
+
+    Private Sub فاتورةرسميةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles فاتورةرسميةToolStripMenuItem.Click
+        FATO_AMLIAT_FRM.ShowDialog()
     End Sub
 End Class

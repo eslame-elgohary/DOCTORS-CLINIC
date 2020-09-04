@@ -24,8 +24,8 @@ Partial Class ZIARA2020
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ZIARA2020))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.P_HAGEZ = New System.Windows.Forms.Panel()
@@ -34,6 +34,8 @@ Partial Class ZIARA2020
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.G_EDIT = New System.Windows.Forms.GroupBox()
+        Me.TXT_HUSBEND2 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.TXT_TEL_AQAREP2 = New System.Windows.Forms.TextBox()
         Me.CH_TEL_AQAREP2 = New System.Windows.Forms.CheckBox()
@@ -50,9 +52,6 @@ Partial Class ZIARA2020
         Me.Label22 = New System.Windows.Forms.Label()
         Me.TXT_TEL2 = New System.Windows.Forms.TextBox()
         Me.CH_TEL2 = New System.Windows.Forms.CheckBox()
-        Me.TXT_ACTION_PRIC2 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.TXT_ACTION2 = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TXT_CODE2 = New System.Windows.Forms.Label()
         Me.P_CHANG = New System.Windows.Forms.Panel()
@@ -80,6 +79,7 @@ Partial Class ZIARA2020
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BTN_XCHANG = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_HUSBEND = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.TXT_TEL_AQAREP = New System.Windows.Forms.TextBox()
         Me.CH_TEL_AQAREP = New System.Windows.Forms.CheckBox()
@@ -98,9 +98,7 @@ Partial Class ZIARA2020
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TXT_TEL = New System.Windows.Forms.TextBox()
         Me.CH_TEL = New System.Windows.Forms.CheckBox()
-        Me.TXT_ACTION_PRIC = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TXT_ACTION = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ADD_PA = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -189,9 +187,7 @@ Partial Class ZIARA2020
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.TXT_HUSBEND = New System.Windows.Forms.TextBox()
-        Me.TXT_HUSBEND2 = New System.Windows.Forms.TextBox()
-        Me.Label33 = New System.Windows.Forms.Label()
+        Me.DELET_20 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.P_HAGEZ.SuspendLayout()
@@ -329,9 +325,6 @@ Partial Class ZIARA2020
         Me.G_EDIT.Controls.Add(Me.Label22)
         Me.G_EDIT.Controls.Add(Me.TXT_TEL2)
         Me.G_EDIT.Controls.Add(Me.CH_TEL2)
-        Me.G_EDIT.Controls.Add(Me.TXT_ACTION_PRIC2)
-        Me.G_EDIT.Controls.Add(Me.Label23)
-        Me.G_EDIT.Controls.Add(Me.TXT_ACTION2)
         Me.G_EDIT.Controls.Add(Me.Label24)
         Me.G_EDIT.Controls.Add(Me.TXT_CODE2)
         Me.G_EDIT.Location = New System.Drawing.Point(6, 283)
@@ -340,6 +333,24 @@ Partial Class ZIARA2020
         Me.G_EDIT.TabIndex = 122
         Me.G_EDIT.TabStop = False
         Me.G_EDIT.Visible = False
+        '
+        'TXT_HUSBEND2
+        '
+        Me.TXT_HUSBEND2.BackColor = System.Drawing.Color.White
+        Me.TXT_HUSBEND2.Enabled = False
+        Me.TXT_HUSBEND2.Location = New System.Drawing.Point(319, 64)
+        Me.TXT_HUSBEND2.Name = "TXT_HUSBEND2"
+        Me.TXT_HUSBEND2.Size = New System.Drawing.Size(282, 29)
+        Me.TXT_HUSBEND2.TabIndex = 124
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(605, 66)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(119, 21)
+        Me.Label33.TabIndex = 123
+        Me.Label33.Text = "أسم أحد الاقارب :"
         '
         'Label32
         '
@@ -489,39 +500,6 @@ Partial Class ZIARA2020
         Me.CH_TEL2.Size = New System.Drawing.Size(15, 14)
         Me.CH_TEL2.TabIndex = 103
         Me.CH_TEL2.UseVisualStyleBackColor = True
-        '
-        'TXT_ACTION_PRIC2
-        '
-        Me.TXT_ACTION_PRIC2.BackColor = System.Drawing.Color.White
-        Me.TXT_ACTION_PRIC2.Enabled = False
-        Me.TXT_ACTION_PRIC2.Location = New System.Drawing.Point(41, 67)
-        Me.TXT_ACTION_PRIC2.Name = "TXT_ACTION_PRIC2"
-        Me.TXT_ACTION_PRIC2.Size = New System.Drawing.Size(195, 29)
-        Me.TXT_ACTION_PRIC2.TabIndex = 110
-        Me.TXT_ACTION_PRIC2.Visible = False
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(242, 70)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(91, 21)
-        Me.Label23.TabIndex = 109
-        Me.Label23.Text = "قيمة الأجراء :"
-        Me.Label23.Visible = False
-        '
-        'TXT_ACTION2
-        '
-        Me.TXT_ACTION2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_ACTION2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_ACTION2.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_ACTION2.Enabled = False
-        Me.TXT_ACTION2.FormattingEnabled = True
-        Me.TXT_ACTION2.Location = New System.Drawing.Point(367, 64)
-        Me.TXT_ACTION2.Name = "TXT_ACTION2"
-        Me.TXT_ACTION2.Size = New System.Drawing.Size(248, 29)
-        Me.TXT_ACTION2.TabIndex = 107
-        Me.TXT_ACTION2.Visible = False
         '
         'Label24
         '
@@ -777,6 +755,7 @@ Partial Class ZIARA2020
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.DELET_20)
         Me.GroupBox1.Controls.Add(Me.TXT_HUSBEND)
         Me.GroupBox1.Controls.Add(Me.Label25)
         Me.GroupBox1.Controls.Add(Me.TXT_TEL_AQAREP)
@@ -793,9 +772,7 @@ Partial Class ZIARA2020
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.TXT_TEL)
         Me.GroupBox1.Controls.Add(Me.CH_TEL)
-        Me.GroupBox1.Controls.Add(Me.TXT_ACTION_PRIC)
         Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.TXT_ACTION)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.ADD_PA)
         Me.GroupBox1.Location = New System.Drawing.Point(6, -1)
@@ -803,6 +780,15 @@ Partial Class ZIARA2020
         Me.GroupBox1.Size = New System.Drawing.Size(729, 198)
         Me.GroupBox1.TabIndex = 119
         Me.GroupBox1.TabStop = False
+        '
+        'TXT_HUSBEND
+        '
+        Me.TXT_HUSBEND.BackColor = System.Drawing.Color.White
+        Me.TXT_HUSBEND.Enabled = False
+        Me.TXT_HUSBEND.Location = New System.Drawing.Point(312, 64)
+        Me.TXT_HUSBEND.Name = "TXT_HUSBEND"
+        Me.TXT_HUSBEND.Size = New System.Drawing.Size(282, 29)
+        Me.TXT_HUSBEND.TabIndex = 118
         '
         'Label25
         '
@@ -963,16 +949,6 @@ Partial Class ZIARA2020
         Me.CH_TEL.TabIndex = 103
         Me.CH_TEL.UseVisualStyleBackColor = True
         '
-        'TXT_ACTION_PRIC
-        '
-        Me.TXT_ACTION_PRIC.BackColor = System.Drawing.Color.White
-        Me.TXT_ACTION_PRIC.Enabled = False
-        Me.TXT_ACTION_PRIC.Location = New System.Drawing.Point(40, 64)
-        Me.TXT_ACTION_PRIC.Name = "TXT_ACTION_PRIC"
-        Me.TXT_ACTION_PRIC.Size = New System.Drawing.Size(195, 29)
-        Me.TXT_ACTION_PRIC.TabIndex = 110
-        Me.TXT_ACTION_PRIC.Visible = False
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -981,19 +957,6 @@ Partial Class ZIARA2020
         Me.Label13.Size = New System.Drawing.Size(119, 21)
         Me.Label13.TabIndex = 109
         Me.Label13.Text = "أسم أحد الاقارب :"
-        '
-        'TXT_ACTION
-        '
-        Me.TXT_ACTION.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.TXT_ACTION.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.TXT_ACTION.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_ACTION.Enabled = False
-        Me.TXT_ACTION.FormattingEnabled = True
-        Me.TXT_ACTION.Location = New System.Drawing.Point(367, 64)
-        Me.TXT_ACTION.Name = "TXT_ACTION"
-        Me.TXT_ACTION.Size = New System.Drawing.Size(248, 29)
-        Me.TXT_ACTION.TabIndex = 107
-        Me.TXT_ACTION.Visible = False
         '
         'Label10
         '
@@ -1496,12 +1459,12 @@ Partial Class ZIARA2020
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column8, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column11})
         Me.DataGridView1.EnableHeadersVisualStyles = False
@@ -1510,12 +1473,12 @@ Partial Class ZIARA2020
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control
@@ -1917,32 +1880,16 @@ Partial Class ZIARA2020
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
-        'TXT_HUSBEND
+        'DELET_20
         '
-        Me.TXT_HUSBEND.BackColor = System.Drawing.Color.White
-        Me.TXT_HUSBEND.Enabled = False
-        Me.TXT_HUSBEND.Location = New System.Drawing.Point(312, 64)
-        Me.TXT_HUSBEND.Name = "TXT_HUSBEND"
-        Me.TXT_HUSBEND.Size = New System.Drawing.Size(282, 29)
-        Me.TXT_HUSBEND.TabIndex = 118
-        '
-        'TXT_HUSBEND2
-        '
-        Me.TXT_HUSBEND2.BackColor = System.Drawing.Color.White
-        Me.TXT_HUSBEND2.Enabled = False
-        Me.TXT_HUSBEND2.Location = New System.Drawing.Point(319, 63)
-        Me.TXT_HUSBEND2.Name = "TXT_HUSBEND2"
-        Me.TXT_HUSBEND2.Size = New System.Drawing.Size(282, 29)
-        Me.TXT_HUSBEND2.TabIndex = 124
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(605, 66)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(119, 21)
-        Me.Label33.TabIndex = 123
-        Me.Label33.Text = "أسم أحد الاقارب :"
+        Me.DELET_20.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DELET_20.ForeColor = System.Drawing.Color.Red
+        Me.DELET_20.Location = New System.Drawing.Point(6, 52)
+        Me.DELET_20.Name = "DELET_20"
+        Me.DELET_20.Size = New System.Drawing.Size(300, 50)
+        Me.DELET_20.TabIndex = 119
+        Me.DELET_20.Text = " "
+        Me.DELET_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ZIARA2020
         '
@@ -2029,9 +1976,7 @@ Partial Class ZIARA2020
     Friend WithEvents TXT_TEL As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents TXT_FILL As TextBox
-    Friend WithEvents TXT_ACTION As ComboBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TXT_ACTION_PRIC As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents TXT_ADRRES As TextBox
     Friend WithEvents Label16 As Label
@@ -2071,9 +2016,6 @@ Partial Class ZIARA2020
     Friend WithEvents Label22 As Label
     Friend WithEvents TXT_TEL2 As TextBox
     Friend WithEvents CH_TEL2 As CheckBox
-    Friend WithEvents TXT_ACTION_PRIC2 As TextBox
-    Friend WithEvents Label23 As Label
-    Friend WithEvents TXT_ACTION2 As ComboBox
     Friend WithEvents Label24 As Label
     Friend WithEvents TXT_CODE2 As Label
     Friend WithEvents G_EDITBTN As DevExpress.XtraEditors.SimpleButton
@@ -2138,15 +2080,6 @@ Partial Class ZIARA2020
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents TXT_PA_CODE_H As TextBox
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents BTN_PRINT_END_DAY As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_MAML_RASED As TextBox
     Friend WithEvents DataGridView2 As DataGridView
@@ -2171,4 +2104,14 @@ Partial Class ZIARA2020
     Friend WithEvents TXT_HUSBEND As TextBox
     Friend WithEvents TXT_HUSBEND2 As TextBox
     Friend WithEvents Label33 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents DELET_20 As Label
 End Class

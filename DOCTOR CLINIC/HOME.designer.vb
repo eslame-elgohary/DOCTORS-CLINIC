@@ -137,6 +137,7 @@ Partial Class HOME
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.فاتورةرسميةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -507,7 +508,7 @@ Partial Class HOME
         '
         'الحساباتToolStripMenuItem
         '
-        Me.الحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY, Me.أذنصرفنقديةToolStripMenuItem, Me.BT_CONVERT_KHAZINA, Me.BT_TSWIA, Me.BTN_PA_DOF3A})
+        Me.الحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY, Me.أذنصرفنقديةToolStripMenuItem, Me.BT_CONVERT_KHAZINA, Me.BT_TSWIA, Me.BTN_PA_DOF3A, Me.فاتورةرسميةToolStripMenuItem})
         Me.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem"
         Me.الحساباتToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.الحساباتToolStripMenuItem.Text = "الحسابات"
@@ -946,6 +947,12 @@ Partial Class HOME
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'فاتورةرسميةToolStripMenuItem
+        '
+        Me.فاتورةرسميةToolStripMenuItem.Name = "فاتورةرسميةToolStripMenuItem"
+        Me.فاتورةرسميةToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.فاتورةرسميةToolStripMenuItem.Text = "فاتورة رسمية"
+        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -1097,4 +1104,5 @@ Partial Class HOME
     Friend WithEvents أتعابطبيبToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents تقريرأتعابطبيبToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents أستردادنقديةعياداتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents فاتورةرسميةToolStripMenuItem As ToolStripMenuItem
 End Class

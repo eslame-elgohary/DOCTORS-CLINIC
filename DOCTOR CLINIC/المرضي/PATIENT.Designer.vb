@@ -54,13 +54,13 @@ Partial Class PATIENT
         Me.PA_CODE = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.PA_OP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PA_NAME2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PA_TEL2 = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.PA_OP = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.USER_ADD = New System.Windows.Forms.ToolStripStatusLabel()
@@ -73,6 +73,8 @@ Partial Class PATIENT
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.DONT_TRUE = New System.Windows.Forms.CheckBox()
+        Me.TXT_KARMA = New System.Windows.Forms.TextBox()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +94,7 @@ Partial Class PATIENT
         Me.GRBTN.Controls.Add(Me.EDITBTN)
         Me.GRBTN.Controls.Add(Me.SAVEBTN)
         Me.GRBTN.Controls.Add(Me.NEWBTN)
-        Me.GRBTN.Location = New System.Drawing.Point(12, 262)
+        Me.GRBTN.Location = New System.Drawing.Point(12, 311)
         Me.GRBTN.Name = "GRBTN"
         Me.GRBTN.Size = New System.Drawing.Size(842, 72)
         Me.GRBTN.TabIndex = 0
@@ -198,6 +200,8 @@ Partial Class PATIENT
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TXT_KARMA)
+        Me.GroupBox1.Controls.Add(Me.DONT_TRUE)
         Me.GroupBox1.Controls.Add(Me.PA_NAME)
         Me.GroupBox1.Controls.Add(Me.PA_CHI_R1)
         Me.GroupBox1.Controls.Add(Me.PA_OP_R1)
@@ -218,7 +222,7 @@ Partial Class PATIENT
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(842, 254)
+        Me.GroupBox1.Size = New System.Drawing.Size(842, 293)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "بيانات المرضي"
@@ -251,7 +255,7 @@ Partial Class PATIENT
         'PA_CHI_R1
         '
         Me.PA_CHI_R1.AutoSize = True
-        Me.PA_CHI_R1.Location = New System.Drawing.Point(641, 202)
+        Me.PA_CHI_R1.Location = New System.Drawing.Point(706, 208)
         Me.PA_CHI_R1.Name = "PA_CHI_R1"
         Me.PA_CHI_R1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.PA_CHI_R1.Size = New System.Drawing.Size(129, 25)
@@ -262,7 +266,7 @@ Partial Class PATIENT
         'PA_OP_R1
         '
         Me.PA_OP_R1.AutoSize = True
-        Me.PA_OP_R1.Location = New System.Drawing.Point(641, 128)
+        Me.PA_OP_R1.Location = New System.Drawing.Point(657, 128)
         Me.PA_OP_R1.Name = "PA_OP_R1"
         Me.PA_OP_R1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.PA_OP_R1.Size = New System.Drawing.Size(178, 25)
@@ -295,9 +299,9 @@ Partial Class PATIENT
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.PA_CHI)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Location = New System.Drawing.Point(15, 189)
+        Me.GroupBox3.Location = New System.Drawing.Point(91, 185)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(596, 55)
+        Me.GroupBox3.Size = New System.Drawing.Size(607, 55)
         Me.GroupBox3.TabIndex = 21
         Me.GroupBox3.TabStop = False
         '
@@ -409,36 +413,6 @@ Partial Class PATIENT
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "عمر المريض :"
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.PA_OP)
-        Me.GroupBox2.Location = New System.Drawing.Point(54, 94)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(557, 89)
-        Me.GroupBox2.TabIndex = 17
-        Me.GroupBox2.TabStop = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(485, 34)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 21)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "أذكرها  :"
-        Me.Label8.Visible = False
-        '
-        'PA_OP
-        '
-        Me.PA_OP.Location = New System.Drawing.Point(3, 16)
-        Me.PA_OP.Multiline = True
-        Me.PA_OP.Name = "PA_OP"
-        Me.PA_OP.Size = New System.Drawing.Size(476, 68)
-        Me.PA_OP.TabIndex = 20
-        Me.PA_OP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.PA_OP.Visible = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -473,10 +447,40 @@ Partial Class PATIENT
         Me.PA_TEL2.TabIndex = 5
         Me.PA_TEL2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.PA_OP)
+        Me.GroupBox2.Location = New System.Drawing.Point(91, 94)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(557, 89)
+        Me.GroupBox2.TabIndex = 17
+        Me.GroupBox2.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(485, 34)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 21)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "أذكرها  :"
+        Me.Label8.Visible = False
+        '
+        'PA_OP
+        '
+        Me.PA_OP.Location = New System.Drawing.Point(3, 16)
+        Me.PA_OP.Multiline = True
+        Me.PA_OP.Name = "PA_OP"
+        Me.PA_OP.Size = New System.Drawing.Size(476, 68)
+        Me.PA_OP.TabIndex = 20
+        Me.PA_OP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.PA_OP.Visible = False
+        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 349)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 390)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(866, 22)
         Me.StatusStrip1.SizingGrip = False
@@ -545,11 +549,32 @@ Partial Class PATIENT
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
+        'DONT_TRUE
+        '
+        Me.DONT_TRUE.AutoSize = True
+        Me.DONT_TRUE.ForeColor = System.Drawing.Color.Red
+        Me.DONT_TRUE.Location = New System.Drawing.Point(510, 252)
+        Me.DONT_TRUE.Name = "DONT_TRUE"
+        Me.DONT_TRUE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.DONT_TRUE.Size = New System.Drawing.Size(214, 25)
+        Me.DONT_TRUE.TabIndex = 27
+        Me.DONT_TRUE.Text = "الغاء التعامل مع هذا المريض"
+        Me.DONT_TRUE.UseVisualStyleBackColor = True
+        '
+        'TXT_KARMA
+        '
+        Me.TXT_KARMA.Location = New System.Drawing.Point(365, 252)
+        Me.TXT_KARMA.Name = "TXT_KARMA"
+        Me.TXT_KARMA.Size = New System.Drawing.Size(139, 29)
+        Me.TXT_KARMA.TabIndex = 28
+        Me.TXT_KARMA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_KARMA.Visible = False
+        '
         'PATIENT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(866, 371)
+        Me.ClientSize = New System.Drawing.Size(866, 412)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GRBTN)
@@ -629,4 +654,6 @@ Partial Class PATIENT
     Friend WithEvents PATIENTDATA As PATIENTDATA
     Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
     Friend WithEvents PA_CODE2 As TextBox
+    Friend WithEvents DONT_TRUE As CheckBox
+    Friend WithEvents TXT_KARMA As TextBox
 End Class

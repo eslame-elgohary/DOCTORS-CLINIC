@@ -139,7 +139,6 @@ Partial Class ADD_MONY_DOCTOR
         Me.PRINTBTN.Size = New System.Drawing.Size(96, 44)
         Me.PRINTBTN.TabIndex = 6
         Me.PRINTBTN.Text = "طباعة"
-        Me.PRINTBTN.Visible = False
         '
         'UNDOBTN
         '

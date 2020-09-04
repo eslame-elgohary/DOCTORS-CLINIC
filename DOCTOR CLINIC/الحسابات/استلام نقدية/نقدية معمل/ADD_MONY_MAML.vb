@@ -43,13 +43,24 @@
             Next
             Dim DS1 As New DataSet
             '=============================================
-            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+            DA = New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT WHERE ADD_CODE = '" & CODE_ & "' ", SqlConn)
             DA.Fill(DS1)
             DT = DS1.Tables(0)
             For I = 0 To DT.Rows.Count - 1
                 TXT_MONY.Text = DT.Rows(I).Item("ADD_MAML")
-                TXT_BAKY.Text = DT.Rows(I).Item("BAKY_MAML")
             Next
+            '==========================================
+            'Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+            'DA3.Fill(DT)
+            'Dim DR3 = DT.NewRow
+            'DR3!ADD_CODE = TXT_CODE.Text
+            'DR3!ADD_CODE2 = TXT_CODE2.Text
+            'DR3!ADD_DATE = TXT_DATE.Text
+            'DR3!PA_CODE = PA_CODE.Text
+            'DR3!ACTION_NAME = "تحاليل طبية بالأيصال رقم  " & TXT_CODE.Text
+            'DR3!SAFY_MAML = SAFY.Text
+            'DR3!ADD_MAML = TXT_MONY.Text
+            'DR3!BAKY_MAML = TXT_BAKY.Text
 
 
             For I = 0 To DataGridView1.Rows.Count - 1
@@ -184,7 +195,7 @@
                 Else
                     '================= تخزين بيانات الصنف في قاعدة البيانات =============
                     Dim DT As New DataTable
-                    Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_MAML WHERE ADD_CODE2 = '" & TXT_CODE2.Text & "'", SqlConn)
+                    Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_MAML WHERE ADD_CODE2 = '" & TXT_CODE2.Text & "' AND ADD_STAT = 'TRUE'", SqlConn)
                     DA.Fill(DT)
                     If DT.Rows.Count > 0 Then
                         MessageBox.Show("يوجد أيصال أخر لهذا المريض اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -520,47 +531,26 @@
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_MAML WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
                 DA.Fill(DT)
-                If DT.Rows.Count = 0 Then
-                    MessageBox.Show("يوجد أيصال أخر لهذا المريض اليوم، يرجى التأكد", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Else
-                    Dim DR = DT.Rows(0)
 
-                    DR!ADD_STAT = False
-                    DR!ADD_USER_EDIT = USER_EDIT.Text
+                Dim DR = DT.Rows(0)
+
+                DR!ADD_STAT = False
+                DR!ADD_USER_EDIT = USER_EDIT.Text
                     DR!ADD_DATE_EDIT = DATE_EDIT.Text
                     DR!ADD_TIME_EDIT = TIME_EDIT.Text
-
                     Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
                     DA.Update(DT)
-                End If
 
-                '=====================================حذف التفاصيل من الأيصال ========================
-                Dim DT1 As New DataTable
-                Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM ADD_MONY_DT_MAML WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
-                DA1.Fill(DT1)
-                Dim DR1 = DT1.Rows(0)
-
-                DR1!STAT_DT = False
-                Dim SAVE1 As New SqlClient.SqlCommandBuilder(DA1)
-                DA1.Update(DT1)
                 '=====================================حذف التفاصيل من الخزينة ========================
-                Dim DT2 As New DataTable
-                Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT = '" & TXT_CODE.Text & "'AND CODE_DT2 = '2'", SqlConn)
-                DA2.Fill(DT2)
-                Dim DR2 = DT2.Rows(0)
-                DR2!STAT_KHAZINA = False
-                Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
-                DA2.Update(DT2)
-                '=============================================  حذف من حساب المريض =============================
-                Dim DT3 As New DataTable
-                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '" & TXT_CODE2.Text & "' ", SqlConn)
-                DA3.Fill(DT3)
-                Dim DR3 = DT3.Rows(0)
-
-                DR3!STAT = False
-
-                Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
-                DA3.Update(DT3)
+                Dim CMD_DEL2 As New SqlClient.SqlCommand
+                CMD_DEL2.Connection = SqlConn
+                CMD_DEL2.CommandText = "DELETE FROM KHAZINA_DT WHERE CODE_DT ='" & TXT_CODE.Text & "'AND CODE_DT2 = '2' "
+                CMD_DEL2.ExecuteNonQuery()
+                '==========================================================================
+                Dim CMD_DEL3 As New SqlClient.SqlCommand
+                CMD_DEL3.Connection = SqlConn
+                CMD_DEL3.CommandText = "DELETE FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '" & TXT_CODE2.Text & "' "
+                CMD_DEL3.ExecuteNonQuery()
 
                 '====================== عودة لشاشة المعمل =========================
                 Dim DT4 As New DataTable

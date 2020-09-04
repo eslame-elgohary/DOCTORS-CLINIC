@@ -20,6 +20,7 @@
             PA_CHI.Text = DR!PA_CHI
             PA_TYPE.Text = DR!PA_TYPE
 
+
             DELETBTN.Enabled = True
             EDITBTN.Enabled = True
             SAVEBTN.Enabled = False
@@ -63,6 +64,7 @@
         PA_CHI_R1.Checked = True
         PA_OP_R1.Checked = True
         PA_CODE2.Text = ""
+        DONT_TRUE.Checked = False
         '""""""""""""""" الترقيم التلقائي """"""""""""""
         PA_CODE.Text = CODE_GENE("PATIENT", "ID") + 1
         PA_CODE2.Text = CODE_GENE("PATIENT", "ID") + 1
@@ -153,6 +155,7 @@
             PA_CHI_R1.Checked = DR!PA_CHI_R1
             PA_CHI.Text = DR!PA_CHI
             PA_TYPE.Text = DR!PA_TYPE
+            TXT_KARMA.Text = DR!WALID
 
             DELETBTN.Enabled = True
             EDITBTN.Enabled = True
@@ -205,6 +208,11 @@
                     DR!PA_CHI_R1 = PA_CHI_R1.Checked
                     DR!PA_CHI = PA_CHI.Text
                     DR!PA_TYPE = PA_TYPE.Text
+                    If DONT_TRUE.Checked = True Then
+                        DR!WALID = "مرفوض الحجز لهذا المريض"
+                    Else
+                        DR!WALID = " "
+                    End If
                     DR!STAT = True
                     DR!USER_ADD = USER_ADD.Text
                     DR!DATE_ADD = DATE_ADD.Text
@@ -263,6 +271,11 @@
                     UPDATE!PA_CHI_R1 = PA_CHI_R1.Checked
                     UPDATE!PA_CHI = PA_CHI.Text
                     UPDATE!PA_TYPE = PA_TYPE.Text
+                    If DONT_TRUE.Checked = True Then
+                        UPDATE!WALID = "مرفوض الحجز لهذا المريض"
+                    Else
+                        UPDATE!WALID = " "
+                    End If
                     UPDATE!STAT = True
                     UPDATE!USER_EDIT = USER_EDIT.Text
                     UPDATE!DATE_EDIT = DATE_EDIT.Text
@@ -516,6 +529,14 @@
                 SendKeys.Send("{Tab}")
             End If
 
+        End If
+    End Sub
+
+    Private Sub TXT_KARMA_TextChanged(sender As Object, e As EventArgs) Handles TXT_KARMA.TextChanged
+        If TXT_KARMA.Text = " " Then
+            DONT_TRUE.Checked = False
+        Else
+            DONT_TRUE.Checked = True
         End If
     End Sub
 End Class

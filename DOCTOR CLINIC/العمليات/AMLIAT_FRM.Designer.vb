@@ -25,6 +25,8 @@ Partial Class AMLIAT_FRM
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AMLIAT_FRM))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,17 +43,15 @@ Partial Class AMLIAT_FRM
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ACTIVE_DOCTOR = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.ACTIVE_DOCTOR = New DevExpress.XtraEditors.SimpleButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GRBTN = New System.Windows.Forms.GroupBox()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
@@ -67,8 +67,8 @@ Partial Class AMLIAT_FRM
         CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         Me.GRBTN.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,6 +93,24 @@ Partial Class AMLIAT_FRM
         Me.GroupBox1.Size = New System.Drawing.Size(967, 99)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.White
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(241, 62)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(157, 29)
+        Me.TextBox1.TabIndex = 14
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(404, 65)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(140, 21)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "اجمالي المصروفات :"
         '
         'Label6
         '
@@ -133,10 +151,11 @@ Partial Class AMLIAT_FRM
         '
         Me.TXT_PA_CODE.BackColor = System.Drawing.Color.White
         Me.TXT_PA_CODE.Enabled = False
-        Me.TXT_PA_CODE.Location = New System.Drawing.Point(608, 30)
+        Me.TXT_PA_CODE.Location = New System.Drawing.Point(737, 22)
         Me.TXT_PA_CODE.Name = "TXT_PA_CODE"
-        Me.TXT_PA_CODE.Size = New System.Drawing.Size(53, 29)
+        Me.TXT_PA_CODE.Size = New System.Drawing.Size(34, 29)
         Me.TXT_PA_CODE.TabIndex = 6
+        Me.TXT_PA_CODE.Visible = False
         '
         'Label3
         '
@@ -236,34 +255,42 @@ Partial Class AMLIAT_FRM
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "المصروفات "
         '
-        'TabPage2
+        'DataGridView1
         '
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(959, 330)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "ملاحظات العملية"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 57)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(939, 265)
+        Me.DataGridView1.TabIndex = 58
         '
-        'Label5
+        'Column1
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(404, 65)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(140, 21)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "اجمالي المصروفات :"
+        Me.Column1.HeaderText = "بيان المصروف"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
-        'TextBox1
+        'Column2
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(241, 62)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 29)
-        Me.TextBox1.TabIndex = 14
+        Me.Column2.FillWeight = 30.0!
+        Me.Column2.HeaderText = "قيمة المصروف"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'ACTIVE_DOCTOR
+        '
+        Me.ACTIVE_DOCTOR.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ACTIVE_DOCTOR.Appearance.Options.UseFont = True
+        Me.ACTIVE_DOCTOR.ImageOptions.Image = CType(resources.GetObject("ACTIVE_DOCTOR.ImageOptions.Image"), System.Drawing.Image)
+        Me.ACTIVE_DOCTOR.Location = New System.Drawing.Point(38, 6)
+        Me.ACTIVE_DOCTOR.Name = "ACTIVE_DOCTOR"
+        Me.ACTIVE_DOCTOR.Size = New System.Drawing.Size(42, 35)
+        Me.ACTIVE_DOCTOR.TabIndex = 57
         '
         'TextBox3
         '
@@ -299,42 +326,16 @@ Partial Class AMLIAT_FRM
         Me.TextBox4.Size = New System.Drawing.Size(485, 29)
         Me.TextBox4.TabIndex = 15
         '
-        'ACTIVE_DOCTOR
+        'TabPage2
         '
-        Me.ACTIVE_DOCTOR.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ACTIVE_DOCTOR.Appearance.Options.UseFont = True
-        Me.ACTIVE_DOCTOR.ImageOptions.Image = CType(resources.GetObject("ACTIVE_DOCTOR.ImageOptions.Image"), System.Drawing.Image)
-        Me.ACTIVE_DOCTOR.Location = New System.Drawing.Point(38, 6)
-        Me.ACTIVE_DOCTOR.Name = "ACTIVE_DOCTOR"
-        Me.ACTIVE_DOCTOR.Size = New System.Drawing.Size(42, 35)
-        Me.ACTIVE_DOCTOR.TabIndex = 57
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 57)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(939, 265)
-        Me.DataGridView1.TabIndex = 58
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "بيان المصروف"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.FillWeight = 30.0!
-        Me.Column2.HeaderText = "قيمة المصروف"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
+        Me.TabPage2.Controls.Add(Me.TextBox5)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(959, 330)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "ملاحظات العملية"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
@@ -484,9 +485,9 @@ Partial Class AMLIAT_FRM
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GRBTN.ResumeLayout(False)
         Me.ResumeLayout(False)
 

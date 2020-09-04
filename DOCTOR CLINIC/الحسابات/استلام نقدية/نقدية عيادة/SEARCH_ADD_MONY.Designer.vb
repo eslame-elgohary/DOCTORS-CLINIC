@@ -153,7 +153,6 @@ Partial Class SEARCH_ADD_MONY
         Me.Column4.ReadOnly = True
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column4.Visible = False
         '
         'SEARCH_ADD_MONY
         '

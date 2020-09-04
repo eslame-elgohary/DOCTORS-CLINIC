@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ATAB_DOCTORS
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ATAB_DOCTORS
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ATAB_DOCTORS))
@@ -62,8 +62,6 @@ Partial Class ATAB_DOCTORS
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.TXT_TYPEMONY = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TXT_DATE2 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -404,35 +402,12 @@ Partial Class ATAB_DOCTORS
         Me.Label6.TabIndex = 147
         Me.Label6.Text = "نوع التعامل :"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(491, 9)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 21)
-        Me.Label7.TabIndex = 150
-        Me.Label7.Text = "حتى تاريخ :"
-        '
-        'TXT_DATE2
-        '
-        Me.TXT_DATE2.Checked = False
-        Me.TXT_DATE2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE2.Location = New System.Drawing.Point(577, 5)
-        Me.TXT_DATE2.Name = "TXT_DATE2"
-        Me.TXT_DATE2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TXT_DATE2.Size = New System.Drawing.Size(173, 29)
-        Me.TXT_DATE2.TabIndex = 149
-        Me.TXT_DATE2.Value = New Date(2020, 4, 1, 0, 0, 0, 0)
-        Me.TXT_DATE2.Visible = False
-        '
         'ATAB_DOCTORS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(880, 454)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TXT_DATE2)
         Me.Controls.Add(Me.TXT_TYPEMONY)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PRINTBTN)
@@ -514,6 +489,4 @@ Partial Class ATAB_DOCTORS
     Friend WithEvents PRINTBTN As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_TYPEMONY As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TXT_DATE2 As DateTimePicker
 End Class
