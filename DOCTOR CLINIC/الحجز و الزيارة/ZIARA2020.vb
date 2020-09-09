@@ -775,15 +775,15 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                 'For Each r As DataGridViewRow In DataGridView1.SelectedRows
                 '    r.DefaultCellStyle.BackColor = P_FREE.BackColor
                 'Next
-                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
-                Dim DT As New DataTable
-                DA.Fill(DT)
-                Dim DR = DT.Rows(0)
-                DR!STAT_COLORE = "3"
-                DR!EDIT_USER = HOME.T_USERS.Text
-                DR!DATE_EDIT_USER = Date.Now
-                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                DA.Update(DT)
+                'Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+                'Dim DT As New DataTable
+                'DA.Fill(DT)
+                'Dim DR = DT.Rows(0)
+                'DR!STAT_COLORE = "3"
+                'DR!EDIT_USER = HOME.T_USERS.Text
+                'DR!DATE_EDIT_USER = Date.Now
+                'Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                'DA.Update(DT)
 
             End If
             '   If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub

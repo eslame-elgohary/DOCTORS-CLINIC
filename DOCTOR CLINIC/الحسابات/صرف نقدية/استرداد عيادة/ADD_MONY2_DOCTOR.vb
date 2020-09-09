@@ -372,15 +372,14 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("M2").ToString = True Then
-                If DT0.Rows(0).Item("M3").ToString = False Then
-                    If Val(TXT_DAY.Text) >= Val(TXT_DAY2.Text) Then
-                        MessageBox.Show("لا يمكن استرداد مر عليه اكثر من يوم", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        TXT_CODE.Select()
-                        Exit Sub
-                    End If
+            If DT0.Rows(0).Item("M3").ToString = False Then
+                If Val(TXT_DAY.Text) >= Val(TXT_DAY2.Text) Then
+                    MessageBox.Show("لا يمكن استرداد مر عليه اكثر من يوم", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_CODE.Select()
+                    Exit Sub
                 End If
-
+            End If
+            If DT0.Rows(0).Item("M2").ToString = True Then
                 '========= قيود الادخال =======================
                 If PA_NAME.Text = "" Then
                     MessageBox.Show("برجاء ادخال رقم أيصال الاسترداد", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)

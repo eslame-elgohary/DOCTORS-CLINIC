@@ -2012,7 +2012,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Cs3r2oPoIuk9ss3hjQYkF7Uw9HWhls/cJC6GmvBarJ8=</dsig:DigestValue>
+        <dsig:DigestValue>k39QDgG8G6B3dSEOfZqoweZ+Lze7efb9CYgS+NHYtgc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2061,13 +2061,13 @@
       <dsig:DigestValue>HjTi33LqsMFtWpn9gbNL9P5ZpBQQe3c6aRofeZnj+AM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DOCTOR CLINIC.exe.config" size="3061">
+  <file name="DOCTOR CLINIC.exe.config" size="3060">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>iPaVpXaLzfVHC6uq3Vd5gwHqZ+qmNO0PkgfrLATNlMg=</dsig:DigestValue>
+      <dsig:DigestValue>QtPXSio4Jy2acCPKpEfOSJpLTeWa+VobMLh/gQURQuU=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

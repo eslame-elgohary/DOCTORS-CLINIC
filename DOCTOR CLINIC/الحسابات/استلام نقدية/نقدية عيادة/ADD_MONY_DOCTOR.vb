@@ -392,16 +392,24 @@
                     TXT_DATE.Select()
                     Exit Sub
                 Else
-                    For I = 0 To DataGridView1.Rows.Count - 1
-                        Dim DRE = DTE.Rows(0)
-                        DRE!ACTION = DataGridView1.Rows(I).Cells(2).Value
-                        DRE!STAT_COLORE = "2"
-                        Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
-                        DAE.Update(DTE)
-                    Next
+                    If SAFY.Text = "0" Then
+                        For I = 0 To DataGridView1.Rows.Count - 1
+                            Dim DRE = DTE.Rows(0)
+                            DRE!ACTION = DataGridView1.Rows(I).Cells(2).Value
+                            DRE!STAT_COLORE = "3"
+                            Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
+                            DAE.Update(DTE)
+                        Next
+                    Else
+                        For I = 0 To DataGridView1.Rows.Count - 1
+                            Dim DRE = DTE.Rows(0)
+                            DRE!ACTION = DataGridView1.Rows(I).Cells(2).Value
+                            DRE!STAT_COLORE = "2"
+                            Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
+                            DAE.Update(DTE)
+                        Next
+                    End If
                 End If
-
-
 
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
 
