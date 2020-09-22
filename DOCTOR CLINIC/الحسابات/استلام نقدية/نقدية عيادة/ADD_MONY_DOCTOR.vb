@@ -312,7 +312,11 @@
     End Sub
 
     Private Sub ACTIVE_DOCTOR_Click(sender As Object, e As EventArgs) Handles ACTIVE_DOCTOR.Click
-
+        If TXT_PRICE.Text = "" Then
+            MessageBox.Show("من فضلك أختار الخدمة")
+            TXT_ACTION.Select()
+            Exit Sub
+        End If
         Dim BAR As Integer
         '======= اضافة سجل للداتا جريد ===========
         DataGridView1.Rows.Add()

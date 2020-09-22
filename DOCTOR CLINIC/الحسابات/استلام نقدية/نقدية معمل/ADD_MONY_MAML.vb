@@ -525,7 +525,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("M3").ToString = True Then
+            If DT0.Rows(0).Item("M2").ToString = True Then
                 If MessageBox.Show("هل ترغب في حذف بيانات الأيصال ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
                 '================= تخزين بيانات الصنف في قاعدة البيانات =============
                 Dim DT As New DataTable
@@ -536,10 +536,10 @@
 
                 DR!ADD_STAT = False
                 DR!ADD_USER_EDIT = USER_EDIT.Text
-                    DR!ADD_DATE_EDIT = DATE_EDIT.Text
-                    DR!ADD_TIME_EDIT = TIME_EDIT.Text
-                    Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                    DA.Update(DT)
+                DR!ADD_DATE_EDIT = DATE_EDIT.Text
+                DR!ADD_TIME_EDIT = TIME_EDIT.Text
+                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+                DA.Update(DT)
 
                 '=====================================حذف التفاصيل من الخزينة ========================
                 Dim CMD_DEL2 As New SqlClient.SqlCommand

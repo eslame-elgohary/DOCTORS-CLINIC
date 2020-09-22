@@ -412,7 +412,7 @@
                 Else
                     For I = 0 To DataGridView1.Rows.Count - 1
                         Dim DRE = DTE.Rows(0)
-                        DRE!ACTION = ""
+                        ' DRE!ACTION = ""
                         DRE!STAT_COLORE = "0"
 
                         Dim SAVEE As New SqlClient.SqlCommandBuilder(DAE)
@@ -749,7 +749,7 @@
     End Sub
 
     Private Sub SEARCHBTN_Click(sender As Object, e As EventArgs) Handles SEARCHBTN.Click
-        SEARCH_ADD_MONY.ShowDialog()
+        SEARCH_ADD_MONY2020.ShowDialog()
     End Sub
 
     Private Sub UNDOBTN_Click(sender As Object, e As EventArgs) Handles UNDOBTN.Click
@@ -928,15 +928,13 @@
     Private Sub LAST_COME_Click(sender As Object, e As EventArgs) Handles LAST_COME.Click
         If PA_NAME.Text = "" Then
             MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            PA_NAME.Select()
             Exit Sub
         End If
         If CODE_DOCTOR.Text = "" Then
             MessageBox.Show("برجاء ادخال اسم الطبيب", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            TXT_DOCTOR.Select()
             Exit Sub
         End If
-        LASTCOMEFRM.ShowDialog()
+        LASTCOMEFRM2.ShowDialog()
     End Sub
 
     Private Sub TXT_CODE_KeyDown(sender As Object, e As KeyEventArgs) Handles TXT_CODE.KeyDown

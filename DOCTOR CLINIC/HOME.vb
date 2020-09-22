@@ -529,7 +529,31 @@ Public Class HOME
         'ADD_MONY2_DOCTOR.ShowDialog()
     End Sub
 
-    Private Sub فاتورةرسميةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles فاتورةرسميةToolStripMenuItem.Click
-        FATO_AMLIAT_FRM.ShowDialog()
+    Private Sub الموظفينToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles الموظفينToolStripMenuItem.Click
+        EMP_FRM.ShowDialog()
+    End Sub
+
+    Private Sub الحضوروالأنصرافToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles الحضوروالأنصرافToolStripMenuItem.Click
+        mortbat.ShowDialog()
+    End Sub
+
+    Private Sub الأيراداتالأخريToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles الأيراداتالأخريToolStripMenuItem.Click
+        Try
+            ROLES("N", ERADAT)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub أستلامأيراداتأخريToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles أستلامأيراداتأخريToolStripMenuItem.Click
+        Try
+            ROLES("M", ERADAT_EZN_FRM)
+        Catch EX As Exception
+
+        End Try
+    End Sub
+
+    Private Sub تقريرتفصيليللأيراداتToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تقريرتفصيليللأيراداتToolStripMenuItem.Click
+        ERADAT_REP.ShowDialog()
     End Sub
 End Class

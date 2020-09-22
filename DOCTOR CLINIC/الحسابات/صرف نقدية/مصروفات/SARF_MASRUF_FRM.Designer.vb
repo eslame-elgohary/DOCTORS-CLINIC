@@ -53,6 +53,9 @@ Partial Class SARF_MASRUF_FRM
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TXT_DAY2 = New System.Windows.Forms.Label()
+        Me.TXT_DAY = New System.Windows.Forms.Label()
+        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
         Me.TXT_INFO_ACTION = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_M = New System.Windows.Forms.TextBox()
@@ -77,9 +80,6 @@ Partial Class SARF_MASRUF_FRM
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TOTAL = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TXT_DAY2 = New System.Windows.Forms.Label()
-        Me.TXT_DAY = New System.Windows.Forms.Label()
-        Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GRBTN.SuspendLayout()
@@ -285,6 +285,7 @@ Partial Class SARF_MASRUF_FRM
         Me.UNDOBTN.Size = New System.Drawing.Size(106, 44)
         Me.UNDOBTN.TabIndex = 5
         Me.UNDOBTN.Text = "الأرشيف"
+        Me.UNDOBTN.Visible = False
         '
         'SEARCHBTN
         '
@@ -378,6 +379,36 @@ Partial Class SARF_MASRUF_FRM
         Me.GroupBox2.Size = New System.Drawing.Size(832, 309)
         Me.GroupBox2.TabIndex = 38
         Me.GroupBox2.TabStop = False
+        '
+        'TXT_DAY2
+        '
+        Me.TXT_DAY2.AutoSize = True
+        Me.TXT_DAY2.Location = New System.Drawing.Point(216, 122)
+        Me.TXT_DAY2.Name = "TXT_DAY2"
+        Me.TXT_DAY2.Size = New System.Drawing.Size(18, 21)
+        Me.TXT_DAY2.TabIndex = 71
+        Me.TXT_DAY2.Text = "2"
+        Me.TXT_DAY2.Visible = False
+        '
+        'TXT_DAY
+        '
+        Me.TXT_DAY.AutoSize = True
+        Me.TXT_DAY.Location = New System.Drawing.Point(281, 123)
+        Me.TXT_DAY.Name = "TXT_DAY"
+        Me.TXT_DAY.Size = New System.Drawing.Size(59, 21)
+        Me.TXT_DAY.TabIndex = 69
+        Me.TXT_DAY.Text = "0000000"
+        Me.TXT_DAY.Visible = False
+        '
+        'TXT_DATE_TODAY
+        '
+        Me.TXT_DATE_TODAY.Enabled = False
+        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(450, 158)
+        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
+        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(167, 29)
+        Me.TXT_DATE_TODAY.TabIndex = 70
+        Me.TXT_DATE_TODAY.Visible = False
         '
         'TXT_INFO_ACTION
         '
@@ -601,36 +632,6 @@ Partial Class SARF_MASRUF_FRM
         Me.Label6.Size = New System.Drawing.Size(48, 50)
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "+"
-        '
-        'TXT_DAY2
-        '
-        Me.TXT_DAY2.AutoSize = True
-        Me.TXT_DAY2.Location = New System.Drawing.Point(216, 122)
-        Me.TXT_DAY2.Name = "TXT_DAY2"
-        Me.TXT_DAY2.Size = New System.Drawing.Size(18, 21)
-        Me.TXT_DAY2.TabIndex = 71
-        Me.TXT_DAY2.Text = "2"
-        Me.TXT_DAY2.Visible = False
-        '
-        'TXT_DAY
-        '
-        Me.TXT_DAY.AutoSize = True
-        Me.TXT_DAY.Location = New System.Drawing.Point(281, 123)
-        Me.TXT_DAY.Name = "TXT_DAY"
-        Me.TXT_DAY.Size = New System.Drawing.Size(59, 21)
-        Me.TXT_DAY.TabIndex = 69
-        Me.TXT_DAY.Text = "0000000"
-        Me.TXT_DAY.Visible = False
-        '
-        'TXT_DATE_TODAY
-        '
-        Me.TXT_DATE_TODAY.Enabled = False
-        Me.TXT_DATE_TODAY.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TXT_DATE_TODAY.Location = New System.Drawing.Point(450, 158)
-        Me.TXT_DATE_TODAY.Name = "TXT_DATE_TODAY"
-        Me.TXT_DATE_TODAY.Size = New System.Drawing.Size(167, 29)
-        Me.TXT_DATE_TODAY.TabIndex = 70
-        Me.TXT_DATE_TODAY.Visible = False
         '
         'SARF_MASRUF_FRM
         '

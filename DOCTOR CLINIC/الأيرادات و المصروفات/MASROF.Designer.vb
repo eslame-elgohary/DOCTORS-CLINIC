@@ -24,6 +24,9 @@ Partial Class MASROF
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MASROF))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TXT_NAME = New System.Windows.Forms.TextBox()
@@ -34,9 +37,6 @@ Partial Class MASROF
         Me.EDITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.DELETBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -54,6 +54,28 @@ Partial Class MASROF
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(493, 312)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "MASROF_CODE"
+        Me.Column1.HeaderText = "كود المصروف"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "MASROF_NAME"
+        Me.Column2.HeaderText = "أسم المصروف"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 50.0!
+        Me.Column4.HeaderText = "-"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'GroupBox1
         '
@@ -99,7 +121,7 @@ Partial Class MASROF
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(389, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 21)
+        Me.Label1.Size = New System.Drawing.Size(109, 21)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "كود المصروف :"
         '
@@ -155,28 +177,6 @@ Partial Class MASROF
         Me.EXITBTN.Size = New System.Drawing.Size(44, 36)
         Me.EXITBTN.TabIndex = 6
         '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "MASROF_CODE"
-        Me.Column1.HeaderText = "كود المصروف"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "MASROF_NAME"
-        Me.Column2.HeaderText = "أسم المصروف"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.FillWeight = 50.0!
-        Me.Column4.HeaderText = "-"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
         'MASROF
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -199,7 +199,7 @@ Partial Class MASROF
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "الجرعات"
+        Me.Text = "المصروفات"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

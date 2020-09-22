@@ -118,9 +118,17 @@ Public Class MALGHE_HAGEZ4
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property ReportFooterSection3() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(8)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
+        Get
+            Return Me.ReportDefinition.Sections(9)
         End Get
     End Property
     
@@ -137,6 +145,14 @@ Public Class MALGHE_HAGEZ4
     Public ReadOnly Property Parameter_MASROUF() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(1)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_ERADAT() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(2)
         End Get
     End Property
 End Class

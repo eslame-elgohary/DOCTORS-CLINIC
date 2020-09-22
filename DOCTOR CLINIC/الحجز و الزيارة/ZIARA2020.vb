@@ -675,11 +675,30 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         Else
 
             If DataGridView1.SelectedRows.Count > 0 Then
+
+                '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
+                Dim DA112 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+                Dim DT112 As New DataTable
+                DA112.Fill(DT112)
+                If DT112.Rows.Count > 0 Then
+                    MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End If
+                Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '3'", SqlConn)
+                Dim DT111 As New DataTable
+                DA111.Fill(DT111)
+                If DT111.Rows.Count > 0 Then
+                    MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End If
+
+
                 If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " حضر ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
 
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
                 Dim DT As New DataTable
                 DA.Fill(DT)
+
                 Dim DR = DT.Rows(0)
                 DR!STAT_COLORE = "1"
 
@@ -697,6 +716,21 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
+            '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
+            Dim DA112 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+            Dim DT112 As New DataTable
+            DA112.Fill(DT112)
+            If DT112.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+            Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '3'", SqlConn)
+            Dim DT111 As New DataTable
+            DA111.Fill(DT111)
+            If DT111.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
 
             If DataGridView1.SelectedRows.Count > 0 Then
                 If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " يرغب فى التأجيل ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
@@ -769,6 +803,15 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             Exit Sub
         Else
 
+            '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
+            Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+            Dim DT111 As New DataTable
+            DA111.Fill(DT111)
+            If DT111.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
             If DataGridView1.SelectedRows.Count > 0 Then
                 If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " مجانا ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
 
@@ -805,6 +848,21 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         Else
+            '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
+            Dim DA112 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+            Dim DT112 As New DataTable
+            DA112.Fill(DT112)
+            If DT112.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+            Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '3'", SqlConn)
+            Dim DT111 As New DataTable
+            DA111.Fill(DT111)
+            If DT111.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
 
             If DataGridView1.SelectedRows.Count > 0 Then
                 If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " يرغب فى الألغاء ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
@@ -833,6 +891,22 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             Exit Sub
         Else
 
+            '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
+            Dim DA112 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+            Dim DT112 As New DataTable
+            DA112.Fill(DT112)
+            If DT112.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+            Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '3'", SqlConn)
+            Dim DT111 As New DataTable
+            DA111.Fill(DT111)
+            If DT111.Rows.Count > 0 Then
+                MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
             If DataGridView1.SelectedRows.Count > 0 Then
                 If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " لم يحضر الى العيادة ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
 
@@ -859,26 +933,44 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         If TXT_ID_H.Text = "" Then
             MessageBox.Show("يرجى أختيار المريض  من الجدول بالأسفل", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
-        ElseIf TXT_CALL_WITH.Text = "" Then
+        End If
+
+        '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
+        Dim DA112 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+        Dim DT112 As New DataTable
+        DA112.Fill(DT112)
+        If DT112.Rows.Count > 0 Then
+            MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+        Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '3'", SqlConn)
+        Dim DT111 As New DataTable
+        DA111.Fill(DT111)
+        If DT111.Rows.Count > 0 Then
+            MessageBox.Show("المريض له أيصال نقدية ولا يمكن التعديل عليه", "أنتبة", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        If TXT_CALL_WITH.Text = "" Then
             MessageBox.Show("يرجى كتابة ما تم اثناء الاتصال", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXT_CALL_WITH.Select()
             Exit Sub
-        Else
-
-            If DataGridView1.SelectedRows.Count > 0 Then
-                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " تم الأتصال به الأن ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
-
-                Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
-                Dim DT As New DataTable
-                DA.Fill(DT)
-                Dim DR = DT.Rows(0)
-                DR!INFO_STAT = TXT_INFO_H_DATAGRID.Text & " , " & TXT_CALL_WITH.Text & Date.Now.ToShortTimeString
-                Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
-                DA.Update(DT)
-                REFRESH_BTN_Click(sender, e)
-                TXT_CALL_WITH.Text = ""
-            End If
         End If
+
+        If DataGridView1.SelectedRows.Count > 0 Then
+            If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " تم الأتصال به الأن ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "'", SqlConn)
+            Dim DT As New DataTable
+            DA.Fill(DT)
+            Dim DR = DT.Rows(0)
+            DR!INFO_STAT = TXT_INFO_H_DATAGRID.Text & " , " & TXT_CALL_WITH.Text & Date.Now.ToShortTimeString
+            Dim SAVE As New SqlClient.SqlCommandBuilder(DA)
+            DA.Update(DT)
+            REFRESH_BTN_Click(sender, e)
+            TXT_CALL_WITH.Text = ""
+        End If
+
     End Sub
 
     Private Sub Label26_Click(sender As Object, e As EventArgs) Handles Label26.Click
@@ -1053,7 +1145,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
             TOTAL_MAML.Text = Val(TXT_MAML_RASED.Text)
 
-            FILL_DGV(DataGridView3, "SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "'")
+            FILL_DGV(DataGridView3, "SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "'AND OUT_TYPE='مصروفات' ")
 
             Dim TOTAL2_ As Double
 
@@ -1063,24 +1155,40 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
             TXT_MASROUF_RASED.Text = Val(TOTAL2_)
 
+            FILL_DGV(DataGridView4, "SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "'AND OUT_TYPE='أيرادات' ")
+
+            Dim TOTAL3_ As Double
+
+            For I3 = 0 To DataGridView4.Rows.Count - 1
+                TOTAL3_ = Val(TOTAL3_) + Val(DataGridView4.Rows(I3).Cells(1).Value)
+            Next
+
+            TXT_ERAD_RASED.Text = Val(TOTAL3_)
+
             Dim DT As New DataTable
             Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM BADR_V WHERE DATE_HAGEZ='" & TXT_DATE.Text & "'AND ADD_STAT = 'TRUE'", SqlConn)
             DA.Fill(DT)
 
             Dim DT1 As New DataTable
-            Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "'", SqlConn)
+            Dim DA1 As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "' AND OUT_TYPE='مصروفات'", SqlConn)
             DA1.Fill(DT1)
 
             Dim DT2 As New DataTable
             Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM estr WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_TYPE='أسترداد عيادات'", SqlConn)
             DA2.Fill(DT2)
 
+            Dim DT3 As New DataTable
+            Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "' AND OUT_TYPE='أيرادات'", SqlConn)
+            DA3.Fill(DT3)
+
             Dim REP1 As New MALGHE_HAGEZ4
             REP1.SetDataSource(DT)
             REP1.Subreports(0).SetDataSource(DT1)
             REP1.Subreports(1).SetDataSource(DT2)
+            REP1.Subreports(2).SetDataSource(DT3)
             REP1.SetParameterValue(0, TOTAL_MAML.Text)
             REP1.SetParameterValue(1, TXT_MASROUF_RASED.Text)
+            REP1.SetParameterValue(2, TXT_ERAD_RASED.Text)
 
             Dim FRM As New REPFORALL
             FRM.CrystalReportViewer1.ReportSource = REP1

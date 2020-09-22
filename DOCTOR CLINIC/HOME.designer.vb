@@ -66,6 +66,7 @@ Partial Class HOME
         Me.BT_KHAZINA = New System.Windows.Forms.ToolStripMenuItem()
         Me.الأيراداتالمصروفاتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_MASROUF = New System.Windows.Forms.ToolStripMenuItem()
+        Me.الأيراداتالأخريToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.زيارةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_ZIARAFRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_HAGEZ_FRM = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,6 +80,7 @@ Partial Class HOME
         Me.BT_ADDMONY_DOCTOR = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_ADDMONY_MAML = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_T3AQOD_ADD_MONY_DOC = New System.Windows.Forms.ToolStripMenuItem()
+        Me.أستلامأيراداتأخريToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.أذنصرفنقديةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_MASROF_DT = New System.Windows.Forms.ToolStripMenuItem()
         Me.أتعابطبيبToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -86,6 +88,7 @@ Partial Class HOME
         Me.BT_CONVERT_KHAZINA = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_TSWIA = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_PA_DOF3A = New System.Windows.Forms.ToolStripMenuItem()
+        Me.فاتورةرسميةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.التقاريرToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_PATENT_REP = New System.Windows.Forms.ToolStripMenuItem()
         Me.تقريرالحساباتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -113,6 +116,9 @@ Partial Class HOME
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_AMLIAT = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_REP_AMLIAT = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.الموظفينToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.الحضوروالأنصرافToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -137,7 +143,7 @@ Partial Class HOME
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.فاتورةرسميةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -443,7 +449,7 @@ Partial Class HOME
         '
         'الأيراداتالمصروفاتToolStripMenuItem
         '
-        Me.الأيراداتالمصروفاتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_MASROUF})
+        Me.الأيراداتالمصروفاتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_MASROUF, Me.الأيراداتالأخريToolStripMenuItem})
         Me.الأيراداتالمصروفاتToolStripMenuItem.Name = "الأيراداتالمصروفاتToolStripMenuItem"
         Me.الأيراداتالمصروفاتToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.الأيراداتالمصروفاتToolStripMenuItem.Text = "الأيرادات / المصروفات"
@@ -453,6 +459,12 @@ Partial Class HOME
         Me.BT_MASROUF.Name = "BT_MASROUF"
         Me.BT_MASROUF.Size = New System.Drawing.Size(163, 22)
         Me.BT_MASROUF.Text = "المصروفات  => N"
+        '
+        'الأيراداتالأخريToolStripMenuItem
+        '
+        Me.الأيراداتالأخريToolStripMenuItem.Name = "الأيراداتالأخريToolStripMenuItem"
+        Me.الأيراداتالأخريToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.الأيراداتالأخريToolStripMenuItem.Text = "الأيرادات الأخري"
         '
         'زيارةToolStripMenuItem
         '
@@ -515,7 +527,7 @@ Partial Class HOME
         '
         'BT_ADDMONY
         '
-        Me.BT_ADDMONY.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY_DOCTOR, Me.BT_ADDMONY_MAML, Me.BTN_T3AQOD_ADD_MONY_DOC})
+        Me.BT_ADDMONY.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_ADDMONY_DOCTOR, Me.BT_ADDMONY_MAML, Me.BTN_T3AQOD_ADD_MONY_DOC, Me.أستلامأيراداتأخريToolStripMenuItem})
         Me.BT_ADDMONY.Name = "BT_ADDMONY"
         Me.BT_ADDMONY.Size = New System.Drawing.Size(169, 22)
         Me.BT_ADDMONY.Text = "أذن استلام نقدية"
@@ -523,21 +535,27 @@ Partial Class HOME
         'BT_ADDMONY_DOCTOR
         '
         Me.BT_ADDMONY_DOCTOR.Name = "BT_ADDMONY_DOCTOR"
-        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(147, 22)
+        Me.BT_ADDMONY_DOCTOR.Size = New System.Drawing.Size(168, 22)
         Me.BT_ADDMONY_DOCTOR.Text = "أيصال عيادات"
         '
         'BT_ADDMONY_MAML
         '
         Me.BT_ADDMONY_MAML.Name = "BT_ADDMONY_MAML"
-        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(147, 22)
+        Me.BT_ADDMONY_MAML.Size = New System.Drawing.Size(168, 22)
         Me.BT_ADDMONY_MAML.Text = "أيصال معمل"
         '
         'BTN_T3AQOD_ADD_MONY_DOC
         '
         Me.BTN_T3AQOD_ADD_MONY_DOC.Name = "BTN_T3AQOD_ADD_MONY_DOC"
-        Me.BTN_T3AQOD_ADD_MONY_DOC.Size = New System.Drawing.Size(147, 22)
+        Me.BTN_T3AQOD_ADD_MONY_DOC.Size = New System.Drawing.Size(168, 22)
         Me.BTN_T3AQOD_ADD_MONY_DOC.Text = "أيصال تعاقدات"
         Me.BTN_T3AQOD_ADD_MONY_DOC.Visible = False
+        '
+        'أستلامأيراداتأخريToolStripMenuItem
+        '
+        Me.أستلامأيراداتأخريToolStripMenuItem.Name = "أستلامأيراداتأخريToolStripMenuItem"
+        Me.أستلامأيراداتأخريToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.أستلامأيراداتأخريToolStripMenuItem.Text = "أستلام أيرادات أخري"
         '
         'أذنصرفنقديةToolStripMenuItem
         '
@@ -582,6 +600,12 @@ Partial Class HOME
         Me.BTN_PA_DOF3A.Size = New System.Drawing.Size(169, 22)
         Me.BTN_PA_DOF3A.Text = "دفعة من مريض"
         '
+        'فاتورةرسميةToolStripMenuItem
+        '
+        Me.فاتورةرسميةToolStripMenuItem.Name = "فاتورةرسميةToolStripMenuItem"
+        Me.فاتورةرسميةToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.فاتورةرسميةToolStripMenuItem.Text = "فاتورة رسمية"
+        '
         'التقاريرToolStripMenuItem
         '
         Me.التقاريرToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_PATENT_REP, Me.تقريرالحساباتToolStripMenuItem, Me.BT_HESAP_DOC_FRM, Me.LABTOLABToolStripMenuItem, Me.BTN_PA_HESAPFRM, Me.REP_HAGEZ_PA})
@@ -597,7 +621,7 @@ Partial Class HOME
         '
         'تقريرالحساباتToolStripMenuItem
         '
-        Me.تقريرالحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_REP_KHAZINA, Me.تقريرتفصيليللمصروفاتToolStripMenuItem, Me.تقريرأتعابطبيبToolStripMenuItem})
+        Me.تقريرالحساباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_REP_KHAZINA, Me.تقريرتفصيليللمصروفاتToolStripMenuItem, Me.تقريرأتعابطبيبToolStripMenuItem, Me.تقريرتفصيليللأيراداتToolStripMenuItem})
         Me.تقريرالحساباتToolStripMenuItem.Name = "تقريرالحساباتToolStripMenuItem"
         Me.تقريرالحساباتToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.تقريرالحساباتToolStripMenuItem.Text = "تقرير الحسابات"
@@ -707,7 +731,7 @@ Partial Class HOME
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.ToolStripMenuItem4, Me.التقاريرToolStripMenuItem, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.ToolStripMenuItem3})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.ToolStripMenuItem4, Me.التقاريرToolStripMenuItem, Me.ToolStripMenuItem5, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.ToolStripMenuItem3})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
@@ -758,6 +782,25 @@ Partial Class HOME
         Me.BT_REP_AMLIAT.Name = "BT_REP_AMLIAT"
         Me.BT_REP_AMLIAT.Size = New System.Drawing.Size(182, 22)
         Me.BT_REP_AMLIAT.Text = "تقرير عمليات"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.الموظفينToolStripMenuItem, Me.الحضوروالأنصرافToolStripMenuItem})
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(90, 20)
+        Me.ToolStripMenuItem5.Text = "شئون العاملين"
+        '
+        'الموظفينToolStripMenuItem
+        '
+        Me.الموظفينToolStripMenuItem.Name = "الموظفينToolStripMenuItem"
+        Me.الموظفينToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.الموظفينToolStripMenuItem.Text = "الموظفين"
+        '
+        'الحضوروالأنصرافToolStripMenuItem
+        '
+        Me.الحضوروالأنصرافToolStripMenuItem.Name = "الحضوروالأنصرافToolStripMenuItem"
+        Me.الحضوروالأنصرافToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.الحضوروالأنصرافToolStripMenuItem.Text = "الحضور والأنصراف"
         '
         'ToolStripMenuItem3
         '
@@ -947,11 +990,11 @@ Partial Class HOME
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
-        'فاتورةرسميةToolStripMenuItem
+        'تقريرتفصيليللأيراداتToolStripMenuItem
         '
-        Me.فاتورةرسميةToolStripMenuItem.Name = "فاتورةرسميةToolStripMenuItem"
-        Me.فاتورةرسميةToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.فاتورةرسميةToolStripMenuItem.Text = "فاتورة رسمية"
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Name = "تقريرتفصيليللأيراداتToolStripMenuItem"
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Text = "تقرير تفصيلي للأيرادات"
         '
         'HOME
         '
@@ -1105,4 +1148,10 @@ Partial Class HOME
     Friend WithEvents تقريرأتعابطبيبToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents أستردادنقديةعياداتToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents فاتورةرسميةToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
+    Friend WithEvents الموظفينToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents الحضوروالأنصرافToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents الأيراداتالأخريToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents أستلامأيراداتأخريToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents تقريرتفصيليللأيراداتToolStripMenuItem As ToolStripMenuItem
 End Class

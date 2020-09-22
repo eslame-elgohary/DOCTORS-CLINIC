@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP50\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP530\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -28,7 +28,7 @@
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
     <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
-    <ApplicationRevision>74</ApplicationRevision>
+    <ApplicationRevision>78</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -130,6 +130,8 @@
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="interop.craxdrt">
       <HintPath>..\interop.craxdrt.dll</HintPath>
@@ -142,6 +144,7 @@
     <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Management" />
     <Reference Include="System.Management.Instrumentation" />
     <Reference Include="System.Net" />
@@ -174,6 +177,7 @@
     <Compile Include="BACKUPFRM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Calculation.vb" />
     <Compile Include="ClassConvertNO.vb" />
     <Compile Include="CONNECTION.vb" />
     <Compile Include="LARBI\test.Designer.vb">
@@ -206,11 +210,29 @@
     <Compile Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="الأيرادات و المصروفات\ERADAT.Designer.vb">
+      <DependentUpon>ERADAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأيرادات و المصروفات\ERADAT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\ERADAT_REP.Designer.vb">
+      <DependentUpon>ERADAT_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\ERADAT_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="التقارير\المصروفات\MASROUF_REP.Designer.vb">
       <DependentUpon>MASROUF_REP.vb</DependentUpon>
     </Compile>
     <Compile Include="التقارير\المصروفات\MASROUF_REP.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\المصروفات\MASROUF_REP_CRS1.vb">
+      <DependentUpon>MASROUF_REP_CRS1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="التقارير\المصروفات\MASROUF_REP_CRS.vb">
       <AutoGen>True</AutoGen>
@@ -281,6 +303,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ALL_MONY.xsd</DependentUpon>
     </Compile>
+    <Compile Include="الحسابات\استلام نقدية\الايرادات الاخري\ERADTA_EZN_FRM.Designer.vb">
+      <DependentUpon>ERADTA_EZN_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\الايرادات الاخري\ERADTA_EZN_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\الايرادات الاخري\SEARCH_ERADAT.Designer.vb">
+      <DependentUpon>SEARCH_ERADAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\الايرادات الاخري\SEARCH_ERADAT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\الايرادات الاخري\SEARCH_ERADAT2.Designer.vb">
+      <DependentUpon>SEARCH_ERADAT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\الايرادات الاخري\SEARCH_ERADAT2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\estrdad.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -343,6 +383,18 @@
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\LASTCOMEFRM2.Designer.vb">
+      <DependentUpon>LASTCOMEFRM2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\LASTCOMEFRM2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\SEARCH_ADD_MONY2020.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONY2020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\استرداد عيادة\SEARCH_ADD_MONY2020.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="الحسابات\فاتورة رسمية\FATORA_RS.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1134,6 +1186,18 @@
     <Compile Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="شئون العاملين\المرتبات\mortbat.Designer.vb">
+      <DependentUpon>mortbat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="شئون العاملين\المرتبات\mortbat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="شئون العاملين\الموظفين\EMP_FRM.Designer.vb">
+      <DependentUpon>EMP_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="شئون العاملين\الموظفين\EMP_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="عيادة النساء\FOLLOWUPFRM.Designer.vb">
       <DependentUpon>FOLLOWUPFRM.vb</DependentUpon>
     </Compile>
@@ -1258,6 +1322,9 @@
     <EmbeddedResource Include="أتعاب طبيب\SEARCH_ATAB_DOCTORS.resx">
       <DependentUpon>SEARCH_ATAB_DOCTORS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="الأيرادات و المصروفات\ERADAT.resx">
+      <DependentUpon>ERADAT.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>IMGT3AQOD_CRS.vb</LastGenOutput>
@@ -1285,8 +1352,15 @@
     <EmbeddedResource Include="التقارير\الخزينة\REPORT_KHAZINAFRM.resx">
       <DependentUpon>REPORT_KHAZINAFRM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\المصروفات\ERADAT_REP.resx">
+      <DependentUpon>ERADAT_REP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="التقارير\المصروفات\MASROUF_REP.resx">
       <DependentUpon>MASROUF_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\المصروفات\MASROUF_REP_CRS1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MASROUF_REP_CRS1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\المصروفات\MASROUF_REP_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1359,6 +1433,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="الحجز\HAGEZ_REP.resx">
       <DependentUpon>HAGEZ_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\الايرادات الاخري\ERADTA_EZN_FRM.resx">
+      <DependentUpon>ERADTA_EZN_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\الايرادات الاخري\SEARCH_ERADAT.resx">
+      <DependentUpon>SEARCH_ERADAT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\الايرادات الاخري\SEARCH_ERADAT2.resx">
+      <DependentUpon>SEARCH_ERADAT2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\صرف نقدية\استرداد عيادة\ADD_MONY2_DOCTOR.resx">
       <DependentUpon>ADD_MONY2_DOCTOR.vb</DependentUpon>
@@ -1482,6 +1565,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.resx">
       <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\صرف نقدية\استرداد عيادة\LASTCOMEFRM2.resx">
+      <DependentUpon>LASTCOMEFRM2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\صرف نقدية\استرداد عيادة\SEARCH_ADD_MONY2020.resx">
+      <DependentUpon>SEARCH_ADD_MONY2020.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\فاتورة رسمية\FATO_RS_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1677,6 +1766,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="الحسابات\صرف نقدية\مصروفات\SEARCH_MASROUF.resx">
       <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="شئون العاملين\المرتبات\mortbat.resx">
+      <DependentUpon>mortbat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="شئون العاملين\الموظفين\EMP_FRM.resx">
+      <DependentUpon>EMP_FRM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="عيادة النساء\FOLLOWUPFRM.resx">
       <DependentUpon>FOLLOWUPFRM.vb</DependentUpon>

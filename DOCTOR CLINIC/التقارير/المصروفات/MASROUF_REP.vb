@@ -40,7 +40,7 @@
         End If
         If TXT_MASROUFL_CODE.Text = "" Then
             Dim DT As New DataTable
-            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_DATE >='" & TXT_START_DATE.Text & "' AND OUT_DATE <='" & TXT_END_DATE.Text & "' AND OUT_STAT='TRUE' ", SqlConn)
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_DATE >='" & TXT_START_DATE.Text & "' AND OUT_DATE <='" & TXT_END_DATE.Text & "' AND OUT_STAT='TRUE' AND OUT_TYPE='مصروفات' ", SqlConn)
             DA.Fill(DT)
             Dim REP As New MASROUF_REP_CRS
             REP.SetDataSource(DT)
@@ -52,7 +52,7 @@
             FRM.ShowDialog()
         Else
             Dim DT As New DataTable
-            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE CODE_ACTION ='" & TXT_MASROUFL_CODE.Text & "' AND OUT_DATE >='" & TXT_START_DATE.Text & "' AND OUT_DATE <='" & TXT_END_DATE.Text & "' AND OUT_STAT='TRUE' ", SqlConn)
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE CODE_ACTION ='" & TXT_MASROUFL_CODE.Text & "' AND OUT_DATE >='" & TXT_START_DATE.Text & "' AND OUT_DATE <='" & TXT_END_DATE.Text & "' AND OUT_STAT='TRUE' AND OUT_TYPE='مصروفات' ", SqlConn)
             DA.Fill(DT)
             Dim REP As New MASROUF_REP_CRS
             REP.SetDataSource(DT)

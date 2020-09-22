@@ -112,6 +112,7 @@ Partial Class ADD_MONY2_DOCTOR
         '
         Me.GRBTN.Controls.Add(Me.EXITBTN)
         Me.GRBTN.Controls.Add(Me.PRINTBTN)
+        Me.GRBTN.Controls.Add(Me.LAST_COME)
         Me.GRBTN.Controls.Add(Me.UNDOBTN)
         Me.GRBTN.Controls.Add(Me.SEARCHBTN)
         Me.GRBTN.Controls.Add(Me.DELETBTN)
@@ -170,7 +171,6 @@ Partial Class ADD_MONY2_DOCTOR
         Me.SEARCHBTN.Size = New System.Drawing.Size(96, 44)
         Me.SEARCHBTN.TabIndex = 4
         Me.SEARCHBTN.Text = "بحث"
-        Me.SEARCHBTN.Visible = False
         '
         'DELETBTN
         '
@@ -230,7 +230,6 @@ Partial Class ADD_MONY2_DOCTOR
         '
         Me.GroupBox1.Controls.Add(Me.TXT_DAY2)
         Me.GroupBox1.Controls.Add(Me.TXT_DAY)
-        Me.GroupBox1.Controls.Add(Me.LAST_COME)
         Me.GroupBox1.Controls.Add(Me.CODE_DOCTOR)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.TXT_DOCTOR)
@@ -283,14 +282,12 @@ Partial Class ADD_MONY2_DOCTOR
         '
         Me.LAST_COME.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LAST_COME.Appearance.Options.UseFont = True
-        Me.LAST_COME.Enabled = False
         Me.LAST_COME.ImageOptions.Image = CType(resources.GetObject("LAST_COME.ImageOptions.Image"), System.Drawing.Image)
-        Me.LAST_COME.Location = New System.Drawing.Point(9, 100)
+        Me.LAST_COME.Location = New System.Drawing.Point(107, 24)
         Me.LAST_COME.Name = "LAST_COME"
         Me.LAST_COME.Size = New System.Drawing.Size(162, 35)
         Me.LAST_COME.TabIndex = 59
         Me.LAST_COME.Text = "أخر زيارة للمريض"
-        Me.LAST_COME.Visible = False
         '
         'CODE_DOCTOR
         '

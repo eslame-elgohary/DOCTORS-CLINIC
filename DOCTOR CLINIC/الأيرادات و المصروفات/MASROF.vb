@@ -114,7 +114,7 @@
         ADP0.Fill(DS0)
         Dim DT0 = DS0.Tables(0)
         If DT0.Rows.Count > 0 Then
-            If DT0.Rows(0).Item("E3").ToString = True Then
+            If DT0.Rows(0).Item("N3").ToString = True Then
                 If MessageBox.Show("هل ترغب في حذف اسم المصروف ؟", "رسالة تنبيه", MessageBoxButtons.YesNo) = DialogResult.No Then Exit Sub
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF WHERE MASROF_CODE = '" & TXT_CODE.Text & "'", SqlConn)
