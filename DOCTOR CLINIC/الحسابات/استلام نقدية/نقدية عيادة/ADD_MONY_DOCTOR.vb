@@ -1035,13 +1035,14 @@
         End If
     End Sub
     Private Sub DISCOUNT_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DISCOUNT.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub ADD_MONY_DOCTOR_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown

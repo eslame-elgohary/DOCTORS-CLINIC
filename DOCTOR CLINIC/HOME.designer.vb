@@ -95,6 +95,7 @@ Partial Class HOME
         Me.BTN_REP_KHAZINA = New System.Windows.Forms.ToolStripMenuItem()
         Me.تقريرتفصيليللمصروفاتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تقريرأتعابطبيبToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_HESAP_DOC_FRM = New System.Windows.Forms.ToolStripMenuItem()
         Me.LABTOLABToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTN_PA_HESAPFRM = New System.Windows.Forms.ToolStripMenuItem()
@@ -109,16 +110,20 @@ Partial Class HOME
         Me.BTNNET = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_EXIT = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.التعاقداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BTN_ADD_T3AKODAT = New System.Windows.Forms.ToolStripMenuItem()
-        Me.أستلامنقديةمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.تقريربالمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_AMLIAT = New System.Windows.Forms.ToolStripMenuItem()
         Me.BT_REP_AMLIAT = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
         Me.الموظفينToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.الحضوروالأنصرافToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.المرتباتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.السلفToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.الجزاءاتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.الأحتسابوالطباعةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.التعاقداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTN_ADD_T3AKODAT = New System.Windows.Forms.ToolStripMenuItem()
+        Me.أستلامنقديةمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تقريربالمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -143,7 +148,6 @@ Partial Class HOME
         Me.STB_EXIT = New System.Windows.Forms.ToolStripButton()
         Me.BT_JOGOUT = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.تقريرتفصيليللأيراداتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -644,6 +648,12 @@ Partial Class HOME
         Me.تقريرأتعابطبيبToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.تقريرأتعابطبيبToolStripMenuItem.Text = "تقرير أتعاب طبيب"
         '
+        'تقريرتفصيليللأيراداتToolStripMenuItem
+        '
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Name = "تقريرتفصيليللأيراداتToolStripMenuItem"
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Text = "تقرير تفصيلي للأيرادات"
+        '
         'BT_HESAP_DOC_FRM
         '
         Me.BT_HESAP_DOC_FRM.Name = "BT_HESAP_DOC_FRM"
@@ -731,12 +741,76 @@ Partial Class HOME
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.ToolStripMenuItem4, Me.التقاريرToolStripMenuItem, Me.ToolStripMenuItem5, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.ToolStripMenuItem3})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.ToolStripMenuItem4, Me.التقاريرToolStripMenuItem, Me.ToolStripMenuItem5, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.التعاقداتToolStripMenuItem, Me.ToolStripMenuItem3})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_AMLIAT, Me.BT_REP_AMLIAT})
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(62, 20)
+        Me.ToolStripMenuItem4.Text = "العمليات"
+        '
+        'BT_AMLIAT
+        '
+        Me.BT_AMLIAT.Name = "BT_AMLIAT"
+        Me.BT_AMLIAT.Size = New System.Drawing.Size(182, 22)
+        Me.BT_AMLIAT.Text = "اضافة بيانات العمليات"
+        '
+        'BT_REP_AMLIAT
+        '
+        Me.BT_REP_AMLIAT.Name = "BT_REP_AMLIAT"
+        Me.BT_REP_AMLIAT.Size = New System.Drawing.Size(182, 22)
+        Me.BT_REP_AMLIAT.Text = "تقرير عمليات"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.الموظفينToolStripMenuItem, Me.الحضوروالأنصرافToolStripMenuItem, Me.المرتباتToolStripMenuItem, Me.الأحتسابوالطباعةToolStripMenuItem})
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(90, 20)
+        Me.ToolStripMenuItem5.Text = "شئون العاملين"
+        Me.ToolStripMenuItem5.Visible = False
+        '
+        'الموظفينToolStripMenuItem
+        '
+        Me.الموظفينToolStripMenuItem.Name = "الموظفينToolStripMenuItem"
+        Me.الموظفينToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.الموظفينToolStripMenuItem.Text = "الموظفين"
+        '
+        'الحضوروالأنصرافToolStripMenuItem
+        '
+        Me.الحضوروالأنصرافToolStripMenuItem.Name = "الحضوروالأنصرافToolStripMenuItem"
+        Me.الحضوروالأنصرافToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.الحضوروالأنصرافToolStripMenuItem.Text = "الحضور والأنصراف"
+        '
+        'المرتباتToolStripMenuItem
+        '
+        Me.المرتباتToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.السلفToolStripMenuItem, Me.الجزاءاتToolStripMenuItem})
+        Me.المرتباتToolStripMenuItem.Name = "المرتباتToolStripMenuItem"
+        Me.المرتباتToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.المرتباتToolStripMenuItem.Text = "المرتبات"
+        '
+        'السلفToolStripMenuItem
+        '
+        Me.السلفToolStripMenuItem.Name = "السلفToolStripMenuItem"
+        Me.السلفToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.السلفToolStripMenuItem.Text = "السلف"
+        '
+        'الجزاءاتToolStripMenuItem
+        '
+        Me.الجزاءاتToolStripMenuItem.Name = "الجزاءاتToolStripMenuItem"
+        Me.الجزاءاتToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.الجزاءاتToolStripMenuItem.Text = "الجزاءات"
+        '
+        'الأحتسابوالطباعةToolStripMenuItem
+        '
+        Me.الأحتسابوالطباعةToolStripMenuItem.Name = "الأحتسابوالطباعةToolStripMenuItem"
+        Me.الأحتسابوالطباعةToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.الأحتسابوالطباعةToolStripMenuItem.Text = "الأحتساب و الطباعة"
         '
         'التعاقداتToolStripMenuItem
         '
@@ -763,44 +837,6 @@ Partial Class HOME
         Me.تقريربالمطالبةToolStripMenuItem.Name = "تقريربالمطالبةToolStripMenuItem"
         Me.تقريربالمطالبةToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.تقريربالمطالبةToolStripMenuItem.Text = "تقرير بالمطالبة"
-        '
-        'ToolStripMenuItem4
-        '
-        Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BT_AMLIAT, Me.BT_REP_AMLIAT})
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(62, 20)
-        Me.ToolStripMenuItem4.Text = "العمليات"
-        '
-        'BT_AMLIAT
-        '
-        Me.BT_AMLIAT.Name = "BT_AMLIAT"
-        Me.BT_AMLIAT.Size = New System.Drawing.Size(182, 22)
-        Me.BT_AMLIAT.Text = "اضافة بيانات العمليات"
-        '
-        'BT_REP_AMLIAT
-        '
-        Me.BT_REP_AMLIAT.Name = "BT_REP_AMLIAT"
-        Me.BT_REP_AMLIAT.Size = New System.Drawing.Size(182, 22)
-        Me.BT_REP_AMLIAT.Text = "تقرير عمليات"
-        '
-        'ToolStripMenuItem5
-        '
-        Me.ToolStripMenuItem5.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.الموظفينToolStripMenuItem, Me.الحضوروالأنصرافToolStripMenuItem})
-        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(90, 20)
-        Me.ToolStripMenuItem5.Text = "شئون العاملين"
-        '
-        'الموظفينToolStripMenuItem
-        '
-        Me.الموظفينToolStripMenuItem.Name = "الموظفينToolStripMenuItem"
-        Me.الموظفينToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.الموظفينToolStripMenuItem.Text = "الموظفين"
-        '
-        'الحضوروالأنصرافToolStripMenuItem
-        '
-        Me.الحضوروالأنصرافToolStripMenuItem.Name = "الحضوروالأنصرافToolStripMenuItem"
-        Me.الحضوروالأنصرافToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.الحضوروالأنصرافToolStripMenuItem.Text = "الحضور والأنصراف"
         '
         'ToolStripMenuItem3
         '
@@ -990,12 +1026,6 @@ Partial Class HOME
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
-        'تقريرتفصيليللأيراداتToolStripMenuItem
-        '
-        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Name = "تقريرتفصيليللأيراداتToolStripMenuItem"
-        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.تقريرتفصيليللأيراداتToolStripMenuItem.Text = "تقرير تفصيلي للأيرادات"
-        '
         'HOME
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
@@ -1154,4 +1184,8 @@ Partial Class HOME
     Friend WithEvents الأيراداتالأخريToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents أستلامأيراداتأخريToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents تقريرتفصيليللأيراداتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents المرتباتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents السلفToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents الجزاءاتToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents الأحتسابوالطباعةToolStripMenuItem As ToolStripMenuItem
 End Class

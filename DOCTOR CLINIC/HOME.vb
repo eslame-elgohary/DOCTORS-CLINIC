@@ -140,7 +140,7 @@ Public Class HOME
         Catch EX As Exception
 
         End Try
-
+        'DOCTORSFRM.ShowDialog()
     End Sub
 
     Private Sub TKHASOSBTN_Click(sender As Object, e As EventArgs) Handles TKHASOSBTN.Click
@@ -306,7 +306,7 @@ Public Class HOME
     Private Sub STB_RESALSE_Click(sender As Object, e As EventArgs) Handles STB_RESALSE.Click
         'HAGEZ_PATEINT.ShowDialog()
 
-        MAMLASNANFRM.ShowDialog()
+        'MAMLASNANFRM.ShowDialog()
 
     End Sub
 
@@ -555,5 +555,9 @@ Public Class HOME
 
     Private Sub تقريرتفصيليللأيراداتToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تقريرتفصيليللأيراداتToolStripMenuItem.Click
         ERADAT_REP.ShowDialog()
+    End Sub
+
+    Private Sub فاتورةرسميةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles فاتورةرسميةToolStripMenuItem.Click
+        FATO_AMLIAT_FRM.ShowDialog()
     End Sub
 End Class

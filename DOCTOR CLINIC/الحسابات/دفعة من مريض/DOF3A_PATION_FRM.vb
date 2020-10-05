@@ -148,7 +148,7 @@
                 DR1!CODE_MAML = ""
                 DR1!CODE_THLEL = ""
                 DR1!NAME_THLEL = ""
-                DR1!PRICE_THLEL = ""
+                DR1!PRICE_THLEL = "0"
                 DR1!STAT_DT = True
                 DT.Rows.Add(DR1)
                 Dim CMD_ As New SqlClient.SqlCommandBuilder(DA1)
@@ -498,12 +498,13 @@
     End Sub
 
     Private Sub TXT_MONY_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_MONY.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 End Class

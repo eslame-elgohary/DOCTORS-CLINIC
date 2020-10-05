@@ -159,12 +159,18 @@
                     TXT_TYPE_HISMONY.Select()
                     Exit Sub
                 End If
-                For I As Integer = 0 To DataGridView1.Rows.Count - 1
-                    If DataGridView1.Rows(I).Cells(2).Value = "" Then
-                        MessageBox.Show("يرجى التحقق من قيمة الخدمة ", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End If
-                Next
+
+                If DataGridView1.Rows.Count = 0 Then
+                    MessageBox.Show("يرجى أدخال خدمات الطبيب", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End If
+
+                'For I1 As Integer = 0 To DataGridView1.Rows.Count - 1
+                '    If DataGridView1.Rows(I1).Cells(2).Value = 0 Then
+                '        MessageBox.Show("يرجى التحقق من قيمة الخدمة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                '        Exit Sub
+                '    End If
+                'Next
                 '================= =======================================
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM DOCTORS WHERE DO_NAME = '" & DO_NAME.Text & "'", SqlConn)
@@ -283,13 +289,16 @@
                     TXT_TYPE_HISMONY.Select()
                     Exit Sub
                 End If
-                For I As Integer = 0 To DataGridView1.Rows.Count - 1
-                    If DataGridView1.Rows(I).Cells(2).Value = "" Then
-                        MessageBox.Show("يرجى التحقق من قيمة الخدمة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End If
-                Next
-
+                'For I As Integer = 0 To DataGridView1.Rows.Count - 1
+                '    If DataGridView1.Rows(I).Cells(0).Value = 0 Then
+                '        MessageBox.Show("يرجى التحقق من قيمة الخدمة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                '        Exit Sub
+                '    End If
+                'Next
+                If DataGridView1.Rows.Count = 0 Then
+                    MessageBox.Show("يرجى أدخال خدمات الطبيب", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End If
 
                 '================= =======================================
                 If MessageBox.Show("هل ترغب في تعديل بيانات الطبيب ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then Exit Sub
@@ -398,33 +407,36 @@
     End Sub
 
     Private Sub TextBox2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox2.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub TextBox4_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox4.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub DO_TKHSOS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DO_TKHSOS.SelectedIndexChanged

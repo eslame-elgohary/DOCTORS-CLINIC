@@ -61,23 +61,25 @@
     End Sub
 
     Private Sub PRICE_EG_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PRICE_EG.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub PRICE_LAP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PRICE_LAP.KeyPress
-        If Char.IsControl(e.KeyChar) = False Then
-            If Char.IsDigit(e.KeyChar) Then
-            Else
-                MsgBox("من فضلك ادخل رقم صحيح فقط")
-                e.Handled = True
-            End If
-        End If
+        'If Char.IsControl(e.KeyChar) = False Then
+        '    If Char.IsDigit(e.KeyChar) Then
+        '    Else
+        '        MsgBox("من فضلك ادخل رقم صحيح فقط")
+        '        e.Handled = True
+        '    End If
+        'End If
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 
     Private Sub TXT_MAML_NAME_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TXT_MAML_NAME.SelectedIndexChanged
