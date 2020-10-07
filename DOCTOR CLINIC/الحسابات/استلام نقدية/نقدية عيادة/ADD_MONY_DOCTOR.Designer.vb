@@ -94,6 +94,16 @@ Partial Class ADD_MONY_DOCTOR
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.TXT_RASED = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TXT_BAKY = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TXT_MONY = New System.Windows.Forms.TextBox()
+        Me.TXT_RASED_NEW = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TXT_ADD = New System.Windows.Forms.TextBox()
+        Me.TXT_ALL = New System.Windows.Forms.TextBox()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,7 +123,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.GRBTN.Controls.Add(Me.EDITBTN)
         Me.GRBTN.Controls.Add(Me.SAVEBTN)
         Me.GRBTN.Controls.Add(Me.NEWBTN)
-        Me.GRBTN.Location = New System.Drawing.Point(11, 420)
+        Me.GRBTN.Location = New System.Drawing.Point(11, 461)
         Me.GRBTN.Name = "GRBTN"
         Me.GRBTN.Size = New System.Drawing.Size(842, 72)
         Me.GRBTN.TabIndex = 31
@@ -335,7 +345,7 @@ Partial Class ADD_MONY_DOCTOR
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(212, 66)
+        Me.Label3.Location = New System.Drawing.Point(215, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 21)
         Me.Label3.TabIndex = 58
@@ -345,7 +355,7 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.TXT_AGE.BackColor = System.Drawing.Color.White
         Me.TXT_AGE.Enabled = False
-        Me.TXT_AGE.Location = New System.Drawing.Point(9, 66)
+        Me.TXT_AGE.Location = New System.Drawing.Point(9, 64)
         Me.TXT_AGE.Name = "TXT_AGE"
         Me.TXT_AGE.Size = New System.Drawing.Size(55, 29)
         Me.TXT_AGE.TabIndex = 57
@@ -355,7 +365,7 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.TXT_PA_TYPE.BackColor = System.Drawing.Color.White
         Me.TXT_PA_TYPE.Enabled = False
-        Me.TXT_PA_TYPE.Location = New System.Drawing.Point(128, 64)
+        Me.TXT_PA_TYPE.Location = New System.Drawing.Point(133, 64)
         Me.TXT_PA_TYPE.Name = "TXT_PA_TYPE"
         Me.TXT_PA_TYPE.Size = New System.Drawing.Size(78, 29)
         Me.TXT_PA_TYPE.TabIndex = 56
@@ -495,6 +505,16 @@ Partial Class ADD_MONY_DOCTOR
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TXT_ADD)
+        Me.GroupBox2.Controls.Add(Me.TXT_ALL)
+        Me.GroupBox2.Controls.Add(Me.TXT_RASED_NEW)
+        Me.GroupBox2.Controls.Add(Me.Label20)
+        Me.GroupBox2.Controls.Add(Me.TXT_BAKY)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.TXT_MONY)
+        Me.GroupBox2.Controls.Add(Me.TXT_RASED)
+        Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.TXT_TYPEMONY)
         Me.GroupBox2.Controls.Add(Me.TXT_M)
@@ -514,7 +534,7 @@ Partial Class ADD_MONY_DOCTOR
         Me.GroupBox2.Controls.Add(Me.TOTAL)
         Me.GroupBox2.Location = New System.Drawing.Point(11, 148)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(832, 276)
+        Me.GroupBox2.Size = New System.Drawing.Size(832, 320)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         '
@@ -660,7 +680,7 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.SAFY_AR.BackColor = System.Drawing.Color.White
         Me.SAFY_AR.Enabled = False
-        Me.SAFY_AR.Location = New System.Drawing.Point(9, 241)
+        Me.SAFY_AR.Location = New System.Drawing.Point(9, 284)
         Me.SAFY_AR.Name = "SAFY_AR"
         Me.SAFY_AR.Size = New System.Drawing.Size(794, 29)
         Me.SAFY_AR.TabIndex = 49
@@ -731,7 +751,7 @@ Partial Class ADD_MONY_DOCTOR
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 492)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 537)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(855, 22)
         Me.StatusStrip1.SizingGrip = False
@@ -794,11 +814,108 @@ Partial Class ADD_MONY_DOCTOR
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
+        'TXT_RASED
+        '
+        Me.TXT_RASED.BackColor = System.Drawing.Color.White
+        Me.TXT_RASED.Enabled = False
+        Me.TXT_RASED.Location = New System.Drawing.Point(591, 244)
+        Me.TXT_RASED.Name = "TXT_RASED"
+        Me.TXT_RASED.Size = New System.Drawing.Size(132, 29)
+        Me.TXT_RASED.TabIndex = 61
+        Me.TXT_RASED.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(729, 248)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 21)
+        Me.Label8.TabIndex = 62
+        Me.Label8.Text = "رصيد سابق :"
+        '
+        'TXT_BAKY
+        '
+        Me.TXT_BAKY.BackColor = System.Drawing.Color.White
+        Me.TXT_BAKY.Enabled = False
+        Me.TXT_BAKY.Location = New System.Drawing.Point(260, 245)
+        Me.TXT_BAKY.Name = "TXT_BAKY"
+        Me.TXT_BAKY.Size = New System.Drawing.Size(90, 29)
+        Me.TXT_BAKY.TabIndex = 66
+        Me.TXT_BAKY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(354, 248)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 21)
+        Me.Label9.TabIndex = 67
+        Me.Label9.Text = "المتبقي :"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(514, 248)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(69, 21)
+        Me.Label10.TabIndex = 65
+        Me.Label10.Text = "المدفوع :"
+        '
+        'TXT_MONY
+        '
+        Me.TXT_MONY.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_MONY.Location = New System.Drawing.Point(424, 245)
+        Me.TXT_MONY.Name = "TXT_MONY"
+        Me.TXT_MONY.Size = New System.Drawing.Size(85, 29)
+        Me.TXT_MONY.TabIndex = 64
+        Me.TXT_MONY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_RASED_NEW
+        '
+        Me.TXT_RASED_NEW.BackColor = System.Drawing.Color.White
+        Me.TXT_RASED_NEW.Enabled = False
+        Me.TXT_RASED_NEW.Location = New System.Drawing.Point(6, 244)
+        Me.TXT_RASED_NEW.Name = "TXT_RASED_NEW"
+        Me.TXT_RASED_NEW.Size = New System.Drawing.Size(135, 29)
+        Me.TXT_RASED_NEW.TabIndex = 68
+        Me.TXT_RASED_NEW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(145, 247)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(106, 21)
+        Me.Label20.TabIndex = 69
+        Me.Label20.Text = "الرصيد الحالي :"
+        '
+        'TXT_ADD
+        '
+        Me.TXT_ADD.BackColor = System.Drawing.Color.White
+        Me.TXT_ADD.Enabled = False
+        Me.TXT_ADD.Location = New System.Drawing.Point(729, 105)
+        Me.TXT_ADD.Name = "TXT_ADD"
+        Me.TXT_ADD.Size = New System.Drawing.Size(42, 29)
+        Me.TXT_ADD.TabIndex = 71
+        Me.TXT_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ADD.Visible = False
+        '
+        'TXT_ALL
+        '
+        Me.TXT_ALL.BackColor = System.Drawing.Color.White
+        Me.TXT_ALL.Enabled = False
+        Me.TXT_ALL.Location = New System.Drawing.Point(726, 140)
+        Me.TXT_ALL.Name = "TXT_ALL"
+        Me.TXT_ALL.Size = New System.Drawing.Size(42, 29)
+        Me.TXT_ALL.TabIndex = 70
+        Me.TXT_ALL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ALL.Visible = False
+        '
         'ADD_MONY_DOCTOR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(855, 514)
+        Me.ClientSize = New System.Drawing.Size(855, 559)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GRBTN)
         Me.Controls.Add(Me.GroupBox1)
@@ -899,4 +1016,14 @@ Partial Class ADD_MONY_DOCTOR
     Friend WithEvents PATION_BINDING As BindingSource
     Friend WithEvents PATIENTDATA As PATIENTDATA
     Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents TXT_RASED As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TXT_BAKY As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TXT_MONY As TextBox
+    Friend WithEvents TXT_RASED_NEW As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TXT_ADD As TextBox
+    Friend WithEvents TXT_ALL As TextBox
 End Class

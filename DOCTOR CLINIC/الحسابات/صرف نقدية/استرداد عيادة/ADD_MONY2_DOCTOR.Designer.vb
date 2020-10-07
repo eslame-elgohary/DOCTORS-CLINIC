@@ -27,6 +27,7 @@ Partial Class ADD_MONY2_DOCTOR
         Me.GRBTN = New System.Windows.Forms.GroupBox()
         Me.EXITBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.PRINTBTN = New DevExpress.XtraEditors.SimpleButton()
+        Me.LAST_COME = New DevExpress.XtraEditors.SimpleButton()
         Me.UNDOBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.SEARCHBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.DELETBTN = New DevExpress.XtraEditors.SimpleButton()
@@ -36,7 +37,6 @@ Partial Class ADD_MONY2_DOCTOR
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TXT_DAY2 = New System.Windows.Forms.Label()
         Me.TXT_DAY = New System.Windows.Forms.Label()
-        Me.LAST_COME = New DevExpress.XtraEditors.SimpleButton()
         Me.CODE_DOCTOR = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TXT_DOCTOR = New System.Windows.Forms.ComboBox()
@@ -62,6 +62,16 @@ Partial Class ADD_MONY2_DOCTOR
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TXT_ADD = New System.Windows.Forms.TextBox()
+        Me.TXT_ALL = New System.Windows.Forms.TextBox()
+        Me.TXT_RASED_NEW = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TXT_BAKY = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TXT_MONY = New System.Windows.Forms.TextBox()
+        Me.TXT_RASED = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.TXT_DATE_TODAY = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TXT_INFO = New System.Windows.Forms.TextBox()
@@ -119,7 +129,7 @@ Partial Class ADD_MONY2_DOCTOR
         Me.GRBTN.Controls.Add(Me.EDITBTN)
         Me.GRBTN.Controls.Add(Me.SAVEBTN)
         Me.GRBTN.Controls.Add(Me.NEWBTN)
-        Me.GRBTN.Location = New System.Drawing.Point(11, 420)
+        Me.GRBTN.Location = New System.Drawing.Point(11, 452)
         Me.GRBTN.Name = "GRBTN"
         Me.GRBTN.Size = New System.Drawing.Size(842, 72)
         Me.GRBTN.TabIndex = 31
@@ -146,6 +156,17 @@ Partial Class ADD_MONY2_DOCTOR
         Me.PRINTBTN.TabIndex = 6
         Me.PRINTBTN.Text = "طباعة"
         Me.PRINTBTN.Visible = False
+        '
+        'LAST_COME
+        '
+        Me.LAST_COME.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LAST_COME.Appearance.Options.UseFont = True
+        Me.LAST_COME.ImageOptions.Image = CType(resources.GetObject("LAST_COME.ImageOptions.Image"), System.Drawing.Image)
+        Me.LAST_COME.Location = New System.Drawing.Point(107, 24)
+        Me.LAST_COME.Name = "LAST_COME"
+        Me.LAST_COME.Size = New System.Drawing.Size(162, 35)
+        Me.LAST_COME.TabIndex = 59
+        Me.LAST_COME.Text = "أخر زيارة للمريض"
         '
         'UNDOBTN
         '
@@ -277,17 +298,6 @@ Partial Class ADD_MONY2_DOCTOR
         Me.TXT_DAY.TabIndex = 67
         Me.TXT_DAY.Text = "0000000"
         Me.TXT_DAY.Visible = False
-        '
-        'LAST_COME
-        '
-        Me.LAST_COME.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LAST_COME.Appearance.Options.UseFont = True
-        Me.LAST_COME.ImageOptions.Image = CType(resources.GetObject("LAST_COME.ImageOptions.Image"), System.Drawing.Image)
-        Me.LAST_COME.Location = New System.Drawing.Point(107, 24)
-        Me.LAST_COME.Name = "LAST_COME"
-        Me.LAST_COME.Size = New System.Drawing.Size(162, 35)
-        Me.LAST_COME.TabIndex = 59
-        Me.LAST_COME.Text = "أخر زيارة للمريض"
         '
         'CODE_DOCTOR
         '
@@ -526,6 +536,16 @@ Partial Class ADD_MONY2_DOCTOR
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TXT_ADD)
+        Me.GroupBox2.Controls.Add(Me.TXT_ALL)
+        Me.GroupBox2.Controls.Add(Me.TXT_RASED_NEW)
+        Me.GroupBox2.Controls.Add(Me.Label20)
+        Me.GroupBox2.Controls.Add(Me.TXT_BAKY)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.TXT_MONY)
+        Me.GroupBox2.Controls.Add(Me.TXT_RASED)
+        Me.GroupBox2.Controls.Add(Me.Label21)
         Me.GroupBox2.Controls.Add(Me.TXT_DATE_TODAY)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.TXT_INFO)
@@ -548,9 +568,107 @@ Partial Class ADD_MONY2_DOCTOR
         Me.GroupBox2.Controls.Add(Me.TOTAL)
         Me.GroupBox2.Location = New System.Drawing.Point(11, 148)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(832, 276)
+        Me.GroupBox2.Size = New System.Drawing.Size(832, 312)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
+        '
+        'TXT_ADD
+        '
+        Me.TXT_ADD.BackColor = System.Drawing.Color.White
+        Me.TXT_ADD.Enabled = False
+        Me.TXT_ADD.Location = New System.Drawing.Point(732, 100)
+        Me.TXT_ADD.Name = "TXT_ADD"
+        Me.TXT_ADD.Size = New System.Drawing.Size(42, 29)
+        Me.TXT_ADD.TabIndex = 81
+        Me.TXT_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ADD.Visible = False
+        '
+        'TXT_ALL
+        '
+        Me.TXT_ALL.BackColor = System.Drawing.Color.White
+        Me.TXT_ALL.Enabled = False
+        Me.TXT_ALL.Location = New System.Drawing.Point(729, 135)
+        Me.TXT_ALL.Name = "TXT_ALL"
+        Me.TXT_ALL.Size = New System.Drawing.Size(42, 29)
+        Me.TXT_ALL.TabIndex = 80
+        Me.TXT_ALL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ALL.Visible = False
+        '
+        'TXT_RASED_NEW
+        '
+        Me.TXT_RASED_NEW.BackColor = System.Drawing.Color.White
+        Me.TXT_RASED_NEW.Enabled = False
+        Me.TXT_RASED_NEW.Location = New System.Drawing.Point(9, 241)
+        Me.TXT_RASED_NEW.Name = "TXT_RASED_NEW"
+        Me.TXT_RASED_NEW.Size = New System.Drawing.Size(135, 29)
+        Me.TXT_RASED_NEW.TabIndex = 78
+        Me.TXT_RASED_NEW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(148, 244)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(106, 21)
+        Me.Label20.TabIndex = 79
+        Me.Label20.Text = "الرصيد الحالي :"
+        '
+        'TXT_BAKY
+        '
+        Me.TXT_BAKY.BackColor = System.Drawing.Color.White
+        Me.TXT_BAKY.Enabled = False
+        Me.TXT_BAKY.Location = New System.Drawing.Point(263, 242)
+        Me.TXT_BAKY.Name = "TXT_BAKY"
+        Me.TXT_BAKY.Size = New System.Drawing.Size(90, 29)
+        Me.TXT_BAKY.TabIndex = 76
+        Me.TXT_BAKY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(357, 245)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 21)
+        Me.Label9.TabIndex = 77
+        Me.Label9.Text = "المتبقي :"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(517, 245)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(69, 21)
+        Me.Label10.TabIndex = 75
+        Me.Label10.Text = "المدفوع :"
+        '
+        'TXT_MONY
+        '
+        Me.TXT_MONY.BackColor = System.Drawing.Color.White
+        Me.TXT_MONY.Enabled = False
+        Me.TXT_MONY.Location = New System.Drawing.Point(427, 242)
+        Me.TXT_MONY.Name = "TXT_MONY"
+        Me.TXT_MONY.Size = New System.Drawing.Size(85, 29)
+        Me.TXT_MONY.TabIndex = 74
+        Me.TXT_MONY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_RASED
+        '
+        Me.TXT_RASED.BackColor = System.Drawing.Color.White
+        Me.TXT_RASED.Enabled = False
+        Me.TXT_RASED.Location = New System.Drawing.Point(594, 241)
+        Me.TXT_RASED.Name = "TXT_RASED"
+        Me.TXT_RASED.Size = New System.Drawing.Size(132, 29)
+        Me.TXT_RASED.TabIndex = 72
+        Me.TXT_RASED.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(732, 245)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(91, 21)
+        Me.Label21.TabIndex = 73
+        Me.Label21.Text = "رصيد سابق :"
         '
         'TXT_DATE_TODAY
         '
@@ -729,7 +847,7 @@ Partial Class ADD_MONY2_DOCTOR
         '
         Me.SAFY_AR.BackColor = System.Drawing.Color.White
         Me.SAFY_AR.Enabled = False
-        Me.SAFY_AR.Location = New System.Drawing.Point(9, 241)
+        Me.SAFY_AR.Location = New System.Drawing.Point(9, 275)
         Me.SAFY_AR.Name = "SAFY_AR"
         Me.SAFY_AR.Size = New System.Drawing.Size(794, 29)
         Me.SAFY_AR.TabIndex = 49
@@ -801,7 +919,7 @@ Partial Class ADD_MONY2_DOCTOR
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel4, Me.USER_ADD, Me.DATE_ADD, Me.TIME_ADD, Me.EDITNAMEBT, Me.USER_EDIT, Me.DATE_EDIT, Me.TIME_EDIT})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 492)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 538)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(855, 22)
         Me.StatusStrip1.SizingGrip = False
@@ -868,11 +986,11 @@ Partial Class ADD_MONY2_DOCTOR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(855, 514)
+        Me.ClientSize = New System.Drawing.Size(855, 560)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.GRBTN)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GRBTN)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
@@ -974,4 +1092,14 @@ Partial Class ADD_MONY2_DOCTOR
     Friend WithEvents TXT_DATE_TODAY As DateTimePicker
     Friend WithEvents TXT_DAY As Label
     Friend WithEvents TXT_DAY2 As Label
+    Friend WithEvents TXT_ADD As TextBox
+    Friend WithEvents TXT_ALL As TextBox
+    Friend WithEvents TXT_RASED_NEW As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TXT_BAKY As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TXT_MONY As TextBox
+    Friend WithEvents TXT_RASED As TextBox
+    Friend WithEvents Label21 As Label
 End Class

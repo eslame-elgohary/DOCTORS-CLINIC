@@ -677,7 +677,6 @@ Partial Class HOME
         Me.REP_HAGEZ_PA.Name = "REP_HAGEZ_PA"
         Me.REP_HAGEZ_PA.Size = New System.Drawing.Size(172, 22)
         Me.REP_HAGEZ_PA.Text = "تقرير حجز مريض"
-        Me.REP_HAGEZ_PA.Visible = False
         '
         'الاعداداتToolStripMenuItem
         '

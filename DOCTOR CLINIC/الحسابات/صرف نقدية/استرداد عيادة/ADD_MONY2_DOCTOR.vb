@@ -508,7 +508,29 @@
                     DA2.Update(DT)
                 End If
 
+                '===================================== حذف من حساب المريض ======================================
+                Dim CMD_DEL3 As New SqlClient.SqlCommand
+                CMD_DEL3.Connection = SqlConn
+                CMD_DEL3.CommandText = "DELETE FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10'"
+                CMD_DEL3.ExecuteNonQuery()
+                '==================================التخزين فى حساب المريض ========================================
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+                DA3.Fill(DT)
+                Dim DR3 = DT.NewRow
+                DR3!ADD_CODE = TXT_CODE.Text
+                DR3!ADD_CODE2 = "10"
+                DR3!ADD_DATE = TXT_DATE.Text
+                DR3!PA_CODE = PA_CODE.Text
+                DR3!ACTION_NAME = "أيصال عيادات رقم " & TXT_CODE.Text
+                DR3!SAFY_MAML = SAFY.Text
+                DR3!ADD_MAML = TXT_MONY.Text
+                DR3!BAKY_MAML = TXT_BAKY.Text
+                DR3!STAT = False
+                DT.Rows.Add(DR3)
+                Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                DA3.Update(DT)
                 '==========================================================================
+
                 printedit()
                 ' PRINTBTN_Click(sender, e)
                 MessageBox.Show("تمت عملية أستردادالأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -983,6 +1005,46 @@
                     TIMERADD.Enabled = False
                     CALC()
 
+
+                    '===================== اجمالى الفواتير ==========================================
+                    Try
+                        Dim sql As String = "SELECT coalesce(sum(SAFY_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+                        Dim cmd As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql, SqlConn)
+                        Dim da1 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd)
+                        Dim dt1 As DataTable = New DataTable
+                        da1.Fill(dt1)
+                        TXT_ALL.Text = dt1.Rows(0)(0).ToString
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                        SqlConn.Close()
+                    End Try
+                    '===================== اجمالى الدفعات ========================================
+                    Try
+                        Dim sql1 As String = "SELECT coalesce(sum(ADD_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+                        Dim cmd1 As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql1, SqlConn)
+                        Dim da11 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd1)
+                        Dim dt11 As DataTable = New DataTable
+                        da11.Fill(dt11)
+                        TXT_ADD.Text = dt11.Rows(0)(0).ToString
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                        SqlConn.Close()
+                    End Try
+                    '===========================================================
+
+
+                    Dim DT3 As New DataTable
+                    Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10' ", SqlConn)
+                    DA3.Fill(DT3)
+                    Dim DR3 = DT3.Rows(0)
+                    TXT_MONY.Text = DR3!ADD_MAML
+                    TXT_BAKY.Text = DR3!BAKY_MAML
+
+                    TXT_RASED.Text = Val(TXT_ALL.Text) - Val(TXT_ADD.Text) - Val(TXT_BAKY.Text)
+
+                    TXT_BAKY.Text = Val(SAFY.Text) - Val(TXT_MONY.Text)
+
+                    TXT_RASED_NEW.Text = Val(TXT_RASED.Text) + Val(TXT_BAKY.Text)
                 End If
 
             Catch ex As Exception

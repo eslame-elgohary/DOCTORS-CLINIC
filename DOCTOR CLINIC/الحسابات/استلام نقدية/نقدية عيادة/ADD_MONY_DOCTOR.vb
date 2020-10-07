@@ -62,11 +62,7 @@
         TOTAL.Text = Val(TOTAL_)
         SAFY.Text = Val(TOTAL.Text) - Val(DISCOUNT.Text)
 
-        If Val(TOTAL.Text) > 0 Then
-            SAFY_AR.Text = ARABIC.ConvertToArabic(SAFY.Text)
-        Else
-            SAFY_AR.Text = ""
-        End If
+
     End Sub
     Private Sub ADD_MONY_DOCTOR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -142,6 +138,8 @@
         PA_NAME.Text = ""
         PA_NAME.Select()
         TXT_TYPEMONY.SelectedIndex = 0
+        TXT_BAKY.Text = ""
+        TXT_RASED_NEW.Text = ""
     End Sub
     Sub SHOW_DETA2(CODE2_)
 
@@ -231,7 +229,34 @@
             TXT_AGE.Text = DT.Rows(I).Item("PA_AGE")
             TXT_PA_TYPE.Text = DT.Rows(I).Item("PA_TYPE")
         Next
+        '===================== اجمالى الفواتير ==========================================
+        Try
+            Dim sql As String = "SELECT coalesce(sum(SAFY_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+            Dim cmd As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql, SqlConn)
+            Dim da1 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd)
+            Dim dt1 As DataTable = New DataTable
+            da1.Fill(dt1)
+            TXT_ALL.Text = dt1.Rows(0)(0).ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            SqlConn.Close()
+        End Try
+        '===================== اجمالى الدفعات ========================================
+        Try
+            Dim sql1 As String = "SELECT coalesce(sum(ADD_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+            Dim cmd1 As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql1, SqlConn)
+            Dim da11 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd1)
+            Dim dt11 As DataTable = New DataTable
+            da11.Fill(dt11)
+            TXT_ADD.Text = dt11.Rows(0)(0).ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            SqlConn.Close()
+        End Try
+        '===========================================================
+        TXT_RASED.Text = Val(TXT_ALL.Text) - Val(TXT_ADD.Text)
         FILL_TKHASOS()
+
 
 
     End Sub
@@ -380,9 +405,15 @@
                     TXT_TYPEMONY.Select()
                     Exit Sub
                 End If
+
                 If DataGridView1.Rows.Count < 1 Then
                     MessageBox.Show("يرجى أختيار الأجراء المطلوب", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     TXT_ACTION.Select()
+                    Exit Sub
+                End If
+                If TXT_MONY.Text = "" Then
+                    MessageBox.Show("يرجى أدخال المبلغ المستلم", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    TXT_MONY.Select()
                     Exit Sub
                 End If
                 '================= التخزين فى الحجز ========================================
@@ -482,7 +513,7 @@
                             DR2!CODE_DT = TXT_CODE.Text
                             DR2!CODE_DT2 = "1"
                             DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
-                            DR2!KHAZINA_IN = SAFY.Text
+                            DR2!KHAZINA_IN = TXT_MONY.Text
                             DR2!MONY_TYPE = "نقدي"
                             DR2!KHAZINA_OUT = "0"
                             DR2!STAT_KHAZINA = True
@@ -500,7 +531,7 @@
                             DR2!CODE_DT = TXT_CODE.Text
                             DR2!CODE_DT2 = "1"
                             DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
-                            DR2!KHAZINA_IN = SAFY.Text
+                            DR2!KHAZINA_IN = TXT_MONY.Text
                             DR2!KHAZINA_OUT = "0"
                             DR2!MONY_TYPE = "فيزا"
                             DR2!STAT_KHAZINA = True
@@ -517,7 +548,7 @@
                             DR2!CODE_DT = TXT_CODE.Text
                             DR2!CODE_DT2 = "1"
                             DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
-                            DR2!KHAZINA_IN = SAFY.Text
+                            DR2!KHAZINA_IN = TXT_MONY.Text
                             DR2!KHAZINA_OUT = "0"
                             DR2!MONY_TYPE = "بريميوم كارد"
                             DR2!STAT_KHAZINA = True
@@ -525,6 +556,23 @@
                             Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
                             DA2.Update(DT)
                         End If
+
+                        '==================================التخزين فى حساب المريض ========================================
+                        Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+                        DA3.Fill(DT)
+                        Dim DR3 = DT.NewRow
+                        DR3!ADD_CODE = TXT_CODE.Text
+                        DR3!ADD_CODE2 = "10"
+                        DR3!ADD_DATE = TXT_DATE.Text
+                        DR3!PA_CODE = PA_CODE.Text
+                        DR3!ACTION_NAME = "أيصال عيادات رقم " & TXT_CODE.Text
+                        DR3!SAFY_MAML = SAFY.Text
+                        DR3!ADD_MAML = TXT_MONY.Text
+                        DR3!BAKY_MAML = TXT_BAKY.Text
+                        DR3!STAT = True
+                        DT.Rows.Add(DR3)
+                        Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                        DA3.Update(DT)
 
                         PRINTBTN_Click(sender, e)
 
@@ -591,7 +639,7 @@
                         DR2!CODE_DT = TXT_CODE.Text
                         DR2!CODE_DT2 = "1"
                         DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية رقم " & TXT_CODE.Text & " العيادات "
-                        DR2!KHAZINA_IN = SAFY.Text
+                        DR2!KHAZINA_IN = TXT_MONY.Text
                         DR2!MONY_TYPE = "نقدي"
                         DR2!KHAZINA_OUT = "0"
                         DR2!STAT_KHAZINA = True
@@ -609,7 +657,7 @@
                         DR2!CODE_DT = TXT_CODE.Text
                         DR2!CODE_DT2 = "1"
                         DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية فيزا رقم " & TXT_CODE.Text & " العيادات "
-                        DR2!KHAZINA_IN = SAFY.Text
+                        DR2!KHAZINA_IN = TXT_MONY.Text
                         DR2!KHAZINA_OUT = "0"
                         DR2!MONY_TYPE = "فيزا"
                         DR2!STAT_KHAZINA = True
@@ -626,7 +674,7 @@
                         DR2!CODE_DT = TXT_CODE.Text
                         DR2!CODE_DT2 = "1"
                         DR2!KHAZINA_NAME_ACTION = "أيصال أستلام نقدية بريميوم كارد رقم " & TXT_CODE.Text & " العيادات "
-                        DR2!KHAZINA_IN = SAFY.Text
+                        DR2!KHAZINA_IN = TXT_MONY.Text
                         DR2!KHAZINA_OUT = "0"
                         DR2!MONY_TYPE = "بريميوم كارد"
                         DR2!STAT_KHAZINA = True
@@ -635,6 +683,22 @@
                         DA2.Update(DT)
                     End If
 
+                    '==================================التخزين فى حساب المريض ========================================
+                    Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+                    DA3.Fill(DT)
+                    Dim DR3 = DT.NewRow
+                    DR3!ADD_CODE = TXT_CODE.Text
+                    DR3!ADD_CODE2 = "10"
+                    DR3!ADD_DATE = TXT_DATE.Text
+                    DR3!PA_CODE = PA_CODE.Text
+                    DR3!ACTION_NAME = "أيصال عيادات رقم " & TXT_CODE.Text
+                    DR3!SAFY_MAML = SAFY.Text
+                    DR3!ADD_MAML = TXT_MONY.Text
+                    DR3!BAKY_MAML = TXT_BAKY.Text
+                    DR3!STAT = True
+                    DT.Rows.Add(DR3)
+                    Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                    DA3.Update(DT)
                     PRINTBTN_Click(sender, e)
 
                     MessageBox.Show("تمت عملية حفظ بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -804,7 +868,27 @@
                     Dim CMD2_ As New SqlClient.SqlCommandBuilder(DA2)
                     DA2.Update(DT)
                 End If
-
+                '===================================== حذف من حساب المريض ======================================
+                Dim CMD_DEL3 As New SqlClient.SqlCommand
+                CMD_DEL3.Connection = SqlConn
+                CMD_DEL3.CommandText = "DELETE FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10'"
+                CMD_DEL3.ExecuteNonQuery()
+                '==================================التخزين فى حساب المريض ========================================
+                Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
+                DA3.Fill(DT)
+                Dim DR3 = DT.NewRow
+                DR3!ADD_CODE = TXT_CODE.Text
+                DR3!ADD_CODE2 = "10"
+                DR3!ADD_DATE = TXT_DATE.Text
+                DR3!PA_CODE = PA_CODE.Text
+                DR3!ACTION_NAME = "أيصال عيادات رقم " & TXT_CODE.Text
+                DR3!SAFY_MAML = SAFY.Text
+                DR3!ADD_MAML = TXT_MONY.Text
+                DR3!BAKY_MAML = TXT_BAKY.Text
+                DR3!STAT = True
+                DT.Rows.Add(DR3)
+                Dim CMD3 As New SqlClient.SqlCommandBuilder(DA3)
+                DA3.Update(DT)
                 '==========================================================================
                 printedit()
                 ' PRINTBTN_Click(sender, e)
@@ -866,6 +950,12 @@
                 Dim SAVE2 As New SqlClient.SqlCommandBuilder(DA2)
                 DA2.Update(DT2)
                 '==========================================================================
+                '===================================== حذف من حساب المريض ======================================
+                Dim CMD_DEL3 As New SqlClient.SqlCommand
+                CMD_DEL3.Connection = SqlConn
+                CMD_DEL3.CommandText = "DELETE FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10'"
+                CMD_DEL3.ExecuteNonQuery()
+
                 MessageBox.Show("تمت عملية حذف بيانات الأيصال بنجاح", "رسالة تأكيد", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 NEWBTN_Click(sender, e)
             Else
@@ -923,8 +1013,11 @@
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM SEARCH_ADD_MONY_DOCTOR_V WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
                 DA.Fill(DT)
                     Dim REP As New ADD_MONY_REP
-                    REP.SetDataSource(DT)
-                    Dim FRM As New ADD_MONY_CRS
+                REP.SetDataSource(DT)
+                REP.SetParameterValue(0, TXT_RASED.Text)
+                REP.SetParameterValue(1, TXT_MONY.Text)
+                REP.SetParameterValue(2, TXT_RASED_NEW.Text)
+                Dim FRM As New ADD_MONY_CRS
                     FRM.CrystalReportViewer1.ReportSource = REP
                     FRM.ShowDialog()
 
@@ -997,6 +1090,32 @@
             TXT_AGE.Text = DT.Rows(I).Item("PA_AGE")
             TXT_PA_TYPE.Text = DT.Rows(I).Item("PA_TYPE")
         Next
+        '===================== اجمالى الفواتير ==========================================
+        Try
+            Dim sql As String = "SELECT coalesce(sum(SAFY_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+            Dim cmd As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql, SqlConn)
+            Dim da1 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd)
+            Dim dt1 As DataTable = New DataTable
+            da1.Fill(dt1)
+            TXT_ALL.Text = dt1.Rows(0)(0).ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            SqlConn.Close()
+        End Try
+        '===================== اجمالى الدفعات ========================================
+        Try
+            Dim sql1 As String = "SELECT coalesce(sum(ADD_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+            Dim cmd1 As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql1, SqlConn)
+            Dim da11 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd1)
+            Dim dt11 As DataTable = New DataTable
+            da11.Fill(dt11)
+            TXT_ADD.Text = dt11.Rows(0)(0).ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            SqlConn.Close()
+        End Try
+        '===========================================================
+        TXT_RASED.Text = Val(TXT_ALL.Text) - Val(TXT_ADD.Text)
     End Sub
 
     Private Sub TA_CODE_TKHASOS_TextChanged(sender As Object, e As EventArgs) Handles TA_CODE_TKHASOS.TextChanged
@@ -1071,4 +1190,16 @@
         LASTCOMEFRM.ShowDialog()
     End Sub
 
+    Private Sub TXT_MONY_TextChanged(sender As Object, e As EventArgs) Handles TXT_MONY.TextChanged
+
+        TXT_BAKY.Text = Val(SAFY.Text) - Val(TXT_MONY.Text)
+
+        TXT_RASED_NEW.Text = Val(TXT_BAKY.Text) + Val(TXT_RASED.Text)
+
+        If Val(TXT_MONY.Text) > 0 Then
+            SAFY_AR.Text = ARABIC.ConvertToArabic(TXT_MONY.Text)
+        Else
+            SAFY_AR.Text = ""
+        End If
+    End Sub
 End Class

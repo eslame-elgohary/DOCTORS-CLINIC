@@ -28,7 +28,6 @@ Partial Class REP_HAGEZ
         Me.TXT_PA_NAME = New System.Windows.Forms.ComboBox()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
-        Me.CH_PA = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TXT_END_DATE = New System.Windows.Forms.DateTimePicker()
@@ -36,6 +35,7 @@ Partial Class REP_HAGEZ
         Me.BTN_EXIT = New DevExpress.XtraEditors.SimpleButton()
         Me.BTN_VIWE = New DevExpress.XtraEditors.SimpleButton()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PATIENTDATA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -44,7 +44,7 @@ Partial Class REP_HAGEZ
         '
         Me.TXT_PA_CODE.Location = New System.Drawing.Point(529, 76)
         Me.TXT_PA_CODE.Name = "TXT_PA_CODE"
-        Me.TXT_PA_CODE.Size = New System.Drawing.Size(44, 27)
+        Me.TXT_PA_CODE.Size = New System.Drawing.Size(78, 27)
         Me.TXT_PA_CODE.TabIndex = 20
         Me.TXT_PA_CODE.Visible = False
         '
@@ -52,11 +52,11 @@ Partial Class REP_HAGEZ
         '
         Me.TXT_PA_NAME.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TXT_PA_NAME.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.TXT_PA_NAME.BackColor = System.Drawing.Color.Aqua
         Me.TXT_PA_NAME.DataSource = Me.BindingSource1
         Me.TXT_PA_NAME.DisplayMember = "PA_NAME"
-        Me.TXT_PA_NAME.Enabled = False
         Me.TXT_PA_NAME.FormattingEnabled = True
-        Me.TXT_PA_NAME.Location = New System.Drawing.Point(172, 76)
+        Me.TXT_PA_NAME.Location = New System.Drawing.Point(141, 12)
         Me.TXT_PA_NAME.Name = "TXT_PA_NAME"
         Me.TXT_PA_NAME.Size = New System.Drawing.Size(351, 27)
         Me.TXT_PA_NAME.TabIndex = 17
@@ -74,17 +74,6 @@ Partial Class REP_HAGEZ
         Me.PATIENTDATA.DataSetName = "PATIENTDATA"
         Me.PATIENTDATA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'CH_PA
-        '
-        Me.CH_PA.AutoSize = True
-        Me.CH_PA.Location = New System.Drawing.Point(46, 80)
-        Me.CH_PA.Name = "CH_PA"
-        Me.CH_PA.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CH_PA.Size = New System.Drawing.Size(124, 23)
-        Me.CH_PA.TabIndex = 16
-        Me.CH_PA.Text = "أسم المريض"
-        Me.CH_PA.UseVisualStyleBackColor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -93,6 +82,7 @@ Partial Class REP_HAGEZ
         Me.Label2.Size = New System.Drawing.Size(101, 19)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "نهاية الفترة :"
+        Me.Label2.Visible = False
         '
         'Label1
         '
@@ -102,6 +92,7 @@ Partial Class REP_HAGEZ
         Me.Label1.Size = New System.Drawing.Size(100, 19)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "بداية الفترة :"
+        Me.Label1.Visible = False
         '
         'TXT_END_DATE
         '
@@ -110,6 +101,7 @@ Partial Class REP_HAGEZ
         Me.TXT_END_DATE.Name = "TXT_END_DATE"
         Me.TXT_END_DATE.Size = New System.Drawing.Size(140, 27)
         Me.TXT_END_DATE.TabIndex = 13
+        Me.TXT_END_DATE.Visible = False
         '
         'TXT_START_DATE
         '
@@ -118,13 +110,14 @@ Partial Class REP_HAGEZ
         Me.TXT_START_DATE.Name = "TXT_START_DATE"
         Me.TXT_START_DATE.Size = New System.Drawing.Size(128, 27)
         Me.TXT_START_DATE.TabIndex = 12
+        Me.TXT_START_DATE.Visible = False
         '
         'BTN_EXIT
         '
         Me.BTN_EXIT.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_EXIT.Appearance.Options.UseFont = True
         Me.BTN_EXIT.ImageOptions.Image = CType(resources.GetObject("BTN_EXIT.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_EXIT.Location = New System.Drawing.Point(408, 133)
+        Me.BTN_EXIT.Location = New System.Drawing.Point(378, 51)
         Me.BTN_EXIT.Name = "BTN_EXIT"
         Me.BTN_EXIT.Size = New System.Drawing.Size(126, 40)
         Me.BTN_EXIT.TabIndex = 19
@@ -135,7 +128,7 @@ Partial Class REP_HAGEZ
         Me.BTN_VIWE.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_VIWE.Appearance.Options.UseFont = True
         Me.BTN_VIWE.ImageOptions.Image = CType(resources.GetObject("BTN_VIWE.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_VIWE.Location = New System.Drawing.Point(55, 133)
+        Me.BTN_VIWE.Location = New System.Drawing.Point(18, 51)
         Me.BTN_VIWE.Name = "BTN_VIWE"
         Me.BTN_VIWE.Size = New System.Drawing.Size(126, 40)
         Me.BTN_VIWE.TabIndex = 18
@@ -145,17 +138,26 @@ Partial Class REP_HAGEZ
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(13, 15)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 19)
+        Me.Label3.TabIndex = 21
+        Me.Label3.Text = "أسم المريض :"
+        '
         'REP_HAGEZ
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(619, 219)
+        Me.ClientSize = New System.Drawing.Size(619, 108)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TXT_PA_CODE)
         Me.Controls.Add(Me.BTN_EXIT)
         Me.Controls.Add(Me.BTN_VIWE)
         Me.Controls.Add(Me.TXT_PA_NAME)
-        Me.Controls.Add(Me.CH_PA)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TXT_END_DATE)
@@ -181,7 +183,6 @@ Partial Class REP_HAGEZ
     Friend WithEvents BTN_EXIT As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BTN_VIWE As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TXT_PA_NAME As ComboBox
-    Friend WithEvents CH_PA As CheckBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TXT_END_DATE As DateTimePicker
@@ -189,4 +190,5 @@ Partial Class REP_HAGEZ
     Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents PATIENTDATA As PATIENTDATA
     Friend WithEvents PATIENTTableAdapter As PATIENTDATATableAdapters.PATIENTTableAdapter
+    Friend WithEvents Label3 As Label
 End Class
