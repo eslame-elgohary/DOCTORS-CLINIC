@@ -41,6 +41,12 @@
             For I = 0 To DataGridView1.Rows.Count - 1
                 TXT_M.Text = Val(DataGridView1.Rows(I).Cells(1).Value) + 1
             Next
+            Dim DT20 As New DataTable
+            Dim DA20 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT='" & CODE_ & "'", SqlConn)
+            DA20.Fill(DT20)
+            Dim DR20 = DT20.Rows(0)
+            TXT_MONY.Text = DR20!KHAZINA_IN
+
 
             'DELETBTN.Enabled = True
             'EDITBTN.Enabled = True
@@ -1201,5 +1207,9 @@
         Else
             SAFY_AR.Text = ""
         End If
+    End Sub
+
+    Private Sub TXT_MONY_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_MONY.KeyPress
+        PressOnlyNumeric(e)   ' إدخال أرقام فقط
     End Sub
 End Class

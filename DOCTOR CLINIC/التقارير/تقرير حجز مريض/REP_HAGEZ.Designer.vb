@@ -42,7 +42,7 @@ Partial Class REP_HAGEZ
         '
         'TXT_PA_CODE
         '
-        Me.TXT_PA_CODE.Location = New System.Drawing.Point(529, 76)
+        Me.TXT_PA_CODE.Location = New System.Drawing.Point(529, 18)
         Me.TXT_PA_CODE.Name = "TXT_PA_CODE"
         Me.TXT_PA_CODE.Size = New System.Drawing.Size(78, 27)
         Me.TXT_PA_CODE.TabIndex = 20
@@ -56,7 +56,7 @@ Partial Class REP_HAGEZ
         Me.TXT_PA_NAME.DataSource = Me.BindingSource1
         Me.TXT_PA_NAME.DisplayMember = "PA_NAME"
         Me.TXT_PA_NAME.FormattingEnabled = True
-        Me.TXT_PA_NAME.Location = New System.Drawing.Point(141, 12)
+        Me.TXT_PA_NAME.Location = New System.Drawing.Point(141, 19)
         Me.TXT_PA_NAME.Name = "TXT_PA_NAME"
         Me.TXT_PA_NAME.Size = New System.Drawing.Size(351, 27)
         Me.TXT_PA_NAME.TabIndex = 17
@@ -117,7 +117,7 @@ Partial Class REP_HAGEZ
         Me.BTN_EXIT.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_EXIT.Appearance.Options.UseFont = True
         Me.BTN_EXIT.ImageOptions.Image = CType(resources.GetObject("BTN_EXIT.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_EXIT.Location = New System.Drawing.Point(378, 51)
+        Me.BTN_EXIT.Location = New System.Drawing.Point(427, 76)
         Me.BTN_EXIT.Name = "BTN_EXIT"
         Me.BTN_EXIT.Size = New System.Drawing.Size(126, 40)
         Me.BTN_EXIT.TabIndex = 19
@@ -128,7 +128,7 @@ Partial Class REP_HAGEZ
         Me.BTN_VIWE.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTN_VIWE.Appearance.Options.UseFont = True
         Me.BTN_VIWE.ImageOptions.Image = CType(resources.GetObject("BTN_VIWE.ImageOptions.Image"), System.Drawing.Image)
-        Me.BTN_VIWE.Location = New System.Drawing.Point(18, 51)
+        Me.BTN_VIWE.Location = New System.Drawing.Point(18, 76)
         Me.BTN_VIWE.Name = "BTN_VIWE"
         Me.BTN_VIWE.Size = New System.Drawing.Size(126, 40)
         Me.BTN_VIWE.TabIndex = 18
@@ -141,7 +141,7 @@ Partial Class REP_HAGEZ
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 15)
+        Me.Label3.Location = New System.Drawing.Point(14, 22)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 19)
         Me.Label3.TabIndex = 21
@@ -151,7 +151,7 @@ Partial Class REP_HAGEZ
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(619, 108)
+        Me.ClientSize = New System.Drawing.Size(619, 136)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TXT_PA_CODE)

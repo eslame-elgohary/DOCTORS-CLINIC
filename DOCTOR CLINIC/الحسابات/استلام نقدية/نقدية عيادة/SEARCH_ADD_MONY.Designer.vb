@@ -35,6 +35,7 @@ Partial Class SEARCH_ADD_MONY
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,11 +54,11 @@ Partial Class SEARCH_ADD_MONY
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column2, Me.Column5, Me.Column4})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column2, Me.Column5, Me.Column6, Me.Column4})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 88)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(731, 362)
+        Me.DataGridView1.Size = New System.Drawing.Size(793, 362)
         Me.DataGridView1.TabIndex = 2
         '
         'K1
@@ -108,7 +109,7 @@ Partial Class SEARCH_ADD_MONY
         Me.ADD_DATE_VAL.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ADD_DATE_VAL.Appearance.Options.UseFont = True
         Me.ADD_DATE_VAL.ImageOptions.Image = CType(resources.GetObject("ADD_DATE_VAL.ImageOptions.Image"), System.Drawing.Image)
-        Me.ADD_DATE_VAL.Location = New System.Drawing.Point(610, 9)
+        Me.ADD_DATE_VAL.Location = New System.Drawing.Point(622, 16)
         Me.ADD_DATE_VAL.Name = "ADD_DATE_VAL"
         Me.ADD_DATE_VAL.Size = New System.Drawing.Size(133, 62)
         Me.ADD_DATE_VAL.TabIndex = 11
@@ -117,7 +118,7 @@ Partial Class SEARCH_ADD_MONY
         'Column1
         '
         Me.Column1.DataPropertyName = "ADD_CODE"
-        Me.Column1.FillWeight = 50.0!
+        Me.Column1.FillWeight = 60.0!
         Me.Column1.HeaderText = "رقم الأيصال"
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
@@ -141,9 +142,17 @@ Partial Class SEARCH_ADD_MONY
         '
         Me.Column5.DataPropertyName = "ADD_SAFY"
         Me.Column5.FillWeight = 60.0!
-        Me.Column5.HeaderText = "المبلغ"
+        Me.Column5.HeaderText = "صافي المبلغ"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "KHAZINA_IN"
+        Me.Column6.FillWeight = 60.0!
+        Me.Column6.HeaderText = "المدفوع"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Column4
         '
@@ -158,7 +167,7 @@ Partial Class SEARCH_ADD_MONY
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(755, 462)
+        Me.ClientSize = New System.Drawing.Size(818, 462)
         Me.Controls.Add(Me.ADD_DATE_VAL)
         Me.Controls.Add(Me.DATE_END)
         Me.Controls.Add(Me.DATE_START)
@@ -195,5 +204,6 @@ Partial Class SEARCH_ADD_MONY
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewButtonColumn
 End Class

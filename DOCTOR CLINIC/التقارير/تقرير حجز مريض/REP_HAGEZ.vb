@@ -24,7 +24,7 @@
         End If
         '=================================================================
         Dim DT As New DataTable
-        Dim DA As New SqlClient.SqlDataAdapter("SELECT  * FROM  HAGEZ_V WHERE CODE_PA_H_A ='" & TXT_PA_CODE.Text & "'", SqlConn)
+        Dim DA As New SqlClient.SqlDataAdapter("SELECT  * FROM  HAGEZ_V WHERE PA_CODE ='" & TXT_PA_CODE.Text & "'", SqlConn)
         DA.Fill(DT)
 
         Dim REP As New HAGEZ_REP_CRS

@@ -361,6 +361,7 @@ Public Class HOME
         Catch EX As Exception
 
         End Try
+        'ADD_MONY_DOCTOR.ShowDialog()
     End Sub
 
     Private Sub BT_ADDTHLEL_PATION_Click(sender As Object, e As EventArgs) Handles BT_ADDTHLEL_PATION.Click

@@ -1033,12 +1033,18 @@
                     '===========================================================
 
 
-                    Dim DT3 As New DataTable
-                    Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10' ", SqlConn)
-                    DA3.Fill(DT3)
-                    Dim DR3 = DT3.Rows(0)
-                    TXT_MONY.Text = DR3!ADD_MAML
-                    TXT_BAKY.Text = DR3!BAKY_MAML
+                    'Dim DT3 As New DataTable
+                    'Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10' ", SqlConn)
+                    'DA3.Fill(DT3)
+                    'Dim DR3 = DT3.Rows(0)
+                    'TXT_MONY.Text = DR3!ADD_MAML
+                    'TXT_BAKY.Text = DR3!BAKY_MAML
+
+                    Dim DT20 As New DataTable
+                    Dim DA20 As New SqlClient.SqlDataAdapter("SELECT * FROM KHAZINA_DT WHERE CODE_DT='" & TXT_CODE.Text & "'", SqlConn)
+                    DA20.Fill(DT20)
+                    Dim DR20 = DT20.Rows(0)
+                    TXT_MONY.Text = DR20!KHAZINA_IN
 
                     TXT_RASED.Text = Val(TXT_ALL.Text) - Val(TXT_ADD.Text) - Val(TXT_BAKY.Text)
 
@@ -1056,4 +1062,5 @@
 
 
     End Sub
+
 End Class

@@ -12,7 +12,7 @@
         If CH_PA.Checked = True Then
 
             Dim DT As New DataTable
-            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE STAT='TRUE' AND ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
             DA.Fill(DT)
 
             Dim REP As New RASED_PATION_CRS
@@ -35,7 +35,7 @@
             End If
             '========================================================================
             Dim DT As New DataTable
-            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE PA_CODE = '" & TXT_CODE.Text & "' and ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM PATIENT_RASED_VIWE WHERE STAT='TRUE' AND PA_CODE = '" & TXT_CODE.Text & "' and ADD_DATE > ='" & START_DATE.Text & "' AND ADD_DATE < ='" & END_DATE.Text & "'", SqlConn)
             DA.Fill(DT)
 
             Dim REP As New RASED_PATION_CRS

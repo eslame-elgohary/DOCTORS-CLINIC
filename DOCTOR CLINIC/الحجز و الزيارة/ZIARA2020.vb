@@ -1085,24 +1085,24 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             FRM.CrystalReportViewer1.ReportSource = REP
             FRM.ShowDialog()
 
-            'ElseIf TXT_PRINT.SelectedIndex = 4 Then
+        ElseIf TXT_PRINT.SelectedIndex = 4 Then
 
-            '    If TXT_PA_CODE_H.Text = "" Then
-            '        MessageBox.Show("يرجى ادخال اسم المريض", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            '        Exit Sub
-            '    End If
-            '    '=================================================================
-            '    Dim DT As New DataTable
-            '    Dim DA As New SqlClient.SqlDataAdapter("SELECT  * FROM  HAGEZ_V WHERE CODE_PA_H_A ='" & TXT_PA_CODE_H.Text & "'", SqlConn)
-            '    DA.Fill(DT)
+            If TXT_PA_CODE_H.Text = "" Then
+                MessageBox.Show("يرجى ادخال اسم المريض", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+            '=================================================================
+            Dim DT As New DataTable
+            Dim DA As New SqlClient.SqlDataAdapter("SELECT  * FROM  HAGEZ_V WHERE PA_CODE ='" & TXT_PA_CODE_H.Text & "'", SqlConn)
+            DA.Fill(DT)
 
-            '    Dim REP As New HAGEZ_REP_CRS
-            '    REP.SetDataSource(DT)
-            '    REP.SetParameterValue(0, TXT_PA_CODE_H.Text)
+            Dim REP As New HAGEZ_REP_CRS
+            REP.SetDataSource(DT)
+            REP.SetParameterValue(0, TXT_PA_CODE_H.Text)
 
-            '    Dim FRM As New REPFORALL
-            '    FRM.CrystalReportViewer1.ReportSource = REP
-            '    FRM.ShowDialog()
+            Dim FRM As New REPFORALL
+            FRM.CrystalReportViewer1.ReportSource = REP
+            FRM.ShowDialog()
         End If
     End Sub
 
