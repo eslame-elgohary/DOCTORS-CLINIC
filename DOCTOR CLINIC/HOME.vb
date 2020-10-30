@@ -303,7 +303,7 @@ Public Class HOME
         End Try
     End Sub
 
-    Private Sub STB_RESALSE_Click(sender As Object, e As EventArgs) Handles STB_RESALSE.Click
+    Private Sub STB_RESALSE_Click(sender As Object, e As EventArgs)
         'HAGEZ_PATEINT.ShowDialog()
 
         'MAMLASNANFRM.ShowDialog()
@@ -471,12 +471,12 @@ Public Class HOME
         'Catch EX As Exception
 
         'End Try
-        T3AQOD.ShowDialog()
+        T3AQOD_FRM2020.ShowDialog()
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Try
-            ROLES("M", ADD_DOCTOR_T3AQOD_MONY)
+            ROLES("M", ADD_MONY_T3AQOD)
         Catch EX As Exception
 
         End Try
@@ -560,5 +560,9 @@ Public Class HOME
 
     Private Sub فاتورةرسميةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles فاتورةرسميةToolStripMenuItem.Click
         FATO_AMLIAT_FRM.ShowDialog()
+    End Sub
+
+    Private Sub أستلامنقديةمطالبةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles أستلامنقديةمطالبةToolStripMenuItem.Click
+        ADD_MONY_T3AQOD.ShowDialog()
     End Sub
 End Class

@@ -156,7 +156,7 @@
             PA_CHI.Text = DR!PA_CHI
             PA_TYPE.Text = DR!PA_TYPE
             TXT_KARMA.Text = DR!WALID
-
+            TextBox1.Text = DR!Reasons
             DELETBTN.Enabled = True
             EDITBTN.Enabled = True
             SAVEBTN.Enabled = False
@@ -271,8 +271,10 @@
                     UPDATE!PA_CHI_R1 = PA_CHI_R1.Checked
                     UPDATE!PA_CHI = PA_CHI.Text
                     UPDATE!PA_TYPE = PA_TYPE.Text
+
                     If DONT_TRUE.Checked = True Then
                         UPDATE!WALID = "مرفوض الحجز لهذا المريض"
+                        UPDATE!Reasons = TextBox1.Text
                     Else
                         UPDATE!WALID = " "
                     End If
@@ -537,6 +539,16 @@
             DONT_TRUE.Checked = False
         Else
             DONT_TRUE.Checked = True
+        End If
+    End Sub
+
+    Private Sub DONT_TRUE_CheckedChanged(sender As Object, e As EventArgs) Handles DONT_TRUE.CheckedChanged
+        If DONT_TRUE.Checked = False Then
+            TextBox1.Text = ""
+            TextBox1.Visible = False
+        Else
+            TextBox1.Visible = True
+            TextBox1.Text = ""
         End If
     End Sub
 End Class

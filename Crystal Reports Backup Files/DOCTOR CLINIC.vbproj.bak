@@ -1,0 +1,1734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C54B421-50DA-4946-A3DD-14B9AD5F7EE6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DOCTOR_CLINIC.My.MyApplication</StartupObject>
+    <RootNamespace>DOCTOR_CLINIC</RootNamespace>
+    <AssemblyName>DOCTOR CLINIC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP10\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>DOCTOR CLINIC</ProductName>
+    <PublisherName>KARMA SOFT</PublisherName>
+    <ApplicationRevision>28</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DOCTOR CLINIC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>DOCTOR CLINIC.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DOCTOR CLINIC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>DOCTOR CLINIC.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>23C4A62EA4C4313E0DB1D3282BF3D058113440B6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DOCTOR CLINIC_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>67520_doctor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CrystalReports.ReportSource.13.0.4000\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="interop.craxdrt">
+      <HintPath>..\interop.craxdrt.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BACKUPFRM.Designer.vb">
+      <DependentUpon>BACKUPFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BACKUPFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassConvertNO.vb" />
+    <Compile Include="CONNECTION.vb" />
+    <Compile Include="LARBI\test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LARBI\test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMGT3AQOD_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقد\IMGV.Designer.vb">
+      <DependentUpon>IMGV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقد\IMGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقد\T3AQOD.Designer.vb">
+      <DependentUpon>T3AQOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقد\T3AQOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.Designer.vb">
+      <DependentUpon>ADD_DOCTOR_T3AQOD_MONY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\2020hagez.Designer.vb">
+      <DependentUpon>2020hagez.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\2020hagez.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\DATAS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATAS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\ZIARA2020.Designer.vb">
+      <DependentUpon>ZIARA2020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز و الزيارة\ZIARA2020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.Designer.vb">
+      <DependentUpon>HAGEZ_ZIARA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\engabdata.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>engabdata.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\ENGABFRM.Designer.vb">
+      <DependentUpon>ENGABFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\ENGABFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELPFRM.Designer.vb">
+      <DependentUpon>HELPFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HELPFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOME.designer.vb">
+      <DependentUpon>HOME.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HOME.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.vb">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASSEGADMIN.Designer.vb">
+      <DependentUpon>MASSEGADMIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MASSEGADMIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="REPFORALL.Designer.vb">
+      <DependentUpon>REPFORALL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPFORALL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROWHA.designer.vb">
+      <DependentUpon>ROWHA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ROWHA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\lap to lap\LABTOLABCRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LABTOLABCRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\lap to lap\LABTOLAB_V.Designer.vb">
+      <DependentUpon>LABTOLAB_V.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\lap to lap\LABTOLAB_V.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\الخزينة\KHAZINA_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KHAZINA_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\الخزينة\REPORT_KHAZINAFRM.Designer.vb">
+      <DependentUpon>REPORT_KHAZINAFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\الخزينة\REPORT_KHAZINAFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير المرضي\PATIENT_CRS_ALL.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PATIENT_CRS_ALL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير حجز مريض\HAGEZ_REP_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAGEZ_REP_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير حجز مريض\REP_HAGEZ.Designer.vb">
+      <DependentUpon>REP_HAGEZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\تقرير حجز مريض\REP_HAGEZ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\حساب الأطباء\DOCTOR_HESAP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOCTOR_HESAP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التقارير\حساب الأطباء\HESAP_DOCTORSFRM.Designer.vb">
+      <DependentUpon>HESAP_DOCTORSFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\حساب الأطباء\HESAP_DOCTORSFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\كشف حساب مريض\PA_HESAP_FRM.Designer.vb">
+      <DependentUpon>PA_HESAP_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\كشف حساب مريض\PA_HESAP_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\كشف حساب مريض\RASED_PATION_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RASED_PATION_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحجز\HAGEZ_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAGEZ_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحجز\HAGEZ_REP.Designer.vb">
+      <DependentUpon>HAGEZ_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز\HAGEZ_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\LASTCOMEFRM.Designer.vb">
+      <DependentUpon>LASTCOMEFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\LASTCOMEFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\تحويل نقدية\CONVERT_KHAZINA_FRM.Designer.vb">
+      <DependentUpon>CONVERT_KHAZINA_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\تحويل نقدية\CONVERT_KHAZINA_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\تحويل نقدية\SEARCH_CONVERT.Designer.vb">
+      <DependentUpon>SEARCH_CONVERT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\تحويل نقدية\SEARCH_CONVERT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\تسوية نقدية\SEARCH_TSWIA.Designer.vb">
+      <DependentUpon>SEARCH_TSWIA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\تسوية نقدية\SEARCH_TSWIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\تسوية نقدية\TSWIA_KHAZINA.Designer.vb">
+      <DependentUpon>TSWIA_KHAZINA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\تسوية نقدية\TSWIA_KHAZINA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_CRS.Designer.vb">
+      <DependentUpon>ADD_MONY_CRS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_CRS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DATASET.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADD_MONY_DATASET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DATASET.vb">
+      <DependentUpon>ADD_MONY_DATASET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DOCTOR.Designer.vb">
+      <DependentUpon>ADD_MONY_DOCTOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DOCTOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_REP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADD_MONY_REP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML_CRS.Designer.vb">
+      <DependentUpon>ADD_MONY_MAML_CRS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML_CRS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML.Designer.vb">
+      <DependentUpon>ADD_MONY_MAML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\SEARCH_ADD_MONY2.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONY2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\SEARCH_ADD_MONY2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\SEARCH_ADD_MONY.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية عيادة\SEARCH_ADD_MONY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML_REP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADD_MONY_MAML_REP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\DATA_MAML_ADD_MONY.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATA_MAML_ADD_MONY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\SEARCH_ADD_MONY4.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONY4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\SEARCH_ADD_MONY4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\SEARCH_ADD_MONY3.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONY3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\استلام نقدية\نقدية معمل\SEARCH_ADD_MONY3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأدوية\GOR3AFRM.Designer.vb">
+      <DependentUpon>GOR3AFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأدوية\GOR3AFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأدوية\PHARM.Designer.vb">
+      <DependentUpon>PHARM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأدوية\PHARM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأطباء\DOCTORSDATA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOCTORSDATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="الأطباء\DOCTORSFRM.designer.vb">
+      <DependentUpon>DOCTORSFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأطباء\DOCTORSFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأطباء\DOCTORS_PRINT.Designer.vb">
+      <DependentUpon>DOCTORS_PRINT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأطباء\DOCTORS_PRINT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأطباء\DOCTORS_CRS.vb">
+      <DependentUpon>DOCTORS_CRS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="الأطباء\SEARCH_DOCTOR2.Designer.vb">
+      <DependentUpon>SEARCH_DOCTOR2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأطباء\SEARCH_DOCTOR2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأطباء\SEARCH_DOCTOR.Designer.vb">
+      <DependentUpon>SEARCH_DOCTOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأطباء\SEARCH_DOCTOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأطباء\التخصص\TKHASOS.Designer.vb">
+      <DependentUpon>TKHASOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأطباء\التخصص\TKHASOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الأيرادات و المصروفات\MASROF.Designer.vb">
+      <DependentUpon>MASROF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الأيرادات و المصروفات\MASROF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التحاليل\MAMLFRM.Designer.vb">
+      <DependentUpon>MAMLFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التحاليل\MAMLFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التحاليل\PRICE_THL_FRM.Designer.vb">
+      <DependentUpon>PRICE_THL_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التحاليل\PRICE_THL_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التحاليل\THALELFRM.Designer.vb">
+      <DependentUpon>THALELFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التحاليل\THALELFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التحاليل\THALELPRICEDATA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THALELPRICEDATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD2.Designer.vb">
+      <DependentUpon>SEARCH_T3AKOD2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD.Designer.vb">
+      <DependentUpon>SEARCH_T3AKOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKODATFRM.Designer.vb">
+      <DependentUpon>T3AKODATFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKODATFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKODAT_CRS.Designer.vb">
+      <DependentUpon>T3AKODAT_CRS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKODAT_CRS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKODAT_REP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T3AKODAT_REP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKOD_DATA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\تعاقدات\T3AKOD_DATA.vb">
+      <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\الخزينة\REP_KHAZINA.Designer.vb">
+      <DependentUpon>REP_KHAZINA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\الخزينة\REP_KHAZINA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التقارير\تقرير المرضي\PATIENT_REP.Designer.vb">
+      <DependentUpon>PATIENT_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التقارير\تقرير المرضي\PATIENT_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\DOF3A_PATION_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOF3A_PATION_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\DOF3A_PATION_FRM.Designer.vb">
+      <DependentUpon>DOF3A_PATION_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\DOF3A_PATION_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الخزينة\KHAZINAFRM.Designer.vb">
+      <DependentUpon>KHAZINAFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الخزينة\KHAZINAFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحجز\HAGEZ_PATEINT.Designer.vb">
+      <DependentUpon>HAGEZ_PATEINT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحجز\HAGEZ_PATEINT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الزيارة\زيارة العيادة\ZIARAFRM.Designer.vb">
+      <DependentUpon>ZIARAFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الزيارة\زيارة العيادة\ZIARAFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المرضي\PATIENT.Designer.vb">
+      <DependentUpon>PATIENT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\PATIENT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المرضي\PATIENTDATA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PATIENTDATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\PATIENTDATA.vb">
+      <DependentUpon>PATIENTDATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\PATIENT_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PATIENT_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="المرضي\PATIENT_PRINT.Designer.vb">
+      <DependentUpon>PATIENT_PRINT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\PATIENT_PRINT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المرضي\SEARCH_PATIENT2.Designer.vb">
+      <DependentUpon>SEARCH_PATIENT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\SEARCH_PATIENT2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المرضي\SEARCH_PATIENT.Designer.vb">
+      <DependentUpon>SEARCH_PATIENT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\SEARCH_PATIENT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المرضي\الملف الطبي للمريض\HISTORY_PATION_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HISTORY_PATION_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="المرضي\الملف الطبي للمريض\HISTORY_PATION_FRM_REP.Designer.vb">
+      <DependentUpon>HISTORY_PATION_FRM_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المرضي\الملف الطبي للمريض\HISTORY_PATION_FRM_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المرضي\الملف الطبي للمريض\HISTORY_REP_DATA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HISTORY_REP_DATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="المستخدمين\USERSFRM.Designer.vb">
+      <DependentUpon>USERSFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المستخدمين\USERSFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المستخدمين\USERSLAHFRM.Designer.vb">
+      <DependentUpon>USERSLAHFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المستخدمين\USERSLAHFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المعمل\ADDTHLELMAMLPAFRM.Designer.vb">
+      <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المعمل\ADDTHLELMAMLPAFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المعمل\SEARCHPRICETHLELFRM.Designer.vb">
+      <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المعمل\SEARCHPRICETHLELFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\ENGABREB_TEST.vb">
+      <DependentUpon>ENGABREB_TEST.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\ENGABREB_PLAN.vb">
+      <DependentUpon>ENGABREB_PLAN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\ENGABREB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ENGABREB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\CONTRACEPTION\CONTRACEPTION_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>CONTRACEPTION_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\CONTRACEPTION\CONTRACEPTION_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\FAMILY_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>FAMILY_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\FAMILY_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\HIRSUTISM\HIRUTISM_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>HIRUTISM_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\HIRSUTISM\HIRUTISM_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\IUI OR ICSI\ICSI_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>ICSI_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\IUI OR ICSI\ICSI_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\MEDICAL_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>MEDICAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\MEDICAL_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\MENSTRUAL\MENSTRUAL_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>MENSTRUAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\MENSTRUAL\MENSTRUAL_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\OBSTETRIC_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>OBSTETRIC_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\OBSTETRIC_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\SURGICAL\SURGICAL_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>SURGICAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\SURGICAL\SURGICAL_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\VAGINAL\VAGINAL_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>VAGINAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\VAGINAL\VAGINAL_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GAIN\WEIGHT_GAIN_FEMAL_INFERTILITY.Designer.vb">
+      <DependentUpon>WEIGHT_GAIN_FEMAL_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GAIN\WEIGHT_GAIN_FEMAL_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\have_baby.Designer.vb">
+      <DependentUpon>have_baby.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\have_baby.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.Designer.vb">
+      <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\MEDICAL_MALE_INFERTILITY.Designer.vb">
+      <DependentUpon>MEDICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\MEDICAL_MALE_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\SCROTAL_DOPPLER_MALE_INFERTILITY.Designer.vb">
+      <DependentUpon>SCROTAL_DOPPLER_MALE_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\SCROTAL_DOPPLER_MALE_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.Designer.vb">
+      <DependentUpon>SEMAN_ANALYSIS_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\SURGICAL_MALE_INFERTILITY.Designer.vb">
+      <DependentUpon>SURGICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\SURGICAL_MALE_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.Designer.vb">
+      <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.Designer.vb">
+      <DependentUpon>PLAN_FRM_INFERTILITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\4D\E4D_INFERILTY.Designer.vb">
+      <DependentUpon>E4D_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\4D\E4D_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HSG\HSG_INFERILTY.Designer.vb">
+      <DependentUpon>HSG_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HSG\HSG_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\HYSTROSCOPY_INFERILTY.Designer.vb">
+      <DependentUpon>HYSTROSCOPY_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\HYSTROSCOPY_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\LAPAROSCOPY_INFERILTY.Designer.vb">
+      <DependentUpon>LAPAROSCOPY_INFERILTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\LAPAROSCOPY_INFERILTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\REPORTING\REP_ENGAB_CLOSE.Designer.vb">
+      <DependentUpon>REP_ENGAB_CLOSE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\REPORTING\REP_ENGAB_CLOSE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\SEARCH_ENGABFRM.Designer.vb">
+      <DependentUpon>SEARCH_ENGABFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأخر الأنجاب\SEARCH_ENGABFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة تحاليل\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة تحاليل\DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة تحاليل\REOSHTA_T_REP.Designer.vb">
+      <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة تحاليل\REOSHTA_T_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة تحاليل\ROSHTA_T_CRS2.vb">
+      <DependentUpon>ROSHTA_T_CRS2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="روشتة تحاليل\SEARCH_THLEL_R2.Designer.vb">
+      <DependentUpon>SEARCH_THLEL_R2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة تحاليل\SEARCH_THLEL_R2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة تحاليل\SEARCH_THLEL_R.Designer.vb">
+      <DependentUpon>SEARCH_THLEL_R.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة تحاليل\SEARCH_THLEL_R.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة تحاليل\THLEL_FRM_ROSHTA.Designer.vb">
+      <DependentUpon>THLEL_FRM_ROSHTA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة تحاليل\THLEL_FRM_ROSHTA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة علاج\ELAG_FRM.Designer.vb">
+      <DependentUpon>ELAG_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة علاج\ELAG_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة علاج\REOSHTA_ELAG_REP.Designer.vb">
+      <DependentUpon>REOSHTA_ELAG_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة علاج\REOSHTA_ELAG_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة علاج\ROSHTA_ELAG_CRS2.vb">
+      <DependentUpon>ROSHTA_ELAG_CRS2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="روشتة علاج\ROSHTA_ELAG_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ROSHTA_ELAG_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="روشتة علاج\ROSHTA_ELAG_DATA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ROSHTA_ELAG_DATA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة علاج\SEARCH_R_DOCTOR2.Designer.vb">
+      <DependentUpon>SEARCH_R_DOCTOR2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة علاج\SEARCH_R_DOCTOR2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="روشتة علاج\SEARCH_R_DOCTOR.Designer.vb">
+      <DependentUpon>SEARCH_R_DOCTOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="روشتة علاج\SEARCH_R_DOCTOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\SARF_MASRUF_FRM.Designer.vb">
+      <DependentUpon>SARF_MASRUF_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\SARF_MASRUF_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF2.Designer.vb">
+      <DependentUpon>SEARCH_MASROUF2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF.Designer.vb">
+      <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الحسابات\صرف نقدية\SEARCH_MASROUF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLLOWUPFRM.Designer.vb">
+      <DependentUpon>FOLLOWUPFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLLOWUPFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\FETALDOPPLAR\FETAL_DOPLAR_FRM.Designer.vb">
+      <DependentUpon>FETAL_DOPLAR_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\FETALDOPPLAR\FETAL_DOPLAR_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\d4\D4.Designer.vb">
+      <DependentUpon>D4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\d4\D4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\FOLOWUPREP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOLOWUPREP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\NEWBABYFRMvb.Designer.vb">
+      <DependentUpon>NEWBABYFRMvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\NEWBABYFRMvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.Designer.vb">
+      <DependentUpon>OBSTETRIC_HISTORY_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\ND2\ND2_FRM.Designer.vb">
+      <DependentUpon>ND2_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\ND2\ND2_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.Designer.vb">
+      <DependentUpon>RD3_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\REPORTING\REP_FOLOWUP_CLOSE.Designer.vb">
+      <DependentUpon>REP_FOLOWUP_CLOSE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\REPORTING\REP_FOLOWUP_CLOSE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.Designer.vb">
+      <DependentUpon>SEARCH_FOLOWUP_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\ST1\ST1_FRM.Designer.vb">
+      <DependentUpon>ST1_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\FOLOW UP\ST1\ST1_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.Designer.vb">
+      <DependentUpon>PERSONAL_HISTORY_FRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عيادة النساء\شكوى النساء\womencliniccomplinfrm.Designer.vb">
+      <DependentUpon>womencliniccomplinfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عيادة النساء\شكوى النساء\womencliniccomplinfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BACKUPFRM.resx">
+      <DependentUpon>BACKUPFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELPFRM.resx">
+      <DependentUpon>HELPFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOME.resx">
+      <DependentUpon>HOME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LARBI\test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASSEGADMIN.resx">
+      <DependentUpon>MASSEGADMIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPFORALL.resx">
+      <DependentUpon>REPFORALL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROWHA.resx">
+      <DependentUpon>ROWHA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IMGT3AQOD_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقد\IMGV.resx">
+      <DependentUpon>IMGV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقد\T3AQOD.resx">
+      <DependentUpon>T3AQOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.resx">
+      <DependentUpon>ADD_DOCTOR_T3AQOD_MONY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\lap to lap\LABTOLABCRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LABTOLABCRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\lap to lap\LABTOLAB_V.resx">
+      <DependentUpon>LABTOLAB_V.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\الخزينة\KHAZINA_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KHAZINA_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\الخزينة\REPORT_KHAZINAFRM.resx">
+      <DependentUpon>REPORT_KHAZINAFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير المرضي\PATIENT_CRS_ALL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PATIENT_CRS_ALL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير حجز مريض\HAGEZ_REP_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HAGEZ_REP_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير حجز مريض\REP_HAGEZ.resx">
+      <DependentUpon>REP_HAGEZ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\حساب الأطباء\DOCTOR_HESAP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DOCTOR_HESAP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\حساب الأطباء\HESAP_DOCTORSFRM.resx">
+      <DependentUpon>HESAP_DOCTORSFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\كشف حساب مريض\PA_HESAP_FRM.resx">
+      <DependentUpon>PA_HESAP_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\كشف حساب مريض\RASED_PATION_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RASED_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\2020hagez.resx">
+      <DependentUpon>2020hagez.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز و الزيارة\ZIARA2020.resx">
+      <DependentUpon>ZIARA2020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز\HAGEZ_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HAGEZ_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز\HAGEZ_REP.resx">
+      <DependentUpon>HAGEZ_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\LASTCOMEFRM.resx">
+      <DependentUpon>LASTCOMEFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\تحويل نقدية\CONVERT_KHAZINA_FRM.resx">
+      <DependentUpon>CONVERT_KHAZINA_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\تحويل نقدية\SEARCH_CONVERT.resx">
+      <DependentUpon>SEARCH_CONVERT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\تسوية نقدية\SEARCH_TSWIA.resx">
+      <DependentUpon>SEARCH_TSWIA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\تسوية نقدية\TSWIA_KHAZINA.resx">
+      <DependentUpon>TSWIA_KHAZINA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_CRS.resx">
+      <DependentUpon>ADD_MONY_CRS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DOCTOR.resx">
+      <DependentUpon>ADD_MONY_DOCTOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_REP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ADD_MONY_REP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML_CRS.resx">
+      <DependentUpon>ADD_MONY_MAML_CRS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML.resx">
+      <DependentUpon>ADD_MONY_MAML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\SEARCH_ADD_MONY2.resx">
+      <DependentUpon>SEARCH_ADD_MONY2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية عيادة\SEARCH_ADD_MONY.resx">
+      <DependentUpon>SEARCH_ADD_MONY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية معمل\ADD_MONY_MAML_REP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ADD_MONY_MAML_REP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية معمل\SEARCH_ADD_MONY4.resx">
+      <DependentUpon>SEARCH_ADD_MONY4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\استلام نقدية\نقدية معمل\SEARCH_ADD_MONY3.resx">
+      <DependentUpon>SEARCH_ADD_MONY3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأدوية\GOR3AFRM.resx">
+      <DependentUpon>GOR3AFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأدوية\PHARM.resx">
+      <DependentUpon>PHARM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأطباء\DOCTORSFRM.resx">
+      <DependentUpon>DOCTORSFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأطباء\DOCTORS_PRINT.resx">
+      <DependentUpon>DOCTORS_PRINT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأطباء\DOCTORS_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DOCTORS_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأطباء\SEARCH_DOCTOR2.resx">
+      <DependentUpon>SEARCH_DOCTOR2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأطباء\SEARCH_DOCTOR.resx">
+      <DependentUpon>SEARCH_DOCTOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأطباء\التخصص\TKHASOS.resx">
+      <DependentUpon>TKHASOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الأيرادات و المصروفات\MASROF.resx">
+      <DependentUpon>MASROF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التحاليل\MAMLFRM.resx">
+      <DependentUpon>MAMLFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التحاليل\PRICE_THL_FRM.resx">
+      <DependentUpon>PRICE_THL_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التحاليل\THALELFRM.resx">
+      <DependentUpon>THALELFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقدات\SEARCH_T3AKOD2.resx">
+      <DependentUpon>SEARCH_T3AKOD2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقدات\SEARCH_T3AKOD.resx">
+      <DependentUpon>SEARCH_T3AKOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقدات\T3AKODATFRM.resx">
+      <DependentUpon>T3AKODATFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقدات\T3AKODAT_CRS.resx">
+      <DependentUpon>T3AKODAT_CRS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\تعاقدات\T3AKODAT_REP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>T3AKODAT_REP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\الخزينة\REP_KHAZINA.resx">
+      <DependentUpon>REP_KHAZINA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التقارير\تقرير المرضي\PATIENT_REP.resx">
+      <DependentUpon>PATIENT_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\دفعة من مريض\DOF3A_PATION_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DOF3A_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\دفعة من مريض\DOF3A_PATION_FRM.resx">
+      <DependentUpon>DOF3A_PATION_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\دفعة من مريض\SEARCH_ADD_MONYD.resx">
+      <DependentUpon>SEARCH_ADD_MONYD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الخزينة\KHAZINAFRM.resx">
+      <DependentUpon>KHAZINAFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحجز\HAGEZ_PATEINT.resx">
+      <DependentUpon>HAGEZ_PATEINT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الزيارة\زيارة العيادة\HAGEZ_ZIARA.resx">
+      <DependentUpon>HAGEZ_ZIARA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الزيارة\زيارة العيادة\ZIARAFRM.resx">
+      <DependentUpon>ZIARAFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\PATIENT.resx">
+      <DependentUpon>PATIENT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\PATIENT_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PATIENT_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\PATIENT_PRINT.resx">
+      <DependentUpon>PATIENT_PRINT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\SEARCH_PATIENT2.resx">
+      <DependentUpon>SEARCH_PATIENT2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\SEARCH_PATIENT.resx">
+      <DependentUpon>SEARCH_PATIENT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\الملف الطبي للمريض\HISTORY_PATION_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HISTORY_PATION_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المرضي\الملف الطبي للمريض\HISTORY_PATION_FRM_REP.resx">
+      <DependentUpon>HISTORY_PATION_FRM_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المستخدمين\USERSFRM.resx">
+      <DependentUpon>USERSFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المستخدمين\USERSLAHFRM.resx">
+      <DependentUpon>USERSLAHFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المعمل\ADDTHLELMAMLPAFRM.resx">
+      <DependentUpon>ADDTHLELMAMLPAFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المعمل\SEARCHPRICETHLELFRM.resx">
+      <DependentUpon>SEARCHPRICETHLELFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\ENGABFRM.resx">
+      <DependentUpon>ENGABFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\ENGABREB_TEST.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ENGABREB_TEST.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\ENGABREB_PLAN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ENGABREB_PLAN.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\ENGABREB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ENGABREB.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\CONTRACEPTION\CONTRACEPTION_FEMAL_INFERTILITY.resx">
+      <DependentUpon>CONTRACEPTION_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\FAMILY\FAMILY_FEMAL_INFERTILITY.resx">
+      <DependentUpon>FAMILY_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\HIRSUTISM\HIRUTISM_FEMAL_INFERTILITY.resx">
+      <DependentUpon>HIRUTISM_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\IUI OR ICSI\ICSI_FEMAL_INFERTILITY.resx">
+      <DependentUpon>ICSI_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\MEDICAL\MEDICAL_FEMAL_INFERTILITY.resx">
+      <DependentUpon>MEDICAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\MENSTRUAL\MENSTRUAL_FEMAL_INFERTILITY.resx">
+      <DependentUpon>MENSTRUAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\OBSTETRIC\OBSTETRIC_FEMAL_INFERTILITY.resx">
+      <DependentUpon>OBSTETRIC_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\SURGICAL\SURGICAL_FEMAL_INFERTILITY.resx">
+      <DependentUpon>SURGICAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\VAGINAL\VAGINAL_FEMAL_INFERTILITY.resx">
+      <DependentUpon>VAGINAL_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\FEMALE FACTORY\WEIGHT GAIN\WEIGHT_GAIN_FEMAL_INFERTILITY.resx">
+      <DependentUpon>WEIGHT_GAIN_FEMAL_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\have_baby.resx">
+      <DependentUpon>have_baby.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\INVESTIGATIONS\TEST_FRM_INFERTILITY.resx">
+      <DependentUpon>TEST_FRM_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\MEDICAL\MEDICAL_MALE_INFERTILITY.resx">
+      <DependentUpon>MEDICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SCROTAL DOPPLER\SCROTAL_DOPPLER_MALE_INFERTILITY.resx">
+      <DependentUpon>SCROTAL_DOPPLER_MALE_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SEMAN ANALYSIS\SEMAN_ANALYSIS_INFERILTY.resx">
+      <DependentUpon>SEMAN_ANALYSIS_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\MALE FACTORY\SURGICAL\SURGICAL_MALE_INFERTILITY.resx">
+      <DependentUpon>SURGICAL_MALE_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PERSONAL HISTORY\HISTORY_ENGAB.resx">
+      <DependentUpon>HISTORY_ENGAB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PLAN\PLAN_FRM_INFERTILITY.resx">
+      <DependentUpon>PLAN_FRM_INFERTILITY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\4D\E4D_INFERILTY.resx">
+      <DependentUpon>E4D_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\HSG\HSG_INFERILTY.resx">
+      <DependentUpon>HSG_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\HYSTROSCOPY\HYSTROSCOPY_INFERILTY.resx">
+      <DependentUpon>HYSTROSCOPY_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\PROCEDURES\LAPAROSCOPY\LAPAROSCOPY_INFERILTY.resx">
+      <DependentUpon>LAPAROSCOPY_INFERILTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\REPORTING\REP_ENGAB_CLOSE.resx">
+      <DependentUpon>REP_ENGAB_CLOSE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأخر الأنجاب\SEARCH_ENGABFRM.resx">
+      <DependentUpon>SEARCH_ENGABFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة تحاليل\REOSHTA_T_REP.resx">
+      <DependentUpon>REOSHTA_T_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة تحاليل\ROSHTA_T_CRS2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ROSHTA_T_CRS2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة تحاليل\SEARCH_THLEL_R2.resx">
+      <DependentUpon>SEARCH_THLEL_R2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة تحاليل\SEARCH_THLEL_R.resx">
+      <DependentUpon>SEARCH_THLEL_R.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة تحاليل\THLEL_FRM_ROSHTA.resx">
+      <DependentUpon>THLEL_FRM_ROSHTA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة علاج\ELAG_FRM.resx">
+      <DependentUpon>ELAG_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة علاج\REOSHTA_ELAG_REP.resx">
+      <DependentUpon>REOSHTA_ELAG_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة علاج\ROSHTA_ELAG_CRS2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ROSHTA_ELAG_CRS2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة علاج\ROSHTA_ELAG_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ROSHTA_ELAG_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة علاج\SEARCH_R_DOCTOR2.resx">
+      <DependentUpon>SEARCH_R_DOCTOR2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="روشتة علاج\SEARCH_R_DOCTOR.resx">
+      <DependentUpon>SEARCH_R_DOCTOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\صرف نقدية\SARF_MASRUF_FRM.resx">
+      <DependentUpon>SARF_MASRUF_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\صرف نقدية\SEARCH_MASROUF2.resx">
+      <DependentUpon>SEARCH_MASROUF2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الحسابات\صرف نقدية\SEARCH_MASROUF.resx">
+      <DependentUpon>SEARCH_MASROUF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLLOWUPFRM.resx">
+      <DependentUpon>FOLLOWUPFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\FETALDOPPLAR\FETAL_DOPLAR_FRM.resx">
+      <DependentUpon>FETAL_DOPLAR_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\d4\D4.resx">
+      <DependentUpon>D4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\FOLOWUPREP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FOLOWUPREP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\NEWBABYFRMvb.resx">
+      <DependentUpon>NEWBABYFRMvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\OBSTETRIC_HISTORY\OBSTETRIC_HISTORY_FRM.resx">
+      <DependentUpon>OBSTETRIC_HISTORY_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\ND2\ND2_FRM.resx">
+      <DependentUpon>ND2_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\RD3\RD3_FRM.resx">
+      <DependentUpon>RD3_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\REPORTING\REP_FOLOWUP_CLOSE.resx">
+      <DependentUpon>REP_FOLOWUP_CLOSE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\SEARCH_FOLOWUP_FRM.resx">
+      <DependentUpon>SEARCH_FOLOWUP_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\FOLOW UP\ST1\ST1_FRM.resx">
+      <DependentUpon>ST1_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\PERSONAL HISTORY\PERSONAL_HISTORY_FRM.resx">
+      <DependentUpon>PERSONAL_HISTORY_FRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عيادة النساء\شكوى النساء\womencliniccomplinfrm.resx">
+      <DependentUpon>womencliniccomplinfrm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DOCTOR CLINIC.ruleset" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="الحجز و الزيارة\DATAS.xsc">
+      <DependentUpon>DATAS.xsd</DependentUpon>
+    </None>
+    <None Include="الحجز و الزيارة\DATAS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATAS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحجز و الزيارة\DATAS.xss">
+      <DependentUpon>DATAS.xsd</DependentUpon>
+    </None>
+    <None Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DATASET.xsc">
+      <DependentUpon>ADD_MONY_DATASET.xsd</DependentUpon>
+    </None>
+    <None Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DATASET.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ADD_MONY_DATASET.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحسابات\استلام نقدية\نقدية عيادة\ADD_MONY_DATASET.xss">
+      <DependentUpon>ADD_MONY_DATASET.xsd</DependentUpon>
+    </None>
+    <None Include="الحسابات\استلام نقدية\نقدية معمل\DATA_MAML_ADD_MONY.xsc">
+      <DependentUpon>DATA_MAML_ADD_MONY.xsd</DependentUpon>
+    </None>
+    <None Include="الحسابات\استلام نقدية\نقدية معمل\DATA_MAML_ADD_MONY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATA_MAML_ADD_MONY.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الحسابات\استلام نقدية\نقدية معمل\DATA_MAML_ADD_MONY.xss">
+      <DependentUpon>DATA_MAML_ADD_MONY.xsd</DependentUpon>
+    </None>
+    <None Include="الأطباء\DOCTORSDATA.xsc">
+      <DependentUpon>DOCTORSDATA.xsd</DependentUpon>
+    </None>
+    <None Include="الأطباء\DOCTORSDATA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DOCTORSDATA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="الأطباء\DOCTORSDATA.xss">
+      <DependentUpon>DOCTORSDATA.xsd</DependentUpon>
+    </None>
+    <None Include="التحاليل\THALELPRICEDATA.xsc">
+      <DependentUpon>THALELPRICEDATA.xsd</DependentUpon>
+    </None>
+    <None Include="التحاليل\THALELPRICEDATA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THALELPRICEDATA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="التحاليل\THALELPRICEDATA.xss">
+      <DependentUpon>THALELPRICEDATA.xsd</DependentUpon>
+    </None>
+    <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xsc">
+      <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>T3AKOD_DATA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xss">
+      <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="المرضي\PATIENTDATA.xsc">
+      <DependentUpon>PATIENTDATA.xsd</DependentUpon>
+    </None>
+    <None Include="المرضي\PATIENTDATA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PATIENTDATA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="المرضي\PATIENTDATA.xss">
+      <DependentUpon>PATIENTDATA.xsd</DependentUpon>
+    </None>
+    <None Include="المرضي\الملف الطبي للمريض\HISTORY_REP_DATA.xsc">
+      <DependentUpon>HISTORY_REP_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="المرضي\الملف الطبي للمريض\HISTORY_REP_DATA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HISTORY_REP_DATA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="المرضي\الملف الطبي للمريض\HISTORY_REP_DATA.xss">
+      <DependentUpon>HISTORY_REP_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="تأخر الأنجاب\engabdata.xsc">
+      <DependentUpon>engabdata.xsd</DependentUpon>
+    </None>
+    <None Include="تأخر الأنجاب\engabdata.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>engabdata.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="تأخر الأنجاب\engabdata.xss">
+      <DependentUpon>engabdata.xsd</DependentUpon>
+    </None>
+    <None Include="روشتة تحاليل\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="روشتة تحاليل\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="روشتة تحاليل\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="روشتة علاج\ROSHTA_ELAG_DATA.xsc">
+      <DependentUpon>ROSHTA_ELAG_DATA.xsd</DependentUpon>
+    </None>
+    <None Include="روشتة علاج\ROSHTA_ELAG_DATA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ROSHTA_ELAG_DATA.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="روشتة علاج\ROSHTA_ELAG_DATA.xss">
+      <DependentUpon>ROSHTA_ELAG_DATA.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_2016-10_Best-Docs_Jordan_Priya_G.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient_reported_outcomes_measures.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctors_Pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\640x480.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_security__key__lock__protect_2537334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_currency_exchange_3383436.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="67520_doctor.ico" />
+    <None Include="Resources\icons8-control-panel-48.png" />
+    <None Include="Resources\icons8-credit-card-48.png" />
+    <None Include="Resources\icons8-fetus-42.png" />
+    <None Include="Resources\about.jpg" />
+    <None Include="Resources\iconfinder_whatsapp_986960.png" />
+    <None Include="Resources\icons8-palm-scan-40.png" />
+    <None Include="Resources\icons8-palm-scan-144.png" />
+    <None Include="Resources\icons8-uterus-40.png" />
+    <None Include="Resources\icons8-strategy-48.png" />
+    <None Include="Resources\icons8-x-ray-39.png" />
+    <None Include="Resources\icons8-reproduction-30.png" />
+    <None Include="Resources\icons8-medical-bag-42.png" />
+    <None Include="Resources\icons8-order-history-42.png" />
+    <None Include="Resources\icons8-test-tube-48.png" />
+    <None Include="Resources\karma logo-02.png" />
+    <None Include="Resources\icons8-baby-64.png" />
+    <None Include="Resources\icons8-3-32.png" />
+    <None Include="Resources\icons8-2-50.png" />
+    <None Include="Resources\icons8-2-32.png" />
+    <None Include="Resources\icons8-level-1-32.png" />
+    <None Include="Resources\iconfinder_business-work_2_2377644.png" />
+    <None Include="Resources\iconfinder_blood-test-laboratory-lab-virus_5986182.png" />
+    <None Include="Resources\iconfinder_Corona_Virus_Research_lap_microscope_research_test_virus_corona_5959974.png" />
+    <None Include="Resources\iconfinder_Microscope-lab-laboratory-scientific-biology-science-roscopes_5875829.png" />
+    <None Include="Resources\iconfinder_phone_call__text__sms_dial__2992207 %281%29.png" />
+    <None Include="Resources\iconfinder_phone_call__text__sms_dial__2992207.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="التعاقدات\تقرير مطالبة\" />
+    <Folder Include="التعاقدات\نقدية مطالبة\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,7 +1,5 @@
 ﻿Public Class ADD_MONY_DOCTOR
     Dim ARABIC As New ClassConvertNO
-
-
     Sub SHOW_DETA(CODE_)
         DataGridView1.Rows.Clear()
         '=========== ربط رأس الفاتورة =============
@@ -76,10 +74,10 @@
 
         NEWBTN_Click(sender, e)
 
-            TXT_DATE.Text = ZIARA2020.TXT_DATE.Text
-            PA_CODE.Text = ZIARA2020.TXT_PA_CODE_H.Text
-            TA_CODE_TKHASOS.Text = ZIARA2020.TXT_TKHASOS_CODE.Text
-            CODE_DOCTOR.Text = ZIARA2020.TXT_DOCTOR_CODE.Text
+        TXT_DATE.Text = ZIARA2020.TXT_DATE.Text
+        PA_CODE.Text = ZIARA2020.TXT_PA_CODE_H.Text
+        TA_CODE_TKHASOS.Text = ZIARA2020.TXT_TKHASOS_CODE.Text
+        CODE_DOCTOR.Text = ZIARA2020.TXT_DOCTOR_CODE.Text
 
         'Else
         '    NEWBTN_Click(sender, e)
@@ -400,6 +398,17 @@
         If DT0.Rows.Count > 0 Then
             If DT0.Rows(0).Item("M1").ToString = True Then
                 CALC()
+
+                TXT_BAKY.Text = Val(SAFY.Text) - Val(TXT_MONY.Text)
+
+                TXT_RASED_NEW.Text = Val(TXT_BAKY.Text) + Val(TXT_RASED.Text)
+
+                If Val(TXT_MONY.Text) > 0 Then
+                    SAFY_AR.Text = ARABIC.ConvertToArabic(TXT_MONY.Text)
+                Else
+                    SAFY_AR.Text = ""
+                End If
+
                 '========= قيود الادخال =======================
                 If PA_NAME.Text = "" Then
                     MessageBox.Show("برجاء ادخال اسم المريض", "رسالة تنبية", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1018,17 +1027,17 @@
                 Dim DT As New DataTable
                 Dim DA As New SqlClient.SqlDataAdapter("SELECT * FROM SEARCH_ADD_MONY_DOCTOR_V WHERE ADD_CODE = '" & TXT_CODE.Text & "'", SqlConn)
                 DA.Fill(DT)
-                    Dim REP As New ADD_MONY_REP
+                Dim REP As New ADD_MONY_REP
                 REP.SetDataSource(DT)
                 REP.SetParameterValue(0, TXT_RASED.Text)
                 REP.SetParameterValue(1, TXT_MONY.Text)
                 REP.SetParameterValue(2, TXT_RASED_NEW.Text)
                 Dim FRM As New ADD_MONY_CRS
-                    FRM.CrystalReportViewer1.ReportSource = REP
-                    FRM.ShowDialog()
+                FRM.CrystalReportViewer1.ReportSource = REP
+                FRM.ShowDialog()
 
-                    '=============================================================
-                    Else
+                '=============================================================
+            Else
                 MessageBox.Show("عفوا ليس لديك صلاحية للطباعة برجاء مراجعة الأدارة", "رسالة تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             End If

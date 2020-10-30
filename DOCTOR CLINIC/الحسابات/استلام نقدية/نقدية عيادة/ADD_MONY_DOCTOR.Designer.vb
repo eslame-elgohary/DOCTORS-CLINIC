@@ -60,6 +60,16 @@ Partial Class ADD_MONY_DOCTOR
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TXT_ADD = New System.Windows.Forms.TextBox()
+        Me.TXT_ALL = New System.Windows.Forms.TextBox()
+        Me.TXT_RASED_NEW = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TXT_BAKY = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TXT_MONY = New System.Windows.Forms.TextBox()
+        Me.TXT_RASED = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TXT_TYPEMONY = New System.Windows.Forms.ComboBox()
         Me.TXT_M = New System.Windows.Forms.TextBox()
@@ -94,16 +104,6 @@ Partial Class ADD_MONY_DOCTOR
         Me.DATE_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TIME_EDIT = New System.Windows.Forms.ToolStripStatusLabel()
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.TXT_RASED = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TXT_BAKY = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TXT_MONY = New System.Windows.Forms.TextBox()
-        Me.TXT_RASED_NEW = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.TXT_ADD = New System.Windows.Forms.TextBox()
-        Me.TXT_ALL = New System.Windows.Forms.TextBox()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -538,6 +538,103 @@ Partial Class ADD_MONY_DOCTOR
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         '
+        'TXT_ADD
+        '
+        Me.TXT_ADD.BackColor = System.Drawing.Color.White
+        Me.TXT_ADD.Enabled = False
+        Me.TXT_ADD.Location = New System.Drawing.Point(729, 105)
+        Me.TXT_ADD.Name = "TXT_ADD"
+        Me.TXT_ADD.Size = New System.Drawing.Size(42, 29)
+        Me.TXT_ADD.TabIndex = 71
+        Me.TXT_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ADD.Visible = False
+        '
+        'TXT_ALL
+        '
+        Me.TXT_ALL.BackColor = System.Drawing.Color.White
+        Me.TXT_ALL.Enabled = False
+        Me.TXT_ALL.Location = New System.Drawing.Point(726, 140)
+        Me.TXT_ALL.Name = "TXT_ALL"
+        Me.TXT_ALL.Size = New System.Drawing.Size(42, 29)
+        Me.TXT_ALL.TabIndex = 70
+        Me.TXT_ALL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_ALL.Visible = False
+        '
+        'TXT_RASED_NEW
+        '
+        Me.TXT_RASED_NEW.BackColor = System.Drawing.Color.White
+        Me.TXT_RASED_NEW.Enabled = False
+        Me.TXT_RASED_NEW.Location = New System.Drawing.Point(6, 244)
+        Me.TXT_RASED_NEW.Name = "TXT_RASED_NEW"
+        Me.TXT_RASED_NEW.Size = New System.Drawing.Size(135, 29)
+        Me.TXT_RASED_NEW.TabIndex = 68
+        Me.TXT_RASED_NEW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(145, 247)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(106, 21)
+        Me.Label20.TabIndex = 69
+        Me.Label20.Text = "الرصيد الحالي :"
+        '
+        'TXT_BAKY
+        '
+        Me.TXT_BAKY.BackColor = System.Drawing.Color.White
+        Me.TXT_BAKY.Enabled = False
+        Me.TXT_BAKY.Location = New System.Drawing.Point(260, 245)
+        Me.TXT_BAKY.Name = "TXT_BAKY"
+        Me.TXT_BAKY.Size = New System.Drawing.Size(90, 29)
+        Me.TXT_BAKY.TabIndex = 66
+        Me.TXT_BAKY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(354, 248)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 21)
+        Me.Label9.TabIndex = 67
+        Me.Label9.Text = "المتبقي :"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(514, 248)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(69, 21)
+        Me.Label10.TabIndex = 65
+        Me.Label10.Text = "المدفوع :"
+        '
+        'TXT_MONY
+        '
+        Me.TXT_MONY.BackColor = System.Drawing.Color.Aqua
+        Me.TXT_MONY.Location = New System.Drawing.Point(424, 245)
+        Me.TXT_MONY.Name = "TXT_MONY"
+        Me.TXT_MONY.Size = New System.Drawing.Size(85, 29)
+        Me.TXT_MONY.TabIndex = 64
+        Me.TXT_MONY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TXT_RASED
+        '
+        Me.TXT_RASED.BackColor = System.Drawing.Color.White
+        Me.TXT_RASED.Enabled = False
+        Me.TXT_RASED.Location = New System.Drawing.Point(591, 244)
+        Me.TXT_RASED.Name = "TXT_RASED"
+        Me.TXT_RASED.Size = New System.Drawing.Size(132, 29)
+        Me.TXT_RASED.TabIndex = 61
+        Me.TXT_RASED.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(729, 248)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 21)
+        Me.Label8.TabIndex = 62
+        Me.Label8.Text = "رصيد سابق :"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -813,103 +910,6 @@ Partial Class ADD_MONY_DOCTOR
         'PATIENTTableAdapter
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
-        '
-        'TXT_RASED
-        '
-        Me.TXT_RASED.BackColor = System.Drawing.Color.White
-        Me.TXT_RASED.Enabled = False
-        Me.TXT_RASED.Location = New System.Drawing.Point(591, 244)
-        Me.TXT_RASED.Name = "TXT_RASED"
-        Me.TXT_RASED.Size = New System.Drawing.Size(132, 29)
-        Me.TXT_RASED.TabIndex = 61
-        Me.TXT_RASED.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(729, 248)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(91, 21)
-        Me.Label8.TabIndex = 62
-        Me.Label8.Text = "رصيد سابق :"
-        '
-        'TXT_BAKY
-        '
-        Me.TXT_BAKY.BackColor = System.Drawing.Color.White
-        Me.TXT_BAKY.Enabled = False
-        Me.TXT_BAKY.Location = New System.Drawing.Point(260, 245)
-        Me.TXT_BAKY.Name = "TXT_BAKY"
-        Me.TXT_BAKY.Size = New System.Drawing.Size(90, 29)
-        Me.TXT_BAKY.TabIndex = 66
-        Me.TXT_BAKY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(354, 248)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(67, 21)
-        Me.Label9.TabIndex = 67
-        Me.Label9.Text = "المتبقي :"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(514, 248)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(69, 21)
-        Me.Label10.TabIndex = 65
-        Me.Label10.Text = "المدفوع :"
-        '
-        'TXT_MONY
-        '
-        Me.TXT_MONY.BackColor = System.Drawing.Color.Aqua
-        Me.TXT_MONY.Location = New System.Drawing.Point(424, 245)
-        Me.TXT_MONY.Name = "TXT_MONY"
-        Me.TXT_MONY.Size = New System.Drawing.Size(85, 29)
-        Me.TXT_MONY.TabIndex = 64
-        Me.TXT_MONY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TXT_RASED_NEW
-        '
-        Me.TXT_RASED_NEW.BackColor = System.Drawing.Color.White
-        Me.TXT_RASED_NEW.Enabled = False
-        Me.TXT_RASED_NEW.Location = New System.Drawing.Point(6, 244)
-        Me.TXT_RASED_NEW.Name = "TXT_RASED_NEW"
-        Me.TXT_RASED_NEW.Size = New System.Drawing.Size(135, 29)
-        Me.TXT_RASED_NEW.TabIndex = 68
-        Me.TXT_RASED_NEW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(145, 247)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(106, 21)
-        Me.Label20.TabIndex = 69
-        Me.Label20.Text = "الرصيد الحالي :"
-        '
-        'TXT_ADD
-        '
-        Me.TXT_ADD.BackColor = System.Drawing.Color.White
-        Me.TXT_ADD.Enabled = False
-        Me.TXT_ADD.Location = New System.Drawing.Point(729, 105)
-        Me.TXT_ADD.Name = "TXT_ADD"
-        Me.TXT_ADD.Size = New System.Drawing.Size(42, 29)
-        Me.TXT_ADD.TabIndex = 71
-        Me.TXT_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TXT_ADD.Visible = False
-        '
-        'TXT_ALL
-        '
-        Me.TXT_ALL.BackColor = System.Drawing.Color.White
-        Me.TXT_ALL.Enabled = False
-        Me.TXT_ALL.Location = New System.Drawing.Point(726, 140)
-        Me.TXT_ALL.Name = "TXT_ALL"
-        Me.TXT_ALL.Size = New System.Drawing.Size(42, 29)
-        Me.TXT_ALL.TabIndex = 70
-        Me.TXT_ALL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TXT_ALL.Visible = False
         '
         'ADD_MONY_DOCTOR
         '

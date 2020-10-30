@@ -97,9 +97,7 @@
         Me.DataGridView1.DataSource = tb
         DataGridView1.Refresh()
     End Sub
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
 
-    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim cmd As New SqlClient.SqlCommand()

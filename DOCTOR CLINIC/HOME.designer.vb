@@ -126,7 +126,6 @@ Partial Class HOME
         Me.تقريربالمطالبةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
@@ -135,7 +134,6 @@ Partial Class HOME
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.STB_SALSE = New System.Windows.Forms.ToolStripButton()
-        Me.STB_RESALSE = New System.Windows.Forms.ToolStripButton()
         Me.BT_ADDTHLEL_PATION = New System.Windows.Forms.ToolStripButton()
         Me.BTN_ADD_MONY_DOCT = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
@@ -740,7 +738,7 @@ Partial Class HOME
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FloralWhite
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.ToolStripMenuItem4, Me.التقاريرToolStripMenuItem, Me.ToolStripMenuItem5, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.التعاقداتToolStripMenuItem, Me.ToolStripMenuItem3})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.التكويداتToolStripMenuItem, Me.زيارةToolStripMenuItem, Me.المبيعاتToolStripMenuItem, Me.المعملToolStripMenuItem, Me.الحساباتToolStripMenuItem, Me.التعاقداتToolStripMenuItem, Me.ToolStripMenuItem4, Me.التقاريرToolStripMenuItem, Me.ToolStripMenuItem5, Me.الاعداداتToolStripMenuItem, Me.ToolStripMenuItem1, Me.BT_EXIT, Me.ToolStripMenuItem3})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1350, 24)
@@ -817,7 +815,6 @@ Partial Class HOME
         Me.التعاقداتToolStripMenuItem.Name = "التعاقداتToolStripMenuItem"
         Me.التعاقداتToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.التعاقداتToolStripMenuItem.Text = "التعاقدات"
-        Me.التعاقداتToolStripMenuItem.Visible = False
         '
         'BTN_ADD_T3AKODAT
         '
@@ -848,12 +845,6 @@ Partial Class HOME
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 55)
-        Me.ToolStripSeparator4.Visible = False
         '
         'ToolStripSeparator6
         '
@@ -890,7 +881,7 @@ Partial Class HOME
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.BackColor = System.Drawing.Color.LightBlue
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.STB_RESALSE, Me.ToolStripSeparator4, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.inter_control, Me.ToolStripSeparator9, Me.BT_SMS, Me.ToolStripSeparator5, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STB_SALSE, Me.ToolStripSeparator1, Me.BT_ADDTHLEL_PATION, Me.ToolStripSeparator6, Me.BTN_ADD_MONY_DOCT, Me.ToolStripSeparator8, Me.ToolStripButton2, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.BTL_CONVERTKHAZINA, Me.ToolStripSeparator2, Me.inter_control, Me.ToolStripSeparator9, Me.BT_SMS, Me.ToolStripSeparator5, Me.STB_EXIT, Me.ToolStripSeparator3, Me.BT_JOGOUT})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 49)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1350, 55)
@@ -905,16 +896,6 @@ Partial Class HOME
         Me.STB_SALSE.Name = "STB_SALSE"
         Me.STB_SALSE.Size = New System.Drawing.Size(104, 52)
         Me.STB_SALSE.Text = "الحجوزات"
-        '
-        'STB_RESALSE
-        '
-        Me.STB_RESALSE.Image = Global.DOCTOR_CLINIC.My.Resources.Resources.iconfinder_Dental___Tooth___Dentist___Dentistry_04_2185086
-        Me.STB_RESALSE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.STB_RESALSE.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.STB_RESALSE.Name = "STB_RESALSE"
-        Me.STB_RESALSE.Size = New System.Drawing.Size(123, 52)
-        Me.STB_RESALSE.Text = "عيادة الأسنان"
-        Me.STB_RESALSE.Visible = False
         '
         'BT_ADDTHLEL_PATION
         '
@@ -951,13 +932,11 @@ Partial Class HOME
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(155, 52)
         Me.ToolStripButton1.Text = "أيصال عيادات تعاقد"
-        Me.ToolStripButton1.Visible = False
         '
         'ToolStripSeparator10
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 55)
-        Me.ToolStripSeparator10.Visible = False
         '
         'BTL_CONVERTKHAZINA
         '
@@ -1133,8 +1112,6 @@ Partial Class HOME
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents STB_SALSE As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents STB_RESALSE As ToolStripButton
-    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents BT_ADDTHLEL_PATION As ToolStripButton
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ToolStripButton2 As ToolStripButton

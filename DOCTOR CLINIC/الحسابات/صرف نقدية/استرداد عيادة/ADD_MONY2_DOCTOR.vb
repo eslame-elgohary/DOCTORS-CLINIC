@@ -508,11 +508,6 @@
                     DA2.Update(DT)
                 End If
 
-                '===================================== حذف من حساب المريض ======================================
-                Dim CMD_DEL3 As New SqlClient.SqlCommand
-                CMD_DEL3.Connection = SqlConn
-                CMD_DEL3.CommandText = "DELETE FROM PATION_MONY_DT WHERE ADD_CODE ='" & TXT_CODE.Text & "'AND ADD_CODE2 = '10'"
-                CMD_DEL3.ExecuteNonQuery()
                 '==================================التخزين فى حساب المريض ========================================
                 Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM PATION_MONY_DT", SqlConn)
                 DA3.Fill(DT)
@@ -1000,36 +995,26 @@
                         DataGridView1.Rows(I).Cells(3).Value = DT10.Rows(I).Item("PRICE_DOCE")
                         DataGridView1.Rows(I).Cells(1).Value = DT10.Rows(I).Item("MID")
                     Next
-
-                    TIMEREDIT.Enabled = True
-                    TIMERADD.Enabled = False
                     CALC()
 
-
                     '===================== اجمالى الفواتير ==========================================
-                    Try
-                        Dim sql As String = "SELECT coalesce(sum(SAFY_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+
+                    Dim sql As String = "SELECT coalesce(sum(SAFY_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
                         Dim cmd As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql, SqlConn)
                         Dim da1 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd)
                         Dim dt1 As DataTable = New DataTable
                         da1.Fill(dt1)
                         TXT_ALL.Text = dt1.Rows(0)(0).ToString
-                    Catch ex As Exception
-                        MsgBox(ex.Message)
-                        SqlConn.Close()
-                    End Try
+
                     '===================== اجمالى الدفعات ========================================
-                    Try
-                        Dim sql1 As String = "SELECT coalesce(sum(ADD_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
+
+                    Dim sql1 As String = "SELECT coalesce(sum(ADD_MAML), 0) FROM PATIENT_RASED_VIWE WHERE PA_NAME='" & PA_NAME.Text & "'"
                         Dim cmd1 As SqlClient.SqlCommand = New SqlClient.SqlCommand(sql1, SqlConn)
                         Dim da11 As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter(cmd1)
                         Dim dt11 As DataTable = New DataTable
                         da11.Fill(dt11)
                         TXT_ADD.Text = dt11.Rows(0)(0).ToString
-                    Catch ex As Exception
-                        MsgBox(ex.Message)
-                        SqlConn.Close()
-                    End Try
+
                     '===========================================================
 
 
@@ -1051,6 +1036,12 @@
                     TXT_BAKY.Text = Val(SAFY.Text) - Val(TXT_MONY.Text)
 
                     TXT_RASED_NEW.Text = Val(TXT_RASED.Text) + Val(TXT_BAKY.Text)
+
+
+
+                    TIMEREDIT.Enabled = True
+                    TIMERADD.Enabled = False
+
                 End If
 
             Catch ex As Exception

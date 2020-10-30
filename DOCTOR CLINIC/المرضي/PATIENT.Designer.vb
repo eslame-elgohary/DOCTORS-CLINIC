@@ -34,6 +34,8 @@ Partial Class PATIENT
         Me.SAVEBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.NEWBTN = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TXT_KARMA = New System.Windows.Forms.TextBox()
+        Me.DONT_TRUE = New System.Windows.Forms.CheckBox()
         Me.PA_NAME = New System.Windows.Forms.ComboBox()
         Me.PATION_BINDING = New System.Windows.Forms.BindingSource(Me.components)
         Me.PATIENTDATA = New DOCTOR_CLINIC.PATIENTDATA()
@@ -73,8 +75,7 @@ Partial Class PATIENT
         Me.TIMERADD = New System.Windows.Forms.Timer(Me.components)
         Me.TIMEREDIT = New System.Windows.Forms.Timer(Me.components)
         Me.PATIENTTableAdapter = New DOCTOR_CLINIC.PATIENTDATATableAdapters.PATIENTTableAdapter()
-        Me.DONT_TRUE = New System.Windows.Forms.CheckBox()
-        Me.TXT_KARMA = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GRBTN.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PATION_BINDING, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,6 +201,7 @@ Partial Class PATIENT
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.TXT_KARMA)
         Me.GroupBox1.Controls.Add(Me.DONT_TRUE)
         Me.GroupBox1.Controls.Add(Me.PA_NAME)
@@ -226,6 +228,27 @@ Partial Class PATIENT
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "بيانات المرضي"
+        '
+        'TXT_KARMA
+        '
+        Me.TXT_KARMA.Location = New System.Drawing.Point(543, 252)
+        Me.TXT_KARMA.Name = "TXT_KARMA"
+        Me.TXT_KARMA.Size = New System.Drawing.Size(139, 29)
+        Me.TXT_KARMA.TabIndex = 28
+        Me.TXT_KARMA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TXT_KARMA.Visible = False
+        '
+        'DONT_TRUE
+        '
+        Me.DONT_TRUE.AutoSize = True
+        Me.DONT_TRUE.ForeColor = System.Drawing.Color.Red
+        Me.DONT_TRUE.Location = New System.Drawing.Point(510, 252)
+        Me.DONT_TRUE.Name = "DONT_TRUE"
+        Me.DONT_TRUE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.DONT_TRUE.Size = New System.Drawing.Size(264, 25)
+        Me.DONT_TRUE.TabIndex = 27
+        Me.DONT_TRUE.Text = "الغاء التعامل مع هذا المريض بسبب :"
+        Me.DONT_TRUE.UseVisualStyleBackColor = True
         '
         'PA_NAME
         '
@@ -549,26 +572,14 @@ Partial Class PATIENT
         '
         Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
-        'DONT_TRUE
+        'TextBox1
         '
-        Me.DONT_TRUE.AutoSize = True
-        Me.DONT_TRUE.ForeColor = System.Drawing.Color.Red
-        Me.DONT_TRUE.Location = New System.Drawing.Point(510, 252)
-        Me.DONT_TRUE.Name = "DONT_TRUE"
-        Me.DONT_TRUE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.DONT_TRUE.Size = New System.Drawing.Size(214, 25)
-        Me.DONT_TRUE.TabIndex = 27
-        Me.DONT_TRUE.Text = "الغاء التعامل مع هذا المريض"
-        Me.DONT_TRUE.UseVisualStyleBackColor = True
-        '
-        'TXT_KARMA
-        '
-        Me.TXT_KARMA.Location = New System.Drawing.Point(365, 252)
-        Me.TXT_KARMA.Name = "TXT_KARMA"
-        Me.TXT_KARMA.Size = New System.Drawing.Size(139, 29)
-        Me.TXT_KARMA.TabIndex = 28
-        Me.TXT_KARMA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TXT_KARMA.Visible = False
+        Me.TextBox1.Location = New System.Drawing.Point(64, 252)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(440, 29)
+        Me.TextBox1.TabIndex = 29
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextBox1.Visible = False
         '
         'PATIENT
         '
@@ -656,4 +667,5 @@ Partial Class PATIENT
     Friend WithEvents PA_CODE2 As TextBox
     Friend WithEvents DONT_TRUE As CheckBox
     Friend WithEvents TXT_KARMA As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

@@ -612,6 +612,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
         '====================== DATAGRIDVIEW ================
         Dim ESO As String
+
         ESO = " SELECT        dbo.PATIENT.PA_NAME, dbo.PATIENT.PA_TEL, dbo.PATIENT.PA_CODE2, dbo.HAGEZ.ACTION, dbo.HAGEZ.DATE_HAGEZ, dbo.HAGEZ.DOCTORS_CODE, dbo.HAGEZ.TKHASOS_CODE, dbo.HAGEZ.ID, dbo.HAGEZ.ADRRES, 
                                  dbo.HAGEZ.CODE_HAGEZ, dbo.HAGEZ.STAT_COLORE, dbo.HAGEZ.INFO_STAT, dbo.HAGEZ.PA_CODE 
         FROM            dbo.PATIENT INNER JOIN
@@ -626,8 +627,11 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
                     r.Cells.Item(1).Style.BackColor = P_M.BackColor
                 Case "2" ' تم الكشف
                     r.DefaultCellStyle.BackColor = P_END.BackColor
-                Case "3" 'مجانا 
+                'Case "3" 'مجانا 
+                '    r.DefaultCellStyle.BackColor = P_FREE.BackColor
+                Case "7" 'تعاقدات
                     r.DefaultCellStyle.BackColor = P_FREE.BackColor
+                    r.DefaultCellStyle.ForeColor = Color.White
                 Case "4" ' المريض طلب التأجيل
                     r.DefaultCellStyle.BackColor = P_TAGEL.BackColor
                 Case "5" ' الألغاء
@@ -755,6 +759,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
     Private Sub REFRESH_BTN_P3_Click(sender As Object, e As EventArgs) Handles REFRESH_BTN_P3.Click
         Dim KARMA As String
+        Dim KARMA2 As String
         'KARMA = "SELECT        TOP (100) PERCENT TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, COUNT(ACTION) AS COUNT_ACTION, ACTION, STAT_COLORE
         'FROM            dbo.HAGEZ
         'GROUP BY TKHASOS_CODE, DOCTORS_CODE, DATE_HAGEZ, ACTION, STAT_COLORE
@@ -771,7 +776,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
 
 
-        KARMA = "SELECT        dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) AS count_action, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.HAGEZ.DOCTORS_CODE, 
+        KARMA = "SELECT  dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) AS count_action, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.HAGEZ.DOCTORS_CODE, 
                                          dbo.ADD_MONY_DOCTOR.ADD_STAT
                 FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
                                          dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE INNER JOIN
@@ -782,6 +787,20 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
 
         FILL_DGV(DG2, KARMA)
+
+        KARMA2 = "SELECT dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) AS count_action, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.HAGEZ.DOCTORS_CODE, 
+                                         dbo.ADD_MONY_DOCTOR.ADD_STAT
+                FROM            dbo.ADD_MONY_DOCTOR INNER JOIN
+                                         dbo.ADD_MONY_DT_DOCTOR ON dbo.ADD_MONY_DOCTOR.ADD_CODE = dbo.ADD_MONY_DT_DOCTOR.ADD_CODE AND dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.ADD_MONY_DT_DOCTOR.ADD_DATE INNER JOIN
+                                         dbo.HAGEZ ON dbo.ADD_MONY_DOCTOR.ADD_DATE = dbo.HAGEZ.DATE_HAGEZ AND dbo.ADD_MONY_DOCTOR.ADD_DOCTOR_CODE = dbo.HAGEZ.DOCTORS_CODE AND 
+                                         dbo.ADD_MONY_DOCTOR.ADD_PA_CODE = dbo.HAGEZ.PA_CODE
+                GROUP BY dbo.HAGEZ.DATE_HAGEZ, dbo.ADD_MONY_DT_DOCTOR.PRICE_DOCE, dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION, dbo.HAGEZ.DOCTORS_CODE, dbo.ADD_MONY_DOCTOR.ADD_STAT
+                HAVING        (dbo.HAGEZ.DOCTORS_CODE = '" & TXT_DOCTOR_CODE.Text & "') AND (dbo.HAGEZ.DATE_HAGEZ = CONVERT(DATETIME, '" & TXT_DATE.Text & "', 102)) AND (dbo.ADD_MONY_DOCTOR.ADD_STAT='True') AND (NOT (COUNT(dbo.ADD_MONY_DT_DOCTOR.NAME_ACTION) IS NULL))"
+
+
+        FILL_DGV(DG5, KARMA2)
+
+
         Dim ES As String
         ES = "SELECT * FROM estr WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_DOCTOR_CODE = '" & TXT_DOCTOR_CODE.Text & "' AND ADD_TYPE='أسترداد عيادات' "
         FILL_DGV(DGES, ES)
@@ -804,7 +823,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
         Else
 
             '===================== التاكد من ان المريض ليس معمول له فاتورة من قبل ==========================
-            Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '2'", SqlConn)
+            Dim DA111 As New SqlClient.SqlDataAdapter("SELECT * FROM HAGEZ WHERE ID = '" & TXT_ID_H.Text & "' AND STAT_COLORE = '7'", SqlConn)
             Dim DT111 As New DataTable
             DA111.Fill(DT111)
             If DT111.Rows.Count > 0 Then
@@ -813,7 +832,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             End If
 
             If DataGridView1.SelectedRows.Count > 0 Then
-                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " مجانا ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
+                If MessageBox.Show("هل أنت متأكد أن المريض رقم " & TXT_NUM_H.Text & " تعاقد ؟", "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
 
                 'For Each r As DataGridViewRow In DataGridView1.SelectedRows
                 '    r.DefaultCellStyle.BackColor = P_FREE.BackColor
@@ -830,15 +849,12 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
 
             End If
             '   If MessageBox.Show("هل ترغب في فتح أيصال استلام النقدية للمريض رقم  " & TXT_NUM_H.Text, "رسالة تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.No Then Exit Sub
-
-
             Try
-                ROLES("M", ADD_MONY_DOCTOR)
+                ROLES("M", ADD_MONY_T3AQOD)
             Catch EX As Exception
 
             End Try
-
-
+            'ADD_MONY_T3AQOD.ShowDialog()
             REFRESH_BTN_Click(sender, e)
         End If
     End Sub
@@ -1192,12 +1208,24 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             DA1.Fill(DT1)
 
             Dim DT2 As New DataTable
-            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM estr WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_TYPE='أسترداد عيادات'", SqlConn)
+            Dim DA2 As New SqlClient.SqlDataAdapter("SELECT * FROM estr WHERE ADD_DATE='" & TXT_DATE.Text & "' AND ADD_TYPE='أسترداد عيادات' AND  ADD_STAT = 'FALSE'", SqlConn)
             DA2.Fill(DT2)
 
             Dim DT3 As New DataTable
             Dim DA3 As New SqlClient.SqlDataAdapter("SELECT * FROM MASROUF_DT_V WHERE OUT_STAT='TRUE'  AND OUT_DATE ='" & TXT_DATE.Text & "' AND OUT_TYPE='أيرادات'", SqlConn)
             DA3.Fill(DT3)
+
+            FILL_DGV(DGKHAZINA, "SELECT * FROM KHAZINA_DT WHERE KHAZINA_DATE ='" & TXT_DATE.Text & "' AND STAT_KHAZINA='TRUE'")
+
+            Dim KHAZINAINSUM_ As Double
+            Dim KHAZINAOUTSUM_ As Double
+            For I4 = 0 To DGKHAZINA.Rows.Count - 1
+                KHAZINAINSUM_ = Val(KHAZINAINSUM_) + Val(DGKHAZINA.Rows(I4).Cells(0).Value)
+                KHAZINAOUTSUM_ = Val(KHAZINAOUTSUM_) + Val(DGKHAZINA.Rows(I4).Cells(1).Value)
+            Next
+            Dim SAFYKHAZINA As Double
+
+            SAFYKHAZINA = Val(KHAZINAINSUM_) - Val(KHAZINAOUTSUM_)
 
             Dim REP1 As New MALGHE_HAGEZ4
             REP1.SetDataSource(DT)
@@ -1207,6 +1235,7 @@ WHERE DATE_HAGEZ='" & TXT_DATE.Text & "' AND DOCTORS_CODE='" & TXT_DOCTOR_CODE.T
             REP1.SetParameterValue(0, TOTAL_MAML.Text)
             REP1.SetParameterValue(1, TXT_MASROUF_RASED.Text)
             REP1.SetParameterValue(2, TXT_ERAD_RASED.Text)
+            REP1.SetParameterValue(3, SAFYKHAZINA)
 
             Dim FRM As New REPFORALL
             FRM.CrystalReportViewer1.ReportSource = REP1

@@ -15,7 +15,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP64\</PublishUrl>
+    <PublishUrl>D:\KARMA SOFT PROGRAMRS\ALKARMA\FASTER\APP67\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -28,7 +28,7 @@
     <ProductName>DOCTOR CLINIC</ProductName>
     <PublisherName>KARMA SOFT</PublisherName>
     <MinimumRequiredVersion>1.0.0.68</MinimumRequiredVersion>
-    <ApplicationRevision>65</ApplicationRevision>
+    <ApplicationRevision>68</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -117,6 +117,7 @@
     <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -216,6 +217,41 @@
     <Compile Include="الأيرادات و المصروفات\ERADAT.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="التعاقدات\جهات التعاقد\SEARCH_T3AQOD2020.Designer.vb">
+      <DependentUpon>SEARCH_T3AQOD2020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\جهات التعاقد\SEARCH_T3AQOD2020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\جهات التعاقد\T3AQOD_FRM2020.Designer.vb">
+      <DependentUpon>T3AQOD_FRM2020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\جهات التعاقد\T3AQOD_FRM2020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_MONY_DOCTOR_T3AQOD_CRS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADD_MONY_DOCTOR_T3AQOD_CRS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_MONY_T3AQOD.Designer.vb">
+      <DependentUpon>ADD_MONY_T3AQOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\ADD_MONY_T3AQOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\DATA_T3AQOD.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATA_T3AQOD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\SEARCH_ADD_MONY_DOCTOR_T3AQOD.Designer.vb">
+      <DependentUpon>SEARCH_ADD_MONY_DOCTOR_T3AQOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="التعاقدات\نقدية تعاقد\SEARCH_ADD_MONY_DOCTOR_T3AQOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="التقارير\المصروفات\ERADAT_REP.Designer.vb">
       <DependentUpon>ERADAT_REP.vb</DependentUpon>
     </Compile>
@@ -245,28 +281,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>masrouf_v.xsd</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.vb">
+    <Compile Include="التعاقداتold\تعاقد\IMGT3AQOD_CRS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IMGT3AQOD_CRS.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقد\IMGV.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقد\IMGV.Designer.vb">
       <DependentUpon>IMGV.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقد\IMGV.vb">
+    <Compile Include="التعاقداتold\تعاقد\IMGV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقد\T3AQOD.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقد\T3AQOD.Designer.vb">
       <DependentUpon>T3AQOD.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقد\T3AQOD.vb">
+    <Compile Include="التعاقداتold\تعاقد\T3AQOD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.Designer.vb">
+    <Compile Include="التعاقداتold\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.Designer.vb">
       <DependentUpon>ADD_DOCTOR_T3AQOD_MONY.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.vb">
+    <Compile Include="التعاقداتold\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="التقارير\تقرير اتعاب طبيب\ATABDOC_REP.Designer.vb">
@@ -762,42 +798,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>THALELPRICEDATA.xsd</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD2.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقدات\SEARCH_T3AKOD2.Designer.vb">
       <DependentUpon>SEARCH_T3AKOD2.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD2.vb">
+    <Compile Include="التعاقداتold\تعاقدات\SEARCH_T3AKOD2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقدات\SEARCH_T3AKOD.Designer.vb">
       <DependentUpon>SEARCH_T3AKOD.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\SEARCH_T3AKOD.vb">
+    <Compile Include="التعاقداتold\تعاقدات\SEARCH_T3AKOD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKODATFRM.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKODATFRM.Designer.vb">
       <DependentUpon>T3AKODATFRM.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKODATFRM.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKODATFRM.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKODAT_CRS.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKODAT_CRS.Designer.vb">
       <DependentUpon>T3AKODAT_CRS.vb</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKODAT_CRS.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKODAT_CRS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKODAT_REP.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKODAT_REP.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>T3AKODAT_REP.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKOD_DATA.Designer.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKOD_DATA.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
     </Compile>
-    <Compile Include="التعاقدات\تعاقدات\T3AKOD_DATA.vb">
+    <Compile Include="التعاقداتold\تعاقدات\T3AKOD_DATA.vb">
       <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
     </Compile>
     <Compile Include="التقارير\الخزينة\REP_KHAZINA.Designer.vb">
@@ -1325,18 +1361,34 @@
     <EmbeddedResource Include="الأيرادات و المصروفات\ERADAT.resx">
       <DependentUpon>ERADAT.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقد\IMGT3AQOD_CRS.rpt">
+    <EmbeddedResource Include="التعاقداتold\تعاقد\IMGT3AQOD_CRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>IMGT3AQOD_CRS.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقد\IMGV.resx">
+    <EmbeddedResource Include="التعاقداتold\تعاقد\IMGV.resx">
       <DependentUpon>IMGV.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقد\T3AQOD.resx">
+    <EmbeddedResource Include="التعاقداتold\تعاقد\T3AQOD.resx">
       <DependentUpon>T3AQOD.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.resx">
+    <EmbeddedResource Include="التعاقداتold\نقدية تعاقد\ADD_DOCTOR_T3AQOD_MONY.resx">
       <DependentUpon>ADD_DOCTOR_T3AQOD_MONY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\جهات التعاقد\SEARCH_T3AQOD2020.resx">
+      <DependentUpon>SEARCH_T3AQOD2020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\جهات التعاقد\T3AQOD_FRM2020.resx">
+      <DependentUpon>T3AQOD_FRM2020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\نقدية تعاقد\ADD_MONY_DOCTOR_T3AQOD_CRS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ADD_MONY_DOCTOR_T3AQOD_CRS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\نقدية تعاقد\ADD_MONY_T3AQOD.resx">
+      <DependentUpon>ADD_MONY_T3AQOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="التعاقدات\نقدية تعاقد\SEARCH_ADD_MONY_DOCTOR_T3AQOD.resx">
+      <DependentUpon>SEARCH_ADD_MONY_DOCTOR_T3AQOD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="التقارير\lap to lap\LABTOLABCRS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1534,19 +1586,19 @@
     <EmbeddedResource Include="التحاليل\THALELFRM.resx">
       <DependentUpon>THALELFRM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقدات\SEARCH_T3AKOD2.resx">
+    <EmbeddedResource Include="التعاقداتold\تعاقدات\SEARCH_T3AKOD2.resx">
       <DependentUpon>SEARCH_T3AKOD2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقدات\SEARCH_T3AKOD.resx">
+    <EmbeddedResource Include="التعاقداتold\تعاقدات\SEARCH_T3AKOD.resx">
       <DependentUpon>SEARCH_T3AKOD.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقدات\T3AKODATFRM.resx">
+    <EmbeddedResource Include="التعاقداتold\تعاقدات\T3AKODATFRM.resx">
       <DependentUpon>T3AKODATFRM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقدات\T3AKODAT_CRS.resx">
+    <EmbeddedResource Include="التعاقداتold\تعاقدات\T3AKODAT_CRS.resx">
       <DependentUpon>T3AKODAT_CRS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="التعاقدات\تعاقدات\T3AKODAT_REP.rpt">
+    <EmbeddedResource Include="التعاقداتold\تعاقدات\T3AKODAT_REP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>T3AKODAT_REP.vb</LastGenOutput>
     </EmbeddedResource>
@@ -1830,6 +1882,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="التعاقدات\نقدية تعاقد\DATA_T3AQOD.xsc">
+      <DependentUpon>DATA_T3AQOD.xsd</DependentUpon>
+    </None>
+    <None Include="التعاقدات\نقدية تعاقد\DATA_T3AQOD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATA_T3AQOD.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="التعاقدات\نقدية تعاقد\DATA_T3AQOD.xss">
+      <DependentUpon>DATA_T3AQOD.xsd</DependentUpon>
+    </None>
     <None Include="التقارير\المصروفات\masrouf_v.xsc">
       <DependentUpon>masrouf_v.xsd</DependentUpon>
     </None>
@@ -1940,15 +2003,15 @@
     <None Include="التحاليل\THALELPRICEDATA.xss">
       <DependentUpon>THALELPRICEDATA.xsd</DependentUpon>
     </None>
-    <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xsc">
+    <None Include="التعاقداتold\تعاقدات\T3AKOD_DATA.xsc">
       <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
     </None>
-    <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xsd">
+    <None Include="التعاقداتold\تعاقدات\T3AKOD_DATA.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>T3AKOD_DATA.Designer.vb</LastGenOutput>
     </None>
-    <None Include="التعاقدات\تعاقدات\T3AKOD_DATA.xss">
+    <None Include="التعاقداتold\تعاقدات\T3AKOD_DATA.xss">
       <DependentUpon>T3AKOD_DATA.xsd</DependentUpon>
     </None>
     <None Include="الحسابات\فاتورة رسمية\FATORA_RS.xsc">
@@ -2097,8 +2160,8 @@
     <None Include="Resources\iconfinder_phone_call__text__sms_dial__2992207.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="التعاقدات\تقرير مطالبة\" />
-    <Folder Include="التعاقدات\نقدية مطالبة\" />
+    <Folder Include="التعاقداتold\تقرير مطالبة\" />
+    <Folder Include="التعاقداتold\نقدية مطالبة\" />
     <Folder Include="التقارير\الارباح و الخسائر\" />
   </ItemGroup>
   <ItemGroup />

@@ -894,6 +894,7 @@ Partial Class USERSLAHFRM
         'L
         '
         Me.L.AutoSize = True
+        Me.L.ForeColor = System.Drawing.Color.DarkGoldenrod
         Me.L.Location = New System.Drawing.Point(789, 149)
         Me.L.Name = "L"
         Me.L.Size = New System.Drawing.Size(73, 25)
